@@ -1,0 +1,60 @@
+title: Forward
+footer: learn_retiming — 03 forward retime
+slides:
+- type: title
+  title: Forward
+  subtitle: Forward retiming pulls registers toward outputs , decrease r(v) on the
+    chosen node
+  notes: Forward retiming pulls registers toward outputs — decrease r(v) on the chosen
+    node.
+- type: bullets
+  title: The idea
+  bullets:
+  - Forward_retime('a', r, 1) sets r(a)=−1; e0 w_r becomes 0; e1/e4 gain registers
+  notes: forward_retime('a', r, 1) sets r(a)=−1; e0 w_r becomes 0; e1/e4 gain registers.
+- type: image
+  title: Forward −r
+  image: assets/steps/01-def.png
+  caption: Forward −r
+  notes: 'Forward retiming decreases r(v): registers move toward outputs across v.'
+- type: image
+  title: Pick a
+  image: assets/steps/02-pick.png
+  caption: Pick a
+  notes: Select node a — the first comb after the PI register.
+- type: image
+  title: Apply forward
+  image: assets/steps/03-apply.png
+  caption: Apply forward
+  notes: Set r(a)=−1. Edge weights become w + r(dst) − r(src).
+- type: image
+  title: Period 8→5
+  image: assets/steps/04-period.png
+  caption: Period 8→5
+  notes: After forward on a, period drops from 8 to 5.
+- type: image
+  title: Registers 2→3
+  image: assets/steps/05-regs.png
+  caption: Registers 2→3
+  notes: Register count rises to 3 — timing vs area tradeoff.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **forward-retime**. Click Forward on a; read w_r labels and period 5.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call forward_retime('a', r, 1); print apply_retime edges and clock_period
+  notes: Call forward_retime('a', r, 1); print apply_retime edges and clock_period.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Decreasing r on PI/PO
+  - Applying forward on c first and breaking legality
+  notes: Decreasing r on PI/PO. Applying forward on c first and breaking legality.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: backward retiming on c'
+  notes: 'Next: backward retiming on c.'

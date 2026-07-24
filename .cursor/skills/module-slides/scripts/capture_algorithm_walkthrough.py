@@ -142,6 +142,15 @@ LAB_TO_ALGO: dict[str, tuple[str, int]] = {
     "techmap-cover": ("techmap-cover", 5),
     "area-delay": ("area-delay", 5),
     "sequential-synth": ("sequential-synth", 5),
+    "sequential-graph": ("sequential-graph", 5),
+    "register-count": ("register-count", 5),
+    "path-delay": ("path-delay", 5),
+    "forward-retime": ("forward-retime", 5),
+    "backward-retime": ("backward-retime", 5),
+    "legal-retime": ("legal-retime", 5),
+    "period-bound": ("period-bound", 5),
+    "min-period": ("min-period", 5),
+    "area-registers": ("area-registers", 5),
 }
 
 BEGIN_MARK = "<!-- algorithm-walkthrough -->"

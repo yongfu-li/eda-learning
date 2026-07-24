@@ -1,0 +1,63 @@
+title: Path delay
+footer: learn_retiming — 01 path delay
+slides:
+- type: title
+  title: Path delay
+  subtitle: Clock period is the longest delay along paths that use only w=0 edges
+    (registers break paths)
+  notes: Clock period is the longest delay along paths that use only w=0 edges (registers
+    break paths).
+- type: bullets
+  title: The idea
+  bullets:
+  - Zero edges e1, e3, e4 form comb segments; longest chain a→b→c hits delays 3+2+4
+    → period 8
+  notes: Zero edges e1, e3, e4 form comb segments; longest chain a→b→c hits delays
+    3+2+4 → period 8.
+- type: image
+  title: Zero-weight paths
+  image: assets/steps/01-zero.png
+  caption: Zero-weight paths
+  notes: Clock period is the longest path that only uses edges with w=0.
+- type: image
+  title: Hot path
+  image: assets/steps/02-hot.png
+  caption: Hot path
+  notes: a→b and a→c and c→v create long zero-weight stretches.
+- type: image
+  title: Baseline P=8
+  image: assets/steps/03-base.png
+  caption: Baseline P=8
+  notes: On the starter, longest zero-weight delay is 8.
+- type: image
+  title: Target 5
+  image: assets/steps/04-target.png
+  caption: Target 5
+  notes: We want period ≤ 5 — retiming must break the long path.
+- type: image
+  title: Break with registers
+  image: assets/steps/05-idea.png
+  caption: Break with registers
+  notes: Pushing a register onto a zero-weight edge splits the combo path.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **path-delay**. Trace the critical zero-weight path; read period 8.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call clock_period(data, zero_retime(data)); assert ≈ 8
+  notes: Call clock_period(data, zero_retime(data)); assert ≈ 8.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Including w=1 edges in the critical path
+  - Summing edge delays instead of node delays
+  notes: Including w=1 edges in the critical path. Summing edge delays instead of
+    node delays.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: forward retiming on node a'
+  notes: 'Next: forward retiming on node a.'

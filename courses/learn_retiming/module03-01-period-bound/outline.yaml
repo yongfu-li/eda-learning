@@ -1,0 +1,60 @@
+title: Period bound
+footer: learn_retiming — 01 period bound
+slides:
+- type: title
+  title: Period bound
+  subtitle: Given target period φ, a retiming is feasible if it is legal and the clock
+    period is at most φ
+  notes: Given target period φ, a retiming is feasible if it is legal and the clock
+    period is at most φ.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'Feas_check(data, 5, r) after forward on a: period 5 ≤ target 5 , passes'
+  notes: 'feas_check(data, 5, r) after forward on a: period 5 ≤ target 5 — passes.'
+- type: image
+  title: FEAS lite
+  image: assets/steps/01-feas.png
+  caption: FEAS lite
+  notes: 'feas_check: legal AND period ≤ target.'
+- type: image
+  title: Target 5
+  image: assets/steps/02-target.png
+  caption: Target 5
+  notes: GOLDENS.periodTarget = 5.
+- type: image
+  title: Baseline fails
+  image: assets/steps/03-base-fail.png
+  caption: Baseline fails
+  notes: Period 8 > 5, so baseline is not feasible for the target.
+- type: image
+  title: Forward passes
+  image: assets/steps/04-fwd-pass.png
+  caption: Forward passes
+  notes: 'Forward on a: legal and P=5 ≤ 5 — feasible.'
+- type: image
+  title: Full WD later
+  image: assets/steps/05-wd.png
+  caption: Full WD later
+  notes: Real tools use W/D matrices; we only try a few retimings.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **period-bound**. Set target 5; run Check after forward on a.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call feas_check(DATA, 5, r) with forward-on-a r; expect True
+  notes: Call feas_check(DATA, 5, r) with forward-on-a r; expect True.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Forgetting legality in FEAS
+  - Comparing to target 8 instead of 5
+  notes: Forgetting legality in FEAS. Comparing to target 8 instead of 5.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: min-period search across candidate retimings'
+  notes: 'Next: min-period search across candidate retimings.'

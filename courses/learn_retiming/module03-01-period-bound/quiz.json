@@ -1,0 +1,55 @@
+{
+  "module": "module03-01-period-bound",
+  "items": [
+    {
+      "q": "Target period \u03c6 in tiny_retime?",
+      "choices": [
+        "5",
+        "8",
+        "2",
+        "10"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "feas_check needs which two conditions?",
+      "choices": [
+        "legal + period \u2264 \u03c6",
+        "period only",
+        "registers = 2",
+        "backward move"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Does forward on a meet \u03c6=5?",
+      "choices": [
+        "Yes (period 5)",
+        "No",
+        "Only illegal moves",
+        "Unknown"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Lab id for this module?",
+      "choices": [
+        "period-bound",
+        "aig-strash",
+        "wire-rc",
+        "techmap-cover"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "w_r retiming formula?",
+      "choices": [
+        "w + r(dst) \u2212 r(src)",
+        "w \u2212 r(src)",
+        "r(dst) only",
+        "w \u00d7 delay"
+      ],
+      "answer": 0
+    }
+  ]
+}

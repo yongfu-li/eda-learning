@@ -1,0 +1,35 @@
+{
+  "module": "module05-01-offline-benchmark-compare",
+  "items": [
+    {
+      "q": "Goal of Offline benchmark compare?",
+      "choices": [
+        "Compare baseline vs min_period metrics offline on tiny_retime.",
+        "Skip retiming",
+        "Only CTS",
+        "Ignore w_r"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Toy graph baseline registers?",
+      "choices": [
+        "2",
+        "5",
+        "0",
+        "8"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Target clock period?",
+      "choices": [
+        "5",
+        "8",
+        "2",
+        "10"
+      ],
+      "answer": 0
+    }
+  ]
+}

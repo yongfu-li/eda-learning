@@ -1,0 +1,55 @@
+{
+  "module": "module02-07-legal-retime",
+  "items": [
+    {
+      "q": "w_r formula?",
+      "choices": [
+        "w + r(dst) \u2212 r(src)",
+        "w \u2212 r(dst)",
+        "r(src) \u2212 w",
+        "w \u00d7 r(dst)"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Forward on a legal?",
+      "choices": [
+        "Yes",
+        "No",
+        "Only if target=8",
+        "Unknown"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Backward on c legal?",
+      "choices": [
+        "No (e3 negative)",
+        "Yes",
+        "Always legal",
+        "Only at period 8"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Lab id for this module?",
+      "choices": [
+        "legal-retime",
+        "aig-strash",
+        "wire-rc",
+        "techmap-cover"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "w_r retiming formula?",
+      "choices": [
+        "w + r(dst) \u2212 r(src)",
+        "w \u2212 r(src)",
+        "r(dst) only",
+        "w \u00d7 delay"
+      ],
+      "answer": 0
+    }
+  ]
+}

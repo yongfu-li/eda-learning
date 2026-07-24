@@ -1,0 +1,35 @@
+{
+  "module": "module99-00-wrap",
+  "items": [
+    {
+      "q": "Goal of Retiming path complete?",
+      "choices": [
+        "Recap sequential graph, w_r, forward/backward moves, legal check, min period; continue to ",
+        "Skip retiming",
+        "Only CTS",
+        "Ignore w_r"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Toy graph baseline registers?",
+      "choices": [
+        "2",
+        "5",
+        "0",
+        "8"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Target clock period?",
+      "choices": [
+        "5",
+        "8",
+        "2",
+        "10"
+      ],
+      "answer": 0
+    }
+  ]
+}

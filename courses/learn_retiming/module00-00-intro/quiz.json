@@ -1,0 +1,35 @@
+{
+  "module": "module00-00-intro",
+  "items": [
+    {
+      "q": "Goal of Welcome to retiming for EDA?",
+      "choices": [
+        "Explain Leiserson\u2013Saxe retiming: edge register counts, lag r(v), legal moves, clock period",
+        "Skip retiming",
+        "Only CTS",
+        "Ignore w_r"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Toy graph baseline registers?",
+      "choices": [
+        "2",
+        "5",
+        "0",
+        "8"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Target clock period?",
+      "choices": [
+        "5",
+        "8",
+        "2",
+        "10"
+      ],
+      "answer": 0
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "module": "module02-05-backward-retime",
+  "items": [
+    {
+      "q": "backward_retime on c makes e3 w_r?",
+      "choices": [
+        "\u22121 (illegal)",
+        "0",
+        "1",
+        "2"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Backward retiming increases or decreases r(node)?",
+      "choices": [
+        "Increases r",
+        "Decreases r",
+        "Unchanged",
+        "Resets to 0"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Legal retiming requires every w_r?",
+      "choices": [
+        "\u2265 0",
+        "= 1",
+        "\u2264 0",
+        "even"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Lab id for this module?",
+      "choices": [
+        "backward-retime",
+        "aig-strash",
+        "wire-rc",
+        "techmap-cover"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "w_r retiming formula?",
+      "choices": [
+        "w + r(dst) \u2212 r(src)",
+        "w \u2212 r(src)",
+        "r(dst) only",
+        "w \u00d7 delay"
+      ],
+      "answer": 0
+    }
+  ]
+}

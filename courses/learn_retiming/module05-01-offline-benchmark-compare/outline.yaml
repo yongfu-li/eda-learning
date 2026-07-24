@@ -1,0 +1,33 @@
+title: Hook
+footer: learn_retiming — 01 offline benchmark compare
+slides:
+- type: title
+  title: Hook
+  subtitle: Track A prints sequential_retime and min_period without the browser
+  notes: Track A prints sequential_retime and min_period without the browser.
+- type: bullets
+  title: The idea
+  bullets:
+  - Load JSON; print baseline period 8, best period 5, registers 2 vs 3
+  notes: Load JSON; print baseline period 8, best period 5, registers 2 vs 3.
+- type: bullets
+  title: What you will do
+  bullets:
+  - Compare baseline vs min_period metrics offline on tiny_retime
+  notes: Compare baseline vs min_period metrics offline on tiny_retime.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Skipping goldens on tiny_retime
+  notes: Skipping goldens on tiny_retime.
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist
+  notes: Complete the checklist.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue the path
+  notes: Continue the path.

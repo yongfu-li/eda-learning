@@ -1,0 +1,61 @@
+title: Backward
+footer: learn_retiming — 05 backward retime
+slides:
+- type: title
+  title: Backward
+  subtitle: Backward retiming pushes registers toward inputs , increase r(v) on the
+    chosen node
+  notes: Backward retiming pushes registers toward inputs — increase r(v) on the chosen
+    node.
+- type: bullets
+  title: The idea
+  bullets:
+  - Backward_retime('c', r, 1) sets r(c)=+1; e3 w_r = 0+0−1 = −1 violates w_r ≥ 0
+  notes: backward_retime('c', r, 1) sets r(c)=+1; e3 w_r = 0+0−1 = −1 violates w_r
+    ≥ 0.
+- type: image
+  title: Backward +r
+  image: assets/steps/01-def.png
+  caption: Backward +r
+  notes: 'Backward retiming increases r(v): registers move toward inputs across v.'
+- type: image
+  title: Pick c
+  image: assets/steps/02-pick.png
+  caption: Pick c
+  notes: Try backward on c (the slow comb, d=4).
+- type: image
+  title: Apply +1
+  image: assets/steps/03-apply.png
+  caption: Apply +1
+  notes: r(c)=+1 changes outbound e3 weight to −1.
+- type: image
+  title: Illegal edge
+  image: assets/steps/04-illegal.png
+  caption: Illegal edge
+  notes: Negative weight means illegal retiming — red edge.
+- type: image
+  title: Not every move
+  image: assets/steps/05-lesson.png
+  caption: Not every move
+  notes: Backward is valid only when every w_r stays non-negative.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **backward-retime**. Try Backward on c; see illegal flag on e3.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call backward_retime('c', r, 1); assert not is_legal(edges, r)
+  notes: Call backward_retime('c', r, 1); assert not is_legal(edges, r).
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Assuming backward is always safe
+  - Ignoring PO-adjacent edges
+  notes: Assuming backward is always safe. Ignoring PO-adjacent edges.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: legal retiming check for all edges'
+  notes: 'Next: legal retiming check for all edges.'

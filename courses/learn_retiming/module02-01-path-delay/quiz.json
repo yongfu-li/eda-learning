@@ -1,0 +1,55 @@
+{
+  "module": "module02-01-path-delay",
+  "items": [
+    {
+      "q": "Baseline clock period (r=0)?",
+      "choices": [
+        "8",
+        "5",
+        "2",
+        "10"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Target clock period in JSON?",
+      "choices": [
+        "5",
+        "8",
+        "2",
+        "1"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Which edges have w=0?",
+      "choices": [
+        "e1, e3, e4",
+        "e0, e2",
+        "all five",
+        "none"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Lab id for this module?",
+      "choices": [
+        "path-delay",
+        "aig-strash",
+        "wire-rc",
+        "techmap-cover"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "w_r retiming formula?",
+      "choices": [
+        "w + r(dst) \u2212 r(src)",
+        "w \u2212 r(src)",
+        "r(dst) only",
+        "w \u00d7 delay"
+      ],
+      "answer": 0
+    }
+  ]
+}

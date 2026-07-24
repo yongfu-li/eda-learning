@@ -1,0 +1,60 @@
+title: Registers
+footer: learn_retiming — 03 register count
+slides:
+- type: title
+  title: Registers
+  subtitle: In Leiserson–Saxe form, each edge weight w is how many registers sit on
+    that wire
+  notes: In Leiserson–Saxe form, each edge weight w is how many registers sit on that
+    wire.
+- type: bullets
+  title: The idea
+  bullets:
+  - E0 u→a has w=1; e2 b→c has w=1; zero-weight edges are combinational
+  notes: e0 u→a has w=1; e2 b→c has w=1; zero-weight edges are combinational.
+- type: image
+  title: Weights
+  image: assets/steps/01-w.png
+  caption: Weights
+  notes: Edge w is the number of registers on that arc.
+- type: image
+  title: e0 has 1
+  image: assets/steps/02-e0.png
+  caption: e0 has 1
+  notes: u→a starts with one register (w=1).
+- type: image
+  title: e1 has 0
+  image: assets/steps/03-e1.png
+  caption: e1 has 0
+  notes: a→b is pure combo (w=0).
+- type: image
+  title: Sum = 2
+  image: assets/steps/04-sum.png
+  caption: Sum = 2
+  notes: Total registers = sum of w = 2 on the starter.
+- type: image
+  title: Retiming moves w
+  image: assets/steps/05-move.png
+  caption: Retiming moves w
+  notes: Changing r redistributes w without changing function (when legal).
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **register-count**. Highlight e0 and e2; confirm total 2.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call total_registers(edges); assert sum == 2
+  notes: Call total_registers(edges); assert sum == 2.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Counting nodes instead of edges
+  - Forgetting w on u→a
+  notes: Counting nodes instead of edges. Forgetting w on u→a.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: zero-weight path delay / clock period'
+  notes: 'Next: zero-weight path delay / clock period.'

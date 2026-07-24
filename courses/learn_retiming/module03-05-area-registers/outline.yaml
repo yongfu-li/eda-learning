@@ -1,0 +1,62 @@
+title: Area/regs
+footer: learn_retiming — 05 area registers
+slides:
+- type: title
+  title: Area/regs
+  subtitle: Retiming trades register area for shorter clock period , same function,
+    different register placement
+  notes: Retiming trades register area for shorter clock period — same function, different
+    register placement.
+- type: bullets
+  title: The idea
+  bullets:
+  - Forward on a
+  notes: 'forward on a: registers 2→3 (+1) but period 8→5; zero retiming keeps 2 registers
+    at period 8.'
+- type: image
+  title: Registers ≈ area
+  image: assets/steps/01-proxy.png
+  caption: Registers ≈ area
+  notes: Total w is a stand-in for flip-flop area.
+- type: image
+  title: Baseline 2
+  image: assets/steps/02-base.png
+  caption: Baseline 2
+  notes: Starter has two registers.
+- type: image
+  title: Timing vs area
+  image: assets/steps/03-trade.png
+  caption: Timing vs area
+  notes: Forward on a buys P=5 for one extra register.
+- type: image
+  title: Where they sit
+  image: assets/steps/04-edges.png
+  caption: Where they sit
+  notes: After forward a, registers sit on e1, e2, e4.
+- type: image
+  title: Done
+  image: assets/steps/05-done.png
+  caption: Done
+  notes: 'Next: offline compare, then wrap toward equivalence or STA.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **area-registers**. Compare baseline vs forward-on-a register totals.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Print register_count at r=0 and after forward on a (2 vs 3)
+  notes: Print register_count at r=0 and after forward on a (2 vs 3).
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Assuming retiming always reduces registers
+  - Ignoring period when counting area
+  notes: Assuming retiming always reduces registers. Ignoring period when counting
+    area.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: offline benchmark, then wrap'
+  notes: 'Next: offline benchmark, then wrap.'

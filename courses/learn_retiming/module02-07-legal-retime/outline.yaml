@@ -1,0 +1,60 @@
+title: Legal
+footer: learn_retiming — 07 legal retime
+slides:
+- type: title
+  title: Legal
+  subtitle: A retiming lag assignment r is legal only if every edge keeps a non-negative
+    register count
+  notes: A retiming lag assignment r is legal only if every edge keeps a non-negative
+    register count.
+- type: bullets
+  title: The idea
+  bullets:
+  - Check w_r = w + r(dst) − r(src) for e0…e4; one negative edge breaks legality
+  notes: Check w_r = w + r(dst) − r(src) for e0…e4; one negative edge breaks legality.
+- type: image
+  title: All w_r ≥ 0
+  image: assets/steps/01-rule.png
+  caption: All w_r ≥ 0
+  notes: A retiming is legal iff every edge keeps non-negative weight.
+- type: image
+  title: Zero is legal
+  image: assets/steps/02-zero.png
+  caption: Zero is legal
+  notes: r≡0 is always legal on the starter.
+- type: image
+  title: Forward a legal
+  image: assets/steps/03-fwd.png
+  caption: Forward a legal
+  notes: Forward on a stays legal and improves period.
+- type: image
+  title: Backward c illegal
+  image: assets/steps/04-bwd.png
+  caption: Backward c illegal
+  notes: Backward on c alone violates e3.
+- type: image
+  title: Always check
+  image: assets/steps/05-check.png
+  caption: Always check
+  notes: Before trusting period, assert legality.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **legal-retime**. Toggle moves; green only when is_legal is true.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Test is_legal after forward on a (True) and backward on c (False)
+  notes: Test is_legal after forward on a (True) and backward on c (False).
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Checking only one edge
+  - Allowing fractional or negative w in the UI
+  notes: Checking only one edge. Allowing fractional or negative w in the UI.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: period bound / FEAS lite'
+  notes: 'Next: period bound / FEAS lite.'

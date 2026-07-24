@@ -1,0 +1,36 @@
+title: Hook
+footer: learn_retiming — 00 wrap
+slides:
+- type: title
+  title: Hook
+  subtitle: 'You can retime the toy graph: w_r formula, forward on a hits period 5,
+    register tradeoff 2→3'
+  notes: 'You can retime the toy graph: w_r formula, forward on a hits period 5, register
+    tradeoff 2→3.'
+- type: bullets
+  title: The idea
+  bullets:
+  - 'Natural next: learn_sta timing closure or learn_equivalence checking'
+  notes: 'Natural next: learn_sta timing closure or learn_equivalence checking.'
+- type: bullets
+  title: What you will do
+  bullets:
+  - Recap sequential graph, w_r, forward/backward moves, legal check, min period
+  notes: Recap sequential graph, w_r, forward/backward moves, legal check, min period;
+    continue to STA or equivalence.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Skipping goldens on tiny_retime
+  notes: Skipping goldens on tiny_retime.
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist
+  notes: Complete the checklist.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue the path
+  notes: Continue the path.

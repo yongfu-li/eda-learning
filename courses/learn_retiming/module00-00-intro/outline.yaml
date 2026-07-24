@@ -1,0 +1,38 @@
+title: Hook
+footer: learn_retiming — 00 intro
+slides:
+- type: title
+  title: Hook
+  subtitle: After synthesis you have registers on edges , retiming moves them without
+    changing I/O behavior
+  notes: After synthesis you have registers on edges — retiming moves them without
+    changing I/O behavior.
+- type: bullets
+  title: The idea
+  bullets:
+  - This course uses tiny_retime
+  notes: 'This course uses tiny_retime: PI u → a → b → c → PO v plus a→c; target clock
+    period 5; baseline registers 2.'
+- type: bullets
+  title: What you will do
+  bullets:
+  - 'Explain Leiserson–Saxe retiming: edge register counts, lag r(v), legal moves,
+    clock period'
+  notes: 'Explain Leiserson–Saxe retiming: edge register counts, lag r(v), legal moves,
+    clock period.'
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Skipping goldens on tiny_retime
+  notes: Skipping goldens on tiny_retime.
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist
+  notes: Complete the checklist.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue the path
+  notes: Continue the path.

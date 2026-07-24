@@ -255,6 +255,25 @@ COURSE_META = {
         "first_lab": "boolean-network",
         "first_n": "02",
     },
+    "learn_retiming": {
+        "title": "Retiming for EDA",
+        "focus": "Sequential graph → registers → path delay → forward/backward → legal → period → min-period → area",
+        "prereq": None,
+        "status": "ready",
+        "repo": "learn_retiming",
+        "modules_md": ROOT / "courses" / "learn_retiming" / "docs" / "MODULES.md",
+        "course_root": ROOT / "courses" / "learn_retiming",
+        "lead": (
+            "Leiserson–Saxe retiming literacy on a tiny sequential graph — legal lag vectors, period, register tradeoffs. "
+            "Clips and decks load from "
+            "<code>courses/learn_retiming</code> "
+            "(<code>moduleSS-AA-slug/video.mp4</code>). Open the matching browser tool, then mark the lab done."
+        ),
+        "tools_href": "../../tools/index.html#retiming",
+        "tools_label": "Retiming tools",
+        "first_lab": "sequential-graph",
+        "first_n": "02",
+    },
 }
 
 COURSE_INDEX = """<!DOCTYPE html>

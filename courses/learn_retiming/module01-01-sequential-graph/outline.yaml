@@ -1,0 +1,60 @@
+title: Seq graph
+footer: learn_retiming — 01 sequential graph
+slides:
+- type: title
+  title: Seq graph
+  subtitle: Retiming starts from a sequential circuit graph , not just a Boolean network
+  notes: Retiming starts from a sequential circuit graph — not just a Boolean network.
+- type: bullets
+  title: The idea
+  bullets:
+  - Nodes carry combinational delay; edges carry register counts w
+  - Our toy has five nodes and five edges
+  notes: Nodes carry combinational delay; edges carry register counts w. Our toy has
+    five nodes and five edges.
+- type: image
+  title: Topology
+  image: assets/steps/01-topo.png
+  caption: Topology
+  notes: 'Five nodes: PI u, comb a/b/c, PO v, plus shortcut a→c.'
+- type: image
+  title: PI/PO
+  image: assets/steps/02-pi.png
+  caption: PI/PO
+  notes: Blue circle u is the primary input; red v is the primary output.
+- type: image
+  title: Comb boxes
+  image: assets/steps/03-comb.png
+  caption: Comb boxes
+  notes: Green boxes a, b, c carry combinational delay.
+- type: image
+  title: Five edges
+  image: assets/steps/04-edges.png
+  caption: Five edges
+  notes: Edge labels show register weight w. Five edges total.
+- type: image
+  title: Stats
+  image: assets/steps/05-stats.png
+  caption: Stats
+  notes: 'GOLDENS: 5 nodes, 5 edges, 3 comb, 2 base registers.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **sequential-graph**. Click nodes; read delay labels and edge ids.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Load tiny_retime.json; call graph_stats , expect 5 nodes, 5 edges
+  notes: Load tiny_retime.json; call graph_stats — expect 5 nodes, 5 edges.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Treating edge w as delay
+  - Confusing PO v with a comb node
+  notes: Treating edge w as delay. Confusing PO v with a comb node.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: edge register counts in detail'
+  notes: 'Next: edge register counts in detail.'

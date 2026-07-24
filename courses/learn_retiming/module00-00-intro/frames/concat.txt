@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/eda_learning/courses/learn_retiming/module00-00-intro/frames/slide-1.png'
+duration 6.6
+file '/mnt/d/proj/designs/eda_learning/courses/learn_retiming/module00-00-intro/frames/slide-2.png'
+duration 9.312
+file '/mnt/d/proj/designs/eda_learning/courses/learn_retiming/module00-00-intro/frames/slide-3.png'
+duration 7.896
+file '/mnt/d/proj/designs/eda_learning/courses/learn_retiming/module00-00-intro/frames/slide-4.png'
+duration 3.36
+file '/mnt/d/proj/designs/eda_learning/courses/learn_retiming/module00-00-intro/frames/slide-5.png'
+duration 2.208
+file '/mnt/d/proj/designs/eda_learning/courses/learn_retiming/module00-00-intro/frames/slide-6.png'
+duration 2.136
+file '/mnt/d/proj/designs/eda_learning/courses/learn_retiming/module00-00-intro/frames/slide-6.png'

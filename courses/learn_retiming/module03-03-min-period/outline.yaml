@@ -1,0 +1,62 @@
+title: Min period
+footer: learn_retiming — 03 min period
+slides:
+- type: title
+  title: Min period
+  subtitle: Search a small candidate set of retimings , not full WD/FEAS , and pick
+    the smallest legal period
+  notes: Search a small candidate set of retimings — not full WD/FEAS — and pick the
+    smallest legal period.
+- type: bullets
+  title: The idea
+  bullets:
+  - Candidates include r=0, forward on a/b, backward on c; best is forward on a with
+    period 5
+  notes: Candidates include r=0, forward on a/b, backward on c; best is forward on
+    a with period 5.
+- type: image
+  title: Try candidates
+  image: assets/steps/01-search.png
+  caption: Try candidates
+  notes: Lite search tries zero, forward a, backward c, forward b.
+- type: image
+  title: Best P=5
+  image: assets/steps/02-best.png
+  caption: Best P=5
+  notes: Best legal period found is 5 (forward on a).
+- type: image
+  title: Improved
+  image: assets/steps/03-improve.png
+  caption: Improved
+  notes: improved=true because 5 < baseline 8.
+- type: image
+  title: Cost registers
+  image: assets/steps/04-regs.png
+  caption: Cost registers
+  notes: Best solution uses 3 registers vs 2 baseline.
+- type: image
+  title: Sequential API
+  image: assets/steps/05-seq.png
+  caption: Sequential API
+  notes: sequential_retime(min_period) wraps the same search.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **min-period**. Run search; confirm best period 5 and r(a)=−1.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call min_period_binary_search(DATA); assert period==5 and legal
+  notes: Call min_period_binary_search(DATA); assert period==5 and legal.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Assuming backward on c helps
+  - Expecting full LP optimality
+  notes: Assuming backward on c helps. Expecting full LP optimality.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: register/area tradeoff'
+  notes: 'Next: register/area tradeoff.'

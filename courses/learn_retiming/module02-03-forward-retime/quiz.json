@@ -1,0 +1,55 @@
+{
+  "module": "module02-03-forward-retime",
+  "items": [
+    {
+      "q": "After forward on a, r(a) equals?",
+      "choices": [
+        "\u22121",
+        "0",
+        "+1",
+        "2"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Period after forward on a?",
+      "choices": [
+        "5",
+        "8",
+        "2",
+        "10"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Register count after forward on a?",
+      "choices": [
+        "3",
+        "2",
+        "1",
+        "0"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Lab id for this module?",
+      "choices": [
+        "forward-retime",
+        "aig-strash",
+        "wire-rc",
+        "techmap-cover"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "w_r retiming formula?",
+      "choices": [
+        "w + r(dst) \u2212 r(src)",
+        "w \u2212 r(src)",
+        "r(dst) only",
+        "w \u00d7 delay"
+      ],
+      "answer": 0
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "tiny_retime",
+  "nodes": [
+    {"id": "u", "delay": 1, "kind": "pi"},
+    {"id": "a", "delay": 3, "kind": "comb"},
+    {"id": "b", "delay": 2, "kind": "comb"},
+    {"id": "c", "delay": 4, "kind": "comb"},
+    {"id": "v", "delay": 1, "kind": "po"}
+  ],
+  "edges": [
+    {"id": "e0", "src": "u", "dst": "a", "w": 1},
+    {"id": "e1", "src": "a", "dst": "b", "w": 0},
+    {"id": "e2", "src": "b", "dst": "c", "w": 1},
+    {"id": "e3", "src": "c", "dst": "v", "w": 0},
+    {"id": "e4", "src": "a", "dst": "c", "w": 0}
+  ],
+  "clock_period_target": 5,
+  "notes": "Toy retiming graph: PI u → a → b → c → PO v, plus a→c. Edge w = register count. Classic Leiserson–Saxe literacy."
+}

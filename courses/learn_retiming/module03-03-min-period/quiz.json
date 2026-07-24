@@ -1,0 +1,55 @@
+{
+  "module": "module03-03-min-period",
+  "items": [
+    {
+      "q": "min_period_binary_search best period?",
+      "choices": [
+        "5",
+        "8",
+        "2",
+        "10"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Best retiming sets r(a) to?",
+      "choices": [
+        "\u22121",
+        "0",
+        "+1",
+        "2"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Baseline period before search?",
+      "choices": [
+        "8",
+        "5",
+        "2",
+        "3"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Lab id for this module?",
+      "choices": [
+        "min-period",
+        "aig-strash",
+        "wire-rc",
+        "techmap-cover"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "w_r retiming formula?",
+      "choices": [
+        "w + r(dst) \u2212 r(src)",
+        "w \u2212 r(src)",
+        "r(dst) only",
+        "w \u00d7 delay"
+      ],
+      "answer": 0
+    }
+  ]
+}

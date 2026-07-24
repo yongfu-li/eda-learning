@@ -1,0 +1,55 @@
+{
+  "module": "module01-03-register-count",
+  "items": [
+    {
+      "q": "Baseline register count on tiny_retime?",
+      "choices": [
+        "2",
+        "5",
+        "0",
+        "8"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Which edge has w=1 on u\u2192a?",
+      "choices": [
+        "e0",
+        "e1",
+        "e4",
+        "e3"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Edge e1 a\u2192b register count?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "-1"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Lab id for this module?",
+      "choices": [
+        "register-count",
+        "aig-strash",
+        "wire-rc",
+        "techmap-cover"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "w_r retiming formula?",
+      "choices": [
+        "w + r(dst) \u2212 r(src)",
+        "w \u2212 r(src)",
+        "r(dst) only",
+        "w \u00d7 delay"
+      ],
+      "answer": 0
+    }
+  ]
+}

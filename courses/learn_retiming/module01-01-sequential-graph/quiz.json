@@ -1,0 +1,55 @@
+{
+  "module": "module01-01-sequential-graph",
+  "items": [
+    {
+      "q": "How many comb nodes in tiny_retime?",
+      "choices": [
+        "3 (a,b,c)",
+        "5",
+        "2",
+        "1"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Primary input id?",
+      "choices": [
+        "u",
+        "a",
+        "v",
+        "e0"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Shortcut edge bypasses which node?",
+      "choices": [
+        "b (a\u2192c)",
+        "u",
+        "v",
+        "e3"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Lab id for this module?",
+      "choices": [
+        "sequential-graph",
+        "aig-strash",
+        "wire-rc",
+        "techmap-cover"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "w_r retiming formula?",
+      "choices": [
+        "w + r(dst) \u2212 r(src)",
+        "w \u2212 r(src)",
+        "r(dst) only",
+        "w \u00d7 delay"
+      ],
+      "answer": 0
+    }
+  ]
+}
