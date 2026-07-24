@@ -1,0 +1,66 @@
+title: Latency and skew
+footer: learn_clock_tree — 03 latency skew
+slides:
+- type: title
+  title: Latency and skew
+  subtitle: 'Skew is the CTS scoreboard: how different are arrival times at sinks'
+  notes: 'Skew is the CTS scoreboard: how different are arrival times at sinks.'
+- type: bullets
+  title: The idea
+  bullets:
+  - Walk the tree from source to each sink summing Manhattan edge lengths
+  - Skew equals max latency minus min latency
+  - Wire delay per unit is one on the toy
+  notes: Walk the tree from source to each sink summing Manhattan edge lengths. Skew
+    equals max latency minus min latency. Wire delay per unit is one on the toy.
+- type: image
+  title: Skew = max − min
+  image: assets/steps/01-def.png
+  caption: Skew = max − min
+  notes: Per-sink latency is Manhattan length along the tree; skew is max minus min.
+- type: image
+  title: H-tree skew
+  image: assets/steps/02-h.png
+  caption: H-tree skew
+  notes: Build H-tree on spread and read skew overlay.
+- type: image
+  title: MMM skew
+  image: assets/steps/03-mmm.png
+  caption: MMM skew
+  notes: MMM merge may differ from H-tree on the same sinks.
+- type: image
+  title: Path to A
+  image: assets/steps/04-path.png
+  caption: Path to A
+  notes: Highlight sink A — yellow edges show source→A path.
+- type: image
+  title: Drive skew down
+  image: assets/steps/05-goal.png
+  caption: Drive skew down
+  notes: Move sinks or switch topology to clear challenge bounds.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **latency-skew**. Build H-tree, read skew, then Build MMM and compare.
+    Select A to highlight its path.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Implement or call `latency(path)` and `skew(latencies)` in `common/solvers.py`
+  - Print skew for MMM on tiny_cts
+  notes: Implement or call `latency(path)` and `skew(latencies)` in `common/solvers.py`.
+    Print skew for MMM on tiny_cts.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Using Euclidean distance
+  - Comparing sinks without a tree
+  - Treating buffer delay as wire length without counting buffers
+  notes: Using Euclidean distance. Comparing sinks without a tree. Treating buffer
+    delay as wire length without counting buffers.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: grow a classic H-tree topology'
+  notes: 'Next: grow a classic H-tree topology.'

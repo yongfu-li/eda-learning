@@ -1,0 +1,55 @@
+{
+  "module": "module99-00-wrap",
+  "items": [
+    {
+      "q": "What is the main learning goal of Clock tree path complete?",
+      "choices": [
+        "Recap sinks, skew, H/MMM/DME, buffers; choose learn_buffering next.",
+        "Ignore skew",
+        "Only GCell routing",
+        "Delete the clock source"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "On the toy chip, where is the clock source?",
+      "choices": [
+        "(6,4)",
+        "(0,0)",
+        "(12,8)",
+        "(1,1)"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Skew is defined as\u2026",
+      "choices": [
+        "max latency \u2212 min latency",
+        "sum of wire lengths",
+        "number of buffers",
+        "HPWL"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Primary browser lab id for this module?",
+      "choices": [
+        "Wrap",
+        "routing-grid",
+        "gcell-grid",
+        "affinity-metrics"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Natural next course after CTS on this spine?",
+      "choices": [
+        "learn_buffering",
+        "learn_unix",
+        "learn_git",
+        "learn_clustering"
+      ],
+      "answer": 0
+    }
+  ]
+}

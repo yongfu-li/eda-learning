@@ -1,0 +1,66 @@
+title: Sequential CTS pass
+footer: learn_clock_tree — 01 sequential cts
+slides:
+- type: title
+  title: Sequential CTS pass
+  subtitle: Some flows grow the clock net in sink order, order changes skew
+  notes: Some flows grow the clock net in sink order—order changes skew.
+- type: bullets
+  title: The idea
+  bullets:
+  - Start from the source
+  - For each sink in order A…F, attach an L-route to the nearest existing tree node
+  - Optional buffering splits long legs afterward
+  notes: Start from the source. For each sink in order A…F, attach an L-route to the
+    nearest existing tree node. Optional buffering splits long legs afterward.
+- type: image
+  title: Net order
+  image: assets/steps/01-order.png
+  caption: Net order
+  notes: Connect sinks A…F one-by-one to the nearest existing tree node.
+- type: image
+  title: Built pass
+  image: assets/steps/02-build.png
+  caption: Built pass
+  notes: Sequential tree grows from CLK outward.
+- type: image
+  title: Late sink
+  image: assets/steps/03-path.png
+  caption: Late sink
+  notes: Later sinks may attach far from source — skew can be higher than MMM.
+- type: image
+  title: Optional buffers
+  image: assets/steps/04-buf.png
+  caption: Optional buffers
+  notes: Insert buffers after sequential to split long legs.
+- type: image
+  title: Handoff
+  image: assets/steps/05-done.png
+  caption: Handoff
+  notes: You can build H, MMM, DME-lite, sequential — next deepen buffering.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **sequential-cts**. Run Sequential CTS, read skew, optionally Insert
+    buffers. Compare to MMM on the same placement.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call `sequential_cts(data
+  - Print skew
+  notes: Call `sequential_cts(data, mode='mmm')` for a full pass, or use the browser
+    sequential builder. Print skew.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Assuming order does not matter
+  - Attaching to sinks only, not steiners
+  - Skipping the source as the first node
+  notes: Assuming order does not matter. Attaching to sinks only, not steiners. Skipping
+    the source as the first node.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: offline benchmark compare, then wrap'
+  notes: 'Next: offline benchmark compare, then wrap.'

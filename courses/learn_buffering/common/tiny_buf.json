@@ -1,0 +1,24 @@
+{
+  "chip": {"W": 12, "H": 8},
+  "driver": {"id": "D", "x": 1, "y": 4},
+  "sinks": [
+    {"id": "S0", "x": 5, "y": 4, "cload": 1.0},
+    {"id": "S1", "x": 9, "y": 2, "cload": 1.5},
+    {"id": "S2", "x": 9, "y": 6, "cload": 1.2}
+  ],
+  "edges": [
+    {"id": "e0", "a": "D", "b": "S0"},
+    {"id": "e1", "a": "S0", "b": "S1"},
+    {"id": "e2", "a": "S0", "b": "S2"}
+  ],
+  "r_per_unit": 1.0,
+  "c_per_unit": 1.0,
+  "slew_limit": 8.0,
+  "buffer_library": [
+    {"id": "BUF_X1", "cin": 1.0, "rout": 1.0, "delay": 1.0, "invert": false},
+    {"id": "BUF_X2", "cin": 2.0, "rout": 0.5, "delay": 0.8, "invert": false},
+    {"id": "INV_X1", "cin": 1.0, "rout": 1.0, "delay": 1.1, "invert": true}
+  ],
+  "candidate_step": 2.0,
+  "notes": "Toy buffering net: driver D → S0 → {S1,S2}. Van Ginneken / slew-driven lite."
+}

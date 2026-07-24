@@ -115,6 +115,15 @@ LAB_TO_ALGO: dict[str, tuple[str, int]] = {
     "drc-spacing": ("drc-spacing", 5),
     "ripup-detailed": ("ripup-detailed", 5),
     "sequential-detailed": ("sequential-detailed", 5),
+    "clock-sinks": ("clock-sinks", 5),
+    "latency-skew": ("latency-skew", 5),
+    "h-tree": ("h-tree", 5),
+    "mmm-tree": ("mmm-tree", 5),
+    "zero-skew-merge": ("zero-skew-merge", 5),
+    "tapping-points": ("tapping-points", 5),
+    "clock-buffering": ("clock-buffering", 5),
+    "skew-bound": ("skew-bound", 5),
+    "sequential-cts": ("sequential-cts", 5),
 }
 
 BEGIN_MARK = "<!-- algorithm-walkthrough -->"

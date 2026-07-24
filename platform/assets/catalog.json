@@ -49,6 +49,16 @@
       "section": "Clustering & refinement"
     },
     {
+      "id": "clock-buffering",
+      "title": "Clock Buffering",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "clock-sinks",
+      "title": "Clock Sinks",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "congestion-aware-clustering",
       "title": "Congestion-aware clustering",
       "section": "Clustering & refinement"
@@ -139,6 +149,11 @@
       "section": "Legalization"
     },
     {
+      "id": "h-tree",
+      "title": "H Tree",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "hierarchical-floorplan",
       "title": "Hierarchical Floorplan",
       "section": "Floorplanning"
@@ -184,6 +199,11 @@
       "section": "Clustering & refinement"
     },
     {
+      "id": "latency-skew",
+      "title": "Latency Skew",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "lee-maze",
       "title": "Lee Maze",
       "section": "Clustering & refinement"
@@ -201,6 +221,11 @@
     {
       "id": "maze-gcell-route",
       "title": "Maze Gcell Route",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "mmm-tree",
+      "title": "Mmm Tree",
       "section": "Clustering & refinement"
     },
     {
@@ -319,6 +344,11 @@
       "section": "Floorplanning"
     },
     {
+      "id": "sequential-cts",
+      "title": "Sequential Cts",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "sequential-detailed",
       "title": "Sequential Detailed",
       "section": "Clustering & refinement"
@@ -341,6 +371,11 @@
     {
       "id": "size-constrained-agglomerative",
       "title": "Size-constrained agglomerative",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "skew-bound",
+      "title": "Skew Bound",
       "section": "Clustering & refinement"
     },
     {
@@ -372,6 +407,11 @@
       "id": "spread-legalize-lite",
       "title": "Spread Legalize Lite",
       "section": "Placement"
+    },
+    {
+      "id": "tapping-points",
+      "title": "Tapping Points",
+      "section": "Clustering & refinement"
     },
     {
       "id": "terminal-gcells",
@@ -411,6 +451,11 @@
     {
       "id": "via-assignment",
       "title": "Via Assignment",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "zero-skew-merge",
+      "title": "Zero Skew Merge",
       "section": "Clustering & refinement"
     }
   ],
@@ -1843,12 +1888,193 @@
     },
     {
       "id": "learn_clock_tree",
-      "title": "Clock tree synthesis",
-      "focus": "H-tree / MMM, skew, clock buffering",
-      "status": "planned",
+      "title": "Clock tree synthesis for EDA",
+      "focus": "Sinks \u2192 latency/skew \u2192 H-tree \u2192 MMM \u2192 zero-skew merge \u2192 taps \u2192 buffering \u2192 skew bound \u2192 sequential CTS",
+      "status": "ready",
       "repo": "learn_clock_tree",
       "prereq": null,
-      "labs": []
+      "labs": [
+        {
+          "n": "01",
+          "slug": "intro",
+          "moduleId": "module00-00-intro",
+          "kind": "intro",
+          "title": "Welcome to clock tree synthesis",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "02",
+          "slug": "clock-sinks",
+          "moduleId": "module01-01-clock-sinks",
+          "kind": "lab",
+          "title": "Clock sinks from placement",
+          "toolId": "clock-sinks",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "03",
+          "slug": "latency-skew",
+          "moduleId": "module01-03-latency-skew",
+          "kind": "lab",
+          "title": "Latency and skew",
+          "toolId": "latency-skew",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "04",
+          "slug": "h-tree",
+          "moduleId": "module02-01-h-tree",
+          "kind": "lab",
+          "title": "H-tree topology",
+          "toolId": "h-tree",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "05",
+          "slug": "mmm-tree",
+          "moduleId": "module02-03-mmm-tree",
+          "kind": "lab",
+          "title": "Method of Means and Medians",
+          "toolId": "mmm-tree",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "06",
+          "slug": "zero-skew-merge",
+          "moduleId": "module02-05-zero-skew-merge",
+          "kind": "lab",
+          "title": "Zero-skew merge (DME lite)",
+          "toolId": "zero-skew-merge",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "07",
+          "slug": "tapping-points",
+          "moduleId": "module02-07-tapping-points",
+          "kind": "lab",
+          "title": "Tapping / branch points",
+          "toolId": "tapping-points",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "08",
+          "slug": "clock-buffering",
+          "moduleId": "module03-01-clock-buffering",
+          "kind": "lab",
+          "title": "Clock buffering on wires",
+          "toolId": "clock-buffering",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "09",
+          "slug": "skew-bound",
+          "moduleId": "module03-03-skew-bound",
+          "kind": "lab",
+          "title": "Skew bound with buffers",
+          "toolId": "skew-bound",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "10",
+          "slug": "sequential-cts",
+          "moduleId": "module04-01-sequential-cts",
+          "kind": "lab",
+          "title": "Sequential CTS pass",
+          "toolId": "sequential-cts",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "11",
+          "slug": "offline-benchmark-compare",
+          "moduleId": "module05-01-offline-benchmark-compare",
+          "kind": "offline",
+          "title": "Offline benchmark compare",
+          "toolId": null,
+          "status": "planned",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "12",
+          "slug": "wrap",
+          "moduleId": "module99-00-wrap",
+          "kind": "wrap",
+          "title": "Clock tree path complete",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        }
+      ]
     },
     {
       "id": "learn_buffering",

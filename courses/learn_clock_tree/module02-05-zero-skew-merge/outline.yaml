@@ -1,0 +1,67 @@
+title: Zero-skew merge
+footer: learn_clock_tree — 05 zero skew merge
+slides:
+- type: title
+  title: Zero-skew merge
+  subtitle: Deferred-merge embedding equalizes delay so opposite arms arrive together
+  notes: Deferred-merge embedding equalizes delay so opposite arms arrive together.
+- type: bullets
+  title: The idea
+  bullets:
+  - Partition sinks left and right of the source
+  - Choose a meeting steiner so left radius plus wire matches right radius plus wire
+  - That is the zero-skew intuition
+  notes: Partition sinks left and right of the source. Choose a meeting steiner so
+    left radius plus wire matches right radius plus wire. That is the zero-skew intuition.
+- type: image
+  title: DME lite
+  image: assets/steps/01-idea.png
+  caption: DME lite
+  notes: Split sinks left/right of source; meet at a point that balances subtree radii.
+- type: image
+  title: Balanced meet
+  image: assets/steps/02-demo.png
+  caption: Balanced meet
+  notes: Zero-skew demo places a merge steiner near CLK.
+- type: image
+  title: Symmetric paths
+  image: assets/steps/03-path.png
+  caption: Symmetric paths
+  notes: Opposite sinks should see similar source latency.
+- type: image
+  title: Read skew
+  image: assets/steps/04-skew.png
+  caption: Read skew
+  notes: Overlay reports near-zero skew on the toy spread.
+- type: image
+  title: Toy only
+  image: assets/steps/05-limit.png
+  caption: Toy only
+  notes: Full DME embeds delay recursively on every merge — this lab is the intuition.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **zero-skew-merge**. Run Zero-skew merge demo. Confirm skew near zero
+    to three. Select A and B and compare latencies.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call `zero_skew_merge(a,b,da,db)` for a 1D pair; run the browser demo for the
+    full chip
+  - Assert |la−lb| ≈ 0 for equal da,db
+  notes: Call `zero_skew_merge(a,b,da,db)` for a 1D pair; run the browser demo for
+    the full chip. Assert |la−lb| ≈ 0 for equal da,db.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Balancing Euclidean radii
+  - Ignoring existing subtree delay da/db
+  - Expecting full industrial DME from this toy
+  notes: Balancing Euclidean radii. Ignoring existing subtree delay da/db. Expecting
+    full industrial DME from this toy.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: tapping points where the tree forks'
+  notes: 'Next: tapping points where the tree forks.'

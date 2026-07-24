@@ -1,0 +1,35 @@
+title: Hook
+footer: learn_clock_tree — 01 offline benchmark compare
+slides:
+- type: title
+  title: Hook
+  subtitle: Without the browser, Track A still compares topologies on the same JSON
+  notes: Without the browser, Track A still compares topologies on the same JSON.
+- type: bullets
+  title: The idea
+  bullets:
+  - Load tiny_cts.json
+  notes: Load tiny_cts.json, run sequential_cts for mmm and h_tree modes, print skew
+    and buffer counts side by side.
+- type: bullets
+  title: What you will do
+  bullets:
+  - Compare H-tree, MMM, and sequential skew on tiny_cts offline
+  notes: Compare H-tree, MMM, and sequential skew on tiny_cts offline.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Skipping goldens
+  - Mixing browser and offline without matching JSON
+  notes: Skipping goldens. Mixing browser and offline without matching JSON.
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist
+  notes: Complete the checklist.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue the course
+  notes: Continue the course.

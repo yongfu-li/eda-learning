@@ -1,0 +1,25 @@
+{
+  "chip": {"W": 12, "H": 8},
+  "clock_source": {"x": 6, "y": 4},
+  "sinks": ["A", "B", "C", "D", "E", "F"],
+  "cells": [
+    {"id": "A", "w": 1, "h": 1},
+    {"id": "B", "w": 1, "h": 1},
+    {"id": "C", "w": 1, "h": 1},
+    {"id": "D", "w": 1, "h": 1},
+    {"id": "E", "w": 1, "h": 1},
+    {"id": "F", "w": 1, "h": 1}
+  ],
+  "placement": {
+    "A": {"x": 1, "y": 1},
+    "B": {"x": 8, "y": 1},
+    "C": {"x": 1, "y": 5},
+    "D": {"x": 8, "y": 5},
+    "E": {"x": 5, "y": 3},
+    "F": {"x": 6, "y": 3}
+  },
+  "wire_delay_per_unit": 1.0,
+  "buffer_delay": 2.0,
+  "target_skew": 4,
+  "notes": "Toy CTS: source at chip center; sinks are cell centers; Manhattan wire delay."
+}

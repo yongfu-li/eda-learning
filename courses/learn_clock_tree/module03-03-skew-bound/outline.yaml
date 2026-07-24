@@ -1,0 +1,65 @@
+title: Skew bound with buffers
+footer: learn_clock_tree — 03 skew bound
+slides:
+- type: title
+  title: Skew bound with buffers
+  subtitle: 'Signoff asks: is skew under budget?'
+  notes: 'Signoff asks: is skew under budget? This lab makes that a Check button.'
+- type: bullets
+  title: The idea
+  bullets:
+  - Skew_bound_ok is true when skew ≤ bound
+  - Zero-skew merge often meets bound two on the toy
+  notes: skew_bound_ok is true when skew ≤ bound. Zero-skew merge often meets bound
+    two on the toy; H-tree may need moves or a different mode.
+- type: image
+  title: Target bound
+  image: assets/steps/01-bound.png
+  caption: Target bound
+  notes: Challenges ask skew ≤ GOLDENS.skewBoundDefault (2) on the toy.
+- type: image
+  title: Zero-skew helps
+  image: assets/steps/02-zs.png
+  caption: Zero-skew helps
+  notes: Zero-skew merge often meets the bound without moving sinks.
+- type: image
+  title: H may miss
+  image: assets/steps/03-fail.png
+  caption: H may miss
+  notes: H-tree skew can exceed the tight bound on this spread.
+- type: image
+  title: Buffers + bound
+  image: assets/steps/04-buf.png
+  caption: Buffers + bound
+  notes: Buffering changes latencies — re-check the bound after insert.
+- type: image
+  title: Toward signoff
+  image: assets/steps/05-signoff.png
+  caption: Toward signoff
+  notes: Real CTS targets skew under corners; this lab is the scalar habit.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **skew-bound**. Run Zero-skew merge demo and Check. Try H-tree and see
+    if you need to move sinks to meet bound two.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call `skew_bound_ok(latencies, bound)`
+  - Document GOLDENS.skewBoundDefault = 2
+  notes: Call `skew_bound_ok(latencies, bound)`. Document GOLDENS.skewBoundDefault
+    = 2.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Hard-coding pass without measuring
+  - Forgetting to rebuild after moving sinks
+  - Mixing buffered and unbuffered latencies
+  notes: Hard-coding pass without measuring. Forgetting to rebuild after moving sinks.
+    Mixing buffered and unbuffered latencies.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: sequential CTS connecting sinks in order'
+  notes: 'Next: sequential CTS connecting sinks in order.'

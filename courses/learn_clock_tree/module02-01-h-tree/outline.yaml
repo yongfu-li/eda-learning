@@ -1,0 +1,67 @@
+title: H-tree topology
+footer: learn_clock_tree — 01 h tree
+slides:
+- type: title
+  title: H-tree topology
+  subtitle: H-trees are the classic picture of a balanced clock network on a regular
+    array
+  notes: H-trees are the classic picture of a balanced clock network on a regular
+    array.
+- type: bullets
+  title: The idea
+  bullets:
+  - From the source, alternate horizontal and vertical splits toward sink groups
+  - Each split creates steiner points and L-shaped legs to children
+  notes: From the source, alternate horizontal and vertical splits toward sink groups.
+    Each split creates steiner points and L-shaped legs to children.
+- type: image
+  title: Recursive H
+  image: assets/steps/01-idea.png
+  caption: Recursive H
+  notes: Alternate horizontal and vertical splits from the source toward sink clusters.
+- type: image
+  title: Built tree
+  image: assets/steps/02-build.png
+  caption: Built tree
+  notes: H-tree edges fan from CLK to all six sinks.
+- type: image
+  title: Path highlight
+  image: assets/steps/03-path.png
+  caption: Path highlight
+  notes: Select D to see the source→D corridor.
+- type: image
+  title: Balance goal
+  image: assets/steps/04-balance.png
+  caption: Balance goal
+  notes: Symmetric splits keep opposite corners similar — not perfect on this toy.
+- type: image
+  title: When H-tree
+  image: assets/steps/05-use.png
+  caption: When H-tree
+  notes: Use H-trees when sinks fill a rectangle evenly; otherwise MMM or DME.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **h-tree**. Click Build H-tree. Select D and watch the yellow path.
+    Compare skew to the MMM lab next.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call `h_tree(source, chip)` / browser `hTree(positions)`
+  - Attach sinks and print edge count and skew
+  notes: Call `h_tree(source, chip)` / browser `hTree(positions)`. Attach sinks and
+    print edge count and skew.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Stopping after one H without recursion
+  - Connecting sinks with Euclidean edges
+  - Ignoring steiner points when measuring latency
+  notes: Stopping after one H without recursion. Connecting sinks with Euclidean edges.
+    Ignoring steiner points when measuring latency.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: Method of Means and Medians for irregular sinks'
+  notes: 'Next: Method of Means and Medians for irregular sinks.'

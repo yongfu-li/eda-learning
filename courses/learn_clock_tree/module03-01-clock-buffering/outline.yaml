@@ -1,0 +1,65 @@
+title: Clock buffering on wires
+footer: learn_clock_tree — 01 clock buffering
+slides:
+- type: title
+  title: Clock buffering on wires
+  subtitle: Long wires lose slew; CTS inserts buffers along the tree
+  notes: Long wires lose slew; CTS inserts buffers along the tree.
+- type: bullets
+  title: The idea
+  bullets:
+  - If an edge longer than maxWireLen
+  - Buffered latency adds bufferDelay per buffer on the path
+  notes: If an edge longer than maxWireLen, split it into equal pieces and place a
+    buffer at each joint. Buffered latency adds bufferDelay per buffer on the path.
+- type: image
+  title: Long wires
+  image: assets/steps/01-idea.png
+  caption: Long wires
+  notes: Split edges longer than maxWireLen; place buffer squares at joints.
+- type: image
+  title: Before buffers
+  image: assets/steps/02-before.png
+  caption: Before buffers
+  notes: H-tree may have long Manhattan legs.
+- type: image
+  title: After insert
+  image: assets/steps/03-after.png
+  caption: After insert
+  notes: Insert buffers — joints appear on long segments.
+- type: image
+  title: Buffered latency
+  image: assets/steps/04-latency.png
+  caption: Buffered latency
+  notes: bufferedLatencies adds bufferDelay per buffer on the path.
+- type: image
+  title: Trade-off
+  image: assets/steps/05-trade.png
+  caption: Trade-off
+  notes: Buffers restore slew but add delay — skew may rise or fall.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **clock-buffering**. Build H-tree, click Insert buffers, count orange
+    squares. Read buffered latencies for A.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call `insert_buffers(edge, max_span, buffer_delay)`
+  - Assert max segment length ≤ max_span
+  notes: Call `insert_buffers(edge, max_span, buffer_delay)`. Assert max segment length
+    ≤ max_span.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Buffering without splitting edges
+  - Counting buffer delay twice
+  - Using max span zero
+  notes: Buffering without splitting edges. Counting buffer delay twice. Using max
+    span zero.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: meet a skew bound with buffers and topology choice'
+  notes: 'Next: meet a skew bound with buffers and topology choice.'

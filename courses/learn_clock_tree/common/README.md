@@ -1,14 +1,12 @@
-# common — learn_clock_tree
+# Track A — clock tree synthesis
 
-## Starter instance
+| File | Role |
+|------|------|
+| `tiny_cts.json` | 12×8 chip, source placement, CLK at (6,4) |
+| `ctsutil.py` | sink_points, manhattan, load |
+| `solvers.py` | H-tree, MMM, zero-skew merge, buffers, sequential CTS |
+| `test_solvers.py` | Unit tests |
 
-[`tiny_cts.json`](tiny_cts.json) — chip 12×8, clock source at (6,4), sinks A–F on spread placement.
-Manhattan wire delay per unit; buffer delay 2.0; target skew 0.
-
-## Modules
-
-- `ctsutil.py` — load, sink_points, manhattan, bbox helpers
-- `solvers.py` — H-tree, MMM, zero-skew merge, buffering, sequential CTS
-- `test_solvers.py` — smoke goldens
-
-Browser algorithms: `platform/tools/<lab-id>/` (when published).
+```bash
+python3 test_solvers.py
+```

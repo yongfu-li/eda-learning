@@ -47,7 +47,7 @@ export function clonePositions(pos) {
 
 export function sinkPoints(positions = PLACEMENT) {
   return CELLS.map((id) => {
-    const p = positions[id];
+    const p = positions[id] || PLACEMENT[id] || { x: 0, y: 0 };
     return { id, x: p.x, y: p.y };
   });
 }
@@ -264,6 +264,7 @@ function graphFromTree(tree) {
 }
 
 function pathFromSource(tree, target) {
+  if (!target || target.x == null || target.y == null) return { length: Infinity, keys: [] };
   const { nodes, edges } = graphFromTree(tree);
   const srcK = `${tree.source.x.toFixed(4)},${tree.source.y.toFixed(4)}`;
   const tgtK = `${target.x.toFixed(4)},${target.y.toFixed(4)}`;

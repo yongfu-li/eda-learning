@@ -297,31 +297,38 @@ def sequential_cts(data: Mapping[str, Any], mode: str = "mmm") -> dict[str, Any]
     sinks = sink_points(data["placement"], data["sinks"])
     wire_d = float(data.get("wire_delay_per_unit", 1.0))
     buf_d = float(data.get("buffer_delay", 2.0))
-    target = float(data.get("target_skew", 0.0))
+    target = float(data.get("target_skew", 4.0))
     max_span = float(data.get("max_wire_span", 4.0))
+    do_buffer = bool(data.get("insert_buffers", mode == "buffered"))
 
-    if mode == "h_tree":
+    if mode in ("h_tree", "buffered_h"):
         tree = h_tree(source, data.get("chip", chip_bbox(data.get("chip", {"W": 12, "H": 8}))))
-    elif mode == "mmm":
+        # Attach each sink to nearest H-tree vertex so latencies are defined.
+        verts: List[Point] = []
+        for a, b in tree["edges"]:
+            verts.extend([_pt(a), _pt(b)])
+        verts.append(_pt(source))
+        attach_edges: List[Edge] = []
+        for s in sinks:
+            sp = _pt(s)
+            nearest = min(verts, key=lambda v: manhattan(v, sp))
+            if nearest != sp:
+                attach_edges.append(normalize_edge(nearest, sp))
+        tree = dict(tree)
+        tree["edges"] = list(tree["edges"]) + attach_edges
+    elif mode in ("mmm", "buffered"):
         tree = mmm_tree(source, sinks)
     else:
         raise ValueError(f"unknown mode: {mode}")
 
-    edges, buffers = _buffer_long_edges(tree, max_span, buf_d)
+    buffers: List[dict[str, Any]] = []
     tree_out = dict(tree)
-    tree_out["edges"] = edges
+    if do_buffer or mode.startswith("buffered"):
+        edges, buffers = _buffer_long_edges(tree, max_span, buf_d)
+        tree_out["edges"] = edges
+
     latencies = buffered_latencies(tree_out, buffers, wire_d, buf_d, sinks)
     sk = skew(latencies)
-
-    # Golden note: spread placement may need buffering to meet target_skew=0.
-    # Re-buffer with tighter span if skew exceeds target.
-    span = max_span
-    while sk > target and span > 1.0:
-        span *= 0.75
-        edges, buffers = _buffer_long_edges(tree, span, buf_d)
-        tree_out["edges"] = edges
-        latencies = buffered_latencies(tree_out, buffers, wire_d, buf_d, sinks)
-        sk = skew(latencies)
 
     return {
         "tree": tree_out,

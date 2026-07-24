@@ -198,6 +198,25 @@ COURSE_META = {
         "first_lab": "routing-grid",
         "first_n": "02",
     },
+    "learn_clock_tree": {
+        "title": "Clock tree synthesis for EDA",
+        "focus": "Sinks → latency/skew → H-tree → MMM → zero-skew merge → taps → buffering → skew bound → sequential CTS",
+        "prereq": None,
+        "status": "ready",
+        "repo": "learn_clock_tree",
+        "modules_md": ROOT / "courses" / "learn_clock_tree" / "docs" / "MODULES.md",
+        "course_root": ROOT / "courses" / "learn_clock_tree",
+        "lead": (
+            "Clock tree synthesis on a tiny 12×8 chip — H-tree / MMM, skew you can trust, buffers on long wires. "
+            "Clips and decks load from "
+            "<code>courses/learn_clock_tree</code> "
+            "(<code>moduleSS-AA-slug/video.mp4</code>). Open the matching browser tool, then mark the lab done."
+        ),
+        "tools_href": "../../tools/index.html#clock-tree",
+        "tools_label": "Clock tree tools",
+        "first_lab": "clock-sinks",
+        "first_n": "02",
+    },
 }
 
 COURSE_INDEX = """<!DOCTYPE html>

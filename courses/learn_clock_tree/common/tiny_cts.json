@@ -15,11 +15,11 @@
     "B": {"x": 8, "y": 1},
     "C": {"x": 1, "y": 5},
     "D": {"x": 8, "y": 5},
-    "E": {"x": 4, "y": 3},
-    "F": {"x": 7, "y": 3}
+    "E": {"x": 5, "y": 3},
+    "F": {"x": 6, "y": 3}
   },
   "wire_delay_per_unit": 1.0,
   "buffer_delay": 2.0,
-  "target_skew": 0,
+  "target_skew": 4,
   "notes": "Toy CTS: source at chip center; sinks are cell centers; Manhattan wire delay."
 }

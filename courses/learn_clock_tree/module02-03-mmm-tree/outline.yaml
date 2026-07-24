@@ -1,0 +1,67 @@
+title: Method of Means and Medians
+footer: learn_clock_tree — 03 mmm tree
+slides:
+- type: title
+  title: Method of Means and Medians
+  subtitle: When sinks are irregular, greedy merge adapts better than a pure geometric
+    H
+  notes: When sinks are irregular, greedy merge adapts better than a pure geometric
+    H.
+- type: bullets
+  title: The idea
+  bullets:
+  - Treat each sink as a fragment
+  - Repeatedly merge the closest pair of fragment roots at their midpoint
+  notes: Treat each sink as a fragment. Repeatedly merge the closest pair of fragment
+    roots at their midpoint, then trunk the final root to the clock source.
+- type: image
+  title: Means & medians
+  image: assets/steps/01-idea.png
+  caption: Means & medians
+  notes: Repeatedly merge the closest fragment roots at their midpoint.
+- type: image
+  title: Merged tree
+  image: assets/steps/02-build.png
+  caption: Merged tree
+  notes: MMM connects all sinks then trunks to the source.
+- type: image
+  title: Merge points
+  image: assets/steps/03-steiners.png
+  caption: Merge points
+  notes: Steiners mark where two subtrees join.
+- type: image
+  title: vs H-tree
+  image: assets/steps/04-vs-h.png
+  caption: vs H-tree
+  notes: MMM adapts to irregular sink sets better than pure H geometry.
+- type: image
+  title: Toward DME
+  image: assets/steps/05-next.png
+  caption: Toward DME
+  notes: Zero-skew merge balances subtree delays explicitly.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **mmm-tree**. Build MMM, read skew, then rebuild after moving C. Compare
+    to H-tree skew.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call `mmm_tree(source, sinks)` in solvers
+  - Assert every sink endpoint appears in the edge set
+  notes: Call `mmm_tree(source, sinks)` in solvers. Assert every sink endpoint appears
+    in the edge set.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Merging by Euclidean when latency is Manhattan
+  - Forgetting to connect the final fragment to the source
+  - Dropping steiner coordinates when buffering
+  notes: Merging by Euclidean when latency is Manhattan. Forgetting to connect the
+    final fragment to the source. Dropping steiner coordinates when buffering.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: zero-skew merge (DME lite)'
+  notes: 'Next: zero-skew merge (DME lite).'

@@ -28,6 +28,8 @@ import { GLOBAL_ROUTING_ALGOS } from "./global-routing-algos.js";
 import { drawGlobalRoute, usageFromRoutes } from "../../assets/global-routing-core.js";
 import { DETAILED_ROUTING_ALGOS } from "./detailed-routing-algos.js";
 import { drawDetailedRoute, usageFromDetailedRoutes } from "../../assets/detailed-routing-core.js";
+import { CLOCK_TREE_ALGOS } from "./clock-tree-algos.js";
+import { drawClockTree } from "../../assets/clock-tree-core.js";
 import { PLACEMENT_ALGO_IDS, PLACEMENT_ALGOS } from "./placement-algos.js";
 import { STA_ALGOS } from "./sta-algos.js";
 
@@ -1672,6 +1674,7 @@ export const ALGOS = {
   ...CONGESTION_ALGOS,
   ...GLOBAL_ROUTING_ALGOS,
   ...DETAILED_ROUTING_ALGOS,
+  ...CLOCK_TREE_ALGOS,
 };
 
 function qs() {
@@ -1787,6 +1790,14 @@ function render() {
       highlightPath: s.highlightPath || null,
       selectedNet: s.selectedNet ?? null,
       highlight: s.highlight || [],
+    });
+  } else if (pack.kind === "clock-tree") {
+    drawClockTree(canvas, {
+      positions: s.positions,
+      tree: s.tree || undefined,
+      selectedSink: s.selectedSink || null,
+      highlight: s.highlight || [],
+      showSkew: s.showSkew !== false,
     });
   } else if (
     pack.kind === "placement" ||

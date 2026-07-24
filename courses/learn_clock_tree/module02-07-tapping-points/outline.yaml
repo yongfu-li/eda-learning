@@ -1,0 +1,64 @@
+title: Tapping / branch points
+footer: learn_clock_tree — 07 tapping points
+slides:
+- type: title
+  title: Tapping / branch points
+  subtitle: Buffers and clock gates often sit where the tree forks
+  notes: Buffers and clock gates often sit where the tree forks.
+- type: bullets
+  title: The idea
+  bullets:
+  - Collect steiner and edge endpoints
+  - Keep points with degree at least three, those are tapping points
+  notes: Collect steiner and edge endpoints. Keep points with degree at least three—those
+    are tapping points.
+- type: image
+  title: Branch taps
+  image: assets/steps/01-def.png
+  caption: Branch taps
+  notes: Tapping points are steiners with degree ≥ 3 — where the clock forks.
+- type: image
+  title: On MMM
+  image: assets/steps/02-mmm.png
+  caption: On MMM
+  notes: MMM merge points are natural taps.
+- type: image
+  title: On H-tree
+  image: assets/steps/03-h.png
+  caption: On H-tree
+  notes: H splits also create high-degree junctions.
+- type: image
+  title: Why care
+  image: assets/steps/04-why.png
+  caption: Why care
+  notes: Buffers and gating often sit at taps; routing capacity concentrates there.
+- type: image
+  title: API
+  image: assets/steps/05-api.png
+  caption: API
+  notes: Call tappingPoints(tree) after Build — challenges score tap count.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **tapping-points**. Build MMM and confirm taps ≥ 1. Rebuild H-tree and
+    compare tap count.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call `tapping_points(tree)` after `mmm_tree`
+  - Assert length ≥ 1 on tiny_cts
+  notes: Call `tapping_points(tree)` after `mmm_tree`. Assert length ≥ 1 on tiny_cts.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Counting leaf sinks as taps
+  - Using degree on undirected edges inconsistently
+  - Dropping steiners before the degree pass
+  notes: Counting leaf sinks as taps. Using degree on undirected edges inconsistently.
+    Dropping steiners before the degree pass.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: insert buffers on long wires'
+  notes: 'Next: insert buffers on long wires.'

@@ -1,0 +1,69 @@
+title: Clock sinks from placement
+footer: learn_clock_tree — 01 clock sinks
+slides:
+- type: title
+  title: Clock sinks from placement
+  subtitle: Every CTS algorithm starts from sinks, cell centers that must receive
+    the clock, and one source
+  notes: Every CTS algorithm starts from sinks—cell centers that must receive the
+    clock—and one source.
+- type: bullets
+  title: The idea
+  bullets:
+  - Sink_points reads placement for A through F
+  - Source sits at six comma four
+  - Moving a sink moves its access point for the next tree build
+  notes: sink_points reads placement for A through F. Source sits at six comma four.
+    Moving a sink moves its access point for the next tree build.
+- type: image
+  title: 12×8 chip
+  image: assets/steps/01-chip.png
+  caption: 12×8 chip
+  notes: Six sinks A–F sit on the same spread placement as routing labs.
+- type: image
+  title: Clock source
+  image: assets/steps/02-src.png
+  caption: Clock source
+  notes: CLK star at chip center (6,4) — the root of every tree.
+- type: image
+  title: Sink A
+  image: assets/steps/03-a.png
+  caption: Sink A
+  notes: A at (1,1) southwest corner.
+- type: image
+  title: Sink D
+  image: assets/steps/04-d.png
+  caption: Sink D
+  notes: D at (8,5) northeast.
+- type: image
+  title: All six
+  image: assets/steps/05-all.png
+  caption: All six
+  notes: E/F sit near the center corridor beside the source.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **clock-sinks**. Confirm six sinks and the yellow CLK star at six comma
+    four. Move B and watch its label follow.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call `sink_points(placement, sinks)` in `common/ctsutil.py`
+  - Print A through F on tiny_cts
+  - Assert source at (6,4)
+  notes: Call `sink_points(placement, sinks)` in `common/ctsutil.py`. Print A through
+    F on tiny_cts. Assert source at (6,4).
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Using GCell indices instead of cell centers
+  - Forgetting the source is fixed
+  - Treating nets as sinks
+  notes: Using GCell indices instead of cell centers. Forgetting the source is fixed.
+    Treating nets as sinks.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: measure latency and skew on a built tree'
+  notes: 'Next: measure latency and skew on a built tree.'

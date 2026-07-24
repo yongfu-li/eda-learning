@@ -1,0 +1,37 @@
+title: Hook
+footer: learn_clock_tree — 00 wrap
+slides:
+- type: title
+  title: Hook
+  subtitle: You built clock trees on the same chip spine as placement and routing
+  notes: You built clock trees on the same chip spine as placement and routing.
+- type: bullets
+  title: The idea
+  bullets:
+  - Sinks, skew, H-tree, MMM, zero-skew merge, taps, buffering, bounds, sequential
+    pass
+  - Natural next step is learn_buffering for Van Ginneken-style insertion
+  notes: Sinks, skew, H-tree, MMM, zero-skew merge, taps, buffering, bounds, sequential
+    pass. Natural next step is learn_buffering for Van Ginneken-style insertion.
+- type: bullets
+  title: What you will do
+  bullets:
+  - Recap sinks, skew, H/MMM/DME, buffers; choose learn_buffering next
+  notes: Recap sinks, skew, H/MMM/DME, buffers; choose learn_buffering next.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Skipping goldens
+  - Mixing browser and offline without matching JSON
+  notes: Skipping goldens. Mixing browser and offline without matching JSON.
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist
+  notes: Complete the checklist.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue the course
+  notes: Continue the course.

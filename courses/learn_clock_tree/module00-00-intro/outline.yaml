@@ -1,0 +1,38 @@
+title: Hook
+footer: learn_clock_tree — 00 intro
+slides:
+- type: title
+  title: Hook
+  subtitle: Placement gave you cell centers
+  notes: Placement gave you cell centers. Clock tree synthesis connects a single source
+    to every sink with controlled latency and skew.
+- type: bullets
+  title: The idea
+  bullets:
+  - CTS builds a tree from CLK to sinks A–F on our twelve-by-eight toy
+  - You will measure skew
+  notes: CTS builds a tree from CLK to sinks A–F on our twelve-by-eight toy. You will
+    measure skew, grow H-trees and MMM merges, balance with a zero-skew meeting point,
+    then insert buffers.
+- type: bullets
+  title: What you will do
+  bullets:
+  - Explain why CTS follows placement and delivers a low-skew clock network
+  notes: Explain why CTS follows placement and delivers a low-skew clock network.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Skipping goldens
+  - Mixing browser and offline without matching JSON
+  notes: Skipping goldens. Mixing browser and offline without matching JSON.
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist
+  notes: Complete the checklist.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue the course
+  notes: Continue the course.
