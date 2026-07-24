@@ -1,0 +1,63 @@
+title: Miter build
+footer: learn_equivalence — 03 miter build
+slides:
+- type: title
+  title: Miter build
+  subtitle: A miter merges spec and impl and XORs their outputs , equivalent designs
+    yield miter PO=0 everywhere
+  notes: A miter merges spec and impl and XORs their outputs — equivalent designs
+    yield miter PO=0 everywhere.
+- type: bullets
+  title: The idea
+  bullets:
+  - Build_miter(spec, impl_good) adds i_-prefixed impl gates and miter_xor = spec_f
+    XOR impl_f
+  notes: build_miter(spec, impl_good) adds i_-prefixed impl gates and miter_xor =
+    spec_f XOR impl_f.
+- type: image
+  title: XOR outputs
+  image: assets/steps/01-idea.png
+  caption: XOR outputs
+  notes: A miter XORs the two POs under shared PIs.
+- type: image
+  title: Build good miter
+  image: assets/steps/02-build.png
+  caption: Build good miter
+  notes: Prefix impl gates, XOR spec g2 with i_g5.
+- type: image
+  title: Good → all zero
+  image: assets/steps/03-zero.png
+  caption: Good → all zero
+  notes: For the good pair, miter output is 0 on every input.
+- type: image
+  title: Bad → one
+  image: assets/steps/04-one.png
+  caption: Bad → one
+  notes: At the cex, bad miter outputs 1.
+- type: image
+  title: Why miters
+  image: assets/steps/05-use.png
+  caption: Why miters
+  notes: SAT/BDD CEC asks whether miter_out can be 1.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **miter-build**. Build miter; highlight XOR output; confirm all-zero
+    for good pair.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call build_miter(spec, impl_good); miter_output must be 0 on every assignment
+  notes: Call build_miter(spec, impl_good); miter_output must be 0 on every assignment.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - XORing inputs instead of outputs
+  - Forgetting to clear old output flags
+  notes: XORing inputs instead of outputs. Forgetting to clear old output flags.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: exhaustive truth-table CEC'
+  notes: 'Next: exhaustive truth-table CEC.'

@@ -1,0 +1,55 @@
+{
+  "module": "module02-01-truth-table-cec",
+  "items": [
+    {
+      "q": "truth_table_cec spec\u2261impl_good?",
+      "choices": [
+        "True (8 rows)",
+        "False",
+        "Unknown",
+        "Only 4 rows"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Counterexample for impl_bad?",
+      "choices": [
+        "a=1,b=1,c=0",
+        "a=0,b=0,c=0",
+        "c=1",
+        "none"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Truth-table CEC rows for 3 PIs?",
+      "choices": [
+        "8",
+        "3",
+        "6",
+        "16"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Lab id for this module?",
+      "choices": [
+        "truth-table-cec",
+        "aig-strash",
+        "wire-rc",
+        "techmap-cover"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Miter PO when equivalent?",
+      "choices": [
+        "0 for all inputs",
+        "1 always",
+        "X",
+        "matches c only"
+      ],
+      "answer": 0
+    }
+  ]
+}

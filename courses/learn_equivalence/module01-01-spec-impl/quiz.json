@@ -1,0 +1,55 @@
+{
+  "module": "module01-01-spec-impl",
+  "items": [
+    {
+      "q": "Spec function over a,b,c?",
+      "choices": [
+        "(a\u2227b)\u2228c",
+        "(a\u2227b)\u2227c",
+        "a\u2295b\u2295c",
+        "a\u2228b\u2228c"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "How many truth-table rows for 3 PIs?",
+      "choices": [
+        "8",
+        "6",
+        "3",
+        "16"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Impl bad differs when?",
+      "choices": [
+        "a=1,b=1,c=0",
+        "a=0,b=0,c=0",
+        "c=1 always",
+        "never"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Lab id for this module?",
+      "choices": [
+        "spec-impl",
+        "aig-strash",
+        "wire-rc",
+        "techmap-cover"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Miter PO when equivalent?",
+      "choices": [
+        "0 for all inputs",
+        "1 always",
+        "X",
+        "matches c only"
+      ],
+      "answer": 0
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+title: Hook
+footer: learn_equivalence — 00 intro
+slides:
+- type: title
+  title: Hook
+  subtitle: After synthesis you must prove the netlist matches the spec
+  notes: After synthesis you must prove the netlist matches the spec — equivalence
+    checking is the formal backbone of ECO and signoff.
+- type: bullets
+  title: The idea
+  bullets:
+  - This course uses tiny_equiv
+  notes: 'This course uses tiny_equiv: spec f=(a∧b)∨c over PIs a,b,c; impl_good De
+    Morgan equivalent; impl_bad differs at a=1,b=1,c=0; sequential XOR pair for unroll/SEC
+    lite.'
+- type: bullets
+  title: What you will do
+  bullets:
+  - Explain combinational and sequential equivalence
+  notes: 'Explain combinational and sequential equivalence: spec vs impl, miter, truth-table
+    CEC, SAT lite, counterexamples.'
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Skipping goldens on tiny_equiv (8 rows, cex a=1,b=1,c=0)
+  notes: Skipping goldens on tiny_equiv (8 rows, cex a=1,b=1,c=0).
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist
+  notes: Complete the checklist.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue the path
+  notes: Continue the path.

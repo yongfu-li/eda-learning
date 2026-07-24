@@ -1,7 +1,7 @@
 # Module 01-03-register-count: Edge register counts
 
 **Module id:** `module01-03-register-count`  
-**Kind:** `lab` · Primary lab: `register-count` · **P**
+**Kind:** `lab` · Primary lab: `register-count` · **ref**
 
 [← Seq graph](../module01-01-sequential-graph/README.md) · [Course README](../README.md) · [Path delay →](../module02-01-path-delay/README.md)
 

@@ -1,0 +1,55 @@
+{
+  "module": "module03-03-sequential-unroll",
+  "items": [
+    {
+      "q": "sequential_unroll(2) exposes?",
+      "choices": [
+        "a_0, a_1 time steps",
+        "only comb spec",
+        "8 truth rows",
+        "CTS skew"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "State register in sequential pair?",
+      "choices": [
+        "q",
+        "c",
+        "miter_xor",
+        "f"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Unrolling purpose?",
+      "choices": [
+        "Reduce SEC to comb CEC over frames",
+        "Place macros",
+        "Legalize",
+        "Buffer"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Lab id for this module?",
+      "choices": [
+        "sequential-unroll",
+        "aig-strash",
+        "wire-rc",
+        "techmap-cover"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Miter PO when equivalent?",
+      "choices": [
+        "0 for all inputs",
+        "1 always",
+        "X",
+        "matches c only"
+      ],
+      "answer": 0
+    }
+  ]
+}

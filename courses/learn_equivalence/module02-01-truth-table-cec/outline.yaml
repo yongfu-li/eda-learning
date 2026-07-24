@@ -1,0 +1,62 @@
+title: Truth-table CEC
+footer: learn_equivalence — 01 truth table cec
+slides:
+- type: title
+  title: Truth-table CEC
+  subtitle: Truth-table CEC enumerates every PI assignment , fine for tiny circuits,
+    infeasible for wide buses
+  notes: Truth-table CEC enumerates every PI assignment — fine for tiny circuits,
+    infeasible for wide buses.
+- type: bullets
+  title: The idea
+  bullets:
+  - Truth_table_cec walks all 8 rows; returns equivalent=True or counterexample dict
+  notes: truth_table_cec walks all 8 rows; returns equivalent=True or counterexample
+    dict.
+- type: image
+  title: Eight rows
+  image: assets/steps/01-eight.png
+  caption: Eight rows
+  notes: Three PIs → 8 assignments to exhaust.
+- type: image
+  title: Good passes
+  image: assets/steps/02-good.png
+  caption: Good passes
+  notes: truth_table_cec(spec, good) → equivalent true.
+- type: image
+  title: Bad fails
+  image: assets/steps/03-bad.png
+  caption: Bad fails
+  notes: Bad fails; first mismatch is the counterexample.
+- type: image
+  title: Cex a1b1c0
+  image: assets/steps/04-cex.png
+  caption: Cex a1b1c0
+  notes: GOLDEN counterexample a=1, b=1, c=0.
+- type: image
+  title: Scales poorly
+  image: assets/steps/05-scale.png
+  caption: Scales poorly
+  notes: Exhaustive CEC is literacy; real tools use SAT/BDD.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **truth-table-cec**. Run CEC on good and bad pairs; read counterexample
+    panel.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call truth_table_cec(spec, impl_good) and (spec, impl_bad); assert goldens
+  notes: Call truth_table_cec(spec, impl_good) and (spec, impl_bad); assert goldens.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Stopping at first match instead of first mismatch
+  - Missing a PI bit in enumeration
+  notes: Stopping at first match instead of first mismatch. Missing a PI bit in enumeration.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: structural hashing / FRAIG lite'
+  notes: 'Next: structural hashing / FRAIG lite.'

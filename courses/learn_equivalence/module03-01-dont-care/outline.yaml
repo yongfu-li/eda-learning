@@ -1,0 +1,60 @@
+title: Don't-care
+footer: learn_equivalence — 01 dont care
+slides:
+- type: title
+  title: Don't-care
+  subtitle: Real specs have don't-cares , CEC must only compare care inputs, not illegal
+    or unconstrained bits
+  notes: Real specs have don't-cares — CEC must only compare care inputs, not illegal
+    or unconstrained bits.
+- type: bullets
+  title: The idea
+  bullets:
+  - Dont_care_mask with c fixed to 0 still finds a=1,b=1,c=0 mismatch on impl_bad
+  notes: dont_care_mask with c fixed to 0 still finds a=1,b=1,c=0 mismatch on impl_bad.
+- type: image
+  title: Care mask
+  image: assets/steps/01-mask.png
+  caption: Care mask
+  notes: Don't-cares mark PIs as X (−1) or fixed 0/1.
+- type: image
+  title: Fix c=0
+  image: assets/steps/02-fix-c.png
+  caption: Fix c=0
+  notes: Mask with c fixed to 0 still catches the bad cex.
+- type: image
+  title: Fewer rows
+  image: assets/steps/03-fewer.png
+  caption: Fewer rows
+  notes: Fixed bits shrink the checked assignment set.
+- type: image
+  title: X means ignore
+  image: assets/steps/04-x-ok.png
+  caption: X means ignore
+  notes: X on a bit means both 0/1 are allowed for that PI.
+- type: image
+  title: Real DC
+  image: assets/steps/05-use.png
+  caption: Real DC
+  notes: Synthesis don't-cares feed CEC care sets in industrial flows.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **dont-care**. Set c care=0; run masked CEC; read reduced row count.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call dont_care_mask(spec, impl_bad, {'a':-1,'b':-1,'c':0})
+  notes: Call dont_care_mask(spec, impl_bad, {'a':-1,'b':-1,'c':0}).
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Treating X as 0
+  - Checking illegal input combinations as failures
+  notes: Treating X as 0. Checking illegal input combinations as failures.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: sequential unrolling'
+  notes: 'Next: sequential unrolling.'

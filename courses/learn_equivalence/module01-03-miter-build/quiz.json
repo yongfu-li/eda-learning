@@ -1,0 +1,55 @@
+{
+  "module": "module01-03-miter-build",
+  "items": [
+    {
+      "q": "Miter PO when spec\u2261impl?",
+      "choices": [
+        "0 for all inputs",
+        "1 always",
+        "X",
+        "matches c"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Miter combines outputs with?",
+      "choices": [
+        "XOR",
+        "AND",
+        "OR",
+        "BUF"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Impl gates in miter are prefixed?",
+      "choices": [
+        "i_",
+        "m_",
+        "spec_",
+        "none"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Lab id for this module?",
+      "choices": [
+        "miter-build",
+        "aig-strash",
+        "wire-rc",
+        "techmap-cover"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Miter PO when equivalent?",
+      "choices": [
+        "0 for all inputs",
+        "1 always",
+        "X",
+        "matches c only"
+      ],
+      "answer": 0
+    }
+  ]
+}

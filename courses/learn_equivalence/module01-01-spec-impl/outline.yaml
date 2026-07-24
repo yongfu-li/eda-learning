@@ -1,0 +1,63 @@
+title: Spec vs impl
+footer: learn_equivalence — 01 spec impl
+slides:
+- type: title
+  title: Spec vs impl
+  subtitle: 'Equivalence checking always compares two circuits: a golden spec and
+    a candidate implementation'
+  notes: 'Equivalence checking always compares two circuits: a golden spec and a candidate
+    implementation.'
+- type: bullets
+  title: The idea
+  bullets:
+  - Spec computes f=(a∧b)∨c with two gates
+  notes: Spec computes f=(a∧b)∨c with two gates; impl_good rewrites with De Morgan;
+    impl_bad uses (a∧b)∧c — same PIs, different logic.
+- type: image
+  title: Spec netlist
+  image: assets/steps/01-spec.png
+  caption: Spec netlist
+  notes: Spec computes f = (a∧b)∨c with two gates.
+- type: image
+  title: Good rewrite
+  image: assets/steps/02-good.png
+  caption: Good rewrite
+  notes: Impl good is a De Morgan form of the same function.
+- type: image
+  title: Bad rewrite
+  image: assets/steps/03-bad.png
+  caption: Bad rewrite
+  notes: Impl bad uses (a∧b)∧c — wrong when c=0.
+- type: image
+  title: Eval at cex
+  image: assets/steps/04-eval.png
+  caption: Eval at cex
+  notes: 'At a=1,b=1,c=0: spec=1, good=1, bad=0.'
+- type: image
+  title: CEC goal
+  image: assets/steps/05-goal.png
+  caption: CEC goal
+  notes: Prove good ≡ spec; find a witness that bad ≢ spec.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **spec-impl**. Compare spec vs impl_good vs impl_bad truth tables side
+    by side.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Load tiny_equiv.json; call evaluate_circuit on spec and both impls for all 8 rows
+  notes: Load tiny_equiv.json; call evaluate_circuit on spec and both impls for all
+    8 rows.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Swapping spec and impl
+  - Comparing only one input corner
+  notes: Swapping spec and impl. Comparing only one input corner.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: build the miter (XOR of outputs)'
+  notes: 'Next: build the miter (XOR of outputs).'

@@ -1,0 +1,34 @@
+title: Hook
+footer: learn_equivalence — 01 offline benchmark compare
+slides:
+- type: title
+  title: Hook
+  subtitle: Track A prints combo_pair_report without the browser
+  notes: Track A prints combo_pair_report without the browser.
+- type: bullets
+  title: The idea
+  bullets:
+  - Load tiny_equiv.json; print truth_table_rows=8, cex a=1,b=1,c=0, miter_good_all_zero=True
+  notes: Load tiny_equiv.json; print truth_table_rows=8, cex a=1,b=1,c=0, miter_good_all_zero=True.
+- type: bullets
+  title: What you will do
+  bullets:
+  - Compare combo_pair_report metrics offline
+  notes: 'Compare combo_pair_report metrics offline: 8 rows, spec≡impl_good, spec≡impl_bad,
+    miter all-zero, CNF clauses.'
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Skipping goldens on tiny_equiv (8 rows, cex a=1,b=1,c=0)
+  notes: Skipping goldens on tiny_equiv (8 rows, cex a=1,b=1,c=0).
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist
+  notes: Complete the checklist.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue the path
+  notes: Continue the path.

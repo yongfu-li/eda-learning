@@ -151,6 +151,15 @@ LAB_TO_ALGO: dict[str, tuple[str, int]] = {
     "period-bound": ("period-bound", 5),
     "min-period": ("min-period", 5),
     "area-registers": ("area-registers", 5),
+    "spec-impl": ("spec-impl", 5),
+    "miter-build": ("miter-build", 5),
+    "truth-table-cec": ("truth-table-cec", 5),
+    "structural-hash": ("structural-hash", 5),
+    "sat-cnf-lite": ("sat-cnf-lite", 5),
+    "counterexample": ("counterexample", 5),
+    "dont-care": ("dont-care", 5),
+    "sequential-unroll": ("sequential-unroll", 5),
+    "sequential-cec": ("sequential-cec", 5),
 }
 
 BEGIN_MARK = "<!-- algorithm-walkthrough -->"

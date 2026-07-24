@@ -1,0 +1,74 @@
+{
+  "name": "tiny_equiv",
+  "notes": "Toy equivalence instance: combinational spec/impl pairs over PIs a,b,c; tiny sequential pair for unroll/SEC lite.",
+  "combinational": {
+    "spec": {
+      "pis": ["a", "b", "c"],
+      "pos": ["f"],
+      "gates": [
+        {"id": "g1", "op": "AND", "inputs": ["a", "b"]},
+        {"id": "g2", "op": "OR", "inputs": ["g1", "c"], "output": true}
+      ]
+    },
+    "impl_good": {
+      "pis": ["a", "b", "c"],
+      "pos": ["f"],
+      "gates": [
+        {"id": "g1", "op": "AND", "inputs": ["a", "b"]},
+        {"id": "g2", "op": "NOT", "inputs": ["g1"]},
+        {"id": "g3", "op": "NOT", "inputs": ["c"]},
+        {"id": "g4", "op": "AND", "inputs": ["g2", "g3"]},
+        {"id": "g5", "op": "NOT", "inputs": ["g4"], "output": true}
+      ]
+    },
+    "impl_bad": {
+      "pis": ["a", "b", "c"],
+      "pos": ["f"],
+      "gates": [
+        {"id": "g1", "op": "AND", "inputs": ["a", "b"]},
+        {"id": "g2", "op": "AND", "inputs": ["g1", "c"], "output": true}
+      ]
+    }
+  },
+  "sequential": {
+    "spec": {
+      "pis": ["a"],
+      "pos": ["y"],
+      "state": ["q"],
+      "init": {"q": 0},
+      "gates": [
+        {"id": "n1", "op": "NOT", "inputs": ["q"]},
+        {"id": "n2", "op": "AND", "inputs": ["a", "n1"]},
+        {"id": "n3", "op": "NOT", "inputs": ["a"]},
+        {"id": "n4", "op": "AND", "inputs": ["n3", "q"]},
+        {"id": "d_q", "op": "OR", "inputs": ["n2", "n4"]},
+        {"id": "y", "op": "BUF", "inputs": ["q"], "output": true}
+      ],
+      "ffs": [{"id": "ff0", "d": "d_q", "q": "q"}]
+    },
+    "impl_good": {
+      "pis": ["a"],
+      "pos": ["y"],
+      "state": ["q"],
+      "init": {"q": 0},
+      "gates": [
+        {"id": "x1", "op": "XOR", "inputs": ["a", "q"]},
+        {"id": "d_q", "op": "BUF", "inputs": ["x1"]},
+        {"id": "y", "op": "BUF", "inputs": ["q"], "output": true}
+      ],
+      "ffs": [{"id": "ff0", "d": "d_q", "q": "q"}]
+    },
+    "impl_bad": {
+      "pis": ["a"],
+      "pos": ["y"],
+      "state": ["q"],
+      "init": {"q": 0},
+      "gates": [
+        {"id": "d_q", "op": "NOT", "inputs": ["q"]},
+        {"id": "y", "op": "BUF", "inputs": ["q"], "output": true}
+      ],
+      "ffs": [{"id": "ff0", "d": "d_q", "q": "q"}]
+    },
+    "notes": "Spec next_q = a XOR q (via OR-of-ANDs); impl_good uses XOR; impl_bad next_q = NOT q (ignores a). Diverges within 2 unroll steps when a toggles."
+  }
+}

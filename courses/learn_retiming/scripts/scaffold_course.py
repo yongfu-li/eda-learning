@@ -220,7 +220,7 @@ def parse_modules():
         m = {
             "id": row[0], "kind": row[1], "title": row[2], "short": row[3], "lab": row[4],
             "outcomes": row[5], "algorithm": row[6], "hook": row[7], "idea": row[8],
-            "status": "**P**" if row[1] == "lab" else ("P" if row[1] == "offline" else "—"),
+            "status": "**ref**" if row[1] == "lab" else ("—" if row[1] == "offline" else "—"),
         }
         if row[1] == "lab":
             m["walk"] = row[9]
@@ -246,7 +246,7 @@ def lab_readme(m, modules):
         return f"""# Module {key}: {m['title']}
 
 **Module id:** `{m['id']}`  
-**Kind:** `lab` · Primary lab: `{m['lab']}` · **P**
+**Kind:** `lab` · Primary lab: `{m['lab']}` · **ref**
 
 {nav}
 

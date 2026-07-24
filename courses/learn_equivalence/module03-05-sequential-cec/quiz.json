@@ -1,0 +1,55 @@
+{
+  "module": "module03-05-sequential-cec",
+  "items": [
+    {
+      "q": "sequential_cec_lite good pair (2 steps)?",
+      "choices": [
+        "equivalent True",
+        "False always",
+        "unknown",
+        "8 rows"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "impl_bad sequential bug?",
+      "choices": [
+        "next_q=NOT q ignores a",
+        "same XOR",
+        "extra AND",
+        "no FF"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Initial state q in JSON?",
+      "choices": [
+        "0",
+        "1",
+        "X",
+        "undefined"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Lab id for this module?",
+      "choices": [
+        "sequential-cec",
+        "aig-strash",
+        "wire-rc",
+        "techmap-cover"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Miter PO when equivalent?",
+      "choices": [
+        "0 for all inputs",
+        "1 always",
+        "X",
+        "matches c only"
+      ],
+      "answer": 0
+    }
+  ]
+}

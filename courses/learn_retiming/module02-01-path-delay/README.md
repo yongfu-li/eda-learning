@@ -1,7 +1,7 @@
 # Module 02-01-path-delay: Zero-weight path delay
 
 **Module id:** `module02-01-path-delay`  
-**Kind:** `lab` · Primary lab: `path-delay` · **P**
+**Kind:** `lab` · Primary lab: `path-delay` · **ref**
 
 [← Registers](../module01-03-register-count/README.md) · [Course README](../README.md) · [Forward →](../module02-03-forward-retime/README.md)
 

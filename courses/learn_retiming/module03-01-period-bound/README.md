@@ -1,7 +1,7 @@
 # Module 03-01-period-bound: Period bound / FEAS lite
 
 **Module id:** `module03-01-period-bound`  
-**Kind:** `lab` · Primary lab: `period-bound` · **P**
+**Kind:** `lab` · Primary lab: `period-bound` · **ref**
 
 [← Legal](../module02-07-legal-retime/README.md) · [Course README](../README.md) · [Min period →](../module03-03-min-period/README.md)
 

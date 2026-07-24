@@ -1,7 +1,7 @@
 # Module 01-01-sequential-graph: Sequential circuit graph
 
 **Module id:** `module01-01-sequential-graph`  
-**Kind:** `lab` · Primary lab: `sequential-graph` · **P**
+**Kind:** `lab` · Primary lab: `sequential-graph` · **ref**
 
 [← Welcome](../module00-00-intro/README.md) · [Course README](../README.md) · [Registers →](../module01-03-register-count/README.md)
 

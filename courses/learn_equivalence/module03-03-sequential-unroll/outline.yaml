@@ -1,0 +1,62 @@
+title: Seq unroll
+footer: learn_equivalence — 03 sequential unroll
+slides:
+- type: title
+  title: Seq unroll
+  subtitle: Sequential equivalence often unrolls both designs for k cycles and runs
+    combinational CEC on the unrolled POs
+  notes: Sequential equivalence often unrolls both designs for k cycles and runs combinational
+    CEC on the unrolled POs.
+- type: bullets
+  title: The idea
+  bullets:
+  - Sequential_unroll(spec
+  notes: sequential_unroll(spec, 2) expands FF next_q = a XOR q into time-stamped
+    gates q_0,a_0,a_1,q_1,q_2.
+- type: image
+  title: Flip-flop
+  image: assets/steps/01-ff.png
+  caption: Flip-flop
+  notes: 'Sequential toy: state q, next_q = a XOR q, output y=q.'
+- type: image
+  title: Unroll k
+  image: assets/steps/02-steps.png
+  caption: Unroll k
+  notes: Unrolling k steps builds a combo circuit over time frames.
+- type: image
+  title: Frame PIs
+  image: assets/steps/03-pis.png
+  caption: Frame PIs
+  notes: Unroll adds a_0, a_1, … and q_0 as inputs.
+- type: image
+  title: Copied gates
+  image: assets/steps/04-gates.png
+  caption: Copied gates
+  notes: Each frame copies the combo cone.
+- type: image
+  title: Why unroll
+  image: assets/steps/05-why.png
+  caption: Why unroll
+  notes: Bounded SEC compares unrolled behaviors for k cycles.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **sequential-unroll**. Show unrolled netlist view for n=2.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call sequential_unroll(DATA['sequential']['spec'], 2); inspect gates and PIs
+  notes: Call sequential_unroll(DATA['sequential']['spec'], 2); inspect gates and
+    PIs.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Unrolling without resetting state
+  - Confusing PO y with next state
+  notes: Unrolling without resetting state. Confusing PO y with next state.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: sequential CEC lite'
+  notes: 'Next: sequential CEC lite.'

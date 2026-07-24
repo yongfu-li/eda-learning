@@ -1,0 +1,55 @@
+{
+  "module": "module03-01-dont-care",
+  "items": [
+    {
+      "q": "Don't-care mask value for X?",
+      "choices": [
+        "-1",
+        "0",
+        "1",
+        "2"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Fixing c=0 checks how many rows?",
+      "choices": [
+        "4 of 8",
+        "8 of 8",
+        "1",
+        "0"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Masked CEC on impl_bad still fails?",
+      "choices": [
+        "Yes at a=1,b=1,c=0",
+        "No",
+        "Only when c=1",
+        "Unknown"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Lab id for this module?",
+      "choices": [
+        "dont-care",
+        "aig-strash",
+        "wire-rc",
+        "techmap-cover"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Miter PO when equivalent?",
+      "choices": [
+        "0 for all inputs",
+        "1 always",
+        "X",
+        "matches c only"
+      ],
+      "answer": 0
+    }
+  ]
+}

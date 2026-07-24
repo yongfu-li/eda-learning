@@ -1,7 +1,7 @@
 # Module 02-03-forward-retime: Forward retiming
 
 **Module id:** `module02-03-forward-retime`  
-**Kind:** `lab` · Primary lab: `forward-retime` · **P**
+**Kind:** `lab` · Primary lab: `forward-retime` · **ref**
 
 [← Path delay](../module02-01-path-delay/README.md) · [Course README](../README.md) · [Backward →](../module02-05-backward-retime/README.md)
 

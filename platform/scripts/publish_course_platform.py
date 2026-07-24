@@ -274,6 +274,25 @@ COURSE_META = {
         "first_lab": "sequential-graph",
         "first_n": "02",
     },
+    "learn_equivalence": {
+        "title": "Equivalence checking for EDA",
+        "focus": "Spec/impl → miter → truth-table CEC → FRAIG → SAT/CNF → cex → don't-care → sequential unroll/SEC",
+        "prereq": None,
+        "status": "ready",
+        "repo": "learn_equivalence",
+        "modules_md": ROOT / "courses" / "learn_equivalence" / "docs" / "MODULES.md",
+        "course_root": ROOT / "courses" / "learn_equivalence",
+        "lead": (
+            "Combinational and bounded sequential equivalence literacy — miters, exhaustive CEC, SAT/CNF, counterexamples. "
+            "Clips and decks load from "
+            "<code>courses/learn_equivalence</code> "
+            "(<code>moduleSS-AA-slug/video.mp4</code>). Open the matching browser tool, then mark the lab done."
+        ),
+        "tools_href": "../../tools/index.html#equivalence",
+        "tools_label": "Equivalence tools",
+        "first_lab": "spec-impl",
+        "first_n": "02",
+    },
 }
 
 COURSE_INDEX = """<!DOCTYPE html>

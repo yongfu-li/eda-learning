@@ -1,7 +1,7 @@
 # Module 03-03-min-period: Min-period search
 
 **Module id:** `module03-03-min-period`  
-**Kind:** `lab` · Primary lab: `min-period` · **P**
+**Kind:** `lab` · Primary lab: `min-period` · **ref**
 
 [← FEAS lite](../module03-01-period-bound/README.md) · [Course README](../README.md) · [Area/regs →](../module03-05-area-registers/README.md)
 

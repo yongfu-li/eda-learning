@@ -1,0 +1,35 @@
+{
+  "module": "module05-01-offline-benchmark-compare",
+  "items": [
+    {
+      "q": "Goal of Offline benchmark compare?",
+      "choices": [
+        "Compare combo_pair_report metrics offline: 8 rows, spec\u2261impl_good, spec\u2261impl_bad, miter al",
+        "Skip equivalence",
+        "Only placement",
+        "Ignore miter"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Truth-table rows for 3 PIs?",
+      "choices": [
+        "8",
+        "3",
+        "6",
+        "16"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Counterexample for impl_bad?",
+      "choices": [
+        "a=1,b=1,c=0",
+        "a=0,b=0,c=0",
+        "never",
+        "c=1 only"
+      ],
+      "answer": 0
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+title: SAT CNF lite
+footer: learn_equivalence — 05 sat cnf lite
+slides:
+- type: title
+  title: SAT CNF lite
+  subtitle: Industrial CEC uses SAT on a miter , first learn clause count on a tiny
+    netlist
+  notes: Industrial CEC uses SAT on a miter — first learn clause count on a tiny netlist.
+- type: bullets
+  title: The idea
+  bullets:
+  - Encode_sat_cnf_lite assigns PI vars 1..3 and adds clauses per AND/OR/NOT gate
+  notes: encode_sat_cnf_lite assigns PI vars 1..3 and adds clauses per AND/OR/NOT
+    gate.
+- type: image
+  title: Tseitin encode
+  image: assets/steps/01-tseitin.png
+  caption: Tseitin encode
+  notes: Each gate becomes a few CNF clauses (Tseitin).
+- type: image
+  title: Spec CNF
+  image: assets/steps/02-spec.png
+  caption: Spec CNF
+  notes: encode_sat_cnf_lite(spec) yields positive clause count.
+- type: image
+  title: Assert miter=1
+  image: assets/steps/03-assert.png
+  caption: Assert miter=1
+  notes: 'Ask SAT: can bad miter output be 1?'
+- type: image
+  title: SAT finds diff
+  image: assets/steps/04-sat.png
+  caption: SAT finds diff
+  notes: Tiny DPLL finds the bad miter satisfiable → not equivalent.
+- type: image
+  title: UNSAT means equiv
+  image: assets/steps/05-unsat.png
+  caption: UNSAT means equiv
+  notes: If miter=1 is UNSAT, circuits are equivalent.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **sat-cnf-lite**. Show CNF stats; toggle assert PO=1 and run Check.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call encode_sat_cnf_lite(spec)
+  notes: Call encode_sat_cnf_lite(spec); print num_vars, num_clauses; sat_satisfiable
+    on asserted PO.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - CNF on outputs without Tseitin auxiliaries
+  - Expecting full Glucose run
+  notes: CNF on outputs without Tseitin auxiliaries. Expecting full Glucose run.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: counterexample debug from CEC'
+  notes: 'Next: counterexample debug from CEC.'

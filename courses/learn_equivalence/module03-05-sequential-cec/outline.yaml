@@ -1,0 +1,61 @@
+title: Sequential CEC
+footer: learn_equivalence — 05 sequential cec
+slides:
+- type: title
+  title: Sequential CEC
+  subtitle: Sequential CEC asks whether two FSMs agree on all input sequences , we
+    check 2 unroll steps as literacy
+  notes: Sequential CEC asks whether two FSMs agree on all input sequences — we check
+    2 unroll steps as literacy.
+- type: bullets
+  title: The idea
+  bullets:
+  - Sequential_cec_lite enumerates input sequences
+  notes: sequential_cec_lite enumerates input sequences; spec vs impl_good match;
+    impl_bad diverges when a matters.
+- type: image
+  title: Good SEC
+  image: assets/steps/01-good.png
+  caption: Good SEC
+  notes: XOR impl matches OR-of-ANDs for 2 steps.
+- type: image
+  title: Bad SEC
+  image: assets/steps/02-bad.png
+  caption: Bad SEC
+  notes: NOT-q impl ignores a and fails within 2 steps.
+- type: image
+  title: Bounded only
+  image: assets/steps/03-bound.png
+  caption: Bounded only
+  notes: This is bounded SEC — not full infinite-horizon proof.
+- type: image
+  title: Same init
+  image: assets/steps/04-init.png
+  caption: Same init
+  notes: Both start from q=0.
+- type: image
+  title: Done
+  image: assets/steps/05-done.png
+  caption: Done
+  notes: 'Next: offline compare, then wrap toward formal / STA.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **sequential-cec**. Run 2-step SEC on good vs bad sequential pair.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call sequential_cec_lite(seq_spec, seq_good, 2) True; seq_bad False
+  notes: Call sequential_cec_lite(seq_spec, seq_good, 2) True; seq_bad False.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Checking one reset cycle only
+  - Comparing comb outputs without state update
+  notes: Checking one reset cycle only. Comparing comb outputs without state update.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: offline benchmark, then wrap'
+  notes: 'Next: offline benchmark, then wrap.'

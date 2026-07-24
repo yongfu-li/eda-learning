@@ -1,7 +1,7 @@
 # Module 02-05-backward-retime: Backward retiming
 
 **Module id:** `module02-05-backward-retime`  
-**Kind:** `lab` · Primary lab: `backward-retime` · **P**
+**Kind:** `lab` · Primary lab: `backward-retime` · **ref**
 
 [← Forward](../module02-03-forward-retime/README.md) · [Course README](../README.md) · [Legal →](../module02-07-legal-retime/README.md)
 

@@ -1,7 +1,7 @@
 # Module 02-07-legal-retime: Legal retiming
 
 **Module id:** `module02-07-legal-retime`  
-**Kind:** `lab` · Primary lab: `legal-retime` · **P**
+**Kind:** `lab` · Primary lab: `legal-retime` · **ref**
 
 [← Backward](../module02-05-backward-retime/README.md) · [Course README](../README.md) · [FEAS lite →](../module03-01-period-bound/README.md)
 

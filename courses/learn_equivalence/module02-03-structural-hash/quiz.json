@@ -1,0 +1,55 @@
+{
+  "module": "module02-03-structural-hash",
+  "items": [
+    {
+      "q": "structural_hash_stats counts?",
+      "choices": [
+        "total vs unique hashes",
+        "only PI count",
+        "miter XOR",
+        "FF states"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "FRAIG-lite goal?",
+      "choices": [
+        "Find structurally equivalent nodes",
+        "Place cells",
+        "Route wires",
+        "Retiming"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Spec gate count in tiny_equiv?",
+      "choices": [
+        "2",
+        "5",
+        "8",
+        "1"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Lab id for this module?",
+      "choices": [
+        "structural-hash",
+        "aig-strash",
+        "wire-rc",
+        "techmap-cover"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Miter PO when equivalent?",
+      "choices": [
+        "0 for all inputs",
+        "1 always",
+        "X",
+        "matches c only"
+      ],
+      "answer": 0
+    }
+  ]
+}

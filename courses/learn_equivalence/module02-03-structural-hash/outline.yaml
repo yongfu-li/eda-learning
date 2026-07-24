@@ -1,0 +1,63 @@
+title: Struct hash
+footer: learn_equivalence — 03 structural hash
+slides:
+- type: title
+  title: Struct hash
+  subtitle: Structural hashing finds functionally identical subexpressions , the idea
+    behind FRAIG and AIG strashing
+  notes: Structural hashing finds functionally identical subexpressions — the idea
+    behind FRAIG and AIG strashing.
+- type: bullets
+  title: The idea
+  bullets:
+  - Spec has 2 unique gates
+  notes: Spec has 2 unique gates; impl_good has 5 gates but fewer unique hashes after
+    sharing literals.
+- type: image
+  title: Hash signatures
+  image: assets/steps/01-idea.png
+  caption: Hash signatures
+  notes: FRAIG-lite hashes each gate by (op, sorted child hashes).
+- type: image
+  title: Spec hashes
+  image: assets/steps/02-spec.png
+  caption: Spec hashes
+  notes: Spec has 2 gates → 2 unique hashes on the toy.
+- type: image
+  title: Good fraig
+  image: assets/steps/03-good.png
+  caption: Good fraig
+  notes: Good rewrite has more gates; fraig_nodes = unique hashes.
+- type: image
+  title: Not enough alone
+  image: assets/steps/04-limit.png
+  caption: Not enough alone
+  notes: Different structures can still be functionally equal.
+- type: image
+  title: Cleanup first
+  image: assets/steps/05-use.png
+  caption: Cleanup first
+  notes: Structural hashing cleans duplicates before CEC.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **structural-hash**. Highlight hash buckets; compare spec vs impl_good
+    gate counts.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call structural_hash_stats(spec) and fraig_lite(impl_good)
+  notes: Call structural_hash_stats(spec) and fraig_lite(impl_good).
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Hashing by gate id instead of structure
+  - Expecting full industrial FRAIG fixpoint
+  notes: Hashing by gate id instead of structure. Expecting full industrial FRAIG
+    fixpoint.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: SAT / CNF encoding lite'
+  notes: 'Next: SAT / CNF encoding lite.'

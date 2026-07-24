@@ -33,6 +33,8 @@ import { drawClockTree } from "../../assets/clock-tree-core.js";
 import { BUFFERING_ALGOS } from "./buffering-algos.js";
 import { SYNTHESIS_ALGOS } from "./synthesis-algos.js";
 import { RETIMING_ALGOS } from "./retiming-algos.js";
+import { EQUIVALENCE_ALGOS } from "./equivalence-algos.js";
+import { drawEquivalence } from "../../assets/equivalence-core.js";
 import { drawRetiming } from "../../assets/retiming-core.js";
 import { drawSynthesis } from "../../assets/synthesis-core.js";
 import { drawBuffering } from "../../assets/buffering-core.js";
@@ -1684,6 +1686,7 @@ export const ALGOS = {
   ...BUFFERING_ALGOS,
   ...SYNTHESIS_ALGOS,
   ...RETIMING_ALGOS,
+  ...EQUIVALENCE_ALGOS,
 };
 
 function qs() {
@@ -1807,6 +1810,16 @@ function render() {
       selectedSink: s.selectedSink || null,
       highlight: s.highlight || [],
       showSkew: s.showSkew !== false,
+    });
+  } else if (pack.kind === "equivalence") {
+    drawEquivalence(canvas, {
+      circuit: s.circuit,
+      layout: s.layout,
+      layoutHint: s.layoutHint || null,
+      selected: s.selected || null,
+      assignment: s.assignment || null,
+      highlight: s.highlight || [],
+      metricText: s.metricText || null,
     });
   } else if (pack.kind === "retiming") {
     drawRetiming(canvas, {

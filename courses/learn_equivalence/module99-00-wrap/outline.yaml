@@ -1,0 +1,36 @@
+title: Hook
+footer: learn_equivalence — 00 wrap
+slides:
+- type: title
+  title: Hook
+  subtitle: 'You can prove tiny_equiv: truth-table CEC, miter PO=0 when equivalent,
+    and 2-step sequential check'
+  notes: 'You can prove tiny_equiv: truth-table CEC, miter PO=0 when equivalent, and
+    2-step sequential check.'
+- type: bullets
+  title: The idea
+  bullets:
+  - 'Natural next: formal property checking courses or full industrial CEC tools'
+  notes: 'Natural next: formal property checking courses or full industrial CEC tools.'
+- type: bullets
+  title: What you will do
+  bullets:
+  - Recap spec/impl
+  notes: Recap spec/impl, miter XOR, 8-row CEC, structural hash, SAT CNF lite, cex
+    a=1,b=1,c=0, sequential unroll/SEC lite.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Skipping goldens on tiny_equiv (8 rows, cex a=1,b=1,c=0)
+  notes: Skipping goldens on tiny_equiv (8 rows, cex a=1,b=1,c=0).
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist
+  notes: Complete the checklist.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue the path
+  notes: Continue the path.

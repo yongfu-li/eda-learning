@@ -109,6 +109,11 @@
       "section": "Clustering & refinement"
     },
     {
+      "id": "counterexample",
+      "title": "Counterexample",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "critical-path",
       "title": "Critical Path",
       "section": "Static timing analysis"
@@ -137,6 +142,11 @@
       "id": "displacement-hpwl",
       "title": "Displacement Hpwl",
       "section": "Legalization"
+    },
+    {
+      "id": "dont-care",
+      "title": "Dont Care",
+      "section": "Clustering & refinement"
     },
     {
       "id": "drc-spacing",
@@ -294,6 +304,11 @@
       "section": "Clustering & refinement"
     },
     {
+      "id": "miter-build",
+      "title": "Miter Build",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "mmm-tree",
       "title": "Mmm Tree",
       "section": "Clustering & refinement"
@@ -434,6 +449,11 @@
       "section": "Placement"
     },
     {
+      "id": "sat-cnf-lite",
+      "title": "Sat Cnf Lite",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "sequence-pair",
       "title": "Sequence Pair",
       "section": "Floorplanning"
@@ -441,6 +461,11 @@
     {
       "id": "sequential-buffer",
       "title": "Sequential Buffer",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "sequential-cec",
+      "title": "Sequential Cec",
       "section": "Clustering & refinement"
     },
     {
@@ -466,6 +491,11 @@
     {
       "id": "sequential-synth",
       "title": "Sequential Synth",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "sequential-unroll",
+      "title": "Sequential Unroll",
       "section": "Clustering & refinement"
     },
     {
@@ -514,6 +544,11 @@
       "section": "Floorplanning"
     },
     {
+      "id": "spec-impl",
+      "title": "Spec Impl",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "spectral-bisection",
       "title": "Spectral bisection",
       "section": "Clustering & refinement"
@@ -527,6 +562,11 @@
       "id": "spread-legalize-lite",
       "title": "Spread Legalize Lite",
       "section": "Placement"
+    },
+    {
+      "id": "structural-hash",
+      "title": "Structural Hash",
+      "section": "Clustering & refinement"
     },
     {
       "id": "tapping-points",
@@ -571,6 +611,11 @@
     {
       "id": "track-usage",
       "title": "Track Usage",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "truth-table-cec",
+      "title": "Truth Table Cec",
       "section": "Clustering & refinement"
     },
     {
@@ -851,7 +896,7 @@
           "kind": "lab",
           "title": "Sequential circuit graph",
           "toolId": "sequential-graph",
-          "status": "planned",
+          "status": "shipped",
           "media": {
             "video": true,
             "pdf": true,
@@ -866,7 +911,7 @@
           "kind": "lab",
           "title": "Edge register counts",
           "toolId": "register-count",
-          "status": "planned",
+          "status": "shipped",
           "media": {
             "video": true,
             "pdf": true,
@@ -881,7 +926,7 @@
           "kind": "lab",
           "title": "Zero-weight path delay",
           "toolId": "path-delay",
-          "status": "planned",
+          "status": "shipped",
           "media": {
             "video": true,
             "pdf": true,
@@ -896,7 +941,7 @@
           "kind": "lab",
           "title": "Forward retiming",
           "toolId": "forward-retime",
-          "status": "planned",
+          "status": "shipped",
           "media": {
             "video": true,
             "pdf": true,
@@ -911,7 +956,7 @@
           "kind": "lab",
           "title": "Backward retiming",
           "toolId": "backward-retime",
-          "status": "planned",
+          "status": "shipped",
           "media": {
             "video": true,
             "pdf": true,
@@ -926,7 +971,7 @@
           "kind": "lab",
           "title": "Legal retiming",
           "toolId": "legal-retime",
-          "status": "planned",
+          "status": "shipped",
           "media": {
             "video": true,
             "pdf": true,
@@ -941,7 +986,7 @@
           "kind": "lab",
           "title": "Period bound / FEAS lite",
           "toolId": "period-bound",
-          "status": "planned",
+          "status": "shipped",
           "media": {
             "video": true,
             "pdf": true,
@@ -956,7 +1001,7 @@
           "kind": "lab",
           "title": "Min-period search",
           "toolId": "min-period",
-          "status": "planned",
+          "status": "shipped",
           "media": {
             "video": true,
             "pdf": true,
@@ -971,7 +1016,7 @@
           "kind": "lab",
           "title": "Register area tradeoff",
           "toolId": "area-registers",
-          "status": "planned",
+          "status": "shipped",
           "media": {
             "video": true,
             "pdf": true,
@@ -986,7 +1031,7 @@
           "kind": "offline",
           "title": "Offline benchmark compare",
           "toolId": null,
-          "status": "planned",
+          "status": "shipped",
           "media": {
             "video": true,
             "pdf": true,
@@ -1013,12 +1058,193 @@
     },
     {
       "id": "learn_equivalence",
-      "title": "Equivalence checking",
-      "focus": "Combinational / sequential equiv algorithms",
-      "status": "planned",
+      "title": "Equivalence checking for EDA",
+      "focus": "Spec/impl \u2192 miter \u2192 truth-table CEC \u2192 FRAIG \u2192 SAT/CNF \u2192 cex \u2192 don't-care \u2192 sequential unroll/SEC",
+      "status": "ready",
       "repo": "learn_equivalence",
       "prereq": null,
-      "labs": []
+      "labs": [
+        {
+          "n": "01",
+          "slug": "intro",
+          "moduleId": "module00-00-intro",
+          "kind": "intro",
+          "title": "Welcome to equivalence checking",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "02",
+          "slug": "spec-impl",
+          "moduleId": "module01-01-spec-impl",
+          "kind": "lab",
+          "title": "Spec vs implementation",
+          "toolId": "spec-impl",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "03",
+          "slug": "miter-build",
+          "moduleId": "module01-03-miter-build",
+          "kind": "lab",
+          "title": "Miter construction",
+          "toolId": "miter-build",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "04",
+          "slug": "truth-table-cec",
+          "moduleId": "module02-01-truth-table-cec",
+          "kind": "lab",
+          "title": "Truth-table CEC",
+          "toolId": "truth-table-cec",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "05",
+          "slug": "structural-hash",
+          "moduleId": "module02-03-structural-hash",
+          "kind": "lab",
+          "title": "Structural hash / FRAIG lite",
+          "toolId": "structural-hash",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "06",
+          "slug": "sat-cnf-lite",
+          "moduleId": "module02-05-sat-cnf-lite",
+          "kind": "lab",
+          "title": "SAT / CNF encoding lite",
+          "toolId": "sat-cnf-lite",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "07",
+          "slug": "counterexample",
+          "moduleId": "module02-07-counterexample",
+          "kind": "lab",
+          "title": "Counterexample debug",
+          "toolId": "counterexample",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "08",
+          "slug": "dont-care",
+          "moduleId": "module03-01-dont-care",
+          "kind": "lab",
+          "title": "Don't-care CEC",
+          "toolId": "dont-care",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "09",
+          "slug": "sequential-unroll",
+          "moduleId": "module03-03-sequential-unroll",
+          "kind": "lab",
+          "title": "Sequential unrolling",
+          "toolId": "sequential-unroll",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "10",
+          "slug": "sequential-cec",
+          "moduleId": "module03-05-sequential-cec",
+          "kind": "lab",
+          "title": "Sequential CEC lite",
+          "toolId": "sequential-cec",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "11",
+          "slug": "offline-benchmark-compare",
+          "moduleId": "module05-01-offline-benchmark-compare",
+          "kind": "offline",
+          "title": "Offline benchmark compare",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "12",
+          "slug": "wrap",
+          "moduleId": "module99-00-wrap",
+          "kind": "wrap",
+          "title": "Equivalence path complete",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        }
+      ]
     },
     {
       "id": "learn_sta",

@@ -1,7 +1,7 @@
 # Module 03-05-area-registers: Register area tradeoff
 
 **Module id:** `module03-05-area-registers`  
-**Kind:** `lab` · Primary lab: `area-registers` · **P**
+**Kind:** `lab` · Primary lab: `area-registers` · **ref**
 
 [← Min period](../module03-03-min-period/README.md) · [Course README](../README.md) · [Offline →](../module05-01-offline-benchmark-compare/README.md)
 

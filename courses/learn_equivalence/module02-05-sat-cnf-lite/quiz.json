@@ -1,0 +1,55 @@
+{
+  "module": "module02-05-sat-cnf-lite",
+  "items": [
+    {
+      "q": "encode_sat_cnf_lite returns?",
+      "choices": [
+        "num_vars + num_clauses",
+        "only miter XOR",
+        "placement cost",
+        "FF count"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Tseitin encoding adds?",
+      "choices": [
+        "Clauses per gate",
+        "Only PI names",
+        "Routing layers",
+        "Clock trees"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Industrial CEC often uses?",
+      "choices": [
+        "SAT on miter",
+        "Only simulation",
+        "Only placement",
+        "CTS only"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Lab id for this module?",
+      "choices": [
+        "sat-cnf-lite",
+        "aig-strash",
+        "wire-rc",
+        "techmap-cover"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Miter PO when equivalent?",
+      "choices": [
+        "0 for all inputs",
+        "1 always",
+        "X",
+        "matches c only"
+      ],
+      "answer": 0
+    }
+  ]
+}

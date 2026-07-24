@@ -1,0 +1,61 @@
+title: Counterexample
+footer: learn_equivalence — 07 counterexample
+slides:
+- type: title
+  title: Counterexample
+  subtitle: When CEC fails, the counterexample is your shortest bug story , one input
+    pattern where POs differ
+  notes: When CEC fails, the counterexample is your shortest bug story — one input
+    pattern where POs differ.
+- type: bullets
+  title: The idea
+  bullets:
+  - Find_counterexample(spec, impl_bad) returns {'a':1,'b':1,'c':0}; spec_out=1, impl_out=0
+  notes: find_counterexample(spec, impl_bad) returns {'a':1,'b':1,'c':0}; spec_out=1,
+    impl_out=0.
+- type: image
+  title: Find cex
+  image: assets/steps/01-find.png
+  caption: Find cex
+  notes: find_counterexample(spec, bad) returns a=1,b=1,c=0.
+- type: image
+  title: Simulate both
+  image: assets/steps/02-sim.png
+  caption: Simulate both
+  notes: At the cex, spec=1 and bad=0 — clear mismatch.
+- type: image
+  title: Miter lights
+  image: assets/steps/03-miter.png
+  caption: Miter lights
+  notes: Bad miter at cex outputs 1.
+- type: image
+  title: Fix the bug
+  image: assets/steps/04-fix.png
+  caption: Fix the bug
+  notes: Change bad AND to OR with c (or use good rewrite).
+- type: image
+  title: Recheck CEC
+  image: assets/steps/05-recheck.png
+  caption: Recheck CEC
+  notes: After fix, truth-table CEC should pass.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **counterexample**. Load bad impl; highlight cex row in truth table.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call find_counterexample(spec, impl_bad); print spec and impl PO at cex
+  notes: Call find_counterexample(spec, impl_bad); print spec and impl PO at cex.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Ignoring cex and random sim
+  - Fixing only one corner without regression
+  notes: Ignoring cex and random sim. Fixing only one corner without regression.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: don''t-care CEC'
+  notes: 'Next: don''t-care CEC.'
