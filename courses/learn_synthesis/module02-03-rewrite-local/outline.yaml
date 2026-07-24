@@ -1,0 +1,58 @@
+title: Rewrite
+footer: learn_synthesis — 03 rewrite local
+slides:
+- type: title
+  title: Rewrite
+  subtitle: Rewriting reshapes the AIG before mapping without changing function
+  notes: Rewriting reshapes the AIG before mapping without changing function.
+- type: bullets
+  title: The idea
+  bullets:
+  - Count nodes with complemented edges or AND children; flag AND(~x,~y) as NOR-friendly
+  notes: Count nodes with complemented edges or AND children; flag AND(~x,~y) as NOR-friendly.
+- type: image
+  title: Opportunities
+  image: assets/steps/01-opp.png
+  caption: Opportunities
+  notes: Several AND nodes qualify as rewrite candidates.
+- type: image
+  title: Both comp
+  image: assets/steps/02-both.png
+  caption: Both comp
+  notes: AND(~, ~) is a NOR mapping hint.
+- type: image
+  title: Push
+  image: assets/steps/03-push.png
+  caption: Push
+  notes: Inverter-push report lists those nodes.
+- type: image
+  title: Preserve
+  image: assets/steps/04-fn.png
+  caption: Preserve
+  notes: Function f stays the same under rewrite bookkeeping.
+- type: image
+  title: Map later
+  image: assets/steps/05-map.png
+  caption: Map later
+  notes: Techmap will use NOR2 when both comps appear.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **rewrite-local**. Read rewrite opportunity count.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call local_rewrite_count and apply_inverter_push
+  notes: Call local_rewrite_count and apply_inverter_push.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Mutating function accidentally
+  - Counting PIs as rewrite targets
+  notes: Mutating function accidentally. Counting PIs as rewrite targets.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: k-feasible cuts'
+  notes: 'Next: k-feasible cuts.'

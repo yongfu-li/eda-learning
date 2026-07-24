@@ -1,0 +1,55 @@
+{
+  "module": "module02-05-van-ginneken",
+  "items": [
+    {
+      "q": "Main goal of Van Ginneken DP lite?",
+      "choices": [
+        "Generate (cap, delay) options, prune dominated, pick best buffer/wire choice.",
+        "Ignore RC",
+        "Delete sinks",
+        "Only CTS H-trees"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Toy net topology?",
+      "choices": [
+        "D \u2192 S0 \u2192 {S1,S2}",
+        "Only two pins",
+        "Mesh clock",
+        "No driver"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Van Ginneken options are pairs of\u2026",
+      "choices": [
+        "(cap, delay)",
+        "(x, y)",
+        "(R only)",
+        "(fanout, area only)"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Primary browser lab id?",
+      "choices": [
+        "van-ginneken",
+        "h-tree",
+        "lee-maze",
+        "routing-grid"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Prereq course on this spine?",
+      "choices": [
+        "learn_clock_tree",
+        "learn_unix",
+        "learn_git",
+        "learn_clustering"
+      ],
+      "answer": 0
+    }
+  ]
+}

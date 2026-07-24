@@ -30,6 +30,10 @@ import { DETAILED_ROUTING_ALGOS } from "./detailed-routing-algos.js";
 import { drawDetailedRoute, usageFromDetailedRoutes } from "../../assets/detailed-routing-core.js";
 import { CLOCK_TREE_ALGOS } from "./clock-tree-algos.js";
 import { drawClockTree } from "../../assets/clock-tree-core.js";
+import { BUFFERING_ALGOS } from "./buffering-algos.js";
+import { SYNTHESIS_ALGOS } from "./synthesis-algos.js";
+import { drawSynthesis } from "../../assets/synthesis-core.js";
+import { drawBuffering } from "../../assets/buffering-core.js";
 import { PLACEMENT_ALGO_IDS, PLACEMENT_ALGOS } from "./placement-algos.js";
 import { STA_ALGOS } from "./sta-algos.js";
 
@@ -1675,6 +1679,8 @@ export const ALGOS = {
   ...GLOBAL_ROUTING_ALGOS,
   ...DETAILED_ROUTING_ALGOS,
   ...CLOCK_TREE_ALGOS,
+  ...BUFFERING_ALGOS,
+  ...SYNTHESIS_ALGOS,
 };
 
 function qs() {
@@ -1798,6 +1804,25 @@ function render() {
       selectedSink: s.selectedSink || null,
       highlight: s.highlight || [],
       showSkew: s.showSkew !== false,
+    });
+  } else if (pack.kind === "synthesis") {
+    drawSynthesis(canvas, {
+      nodes: s.nodes,
+      layout: s.layout,
+      selectedNode: s.selectedNode ?? null,
+      mapping: s.mapping || null,
+      cuts: s.cuts || null,
+      highlight: s.highlight || [],
+      metricText: s.metricText || null,
+    });
+  } else if (pack.kind === "buffering") {
+    drawBuffering(canvas, {
+      sinks: s.sinks,
+      sites: s.sites || [],
+      buffers: s.buffers || [],
+      selectedEdge: s.selectedEdge || null,
+      highlight: s.highlight || [],
+      metricText: s.metricText || null,
     });
   } else if (
     pack.kind === "placement" ||

@@ -1,0 +1,36 @@
+title: Hook
+footer: learn_synthesis — 00 intro
+slides:
+- type: title
+  title: Hook
+  subtitle: 'RTL becomes gates through logic synthesis: build an AIG, rewrite, map
+    to a library'
+  notes: 'RTL becomes gates through logic synthesis: build an AIG, rewrite, map to
+    a library.'
+- type: bullets
+  title: The idea
+  bullets:
+  - This course uses a tiny AIG for f = (~(a∧b) ∧ c) ∧ (a∧c) with a six-cell library
+  notes: This course uses a tiny AIG for f = (~(a∧b) ∧ c) ∧ (a∧c) with a six-cell
+    library.
+- type: bullets
+  title: What you will do
+  bullets:
+  - 'Explain AIG-based synthesis: rewrite, cuts, techmap, area/delay'
+  notes: 'Explain AIG-based synthesis: rewrite, cuts, techmap, area/delay.'
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Skipping goldens
+  notes: Skipping goldens.
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist
+  notes: Complete the checklist.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue to the next part
+  notes: Continue.

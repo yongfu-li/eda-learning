@@ -1,0 +1,33 @@
+title: Hook
+footer: learn_synthesis — 00 wrap
+slides:
+- type: title
+  title: Hook
+  subtitle: You built a tiny ABC-style loop on one AIG
+  notes: You built a tiny ABC-style loop on one AIG.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'Natural next: learn_sta (already ready) or learn_retiming / learn_equivalence'
+  notes: 'Natural next: learn_sta (already ready) or learn_retiming / learn_equivalence.'
+- type: bullets
+  title: What you will do
+  bullets:
+  - Recap AIG, strash, rewrite, cuts, techmap; continue to STA or retiming
+  notes: Recap AIG, strash, rewrite, cuts, techmap; continue to STA or retiming.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Skipping goldens
+  notes: Skipping goldens.
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist
+  notes: Complete the checklist.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue to the next part
+  notes: Continue.

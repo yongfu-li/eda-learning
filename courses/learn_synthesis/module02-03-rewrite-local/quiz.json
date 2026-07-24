@@ -1,0 +1,55 @@
+{
+  "module": "module02-03-rewrite-local",
+  "items": [
+    {
+      "q": "Goal of Local AIG rewrite?",
+      "choices": [
+        "Detect rewrite opportunities (complements, AND children) and both-comp \u2192 NOR map",
+        "Ignore AIG",
+        "Only CTS",
+        "Skip techmap"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Toy AIG has how many AND nodes?",
+      "choices": [
+        "4",
+        "1",
+        "10",
+        "0"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Techmap uses a\u2026",
+      "choices": [
+        "cell library",
+        "GCell grid",
+        "clock tree",
+        "PDN"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Lab id?",
+      "choices": [
+        "rewrite-local",
+        "h-tree",
+        "wire-rc",
+        "lee-maze"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Natural next course?",
+      "choices": [
+        "learn_sta",
+        "learn_unix",
+        "learn_git",
+        "learn_drc"
+      ],
+      "answer": 0
+    }
+  ]
+}

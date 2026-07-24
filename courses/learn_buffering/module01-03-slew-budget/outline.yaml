@@ -1,0 +1,64 @@
+title: Slew budget
+footer: learn_buffering — 03 slew budget
+slides:
+- type: title
+  title: Slew budget
+  subtitle: Slew (transition) is what library cells require; long RC violates the
+    budget
+  notes: Slew (transition) is what library cells require; long RC violates the budget.
+- type: bullets
+  title: The idea
+  bullets:
+  - Estimate_slew equals k times R times C_total with k about 2.2
+  - Slew_ok is true when slew is at most the limit, eight on the toy
+  notes: estimate_slew equals k times R times C_total with k about 2.2. slew_ok is
+    true when slew is at most the limit—eight on the toy.
+- type: image
+  title: Slew definition
+  image: assets/steps/01-def.png
+  caption: Slew definition
+  notes: Toy transition ≈ 2.2 · R · C_total on the segment.
+- type: image
+  title: Limit eight
+  image: assets/steps/02-limit.png
+  caption: Limit eight
+  notes: GOLDENS.slewLimit = 8 on tiny_buf.
+- type: image
+  title: Hot edge
+  image: assets/steps/03-hot.png
+  caption: Hot edge
+  notes: Long e0 with branch load can approach or exceed the limit.
+- type: image
+  title: Pass/fail
+  image: assets/steps/04-ok.png
+  caption: Pass/fail
+  notes: slew_ok gates whether slew-driven insertion fires.
+- type: image
+  title: Toward insert
+  image: assets/steps/05-next.png
+  caption: Toward insert
+  notes: Failing edges get buffer candidates in later labs.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **slew-budget**. Read edge slews vs limit eight. Stretch a sink to worsen
+    e1 slew.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call `estimate_slew` and `slew_ok` in solvers
+  - Assert limit from tiny_buf.json
+  notes: Call `estimate_slew` and `slew_ok` in solvers. Assert limit from tiny_buf.json.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Using delay as slew
+  - Ignoring C_load
+  - Hard-coding pass without measuring
+  notes: Using delay as slew. Ignoring C_load. Hard-coding pass without measuring.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: place candidate buffer sites along edges'
+  notes: 'Next: place candidate buffer sites along edges.'

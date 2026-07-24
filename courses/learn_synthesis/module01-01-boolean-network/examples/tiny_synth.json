@@ -1,0 +1,26 @@
+{
+  "name": "tiny_synth",
+  "primary": ["a", "b", "c"],
+  "outputs": ["f"],
+  "aig": {
+    "nodes": [
+      {"id": 1, "type": "pi", "name": "a"},
+      {"id": 2, "type": "pi", "name": "b"},
+      {"id": 3, "type": "pi", "name": "c"},
+      {"id": 4, "type": "and", "fanin": [[1, false], [2, false]]},
+      {"id": 5, "type": "and", "fanin": [[4, true], [3, false]]},
+      {"id": 6, "type": "and", "fanin": [[1, false], [3, false]]},
+      {"id": 7, "type": "and", "fanin": [[5, false], [6, false]], "po": "f"}
+    ]
+  },
+  "library": [
+    {"id": "INV", "area": 1, "delay": 1, "function": "NOT", "inputs": 1},
+    {"id": "BUF", "area": 1, "delay": 1, "function": "BUF", "inputs": 1},
+    {"id": "NAND2", "area": 2, "delay": 2, "function": "NAND", "inputs": 2},
+    {"id": "NOR2", "area": 2, "delay": 2, "function": "NOR", "inputs": 2},
+    {"id": "AND2", "area": 2, "delay": 2, "function": "AND", "inputs": 2},
+    {"id": "AOI21", "area": 3, "delay": 3, "function": "AOI21", "inputs": 3}
+  ],
+  "cut_k": 3,
+  "notes": "Toy AIG for f = (~(a&b) & c) & (a&c). Techmap with k=3 cuts; area/delay library."
+}

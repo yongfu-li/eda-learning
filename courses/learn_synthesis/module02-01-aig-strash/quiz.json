@@ -1,0 +1,55 @@
+{
+  "module": "module02-01-aig-strash",
+  "items": [
+    {
+      "q": "Goal of Structural hashing (strash)?",
+      "choices": [
+        "Build a structural hash table keyed by sorted AND fanin literals.",
+        "Ignore AIG",
+        "Only CTS",
+        "Skip techmap"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Toy AIG has how many AND nodes?",
+      "choices": [
+        "4",
+        "1",
+        "10",
+        "0"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Techmap uses a\u2026",
+      "choices": [
+        "cell library",
+        "GCell grid",
+        "clock tree",
+        "PDN"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Lab id?",
+      "choices": [
+        "aig-strash",
+        "h-tree",
+        "wire-rc",
+        "lee-maze"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Natural next course?",
+      "choices": [
+        "learn_sta",
+        "learn_unix",
+        "learn_git",
+        "learn_drc"
+      ],
+      "answer": 0
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+title: Fanout
+footer: learn_buffering — 03 fanout tree
+slides:
+- type: title
+  title: Fanout
+  subtitle: One driver cannot feed too many sinks without a buffer tree stage
+  notes: One driver cannot feed too many sinks without a buffer tree stage.
+- type: bullets
+  title: The idea
+  bullets:
+  - If sink count exceeds max_fanout (two on the toy), insert BUF_X2 at S0
+  - Three sinks therefore force an insert
+  notes: If sink count exceeds max_fanout (two on the toy), insert BUF_X2 at S0. Three
+    sinks therefore force an insert.
+- type: image
+  title: Fanout three
+  image: assets/steps/01-fo.png
+  caption: Fanout three
+  notes: Tiny net has three sinks.
+- type: image
+  title: Max two
+  image: assets/steps/02-max.png
+  caption: Max two
+  notes: max_fanout=2 → must insert.
+- type: image
+  title: At S0
+  image: assets/steps/03-s0.png
+  caption: At S0
+  notes: Junction buffer sits on S0.
+- type: image
+  title: BUF_X2
+  image: assets/steps/04-x2.png
+  caption: BUF_X2
+  notes: Stronger cell for the fork.
+- type: image
+  title: Compose
+  image: assets/steps/05-compose.png
+  caption: Compose
+  notes: Sequential pass can combine VG + fanout.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **fanout-tree**. Click Fanout buffer. Confirm a buffer appears at S0.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call `fanout_buffer_tree(data, max_fanout=2)`
+  - Assert inserted is true
+  notes: Call `fanout_buffer_tree(data, max_fanout=2)`. Assert inserted is true.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Buffering at the driver only
+  - Using max_fanout ≥ sink count
+  - Forgetting S0 coordinates
+  notes: Buffering at the driver only. Using max_fanout ≥ sink count. Forgetting S0
+    coordinates.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: full sequential buffering pass'
+  notes: 'Next: full sequential buffering pass.'

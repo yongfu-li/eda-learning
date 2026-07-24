@@ -1,0 +1,58 @@
+title: Sequential
+footer: learn_synthesis — 01 sequential synth
+slides:
+- type: title
+  title: Sequential
+  subtitle: A full pass chains cleanup and mapping like a tiny ABC script
+  notes: A full pass chains cleanup and mapping like a tiny ABC script.
+- type: bullets
+  title: The idea
+  bullets:
+  - Sequential_synth returns stats, strash size, rewrite, cuts, mapping, tradeoff
+  notes: sequential_synth returns stats, strash size, rewrite, cuts, mapping, tradeoff.
+- type: image
+  title: Pipeline
+  image: assets/steps/01-pipe.png
+  caption: Pipeline
+  notes: One click runs the full toy flow.
+- type: image
+  title: Stats
+  image: assets/steps/02-stats.png
+  caption: Stats
+  notes: PI/AND/PO match goldens.
+- type: image
+  title: Map
+  image: assets/steps/03-map.png
+  caption: Map
+  notes: Orange cells after sequential synth.
+- type: image
+  title: Area
+  image: assets/steps/04-area.png
+  caption: Area
+  notes: Mapped area is positive.
+- type: image
+  title: Done
+  image: assets/steps/05-done.png
+  caption: Done
+  notes: 'Next: offline compare, then wrap toward STA.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **sequential-synth**. Click Sequential synth; confirm area and cuts.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call sequential_synth(data); assert mapping.area > 0
+  notes: Call sequential_synth(data); assert mapping.area > 0.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Skipping strash
+  - Mixing delay and area covers without clearing
+  notes: Skipping strash. Mixing delay and area covers without clearing.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: offline benchmark, then wrap'
+  notes: 'Next: offline benchmark, then wrap.'

@@ -1,0 +1,58 @@
+title: Strash
+footer: learn_synthesis — 01 aig strash
+slides:
+- type: title
+  title: Strash
+  subtitle: Strash reuses identical AND structures so the graph stays compact
+  notes: Strash reuses identical AND structures so the graph stays compact.
+- type: bullets
+  title: The idea
+  bullets:
+  - Canonical key sorts the two literals; table maps key → node id
+  notes: Canonical key sorts the two literals; table maps key → node id.
+- type: image
+  title: Table
+  image: assets/steps/01-table.png
+  caption: Table
+  notes: Four AND nodes → four strash entries on the toy.
+- type: image
+  title: Key
+  image: assets/steps/02-key.png
+  caption: Key
+  notes: Key orders fanin literals so AND(a,b)=AND(b,a).
+- type: image
+  title: Lookup
+  image: assets/steps/03-lookup.png
+  caption: Lookup
+  notes: Identical fanins would hit the same entry.
+- type: image
+  title: No dup
+  image: assets/steps/04-dup.png
+  caption: No dup
+  notes: Toy has no duplicate keys.
+- type: image
+  title: Why
+  image: assets/steps/05-why.png
+  caption: Why
+  notes: Strash is the first cleanup before rewrite.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **aig-strash**. Confirm strash entries = 4.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call build_strash_table; assert len==4
+  notes: Call build_strash_table; assert len==4.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Forgetting to sort fanins
+  - Hashing node id instead of literals
+  notes: Forgetting to sort fanins. Hashing node id instead of literals.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: local rewrite opportunities'
+  notes: 'Next: local rewrite opportunities.'

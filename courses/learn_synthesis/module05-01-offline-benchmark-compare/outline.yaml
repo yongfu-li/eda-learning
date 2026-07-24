@@ -1,0 +1,33 @@
+title: Hook
+footer: learn_synthesis — 01 offline benchmark compare
+slides:
+- type: title
+  title: Hook
+  subtitle: Track A prints sequential_synth metrics without the browser
+  notes: Track A prints sequential_synth metrics without the browser.
+- type: bullets
+  title: The idea
+  bullets:
+  - Load JSON; print area_mode vs delay_mode and cut totals
+  notes: Load JSON; print area_mode vs delay_mode and cut totals.
+- type: bullets
+  title: What you will do
+  bullets:
+  - Compare area vs delay reports offline on tiny_synth
+  notes: Compare area vs delay reports offline on tiny_synth.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Skipping goldens
+  notes: Skipping goldens.
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist
+  notes: Complete the checklist.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue to the next part
+  notes: Continue.

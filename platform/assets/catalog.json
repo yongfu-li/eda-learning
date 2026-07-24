@@ -14,6 +14,16 @@
       "section": "Clustering & refinement"
     },
     {
+      "id": "aig-nodes",
+      "title": "Aig Nodes",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "aig-strash",
+      "title": "Aig Strash",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "analytical-place",
       "title": "Analytical Place",
       "section": "Placement"
@@ -22,6 +32,11 @@
       "id": "area-deadspace",
       "title": "Area Deadspace",
       "section": "Floorplanning"
+    },
+    {
+      "id": "area-delay",
+      "title": "Area Delay",
+      "section": "Clustering & refinement"
     },
     {
       "id": "arrival-required",
@@ -34,9 +49,24 @@
       "section": "Clustering & refinement"
     },
     {
+      "id": "boolean-network",
+      "title": "Boolean Network",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "bstar-tree",
       "title": "Bstar Tree",
       "section": "Floorplanning"
+    },
+    {
+      "id": "buffer-library",
+      "title": "Buffer Library",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "candidate-sites",
+      "title": "Candidate Sites",
+      "section": "Clustering & refinement"
     },
     {
       "id": "capacity-demand",
@@ -74,6 +104,11 @@
       "section": "Static timing analysis"
     },
     {
+      "id": "cut-enumeration",
+      "title": "Cut Enumeration",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "cutsize-balance",
       "title": "Cutsize Balance",
       "section": "Partitioning"
@@ -107,6 +142,11 @@
       "id": "false-multicycle-lite",
       "title": "False Multicycle Lite",
       "section": "Static timing analysis"
+    },
+    {
+      "id": "fanout-tree",
+      "title": "Fanout Tree",
+      "section": "Clustering & refinement"
     },
     {
       "id": "fiduccia-mattheyses",
@@ -214,6 +254,11 @@
       "section": "Legalization"
     },
     {
+      "id": "library-cells",
+      "title": "Library Cells",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "macro-placement",
       "title": "Macro Placement",
       "section": "Floorplanning"
@@ -294,6 +339,11 @@
       "section": "Clustering & refinement"
     },
     {
+      "id": "polarity-invert",
+      "title": "Polarity Invert",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "probabilistic-demand",
       "title": "Probabilistic Demand",
       "section": "Clustering & refinement"
@@ -307,6 +357,11 @@
       "id": "recursive-bisection",
       "title": "Recursive Bisection",
       "section": "Partitioning"
+    },
+    {
+      "id": "rewrite-local",
+      "title": "Rewrite Local",
+      "section": "Clustering & refinement"
     },
     {
       "id": "ripup-detailed",
@@ -344,6 +399,11 @@
       "section": "Floorplanning"
     },
     {
+      "id": "sequential-buffer",
+      "title": "Sequential Buffer",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "sequential-cts",
       "title": "Sequential Cts",
       "section": "Clustering & refinement"
@@ -356,6 +416,11 @@
     {
       "id": "sequential-global",
       "title": "Sequential Global",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "sequential-synth",
+      "title": "Sequential Synth",
       "section": "Clustering & refinement"
     },
     {
@@ -382,6 +447,16 @@
       "id": "slack-setup-hold",
       "title": "Slack Setup Hold",
       "section": "Static timing analysis"
+    },
+    {
+      "id": "slew-budget",
+      "title": "Slew Budget",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "slew-driven",
+      "title": "Slew Driven",
+      "section": "Clustering & refinement"
     },
     {
       "id": "slicing-floorplan",
@@ -411,6 +486,11 @@
     {
       "id": "tapping-points",
       "title": "Tapping Points",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "techmap-cover",
+      "title": "Techmap Cover",
       "section": "Clustering & refinement"
     },
     {
@@ -449,8 +529,18 @@
       "section": "Clustering & refinement"
     },
     {
+      "id": "van-ginneken",
+      "title": "Van Ginneken",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "via-assignment",
       "title": "Via Assignment",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "wire-rc",
+      "title": "Wire Rc",
       "section": "Clustering & refinement"
     },
     {
@@ -498,12 +588,193 @@
     },
     {
       "id": "learn_synthesis",
-      "title": "Logic synthesis",
-      "focus": "AIG, techmapping, rewrite, area/delay",
-      "status": "planned",
+      "title": "Logic synthesis for EDA",
+      "focus": "Boolean network \u2192 AIG \u2192 strash \u2192 rewrite \u2192 cuts \u2192 library \u2192 techmap \u2192 area/delay \u2192 sequential",
+      "status": "ready",
       "repo": "learn_synthesis",
       "prereq": null,
-      "labs": []
+      "labs": [
+        {
+          "n": "01",
+          "slug": "intro",
+          "moduleId": "module00-00-intro",
+          "kind": "intro",
+          "title": "Welcome to logic synthesis for EDA",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "02",
+          "slug": "boolean-network",
+          "moduleId": "module01-01-boolean-network",
+          "kind": "lab",
+          "title": "Boolean network / subject graph",
+          "toolId": "boolean-network",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "03",
+          "slug": "aig-nodes",
+          "moduleId": "module01-03-aig-nodes",
+          "kind": "lab",
+          "title": "And-Inverter Graph nodes",
+          "toolId": "aig-nodes",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "04",
+          "slug": "aig-strash",
+          "moduleId": "module02-01-aig-strash",
+          "kind": "lab",
+          "title": "Structural hashing (strash)",
+          "toolId": "aig-strash",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "05",
+          "slug": "rewrite-local",
+          "moduleId": "module02-03-rewrite-local",
+          "kind": "lab",
+          "title": "Local AIG rewrite",
+          "toolId": "rewrite-local",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "06",
+          "slug": "cut-enumeration",
+          "moduleId": "module02-05-cut-enumeration",
+          "kind": "lab",
+          "title": "K-feasible cut enumeration",
+          "toolId": "cut-enumeration",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "07",
+          "slug": "library-cells",
+          "moduleId": "module02-07-library-cells",
+          "kind": "lab",
+          "title": "Cell library for mapping",
+          "toolId": "library-cells",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "08",
+          "slug": "techmap-cover",
+          "moduleId": "module03-01-techmap-cover",
+          "kind": "lab",
+          "title": "Techmapping cover (area)",
+          "toolId": "techmap-cover",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "09",
+          "slug": "area-delay",
+          "moduleId": "module03-03-area-delay",
+          "kind": "lab",
+          "title": "Area vs delay tradeoff",
+          "toolId": "area-delay",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "10",
+          "slug": "sequential-synth",
+          "moduleId": "module04-01-sequential-synth",
+          "kind": "lab",
+          "title": "Sequential synthesis pass",
+          "toolId": "sequential-synth",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "11",
+          "slug": "offline-benchmark-compare",
+          "moduleId": "module05-01-offline-benchmark-compare",
+          "kind": "offline",
+          "title": "Offline benchmark compare",
+          "toolId": null,
+          "status": "planned",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "12",
+          "slug": "wrap",
+          "moduleId": "module99-00-wrap",
+          "kind": "wrap",
+          "title": "Logic synthesis path complete",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        }
+      ]
     },
     {
       "id": "learn_retiming",
@@ -2078,12 +2349,193 @@
     },
     {
       "id": "learn_buffering",
-      "title": "Buffering",
-      "focus": "Van Ginneken-style / slew-driven insert",
-      "status": "planned",
+      "title": "Buffer insertion for EDA",
+      "focus": "Wire RC \u2192 slew budget \u2192 candidates \u2192 library \u2192 Van Ginneken \u2192 slew-driven \u2192 polarity \u2192 fanout \u2192 sequential",
+      "status": "ready",
       "repo": "learn_buffering",
       "prereq": null,
-      "labs": []
+      "labs": [
+        {
+          "n": "01",
+          "slug": "intro",
+          "moduleId": "module00-00-intro",
+          "kind": "intro",
+          "title": "Welcome to buffer insertion for EDA",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "02",
+          "slug": "wire-rc",
+          "moduleId": "module01-01-wire-rc",
+          "kind": "lab",
+          "title": "Wire R/C model",
+          "toolId": "wire-rc",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "03",
+          "slug": "slew-budget",
+          "moduleId": "module01-03-slew-budget",
+          "kind": "lab",
+          "title": "Slew / transition budget",
+          "toolId": "slew-budget",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "04",
+          "slug": "candidate-sites",
+          "moduleId": "module02-01-candidate-sites",
+          "kind": "lab",
+          "title": "Buffer candidate sites",
+          "toolId": "candidate-sites",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "05",
+          "slug": "buffer-library",
+          "moduleId": "module02-03-buffer-library",
+          "kind": "lab",
+          "title": "Buffer library options",
+          "toolId": "buffer-library",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "06",
+          "slug": "van-ginneken",
+          "moduleId": "module02-05-van-ginneken",
+          "kind": "lab",
+          "title": "Van Ginneken DP lite",
+          "toolId": "van-ginneken",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "07",
+          "slug": "slew-driven",
+          "moduleId": "module02-07-slew-driven",
+          "kind": "lab",
+          "title": "Slew-driven insertion",
+          "toolId": "slew-driven",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "08",
+          "slug": "polarity-invert",
+          "moduleId": "module03-01-polarity-invert",
+          "kind": "lab",
+          "title": "Polarity / inverter pairs",
+          "toolId": "polarity-invert",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "09",
+          "slug": "fanout-tree",
+          "moduleId": "module03-03-fanout-tree",
+          "kind": "lab",
+          "title": "Fanout buffer tree",
+          "toolId": "fanout-tree",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "10",
+          "slug": "sequential-buffer",
+          "moduleId": "module04-01-sequential-buffer",
+          "kind": "lab",
+          "title": "Sequential buffering pass",
+          "toolId": "sequential-buffer",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "11",
+          "slug": "offline-benchmark-compare",
+          "moduleId": "module05-01-offline-benchmark-compare",
+          "kind": "offline",
+          "title": "Offline benchmark compare",
+          "toolId": null,
+          "status": "planned",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "12",
+          "slug": "wrap",
+          "moduleId": "module99-00-wrap",
+          "kind": "wrap",
+          "title": "Buffering path complete",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        }
+      ]
     },
     {
       "id": "learn_global_routing",

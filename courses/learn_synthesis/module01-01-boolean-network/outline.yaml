@@ -1,0 +1,60 @@
+title: Boolean net
+footer: learn_synthesis — 01 boolean network
+slides:
+- type: title
+  title: Boolean net
+  subtitle: Synthesis starts from a technology-independent subject graph
+  notes: Synthesis starts from a technology-independent subject graph.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'Our subject graph is an And-Inverter Graph: AND nodes with optional complemented
+    edges'
+  notes: 'Our subject graph is an And-Inverter Graph: AND nodes with optional complemented
+    edges.'
+- type: image
+  title: Graph
+  image: assets/steps/01-graph.png
+  caption: Graph
+  notes: 'Seven nodes: three PIs, four ANDs, one PO f.'
+- type: image
+  title: PIs
+  image: assets/steps/02-pis.png
+  caption: PIs
+  notes: Primary inputs a, b, c sit at the top.
+- type: image
+  title: AND boxes
+  image: assets/steps/03-ands.png
+  caption: AND boxes
+  notes: Green boxes are AND2 nodes in the AIG.
+- type: image
+  title: Bubbles
+  image: assets/steps/04-comp.png
+  caption: Bubbles
+  notes: Purple dots mark complemented fanins.
+- type: image
+  title: PO
+  image: assets/steps/05-po.png
+  caption: PO
+  notes: Node 7 drives output f.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **boolean-network**. Click nodes; toggle PIs and watch f.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Load tiny_synth.json; print aig_stats
+  notes: Load tiny_synth.json; print aig_stats.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Treating INV as a separate AIG node type
+  - Ignoring complement bubbles
+  notes: Treating INV as a separate AIG node type. Ignoring complement bubbles.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: AIG node types in detail'
+  notes: 'Next: AIG node types in detail.'

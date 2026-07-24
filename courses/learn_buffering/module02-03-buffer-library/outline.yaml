@@ -1,0 +1,63 @@
+title: Library
+footer: learn_buffering — 03 buffer library
+slides:
+- type: title
+  title: Library
+  subtitle: Stronger buffers cost input cap but drive with lower resistance
+  notes: Stronger buffers cost input cap but drive with lower resistance.
+- type: bullets
+  title: The idea
+  bullets:
+  - BUF_X1, BUF_X2, INV_X1 each publish cin, rout, delay, invert
+  - Van Ginneken tries each non-inverting cell unless polarity mode allows INV
+  notes: BUF_X1, BUF_X2, INV_X1 each publish cin, rout, delay, invert. Van Ginneken
+    tries each non-inverting cell unless polarity mode allows INV.
+- type: image
+  title: Three cells
+  image: assets/steps/01-three.png
+  caption: Three cells
+  notes: Library has BUF_X1, BUF_X2, INV_X1.
+- type: image
+  title: BUF_X2 stronger
+  image: assets/steps/02-x2.png
+  caption: BUF_X2 stronger
+  notes: 'BUF_X2: higher cin, lower rout, slightly less intrinsic delay.'
+- type: image
+  title: Inverter
+  image: assets/steps/03-inv.png
+  caption: Inverter
+  notes: INV_X1 flips polarity — used in polarity labs.
+- type: image
+  title: Pick for DP
+  image: assets/steps/04-pick.png
+  caption: Pick for DP
+  notes: VG options reference library ids on buffered solutions.
+- type: image
+  title: Area trade
+  image: assets/steps/05-area.png
+  caption: Area trade
+  notes: Real flows also score area; this toy scores delay/slew only.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **buffer-library**. Confirm three cells. Run Van Ginneken and see which
+    buf ids appear.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Print `data['buffer_library']`
+  - Assert GOLDENS.libCount == 3
+  notes: Print `data['buffer_library']`. Assert GOLDENS.libCount == 3.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Ignoring invert flag
+  - Treating rout as delay
+  - Using cells not in the library
+  notes: Ignoring invert flag. Treating rout as delay. Using cells not in the library.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: Van Ginneken dynamic programming lite'
+  notes: 'Next: Van Ginneken dynamic programming lite.'

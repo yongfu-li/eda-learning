@@ -1,0 +1,35 @@
+title: Hook
+footer: learn_buffering — 01 offline benchmark compare
+slides:
+- type: title
+  title: Hook
+  subtitle: Without the browser, Track A still prints VG vs wire vs slew insert counts
+  notes: Without the browser, Track A still prints VG vs wire vs slew insert counts.
+- type: bullets
+  title: The idea
+  bullets:
+  - Load tiny_buf.json
+  notes: Load tiny_buf.json, run sequential_buffer for van_ginneken and slew modes,
+    print delays and insertion counts.
+- type: bullets
+  title: What you will do
+  bullets:
+  - Compare wire-only, Van Ginneken, and slew-driven delays offline on tiny_buf
+  notes: Compare wire-only, Van Ginneken, and slew-driven delays offline on tiny_buf.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Skipping goldens
+  - Mixing browser and offline without matching JSON
+  notes: Skipping goldens. Mixing browser and offline without matching JSON.
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist
+  notes: Complete the checklist.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue the course
+  notes: Continue the course.

@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/eda_learning/courses/learn_synthesis/module00-00-intro/frames/slide-1.png'
+duration 6.744
+file '/mnt/d/proj/designs/eda_learning/courses/learn_synthesis/module00-00-intro/frames/slide-2.png'
+duration 8.232
+file '/mnt/d/proj/designs/eda_learning/courses/learn_synthesis/module00-00-intro/frames/slide-3.png'
+duration 6.312
+file '/mnt/d/proj/designs/eda_learning/courses/learn_synthesis/module00-00-intro/frames/slide-4.png'
+duration 2.112
+file '/mnt/d/proj/designs/eda_learning/courses/learn_synthesis/module00-00-intro/frames/slide-5.png'
+duration 2.208
+file '/mnt/d/proj/designs/eda_learning/courses/learn_synthesis/module00-00-intro/frames/slide-6.png'
+duration 1.776
+file '/mnt/d/proj/designs/eda_learning/courses/learn_synthesis/module00-00-intro/frames/slide-6.png'

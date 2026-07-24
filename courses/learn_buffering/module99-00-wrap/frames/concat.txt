@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/eda_learning/courses/learn_buffering/module99-00-wrap/frames/slide-1.png'
+duration 5.688
+file '/mnt/d/proj/designs/eda_learning/courses/learn_buffering/module99-00-wrap/frames/slide-2.png'
+duration 14.016
+file '/mnt/d/proj/designs/eda_learning/courses/learn_buffering/module99-00-wrap/frames/slide-3.png'
+duration 8.928
+file '/mnt/d/proj/designs/eda_learning/courses/learn_buffering/module99-00-wrap/frames/slide-4.png'
+duration 5.784
+file '/mnt/d/proj/designs/eda_learning/courses/learn_buffering/module99-00-wrap/frames/slide-5.png'
+duration 2.208
+file '/mnt/d/proj/designs/eda_learning/courses/learn_buffering/module99-00-wrap/frames/slide-6.png'
+duration 2.184
+file '/mnt/d/proj/designs/eda_learning/courses/learn_buffering/module99-00-wrap/frames/slide-6.png'

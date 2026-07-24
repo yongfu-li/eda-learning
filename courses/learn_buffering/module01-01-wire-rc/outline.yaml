@@ -1,0 +1,66 @@
+title: Wire RC
+footer: learn_buffering — 01 wire rc
+slides:
+- type: title
+  title: Wire RC
+  subtitle: Every buffering decision starts from how much resistance and capacitance
+    a wire segment carries
+  notes: Every buffering decision starts from how much resistance and capacitance
+    a wire segment carries.
+- type: bullets
+  title: The idea
+  bullets:
+  - Wire_rc of length L returns R equals L times r_per and C equals L times c_per
+  - Elmore delay uses R times C_self over two plus C_load
+  notes: wire_rc of length L returns R equals L times r_per and C equals L times c_per.
+    Elmore delay uses R times C_self over two plus C_load.
+- type: image
+  title: Net topology
+  image: assets/steps/01-net.png
+  caption: Net topology
+  notes: Driver D feeds S0; S0 fans to S1 and S2 on the 12×8 chip.
+- type: image
+  title: Edge e0 length
+  image: assets/steps/02-e0.png
+  caption: Edge e0 length
+  notes: D→S0 is four units Manhattan on the starter.
+- type: image
+  title: R and C
+  image: assets/steps/03-rc.png
+  caption: R and C
+  notes: With unit parasitics, length four yields R=4 and C=4.
+- type: image
+  title: Elmore
+  image: assets/steps/04-elmore.png
+  caption: Elmore
+  notes: Delay ≈ R·(C/2 + Cload) on a lumped segment.
+- type: image
+  title: Why it matters
+  image: assets/steps/05-why.png
+  caption: Why it matters
+  notes: Longer edges dominate slew and delay — candidates appear next.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **wire-rc**. Inspect edges e0–e2. Confirm length-four e0 maps to R=4,
+    C=4 with unit parasitics.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call `wire_rc(length)` and `elmore_delay` in `common/`
+  - Match GOLDENS.wireRcLen4R
+  notes: Call `wire_rc(length)` and `elmore_delay` in `common/`. Match GOLDENS.wireRcLen4R.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Using Euclidean length
+  - Forgetting C_load in Elmore
+  - Mixing per-unit R with total R
+  notes: Using Euclidean length. Forgetting C_load in Elmore. Mixing per-unit R with
+    total R.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: slew budgets on those RC segments'
+  notes: 'Next: slew budgets on those RC segments.'

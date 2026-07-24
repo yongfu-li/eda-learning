@@ -1,0 +1,55 @@
+{
+  "module": "module04-01-sequential-buffer",
+  "items": [
+    {
+      "q": "Main goal of Sequential buffering pass?",
+      "choices": [
+        "Run a full pass: candidates + Van Ginneken (or slew) + optional fanout fix.",
+        "Ignore RC",
+        "Delete sinks",
+        "Only CTS H-trees"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Toy net topology?",
+      "choices": [
+        "D \u2192 S0 \u2192 {S1,S2}",
+        "Only two pins",
+        "Mesh clock",
+        "No driver"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Van Ginneken options are pairs of\u2026",
+      "choices": [
+        "(cap, delay)",
+        "(x, y)",
+        "(R only)",
+        "(fanout, area only)"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Primary browser lab id?",
+      "choices": [
+        "sequential-buffer",
+        "h-tree",
+        "lee-maze",
+        "routing-grid"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Prereq course on this spine?",
+      "choices": [
+        "learn_clock_tree",
+        "learn_unix",
+        "learn_git",
+        "learn_clustering"
+      ],
+      "answer": 0
+    }
+  ]
+}

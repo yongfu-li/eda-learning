@@ -1,0 +1,66 @@
+title: Van Ginneken
+footer: learn_buffering — 05 van ginneken
+slides:
+- type: title
+  title: Van Ginneken
+  subtitle: Van Ginneken is the classic DP for buffer insertion on trees
+  notes: Van Ginneken is the classic DP for buffer insertion on trees.
+- type: bullets
+  title: The idea
+  bullets:
+  - For each edge build wire-only and mid-buffer options as (c,d) pairs
+  - Dominate_prune keeps non-dominated fronts
+  - Pick minimum delay
+  - Sum along the toy tree
+  notes: For each edge build wire-only and mid-buffer options as (c,d) pairs. dominate_prune
+    keeps non-dominated fronts. Pick minimum delay. Sum along the toy tree.
+- type: image
+  title: Options
+  image: assets/steps/01-opts.png
+  caption: Options
+  notes: Wire-only plus one option per library buffer at mid.
+- type: image
+  title: Prune
+  image: assets/steps/02-prune.png
+  caption: Prune
+  notes: Drop pairs with worse cap and worse delay.
+- type: image
+  title: Best edge
+  image: assets/steps/03-best.png
+  caption: Best edge
+  notes: Each edge keeps its min-delay survivor.
+- type: image
+  title: Net delay
+  image: assets/steps/04-net.png
+  caption: Net delay
+  notes: Toy total ≈ e0 best + max(e1,e2) best.
+- type: image
+  title: Improved
+  image: assets/steps/05-win.png
+  caption: Improved
+  notes: Buffered solution should beat or match wire-only delay.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **van-ginneken**. Click Van Ginneken. Confirm improved delay vs wire
+    and orange buffers where chosen.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call `van_ginneken_net(data)`
+  - Assert best_delay ≤ wire_delay
+  notes: Call `van_ginneken_net(data)`. Assert best_delay ≤ wire_delay.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Keeping dominated options
+  - Double-counting branch loads
+  - Forgetting wire-only option
+  notes: Keeping dominated options. Double-counting branch loads. Forgetting wire-only
+    option.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: slew-driven greedy insertion'
+  notes: 'Next: slew-driven greedy insertion.'

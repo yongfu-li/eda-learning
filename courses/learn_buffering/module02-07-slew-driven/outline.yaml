@@ -1,0 +1,64 @@
+title: Slew-driven
+footer: learn_buffering — 07 slew driven
+slides:
+- type: title
+  title: Slew-driven
+  subtitle: When DP is heavy, a slew check plus mid-edge buffer is a fast practical
+    heuristic
+  notes: When DP is heavy, a slew check plus mid-edge buffer is a fast practical heuristic.
+- type: bullets
+  title: The idea
+  bullets:
+  - For each edge compute slew; if above limit, insert BUF_X1 at the midpoint
+  - Lowering the limit forces more insertions
+  notes: For each edge compute slew; if above limit, insert BUF_X1 at the midpoint.
+    Lowering the limit forces more insertions.
+- type: image
+  title: Check slew
+  image: assets/steps/01-check.png
+  caption: Check slew
+  notes: Compare estimate_slew to slew_limit.
+- type: image
+  title: Tight limit
+  image: assets/steps/02-tight.png
+  caption: Tight limit
+  notes: Limit 1 forces inserts on the toy.
+- type: image
+  title: Mid buffer
+  image: assets/steps/03-mid.png
+  caption: Mid buffer
+  notes: Insertion sits at edge midpoint.
+- type: image
+  title: Count
+  image: assets/steps/04-count.png
+  caption: Count
+  notes: Challenges score insertion count.
+- type: image
+  title: vs VG
+  image: assets/steps/05-vs.png
+  caption: vs VG
+  notes: Slew-driven is local; VG optimizes delay options.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **slew-driven**. Click Slew-driven. With default limit, note count;
+    mentally compare to Van Ginneken.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call `slew_driven_insert` with slew_limit=1; assert count ≥ 1
+  notes: Call `slew_driven_insert` with slew_limit=1; assert count ≥ 1.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Inserting without measuring slew
+  - Stacking infinite buffers
+  - Ignoring branch load
+  notes: Inserting without measuring slew. Stacking infinite buffers. Ignoring branch
+    load.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: polarity and inverters'
+  notes: 'Next: polarity and inverters.'

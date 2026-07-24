@@ -217,6 +217,44 @@ COURSE_META = {
         "first_lab": "clock-sinks",
         "first_n": "02",
     },
+    "learn_buffering": {
+        "title": "Buffer insertion for EDA",
+        "focus": "Wire RC → slew budget → candidates → library → Van Ginneken → slew-driven → polarity → fanout → sequential",
+        "prereq": None,
+        "status": "ready",
+        "repo": "learn_buffering",
+        "modules_md": ROOT / "courses" / "learn_buffering" / "docs" / "MODULES.md",
+        "course_root": ROOT / "courses" / "learn_buffering",
+        "lead": (
+            "Van Ginneken-style and slew-driven buffer insertion on a tiny net — options, prune, restore slew. "
+            "Clips and decks load from "
+            "<code>courses/learn_buffering</code> "
+            "(<code>moduleSS-AA-slug/video.mp4</code>). Open the matching browser tool, then mark the lab done."
+        ),
+        "tools_href": "../../tools/index.html#buffering",
+        "tools_label": "Buffering tools",
+        "first_lab": "wire-rc",
+        "first_n": "02",
+    },
+    "learn_synthesis": {
+        "title": "Logic synthesis for EDA",
+        "focus": "Boolean network → AIG → strash → rewrite → cuts → library → techmap → area/delay → sequential",
+        "prereq": None,
+        "status": "ready",
+        "repo": "learn_synthesis",
+        "modules_md": ROOT / "courses" / "learn_synthesis" / "docs" / "MODULES.md",
+        "course_root": ROOT / "courses" / "learn_synthesis",
+        "lead": (
+            "AIG-based logic synthesis on a tiny netlist — strash, rewrite, k-cuts, techmap, area/delay. "
+            "Clips and decks load from "
+            "<code>courses/learn_synthesis</code> "
+            "(<code>moduleSS-AA-slug/video.mp4</code>). Open the matching browser tool, then mark the lab done."
+        ),
+        "tools_href": "../../tools/index.html#synthesis",
+        "tools_label": "Synthesis tools",
+        "first_lab": "boolean-network",
+        "first_n": "02",
+    },
 }
 
 COURSE_INDEX = """<!DOCTYPE html>

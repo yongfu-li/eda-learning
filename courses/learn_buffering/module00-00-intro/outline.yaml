@@ -1,0 +1,38 @@
+title: Hook
+footer: learn_buffering — 00 intro
+slides:
+- type: title
+  title: Hook
+  subtitle: Clock trees and signal nets grow long wires
+  notes: Clock trees and signal nets grow long wires. Buffers break RC, restore slew,
+    and trade area for timing.
+- type: bullets
+  title: The idea
+  bullets:
+  - Fanout trees on a tiny D→S0→{S1,S2} net
+  notes: This course teaches wire R/C, slew budgets, candidate sites, Van Ginneken-style
+    options, slew-driven insert, polarity, and fanout trees on a tiny D→S0→{S1,S2}
+    net.
+- type: bullets
+  title: What you will do
+  bullets:
+  - Explain why buffering restores slew and cuts delay on long nets after CTS or routing
+  notes: Explain why buffering restores slew and cuts delay on long nets after CTS
+    or routing.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Skipping goldens
+  - Mixing browser and offline without matching JSON
+  notes: Skipping goldens. Mixing browser and offline without matching JSON.
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist
+  notes: Complete the checklist.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue the course
+  notes: Continue the course.

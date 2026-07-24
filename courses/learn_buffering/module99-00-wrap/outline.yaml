@@ -1,0 +1,40 @@
+title: Hook
+footer: learn_buffering — 00 wrap
+slides:
+- type: title
+  title: Hook
+  subtitle: You inserted buffers with both DP options and slew heuristics on the same
+    toy net
+  notes: You inserted buffers with both DP options and slew heuristics on the same
+    toy net.
+- type: bullets
+  title: The idea
+  bullets:
+  - Wire RC, slew budgets, candidates, library, Van Ginneken, slew-driven, polarity,
+    fanout,
+  - 'Natural next: learn_signoff literacy or deepen STA'
+  notes: 'Wire RC, slew budgets, candidates, library, Van Ginneken, slew-driven, polarity,
+    fanout, sequential pass. Natural next: learn_signoff literacy or deepen STA.'
+- type: bullets
+  title: What you will do
+  bullets:
+  - Recap RC, slew, candidates, VG, slew-driven, polarity, fanout
+  notes: Recap RC, slew, candidates, VG, slew-driven, polarity, fanout; choose next
+    PD/signoff course.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Skipping goldens
+  - Mixing browser and offline without matching JSON
+  notes: Skipping goldens. Mixing browser and offline without matching JSON.
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist
+  notes: Complete the checklist.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue the course
+  notes: Continue the course.

@@ -1,0 +1,63 @@
+title: Candidates
+footer: learn_buffering — 01 candidate sites
+slides:
+- type: title
+  title: Candidates
+  subtitle: Van Ginneken and slew-driven flows only insert where candidates exist
+  notes: Van Ginneken and slew-driven flows only insert where candidates exist.
+- type: bullets
+  title: The idea
+  bullets:
+  - Walk each edge; every candidate_step units place a site excluding endpoints
+  - Gray dots mark legal insert points
+  notes: Walk each edge; every candidate_step units place a site excluding endpoints.
+    Gray dots mark legal insert points.
+- type: image
+  title: Step size
+  image: assets/steps/01-step.png
+  caption: Step size
+  notes: candidate_step = 2 on the toy.
+- type: image
+  title: Show sites
+  image: assets/steps/02-show.png
+  caption: Show sites
+  notes: Show candidates paints gray dots on e0–e2.
+- type: image
+  title: Count
+  image: assets/steps/03-count.png
+  caption: Count
+  notes: Longer edges yield more sites.
+- type: image
+  title: Exclude ends
+  image: assets/steps/04-ends.png
+  caption: Exclude ends
+  notes: Driver and sink pins are not candidates.
+- type: image
+  title: Ready for DP
+  image: assets/steps/05-dp.png
+  caption: Ready for DP
+  notes: Sites feed Van Ginneken options next.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **candidate-sites**. Click Show candidates. Count gray dots on e0.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call `candidate_sites(data)`
+  - Assert length > 0 for tiny_buf
+  notes: Call `candidate_sites(data)`. Assert length > 0 for tiny_buf.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Placing sites past the far endpoint
+  - Using step zero
+  - Forgetting diagonal HV walk
+  notes: Placing sites past the far endpoint. Using step zero. Forgetting diagonal
+    HV walk.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: the buffer library cells you can instantiate'
+  notes: 'Next: the buffer library cells you can instantiate.'

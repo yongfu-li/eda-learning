@@ -1,0 +1,58 @@
+title: Techmap
+footer: learn_synthesis — 01 techmap cover
+slides:
+- type: title
+  title: Techmap
+  subtitle: A cover assigns a library cell to each subject node (or cut)
+  notes: A cover assigns a library cell to each subject node (or cut).
+- type: bullets
+  title: The idea
+  bullets:
+  - 'Greedy: AND→AND2, AND(~,~)→NOR2, plus INV per complemented edge; sum areas'
+  notes: 'Greedy: AND→AND2, AND(~,~)→NOR2, plus INV per complemented edge; sum areas.'
+- type: image
+  title: Run
+  image: assets/steps/01-run.png
+  caption: Run
+  notes: Techmap area paints orange cells on ANDs.
+- type: image
+  title: Area
+  image: assets/steps/02-area.png
+  caption: Area
+  notes: Total area includes AND cells plus INVs.
+- type: image
+  title: NOR
+  image: assets/steps/03-nor.png
+  caption: NOR
+  notes: Both-comp nodes prefer NOR2.
+- type: image
+  title: Inv
+  image: assets/steps/04-inv.png
+  caption: Inv
+  notes: Complement bubbles add INV area.
+- type: image
+  title: Cuts
+  image: assets/steps/05-cuts.png
+  caption: Cuts
+  notes: Cut stats travel with the mapping report.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **techmap-cover**. Click Techmap area; read total area.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call techmap_area; assert area ≥ mapAreaMin
+  notes: Call techmap_area; assert area ≥ mapAreaMin.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Forgetting INV cost
+  - Mapping PIs to gates
+  notes: Forgetting INV cost. Mapping PIs to gates.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: area vs delay tradeoff'
+  notes: 'Next: area vs delay tradeoff.'

@@ -1,0 +1,64 @@
+title: Polarity
+footer: learn_buffering — 01 polarity invert
+slides:
+- type: title
+  title: Polarity
+  subtitle: Inverters are useful buffers but flip the signal; odd counts need a fix
+  notes: Inverters are useful buffers but flip the signal; odd counts need a fix.
+- type: bullets
+  title: The idea
+  bullets:
+  - Each INV_X1 flips polarity
+  - Polarity_fix reports flips and whether the path is still positive
+  notes: Each INV_X1 flips polarity. polarity_fix reports flips and whether the path
+    is still positive.
+- type: image
+  title: Invert flag
+  image: assets/steps/01-flag.png
+  caption: Invert flag
+  notes: INV_X1 has invert=true in the library.
+- type: image
+  title: One flip
+  image: assets/steps/02-one.png
+  caption: One flip
+  notes: A single INV yields negative polarity.
+- type: image
+  title: Two flips
+  image: assets/steps/03-two.png
+  caption: Two flips
+  notes: Two INVs restore positive sense.
+- type: image
+  title: Mix with BUF
+  image: assets/steps/04-mix.png
+  caption: Mix with BUF
+  notes: BUF cells do not flip.
+- type: image
+  title: Design rule
+  image: assets/steps/05-rule.png
+  caption: Design rule
+  notes: Useful-skew flows may allow phase; this toy tracks parity.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **polarity-invert**. Place an INV on a path mentally; Check polarity
+    challenges.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call `polarity_fix([INV],[BUF])`
+  - Assert flips and positive flags
+  notes: Call `polarity_fix([INV],[BUF])`. Assert flips and positive flags.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Counting BUF as invert
+  - Forgetting parity
+  - Using INV in VG when allow_invert is false
+  notes: Counting BUF as invert. Forgetting parity. Using INV in VG when allow_invert
+    is false.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: fanout buffering at the junction'
+  notes: 'Next: fanout buffering at the junction.'

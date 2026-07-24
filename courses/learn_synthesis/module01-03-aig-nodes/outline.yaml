@@ -1,0 +1,60 @@
+title: AIG nodes
+footer: learn_synthesis — 03 aig nodes
+slides:
+- type: title
+  title: AIG nodes
+  subtitle: AIGs use only AND + optional edge complement , not arbitrary gates yet
+  notes: AIGs use only AND + optional edge complement — not arbitrary gates yet.
+- type: bullets
+  title: The idea
+  bullets:
+  - Each AND has two fanins (id, complemented)
+  - Evaluate bottom-up with bitwise AND
+  notes: Each AND has two fanins (id, complemented). Evaluate bottom-up with bitwise
+    AND.
+- type: image
+  title: Kinds
+  image: assets/steps/01-kinds.png
+  caption: Kinds
+  notes: PI circles vs AND rectangles.
+- type: image
+  title: Fanin
+  image: assets/steps/02-fanin.png
+  caption: Fanin
+  notes: Node 5 takes ~4 and c.
+- type: image
+  title: Eval
+  image: assets/steps/03-eval.png
+  caption: Eval
+  notes: With a=1,b=0,c=1 the PO f equals 1.
+- type: image
+  title: Select
+  image: assets/steps/04-sel.png
+  caption: Select
+  notes: Select node 5 to highlight fanins.
+- type: image
+  title: Count
+  image: assets/steps/05-count.png
+  caption: Count
+  notes: 'GOLDENS: 3 PI, 4 AND, 1 PO.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **aig-nodes**. Toggle to a=1,b=1,c=1 and confirm f=0.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call output_value for assignments (1,0,1) and (1,1,1)
+  notes: Call output_value for assignments (1,0,1) and (1,1,1).
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Evaluating complemented edges wrongly
+  - Mixing PI names with ids
+  notes: Evaluating complemented edges wrongly. Mixing PI names with ids.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: structural hashing'
+  notes: 'Next: structural hashing.'

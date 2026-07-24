@@ -1,0 +1,58 @@
+title: Library
+footer: learn_synthesis — 07 library cells
+slides:
+- type: title
+  title: Library
+  subtitle: Techmapping chooses library cells that cover AIG cuts
+  notes: Techmapping chooses library cells that cover AIG cuts.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'Six cells: area and delay costs; INV for complemented edges'
+  notes: 'Six cells: area and delay costs; INV for complemented edges.'
+- type: image
+  title: Six cells
+  image: assets/steps/01-six.png
+  caption: Six cells
+  notes: Library size is six.
+- type: image
+  title: AND2
+  image: assets/steps/02-and2.png
+  caption: AND2
+  notes: AND2 area=2 delay=2.
+- type: image
+  title: NOR2
+  image: assets/steps/03-nor2.png
+  caption: NOR2
+  notes: NOR2 covers AND(~,~).
+- type: image
+  title: INV
+  image: assets/steps/04-inv.png
+  caption: INV
+  notes: INV area=1 for edge bubbles.
+- type: image
+  title: AOI21
+  image: assets/steps/05-aoi.png
+  caption: AOI21
+  notes: AOI21 is available for richer covers (toy).
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **library-cells**. Confirm six cells; run techmap and see cell ids.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Print data['library']; assert len==6
+  notes: Print data['library']; assert len==6.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Ignoring area when comparing
+  - Mapping without INV cost
+  notes: Ignoring area when comparing. Mapping without INV cost.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: area-oriented techmap cover'
+  notes: 'Next: area-oriented techmap cover.'

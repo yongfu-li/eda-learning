@@ -1,0 +1,62 @@
+title: Sequential
+footer: learn_buffering — 01 sequential buffer
+slides:
+- type: title
+  title: Sequential
+  subtitle: Production flows chain heuristics; this lab is the toy pipeline
+  notes: Production flows chain heuristics; this lab is the toy pipeline.
+- type: bullets
+  title: The idea
+  bullets:
+  - Sequential_buffer builds sites, runs Van Ginneken, optionally adds fanout buffers
+  notes: sequential_buffer builds sites, runs Van Ginneken, optionally adds fanout
+    buffers, and reports primary metrics.
+- type: image
+  title: Pipeline
+  image: assets/steps/01-pipe.png
+  caption: Pipeline
+  notes: Sites → VG/slew → fanout compose.
+- type: image
+  title: Run pass
+  image: assets/steps/02-run.png
+  caption: Run pass
+  notes: Sequential pass paints buffers and sites.
+- type: image
+  title: Metrics
+  image: assets/steps/03-met.png
+  caption: Metrics
+  notes: Read VG delay vs wire delay.
+- type: image
+  title: Mode slew
+  image: assets/steps/04-slew.png
+  caption: Mode slew
+  notes: Alternate primary mode is slew-driven.
+- type: image
+  title: Handoff
+  image: assets/steps/05-done.png
+  caption: Handoff
+  notes: Next deepen timing/signoff courses.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **sequential-buffer**. Click Sequential pass. Confirm buffers and improved
+    VG delay.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call `sequential_buffer(data)`
+  - Assert sites and van_ginneken keys exist
+  notes: Call `sequential_buffer(data)`. Assert sites and van_ginneken keys exist.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Skipping prune
+  - Mixing modes without clearing buffers
+  - Ignoring fanout stage
+  notes: Skipping prune. Mixing modes without clearing buffers. Ignoring fanout stage.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: offline compare, then wrap'
+  notes: 'Next: offline compare, then wrap.'

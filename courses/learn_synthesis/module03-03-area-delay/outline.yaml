@@ -1,0 +1,58 @@
+title: Area/delay
+footer: learn_synthesis — 03 area delay
+slides:
+- type: title
+  title: Area/delay
+  subtitle: 'Mappers optimize different objectives: area, delay, or a blend'
+  notes: 'Mappers optimize different objectives: area, delay, or a blend.'
+- type: bullets
+  title: The idea
+  bullets:
+  - Area_mode reports area + delay_sum; delay_mode reports depth×AND delay
+  notes: area_mode reports area + delay_sum; delay_mode reports depth×AND delay.
+- type: image
+  title: Trade
+  image: assets/steps/01-trade.png
+  caption: Trade
+  notes: Two modes share the same cover on this toy.
+- type: image
+  title: Area mode
+  image: assets/steps/02-area.png
+  caption: Area mode
+  notes: Sum of cell areas (plus INV).
+- type: image
+  title: Delay mode
+  image: assets/steps/03-delay.png
+  caption: Delay mode
+  notes: 'Depth proxy = #AND × AND2 delay.'
+- type: image
+  title: Library
+  image: assets/steps/04-lib.png
+  caption: Library
+  notes: Six cells bound the choice set.
+- type: image
+  title: Choice
+  image: assets/steps/05-choice.png
+  caption: Choice
+  notes: Real flows weight the two; we just report both.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **area-delay**. Run both techmap buttons; compare metrics.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call area_delay_tradeoff; print both modes
+  notes: Call area_delay_tradeoff; print both modes.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Treating delay_sum as critical path blindly
+  - Ignoring depth
+  notes: Treating delay_sum as critical path blindly. Ignoring depth.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: full sequential synth pass'
+  notes: 'Next: full sequential synth pass.'

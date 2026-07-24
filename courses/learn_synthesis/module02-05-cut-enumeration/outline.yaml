@@ -1,0 +1,60 @@
+title: Cuts
+footer: learn_synthesis — 05 cut enumeration
+slides:
+- type: title
+  title: Cuts
+  subtitle: Cuts describe which leaves a subgraph may stand on for techmapping
+  notes: Cuts describe which leaves a subgraph may stand on for techmapping.
+- type: bullets
+  title: The idea
+  bullets:
+  - PI cut={self}
+  - AND cuts = unions of fanin cuts with size ≤ k, plus trivial {self}
+  notes: PI cut={self}. AND cuts = unions of fanin cuts with size ≤ k, plus trivial
+    {self}.
+- type: image
+  title: K=3
+  image: assets/steps/01-k.png
+  caption: K=3
+  notes: Toy uses cut_k=3.
+- type: image
+  title: PI cuts
+  image: assets/steps/02-pi.png
+  caption: PI cuts
+  notes: Each PI has a single cut.
+- type: image
+  title: Combine
+  image: assets/steps/03-comb.png
+  caption: Combine
+  notes: AND cuts combine child cuts under the k limit.
+- type: image
+  title: PO cuts
+  image: assets/steps/04-po.png
+  caption: PO cuts
+  notes: Node 7 lists several feasible cuts.
+- type: image
+  title: Stats
+  image: assets/steps/05-stats.png
+  caption: Stats
+  notes: total_cuts grows with graph depth.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **cut-enumeration**. Click Enumerate cuts; select node 7.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call enumerate_cuts(k=3); assert all |cut|≤3
+  notes: Call enumerate_cuts(k=3); assert all |cut|≤3.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Allowing cuts larger than k
+  - Forgetting the trivial cut
+  notes: Allowing cuts larger than k. Forgetting the trivial cut.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: the cell library'
+  notes: 'Next: the cell library.'
