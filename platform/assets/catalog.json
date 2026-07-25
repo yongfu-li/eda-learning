@@ -99,6 +99,16 @@
       "section": "Clustering & refinement"
     },
     {
+      "id": "compact-1d",
+      "title": "Compact 1D",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "compact-2d",
+      "title": "Compact 2D",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "congestion-aware-clustering",
       "title": "Congestion-aware clustering",
       "section": "Clustering & refinement"
@@ -106,6 +116,11 @@
     {
       "id": "congestion-map",
       "title": "Congestion Map",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "constraint-graph",
+      "title": "Constraint Graph",
       "section": "Clustering & refinement"
     },
     {
@@ -269,6 +284,11 @@
       "section": "Clustering & refinement"
     },
     {
+      "id": "leaf-cells",
+      "title": "Leaf Cells",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "lee-maze",
       "title": "Lee Maze",
       "section": "Clustering & refinement"
@@ -286,6 +306,11 @@
     {
       "id": "library-cells",
       "title": "Library Cells",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "longest-path",
+      "title": "Longest Path",
       "section": "Clustering & refinement"
     },
     {
@@ -469,6 +494,11 @@
       "section": "Clustering & refinement"
     },
     {
+      "id": "sequential-compact",
+      "title": "Sequential Compact",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "sequential-cts",
       "title": "Sequential Cts",
       "section": "Clustering & refinement"
@@ -496,6 +526,11 @@
     {
       "id": "sequential-unroll",
       "title": "Sequential Unroll",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "shear-lite",
+      "title": "Shear Lite",
       "section": "Clustering & refinement"
     },
     {
@@ -542,6 +577,11 @@
       "id": "soft-module-sizing",
       "title": "Soft Module Sizing",
       "section": "Floorplanning"
+    },
+    {
+      "id": "spacing-rules",
+      "title": "Spacing Rules",
+      "section": "Clustering & refinement"
     },
     {
       "id": "spec-impl",
@@ -626,6 +666,11 @@
     {
       "id": "via-assignment",
       "title": "Via Assignment",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "wire-jogs",
+      "title": "Wire Jogs",
       "section": "Clustering & refinement"
     },
     {
@@ -3371,12 +3416,193 @@
     },
     {
       "id": "learn_compaction",
-      "title": "Compaction",
-      "focus": "Layout compaction literacy",
-      "status": "planned",
+      "title": "Layout compaction for EDA",
+      "focus": "Leaf cells \u2192 spacing \u2192 constraint graph \u2192 longest-path \u2192 1-D/2-D \u2192 jogs \u2192 shear \u2192 sequential",
+      "status": "ready",
       "repo": "learn_compaction",
       "prereq": null,
-      "labs": []
+      "labs": [
+        {
+          "n": "01",
+          "slug": "intro",
+          "moduleId": "module00-00-intro",
+          "kind": "intro",
+          "title": "Welcome to layout compaction",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "02",
+          "slug": "leaf-cells",
+          "moduleId": "module01-01-leaf-cells",
+          "kind": "lab",
+          "title": "Leaf cells and bounding boxes",
+          "toolId": "leaf-cells",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "03",
+          "slug": "spacing-rules",
+          "moduleId": "module01-03-spacing-rules",
+          "kind": "lab",
+          "title": "Spacing / gap rules",
+          "toolId": "spacing-rules",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "04",
+          "slug": "constraint-graph",
+          "moduleId": "module02-01-constraint-graph",
+          "kind": "lab",
+          "title": "Constraint graph",
+          "toolId": "constraint-graph",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "05",
+          "slug": "longest-path",
+          "moduleId": "module02-03-longest-path",
+          "kind": "lab",
+          "title": "Longest-path compaction",
+          "toolId": "longest-path",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "06",
+          "slug": "compact-1d",
+          "moduleId": "module02-05-compact-1d",
+          "kind": "lab",
+          "title": "1-D compaction (X or Y)",
+          "toolId": "compact-1d",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "07",
+          "slug": "compact-2d",
+          "moduleId": "module02-07-compact-2d",
+          "kind": "lab",
+          "title": "2-D compaction",
+          "toolId": "compact-2d",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "08",
+          "slug": "wire-jogs",
+          "moduleId": "module03-01-wire-jogs",
+          "kind": "lab",
+          "title": "Wire jogs / stretch",
+          "toolId": "wire-jogs",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "09",
+          "slug": "shear-lite",
+          "moduleId": "module03-03-shear-lite",
+          "kind": "lab",
+          "title": "Shear / channel lite",
+          "toolId": "shear-lite",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "10",
+          "slug": "sequential-compact",
+          "moduleId": "module03-05-sequential-compact",
+          "kind": "lab",
+          "title": "Sequential compact pass",
+          "toolId": "sequential-compact",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "11",
+          "slug": "offline-benchmark-compare",
+          "moduleId": "module05-01-offline-benchmark-compare",
+          "kind": "offline",
+          "title": "Offline benchmark compare",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "12",
+          "slug": "wrap",
+          "moduleId": "module99-00-wrap",
+          "kind": "wrap",
+          "title": "Compaction path complete",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        }
+      ]
     },
     {
       "id": "learn_pattern_matching",
