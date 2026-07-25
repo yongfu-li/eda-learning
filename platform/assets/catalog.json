@@ -3641,6 +3641,24 @@
       "labs": []
     },
     {
+      "id": "learn_multi_patterning",
+      "title": "Multi-patterning",
+      "focus": "Coloring / decomposition constraints",
+      "status": "planned",
+      "repo": "learn_multi_patterning",
+      "prereq": null,
+      "labs": []
+    },
+    {
+      "id": "learn_rule_dsl",
+      "title": "Rule DSL",
+      "focus": "SVRF-/DRC-like rule language \u2192 checkers",
+      "status": "planned",
+      "repo": "learn_rule_dsl",
+      "prereq": null,
+      "labs": []
+    },
+    {
       "id": "learn_spice",
       "title": "SPICE / circuit sim",
       "focus": "MNA, Newton, sparse LU, transient",

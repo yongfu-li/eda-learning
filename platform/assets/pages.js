@@ -109,6 +109,7 @@
     ["learn_clock_tree", "learn_buffering"],
     ["learn_global_routing", "learn_routing", "learn_compaction"],
     ["learn_pattern_matching", "learn_drc", "learn_lvs", "learn_pex"],
+    ["learn_multi_patterning", "learn_rule_dsl"],
     ["learn_spice", "learn_erc", "learn_antenna"],
     ["learn_power", "learn_dft_insert", "learn_signoff"],
     ["learn_yosys", "learn_openroad", "learn_openlane", "learn_fpga_cad"],
