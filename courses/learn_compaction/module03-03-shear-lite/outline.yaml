@@ -1,0 +1,58 @@
+title: Shear
+footer: learn_compaction — 03 shear lite
+slides:
+- type: title
+  title: Shear
+  subtitle: Shear slides a channel to open or close space without full recompaction
+  notes: Shear slides a channel to open or close space without full recompaction.
+- type: bullets
+  title: The idea
+  bullets:
+  - Shear_channel_lite(x_lo,x_hi,delta_y) moves objects intersecting the band
+  notes: shear_channel_lite(x_lo,x_hi,delta_y) moves objects intersecting the band.
+- type: image
+  title: Channel
+  image: assets/steps/01-ch.png
+  caption: Channel
+  notes: Pick an X band covering B.
+- type: image
+  title: Delta
+  image: assets/steps/02-dy.png
+  caption: Delta
+  notes: Apply delta_y to intersecting objects.
+- type: image
+  title: Moved
+  image: assets/steps/03-moved.png
+  caption: Moved
+  notes: Report which ids moved.
+- type: image
+  title: Legal check
+  image: assets/steps/04-legal.png
+  caption: Legal check
+  notes: Re-check spacing after shear.
+- type: image
+  title: Use
+  image: assets/steps/05-use.png
+  caption: Use
+  notes: Shear is a local cleanup before another compact pass.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **shear-lite**. Shear a band; inspect moved ids.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call shear_channel_lite(DATA, 7, 13, 1); print moved
+  notes: Call shear_channel_lite(DATA, 7, 13, 1); print moved.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Shearing the whole chip blindly
+  - Skipping legality after shear
+  notes: Shearing the whole chip blindly. Skipping legality after shear.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: sequential compact pipeline'
+  notes: 'Next: sequential compact pipeline.'

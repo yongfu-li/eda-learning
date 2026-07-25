@@ -1,0 +1,38 @@
+{
+  "module": "module00-00-intro",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Focus of Welcome?",
+      "choices": [
+        "Explain constraint-graph compaction after detailed routing.",
+        "Place only",
+        "CTS only",
+        "SPICE"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Course id?",
+      "choices": [
+        "learn_compaction",
+        "learn_routing",
+        "learn_drc",
+        "learn_sta"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Toy initial width?",
+      "choices": [
+        "20",
+        "14",
+        "1",
+        "100"
+      ],
+      "answer": 0
+    }
+  ]
+}

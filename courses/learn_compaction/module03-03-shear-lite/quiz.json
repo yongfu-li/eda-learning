@@ -1,0 +1,38 @@
+{
+  "module": "module03-03-shear-lite",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Shear changes?",
+      "choices": [
+        "Y in an X band",
+        "only wires",
+        "min_gap",
+        "chip x1"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Return field for ids?",
+      "choices": [
+        "moved",
+        "jog",
+        "SRC",
+        "cuts"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "After shear you should?",
+      "choices": [
+        "re-check legal",
+        "delete cells",
+        "ignore gaps",
+        "reset chip"
+      ],
+      "answer": 0
+    }
+  ]
+}

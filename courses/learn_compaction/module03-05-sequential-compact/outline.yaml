@@ -1,0 +1,58 @@
+title: Sequential
+footer: learn_compaction — 05 sequential compact
+slides:
+- type: title
+  title: Sequential
+  subtitle: A full pass chains axis compaction and wire repair like a tiny cleaner
+  notes: A full pass chains axis compaction and wire repair like a tiny cleaner.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: width 20→14, legal=True, improved=True'
+  notes: 'GOLDEN: width 20→14, legal=True, improved=True.'
+- type: image
+  title: Pipeline
+  image: assets/steps/01-pipe.png
+  caption: Pipeline
+  notes: X compact then Y compact then wire stretch.
+- type: image
+  title: Width
+  image: assets/steps/02-width.png
+  caption: Width
+  notes: final_width=14.
+- type: image
+  title: Legal
+  image: assets/steps/03-legal.png
+  caption: Legal
+  notes: legal flag True on the toy.
+- type: image
+  title: Improved
+  image: assets/steps/04-imp.png
+  caption: Improved
+  notes: improved True vs initial span.
+- type: image
+  title: Done
+  image: assets/steps/05-done.png
+  caption: Done
+  notes: 'Next: offline compare, then wrap.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **sequential-compact**. Click Sequential compact; confirm 20→14.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call sequential_compact(DATA); assert final_width==14 and legal
+  notes: Call sequential_compact(DATA); assert final_width==14 and legal.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Skipping wire stretch
+  - Claiming illegal layouts are OK
+  notes: Skipping wire stretch. Claiming illegal layouts are OK.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: offline benchmark, then wrap'
+  notes: 'Next: offline benchmark, then wrap.'

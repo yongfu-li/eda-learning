@@ -1,0 +1,38 @@
+{
+  "module": "module01-03-spacing-rules",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "min_gap on tiny_compact?",
+      "choices": [
+        "1",
+        "2",
+        "0",
+        "4"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Starter layout legal?",
+      "choices": [
+        "yes",
+        "no",
+        "only X",
+        "only Y"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Gap applies when?",
+      "choices": [
+        "projections overlap",
+        "always",
+        "never",
+        "only wires"
+      ],
+      "answer": 0
+    }
+  ]
+}

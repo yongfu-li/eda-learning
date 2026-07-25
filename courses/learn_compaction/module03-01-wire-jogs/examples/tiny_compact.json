@@ -1,0 +1,12 @@
+{
+  "name": "tiny_compact",
+  "chip": {"x0": 0, "y0": 0, "x1": 24, "y1": 10},
+  "min_gap": 1,
+  "objects": [
+    {"id": "A", "x0": 0, "y0": 2, "x1": 4, "y1": 5, "kind": "cell"},
+    {"id": "B", "x0": 8, "y0": 2, "x1": 12, "y1": 5, "kind": "cell"},
+    {"id": "C", "x0": 16, "y0": 1, "x1": 20, "y1": 6, "kind": "cell"},
+    {"id": "W", "x0": 4, "y0": 7, "x1": 16, "y1": 7, "kind": "wire", "layer": "M1"}
+  ],
+  "notes": "Stick row: cells A,B,C with X whitespace (gaps 4,4) to shrink to min_gap=1; wire W spans A→C region for jog literacy."
+}

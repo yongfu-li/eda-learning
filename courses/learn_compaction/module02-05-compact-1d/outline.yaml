@@ -1,0 +1,58 @@
+title: 1-D compact
+footer: learn_compaction — 05 compact 1d
+slides:
+- type: title
+  title: 1-D compact
+  subtitle: 'One axis at a time: build graph, longest-path, rewrite coordinates'
+  notes: 'One axis at a time: build graph, longest-path, rewrite coordinates.'
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: X compaction before_span=20, after_span=14, improved=True'
+  notes: 'GOLDEN: X compaction before_span=20, after_span=14, improved=True.'
+- type: image
+  title: Before
+  image: assets/steps/01-before.png
+  caption: Before
+  notes: Initial X span = 20.
+- type: image
+  title: Run
+  image: assets/steps/02-run.png
+  caption: Run
+  notes: compact_1d(layout, 'x').
+- type: image
+  title: After
+  image: assets/steps/03-after.png
+  caption: After
+  notes: After X span = 14.
+- type: image
+  title: Gaps
+  image: assets/steps/04-gaps.png
+  caption: Gaps
+  notes: Whitespace between A–B–C shrinks to min_gap.
+- type: image
+  title: Y untouched
+  image: assets/steps/05-y.png
+  caption: Y untouched
+  notes: Y coordinates unchanged in a pure X pass.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **compact-1d**. Click Compact X; confirm 20→14.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call compact_1d(DATA,'x'); assert after_span==14
+  notes: Call compact_1d(DATA,'x'); assert after_span==14.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Expecting Y to change
+  - Ignoring improved flag
+  notes: Expecting Y to change. Ignoring improved flag.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: 2-D compaction'
+  notes: 'Next: 2-D compaction.'

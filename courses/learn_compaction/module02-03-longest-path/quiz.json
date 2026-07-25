@@ -1,0 +1,38 @@
+{
+  "module": "module02-03-longest-path",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Longest-path sets positions from?",
+      "choices": [
+        "source",
+        "sink only",
+        "random",
+        "LP solver always"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Update rule?",
+      "choices": [
+        "dst = max(dst, src+w)",
+        "dst = min",
+        "dst = avg",
+        "delete edge"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "SRC_X position?",
+      "choices": [
+        "0",
+        "20",
+        "14",
+        "\u22121"
+      ],
+      "answer": 0
+    }
+  ]
+}

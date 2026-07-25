@@ -160,6 +160,15 @@ LAB_TO_ALGO: dict[str, tuple[str, int]] = {
     "dont-care": ("dont-care", 5),
     "sequential-unroll": ("sequential-unroll", 5),
     "sequential-cec": ("sequential-cec", 5),
+    "leaf-cells": ("leaf-cells", 5),
+    "spacing-rules": ("spacing-rules", 5),
+    "constraint-graph": ("constraint-graph", 5),
+    "longest-path": ("longest-path", 5),
+    "compact-1d": ("compact-1d", 5),
+    "compact-2d": ("compact-2d", 5),
+    "wire-jogs": ("wire-jogs", 5),
+    "shear-lite": ("shear-lite", 5),
+    "sequential-compact": ("sequential-compact", 5),
 }
 
 BEGIN_MARK = "<!-- algorithm-walkthrough -->"

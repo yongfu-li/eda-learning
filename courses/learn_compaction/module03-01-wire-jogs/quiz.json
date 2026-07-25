@@ -1,0 +1,38 @@
+{
+  "module": "module03-01-wire-jogs",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Wire id?",
+      "choices": [
+        "W",
+        "A",
+        "SRC",
+        "M1"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "add_jog adds?",
+      "choices": [
+        "a bend point",
+        "a cell",
+        "a via only",
+        "DRC"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "stretch updates?",
+      "choices": [
+        "wire x extent",
+        "chip size",
+        "min_gap",
+        "Y only"
+      ],
+      "answer": 0
+    }
+  ]
+}

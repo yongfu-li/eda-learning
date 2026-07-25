@@ -1,0 +1,38 @@
+{
+  "module": "module03-05-sequential-compact",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Sequential final width?",
+      "choices": [
+        "14",
+        "20",
+        "24",
+        "6"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Sequential legal?",
+      "choices": [
+        "True",
+        "False",
+        "unknown",
+        "only Y"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Pipeline starts with?",
+      "choices": [
+        "X compact",
+        "shear",
+        "DRC",
+        "CTS"
+      ],
+      "answer": 0
+    }
+  ]
+}

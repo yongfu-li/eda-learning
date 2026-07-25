@@ -1,0 +1,34 @@
+title: Welcome
+footer: learn_compaction — 00 intro
+slides:
+- type: title
+  title: Welcome
+  subtitle: After detailed routing you have whitespace
+  notes: After detailed routing you have whitespace. Compaction shrinks the layout
+    under spacing rules.
+- type: bullets
+  title: The idea
+  bullets:
+  - This course uses tiny_compact
+  notes: 'This course uses tiny_compact: cells A,B,C plus wire W; min_gap=1; initial
+    width 20 → compacted 14.'
+- type: bullets
+  title: Two tracks
+  bullets:
+  - Implement track uses common/ solvers; browser lab track uses platform tools
+  notes: Implement track uses common/ solvers; browser lab track uses platform tools.
+- type: bullets
+  title: Toy layout
+  bullets:
+  - Cells A, B, C and wire W; min_gap one; width twenty packs to fourteen
+  notes: Cells A, B, C and wire W; min_gap one; width twenty packs to fourteen.
+- type: bullets
+  title: Path
+  bullets:
+  - Constraint graph, longest path, one-D and two-D, jogs, sequential pass
+  notes: Constraint graph, longest path, one-D and two-D, jogs, sequential pass.
+- type: bullets
+  title: Begin
+  bullets:
+  - 'Next: leaf cells and bounding boxes'
+  notes: 'Next: leaf cells and bounding boxes.'

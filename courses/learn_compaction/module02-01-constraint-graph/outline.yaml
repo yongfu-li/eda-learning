@@ -1,0 +1,60 @@
+title: Constraints
+footer: learn_compaction — 01 constraint graph
+slides:
+- type: title
+  title: Constraints
+  subtitle: Compaction models geometry as a directed constraint graph
+  notes: Compaction models geometry as a directed constraint graph.
+- type: bullets
+  title: The idea
+  bullets:
+  - Nodes L_A,R_A,…; size edges R≥L+width; spacing edges L_right ≥ R_left + gap
+  - GOLDEN ~10 X edges
+  notes: Nodes L_A,R_A,…; size edges R≥L+width; spacing edges L_right ≥ R_left + gap.
+    GOLDEN ~10 X edges.
+- type: image
+  title: Nodes
+  image: assets/steps/01-nodes.png
+  caption: Nodes
+  notes: Left/right edge nodes per object.
+- type: image
+  title: Size
+  image: assets/steps/02-size.png
+  caption: Size
+  notes: R_id ≥ L_id + width(id).
+- type: image
+  title: Spacing
+  image: assets/steps/03-space.png
+  caption: Spacing
+  notes: Next cell’s left ≥ previous right + gap.
+- type: image
+  title: Source
+  image: assets/steps/04-src.png
+  caption: Source
+  notes: SRC_X anchors the left of the chip.
+- type: image
+  title: Count
+  image: assets/steps/05-count.png
+  caption: Count
+  notes: 'GOLDEN: about 10 constraint edges on X.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **constraint-graph**. Inspect X graph node/edge counts.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call build_constraint_graph(DATA,'x'); print len(edges)
+  notes: Call build_constraint_graph(DATA,'x'); print len(edges).
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Forgetting size edges
+  - Mixing X and Y nodes
+  notes: Forgetting size edges. Mixing X and Y nodes.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: longest-path placement'
+  notes: 'Next: longest-path placement.'

@@ -1,0 +1,38 @@
+{
+  "module": "module99-00-wrap",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Focus of Wrap?",
+      "choices": [
+        "Recap constraint graphs, longest-path, 1-D/2-D, jogs; contin",
+        "Place only",
+        "CTS only",
+        "SPICE"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Course id?",
+      "choices": [
+        "learn_compaction",
+        "learn_routing",
+        "learn_drc",
+        "learn_sta"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Toy initial width?",
+      "choices": [
+        "20",
+        "14",
+        "1",
+        "100"
+      ],
+      "answer": 0
+    }
+  ]
+}

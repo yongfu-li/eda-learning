@@ -293,6 +293,25 @@ COURSE_META = {
         "first_lab": "spec-impl",
         "first_n": "02",
     },
+    "learn_compaction": {
+        "title": "Layout compaction for EDA",
+        "focus": "Leaf cells → spacing → constraint graph → longest-path → 1-D/2-D → jogs → shear → sequential",
+        "prereq": None,
+        "status": "ready",
+        "repo": "learn_compaction",
+        "modules_md": ROOT / "courses" / "learn_compaction" / "docs" / "MODULES.md",
+        "course_root": ROOT / "courses" / "learn_compaction",
+        "lead": (
+            "Constraint-graph layout compaction on a tiny stick layout — longest-path 1-D/2-D, wire jogs, shear lite. "
+            "Clips and decks load from "
+            "<code>courses/learn_compaction</code> "
+            "(<code>moduleSS-AA-slug/video.mp4</code>). Open the matching browser tool, then mark the lab done."
+        ),
+        "tools_href": "../../tools/index.html#compaction",
+        "tools_label": "Compaction tools",
+        "first_lab": "leaf-cells",
+        "first_n": "02",
+    },
 }
 
 COURSE_INDEX = """<!DOCTYPE html>

@@ -1,0 +1,62 @@
+title: Leaf cells
+footer: learn_compaction — 01 leaf cells
+slides:
+- type: title
+  title: Leaf cells
+  subtitle: Compaction starts from leaf geometries , cells and wires with axis-aligned
+    boxes
+  notes: Compaction starts from leaf geometries — cells and wires with axis-aligned
+    boxes.
+- type: bullets
+  title: The idea
+  bullets:
+  - A,B,C are cells; W is a horizontal wire
+  - 'GOLDEN: 4 objects, bbox width 20, height 6'
+  notes: 'A,B,C are cells; W is a horizontal wire. GOLDEN: 4 objects, bbox width 20,
+    height 6.'
+- type: image
+  title: Objects
+  image: assets/steps/01-obj.png
+  caption: Objects
+  notes: 'Four objects: cells A,B,C and wire W.'
+- type: image
+  title: Cell A
+  image: assets/steps/02-a.png
+  caption: Cell A
+  notes: A sits at x0=0..4, y0=2..5.
+- type: image
+  title: B and C
+  image: assets/steps/03-bc.png
+  caption: B and C
+  notes: B and C sit further right with gaps.
+- type: image
+  title: BBox
+  image: assets/steps/04-bbox.png
+  caption: BBox
+  notes: Union bbox width=20 height=6.
+- type: image
+  title: Count
+  image: assets/steps/05-count.png
+  caption: Count
+  notes: 'GOLDENS: object_count=4.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **leaf-cells**. Click cells; read bbox metrics.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call layout_stats; assert object_count==4 and width==20
+  notes: Call layout_stats; assert object_count==4 and width==20.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Treating wire as a cell
+  - Confusing chip size with bbox
+  notes: Treating wire as a cell. Confusing chip size with bbox.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: spacing / gap rules'
+  notes: 'Next: spacing / gap rules.'

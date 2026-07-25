@@ -1,0 +1,58 @@
+title: 2-D compact
+footer: learn_compaction — 07 compact 2d
+slides:
+- type: title
+  title: 2-D compact
+  subtitle: 2-D compaction usually alternates axes (X then Y on the toy)
+  notes: 2-D compaction usually alternates axes (X then Y on the toy).
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: initial 20×6 → final width 14 (height may shift slightly with projections)'
+  notes: 'GOLDEN: initial 20×6 → final width 14 (height may shift slightly with projections).'
+- type: image
+  title: Order
+  image: assets/steps/01-order.png
+  caption: Order
+  notes: Default order is X then Y.
+- type: image
+  title: X step
+  image: assets/steps/02-xstep.png
+  caption: X step
+  notes: First step shrinks width.
+- type: image
+  title: Y step
+  image: assets/steps/03-ystep.png
+  caption: Y step
+  notes: Second step rebuilds Y constraints.
+- type: image
+  title: Final
+  image: assets/steps/04-final.png
+  caption: Final
+  notes: final_width=14 on the toy.
+- type: image
+  title: Trade
+  image: assets/steps/05-trade.png
+  caption: Trade
+  notes: Axis order can change results in richer layouts.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **compact-2d**. Run 2-D; read final width 14.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call compact_2d(DATA); assert final_width==14
+  notes: Call compact_2d(DATA); assert final_width==14.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Assuming one axis is enough
+  - Ignoring order sensitivity
+  notes: Assuming one axis is enough. Ignoring order sensitivity.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: wire jogs'
+  notes: 'Next: wire jogs.'

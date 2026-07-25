@@ -1,0 +1,61 @@
+title: Longest path
+footer: learn_compaction — 03 longest path
+slides:
+- type: title
+  title: Longest path
+  subtitle: Classic 1-D compaction sets each variable to the longest path from the
+    source
+  notes: Classic 1-D compaction sets each variable to the longest path from the source.
+- type: bullets
+  title: The idea
+  bullets:
+  - Relax edges until positions stabilize; left edges pull rightward to minimum legal
+    places
+  notes: Relax edges until positions stabilize; left edges pull rightward to minimum
+    legal places.
+- type: image
+  title: Source
+  image: assets/steps/01-src.png
+  caption: Source
+  notes: SRC_X at position 0.
+- type: image
+  title: Relax
+  image: assets/steps/02-relax.png
+  caption: Relax
+  notes: Update dst ← max(dst, src + w).
+- type: image
+  title: Stable
+  image: assets/steps/03-stable.png
+  caption: Stable
+  notes: Stop when no position increases.
+- type: image
+  title: Left pack
+  image: assets/steps/04-pack.png
+  caption: Left pack
+  notes: Cells pack left under spacing.
+- type: image
+  title: Ready
+  image: assets/steps/05-ready.png
+  caption: Ready
+  notes: Positions feed compact_1d next.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **longest-path**. Run longest-path on the X graph.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call longest_path_compact(build_constraint_graph(...))
+  notes: Call longest_path_compact(build_constraint_graph(...)).
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Using shortest-path instead
+  - Not iterating to fixpoint
+  notes: Using shortest-path instead. Not iterating to fixpoint.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: apply 1-D compaction'
+  notes: 'Next: apply 1-D compaction.'

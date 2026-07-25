@@ -1,0 +1,38 @@
+{
+  "module": "module02-05-compact-1d",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "X span after compact_1d?",
+      "choices": [
+        "14",
+        "20",
+        "24",
+        "10"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "X span before?",
+      "choices": [
+        "20",
+        "14",
+        "6",
+        "1"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "improved means?",
+      "choices": [
+        "after < before",
+        "illegal",
+        "taller",
+        "more wires"
+      ],
+      "answer": 0
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "module": "module01-01-leaf-cells",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "How many objects in tiny_compact?",
+      "choices": [
+        "4",
+        "3",
+        "6",
+        "1"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Initial bbox width?",
+      "choices": [
+        "20",
+        "24",
+        "14",
+        "10"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Which object is a wire?",
+      "choices": [
+        "W",
+        "A",
+        "B",
+        "C"
+      ],
+      "answer": 0
+    }
+  ]
+}

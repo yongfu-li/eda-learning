@@ -1,0 +1,38 @@
+{
+  "module": "module02-01-constraint-graph",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Constraint meaning?",
+      "choices": [
+        "dst \u2265 src + w",
+        "dst \u2264 src",
+        "undirected only",
+        "max-flow"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "X size edge connects?",
+      "choices": [
+        "R to L with width",
+        "L to SRC",
+        "wires only",
+        "Y only"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Anchor node id prefix?",
+      "choices": [
+        "SRC_",
+        "OUT_",
+        "PI_",
+        "PO_"
+      ],
+      "answer": 0
+    }
+  ]
+}

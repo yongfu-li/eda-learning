@@ -1,0 +1,34 @@
+title: Wrap
+footer: learn_compaction — 00 wrap
+slides:
+- type: title
+  title: Wrap
+  subtitle: You compacted tiny_compact from width 20 to 14 under min_gap=1
+  notes: You compacted tiny_compact from width 20 to 14 under min_gap=1.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'Natural next: learn_pattern_matching or learn_signoff'
+  notes: 'Natural next: learn_pattern_matching or learn_signoff.'
+- type: bullets
+  title: Recap
+  bullets:
+  - Recap constraint graphs, longest-path, 1-D/2-D, jogs
+  notes: Recap constraint graphs, longest-path, 1-D/2-D, jogs; continue to pattern
+    matching or signoff.
+- type: bullets
+  title: Goldens
+  bullets:
+  - Width twenty to fourteen under min_gap one; sequential pass stays legal
+  notes: Width twenty to fourteen under min_gap one; sequential pass stays legal.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - 'Natural next: learn_pattern_matching or learn_signoff'
+  notes: 'Natural next: learn_pattern_matching or learn_signoff.'
+- type: bullets
+  title: Close
+  bullets:
+  - Mark the wrap done when you can explain the constraint graph
+  notes: Mark the wrap done when you can explain the constraint graph.

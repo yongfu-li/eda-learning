@@ -1,0 +1,60 @@
+title: Wire jogs
+footer: learn_compaction — 01 wire jogs
+slides:
+- type: title
+  title: Wire jogs
+  subtitle: Wires must bend or stretch when cells move during compaction
+  notes: Wires must bend or stretch when cells move during compaction.
+- type: bullets
+  title: The idea
+  bullets:
+  - Add_jog inserts a bend; stretch_wire_to_bbox retargets a horizontal wire to the
+    cell union
+  notes: add_jog inserts a bend; stretch_wire_to_bbox retargets a horizontal wire
+    to the cell union.
+- type: image
+  title: Wire W
+  image: assets/steps/01-w.png
+  caption: Wire W
+  notes: W is horizontal at y=7 spanning x=4..16.
+- type: image
+  title: Jog
+  image: assets/steps/02-jog.png
+  caption: Jog
+  notes: add_jog records a bend point.
+- type: image
+  title: Stretch
+  image: assets/steps/03-stretch.png
+  caption: Stretch
+  notes: After compact, stretch W to cell bbox.
+- type: image
+  title: Points
+  image: assets/steps/04-pts.png
+  caption: Points
+  notes: points list holds polyline vertices.
+- type: image
+  title: Why
+  image: assets/steps/05-why.png
+  caption: Why
+  notes: Without jogs, wires disconnect from moving pins.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **wire-jogs**. Add a jog; stretch W after compact.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call add_jog on W; stretch_wire_to_bbox after compact_1d
+  notes: Call add_jog on W; stretch_wire_to_bbox after compact_1d.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Deleting the wire
+  - Stretching without updating y
+  notes: Deleting the wire. Stretching without updating y.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: shear lite'
+  notes: 'Next: shear lite.'

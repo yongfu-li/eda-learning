@@ -1,0 +1,33 @@
+title: Why offline
+footer: learn_compaction — 01 offline benchmark compare
+slides:
+- type: title
+  title: Why offline
+  subtitle: Track A prints compaction_compare without the browser
+  notes: Track A prints compaction_compare without the browser.
+- type: bullets
+  title: The idea
+  bullets:
+  - Load JSON; print width_delta and legal flag
+  notes: Load JSON; print width_delta and legal flag.
+- type: bullets
+  title: What to compare
+  bullets:
+  - Compare initial vs sequential compact metrics offline
+  notes: Compare initial vs sequential compact metrics offline.
+- type: bullets
+  title: Commands
+  bullets:
+  - Python3 -c "from solvers import *; ..." in common/
+  notes: python3 -c "from solvers import *; ..." in common/
+- type: bullets
+  title: Compare
+  bullets:
+  - Load JSON; print width_delta and legal flag
+  notes: Load JSON; print width_delta and legal flag.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue to the wrap module
+  notes: Continue to the wrap module.
