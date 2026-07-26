@@ -1,0 +1,9 @@
+# Step: techmap default (internal gate map).
+read_verilog rtl/tiny_algo.v
+hierarchy -check -top tiny_algo
+proc
+opt
+techmap
+opt_clean
+stat
+dump

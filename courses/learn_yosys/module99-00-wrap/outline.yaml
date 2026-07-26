@@ -1,37 +1,35 @@
-title: Wrap
+title: Path complete
 footer: learn_yosys — 00 wrap
 slides:
 - type: title
-  title: Wrap
-  subtitle: 'You checked tiny_yosys: 6 RTL cells; flatten→1; opt→5; strash→4; rewrite→3;
-    nand 6/7; report 7/11; engine ok'
-  notes: 'You checked tiny_yosys: 6 RTL cells; flatten→1; opt→5; strash→4; rewrite→3;
-    nand 6/7; report 7/11; engine ok.'
+  title: Path complete
+  subtitle: You finished Part A pass map, Part B real Yosys evidence on tiny_and_or.v,
+    and Part C algorithms bound to real Yosys
+  notes: You finished Part A pass map, Part B real Yosys evidence on tiny_and_or.v,
+    and Part C algorithms bound to real Yosys.
 - type: bullets
-  title: The idea
+  title: What you can do
   bullets:
-  - 'Natural next: learn_openroad (place/route evidence)'
-  notes: 'Natural next: learn_openroad (place/route evidence).'
+  - You can name the pass map, run real Yosys scripts
+  notes: You can name the pass map, run real Yosys scripts, and explain the algorithms
+    behind proc, opt, techmap, extract, memory, fsm, and ABC handoff.
 - type: bullets
-  title: Recap
+  title: Evidence
   bullets:
-  - Recap proc, flatten, opt, strash, rewrite, techmap, synth, engine
-  notes: Recap proc, flatten, opt, strash, rewrite, techmap, synth, engine.
+  - Checked-in logs and goldens under common/logs and common/evidence
+  notes: Checked-in logs and goldens under common/logs and common/evidence — including
+    Part C partc/ — prove the real binary path.
 - type: bullets
-  title: Goldens
+  title: Three layers
   bullets:
-  - 6 RTL cells; flatten→1; opt→5; strash→4; rewrite→3; nand 6/7; report 7/11; engine
-    ok
-  notes: 6 RTL cells; flatten→1; opt→5; strash→4; rewrite→3; nand 6/7; report 7/11;
-    engine ok.
+  - Pass-map labs teach the pass order
+  - Real modules teach the CLI, RTLIL, and evidence
+  - Algorithm labs teach the moves and bind them to Yosys
+  notes: Pass-map labs teach the pass order. Real modules teach the CLI, RTLIL, and
+    evidence. Algorithm labs teach the moves and bind them to Yosys.
 - type: bullets
   title: Next
   bullets:
   - Complete the quiz for this part
-  - 'Natural next: learn_openroad (place/route evidence)'
-  notes: 'Natural next: learn_openroad (place/route evidence).'
-- type: bullets
-  title: Close
-  bullets:
-  - Mark the wrap done when you can name every pass in order
-  notes: Mark the wrap done when you can name every pass in order.
+  - Continue to OpenROAD or OpenLane when you are ready for place and route evidence
+  notes: Continue to OpenROAD or OpenLane when you are ready for place and route evidence.

@@ -1,8 +1,8 @@
 # Track A — Yosys common
 
-## Part A — toy literacy
+## Part A — pass map
 
-Toy: `tiny_yosys.json` — AND/OR/dup-AND/dead-BUF/NOT/DFF across top+child.
+IR: `tiny_yosys.json` — AND/OR/dup-AND/dead-BUF/NOT/DFF across top+child. Interactive pass map (same names as Yosys).
 
 ```bash
 cd courses/learn_yosys/common
@@ -21,3 +21,17 @@ python3 -c "from real_solvers import real_yosys_compare; print(real_yosys_compar
 ```
 
 Goldens (Yosys 0.9 on tiny_and_or): after_read modules=2 processes=1 and=2; after_proc has $dff; flatten cells=4; aigmap cells=7; synth cells=2 (`$_AOI3_`, `$_DFF_P_`).
+
+## Part C — algorithms (+ real bind)
+
+IR: `tiny_algo.json` · RTL: `tiny_algo.v`, `tiny_extract.v`/`andor2_map.v`, `tiny_mem.v`, `tiny_fsm.v` · solvers: `algo_solvers.py` · bind: `partc_bind.py` · evidence: `evidence/partc/goldens.json`.
+
+```bash
+cd courses/learn_yosys/common
+bash scripts/run_partc_evidence.sh
+python3 scripts/build_partc_goldens.py
+python3 algo_solvers.py
+python3 partc_bind.py
+```
+
+Real bind stages: proc → opt → techmap → extract (ANDOR2) → memory ($mem 4×8) → fsm ($fsm) → abc/aigmap.

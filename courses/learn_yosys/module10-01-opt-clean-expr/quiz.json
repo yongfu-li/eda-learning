@@ -1,0 +1,38 @@
+{
+  "moduleId": "module10-01-opt-clean-expr",
+  "items": [
+    {
+      "q": "opt_clean removed_count golden?",
+      "choices": [
+        "2",
+        "0",
+        "1",
+        "4"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "opt_expr folded_count golden?",
+      "choices": [
+        "1",
+        "0",
+        "2",
+        "3"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "What gets folded?",
+      "choices": [
+        "dollar buf on const0",
+        "dollar mux",
+        "dollar dff",
+        "ANDOR2 macro"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

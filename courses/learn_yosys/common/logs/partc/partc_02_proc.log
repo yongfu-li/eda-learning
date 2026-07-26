@@ -1,0 +1,221 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Executing script file `scripts/partc_02_proc.ys' --
+
+1. Executing Verilog-2005 frontend: rtl/tiny_algo.v
+Parsing Verilog input from `rtl/tiny_algo.v' to AST representation.
+Generating RTLIL representation for module `\tiny_algo'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \tiny_algo
+
+2.2. Analyzing design hierarchy..
+Top module:  \tiny_algo
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$rtl/tiny_algo.v:34$6 in module tiny_algo.
+Marked 1 switch rules as full_case in process $proc$rtl/tiny_algo.v:14$1 in module tiny_algo.
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_INIT pass (extract init attributes).
+
+3.4. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst in `\tiny_algo.$proc$rtl/tiny_algo.v:34$6'.
+
+3.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\tiny_algo.$proc$rtl/tiny_algo.v:34$6'.
+     1/1: $0\q[0:0]
+Creating decoders for process `\tiny_algo.$proc$rtl/tiny_algo.v:14$1'.
+     1/2: $1\y_r[0:0]
+     2/2: $0\y_r[0:0]
+
+3.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\tiny_algo.\y_r' from process `\tiny_algo.$proc$rtl/tiny_algo.v:14$1'.
+
+3.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\tiny_algo.\q' using process `\tiny_algo.$proc$rtl/tiny_algo.v:34$6'.
+  created $adff cell `$procdff$11' with positive edge clock and positive level reset.
+
+3.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `tiny_algo.$proc$rtl/tiny_algo.v:34$6'.
+Found and cleaned up 1 empty switch in `\tiny_algo.$proc$rtl/tiny_algo.v:14$1'.
+Removing empty process `tiny_algo.$proc$rtl/tiny_algo.v:14$1'.
+Cleaned up 1 empty switch.
+
+4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tiny_algo..
+Removed 1 unused cells and 10 unused wires.
+<suppressed ~3 debug messages>
+
+5. Printing statistics.
+
+=== tiny_algo ===
+
+   Number of wires:                 13
+   Number of wire bits:             13
+   Number of public wires:          12
+   Number of public wire bits:      12
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  6
+     $adff                           1
+     $and                            2
+     $mux                            1
+     $xor                            2
+
+
+autoidx 12
+
+attribute \top 1
+attribute \src "rtl/tiny_algo.v:3"
+module \tiny_algo
+
+  attribute \src "rtl/tiny_algo.v:34"
+  wire $0\q[0:0]
+
+  attribute \src "rtl/tiny_algo.v:4"
+  wire input 1 \a
+
+  attribute \src "rtl/tiny_algo.v:5"
+  wire input 2 \b
+
+  attribute \src "rtl/tiny_algo.v:7"
+  wire input 4 \clk
+
+  attribute \src "rtl/tiny_algo.v:31"
+  wire \keep_ands
+
+  attribute \src "rtl/tiny_algo.v:23"
+  wire \n1
+
+  attribute \src "rtl/tiny_algo.v:23"
+  wire \n2
+
+  attribute \src "rtl/tiny_algo.v:10"
+  wire output 7 \q
+
+  attribute \src "rtl/tiny_algo.v:8"
+  wire input 5 \rst
+
+  attribute \src "rtl/tiny_algo.v:6"
+  wire input 3 \s
+
+  attribute \src "rtl/tiny_algo.v:23"
+  wire \unused
+
+  attribute \src "rtl/tiny_algo.v:9"
+  wire output 6 \y
+
+  attribute \src "rtl/tiny_algo.v:13"
+  wire \y_r
+
+  attribute \src "rtl/tiny_algo.v:24"
+  cell $and $and$rtl/tiny_algo.v:24$2
+    parameter \A_SIGNED 0
+    parameter \A_WIDTH 1
+    parameter \B_SIGNED 0
+    parameter \B_WIDTH 1
+    parameter \Y_WIDTH 1
+    connect \A \a
+    connect \B \b
+    connect \Y \n1
+  end
+
+  attribute \src "rtl/tiny_algo.v:25"
+  cell $and $and$rtl/tiny_algo.v:25$3
+    parameter \A_SIGNED 0
+    parameter \A_WIDTH 1
+    parameter \B_SIGNED 0
+    parameter \B_WIDTH 1
+    parameter \Y_WIDTH 1
+    connect \A \a
+    connect \B \b
+    connect \Y \n2
+  end
+
+  attribute \src "rtl/tiny_algo.v:34"
+  cell $adff $procdff$11
+    parameter \ARST_POLARITY 1'1
+    parameter \ARST_VALUE 1'0
+    parameter \CLK_POLARITY 1'1
+    parameter \WIDTH 1
+    connect \ARST \rst
+    connect \CLK \clk
+    connect \D $0\q[0:0]
+    connect \Q \q
+  end
+
+  attribute \full_case 1
+  attribute \src "rtl/tiny_algo.v:15"
+  cell $mux $procmux$9
+    parameter \WIDTH 1
+    connect \A \b
+    connect \B \a
+    connect \S \s
+    connect \Y \y
+  end
+
+  attribute \src "rtl/tiny_algo.v:31"
+  cell $xor $xor$rtl/tiny_algo.v:31$5
+    parameter \A_SIGNED 0
+    parameter \A_WIDTH 1
+    parameter \B_SIGNED 0
+    parameter \B_WIDTH 1
+    parameter \Y_WIDTH 1
+    connect \A \n1
+    connect \B \n2
+    connect \Y \keep_ands
+  end
+
+  attribute \src "rtl/tiny_algo.v:38"
+  cell $xor $xor$rtl/tiny_algo.v:38$7
+    parameter \A_SIGNED 0
+    parameter \A_WIDTH 1
+    parameter \B_SIGNED 0
+    parameter \B_WIDTH 1
+    parameter \Y_WIDTH 1
+    connect \A \y
+    connect \B \keep_ands
+    connect \Y $0\q[0:0]
+  end
+
+  connect \unused 1'0
+  connect \y_r \y
+end
+
+End of script. Logfile hash: 2da9046dc1
+CPU: user 0.01s system 0.00s, MEM: 15.69 MB total, 9.23 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 36% 2x read_verilog (0 sec), 24% 1x opt_clean (0 sec), ...

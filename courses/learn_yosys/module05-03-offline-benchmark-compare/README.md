@@ -3,7 +3,7 @@
 **Module id:** `module05-03-offline-benchmark-compare`  
 **Kind:** `offline`
 
-[← Engine](../module05-01-yosys-engine/README.md) · [Course README](../README.md) · [Wrap →](../module99-00-wrap/README.md)
+[← Algo engine](../module13-03-yosys-algo-engine/README.md) · [Course README](../README.md) · [Wrap →](../module99-00-wrap/README.md)
 
 ## Outcomes
 

@@ -256,6 +256,16 @@ LAB_TO_ALGO: dict[str, tuple[str, int]] = {
     "real-flatten-opt": ("real-flatten-opt", 5),
     "aigmap-synth": ("aigmap-synth", 5),
     "real-evidence": ("real-evidence", 5),
+    "proc-mux": ("proc-mux", 5),
+    "proc-dff-arst": ("proc-dff-arst", 5),
+    "opt-clean-expr": ("opt-clean-expr", 5),
+    "opt-merge-algo": ("opt-merge-algo", 5),
+    "techmap-mapfile": ("techmap-mapfile", 5),
+    "extract-subcircuit": ("extract-subcircuit", 5),
+    "memory-map-algo": ("memory-map-algo", 5),
+    "fsm-detect": ("fsm-detect", 5),
+    "abc-handoff": ("abc-handoff", 5),
+    "yosys-algo-engine": ("yosys-algo-engine", 5),
 }
 
 BEGIN_MARK = "<!-- algorithm-walkthrough -->"

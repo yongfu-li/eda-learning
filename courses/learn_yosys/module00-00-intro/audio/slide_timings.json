@@ -1,26 +1,30 @@
 [
   {
     "slide": 1,
-    "duration": 10.992
+    "duration": 15.048
   },
   {
     "slide": 2,
-    "duration": 12.528
+    "duration": 11.952
   },
   {
     "slide": 3,
-    "duration": 9.288
+    "duration": 9.168
   },
   {
     "slide": 4,
-    "duration": 10.8
+    "duration": 12.192
   },
   {
     "slide": 5,
-    "duration": 13.68
+    "duration": 17.616
   },
   {
     "slide": 6,
-    "duration": 6.144
+    "duration": 9.432
+  },
+  {
+    "slide": 7,
+    "duration": 8.208
   }
 ]

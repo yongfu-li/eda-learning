@@ -1,0 +1,38 @@
+{
+  "moduleId": "module13-03-yosys-algo-engine",
+  "items": [
+    {
+      "q": "Engine ok golden?",
+      "choices": [
+        "True",
+        "False",
+        "None",
+        "partial"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Engine includes which last literacy check?",
+      "choices": [
+        "abc aig_ands",
+        "OpenROAD place",
+        "GDS write",
+        "SDC parse"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Self-test entry?",
+      "choices": [
+        "python3 algo_solvers.py",
+        "yosys -s only",
+        "make openroad",
+        "iverilog -o"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

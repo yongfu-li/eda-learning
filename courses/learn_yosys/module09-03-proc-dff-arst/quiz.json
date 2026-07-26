@@ -1,0 +1,38 @@
+{
+  "moduleId": "module09-03-proc-dff-arst",
+  "items": [
+    {
+      "q": "Which RTLIL cell type does real Yosys emit for an async-reset FF?",
+      "choices": [
+        "$adff",
+        "$dff only",
+        "$mux",
+        "$_AND_"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Does the golden register carry async reset?",
+      "choices": [
+        "yes (has_arst / ARST)",
+        "no",
+        "only sync reset",
+        "only clock enable"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Processes remaining after full proc?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

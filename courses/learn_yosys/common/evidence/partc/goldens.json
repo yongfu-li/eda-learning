@@ -1,0 +1,215 @@
+{
+  "rtl": "rtl/tiny_algo.v",
+  "rtl_memory": "rtl/tiny_mem.v",
+  "rtl_fsm": "rtl/tiny_fsm.v",
+  "rtl_extract": "rtl/tiny_extract.v",
+  "rtl_extract_map": "rtl/andor2_map.v",
+  "top": "tiny_algo",
+  "yosys_note": "Evidence from installed Yosys (see logs/partc/). Teaching solvers mirror these moves.",
+  "after_read_processes": 2,
+  "after_read_cells": 5,
+  "after_read_and": 2,
+  "after_proc_mux_mux": 2,
+  "after_proc_processes": 0,
+  "after_proc_cells": 6,
+  "after_proc_mux": 1,
+  "after_proc_and": 2,
+  "after_proc_adff": 1,
+  "after_opt_cells": 5,
+  "after_opt_and": 1,
+  "after_opt_adff": 1,
+  "after_techmap_cells": 5,
+  "after_techmap_types": [
+    "$_AND_",
+    "$_DFF_PP0_",
+    "$_MUX_",
+    "$_XOR_"
+  ],
+  "after_memory_mem": 1,
+  "after_memory_width": 4,
+  "after_memory_size": 8,
+  "after_memory_rd_ports": 1,
+  "after_memory_wr_ports": 1,
+  "after_fsm_fsm": 1,
+  "after_fsm_state_num": 3,
+  "after_fsm_state_bits": 2,
+  "after_fsm_trans_num": 5,
+  "after_abc_cells": 23,
+  "after_abc_and": 10,
+  "after_abc_not": 12,
+  "after_abc_adff": 1,
+  "after_abc_types": [
+    "$_AND_",
+    "$_NOT_",
+    "$adff"
+  ],
+  "after_extract_matches": 1,
+  "after_extract_cells": 1,
+  "after_extract_types": [
+    "ANDOR2"
+  ],
+  "stages": {
+    "read": {
+      "cell_count": 5,
+      "processes": 2,
+      "wires": 21,
+      "cells": {
+        "$and": 2,
+        "$or": 1,
+        "$xor": 2
+      },
+      "types": [
+        "$and",
+        "$or",
+        "$xor"
+      ],
+      "log": "partc_00_read.log"
+    },
+    "proc_mux": {
+      "cell_count": 7,
+      "processes": 2,
+      "wires": 25,
+      "cells": {
+        "$and": 2,
+        "$mux": 2,
+        "$or": 1,
+        "$xor": 2
+      },
+      "types": [
+        "$and",
+        "$mux",
+        "$or",
+        "$xor"
+      ],
+      "log": "partc_01_proc_mux.log"
+    },
+    "proc": {
+      "cell_count": 6,
+      "processes": 0,
+      "wires": 13,
+      "cells": {
+        "$adff": 1,
+        "$and": 2,
+        "$mux": 1,
+        "$xor": 2
+      },
+      "types": [
+        "$adff",
+        "$and",
+        "$mux",
+        "$xor"
+      ],
+      "log": "partc_02_proc.log"
+    },
+    "opt": {
+      "cell_count": 5,
+      "processes": 0,
+      "wires": 13,
+      "cells": {
+        "$adff": 1,
+        "$and": 1,
+        "$mux": 1,
+        "$xor": 2
+      },
+      "types": [
+        "$adff",
+        "$and",
+        "$mux",
+        "$xor"
+      ],
+      "log": "partc_03_opt.log"
+    },
+    "techmap": {
+      "cell_count": 5,
+      "processes": 0,
+      "wires": 13,
+      "cells": {
+        "$_AND_": 1,
+        "$_DFF_PP0_": 1,
+        "$_MUX_": 1,
+        "$_XOR_": 2
+      },
+      "types": [
+        "$_AND_",
+        "$_DFF_PP0_",
+        "$_MUX_",
+        "$_XOR_"
+      ],
+      "log": "partc_04_techmap.log"
+    },
+    "memory": {
+      "cell_count": 8,
+      "processes": 0,
+      "wires": 21,
+      "cells": {
+        "$dff": 4,
+        "$mem": 1,
+        "$mux": 3
+      },
+      "types": [
+        "$dff",
+        "$mem",
+        "$mux"
+      ],
+      "log": "partc_05_memory.log",
+      "width": 4,
+      "size": 8,
+      "rd_ports": 1,
+      "wr_ports": 1
+    },
+    "fsm": {
+      "cell_count": 8,
+      "processes": 0,
+      "wires": 15,
+      "cells": {
+        "$adff": 1,
+        "$eq": 2,
+        "$fsm": 1,
+        "$logic_not": 1,
+        "$mux": 2,
+        "$pmux": 1
+      },
+      "types": [
+        "$adff",
+        "$eq",
+        "$fsm",
+        "$logic_not",
+        "$mux",
+        "$pmux"
+      ],
+      "log": "partc_06_fsm.log",
+      "state_num": 3,
+      "state_bits": 2,
+      "trans_num": 5
+    },
+    "abc": {
+      "cell_count": 23,
+      "processes": 0,
+      "wires": 35,
+      "cells": {
+        "$_AND_": 10,
+        "$_NOT_": 12,
+        "$adff": 1
+      },
+      "types": [
+        "$_AND_",
+        "$_NOT_",
+        "$adff"
+      ],
+      "log": "partc_07_abc.log"
+    },
+    "extract": {
+      "cell_count": 1,
+      "processes": 0,
+      "wires": 5,
+      "cells": {
+        "ANDOR2": 1
+      },
+      "types": [
+        "ANDOR2"
+      ],
+      "log": "partc_08_extract.log"
+    }
+  },
+  "bind_ok": true
+}

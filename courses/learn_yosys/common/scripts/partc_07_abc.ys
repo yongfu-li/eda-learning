@@ -1,0 +1,8 @@
+# Part C ABC handoff: aigmap on tiny_algo after opt (literacy for abc bridge).
+read_verilog rtl/tiny_algo.v
+hierarchy -check -top tiny_algo
+proc
+opt
+aigmap
+stat
+dump

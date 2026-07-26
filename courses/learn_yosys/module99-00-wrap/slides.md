@@ -1,36 +1,33 @@
 ---
 marp: true
-title: Wrap
+title: Path complete
 paginate: true
 ---
 
-# Wrap
+# Path complete
 
-You checked tiny_yosys: 6 RTL cells; flatten→1; opt→5; strash→4; rewrite→3; nand 6/7; report 7/11; engine ok
-
----
-
-## The idea
-- Natural next: learn_openroad (place/route evidence)
+You finished Part A pass map, Part B real Yosys evidence on tiny_and_or.v, and Part C algorithms bound to real Yosys
 
 ---
 
-## Recap
-- Recap proc, flatten, opt, strash, rewrite, techmap, synth, engine
+## What you can do
+- You can name the pass map, run real Yosys scripts
 
 ---
 
-## Goldens
-- 6 RTL cells; flatten→1; opt→5; strash→4; rewrite→3; nand 6/7; report 7/11; engine ok
+## Evidence
+- Checked-in logs and goldens under common/logs and common/evidence
+
+---
+
+## Three layers
+- Pass-map labs teach the pass order
+- Real modules teach the CLI, RTLIL, and evidence
+- Algorithm labs teach the moves and bind them to Yosys
 
 ---
 
 ## Next
 - Complete the quiz for this part
-- Natural next: learn_openroad (place/route evidence)
-
----
-
-## Close
-- Mark the wrap done when you can name every pass in order
+- Continue to OpenROAD or OpenLane when you are ready for place and route evidence
 

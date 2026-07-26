@@ -61,15 +61,20 @@ Calling RTLIL 'gates' without $ prefix. Ignoring processes.
 
 ## Slide 11 — Try these
 
+From the common folder, run the real solvers self-test, or call `pass_rtlil_vocab` directly.
+
 ```bash
 cd courses/learn_yosys/common
-python3 -c "from real_solvers import pass_rtlil_vocab; print(pass_rtlil_vocab())"
+python3 real_solvers.py
 ```
 
 ## Slide 12 — Pseudocode
 
+Here is the check in plain steps.
+
 ```text
-load evidence; assert modules=2; processes=1; cells[$and]=2
+load evidence after hierarchy
+assert modules=2 processes=1 and=2
 ```
 
 ## Slide 13 — Next

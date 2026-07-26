@@ -1,0 +1,8 @@
+# Part C memory: collect inferred array into $mem (before memory_map expands it).
+read_verilog rtl/tiny_mem.v
+hierarchy -check -top tiny_mem
+proc
+memory_dff
+memory_collect
+stat
+dump

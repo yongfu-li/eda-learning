@@ -1,0 +1,83 @@
+title: Why proc mux
+footer: learn_yosys — 01 proc mux
+slides:
+- type: title
+  title: Why proc mux
+  subtitle: Combo case and if processes become mux cells before registers appear
+  notes: Combo case and if processes become mux cells before registers appear.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: mux_count=1; type is dollar mux'
+  notes: 'GOLDEN: mux_count=1; type is dollar mux.'
+- type: image
+  title: Combo process
+  image: assets/steps/01-start.png
+  caption: Combo process
+  notes: Case on s assigns y from a or b.
+- type: image
+  title: Emit $mux
+  image: assets/steps/02-mux.png
+  caption: Emit $mux
+  notes: proc_mux builds one $mux.
+- type: image
+  title: S/A/B/Y
+  image: assets/steps/03-ports.png
+  caption: S/A/B/Y
+  notes: Sel s; A=a; B=b; Y=y.
+- type: image
+  title: Combo removed
+  image: assets/steps/04-gone.png
+  caption: Combo removed
+  notes: Combo process is gone.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: mux_count=1.'
+- type: bullets
+  title: Browser lab track
+  bullets:
+  - Open **proc-mux**
+  - Replace the combo process with one mux cell and Check
+  notes: Open **proc-mux**. Replace the combo process with one mux cell and Check.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call algo_proc_mux(); assert mux_count == 1 and the cell type is dollar mux
+  notes: Call algo_proc_mux(); assert mux_count == 1 and the cell type is dollar mux.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Leaving the combo process in place
+  - Mapping sync processes as muxes
+  notes: Leaving the combo process in place. Mapping sync processes as muxes.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder, run the algo solvers self-test, or call `algo_proc_mux`
+    directly
+  notes: From the common folder, run the algo solvers self-test, or call `algo_proc_mux`
+    directly.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_yosys/common
+
+    python3 algo_solvers.py'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the check in plain steps
+  notes: Here is the check in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: "for each combo process with two cases:\n  emit dollar mux (S,A,B,Y)\n  drop\
+    \ that process\nok if mux_count == 1"
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - 'Next: proc_dff with async reset'
+  notes: 'Next: proc_dff with async reset.'

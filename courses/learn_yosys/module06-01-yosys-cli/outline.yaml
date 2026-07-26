@@ -61,22 +61,26 @@ slides:
 - type: bullets
   title: Try these
   bullets:
-  - ''
-  notes: ''
+  - From the common folder, run the real solvers self-test, or call `pass_cli_check`
+    directly
+  notes: From the common folder, run the real solvers self-test, or call `pass_cli_check`
+    directly.
 - type: code
   title: Try these — try these
   code: 'cd courses/learn_yosys/common
 
-    python3 -c "from real_solvers import pass_cli_check; print(pass_cli_check())"'
+    python3 real_solvers.py'
   notes: ''
 - type: bullets
   title: Pseudocode
   bullets:
-  - ''
-  notes: ''
+  - Here is the check in plain steps
+  notes: Here is the check in plain steps.
 - type: code
   title: Pseudocode — try these
-  code: recipe ← []; append read_verilog; hierarchy; proc; ok ← prefix matches golden
+  code: 'append read_verilog; hierarchy; proc
+
+    ok if prefix matches golden'
   notes: ''
 - type: bullets
   title: Next

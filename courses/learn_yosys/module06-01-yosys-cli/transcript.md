@@ -61,15 +61,20 @@ Starting with proc. Skipping hierarchy -top.
 
 ## Slide 11 — Try these
 
+From the common folder, run the real solvers self-test, or call `pass_cli_check` directly.
+
 ```bash
 cd courses/learn_yosys/common
-python3 -c "from real_solvers import pass_cli_check; print(pass_cli_check())"
+python3 real_solvers.py
 ```
 
 ## Slide 12 — Pseudocode
 
+Here is the check in plain steps.
+
 ```text
-recipe ← []; append read_verilog; hierarchy; proc; ok ← prefix matches golden
+append read_verilog; hierarchy; proc
+ok if prefix matches golden
 ```
 
 ## Slide 13 — Next

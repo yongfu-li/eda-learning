@@ -1,0 +1,38 @@
+{
+  "moduleId": "module09-01-proc-mux",
+  "items": [
+    {
+      "q": "After algo_proc_mux, how many dollar mux cells?",
+      "choices": [
+        "1",
+        "0",
+        "2",
+        "3"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "proc_mux consumes which process kind?",
+      "choices": [
+        "combo",
+        "sync",
+        "init",
+        "always_latch"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "GOLDEN mux type string?",
+      "choices": [
+        "$mux",
+        "$and",
+        "$dff",
+        "$_MUX_"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

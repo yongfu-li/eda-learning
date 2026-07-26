@@ -1,38 +1,43 @@
 ---
 marp: true
-title: Welcome
+title: Why Yosys
 paginate: true
 ---
 
-# Welcome
+# Why Yosys
 
-Learn_yosys has two parts
+Learn_yosys has three parts
 
 ---
 
-## Part A literacy
-- Toy tiny_yosys
+## Part A pass map
+- Pass map on tiny_yosys
 
 ---
 
 ## Part B real Yosys
-- Real path: `read_verilog` → `hierarchy` → `proc` → `flatten` → `opt` → `aigmap`/`synth` →
-- Goldens come from Yosys logs
+- Part B: real binary, RTLIL cells, and checked-in goldens from Yosys 0.9 on tiny_and_or.v
 
 ---
 
-## Two tracks
-- Implement track: `common/solvers.py` (toy) and `common/real_solvers.py` (evidence)
-- Browser labs mirror both
+## Part C algorithms
+- Part C: proc_mux, proc_dff ($adff), opt, techmap, extract, memory, fsm
 
 ---
 
-## RTLIL
-- Yosys IR is RTLIL , `$and`, `$dff`, later `$_AOI3_` / `$_DFF_P_` after synth
-- You will read `stat` and `dump`
+## Implement track
+- Implement track
+- Browser labs mirror all three
 
 ---
 
-## Begin
-- Start with the toy proc lab for pass names, then continue into the real CLI modules
+## Browser lab track
+- Open the course labs
+- Start at the pass-map proc lab
+
+---
+
+## Next
+- Complete the quiz for this part
+- Start with the pass-map proc lab for pass names
 

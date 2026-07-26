@@ -61,15 +61,20 @@ Stopping at toy yosys_engine. Wrong recipe order.
 
 ## Slide 11 — Try these
 
+From the common folder, run the real solvers self-test, or call `real_yosys_engine` directly.
+
 ```bash
 cd courses/learn_yosys/common
-python3 -c "from real_solvers import real_yosys_engine; print(real_yosys_engine())"
+python3 real_solvers.py
 ```
 
 ## Slide 12 — Pseudocode
 
+Here is the check in plain steps.
+
 ```text
-engine ← all real checks; ok ← recipe and stage goldens match
+run full golden recipe
+assert engine ok and synth cells two
 ```
 
 ## Slide 13 — Next

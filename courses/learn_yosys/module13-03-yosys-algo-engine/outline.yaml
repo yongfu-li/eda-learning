@@ -1,0 +1,86 @@
+title: Why engine
+footer: learn_yosys — 03 yosys algo engine
+slides:
+- type: title
+  title: Why engine
+  subtitle: One engine call chains proc, opt, techmap, extract, memory, fsm, and abc
+    goldens
+  notes: One engine call chains proc, opt, techmap, extract, memory, fsm, and abc
+    goldens.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: yosys_algo_engine ok=True (all Part C goldens)'
+  notes: 'GOLDEN: yosys_algo_engine ok=True (all Part C goldens).'
+- type: image
+  title: All checks
+  image: assets/steps/01-all.png
+  caption: All checks
+  notes: Engine runs every Part C pass.
+- type: image
+  title: proc goldens
+  image: assets/steps/02-proc.png
+  caption: proc goldens
+  notes: mux=1 dff=1.
+- type: image
+  title: opt goldens
+  image: assets/steps/03-opt.png
+  caption: opt goldens
+  notes: clean 2 merge ands=1.
+- type: image
+  title: map goldens
+  image: assets/steps/04-map.png
+  caption: map goldens
+  notes: techmap 2 extract 1.
+- type: image
+  title: OK
+  image: assets/steps/05-ok.png
+  caption: OK
+  notes: 'GOLDEN: engine ok=True.'
+- type: bullets
+  title: Browser lab track
+  bullets:
+  - Open **yosys-algo-engine**
+  - Run the full chain and Check ok
+  notes: Open **yosys-algo-engine**. Run the full chain and Check ok.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call yosys_algo_engine(); assert ok is True
+  notes: Call yosys_algo_engine(); assert ok is True.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Passing a mutated design mid-chain
+  - Asserting only one stage and calling it done
+  notes: Passing a mutated design mid-chain. Asserting only one stage and calling
+    it done.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder
+  notes: From the common folder, run the algo solvers self-test, or call `yosys_algo_engine`
+    directly.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_yosys/common
+
+    python3 algo_solvers.py'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the check in plain steps
+  notes: Here is the check in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: 'run mux, dff, clean, expr, merge, techmap, extract, memory, fsm, abc
+
+    ok if every golden matches'
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - 'Next: offline benchmark compare'
+  notes: 'Next: offline benchmark compare.'

@@ -1,0 +1,38 @@
+{
+  "moduleId": "module13-01-abc-handoff",
+  "items": [
+    {
+      "q": "aig_ands golden?",
+      "choices": [
+        "3",
+        "1",
+        "2",
+        "4"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Handoff runs after which pass shape?",
+      "choices": [
+        "opt_merge",
+        "read_verilog only",
+        "techmap only",
+        "fsm only"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Who optimizes the AIG next?",
+      "choices": [
+        "ABC / abc9 via Yosys abc bridge",
+        "OpenROAD",
+        "iverilog",
+        "GTKWave"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

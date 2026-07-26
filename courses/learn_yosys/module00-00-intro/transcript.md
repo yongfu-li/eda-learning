@@ -1,27 +1,33 @@
-# Welcome to Yosys (toy + real)
+# Welcome to Yosys
 
 **Module id:** module00-00-intro
+**Lab:** intro
+**Tracks:** A (implement) · B (browser lab)
 
-## Slide 1 — Welcome
+## Slide 1 — Why Yosys
 
-learn_yosys has two parts: Part A teaches pass *ideas* on a toy netlist; Part B drives **real Yosys** with `.ys` scripts on `tiny_and_or.v`.
+learn_yosys has three parts: Part A is the interactive pass map on a small netlist; Part B drives real Yosys with .ys scripts on tiny_and_or.v; Part C teaches Yosys algorithms bound to real evidence.
 
-## Slide 2 — Part A literacy
+## Slide 2 — Part A pass map
 
-Toy tiny_yosys: 6 cells; flatten→1; opt→5; strash→4; rewrite→3; nand 6/7 — names match Yosys passes, but it is not the Yosys binary.
+Pass map on tiny_yosys: 6 cells; flatten→1; opt→5; strash→4; rewrite→3; nand 6/7 — same pass names as Yosys, in the browser.
 
 ## Slide 3 — Part B real Yosys
 
-Real path: `read_verilog` → `hierarchy` → `proc` → `flatten` → `opt` → `aigmap`/`synth` → `stat`/`write`. Goldens come from Yosys logs.
+Part B: real binary, RTLIL cells, and checked-in goldens from Yosys 0.9 on tiny_and_or.v.
 
-## Slide 4 — Two tracks
+## Slide 4 — Part C algorithms
 
-Implement track: `common/solvers.py` (toy) and `common/real_solvers.py` (evidence). Browser labs mirror both.
+Part C: proc_mux, proc_dff ($adff), opt, techmap, extract, memory, fsm, and ABC handoff — each bound to real Yosys stats.
 
-## Slide 5 — RTLIL
+## Slide 5 — Implement track
 
-Yosys IR is RTLIL — `$and`, `$dff`, later `$_AOI3_` / `$_DFF_P_` after synth. You will read `stat` and `dump`.
+Implement track: common/solvers.py (pass map), common/real_solvers.py (evidence), and common/algo_solvers.py plus partc_bind.py (algorithms). Browser labs mirror all three.
 
-## Slide 6 — Begin
+## Slide 6 — Browser lab track
 
-Start with the toy proc lab for pass names, then continue into the real CLI modules.
+Open the course labs. Start at the pass-map proc lab, continue into the real CLI modules, then the Part C algorithm labs.
+
+## Slide 7 — Next
+
+Start with the pass-map proc lab for pass names, continue into the real CLI modules, then the Part C algorithm labs.

@@ -59,7 +59,7 @@ Real Yosys is a pass engine you drive with a .ys script or an interactive shell 
 ---
 
 ## Try these
-- 
+- From the common folder, run the real solvers self-test, or call `pass_cli_check` directly
 
 ---
 
@@ -67,20 +67,21 @@ Real Yosys is a pass engine you drive with a .ys script or an interactive shell 
 
 ```
 cd courses/learn_yosys/common
-python3 -c "from real_solvers import pass_cli_check; print(pass_cli_check())"
+python3 real_solvers.py
 ```
 
 ---
 
 ## Pseudocode
-- 
+- Here is the check in plain steps
 
 ---
 
 ## Pseudocode — try these
 
 ```
-recipe ← []; append read_verilog; hierarchy; proc; ok ← prefix matches golden
+append read_verilog; hierarchy; proc
+ok if prefix matches golden
 ```
 
 ---

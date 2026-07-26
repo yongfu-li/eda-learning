@@ -3,7 +3,7 @@
 **Module id:** `module08-03-real-evidence`  
 **Kind:** `lab` · Primary lab: `real-evidence` · **ref**
 
-[← Why aigmap/synth](../module08-01-aigmap-synth/README.md) · [Course README](../README.md) · [Offline →](../module05-03-offline-benchmark-compare/README.md)
+[← Why aigmap/synth](../module08-01-aigmap-synth/README.md) · [Course README](../README.md) · [Proc mux →](../module09-01-proc-mux/README.md)
 
 ## Outcomes
 

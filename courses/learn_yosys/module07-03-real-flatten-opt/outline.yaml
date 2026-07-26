@@ -1,0 +1,87 @@
+title: Why real
+footer: learn_yosys — 03 real flatten opt
+slides:
+- type: title
+  title: Why real
+  subtitle: Flatten inlines child into top; opt merges identical cells and cleans
+    dead logic
+  notes: flatten inlines child into top; opt merges identical cells and cleans dead
+    logic.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: flatten modules=1 cells=4; opt cells=4 and_count=1'
+  notes: 'GOLDEN: flatten modules=1 cells=4; opt cells=4 and_count=1.'
+- type: image
+  title: Before flatten
+  image: assets/steps/01-hier.png
+  caption: Before flatten
+  notes: Still two modules with a child instance.
+- type: image
+  title: flatten
+  image: assets/steps/02-flat.png
+  caption: flatten
+  notes: Child $dff inlined — module_count=1.
+- type: image
+  title: Four cells
+  image: assets/steps/03-four.png
+  caption: Four cells
+  notes: $and $or $not $dff remain.
+- type: image
+  title: opt merge
+  image: assets/steps/04-opt.png
+  caption: opt merge
+  notes: opt leaves and_count=1.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: flat cells=4; opt and=1.'
+- type: bullets
+  title: Browser lab track
+  bullets:
+  - Open **real-flatten-opt**
+  - Open **real-flatten-opt**
+  - Show flatten then opt stages
+  notes: Open **real-flatten-opt**. Open **real-flatten-opt**. Show flatten then opt
+    stages.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call pass_real_flatten_opt(); assert ok
+  notes: Call pass_real_flatten_opt(); assert ok.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Expecting module_count=2 after flatten
+  - Counting instance cells after flatten
+  notes: Expecting module_count=2 after flatten. Counting instance cells after flatten.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder
+  notes: From the common folder, run the real solvers self-test, or call `pass_real_flatten_opt`
+    directly.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_yosys/common
+
+    python3 real_solvers.py'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the check in plain steps
+  notes: Here is the check in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: 'flatten then opt
+
+    assert modules=1 cells=4 and=1'
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - 'Next: aigmap + synth'
+  notes: 'Next: aigmap + synth.'

@@ -61,15 +61,20 @@ Confusing toy pass_proc with real proc. Expecting $dff before proc.
 
 ## Slide 11 — Try these
 
+From the common folder, run the real solvers self-test, or call `pass_real_proc` directly.
+
 ```bash
 cd courses/learn_yosys/common
-python3 -c "from real_solvers import pass_real_proc; print(pass_real_proc())"
+python3 real_solvers.py
 ```
 
 ## Slide 12 — Pseudocode
 
+Here is the check in plain steps.
+
 ```text
-before ← processes>0; proc; after ← processes=0 and $dff in types
+run proc
+assert processes=0 and dff present
 ```
 
 ## Slide 13 — Next

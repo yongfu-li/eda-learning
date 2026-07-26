@@ -1,0 +1,10 @@
+# Part C FSM: detect + extract → $fsm cell.
+read_verilog rtl/tiny_fsm.v
+hierarchy -check -top tiny_fsm
+proc
+opt
+fsm_detect
+fsm_extract
+fsm_opt
+stat
+dump

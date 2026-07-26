@@ -1,0 +1,6 @@
+# Step: proc_mux only (then stop) — mux from combo process.
+read_verilog rtl/tiny_algo.v
+hierarchy -check -top tiny_algo
+proc_mux
+stat
+dump

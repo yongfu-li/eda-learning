@@ -1,0 +1,7 @@
+# Step: full proc (mux + dff/arst clean).
+read_verilog rtl/tiny_algo.v
+hierarchy -check -top tiny_algo
+proc
+opt_clean
+stat
+dump

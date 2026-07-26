@@ -1,31 +1,25 @@
 # Yosys path complete
 
 **Module id:** module99-00-wrap
+**Lab:** wrap
+**Tracks:** A (implement) · B (browser lab)
 
-## Slide 1 — Recap
+## Slide 1 — Path complete
 
-You finished Part A toys and Part B real Yosys evidence on `tiny_and_or.v`.
+You finished Part A pass map, Part B real Yosys evidence on tiny_and_or.v, and Part C algorithms bound to real Yosys.
 
-## Slide 2 — Real goldens
+## Slide 2 — What you can do
 
-After read: 2 modules, 1 process, $and×2. After proc: $dff. After flatten: 4 cells. After synth: $_AOI3_ + $_DFF_P_.
+You can name the pass map, run real Yosys scripts, and explain the algorithms behind proc, opt, techmap, extract, memory, fsm, and ABC handoff.
 
-## Slide 3 — Commands you can run
+## Slide 3 — Evidence
 
-```bash
-cd courses/learn_yosys/common
-yosys -s scripts/05_synth.ys
-python3 -c "from real_solvers import real_yosys_compare; print(real_yosys_compare())"
-```
+Checked-in logs and goldens under common/logs and common/evidence — including Part C partc/ — prove the real binary path.
 
-## Slide 4 — Honesty
+## Slide 4 — Three layers
 
-Toy labs teach pass *ideas*. Real modules teach the CLI, RTLIL, and checked-in Yosys evidence.
+Pass-map labs teach the pass order. Real modules teach the CLI, RTLIL, and evidence. Algorithm labs teach the moves and bind them to Yosys.
 
-## Slide 5 — Next
+## Slide 5 — Next steps
 
-Natural next: learn_openroad (place/route evidence).
-
-## Slide 6 — Done
-
-You can now open Yosys, write a short `.ys` script, and read `stat`/`dump` on a tiny design.
+Continue to OpenROAD or OpenLane when you are ready for place and route evidence.

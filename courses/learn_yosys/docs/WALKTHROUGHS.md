@@ -17,3 +17,13 @@
 | `real-flatten-opt` | `module07-03-real-flatten-opt` | 5 |
 | `aigmap-synth` | `module08-01-aigmap-synth` | 5 |
 | `real-evidence` | `module08-03-real-evidence` | 5 |
+| `proc-mux` | `module09-01-proc-mux` | 5 |
+| `proc-dff-arst` | `module09-03-proc-dff-arst` | 5 |
+| `opt-clean-expr` | `module10-01-opt-clean-expr` | 5 |
+| `opt-merge-algo` | `module10-03-opt-merge-algo` | 5 |
+| `techmap-mapfile` | `module11-01-techmap-mapfile` | 5 |
+| `extract-subcircuit` | `module11-03-extract-subcircuit` | 5 |
+| `memory-map-algo` | `module12-01-memory-map-algo` | 5 |
+| `fsm-detect` | `module12-03-fsm-detect` | 5 |
+| `abc-handoff` | `module13-01-abc-handoff` | 5 |
+| `yosys-algo-engine` | `module13-03-yosys-algo-engine` | 5 |

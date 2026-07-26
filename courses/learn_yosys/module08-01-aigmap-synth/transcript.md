@@ -61,15 +61,20 @@ Expecting NAND2 from the toy techmap. Skipping synth -top.
 
 ## Slide 11 — Try these
 
+From the common folder, run the real solvers self-test, or call `pass_aigmap_synth` directly.
+
 ```bash
 cd courses/learn_yosys/common
-python3 -c "from real_solvers import pass_aigmap_synth; print(pass_aigmap_synth())"
+python3 real_solvers.py
 ```
 
 ## Slide 12 — Pseudocode
 
+Here is the check in plain steps.
+
 ```text
-aigmap → cells=7; synth → cells=2 {$_AOI3_, $_DFF_P_}
+aigmap then synth
+assert cells seven then two AOI and DFF
 ```
 
 ## Slide 13 — Next

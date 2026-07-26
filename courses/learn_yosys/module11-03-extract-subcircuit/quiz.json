@@ -1,0 +1,38 @@
+{
+  "moduleId": "module11-03-extract-subcircuit",
+  "items": [
+    {
+      "q": "How many extract matches?",
+      "choices": [
+        "1",
+        "0",
+        "2",
+        "3"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Macro name golden?",
+      "choices": [
+        "ANDOR2",
+        "NAND2",
+        "MUX2",
+        "AOI3"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Pattern cells?",
+      "choices": [
+        "$and then $or",
+        "$mux only",
+        "$dff only",
+        "$mem only"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

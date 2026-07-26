@@ -1,0 +1,77 @@
+{
+  "name": "tiny_algo",
+  "note": "RTLIL-shaped teaching IR for Yosys Part C algorithms (not the Yosys binary).",
+  "wires": ["a", "b", "s", "clk", "rst", "y", "q", "n1", "n2", "dead", "c0"],
+  "const": { "c0": 0 },
+  "processes": [
+    {
+      "id": "p_mux",
+      "kind": "combo",
+      "assign": "y",
+      "cases": [
+        { "when": { "s": 1 }, "value": "a" },
+        { "when": { "s": 0 }, "value": "b" }
+      ]
+    },
+    {
+      "id": "p_dff",
+      "kind": "sync",
+      "clock": "clk",
+      "edge": "pos",
+      "reset": "rst",
+      "reset_val": 0,
+      "assign": "q",
+      "value": "y"
+    }
+  ],
+  "cells": [
+    { "id": "c_and1", "type": "$and", "A": "a", "B": "b", "Y": "n1" },
+    { "id": "c_and2", "type": "$and", "A": "a", "B": "b", "Y": "n2" },
+    { "id": "c_or", "type": "$or", "A": "n1", "B": "s", "Y": "dead" },
+    { "id": "c_buf0", "type": "$buf", "A": "c0", "Y": "unused" }
+  ],
+  "used_outputs": ["y", "q", "n1", "n2"],
+  "memory": {
+    "id": "mem0",
+    "width": 4,
+    "depth": 8,
+    "ports": [
+      { "kind": "rd", "addr": "a", "data": "rm" },
+      { "kind": "wr", "addr": "b", "data": "wm", "en": "s", "clk": "clk" }
+    ]
+  },
+  "fsm": {
+    "id": "fsm0",
+    "states": ["IDLE", "RUN", "DONE"],
+    "encoding": { "IDLE": "00", "RUN": "01", "DONE": "10" },
+    "transitions": [
+      { "from": "IDLE", "to": "RUN", "when": "s" },
+      { "from": "RUN", "to": "DONE", "when": "a" },
+      { "from": "DONE", "to": "IDLE", "when": "rst" }
+    ],
+    "reset_state": "IDLE"
+  },
+  "techmap_rules": [
+    {
+      "match": "$and",
+      "emit": [
+        { "type": "$_NAND_", "A": "A", "B": "B", "Y": "_t" },
+        { "type": "$_NOT_", "A": "_t", "Y": "Y" }
+      ]
+    },
+    {
+      "match": "$or",
+      "emit": [
+        { "type": "$_NOR_", "A": "A", "B": "B", "Y": "_t" },
+        { "type": "$_NOT_", "A": "_t", "Y": "Y" }
+      ]
+    }
+  ],
+  "extract_pattern": {
+    "name": "ANDOR2",
+    "cells": [
+      { "type": "$and", "A": "X", "B": "Y", "Y": "T" },
+      { "type": "$or", "A": "T", "B": "Z", "Y": "O" }
+    ]
+  }
+}

@@ -1,0 +1,285 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Executing script file `scripts/partc_04_techmap.ys' --
+
+1. Executing Verilog-2005 frontend: rtl/tiny_algo.v
+Parsing Verilog input from `rtl/tiny_algo.v' to AST representation.
+Generating RTLIL representation for module `\tiny_algo'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \tiny_algo
+
+2.2. Analyzing design hierarchy..
+Top module:  \tiny_algo
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$rtl/tiny_algo.v:34$6 in module tiny_algo.
+Marked 1 switch rules as full_case in process $proc$rtl/tiny_algo.v:14$1 in module tiny_algo.
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_INIT pass (extract init attributes).
+
+3.4. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst in `\tiny_algo.$proc$rtl/tiny_algo.v:34$6'.
+
+3.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\tiny_algo.$proc$rtl/tiny_algo.v:34$6'.
+     1/1: $0\q[0:0]
+Creating decoders for process `\tiny_algo.$proc$rtl/tiny_algo.v:14$1'.
+     1/2: $1\y_r[0:0]
+     2/2: $0\y_r[0:0]
+
+3.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\tiny_algo.\y_r' from process `\tiny_algo.$proc$rtl/tiny_algo.v:14$1'.
+
+3.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\tiny_algo.\q' using process `\tiny_algo.$proc$rtl/tiny_algo.v:34$6'.
+  created $adff cell `$procdff$11' with positive edge clock and positive level reset.
+
+3.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `tiny_algo.$proc$rtl/tiny_algo.v:34$6'.
+Found and cleaned up 1 empty switch in `\tiny_algo.$proc$rtl/tiny_algo.v:14$1'.
+Removing empty process `tiny_algo.$proc$rtl/tiny_algo.v:14$1'.
+Cleaned up 1 empty switch.
+
+4. Executing OPT pass (performing simple optimizations).
+
+4.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tiny_algo.
+
+4.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tiny_algo'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+4.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \tiny_algo..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~1 debug messages>
+
+4.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \tiny_algo.
+Performed a total of 0 changes.
+
+4.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tiny_algo'.
+Removed a total of 0 cells.
+
+4.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+4.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tiny_algo..
+Removed 1 unused cells and 10 unused wires.
+<suppressed ~3 debug messages>
+
+4.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tiny_algo.
+
+4.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \tiny_algo..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~1 debug messages>
+
+4.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \tiny_algo.
+Performed a total of 0 changes.
+
+4.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tiny_algo'.
+Removed a total of 0 cells.
+
+4.13. Executing OPT_RMDFF pass (remove dff with constant values).
+
+4.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tiny_algo..
+
+4.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tiny_algo.
+
+4.16. Finished OPT passes. (There is nothing left to do.)
+
+5. Executing TECHMAP pass (map to technology primitives).
+
+5.1. Executing Verilog-2005 frontend: <techmap.v>
+Parsing Verilog input from `<techmap.v>' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+5.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $adff.
+No more expansions possible.
+<suppressed ~5 debug messages>
+
+6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tiny_algo..
+
+7. Printing statistics.
+
+=== tiny_algo ===
+
+   Number of wires:                 13
+   Number of wire bits:             13
+   Number of public wires:          12
+   Number of public wire bits:      12
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  5
+     $_AND_                          1
+     $_DFF_PP0_                      1
+     $_MUX_                          1
+     $_XOR_                          2
+
+
+autoidx 61
+
+attribute \top 1
+attribute \src "rtl/tiny_algo.v:3"
+module \tiny_algo
+
+  attribute \src "rtl/tiny_algo.v:34"
+  wire $0\q[0:0]
+
+  attribute \src "rtl/tiny_algo.v:4"
+  wire input 1 \a
+
+  attribute \src "rtl/tiny_algo.v:5"
+  wire input 2 \b
+
+  attribute \src "rtl/tiny_algo.v:7"
+  wire input 4 \clk
+
+  attribute \src "rtl/tiny_algo.v:31"
+  wire \keep_ands
+
+  attribute \src "rtl/tiny_algo.v:23"
+  wire \n1
+
+  attribute \src "rtl/tiny_algo.v:23"
+  wire \n2
+
+  attribute \src "rtl/tiny_algo.v:10"
+  wire output 7 \q
+
+  attribute \src "rtl/tiny_algo.v:8"
+  wire input 5 \rst
+
+  attribute \src "rtl/tiny_algo.v:6"
+  wire input 3 \s
+
+  attribute \src "rtl/tiny_algo.v:23"
+  wire \unused
+
+  attribute \src "rtl/tiny_algo.v:9"
+  wire output 6 \y
+
+  attribute \src "rtl/tiny_algo.v:13"
+  wire \y_r
+
+  attribute \src "rtl/tiny_algo.v:15"
+  cell $_MUX_ $auto$simplemap.cc:277:simplemap_mux$58
+    connect \A \b
+    connect \B \a
+    connect \S \s
+    connect \Y \y
+  end
+
+  attribute \src "rtl/tiny_algo.v:34"
+  cell $_DFF_PP0_ $auto$simplemap.cc:496:simplemap_adff$59
+    connect \C \clk
+    connect \D $0\q[0:0]
+    connect \Q \q
+    connect \R \rst
+  end
+
+  attribute \src "rtl/tiny_algo.v:25"
+  cell $_AND_ $auto$simplemap.cc:85:simplemap_bitop$56
+    connect \A \a
+    connect \B \b
+    connect \Y \n1
+  end
+
+  attribute \src "rtl/tiny_algo.v:31"
+  cell $_XOR_ $auto$simplemap.cc:85:simplemap_bitop$57
+    connect \A \n1
+    connect \B \n1
+    connect \Y \keep_ands
+  end
+
+  attribute \src "rtl/tiny_algo.v:38"
+  cell $_XOR_ $auto$simplemap.cc:85:simplemap_bitop$60
+    connect \A \y
+    connect \B \keep_ands
+    connect \Y $0\q[0:0]
+  end
+
+  connect \n2 \n1
+  connect \unused 1'0
+  connect \y_r \y
+end
+
+End of script. Logfile hash: 67ab7c0239
+CPU: user 0.01s system 0.01s, MEM: 16.59 MB total, 10.65 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 52% 3x read_verilog (0 sec), 13% 3x opt_clean (0 sec), ...

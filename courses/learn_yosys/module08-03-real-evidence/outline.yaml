@@ -1,0 +1,87 @@
+title: Why real
+footer: learn_yosys — 03 real evidence
+slides:
+- type: title
+  title: Why real
+  subtitle: The evidence engine checks CLI order, RTLIL goldens, proc/flatten/opt,
+    and synth outputs together
+  notes: The evidence engine checks CLI order, RTLIL goldens, proc/flatten/opt, and
+    synth outputs together.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: engine ok=True; after_synth_cells=2'
+  notes: 'GOLDEN: engine ok=True; after_synth_cells=2.'
+- type: image
+  title: Full recipe
+  image: assets/steps/01-recipe.png
+  caption: Full recipe
+  notes: read→hierarchy→proc→flatten→opt→synth→stat→write.
+- type: image
+  title: RTLIL checks
+  image: assets/steps/02-rtlil.png
+  caption: RTLIL checks
+  notes: modules/processes/$and goldens hold.
+- type: image
+  title: proc+flatten
+  image: assets/steps/03-mid.png
+  caption: proc+flatten
+  notes: dff created; flatten cells=4.
+- type: image
+  title: synth out
+  image: assets/steps/04-synth.png
+  caption: synth out
+  notes: $_AOI3_ + $_DFF_P_.
+- type: image
+  title: OK
+  image: assets/steps/05-ok.png
+  caption: OK
+  notes: 'GOLDEN: engine_ok=True.'
+- type: bullets
+  title: Browser lab track
+  bullets:
+  - Open **real-evidence**
+  - Open **real-evidence**
+  - Build golden recipe; run Engine; confirm ok
+  notes: Open **real-evidence**. Open **real-evidence**. Build golden recipe; run
+    Engine; confirm ok.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call real_yosys_engine(); assert ok
+  notes: Call real_yosys_engine(); assert ok.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Stopping at toy yosys_engine
+  - Wrong recipe order
+  notes: Stopping at toy yosys_engine. Wrong recipe order.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder
+  notes: From the common folder, run the real solvers self-test, or call `real_yosys_engine`
+    directly.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_yosys/common
+
+    python3 real_solvers.py'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the check in plain steps
+  notes: Here is the check in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: 'run full golden recipe
+
+    assert engine ok and synth cells two'
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - 'Next: offline compare, then wrap'
+  notes: 'Next: offline compare, then wrap.'

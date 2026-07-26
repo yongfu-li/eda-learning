@@ -1,0 +1,38 @@
+{
+  "moduleId": "module10-03-opt-merge-algo",
+  "items": [
+    {
+      "q": "and_count after algo_opt_merge?",
+      "choices": [
+        "1",
+        "2",
+        "0",
+        "3"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "opt_merge keys on which ports?",
+      "choices": [
+        "type plus A and B",
+        "only Y",
+        "only id",
+        "clock only"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "How many duplicate ANDs are removed?",
+      "choices": [
+        "1",
+        "0",
+        "2",
+        "3"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "moduleId": "module12-03-fsm-detect",
+  "items": [
+    {
+      "q": "FSM state count?",
+      "choices": [
+        "3",
+        "2",
+        "4",
+        "1"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Transition count?",
+      "choices": [
+        "3",
+        "2",
+        "4",
+        "0"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "encoding_bits golden?",
+      "choices": [
+        "2",
+        "3",
+        "1",
+        "8"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

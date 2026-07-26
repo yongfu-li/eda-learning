@@ -1,0 +1,38 @@
+{
+  "moduleId": "module11-01-techmap-mapfile",
+  "items": [
+    {
+      "q": "nand_not_count golden?",
+      "choices": [
+        "2",
+        "1",
+        "0",
+        "4"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Mapfile replaces which cell first?",
+      "choices": [
+        "$and",
+        "$mux",
+        "$dff",
+        "$mem"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Emitted primitive pair?",
+      "choices": [
+        "$_NAND_ then $_NOT_",
+        "$_NOR_ only",
+        "$_DFF_P_",
+        "ANDOR2"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

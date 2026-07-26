@@ -1,36 +1,52 @@
-title: Offline compare
+title: Why offline compare
 footer: learn_yosys — 03 offline benchmark compare
 slides:
 - type: title
-  title: Offline compare
-  subtitle: Track A prints yosys_compare without the browser
-  notes: Track A prints yosys_compare without the browser.
+  title: Why offline compare
+  subtitle: Print pass-map and real Yosys compare metrics without the browser
+  notes: Print pass-map and real Yosys compare metrics without the browser.
 - type: bullets
-  title: The idea
+  title: Pass-map compare
   bullets:
-  - Load tiny_yosys.json; print rtl_cells, after_opt, nand_area, report_cells, ok
-  notes: Load tiny_yosys.json; print rtl_cells, after_opt, nand_area, report_cells,
-    ok.
+  - Run the pass-map compare helper from the common folder
+  notes: Run the pass-map compare helper from the common folder.
+- type: code
+  title: Pass-map compare — try these
+  code: 'cd courses/learn_yosys/common
+
+    python3 -c "from solvers import yosys_compare; print(yosys_compare())"'
+  notes: ''
 - type: bullets
-  title: Why offline
+  title: Real compare
   bullets:
-  - Print yosys_compare metrics offline without the browser
-  notes: Print yosys_compare metrics offline without the browser.
+  - Run the real evidence compare helper
+  notes: Run the real evidence compare helper.
+- type: code
+  title: Real compare — try these
+  code: 'cd courses/learn_yosys/common
+
+    python3 -c "from real_solvers import real_yosys_compare; print(real_yosys_compare())"'
+  notes: ''
 - type: bullets
-  title: Commands
+  title: Browser lab track
   bullets:
-  - Python3 -c "from solvers import yosys_compare; print(yosys_compare())" in common/
-  notes: python3 -c "from solvers import yosys_compare; print(yosys_compare())" in
-    common/
+  - Open offline-benchmark-compare if you prefer the browser view of the same metrics
+  notes: Open offline-benchmark-compare if you prefer the browser view of the same
+    metrics.
 - type: bullets
-  title: What to compare
+  title: Implement track
   bullets:
-  - Load tiny_yosys.json; print rtl_cells, after_opt, nand_area, report_cells, ok
-  notes: Load tiny_yosys.json; print rtl_cells, after_opt, nand_area, report_cells,
-    ok.
+  - Confirm both compare helpers print ok goldens from the common folder
+  notes: Confirm both compare helpers print ok goldens from the common folder.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Comparing only one track
+  - Ignoring checked-in goldens when Yosys is missing
+  notes: Comparing only one track. Ignoring checked-in goldens when Yosys is missing.
 - type: bullets
   title: Next
   bullets:
   - Complete the quiz for this part
-  - Continue to the wrap module
-  notes: Continue to the wrap module.
+  - Continue into the real CLI modules, then Part C algorithms
+  notes: Continue into the real CLI modules, then Part C algorithms.

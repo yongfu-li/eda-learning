@@ -61,15 +61,20 @@ Expecting module_count=2 after flatten. Counting instance cells after flatten.
 
 ## Slide 11 — Try these
 
+From the common folder, run the real solvers self-test, or call `pass_real_flatten_opt` directly.
+
 ```bash
 cd courses/learn_yosys/common
-python3 -c "from real_solvers import pass_real_flatten_opt; print(pass_real_flatten_opt())"
+python3 real_solvers.py
 ```
 
 ## Slide 12 — Pseudocode
 
+Here is the check in plain steps.
+
 ```text
-flatten → modules=1 cells=4; opt → cells=4 and_count=1
+flatten then opt
+assert modules=1 cells=4 and=1
 ```
 
 ## Slide 13 — Next

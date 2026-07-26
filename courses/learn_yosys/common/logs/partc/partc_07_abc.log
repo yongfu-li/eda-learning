@@ -1,0 +1,399 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Executing script file `scripts/partc_07_abc.ys' --
+
+1. Executing Verilog-2005 frontend: rtl/tiny_algo.v
+Parsing Verilog input from `rtl/tiny_algo.v' to AST representation.
+Generating RTLIL representation for module `\tiny_algo'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \tiny_algo
+
+2.2. Analyzing design hierarchy..
+Top module:  \tiny_algo
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$rtl/tiny_algo.v:34$6 in module tiny_algo.
+Marked 1 switch rules as full_case in process $proc$rtl/tiny_algo.v:14$1 in module tiny_algo.
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_INIT pass (extract init attributes).
+
+3.4. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst in `\tiny_algo.$proc$rtl/tiny_algo.v:34$6'.
+
+3.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\tiny_algo.$proc$rtl/tiny_algo.v:34$6'.
+     1/1: $0\q[0:0]
+Creating decoders for process `\tiny_algo.$proc$rtl/tiny_algo.v:14$1'.
+     1/2: $1\y_r[0:0]
+     2/2: $0\y_r[0:0]
+
+3.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\tiny_algo.\y_r' from process `\tiny_algo.$proc$rtl/tiny_algo.v:14$1'.
+
+3.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\tiny_algo.\q' using process `\tiny_algo.$proc$rtl/tiny_algo.v:34$6'.
+  created $adff cell `$procdff$11' with positive edge clock and positive level reset.
+
+3.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `tiny_algo.$proc$rtl/tiny_algo.v:34$6'.
+Found and cleaned up 1 empty switch in `\tiny_algo.$proc$rtl/tiny_algo.v:14$1'.
+Removing empty process `tiny_algo.$proc$rtl/tiny_algo.v:14$1'.
+Cleaned up 1 empty switch.
+
+4. Executing OPT pass (performing simple optimizations).
+
+4.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tiny_algo.
+
+4.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tiny_algo'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+4.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \tiny_algo..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~1 debug messages>
+
+4.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \tiny_algo.
+Performed a total of 0 changes.
+
+4.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tiny_algo'.
+Removed a total of 0 cells.
+
+4.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+4.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tiny_algo..
+Removed 1 unused cells and 10 unused wires.
+<suppressed ~3 debug messages>
+
+4.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tiny_algo.
+
+4.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \tiny_algo..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~1 debug messages>
+
+4.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \tiny_algo.
+Performed a total of 0 changes.
+
+4.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tiny_algo'.
+Removed a total of 0 cells.
+
+4.13. Executing OPT_RMDFF pass (remove dff with constant values).
+
+4.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tiny_algo..
+
+4.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tiny_algo.
+
+4.16. Finished OPT passes. (There is nothing left to do.)
+
+5. Executing AIGMAP pass (map logic to AIG).
+Module tiny_algo: replaced 4 cells with 22 new cells, skipped 1 cells.
+  replaced 3 cell types:
+       1 $and
+       2 $xor
+       1 $mux
+  not replaced 1 cell types:
+       1 $adff
+
+6. Printing statistics.
+
+=== tiny_algo ===
+
+   Number of wires:                 35
+   Number of wire bits:             35
+   Number of public wires:          12
+   Number of public wire bits:      12
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 23
+     $_AND_                         10
+     $_NOT_                         12
+     $adff                           1
+
+
+autoidx 56
+
+attribute \top 1
+attribute \src "rtl/tiny_algo.v:3"
+module \tiny_algo
+
+  wire $auto$rtlil.cc:1970:AndGate$55
+
+  wire $auto$rtlil.cc:1969:NotGate$53
+
+  wire $auto$rtlil.cc:1970:AndGate$51
+
+  wire $auto$rtlil.cc:1969:NotGate$49
+
+  wire $auto$rtlil.cc:1970:AndGate$47
+
+  wire $auto$rtlil.cc:1969:NotGate$45
+
+  wire $auto$rtlil.cc:1969:NotGate$43
+
+  wire $auto$rtlil.cc:1970:AndGate$41
+
+  wire $auto$rtlil.cc:1969:NotGate$39
+
+  wire $auto$rtlil.cc:1970:AndGate$37
+
+  wire $auto$rtlil.cc:1969:NotGate$35
+
+  wire $auto$rtlil.cc:1970:AndGate$33
+
+  wire $auto$rtlil.cc:1969:NotGate$31
+
+  wire $auto$rtlil.cc:1969:NotGate$29
+
+  wire $auto$rtlil.cc:1969:NotGate$27
+
+  wire $auto$rtlil.cc:1970:AndGate$25
+
+  wire $auto$rtlil.cc:1969:NotGate$23
+
+  wire $auto$rtlil.cc:1970:AndGate$21
+
+  wire $auto$rtlil.cc:1969:NotGate$19
+
+  wire $auto$rtlil.cc:1970:AndGate$17
+
+  wire $auto$rtlil.cc:1969:NotGate$15
+
+  wire $auto$rtlil.cc:1970:AndGate$13
+
+  attribute \src "rtl/tiny_algo.v:34"
+  wire $0\q[0:0]
+
+  attribute \src "rtl/tiny_algo.v:4"
+  wire input 1 \a
+
+  attribute \src "rtl/tiny_algo.v:5"
+  wire input 2 \b
+
+  attribute \src "rtl/tiny_algo.v:7"
+  wire input 4 \clk
+
+  attribute \src "rtl/tiny_algo.v:31"
+  wire \keep_ands
+
+  attribute \src "rtl/tiny_algo.v:23"
+  wire \n1
+
+  attribute \src "rtl/tiny_algo.v:23"
+  wire \n2
+
+  attribute \src "rtl/tiny_algo.v:10"
+  wire output 7 \q
+
+  attribute \src "rtl/tiny_algo.v:8"
+  wire input 5 \rst
+
+  attribute \src "rtl/tiny_algo.v:6"
+  wire input 3 \s
+
+  attribute \src "rtl/tiny_algo.v:23"
+  wire \unused
+
+  attribute \src "rtl/tiny_algo.v:9"
+  wire output 6 \y
+
+  attribute \src "rtl/tiny_algo.v:13"
+  wire \y_r
+
+  cell $_AND_ $auto$aigmap.cc:105:execute$46
+    connect \Y $auto$rtlil.cc:1970:AndGate$47
+    connect \B $auto$rtlil.cc:1969:NotGate$45
+    connect \A $auto$rtlil.cc:1969:NotGate$43
+  end
+
+  cell $_NOT_ $auto$aigmap.cc:110:execute$44
+    connect \Y $auto$rtlil.cc:1969:NotGate$45
+    connect \A \y
+  end
+
+  cell $_NOT_ $auto$aigmap.cc:110:execute$42
+    connect \Y $auto$rtlil.cc:1969:NotGate$43
+    connect \A \keep_ands
+  end
+
+  cell $_AND_ $auto$aigmap.cc:105:execute$40
+    connect \Y $auto$rtlil.cc:1970:AndGate$41
+    connect \B $auto$rtlil.cc:1969:NotGate$39
+    connect \A $auto$rtlil.cc:1969:NotGate$35
+  end
+
+  cell $_NOT_ $auto$aigmap.cc:110:execute$38
+    connect \Y $auto$rtlil.cc:1969:NotGate$39
+    connect \A $auto$rtlil.cc:1970:AndGate$37
+  end
+
+  cell $_AND_ $auto$aigmap.cc:105:execute$36
+    connect \Y $auto$rtlil.cc:1970:AndGate$37
+    connect \B \n1
+    connect \A \n1
+  end
+
+  cell $_NOT_ $auto$aigmap.cc:110:execute$34
+    connect \Y $auto$rtlil.cc:1969:NotGate$35
+    connect \A $auto$rtlil.cc:1970:AndGate$33
+  end
+
+  cell $_AND_ $auto$aigmap.cc:105:execute$32
+    connect \Y $auto$rtlil.cc:1970:AndGate$33
+    connect \B $auto$rtlil.cc:1969:NotGate$31
+    connect \A $auto$rtlil.cc:1969:NotGate$29
+  end
+
+  cell $_NOT_ $auto$aigmap.cc:110:execute$30
+    connect \Y $auto$rtlil.cc:1969:NotGate$31
+    connect \A \n1
+  end
+
+  cell $_NOT_ $auto$aigmap.cc:110:execute$28
+    connect \Y $auto$rtlil.cc:1969:NotGate$29
+    connect \A \n1
+  end
+
+  cell $_NOT_ $auto$aigmap.cc:110:execute$26
+    connect \Y $auto$rtlil.cc:1969:NotGate$27
+    connect \A $auto$rtlil.cc:1970:AndGate$25
+  end
+
+  cell $_AND_ $auto$aigmap.cc:105:execute$24
+    connect \Y $auto$rtlil.cc:1970:AndGate$25
+    connect \B $auto$rtlil.cc:1969:NotGate$23
+    connect \A $auto$rtlil.cc:1969:NotGate$19
+  end
+
+  cell $_NOT_ $auto$aigmap.cc:110:execute$22
+    connect \Y $auto$rtlil.cc:1969:NotGate$23
+    connect \A $auto$rtlil.cc:1970:AndGate$21
+  end
+
+  cell $_AND_ $auto$aigmap.cc:105:execute$20
+    connect \Y $auto$rtlil.cc:1970:AndGate$21
+    connect \B $auto$rtlil.cc:1969:NotGate$15
+    connect \A \b
+  end
+
+  cell $_NOT_ $auto$aigmap.cc:110:execute$18
+    connect \Y $auto$rtlil.cc:1969:NotGate$19
+    connect \A $auto$rtlil.cc:1970:AndGate$17
+  end
+
+  cell $_AND_ $auto$aigmap.cc:105:execute$16
+    connect \Y $auto$rtlil.cc:1970:AndGate$17
+    connect \B \a
+    connect \A \s
+  end
+
+  cell $_NOT_ $auto$aigmap.cc:110:execute$14
+    connect \Y $auto$rtlil.cc:1969:NotGate$15
+    connect \A \s
+  end
+
+  cell $_AND_ $auto$aigmap.cc:105:execute$12
+    connect \Y $auto$rtlil.cc:1970:AndGate$13
+    connect \B \b
+    connect \A \a
+  end
+
+  cell $_AND_ $auto$aigmap.cc:105:execute$54
+    connect \Y $auto$rtlil.cc:1970:AndGate$55
+    connect \B $auto$rtlil.cc:1969:NotGate$53
+    connect \A $auto$rtlil.cc:1969:NotGate$49
+  end
+
+  attribute \src "rtl/tiny_algo.v:34"
+  cell $adff $procdff$11
+    parameter \ARST_VALUE 1'0
+    parameter \WIDTH 1
+    parameter \ARST_POLARITY 1'1
+    parameter \CLK_POLARITY 1'1
+    connect \ARST \rst
+    connect \CLK \clk
+    connect \D $0\q[0:0]
+    connect \Q \q
+  end
+
+  cell $_NOT_ $auto$aigmap.cc:110:execute$52
+    connect \Y $auto$rtlil.cc:1969:NotGate$53
+    connect \A $auto$rtlil.cc:1970:AndGate$51
+  end
+
+  cell $_AND_ $auto$aigmap.cc:105:execute$50
+    connect \Y $auto$rtlil.cc:1970:AndGate$51
+    connect \B \keep_ands
+    connect \A \y
+  end
+
+  cell $_NOT_ $auto$aigmap.cc:110:execute$48
+    connect \Y $auto$rtlil.cc:1969:NotGate$49
+    connect \A $auto$rtlil.cc:1970:AndGate$47
+  end
+
+  connect \n2 \n1
+  connect \unused 1'0
+  connect \y_r \y
+  connect \n1 $auto$rtlil.cc:1970:AndGate$13
+  connect \y $auto$rtlil.cc:1969:NotGate$27
+  connect \keep_ands $auto$rtlil.cc:1970:AndGate$41
+  connect $0\q[0:0] $auto$rtlil.cc:1970:AndGate$55
+end
+
+End of script. Logfile hash: 5a55c5d7d9
+CPU: user 0.01s system 0.00s, MEM: 15.68 MB total, 9.12 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 18% 3x opt_expr (0 sec), 15% 2x read_verilog (0 sec), ...

@@ -7,7 +7,7 @@
 
 ## You can now
 
-**Recap proc, flatten, opt, strash, rewrite, techmap, synth, engine.**
+**Recap Part A pass map, Part B real CLI evidence, and Part C algorithms bound to Yosys (proc/opt/techmap/extract/memory/fsm/ABC).**
 
 ## Next course
 

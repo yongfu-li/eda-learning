@@ -1,0 +1,38 @@
+{
+  "moduleId": "module12-01-memory-map-algo",
+  "items": [
+    {
+      "q": "Memory depth golden?",
+      "choices": [
+        "8",
+        "4",
+        "2",
+        "16"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Memory width golden?",
+      "choices": [
+        "4",
+        "8",
+        "1",
+        "32"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Cell type emitted?",
+      "choices": [
+        "$mem",
+        "$dff",
+        "$mux",
+        "$and"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

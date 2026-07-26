@@ -1,0 +1,8 @@
+# Part C extract: isomorphic AND→OR → ANDOR2 via extract -map.
+read_verilog rtl/tiny_extract.v
+hierarchy -check -top tiny_extract
+proc
+opt
+extract -map rtl/andor2_map.v
+stat
+dump

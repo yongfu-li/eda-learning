@@ -1,0 +1,8 @@
+# Step: opt after proc.
+read_verilog rtl/tiny_algo.v
+hierarchy -check -top tiny_algo
+proc
+opt
+opt_clean
+stat
+dump

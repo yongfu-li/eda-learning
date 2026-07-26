@@ -1,0 +1,305 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Executing script file `scripts/partc_06_fsm.ys' --
+
+1. Executing Verilog-2005 frontend: rtl/tiny_fsm.v
+Parsing Verilog input from `rtl/tiny_fsm.v' to AST representation.
+Generating RTLIL representation for module `\tiny_fsm'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \tiny_fsm
+
+2.2. Analyzing design hierarchy..
+Top module:  \tiny_fsm
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 2 switch rules as full_case in process $proc$rtl/tiny_fsm.v:16$1 in module tiny_fsm.
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_INIT pass (extract init attributes).
+
+3.4. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst in `\tiny_fsm.$proc$rtl/tiny_fsm.v:16$1'.
+
+3.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\tiny_fsm.$proc$rtl/tiny_fsm.v:16$1'.
+     1/1: $0\state[1:0]
+
+3.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\tiny_fsm.\state' using process `\tiny_fsm.$proc$rtl/tiny_fsm.v:16$1'.
+  created $adff cell `$procdff$12' with positive edge clock and positive level reset.
+
+3.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\tiny_fsm.$proc$rtl/tiny_fsm.v:16$1'.
+Removing empty process `tiny_fsm.$proc$rtl/tiny_fsm.v:16$1'.
+Cleaned up 1 empty switch.
+
+4. Executing OPT pass (performing simple optimizations).
+
+4.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tiny_fsm.
+<suppressed ~2 debug messages>
+
+4.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tiny_fsm'.
+<suppressed ~6 debug messages>
+Removed a total of 2 cells.
+
+4.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \tiny_fsm..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~1 debug messages>
+
+4.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \tiny_fsm.
+Performed a total of 0 changes.
+
+4.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tiny_fsm'.
+Removed a total of 0 cells.
+
+4.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+4.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tiny_fsm..
+Removed 0 unused cells and 6 unused wires.
+<suppressed ~1 debug messages>
+
+4.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tiny_fsm.
+
+4.9. Finished OPT passes. (There is nothing left to do.)
+
+5. Executing FSM_DETECT pass (finding FSMs in design).
+Found FSM state register tiny_fsm.state.
+
+6. Executing FSM_EXTRACT pass (extracting FSM from design).
+Extracting FSM `\state' from module `\tiny_fsm'.
+  found $adff cell for state register: $procdff$12
+  root of input selection tree: $0\state[1:0]
+  found reset state: 2'00 (from async reset)
+  found ctrl input: \run
+  found ctrl input: \idle
+  found ctrl input: \a
+  found state code: 2'01
+  found state code: 2'10
+  found ctrl input: \s
+  found ctrl output: \done
+  found ctrl output: \idle
+  found ctrl output: \run
+  ctrl inputs: { \a \s }
+  ctrl outputs: { $0\state[1:0] \run \idle \done }
+  transition:       2'00 2'-0 ->       2'00 5'00010
+  transition:       2'00 2'-1 ->       2'01 5'01010
+  transition:       2'10 2'-- ->       2'00 5'00001
+  transition:       2'01 2'0- ->       2'01 5'01100
+  transition:       2'01 2'1- ->       2'10 5'10100
+
+7. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\state$13' from module `\tiny_fsm'.
+
+8. Printing statistics.
+
+=== tiny_fsm ===
+
+   Number of wires:                 15
+   Number of wire bits:             20
+   Number of public wires:           7
+   Number of public wire bits:       7
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  8
+     $adff                           1
+     $eq                             2
+     $fsm                            1
+     $logic_not                      1
+     $mux                            2
+     $pmux                           1
+
+
+autoidx 18
+
+attribute \top 1
+attribute \src "rtl/tiny_fsm.v:2"
+module \tiny_fsm
+
+  wire $fsm_unconnect$\run$17
+
+  wire $fsm_unconnect$\idle$16
+
+  wire $fsm_unconnect$\done$15
+
+  wire width 2 $fsm_unconnect$$0\state[1:0]$14
+
+  attribute \src "rtl/tiny_fsm.v:15"
+  wire width 2 $fsm$oldstate\state
+
+  attribute \src "rtl/tiny_fsm.v:21"
+  wire width 2 $ternary$rtl/tiny_fsm.v:21$2_Y
+
+  attribute \src "rtl/tiny_fsm.v:22"
+  wire width 2 $ternary$rtl/tiny_fsm.v:22$3_Y
+
+  attribute \src "rtl/tiny_fsm.v:6"
+  wire input 4 \a
+
+  attribute \src "rtl/tiny_fsm.v:3"
+  wire input 1 \clk
+
+  attribute \src "rtl/tiny_fsm.v:9"
+  wire output 7 \done
+
+  attribute \src "rtl/tiny_fsm.v:7"
+  wire output 5 \idle
+
+  attribute \src "rtl/tiny_fsm.v:4"
+  wire input 2 \rst
+
+  attribute \src "rtl/tiny_fsm.v:8"
+  wire output 6 \run
+
+  attribute \src "rtl/tiny_fsm.v:5"
+  wire input 3 \s
+
+  attribute \src "rtl/tiny_fsm.v:16"
+  wire width 2 $0\state[1:0]
+
+  attribute \fsm_encoding "auto"
+  attribute \src "rtl/tiny_fsm.v:15"
+  cell $fsm $fsm$\state$13
+    parameter \TRANS_TABLE 55'100-1001100101-011010001--000000100-1100101000-00000010
+    parameter \TRANS_NUM 5
+    parameter \STATE_TABLE 6'011000
+    parameter \STATE_RST 0
+    parameter \STATE_NUM_LOG2 2
+    parameter \STATE_NUM 3
+    parameter \STATE_BITS 2
+    parameter \CTRL_OUT_WIDTH 5
+    parameter \CTRL_IN_WIDTH 2
+    parameter \NAME "\\state"
+    parameter \ARST_POLARITY 1'1
+    parameter \CLK_POLARITY 1'1
+    connect \CTRL_OUT { $0\state[1:0] \run \idle \done }
+    connect \CTRL_IN { \a \s }
+    connect \ARST \rst
+    connect \CLK \clk
+  end
+
+  attribute \src "rtl/tiny_fsm.v:30"
+  cell $eq $eq$rtl/tiny_fsm.v:30$6
+    parameter \A_SIGNED 0
+    parameter \A_WIDTH 2
+    parameter \B_SIGNED 0
+    parameter \B_WIDTH 2
+    parameter \Y_WIDTH 1
+    connect \A $fsm$oldstate\state
+    connect \B 2'10
+    connect \Y $fsm_unconnect$\done$15
+  end
+
+  attribute \src "rtl/tiny_fsm.v:16"
+  cell $adff $procdff$12
+    parameter \ARST_POLARITY 1'1
+    parameter \ARST_VALUE 2'00
+    parameter \CLK_POLARITY 1'1
+    parameter \WIDTH 2
+    connect \ARST \rst
+    connect \CLK \clk
+    connect \D $0\state[1:0]
+    connect \Q $fsm$oldstate\state
+  end
+
+  attribute \full_case 1
+  attribute \src "rtl/tiny_fsm.v:22|rtl/tiny_fsm.v:20"
+  cell $eq $procmux$10_CMP0
+    parameter \A_SIGNED 0
+    parameter \A_WIDTH 2
+    parameter \B_SIGNED 0
+    parameter \B_WIDTH 2
+    parameter \Y_WIDTH 1
+    connect \A $fsm$oldstate\state
+    connect \B 2'01
+    connect \Y $fsm_unconnect$\run$17
+  end
+
+  attribute \full_case 1
+  attribute \src "rtl/tiny_fsm.v:21|rtl/tiny_fsm.v:20"
+  cell $logic_not $procmux$11_CMP0
+    parameter \A_SIGNED 0
+    parameter \A_WIDTH 2
+    parameter \Y_WIDTH 1
+    connect \A $fsm$oldstate\state
+    connect \Y $fsm_unconnect$\idle$16
+  end
+
+  attribute \full_case 1
+  attribute \src "rtl/tiny_fsm.v:22|rtl/tiny_fsm.v:20"
+  cell $pmux $procmux$9
+    parameter \S_WIDTH 2
+    parameter \WIDTH 2
+    connect \A 2'00
+    connect \B { $ternary$rtl/tiny_fsm.v:21$2_Y $ternary$rtl/tiny_fsm.v:22$3_Y }
+    connect \S { \idle \run }
+    connect \Y $fsm_unconnect$$0\state[1:0]$14
+  end
+
+  attribute \src "rtl/tiny_fsm.v:21"
+  cell $mux $ternary$rtl/tiny_fsm.v:21$2
+    parameter \WIDTH 2
+    connect \A 2'00
+    connect \B 2'01
+    connect \S \s
+    connect \Y $ternary$rtl/tiny_fsm.v:21$2_Y
+  end
+
+  attribute \src "rtl/tiny_fsm.v:22"
+  cell $mux $ternary$rtl/tiny_fsm.v:22$3
+    parameter \WIDTH 2
+    connect \A 2'01
+    connect \B 2'10
+    connect \S \a
+    connect \Y $ternary$rtl/tiny_fsm.v:22$3_Y
+  end
+end
+
+End of script. Logfile hash: e829da9f82
+CPU: user 0.01s system 0.00s, MEM: 15.68 MB total, 9.08 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 16% 2x read_verilog (0 sec), 15% 1x fsm_extract (0 sec), ...
