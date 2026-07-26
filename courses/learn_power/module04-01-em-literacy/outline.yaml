@@ -1,0 +1,58 @@
+title: Why EM
+footer: learn_power — 01 em literacy
+slides:
+- type: title
+  title: Why EM
+  subtitle: Electromigration limits peak current per grid edge
+  notes: Electromigration limits peak current per grid edge.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: em_violation_count=3'
+  notes: 'GOLDEN: em_violation_count=3.'
+- type: image
+  title: Current limit
+  image: assets/steps/01-limit.png
+  caption: Current limit
+  notes: em_limit=0.08 A per edge.
+- type: image
+  title: Grid current
+  image: assets/steps/02-i.png
+  caption: Grid current
+  notes: i_sink=0.1 exceeds limit on all edges.
+- type: image
+  title: Edge e1
+  image: assets/steps/03-e1.png
+  caption: Edge e1
+  notes: 'e1: 0.1 > 0.08 — EM violation.'
+- type: image
+  title: Edges e2 e3
+  image: assets/steps/04-e23.png
+  caption: Edges e2 e3
+  notes: e2 and e3 also violate.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: em_violation_count=3.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **em-literacy**. Confirm 3 EM violations.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call find_em_violations(); assert count==3
+  notes: Call find_em_violations(); assert count==3.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Checking IR instead of per-edge I
+  - Wrong limit units
+  notes: Checking IR instead of per-edge I. Wrong limit units.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: power markers'
+  notes: 'Next: power markers.'

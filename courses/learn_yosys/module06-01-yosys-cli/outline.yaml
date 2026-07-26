@@ -1,0 +1,86 @@
+title: Why yosys
+footer: learn_yosys — 01 yosys cli
+slides:
+- type: title
+  title: Why yosys
+  subtitle: Real Yosys is a pass engine you drive with a .ys script or an interactive
+    shell , not a toy button
+  notes: Real Yosys is a pass engine you drive with a .ys script or an interactive
+    shell — not a toy button.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: first three cmds = read_verilog, hierarchy, proc; invoke with yosys -s
+    script.ys'
+  notes: 'GOLDEN: first three cmds = read_verilog, hierarchy, proc; invoke with yosys
+    -s script.ys.'
+- type: image
+  title: Empty design
+  image: assets/steps/01-empty.png
+  caption: Empty design
+  notes: No RTL loaded — recipe starts empty.
+- type: image
+  title: read_verilog
+  image: assets/steps/02-read.png
+  caption: read_verilog
+  notes: Load rtl/tiny_and_or.v into Yosys.
+- type: image
+  title: hierarchy -top
+  image: assets/steps/03-hier.png
+  caption: hierarchy -top
+  notes: hierarchy -check -top top sets the design root.
+- type: image
+  title: proc next
+  image: assets/steps/04-proc.png
+  caption: proc next
+  notes: Third command is proc — processes become cells.
+- type: image
+  title: Golden order
+  image: assets/steps/05-golden.png
+  caption: Golden order
+  notes: 'GOLDEN: read → hierarchy → proc.'
+- type: bullets
+  title: Browser lab track
+  bullets:
+  - Open **yosys-cli**
+  - Open **yosys-cli**
+  - Append read_verilog, hierarchy, proc in order
+  notes: Open **yosys-cli**. Open **yosys-cli**. Append read_verilog, hierarchy, proc
+    in order.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call pass_cli_check(['read_verilog','hierarchy','proc']); assert ok
+  notes: Call pass_cli_check(['read_verilog','hierarchy','proc']); assert ok.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Starting with proc
+  - Skipping hierarchy -top
+  notes: Starting with proc. Skipping hierarchy -top.
+- type: bullets
+  title: Try these
+  bullets:
+  - ''
+  notes: ''
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_yosys/common
+
+    python3 -c "from real_solvers import pass_cli_check; print(pass_cli_check())"'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - ''
+  notes: ''
+- type: code
+  title: Pseudocode — try these
+  code: recipe ← []; append read_verilog; hierarchy; proc; ok ← prefix matches golden
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - 'Next: RTLIL vocabulary'
+  notes: 'Next: RTLIL vocabulary.'

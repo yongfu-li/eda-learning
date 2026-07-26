@@ -1,0 +1,58 @@
+title: Why leakage
+footer: learn_power — 03 leakage power
+slides:
+- type: title
+  title: Why leakage
+  subtitle: Static leakage current times supply voltage gives Pleak
+  notes: Static leakage current times supply voltage gives Pleak.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: plk_n1=0.1'
+  notes: 'GOLDEN: plk_n1=0.1.'
+- type: image
+  title: Pleak formula
+  image: assets/steps/01-formula.png
+  caption: Pleak formula
+  notes: Pleak = Ileak · V per net.
+- type: image
+  title: Net n1
+  image: assets/steps/02-n1.png
+  caption: Net n1
+  notes: 'n1: Ileak=0.1, V=1 → Pleak=0.1.'
+- type: image
+  title: Net n2
+  image: assets/steps/03-n2.png
+  caption: Net n2
+  notes: 'n2: Ileak=0.05 → Pleak=0.05.'
+- type: image
+  title: Net n3
+  image: assets/steps/04-n3.png
+  caption: Net n3
+  notes: 'n3: Ileak=0.2 → Pleak=0.2.'
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: plk_n1=0.1; chip_plk=0.35.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **leakage-power**. Confirm n1 Pleak=0.1.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call leakage_power(); assert by_net['n1']==0.1
+  notes: Call leakage_power(); assert by_net['n1']==0.1.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Mixing Ileak with switching alpha
+  - Wrong voltage
+  notes: Mixing Ileak with switching alpha. Wrong voltage.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: total power'
+  notes: 'Next: total power.'

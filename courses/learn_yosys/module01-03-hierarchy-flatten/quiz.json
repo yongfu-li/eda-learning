@@ -1,0 +1,38 @@
+{
+  "module": "module01-03-hierarchy-flatten",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "modules after flatten?",
+      "choices": [
+        "1",
+        "2",
+        "6",
+        "0"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "c6 module after?",
+      "choices": [
+        "top",
+        "child",
+        "dead",
+        "nand"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "pass name?",
+      "choices": [
+        "flatten",
+        "proc",
+        "strash",
+        "rewrite"
+      ],
+      "answer": 0
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+title: Welcome
+footer: learn_yosys — 00 intro
+slides:
+- type: title
+  title: Welcome
+  subtitle: Learn_yosys has two parts
+  notes: 'learn_yosys has two parts: Part A teaches pass *ideas* on a toy netlist;
+    Part B drives **real Yosys** with `.ys` scripts on `tiny_and_or.v`.'
+- type: bullets
+  title: Part A literacy
+  bullets:
+  - Toy tiny_yosys
+  notes: 'Toy tiny_yosys: 6 cells; flatten→1; opt→5; strash→4; rewrite→3; nand 6/7
+    — names match Yosys passes, but it is not the Yosys binary.'
+- type: bullets
+  title: Part B real Yosys
+  bullets:
+  - 'Real path: `read_verilog` → `hierarchy` → `proc` → `flatten` → `opt` → `aigmap`/`synth`
+    →'
+  - Goldens come from Yosys logs
+  notes: 'Real path: `read_verilog` → `hierarchy` → `proc` → `flatten` → `opt` → `aigmap`/`synth`
+    → `stat`/`write`. Goldens come from Yosys logs.'
+- type: bullets
+  title: Two tracks
+  bullets:
+  - 'Implement track: `common/solvers.py` (toy) and `common/real_solvers.py` (evidence)'
+  - Browser labs mirror both
+  notes: 'Implement track: `common/solvers.py` (toy) and `common/real_solvers.py`
+    (evidence). Browser labs mirror both.'
+- type: bullets
+  title: RTLIL
+  bullets:
+  - Yosys IR is RTLIL , `$and`, `$dff`, later `$_AOI3_` / `$_DFF_P_` after synth
+  - You will read `stat` and `dump`
+  notes: Yosys IR is RTLIL — `$and`, `$dff`, later `$_AOI3_` / `$_DFF_P_` after synth.
+    You will read `stat` and `dump`.
+- type: bullets
+  title: Begin
+  bullets:
+  - Start with the toy proc lab for pass names, then continue into the real CLI modules
+  notes: Start with the toy proc lab for pass names, then continue into the real CLI
+    modules.

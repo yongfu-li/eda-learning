@@ -1,0 +1,9 @@
+# opt after flatten — remove dead / redundant logic.
+read_verilog rtl/tiny_and_or.v
+hierarchy -check -top top
+proc
+flatten
+opt
+opt_clean
+stat
+dump

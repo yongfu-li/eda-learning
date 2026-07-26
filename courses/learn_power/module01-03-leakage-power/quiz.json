@@ -1,0 +1,38 @@
+{
+  "module": "module01-03-leakage-power",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "plk n1?",
+      "choices": [
+        "0.1",
+        "1.0",
+        "0.35",
+        "5.2"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "chip_plk?",
+      "choices": [
+        "0.35",
+        "0.1",
+        "5.55",
+        "1.1"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Pleak uses?",
+      "choices": [
+        "Ileak\u00b7V",
+        "\u03b1\u00b7C\u00b7V\u00b2\u00b7f",
+        "I\u00b7R drop",
+        "ratio"
+      ],
+      "answer": 0
+    }
+  ]
+}

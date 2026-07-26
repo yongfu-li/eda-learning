@@ -1,0 +1,38 @@
+{
+  "module": "module04-01-dft-markers",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "marker count?",
+      "choices": [
+        "1",
+        "3",
+        "4",
+        "0"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "marker kind?",
+      "choices": [
+        "lockup",
+        "stitch",
+        "ir_drop",
+        "em"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "marker on?",
+      "choices": [
+        "f3\u2192f4",
+        "f1\u2192f2",
+        "SI\u2192f1",
+        "f2\u2192f3"
+      ],
+      "answer": 0
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "tiny_and_or",
+  "modules": ["top", "child"],
+  "cells": [
+    { "id": "c1", "type": "AND", "a": "a", "b": "b", "y": "n1", "module": "top" },
+    { "id": "c2", "type": "OR", "a": "n1", "b": "c", "y": "n2", "module": "top" },
+    { "id": "c3", "type": "AND", "a": "a", "b": "b", "y": "n3", "module": "top" },
+    { "id": "c4", "type": "BUF", "a": "const0", "y": "dead", "module": "top" },
+    { "id": "c5", "type": "NOT", "a": "n2", "y": "out", "module": "top" },
+    { "id": "c6", "type": "DFF", "d": "out", "q": "q", "clk": "clk", "module": "child" }
+  ],
+  "ports": { "a": "in", "b": "in", "c": "in", "q": "out", "clk": "in" },
+  "const0": true
+}

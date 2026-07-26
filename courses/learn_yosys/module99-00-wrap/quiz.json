@@ -1,0 +1,38 @@
+{
+  "module": "module99-00-wrap",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Focus of Wrap?",
+      "choices": [
+        "Recap proc, flatten, opt, strash, rewrite, techmap, synth, e",
+        "Place only",
+        "CTS only",
+        "DRC width"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Course id?",
+      "choices": [
+        "learn_yosys",
+        "learn_synthesis",
+        "learn_signoff",
+        "learn_openroad"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "engine_ok golden?",
+      "choices": [
+        "True",
+        "False",
+        "unknown",
+        "N/A"
+      ],
+      "answer": 0
+    }
+  ]
+}

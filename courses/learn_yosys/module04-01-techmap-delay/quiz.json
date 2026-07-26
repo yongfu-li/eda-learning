@@ -1,0 +1,38 @@
+{
+  "module": "module04-01-techmap-delay",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "nand delay count?",
+      "choices": [
+        "7",
+        "6",
+        "4",
+        "11"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "area nand count?",
+      "choices": [
+        "6",
+        "7",
+        "5",
+        "3"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "delay adds?",
+      "choices": [
+        "buffer NAND",
+        "extra DFF",
+        "more AND",
+        "BUF"
+      ],
+      "answer": 0
+    }
+  ]
+}

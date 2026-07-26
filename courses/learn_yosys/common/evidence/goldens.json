@@ -1,0 +1,172 @@
+{
+  "yosys_version_major": 0,
+  "rtl_file": "rtl/tiny_and_or.v",
+  "top": "top",
+  "after_read_modules": 2,
+  "after_read_processes": 1,
+  "after_read_top_cells": 5,
+  "after_read_and_count": 2,
+  "after_proc_processes": 0,
+  "after_proc_has_dff": true,
+  "after_flatten_modules": 1,
+  "after_flatten_cells": 4,
+  "after_opt_cells": 4,
+  "after_opt_and_count": 1,
+  "after_synth_cells": 2,
+  "after_synth_types": [
+    "$_AOI3_",
+    "$_DFF_P_"
+  ],
+  "synth_has_dff": true,
+  "recipe": [
+    "read_verilog rtl/tiny_and_or.v",
+    "hierarchy -check -top top",
+    "proc",
+    "flatten",
+    "opt",
+    "synth -top top",
+    "stat",
+    "write_json / write_verilog"
+  ],
+  "rtlil_vocab": [
+    "$and",
+    "$or",
+    "$not",
+    "$dff",
+    "$_AOI3_",
+    "$_DFF_P_"
+  ],
+  "stages": {
+    "read_hierarchy": {
+      "stage": "read_hierarchy",
+      "module_count": 2,
+      "processes": 1,
+      "cell_count": 4,
+      "wires": 18,
+      "cell_types": [
+        "$and",
+        "$not",
+        "$or"
+      ],
+      "cells": {
+        "$and": 2,
+        "$not": 1,
+        "$or": 1
+      },
+      "has_dff": false,
+      "has_process_before_proc": true,
+      "created_dff": false,
+      "log": "01_read_hierarchy.log"
+    },
+    "proc": {
+      "stage": "proc",
+      "module_count": 2,
+      "processes": 0,
+      "cell_count": 4,
+      "wires": 12,
+      "cell_types": [
+        "$and",
+        "$dff",
+        "$not",
+        "$or"
+      ],
+      "cells": {
+        "$and": 1,
+        "$dff": 1,
+        "$not": 1,
+        "$or": 1
+      },
+      "has_dff": true,
+      "has_process_before_proc": false,
+      "created_dff": true,
+      "log": "02_proc.log"
+    },
+    "flatten": {
+      "stage": "flatten",
+      "module_count": 1,
+      "processes": 0,
+      "cell_count": 4,
+      "wires": 12,
+      "cell_types": [
+        "$and",
+        "$dff",
+        "$not",
+        "$or"
+      ],
+      "cells": {
+        "$and": 1,
+        "$dff": 1,
+        "$not": 1,
+        "$or": 1
+      },
+      "has_dff": true,
+      "has_process_before_proc": false,
+      "created_dff": false,
+      "log": "03_flatten.log"
+    },
+    "opt": {
+      "stage": "opt",
+      "module_count": 1,
+      "processes": 0,
+      "cell_count": 4,
+      "wires": 13,
+      "cell_types": [
+        "$and",
+        "$dff",
+        "$not",
+        "$or"
+      ],
+      "cells": {
+        "$and": 1,
+        "$dff": 1,
+        "$not": 1,
+        "$or": 1
+      },
+      "has_dff": true,
+      "has_process_before_proc": false,
+      "created_dff": false,
+      "log": "04_opt.log"
+    },
+    "aigmap": {
+      "stage": "aigmap",
+      "module_count": 1,
+      "processes": 0,
+      "cell_count": 7,
+      "wires": 19,
+      "cell_types": [
+        "$_AND_",
+        "$_NOT_",
+        "$dff"
+      ],
+      "cells": {
+        "$_AND_": 2,
+        "$_NOT_": 4,
+        "$dff": 1
+      },
+      "has_dff": true,
+      "has_process_before_proc": false,
+      "created_dff": false,
+      "log": "04b_aigmap.log"
+    },
+    "synth": {
+      "stage": "synth",
+      "module_count": 1,
+      "processes": 0,
+      "cell_count": 2,
+      "wires": 10,
+      "cell_types": [
+        "$_AOI3_",
+        "$_DFF_P_"
+      ],
+      "cells": {
+        "$_AOI3_": 1,
+        "$_DFF_P_": 1
+      },
+      "has_dff": true,
+      "has_process_before_proc": false,
+      "created_dff": false,
+      "log": "05_synth.log"
+    }
+  },
+  "engine_ok": true
+}

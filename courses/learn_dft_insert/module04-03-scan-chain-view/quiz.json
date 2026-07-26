@@ -1,0 +1,38 @@
+{
+  "module": "module04-03-scan-chain-view",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "chain order?",
+      "choices": [
+        "f1\u2192f2\u2192f3\u2192f4",
+        "f4\u2192f3\u2192f2\u2192f1",
+        "f1\u2192f3\u2192f2\u2192f4",
+        "f2\u2192f1\u2192f4\u2192f3"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "lockup between?",
+      "choices": [
+        "f3\u2192f4",
+        "f1\u2192f2",
+        "f2\u2192f3",
+        "SI\u2192f1"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "SI port name?",
+      "choices": [
+        "scan_in",
+        "scan_out",
+        "scan_enable",
+        "n_a"
+      ],
+      "answer": 0
+    }
+  ]
+}

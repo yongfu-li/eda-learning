@@ -1,0 +1,58 @@
+title: Engine
+footer: learn_yosys — 01 yosys engine
+slides:
+- type: title
+  title: Engine
+  subtitle: A tiny engine chains all passes and compares report stats to goldens
+  notes: A tiny engine chains all passes and compares report stats to goldens.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: engine_ok=True, report_cells=7, report_wires=11'
+  notes: 'GOLDEN: engine_ok=True, report_cells=7, report_wires=11.'
+- type: image
+  title: Pipeline snapshot
+  image: assets/steps/01-snap.png
+  caption: Pipeline snapshot
+  notes: Engine runs all passes and compares goldens.
+- type: image
+  title: Opt golden
+  image: assets/steps/02-opt.png
+  caption: Opt golden
+  notes: after_opt_cells=5.
+- type: image
+  title: Strash golden
+  image: assets/steps/03-strash.png
+  caption: Strash golden
+  notes: after_strash_cells=4.
+- type: image
+  title: Report stats
+  image: assets/steps/04-report.png
+  caption: Report stats
+  notes: report cells=7 wires=11 after synth.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: engine_ok=True.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **yosys-engine**. Run engine; confirm ok and report 7/11.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call yosys_engine(); assert ok and report cell/wire counts
+  notes: Call yosys_engine(); assert ok and report cell/wire counts.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Reporting partial passes
+  - Changing toy without updating goldens
+  notes: Reporting partial passes. Changing toy without updating goldens.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: offline compare, then wrap'
+  notes: 'Next: offline compare, then wrap.'

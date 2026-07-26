@@ -1,0 +1,38 @@
+{
+  "module": "module05-01-power-engine",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "engine ok?",
+      "choices": [
+        "True",
+        "False",
+        "unknown",
+        "N/A"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "marker_count?",
+      "choices": [
+        "4",
+        "3",
+        "1",
+        "0"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "chip_ptot?",
+      "choices": [
+        "5.55",
+        "5.2",
+        "1.1",
+        "0.4"
+      ],
+      "answer": 0
+    }
+  ]
+}

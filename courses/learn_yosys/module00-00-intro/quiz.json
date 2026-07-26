@@ -1,0 +1,38 @@
+{
+  "module": "module00-00-intro",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Focus of Welcome?",
+      "choices": [
+        "Explain Yosys pass names \u2014 proc, flatten, opt/DCE, strash, r",
+        "Place only",
+        "CTS only",
+        "DRC width"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Course id?",
+      "choices": [
+        "learn_yosys",
+        "learn_synthesis",
+        "learn_signoff",
+        "learn_openroad"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "engine_ok golden?",
+      "choices": [
+        "True",
+        "False",
+        "unknown",
+        "N/A"
+      ],
+      "answer": 0
+    }
+  ]
+}

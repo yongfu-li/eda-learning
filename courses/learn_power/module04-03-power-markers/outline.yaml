@@ -1,0 +1,58 @@
+title: Why markers
+footer: learn_power — 03 power markers
+slides:
+- type: title
+  title: Why markers
+  subtitle: Signoff power/IR emits markers for IR drop and EM hits
+  notes: Signoff power/IR emits markers for IR drop and EM hits.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: marker_count=4'
+  notes: 'GOLDEN: marker_count=4.'
+- type: image
+  title: IR marker
+  image: assets/steps/01-ir.png
+  caption: IR marker
+  notes: One IR drop hit at sink.
+- type: image
+  title: EM markers
+  image: assets/steps/02-em.png
+  caption: EM markers
+  notes: Three EM hits on e1,e2,e3.
+- type: image
+  title: Marker kinds
+  image: assets/steps/03-kind.png
+  caption: Marker kinds
+  notes: kind=ir_drop or em on each hit.
+- type: image
+  title: Collect all
+  image: assets/steps/04-collect.png
+  caption: Collect all
+  notes: Union IR + EM markers for signoff.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: marker_count=4.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **power-markers**. Run collect; confirm 4 markers.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call collect_markers(); assert count==4
+  notes: Call collect_markers(); assert count==4.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Counting only IR
+  - Missing EM edges
+  notes: Counting only IR. Missing EM edges.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: power engine'
+  notes: 'Next: power engine.'

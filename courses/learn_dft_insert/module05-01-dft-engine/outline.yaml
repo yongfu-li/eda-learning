@@ -1,0 +1,58 @@
+title: Engine
+footer: learn_dft_insert — 01 dft engine
+slides:
+- type: title
+  title: Engine
+  subtitle: A tiny engine chains scan cells, stitch, lockup, transform, and markers
+  notes: A tiny engine chains scan cells, stitch, lockup, transform, and markers.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: scan cells=4, stitches=3, lockups=1, edges=6, markers=1, ok=True'
+  notes: 'GOLDEN: scan cells=4, stitches=3, lockups=1, edges=6, markers=1, ok=True.'
+- type: image
+  title: Stats snapshot
+  image: assets/steps/01-stats.png
+  caption: Stats snapshot
+  notes: 4 flops, 2 domains, 3 ports.
+- type: image
+  title: Scan cells
+  image: assets/steps/02-cells.png
+  caption: Scan cells
+  notes: 4 SDFF cells identified.
+- type: image
+  title: Chain check
+  image: assets/steps/03-chain.png
+  caption: Chain check
+  notes: stitch_count=3, chain_length=4.
+- type: image
+  title: Lockup check
+  image: assets/steps/04-lockup.png
+  caption: Lockup check
+  notes: lockup_count=1, edges=6.
+- type: image
+  title: Engine OK
+  image: assets/steps/05-ok.png
+  caption: Engine OK
+  notes: 'GOLDEN: engine ok=True.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **dft-engine**. Run engine; confirm ok.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call dft_engine(); assert ok and markers.count==1
+  notes: Call dft_engine(); assert ok and markers.count==1.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Reporting partial checks
+  - Changing toy without updating goldens
+  notes: Reporting partial checks. Changing toy without updating goldens.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: offline compare, then wrap'
+  notes: 'Next: offline compare, then wrap.'

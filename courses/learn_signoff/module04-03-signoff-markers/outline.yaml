@@ -1,0 +1,58 @@
+title: Why markers
+footer: learn_signoff — 03 signoff markers
+slides:
+- type: title
+  title: Why markers
+  subtitle: Signoff emits markers for each failing check before ECO
+  notes: Signoff emits markers for each failing check before ECO.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: marker_count=2'
+  notes: 'GOLDEN: marker_count=2.'
+- type: image
+  title: Check fail
+  image: assets/steps/01-kind.png
+  caption: Check fail
+  notes: Markers tag each failing check for review.
+- type: image
+  title: STA marker
+  image: assets/steps/02-sta.png
+  caption: STA marker
+  notes: STA fail emits check_fail marker.
+- type: image
+  title: Antenna marker
+  image: assets/steps/03-ant.png
+  caption: Antenna marker
+  notes: Antenna fail emits second marker.
+- type: image
+  title: No pass markers
+  image: assets/steps/04-pass.png
+  caption: No pass markers
+  notes: Passing checks do not emit markers.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: marker_count=2.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **signoff-markers**. Run collect; confirm 2 markers.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call collect_markers(); assert count==2
+  notes: Call collect_markers(); assert count==2.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Counting pass checks
+  - Markers after ECO without reset
+  notes: Counting pass checks. Markers after ECO without reset.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: signoff engine'
+  notes: 'Next: signoff engine.'

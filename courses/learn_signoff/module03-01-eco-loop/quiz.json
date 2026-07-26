@@ -1,0 +1,38 @@
+{
+  "module": "module03-01-eco-loop",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "eco count?",
+      "choices": [
+        "2",
+        "1",
+        "3",
+        "0"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "eco1 fixes?",
+      "choices": [
+        "sta",
+        "antenna",
+        "drc",
+        "ir"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "fixes_all?",
+      "choices": [
+        "True",
+        "False",
+        "unknown",
+        "N/A"
+      ],
+      "answer": 0
+    }
+  ]
+}

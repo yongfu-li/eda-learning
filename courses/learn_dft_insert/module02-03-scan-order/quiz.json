@@ -1,0 +1,38 @@
+{
+  "module": "module02-03-scan-order",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "chain length?",
+      "choices": [
+        "4",
+        "3",
+        "6",
+        "2"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "covers all?",
+      "choices": [
+        "True",
+        "False",
+        "unknown",
+        "N/A"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "scan order head?",
+      "choices": [
+        "f1",
+        "f2",
+        "f4",
+        "si"
+      ],
+      "answer": 0
+    }
+  ]
+}

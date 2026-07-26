@@ -1,0 +1,252 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Executing script file `scripts/04b_aigmap.ys' --
+
+1. Executing Verilog-2005 frontend: rtl/tiny_and_or.v
+Parsing Verilog input from `rtl/tiny_and_or.v' to AST representation.
+Generating RTLIL representation for module `\child'.
+Generating RTLIL representation for module `\top'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \top
+Used module:     \child
+
+2.2. Analyzing design hierarchy..
+Top module:  \top
+Used module:     \child
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_INIT pass (extract init attributes).
+
+3.4. Executing PROC_ARST pass (detect async resets in processes).
+
+3.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\child.$proc$rtl/tiny_and_or.v:8$1'.
+     1/1: $0\q[0:0]
+
+3.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\child.\q' using process `\child.$proc$rtl/tiny_and_or.v:8$1'.
+  created $dff cell `$procdff$6' with positive edge clock.
+
+3.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `child.$proc$rtl/tiny_and_or.v:8$1'.
+Cleaned up 0 empty switches.
+
+4. Executing FLATTEN pass (flatten design).
+Using template child for cells of type child.
+<suppressed ~1 debug messages>
+No more expansions possible.
+Deleting now unused module child.
+
+5. Executing OPT pass (performing simple optimizations).
+
+5.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+5.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+5.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+5.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+5.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+5.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+5.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 0 unused cells and 5 unused wires.
+<suppressed ~1 debug messages>
+
+5.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+5.9. Finished OPT passes. (There is nothing left to do.)
+
+6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+7. Executing AIGMAP pass (map logic to AIG).
+Module top: replaced 3 cells with 6 new cells, skipped 1 cells.
+  replaced 3 cell types:
+       1 $not
+       1 $and
+       1 $or
+  not replaced 1 cell types:
+       1 $dff
+
+8. Printing statistics.
+
+=== top ===
+
+   Number of wires:                 19
+   Number of wire bits:             19
+   Number of public wires:          13
+   Number of public wire bits:      13
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  7
+     $_AND_                          2
+     $_NOT_                          4
+     $dff                            1
+
+
+autoidx 19
+
+attribute \top 1
+attribute \src "rtl/tiny_and_or.v:12"
+module \top
+
+  wire $auto$rtlil.cc:1969:NotGate$18
+
+  wire $auto$rtlil.cc:1970:AndGate$16
+
+  wire $auto$rtlil.cc:1969:NotGate$14
+
+  wire $auto$rtlil.cc:1969:NotGate$12
+
+  wire $auto$rtlil.cc:1969:NotGate$10
+
+  wire $auto$rtlil.cc:1970:AndGate$8
+
+  attribute \src "rtl/tiny_and_or.v:13"
+  wire input 1 \a
+
+  attribute \src "rtl/tiny_and_or.v:14"
+  wire input 2 \b
+
+  attribute \src "rtl/tiny_and_or.v:15"
+  wire input 3 \c
+
+  attribute \src "rtl/tiny_and_or.v:16"
+  wire input 4 \clk
+
+  attribute \src "rtl/tiny_and_or.v:19"
+  wire \dead
+
+  attribute \src "rtl/tiny_and_or.v:19"
+  wire \n1
+
+  attribute \src "rtl/tiny_and_or.v:19"
+  wire \n2
+
+  attribute \src "rtl/tiny_and_or.v:19"
+  wire \n3
+
+  attribute \src "rtl/tiny_and_or.v:19"
+  wire \out
+
+  attribute \src "rtl/tiny_and_or.v:17"
+  wire output 5 \q
+
+  attribute \src "rtl/tiny_and_or.v:27|rtl/tiny_and_or.v:4"
+  wire \u_child.clk
+
+  attribute \src "rtl/tiny_and_or.v:27|rtl/tiny_and_or.v:5"
+  wire \u_child.d
+
+  attribute \src "rtl/tiny_and_or.v:27|rtl/tiny_and_or.v:6"
+  wire \u_child.q
+
+  cell $_NOT_ $auto$aigmap.cc:110:execute$11
+    connect \Y $auto$rtlil.cc:1969:NotGate$12
+    connect \A \c
+  end
+
+  cell $_NOT_ $auto$aigmap.cc:110:execute$9
+    connect \Y $auto$rtlil.cc:1969:NotGate$10
+    connect \A \n2
+  end
+
+  cell $_AND_ $auto$aigmap.cc:105:execute$7
+    connect \Y $auto$rtlil.cc:1970:AndGate$8
+    connect \B \b
+    connect \A \a
+  end
+
+  cell $_NOT_ $auto$aigmap.cc:110:execute$17
+    connect \Y $auto$rtlil.cc:1969:NotGate$18
+    connect \A $auto$rtlil.cc:1970:AndGate$16
+  end
+
+  cell $_AND_ $auto$aigmap.cc:105:execute$15
+    connect \Y $auto$rtlil.cc:1970:AndGate$16
+    connect \B $auto$rtlil.cc:1969:NotGate$14
+    connect \A $auto$rtlil.cc:1969:NotGate$12
+  end
+
+  cell $_NOT_ $auto$aigmap.cc:110:execute$13
+    connect \Y $auto$rtlil.cc:1969:NotGate$14
+    connect \A \n1
+  end
+
+  attribute \src "rtl/tiny_and_or.v:27|rtl/tiny_and_or.v:8"
+  cell $dff $techmap\u_child.$procdff$6
+    parameter \CLK_POLARITY 1'1
+    parameter \WIDTH 1
+    connect \CLK \clk
+    connect \D \u_child.d
+    connect \Q \u_child.q
+  end
+
+  connect \dead 1'0
+  connect \n3 \n1
+  connect \out \u_child.d
+  connect \q \u_child.q
+  connect \u_child.clk \clk
+  connect \n1 $auto$rtlil.cc:1970:AndGate$8
+  connect \u_child.d $auto$rtlil.cc:1969:NotGate$10
+  connect \n2 $auto$rtlil.cc:1969:NotGate$18
+end
+
+End of script. Logfile hash: 14f9fa007e
+CPU: user 0.01s system 0.00s, MEM: 15.70 MB total, 9.31 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 20% 2x opt_clean (0 sec), 16% 2x opt_expr (0 sec), ...

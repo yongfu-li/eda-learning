@@ -1,0 +1,38 @@
+{
+  "moduleId": "module07-01-real-proc",
+  "items": [
+    {
+      "q": "Processes after proc?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "4"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Cell from always?",
+      "choices": [
+        "$dff",
+        "$and",
+        "$_AOI3_",
+        "BUF"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "has_dff?",
+      "choices": [
+        "True",
+        "False",
+        "unknown",
+        "N/A"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

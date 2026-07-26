@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/eda_learning/courses/learn_signoff/module05-03-offline-benchmark-compare/frames/slide-1.png'
+duration 4.008
+file '/mnt/d/proj/designs/eda_learning/courses/learn_signoff/module05-03-offline-benchmark-compare/frames/slide-2.png'
+duration 9.576
+file '/mnt/d/proj/designs/eda_learning/courses/learn_signoff/module05-03-offline-benchmark-compare/frames/slide-3.png'
+duration 4.392
+file '/mnt/d/proj/designs/eda_learning/courses/learn_signoff/module05-03-offline-benchmark-compare/frames/slide-4.png'
+duration 7.992
+file '/mnt/d/proj/designs/eda_learning/courses/learn_signoff/module05-03-offline-benchmark-compare/frames/slide-5.png'
+duration 9.576
+file '/mnt/d/proj/designs/eda_learning/courses/learn_signoff/module05-03-offline-benchmark-compare/frames/slide-6.png'
+duration 2.52
+file '/mnt/d/proj/designs/eda_learning/courses/learn_signoff/module05-03-offline-benchmark-compare/frames/slide-6.png'

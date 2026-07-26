@@ -1,0 +1,37 @@
+title: Wrap
+footer: learn_yosys — 00 wrap
+slides:
+- type: title
+  title: Wrap
+  subtitle: 'You checked tiny_yosys: 6 RTL cells; flatten→1; opt→5; strash→4; rewrite→3;
+    nand 6/7; report 7/11; engine ok'
+  notes: 'You checked tiny_yosys: 6 RTL cells; flatten→1; opt→5; strash→4; rewrite→3;
+    nand 6/7; report 7/11; engine ok.'
+- type: bullets
+  title: The idea
+  bullets:
+  - 'Natural next: learn_openroad (place/route evidence)'
+  notes: 'Natural next: learn_openroad (place/route evidence).'
+- type: bullets
+  title: Recap
+  bullets:
+  - Recap proc, flatten, opt, strash, rewrite, techmap, synth, engine
+  notes: Recap proc, flatten, opt, strash, rewrite, techmap, synth, engine.
+- type: bullets
+  title: Goldens
+  bullets:
+  - 6 RTL cells; flatten→1; opt→5; strash→4; rewrite→3; nand 6/7; report 7/11; engine
+    ok
+  notes: 6 RTL cells; flatten→1; opt→5; strash→4; rewrite→3; nand 6/7; report 7/11;
+    engine ok.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - 'Natural next: learn_openroad (place/route evidence)'
+  notes: 'Natural next: learn_openroad (place/route evidence).'
+- type: bullets
+  title: Close
+  bullets:
+  - Mark the wrap done when you can name every pass in order
+  notes: Mark the wrap done when you can name every pass in order.

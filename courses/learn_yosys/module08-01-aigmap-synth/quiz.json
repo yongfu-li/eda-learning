@@ -1,0 +1,38 @@
+{
+  "moduleId": "module08-01-aigmap-synth",
+  "items": [
+    {
+      "q": "aigmap cells?",
+      "choices": [
+        "7",
+        "4",
+        "2",
+        "1"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "synth cells?",
+      "choices": [
+        "2",
+        "7",
+        "4",
+        "6"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Synth gate type?",
+      "choices": [
+        "$_AOI3_",
+        "$and",
+        "NAND2",
+        "$or"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

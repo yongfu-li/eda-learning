@@ -1,0 +1,58 @@
+title: Why tapeout
+footer: learn_signoff — 01 tapeout checklist
+slides:
+- type: title
+  title: Why tapeout
+  subtitle: Required tapeout gates block release until checks are clean
+  notes: Required tapeout gates block release until checks are clean.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: ready=false before ECO, ready=true after'
+  notes: 'GOLDEN: ready=false before ECO, ready=true after.'
+- type: image
+  title: Checklist
+  image: assets/steps/01-items.png
+  caption: Checklist
+  notes: Four required tapeout gates plus optional docs.
+- type: image
+  title: Before ECO
+  image: assets/steps/02-before.png
+  caption: Before ECO
+  notes: Antenna fail blocks tapeout ready.
+- type: image
+  title: Layout gate
+  image: assets/steps/03-t2.png
+  caption: Layout gate
+  notes: DRC/LVS/ERC must pass for t2.
+- type: image
+  title: After ECO
+  image: assets/steps/04-after.png
+  caption: After ECO
+  notes: All required items green after ECO apply.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: ready only after ECO.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **tapeout-checklist**. Compare before/after ECO ready flags.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call tapeout_checklist(after_eco=False/True); assert ready flags
+  notes: Call tapeout_checklist(after_eco=False/True); assert ready flags.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Ignoring optional vs required
+  - Checking before ECO only
+  notes: Ignoring optional vs required. Checking before ECO only.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: signoff markers'
+  notes: 'Next: signoff markers.'

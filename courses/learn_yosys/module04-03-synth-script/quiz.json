@@ -1,0 +1,38 @@
+{
+  "module": "module04-03-synth-script",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "first pass in recipe?",
+      "choices": [
+        "proc",
+        "techmap",
+        "strash",
+        "report"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "cells after rewrite?",
+      "choices": [
+        "3",
+        "6",
+        "5",
+        "7"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "final techmap mode?",
+      "choices": [
+        "area",
+        "delay",
+        "none",
+        "drc"
+      ],
+      "answer": 0
+    }
+  ]
+}

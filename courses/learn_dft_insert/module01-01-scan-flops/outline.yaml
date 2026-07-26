@@ -1,0 +1,58 @@
+title: Why scan flops
+footer: learn_dft_insert — 01 scan flops
+slides:
+- type: title
+  title: Why scan flops
+  subtitle: Every flop becomes a scan SDFF in this full-scan toy
+  notes: Every flop becomes a scan SDFF in this full-scan toy.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: scan_cell_count=4'
+  notes: 'GOLDEN: scan_cell_count=4.'
+- type: image
+  title: SDFF cells
+  image: assets/steps/01-sdff.png
+  caption: SDFF cells
+  notes: Each flop becomes a scan SDFF cell.
+- type: image
+  title: Flop f1
+  image: assets/steps/02-f1.png
+  caption: Flop f1
+  notes: 'f1: domain d0, clk=clk.'
+- type: image
+  title: Flop f2
+  image: assets/steps/03-f2.png
+  caption: Flop f2
+  notes: 'f2: Q→n2 feeds f3.'
+- type: image
+  title: Flop f3
+  image: assets/steps/04-f3.png
+  caption: Flop f3
+  notes: 'f3: last flop in d0.'
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: scan_cell_count=4.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **scan-flops**. Inspect tiny_dft; confirm 4 SDFF cells.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call identify_scan_flops(); assert count==4
+  notes: Call identify_scan_flops(); assert count==4.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Counting only functional flops
+  - Missing SE hook
+  notes: Counting only functional flops. Missing SE hook.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: scan enable ports'
+  notes: 'Next: scan enable ports.'

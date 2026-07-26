@@ -1,0 +1,38 @@
+{
+  "module": "module01-03-signoff-corner",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "signoff corner?",
+      "choices": [
+        "ss_0p9_125",
+        "tt_1p0_25",
+        "ff_1p1_m40",
+        "ss_1p0_25"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "signoff derate?",
+      "choices": [
+        "1.1",
+        "1.0",
+        "0.9",
+        "1.25"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "ss Vdd?",
+      "choices": [
+        "0.9",
+        "1.0",
+        "1.1",
+        "0.8"
+      ],
+      "answer": 0
+    }
+  ]
+}

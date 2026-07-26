@@ -1,0 +1,38 @@
+{
+  "module": "module02-03-activity-factors",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "alpha n1?",
+      "choices": [
+        "0.5",
+        "0.2",
+        "1.0",
+        "0.1"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "alpha n3?",
+      "choices": [
+        "1.0",
+        "0.5",
+        "0.2",
+        "4.0"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "\u03b1 affects?",
+      "choices": [
+        "switching",
+        "leakage only",
+        "IR drop",
+        "EM limit"
+      ],
+      "answer": 0
+    }
+  ]
+}

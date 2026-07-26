@@ -1,0 +1,58 @@
+title: Why rewrite
+footer: learn_yosys — 01 rewrite balance
+slides:
+- type: title
+  title: Why rewrite
+  subtitle: Rewrite absorbs OR followed by NOT into a single NOR cell
+  notes: rewrite absorbs OR followed by NOT into a single NOR cell.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: after_rewrite_cells=3, comb=2, seq=1'
+  notes: 'GOLDEN: after_rewrite_cells=3, comb=2, seq=1.'
+- type: image
+  title: OR+NOT pair
+  image: assets/steps/01-pair.png
+  caption: OR+NOT pair
+  notes: c2 OR feeds c5 NOT on out.
+- type: image
+  title: Absorb to NOR
+  image: assets/steps/02-absorb.png
+  caption: Absorb to NOR
+  notes: Replace OR+NOT with single NOR.
+- type: image
+  title: Comb count
+  image: assets/steps/03-comb.png
+  caption: Comb count
+  notes: Two combinational cells after rewrite.
+- type: image
+  title: Seq hold
+  image: assets/steps/04-seq.png
+  caption: Seq hold
+  notes: DFF c6 unchanged — seq=1.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: after_rewrite_cells=3.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **rewrite-balance**. Confirm cells=3 and NOR present.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call pass_rewrite(); assert cell_count==3 and comb_count==2
+  notes: Call pass_rewrite(); assert cell_count==3 and comb_count==2.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Rewriting DFF
+  - Missing OR+NOT pattern
+  notes: Rewriting DFF. Missing OR+NOT pattern.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: techmap area'
+  notes: 'Next: techmap area.'

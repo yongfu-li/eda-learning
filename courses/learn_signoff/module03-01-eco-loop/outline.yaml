@@ -1,0 +1,58 @@
+title: Why ECO loop
+footer: learn_signoff — 01 eco loop
+slides:
+- type: title
+  title: Why ECO loop
+  subtitle: Engineering change orders map fixes to failing checks
+  notes: Engineering change orders map fixes to failing checks.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: eco_count=2, fixes_all=true'
+  notes: 'GOLDEN: eco_count=2, fixes_all=true.'
+- type: image
+  title: ECO list
+  image: assets/steps/01-plan.png
+  caption: ECO list
+  notes: Two ECOs planned for failing checks.
+- type: image
+  title: Buffer ECO
+  image: assets/steps/02-eco1.png
+  caption: Buffer ECO
+  notes: eco1 buffer on n_crit fixes STA.
+- type: image
+  title: Jumper ECO
+  image: assets/steps/03-eco2.png
+  caption: Jumper ECO
+  notes: eco2 jumper on n_ant fixes antenna.
+- type: image
+  title: Covers all
+  image: assets/steps/04-cover.png
+  caption: Covers all
+  notes: Both fails covered by ECO fixes.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: eco_count=2, fixes_all=true.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **eco-loop**. Confirm 2 ECOs cover sta+antenna.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call eco_plan(); assert eco_count==2 and fixes_all
+  notes: Call eco_plan(); assert eco_count==2 and fixes_all.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - ECO missing a fail
+  - Double-counting ECOs
+  notes: ECO missing a fail. Double-counting ECOs.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: apply ECOs'
+  notes: 'Next: apply ECOs.'

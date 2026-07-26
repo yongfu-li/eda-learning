@@ -1,0 +1,38 @@
+{
+  "module": "module03-01-power-grid",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "node count?",
+      "choices": [
+        "4",
+        "3",
+        "5",
+        "2"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "edge count?",
+      "choices": [
+        "3",
+        "4",
+        "1",
+        "0"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Path type?",
+      "choices": [
+        "series",
+        "parallel",
+        "tree only",
+        "mesh only"
+      ],
+      "answer": 0
+    }
+  ]
+}

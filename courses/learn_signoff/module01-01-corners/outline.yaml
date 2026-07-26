@@ -1,0 +1,58 @@
+title: Why corners
+footer: learn_signoff — 01 corners
+slides:
+- type: title
+  title: Why corners
+  subtitle: Signoff starts from a small set of process/voltage/temperature corners
+  notes: Signoff starts from a small set of process/voltage/temperature corners.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: corner_count=3'
+  notes: 'GOLDEN: corner_count=3.'
+- type: image
+  title: PVT triple
+  image: assets/steps/01-pvt.png
+  caption: PVT triple
+  notes: Three process/voltage/temperature corners in tiny_signoff.
+- type: image
+  title: Slow slow
+  image: assets/steps/02-ss.png
+  caption: Slow slow
+  notes: 'ss_0p9_125: Vdd=0.9, temp=125, derate=1.1.'
+- type: image
+  title: Typical
+  image: assets/steps/03-tt.png
+  caption: Typical
+  notes: 'tt_1p0_25: nominal Vdd and temp.'
+- type: image
+  title: Fast fast
+  image: assets/steps/04-ff.png
+  caption: Fast fast
+  notes: 'ff_1p1_m40: fast process, low temp.'
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: corner_count=3.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **corners**. Inspect tiny_signoff; confirm 3 corners.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call list_corners(); assert count==3
+  notes: Call list_corners(); assert count==3.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Confusing signoff corner with full MCMM
+  - Missing derate field
+  notes: Confusing signoff corner with full MCMM. Missing derate field.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: pick signoff corner'
+  notes: 'Next: pick signoff corner.'

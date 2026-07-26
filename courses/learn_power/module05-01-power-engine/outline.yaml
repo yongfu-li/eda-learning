@@ -1,0 +1,58 @@
+title: Engine
+footer: learn_power — 01 power engine
+slides:
+- type: title
+  title: Engine
+  subtitle: A tiny engine chains power, IR, EM, and markers
+  notes: A tiny engine chains power, IR, EM, and markers.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: chip Ptot=5.55, ir_drop=0.4, markers=4, ok=True'
+  notes: 'GOLDEN: chip Ptot=5.55, ir_drop=0.4, markers=4, ok=True.'
+- type: image
+  title: Stats snapshot
+  image: assets/steps/01-stats.png
+  caption: Stats snapshot
+  notes: 3 nets, 3 grid edges, Vdd=1.
+- type: image
+  title: Power totals
+  image: assets/steps/02-power.png
+  caption: Power totals
+  notes: Psw n1=1.0; chip Ptot=5.55.
+- type: image
+  title: IR check
+  image: assets/steps/03-ir.png
+  caption: IR check
+  notes: ir_drop_sink=0.4; 1 IR violation.
+- type: image
+  title: EM check
+  image: assets/steps/04-em.png
+  caption: EM check
+  notes: 3 EM violations on grid edges.
+- type: image
+  title: Engine OK
+  image: assets/steps/05-ok.png
+  caption: Engine OK
+  notes: 'GOLDEN: engine ok=True.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **power-engine**. Run engine; confirm ok.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call power_engine(); assert ok and markers.count==4
+  notes: Call power_engine(); assert ok and markers.count==4.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Reporting partial checks
+  - Changing toy without updating goldens
+  notes: Reporting partial checks. Changing toy without updating goldens.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: offline compare, then wrap'
+  notes: 'Next: offline compare, then wrap.'

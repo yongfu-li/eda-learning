@@ -1,0 +1,38 @@
+{
+  "module": "module03-01-lockup-latch",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "lockup count?",
+      "choices": [
+        "1",
+        "3",
+        "0",
+        "4"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "lockup pair?",
+      "choices": [
+        "f3\u2192f4",
+        "f1\u2192f2",
+        "f2\u2192f3",
+        "SI\u2192f1"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "domains crossed?",
+      "choices": [
+        "d0\u2192d1",
+        "d1\u2192d0",
+        "d0\u2192d0",
+        "d1\u2192d1"
+      ],
+      "answer": 0
+    }
+  ]
+}

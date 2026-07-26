@@ -1,0 +1,38 @@
+title: Welcome
+footer: learn_signoff — 00 intro
+slides:
+- type: title
+  title: Welcome
+  subtitle: After DFT insert you need signoff , corners, derate, checks, ECO, tapeout
+    gates, markers
+  notes: After DFT insert you need signoff — corners, derate, checks, ECO, tapeout
+    gates, markers.
+- type: bullets
+  title: The idea
+  bullets:
+  - Toy tiny_signoff
+  notes: 'Toy tiny_signoff: 3 corners, ss_0p9_125 derate=1.1, fail_count=2, 2 ECOs,
+    tapeout ready after ECO.'
+- type: bullets
+  title: Two tracks
+  bullets:
+  - Implement track uses common/ solvers; browser lab track uses platform tools
+  notes: Implement track uses common/ solvers; browser lab track uses platform tools.
+- type: bullets
+  title: Toy design
+  bullets:
+  - 'Tiny_signoff: 3 corners, ss derate=1.1, fail_count=2, 2 ECOs, tapeout after ECO'
+  notes: 'tiny_signoff: 3 corners, ss derate=1.1, fail_count=2, 2 ECOs, tapeout after
+    ECO.'
+- type: bullets
+  title: Path
+  bullets:
+  - Corners → signoff corner → derate → checks → ECO → apply → tapeout → markers →
+    engine
+  notes: Corners → signoff corner → derate → checks → ECO → apply → tapeout → markers
+    → engine.
+- type: bullets
+  title: Begin
+  bullets:
+  - 'Next: list PVT corners'
+  notes: 'Next: list PVT corners.'

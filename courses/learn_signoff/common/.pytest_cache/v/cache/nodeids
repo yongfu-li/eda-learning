@@ -1,0 +1,9 @@
+[
+  "test_solvers.py::test_checks",
+  "test_solvers.py::test_corners",
+  "test_solvers.py::test_derate",
+  "test_solvers.py::test_eco",
+  "test_solvers.py::test_markers_engine",
+  "test_solvers.py::test_stats",
+  "test_solvers.py::test_tapeout"
+]

@@ -1,0 +1,58 @@
+title: Why apply ECOs
+footer: learn_signoff — 03 apply ecos
+slides:
+- type: title
+  title: Why apply ECOs
+  subtitle: Applying ECOs flips fixed checks from fail to pass
+  notes: Applying ECOs flips fixed checks from fail to pass.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: fail_count→0 after apply_ecos'
+  notes: 'GOLDEN: fail_count→0 after apply_ecos.'
+- type: image
+  title: Flip fails
+  image: assets/steps/01-apply.png
+  caption: Flip fails
+  notes: Apply ECOs — flip sta and antenna to pass.
+- type: image
+  title: STA fixed
+  image: assets/steps/02-sta.png
+  caption: STA fixed
+  notes: STA slack becomes +0.02 after buffer.
+- type: image
+  title: Antenna fixed
+  image: assets/steps/03-ant.png
+  caption: Antenna fixed
+  notes: Antenna count zero after jumper.
+- type: image
+  title: Others hold
+  image: assets/steps/04-rest.png
+  caption: Others hold
+  notes: DRC/LVS/ERC/IR remain pass.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: fail_count→0 after ECO.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **apply-ecos**. Apply ECOs; confirm fail_count=0.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call apply_ecos(); assert fail_count==0
+  notes: Call apply_ecos(); assert fail_count==0.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Applying ECO without updating check status
+  - Partial apply
+  notes: Applying ECO without updating check status. Partial apply.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: tapeout checklist'
+  notes: 'Next: tapeout checklist.'

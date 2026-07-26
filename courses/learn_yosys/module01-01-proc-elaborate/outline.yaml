@@ -1,0 +1,58 @@
+title: Why proc
+footer: learn_yosys — 01 proc elaborate
+slides:
+- type: title
+  title: Why proc
+  subtitle: The proc pass lowers RTL to a gate-level netlist Yosys can optimize
+  notes: The proc pass lowers RTL to a gate-level netlist Yosys can optimize.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: rtl_cell_count=6, module_count=2'
+  notes: 'GOLDEN: rtl_cell_count=6, module_count=2.'
+- type: image
+  title: RTL gate view
+  image: assets/steps/01-gates.png
+  caption: RTL gate view
+  notes: Six gate-level cells after proc on tiny_and_or.
+- type: image
+  title: AND c1
+  image: assets/steps/02-and1.png
+  caption: AND c1
+  notes: 'c1: AND(a,b)→n1 in top module.'
+- type: image
+  title: OR c2
+  image: assets/steps/03-or.png
+  caption: OR c2
+  notes: 'c2: OR(n1,c)→n2 feeds NOT.'
+- type: image
+  title: Duplicate AND
+  image: assets/steps/04-dup.png
+  caption: Duplicate AND
+  notes: c3 duplicates c1 — strash target later.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: rtl_cell_count=6.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **proc-elaborate**. Inspect tiny_yosys; confirm 6 cells.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call pass_proc(); assert cell_count==6
+  notes: Call pass_proc(); assert cell_count==6.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Confusing proc with synth
+  - Expecting fewer cells before opt
+  notes: Confusing proc with synth. Expecting fewer cells before opt.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: hierarchy flatten'
+  notes: 'Next: hierarchy flatten.'

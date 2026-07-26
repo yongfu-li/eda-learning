@@ -1,0 +1,37 @@
+title: Wrap
+footer: learn_signoff — 00 wrap
+slides:
+- type: title
+  title: Wrap
+  subtitle: 'You checked tiny_signoff: 3 corners; ss derate=1.1; fails=2; ECOs=2;
+    tapeout after ECO; markers=2; engine ok'
+  notes: 'You checked tiny_signoff: 3 corners; ss derate=1.1; fails=2; ECOs=2; tapeout
+    after ECO; markers=2; engine ok.'
+- type: bullets
+  title: The idea
+  bullets:
+  - 'Natural next: learn_yosys / learn_openroad (evidence sidecars)'
+  notes: 'Natural next: learn_yosys / learn_openroad (evidence sidecars).'
+- type: bullets
+  title: Recap
+  bullets:
+  - Recap corners, derate, checks, ECO, tapeout, markers, engine
+  notes: Recap corners, derate, checks, ECO, tapeout, markers, engine.
+- type: bullets
+  title: Goldens
+  bullets:
+  - 3 corners; ss derate=1.1; fails=2; ECOs=2; tapeout after ECO; markers=2; engine
+    ok
+  notes: 3 corners; ss derate=1.1; fails=2; ECOs=2; tapeout after ECO; markers=2;
+    engine ok.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - 'Natural next: learn_yosys / learn_openroad (evidence sidecars)'
+  notes: 'Natural next: learn_yosys / learn_openroad (evidence sidecars).'
+- type: bullets
+  title: Close
+  bullets:
+  - Mark the wrap done when you can explain the ECO tapeout gate
+  notes: Mark the wrap done when you can explain the ECO tapeout gate.

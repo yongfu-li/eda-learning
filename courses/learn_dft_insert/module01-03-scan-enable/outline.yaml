@@ -1,0 +1,58 @@
+title: Why scan enable
+footer: learn_dft_insert — 03 scan enable
+slides:
+- type: title
+  title: Why scan enable
+  subtitle: Scan enable muxes functional vs scan data; SI/SO bookend the chain
+  notes: Scan enable muxes functional vs scan data; SI/SO bookend the chain.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: se=scan_enable, si=scan_in, so=scan_out'
+  notes: 'GOLDEN: se=scan_enable, si=scan_in, so=scan_out.'
+- type: image
+  title: SE port
+  image: assets/steps/01-se.png
+  caption: SE port
+  notes: scan_enable drives mux select on all SDFFs.
+- type: image
+  title: SI port
+  image: assets/steps/02-si.png
+  caption: SI port
+  notes: scan_in hooks first cell in chain.
+- type: image
+  title: SO port
+  image: assets/steps/03-so.png
+  caption: SO port
+  notes: scan_out hooks last cell Q.
+- type: image
+  title: Port names
+  image: assets/steps/04-hook.png
+  caption: Port names
+  notes: si=scan_in, so=scan_out, se=scan_enable.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: se=scan_enable, si=scan_in, so=scan_out.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **scan-enable**. Confirm the three port names.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call scan_enable_port(); assert se/si/so match goldens
+  notes: Call scan_enable_port(); assert se/si/so match goldens.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Confusing SI with functional D
+  - Wrong port order
+  notes: Confusing SI with functional D. Wrong port order.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: chain stitch'
+  notes: 'Next: chain stitch.'

@@ -1,0 +1,58 @@
+title: Why activity
+footer: learn_power — 03 activity factors
+slides:
+- type: title
+  title: Why activity
+  subtitle: Lower α on quiet nets reduces reported switching power
+  notes: Lower α on quiet nets reduces reported switching power.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: alphas n1=0.5, n2=0.2, n3=1.0'
+  notes: 'GOLDEN: alphas n1=0.5, n2=0.2, n3=1.0.'
+- type: image
+  title: Alpha per net
+  image: assets/steps/01-alpha.png
+  caption: Alpha per net
+  notes: Activity α scales switching — read per net.
+- type: image
+  title: n1 α
+  image: assets/steps/02-n1a.png
+  caption: n1 α
+  notes: n1 α=0.5.
+- type: image
+  title: n2 α
+  image: assets/steps/03-n2a.png
+  caption: n2 α
+  notes: n2 α=0.2.
+- type: image
+  title: n3 α
+  image: assets/steps/04-n3a.png
+  caption: n3 α
+  notes: n3 α=1.0 (fully active).
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: alphas n1=0.5, n2=0.2, n3=1.0.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **activity-factors**. Confirm the three alphas.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call activity_factors(); assert alphas match goldens
+  notes: Call activity_factors(); assert alphas match goldens.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Confusing α with Ileak
+  - Using mean instead of per-net
+  notes: Confusing α with Ileak. Using mean instead of per-net.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: power grid'
+  notes: 'Next: power grid.'

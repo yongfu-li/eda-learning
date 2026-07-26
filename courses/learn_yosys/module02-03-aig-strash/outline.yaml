@@ -1,0 +1,58 @@
+title: Why strash
+footer: learn_yosys — 03 aig strash
+slides:
+- type: title
+  title: Why strash
+  subtitle: Strash merges structurally identical AND(a,b) and retargets fans
+  notes: strash merges structurally identical AND(a,b) and retargets fans.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: after_strash_cells=4, merge n3→n1'
+  notes: 'GOLDEN: after_strash_cells=4, merge n3→n1.'
+- type: image
+  title: Hash key table
+  image: assets/steps/01-hash.png
+  caption: Hash key table
+  notes: Identical AND(a,b) keys merge.
+- type: image
+  title: c1 and c3
+  image: assets/steps/02-c1c3.png
+  caption: c1 and c3
+  notes: Both AND(a,b) — c3 is duplicate.
+- type: image
+  title: Merge n3→n1
+  image: assets/steps/03-merge.png
+  caption: Merge n3→n1
+  notes: Retarget fans; drop c3.
+- type: image
+  title: Four cells
+  image: assets/steps/04-four.png
+  caption: Four cells
+  notes: One AND remains after strash.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: after_strash_cells=4.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **aig-strash**. Confirm cells=4 and n3 merged.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call pass_aig_strash(); assert cell_count==4
+  notes: Call pass_aig_strash(); assert cell_count==4.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Merging unlike cells
+  - Forgetting fan retarget
+  notes: Merging unlike cells. Forgetting fan retarget.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: rewrite'
+  notes: 'Next: rewrite.'

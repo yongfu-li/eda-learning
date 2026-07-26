@@ -1,0 +1,10 @@
+# Mid pipeline: aigmap after opt (literacy for ABC-bound AIG).
+read_verilog rtl/tiny_and_or.v
+hierarchy -check -top top
+proc
+flatten
+opt
+opt_clean
+aigmap
+stat
+dump

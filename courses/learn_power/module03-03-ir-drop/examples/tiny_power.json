@@ -1,0 +1,21 @@
+{
+  "vdd": 1.0,
+  "freq": 1.0,
+  "nets": [
+    { "id": "n1", "c": 2.0, "alpha": 0.5, "ileak": 0.1 },
+    { "id": "n2", "c": 1.0, "alpha": 0.2, "ileak": 0.05 },
+    { "id": "n3", "c": 4.0, "alpha": 1.0, "ileak": 0.2 }
+  ],
+  "grid": {
+    "nodes": ["src", "a", "b", "sink"],
+    "v_src": 1.0,
+    "edges": [
+      { "id": "e1", "u": "src", "v": "a", "r": 1.0 },
+      { "id": "e2", "u": "a", "v": "b", "r": 2.0 },
+      { "id": "e3", "u": "b", "v": "sink", "r": 1.0 }
+    ],
+    "i_sink": 0.1
+  },
+  "ir_limit": 0.3,
+  "em_limit": 0.08
+}

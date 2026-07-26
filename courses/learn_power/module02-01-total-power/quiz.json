@@ -1,0 +1,38 @@
+{
+  "module": "module02-01-total-power",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "chip_ptot?",
+      "choices": [
+        "5.55",
+        "5.2",
+        "1.1",
+        "0.35"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "ptot n1?",
+      "choices": [
+        "1.1",
+        "1.0",
+        "0.1",
+        "5.55"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Ptot equals?",
+      "choices": [
+        "Psw+Pleak",
+        "Psw only",
+        "IR drop",
+        "EM count"
+      ],
+      "answer": 0
+    }
+  ]
+}

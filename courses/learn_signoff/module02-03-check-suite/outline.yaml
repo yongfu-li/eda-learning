@@ -1,0 +1,58 @@
+title: Why check suite
+footer: learn_signoff — 03 check suite
+slides:
+- type: title
+  title: Why check suite
+  subtitle: STA, DRC, LVS, ERC, antenna, and IR form the toy check suite
+  notes: STA, DRC, LVS, ERC, antenna, and IR form the toy check suite.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: fail_count=2, pass_count=4'
+  notes: 'GOLDEN: fail_count=2, pass_count=4.'
+- type: image
+  title: Six checks
+  image: assets/steps/01-suite.png
+  caption: Six checks
+  notes: STA, DRC, LVS, ERC, Antenna, IR in the suite.
+- type: image
+  title: STA fail
+  image: assets/steps/02-sta.png
+  caption: STA fail
+  notes: STA slack −0.05 — timing fail.
+- type: image
+  title: Layout pass
+  image: assets/steps/03-layout.png
+  caption: Layout pass
+  notes: DRC, LVS, ERC all pass.
+- type: image
+  title: Antenna fail
+  image: assets/steps/04-ant.png
+  caption: Antenna fail
+  notes: One antenna violation remains.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: fail_count=2 (sta, antenna).'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **check-suite**. Run checks; confirm 2 fails.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call run_checks(); assert fail_count==2 and pass_count==4
+  notes: Call run_checks(); assert fail_count==2 and pass_count==4.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Counting IR as fail
+  - Missing antenna in fail set
+  notes: Counting IR as fail. Missing antenna in fail set.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: ECO loop'
+  notes: 'Next: ECO loop.'

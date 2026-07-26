@@ -1,0 +1,38 @@
+{
+  "moduleId": "module08-03-real-evidence",
+  "items": [
+    {
+      "q": "engine ok?",
+      "choices": [
+        "True",
+        "False",
+        "unknown",
+        "N/A"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "synth cells?",
+      "choices": [
+        "2",
+        "7",
+        "4",
+        "6"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Last write step?",
+      "choices": [
+        "write_json/verilog",
+        "proc",
+        "abc only",
+        "place"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

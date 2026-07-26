@@ -1,0 +1,38 @@
+{
+  "module": "module02-01-derate",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "derated for delay=1?",
+      "choices": [
+        "1.1",
+        "1.0",
+        "0.9",
+        "1.25"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "derate value?",
+      "choices": [
+        "1.1",
+        "1.0",
+        "0.9",
+        "2.0"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "formula?",
+      "choices": [
+        "delay\u00d7derate",
+        "delay+derate",
+        "delay/derate",
+        "derate only"
+      ],
+      "answer": 0
+    }
+  ]
+}

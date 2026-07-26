@@ -1,0 +1,38 @@
+{
+  "moduleId": "module06-01-yosys-cli",
+  "items": [
+    {
+      "q": "First command?",
+      "choices": [
+        "read_verilog",
+        "synth",
+        "techmap",
+        "abc"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "How to run a script?",
+      "choices": [
+        "yosys -s file.ys",
+        "gcc file.ys",
+        "python file.ys",
+        "make only"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Third command?",
+      "choices": [
+        "proc",
+        "flatten",
+        "opt",
+        "write"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

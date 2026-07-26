@@ -1,0 +1,38 @@
+{
+  "module": "module02-01-chain-stitch",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "stitch count?",
+      "choices": [
+        "3",
+        "4",
+        "6",
+        "1"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "first stitch?",
+      "choices": [
+        "f1\u2192f2",
+        "f2\u2192f3",
+        "SI\u2192f1",
+        "f3\u2192f4"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "last stitch?",
+      "choices": [
+        "f3\u2192f4",
+        "f1\u2192f2",
+        "f4\u2192SO",
+        "f2\u2192f3"
+      ],
+      "answer": 0
+    }
+  ]
+}

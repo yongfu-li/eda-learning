@@ -1,0 +1,38 @@
+{
+  "module": "module04-01-tapeout-checklist",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "ready before ECO?",
+      "choices": [
+        "False",
+        "True",
+        "unknown",
+        "N/A"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "ready after ECO?",
+      "choices": [
+        "True",
+        "False",
+        "unknown",
+        "N/A"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "required count?",
+      "choices": [
+        "4",
+        "5",
+        "2",
+        "3"
+      ],
+      "answer": 0
+    }
+  ]
+}

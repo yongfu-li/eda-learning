@@ -1,0 +1,5 @@
+# Read Verilog and check hierarchy — do not flatten yet.
+read_verilog rtl/tiny_and_or.v
+hierarchy -check -top top
+stat
+dump

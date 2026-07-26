@@ -1,0 +1,38 @@
+{
+  "module": "module02-03-aig-strash",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "cells after strash?",
+      "choices": [
+        "4",
+        "5",
+        "3",
+        "6"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "merged net?",
+      "choices": [
+        "n3",
+        "n1",
+        "n2",
+        "out"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "duplicate AND?",
+      "choices": [
+        "c3",
+        "c4",
+        "c5",
+        "c6"
+      ],
+      "answer": 0
+    }
+  ]
+}

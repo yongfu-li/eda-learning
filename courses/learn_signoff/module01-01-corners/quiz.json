@@ -1,0 +1,38 @@
+{
+  "module": "module01-01-corners",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "corner count?",
+      "choices": [
+        "3",
+        "2",
+        "6",
+        "1"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "ss corner id?",
+      "choices": [
+        "ss_0p9_125",
+        "tt_1p0_25",
+        "ff_1p1_m40",
+        "ss_1p0_25"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "ss derate?",
+      "choices": [
+        "1.1",
+        "1.0",
+        "0.9",
+        "1.25"
+      ],
+      "answer": 0
+    }
+  ]
+}

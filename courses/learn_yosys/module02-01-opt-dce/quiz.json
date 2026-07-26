@@ -1,0 +1,38 @@
+{
+  "module": "module02-01-opt-dce",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "cells after opt?",
+      "choices": [
+        "5",
+        "6",
+        "4",
+        "3"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "removed cell?",
+      "choices": [
+        "c4",
+        "c3",
+        "c1",
+        "c6"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "c4 type?",
+      "choices": [
+        "BUF",
+        "AND",
+        "NOT",
+        "DFF"
+      ],
+      "answer": 0
+    }
+  ]
+}

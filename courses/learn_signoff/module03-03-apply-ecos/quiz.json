@@ -1,0 +1,38 @@
+{
+  "module": "module03-03-apply-ecos",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "fail count after?",
+      "choices": [
+        "0",
+        "2",
+        "1",
+        "4"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "sta after ECO?",
+      "choices": [
+        "pass",
+        "fail",
+        "unknown",
+        "skip"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "antenna after?",
+      "choices": [
+        "pass",
+        "fail",
+        "unknown",
+        "skip"
+      ],
+      "answer": 0
+    }
+  ]
+}

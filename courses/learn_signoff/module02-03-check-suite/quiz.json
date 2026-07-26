@@ -1,0 +1,38 @@
+{
+  "module": "module02-03-check-suite",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "fail count?",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "0"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "failing checks?",
+      "choices": [
+        "sta+antenna",
+        "drc+lvs",
+        "ir+erc",
+        "sta only"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "pass count?",
+      "choices": [
+        "4",
+        "2",
+        "6",
+        "3"
+      ],
+      "answer": 0
+    }
+  ]
+}

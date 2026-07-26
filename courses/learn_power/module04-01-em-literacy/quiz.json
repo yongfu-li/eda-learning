@@ -1,0 +1,38 @@
+{
+  "module": "module04-01-em-literacy",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "em violation count?",
+      "choices": [
+        "3",
+        "1",
+        "4",
+        "0"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "em_limit?",
+      "choices": [
+        "0.08",
+        "0.3",
+        "0.1",
+        "1.0"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "All edges violate?",
+      "choices": [
+        "yes",
+        "no",
+        "only e1",
+        "only sink"
+      ],
+      "answer": 0
+    }
+  ]
+}

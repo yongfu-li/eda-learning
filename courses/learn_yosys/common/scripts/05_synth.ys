@@ -1,0 +1,7 @@
+# Generic synth recipe (Yosys built-in synth) on tiny_and_or.
+read_verilog rtl/tiny_and_or.v
+hierarchy -check -top top
+synth -top top
+stat
+write_json evidence/tiny_and_or_synth.json
+write_verilog evidence/tiny_and_or_synth.v

@@ -1,0 +1,38 @@
+{
+  "module": "module03-03-ir-drop",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "v_sink?",
+      "choices": [
+        "0.6",
+        "0.4",
+        "1.0",
+        "0.1"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "ir_drop_sink?",
+      "choices": [
+        "0.4",
+        "0.6",
+        "0.3",
+        "0.08"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "i_sink?",
+      "choices": [
+        "0.1",
+        "0.08",
+        "1.0",
+        "0.4"
+      ],
+      "answer": 0
+    }
+  ]
+}

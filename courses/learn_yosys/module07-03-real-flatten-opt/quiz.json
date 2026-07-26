@@ -1,0 +1,38 @@
+{
+  "moduleId": "module07-03-real-flatten-opt",
+  "items": [
+    {
+      "q": "Modules after flatten?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "0"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Cells after flatten?",
+      "choices": [
+        "4",
+        "2",
+        "7",
+        "5"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "$and after opt?",
+      "choices": [
+        "1",
+        "2",
+        "0",
+        "4"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

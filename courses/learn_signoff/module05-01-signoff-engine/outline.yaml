@@ -1,0 +1,58 @@
+title: Engine
+footer: learn_signoff — 01 signoff engine
+slides:
+- type: title
+  title: Engine
+  subtitle: A tiny engine chains corners, checks, ECO, tapeout, and markers
+  notes: A tiny engine chains corners, checks, ECO, tapeout, and markers.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: corners=3, fails=2, ecos=2, markers=2, ok=True'
+  notes: 'GOLDEN: corners=3, fails=2, ecos=2, markers=2, ok=True.'
+- type: image
+  title: Design stats
+  image: assets/steps/01-stats.png
+  caption: Design stats
+  notes: 3 corners, 6 checks, 2 ECOs in toy.
+- type: image
+  title: Corner pick
+  image: assets/steps/02-corner.png
+  caption: Corner pick
+  notes: Signoff corner ss_0p9_125 derate 1.1.
+- type: image
+  title: Check fails
+  image: assets/steps/03-checks.png
+  caption: Check fails
+  notes: Two fails before ECO; tapeout blocked.
+- type: image
+  title: ECO + tapeout
+  image: assets/steps/04-eco.png
+  caption: ECO + tapeout
+  notes: ECOs fix all; tapeout ready after.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: engine ok=True.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **signoff-engine**. Run engine; confirm ok.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call signoff_engine(); assert ok and markers.count==2
+  notes: Call signoff_engine(); assert ok and markers.count==2.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Reporting partial checks
+  - Changing toy without updating goldens
+  notes: Reporting partial checks. Changing toy without updating goldens.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: offline compare, then wrap'
+  notes: 'Next: offline compare, then wrap.'

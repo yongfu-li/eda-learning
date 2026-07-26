@@ -1,0 +1,225 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Executing script file `scripts/01_read_hierarchy.ys' --
+
+1. Executing Verilog-2005 frontend: rtl/tiny_and_or.v
+Parsing Verilog input from `rtl/tiny_and_or.v' to AST representation.
+Generating RTLIL representation for module `\child'.
+Generating RTLIL representation for module `\top'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \top
+Used module:     \child
+
+2.2. Analyzing design hierarchy..
+Top module:  \top
+Used module:     \child
+Removed 0 unused modules.
+
+3. Printing statistics.
+
+=== top ===
+
+   Number of wires:                 14
+   Number of wire bits:             14
+   Number of public wires:          10
+   Number of public wire bits:      10
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  5
+     $and                            2
+     $not                            1
+     $or                             1
+     child                           1
+
+=== child ===
+
+   Number of wires:                  4
+   Number of wire bits:              4
+   Number of public wires:           3
+   Number of public wire bits:       3
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              1
+   Number of cells:                  0
+
+=== design hierarchy ===
+
+   top                               1
+     child                           1
+
+   Number of wires:                 18
+   Number of wire bits:             18
+   Number of public wires:          13
+   Number of public wire bits:      13
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              1
+   Number of cells:                  4
+     $and                            2
+     $not                            1
+     $or                             1
+
+
+autoidx 6
+
+attribute \top 1
+attribute \src "rtl/tiny_and_or.v:12"
+module \top
+
+  attribute \src "rtl/tiny_and_or.v:25"
+  wire $not$rtl/tiny_and_or.v:25$5_Y
+
+  attribute \src "rtl/tiny_and_or.v:23"
+  wire $and$rtl/tiny_and_or.v:23$4_Y
+
+  attribute \src "rtl/tiny_and_or.v:22"
+  wire $or$rtl/tiny_and_or.v:22$3_Y
+
+  attribute \src "rtl/tiny_and_or.v:21"
+  wire $and$rtl/tiny_and_or.v:21$2_Y
+
+  attribute \src "rtl/tiny_and_or.v:19"
+  wire \out
+
+  attribute \src "rtl/tiny_and_or.v:19"
+  wire \dead
+
+  attribute \src "rtl/tiny_and_or.v:19"
+  wire \n3
+
+  attribute \src "rtl/tiny_and_or.v:19"
+  wire \n2
+
+  attribute \src "rtl/tiny_and_or.v:19"
+  wire \n1
+
+  attribute \src "rtl/tiny_and_or.v:17"
+  wire output 5 \q
+
+  attribute \src "rtl/tiny_and_or.v:16"
+  wire input 4 \clk
+
+  attribute \src "rtl/tiny_and_or.v:15"
+  wire input 3 \c
+
+  attribute \src "rtl/tiny_and_or.v:14"
+  wire input 2 \b
+
+  attribute \src "rtl/tiny_and_or.v:13"
+  wire input 1 \a
+
+  attribute \module_not_derived 1
+  attribute \src "rtl/tiny_and_or.v:27"
+  cell \child \u_child
+    connect \q \q
+    connect \d \out
+    connect \clk \clk
+  end
+
+  attribute \src "rtl/tiny_and_or.v:25"
+  cell $not $not$rtl/tiny_and_or.v:25$5
+    parameter \Y_WIDTH 1
+    parameter \A_WIDTH 1
+    parameter \A_SIGNED 0
+    connect \Y $not$rtl/tiny_and_or.v:25$5_Y
+    connect \A \n2
+  end
+
+  attribute \src "rtl/tiny_and_or.v:23"
+  cell $and $and$rtl/tiny_and_or.v:23$4
+    parameter \Y_WIDTH 1
+    parameter \B_WIDTH 1
+    parameter \A_WIDTH 1
+    parameter \B_SIGNED 0
+    parameter \A_SIGNED 0
+    connect \Y $and$rtl/tiny_and_or.v:23$4_Y
+    connect \B \b
+    connect \A \a
+  end
+
+  attribute \src "rtl/tiny_and_or.v:22"
+  cell $or $or$rtl/tiny_and_or.v:22$3
+    parameter \Y_WIDTH 1
+    parameter \B_WIDTH 1
+    parameter \A_WIDTH 1
+    parameter \B_SIGNED 0
+    parameter \A_SIGNED 0
+    connect \Y $or$rtl/tiny_and_or.v:22$3_Y
+    connect \B \c
+    connect \A \n1
+  end
+
+  attribute \src "rtl/tiny_and_or.v:21"
+  cell $and $and$rtl/tiny_and_or.v:21$2
+    parameter \Y_WIDTH 1
+    parameter \B_WIDTH 1
+    parameter \A_WIDTH 1
+    parameter \B_SIGNED 0
+    parameter \A_SIGNED 0
+    connect \Y $and$rtl/tiny_and_or.v:21$2_Y
+    connect \B \b
+    connect \A \a
+  end
+
+  connect \n1 $and$rtl/tiny_and_or.v:21$2_Y
+  connect \n2 $or$rtl/tiny_and_or.v:22$3_Y
+  connect \n3 $and$rtl/tiny_and_or.v:23$4_Y
+  connect \dead 1'0
+  connect \out $not$rtl/tiny_and_or.v:25$5_Y
+end
+
+attribute \src "rtl/tiny_and_or.v:3"
+module \child
+
+  attribute \src "rtl/tiny_and_or.v:8"
+  wire $0\q[0:0]
+
+  attribute \src "rtl/tiny_and_or.v:6"
+  wire output 3 \q
+
+  attribute \src "rtl/tiny_and_or.v:5"
+  wire input 2 \d
+
+  attribute \src "rtl/tiny_and_or.v:4"
+  wire input 1 \clk
+
+  attribute \src "rtl/tiny_and_or.v:8"
+  process $proc$rtl/tiny_and_or.v:8$1
+    assign { } { }
+    assign $0\q[0:0] \d
+    sync posedge \clk
+      update \q $0\q[0:0]
+  end
+end
+
+End of script. Logfile hash: bb81046dbf
+CPU: user 0.00s system 0.00s, MEM: 15.57 MB total, 9.45 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 72% 2x read_verilog (0 sec), 10% 1x hierarchy (0 sec), ...

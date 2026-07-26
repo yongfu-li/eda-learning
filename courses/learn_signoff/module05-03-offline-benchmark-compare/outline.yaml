@@ -1,0 +1,39 @@
+title: Offline compare
+footer: learn_signoff — 03 offline benchmark compare
+slides:
+- type: title
+  title: Offline compare
+  subtitle: Track A prints signoff_compare without the browser
+  notes: Track A prints signoff_compare without the browser.
+- type: bullets
+  title: The idea
+  bullets:
+  - Load tiny_signoff.json; print corner_count, fail_count, eco_count, marker_count,
+    ok
+  notes: Load tiny_signoff.json; print corner_count, fail_count, eco_count, marker_count,
+    ok.
+- type: bullets
+  title: Why offline
+  bullets:
+  - Print signoff_compare metrics offline without the browser
+  notes: Print signoff_compare metrics offline without the browser.
+- type: bullets
+  title: Commands
+  bullets:
+  - Python3 -c "from solvers import signoff_compare; print(signoff_compare())" in
+    common/
+  notes: python3 -c "from solvers import signoff_compare; print(signoff_compare())"
+    in common/
+- type: bullets
+  title: What to compare
+  bullets:
+  - Load tiny_signoff.json; print corner_count, fail_count, eco_count, marker_count,
+    ok
+  notes: Load tiny_signoff.json; print corner_count, fail_count, eco_count, marker_count,
+    ok.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue to the wrap module
+  notes: Continue to the wrap module.

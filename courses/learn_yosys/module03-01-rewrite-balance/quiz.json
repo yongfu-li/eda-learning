@@ -1,0 +1,38 @@
+{
+  "module": "module03-01-rewrite-balance",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "cells after rewrite?",
+      "choices": [
+        "3",
+        "4",
+        "5",
+        "2"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "comb count?",
+      "choices": [
+        "2",
+        "3",
+        "1",
+        "4"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "new cell type?",
+      "choices": [
+        "NOR",
+        "AND",
+        "BUF",
+        "OR"
+      ],
+      "answer": 0
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+title: Why flatten
+footer: learn_yosys — 03 hierarchy flatten
+slides:
+- type: title
+  title: Why flatten
+  subtitle: Flatten merges child hierarchy so later passes see one module
+  notes: Flatten merges child hierarchy so later passes see one module.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: after_flatten_modules=1'
+  notes: 'GOLDEN: after_flatten_modules=1.'
+- type: image
+  title: Two modules
+  image: assets/steps/01-two.png
+  caption: Two modules
+  notes: top holds comb; child holds DFF c6.
+- type: image
+  title: child DFF
+  image: assets/steps/02-child.png
+  caption: child DFF
+  notes: c6 DFF lives in child before flatten.
+- type: image
+  title: Flatten pass
+  image: assets/steps/03-flat.png
+  caption: Flatten pass
+  notes: flatten moves all cells into top.
+- type: image
+  title: All in top
+  image: assets/steps/04-top.png
+  caption: All in top
+  notes: Every cell module field becomes top.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: after_flatten_modules=1.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **hierarchy-flatten**. Confirm module_count=1.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call pass_hierarchy_flatten(); assert module_count==1
+  notes: Call pass_hierarchy_flatten(); assert module_count==1.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Flattening before proc
+  - Forgetting DFF in child
+  notes: Flattening before proc. Forgetting DFF in child.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: opt/DCE'
+  notes: 'Next: opt/DCE.'

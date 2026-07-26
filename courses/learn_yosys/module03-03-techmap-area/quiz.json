@@ -1,0 +1,38 @@
+{
+  "module": "module03-03-techmap-area",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "nand area count?",
+      "choices": [
+        "6",
+        "7",
+        "4",
+        "3"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "mapped cell type?",
+      "choices": [
+        "NAND2",
+        "AND",
+        "OR",
+        "NOR"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "techmap mode?",
+      "choices": [
+        "area",
+        "delay",
+        "power",
+        "drc"
+      ],
+      "answer": 0
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "corners": [
+    { "id": "ss_0p9_125", "process": "ss", "vdd": 0.9, "temp": 125, "derate": 1.1 },
+    { "id": "tt_1p0_25", "process": "tt", "vdd": 1.0, "temp": 25, "derate": 1.0 },
+    { "id": "ff_1p1_m40", "process": "ff", "vdd": 1.1, "temp": -40, "derate": 0.9 }
+  ],
+  "signoff_corner": "ss_0p9_125",
+  "checks": [
+    { "id": "sta", "name": "STA", "status": "fail", "slack": -0.05 },
+    { "id": "drc", "name": "DRC", "status": "pass", "count": 0 },
+    { "id": "lvs", "name": "LVS", "status": "pass", "count": 0 },
+    { "id": "erc", "name": "ERC", "status": "pass", "count": 0 },
+    { "id": "antenna", "name": "Antenna", "status": "fail", "count": 1 },
+    { "id": "ir", "name": "IR", "status": "pass", "drop": 0.04 }
+  ],
+  "ecos": [
+    { "id": "eco1", "kind": "buffer", "net": "n_crit", "fixes": ["sta"] },
+    { "id": "eco2", "kind": "jumper", "net": "n_ant", "fixes": ["antenna"] }
+  ],
+  "tapeout_items": [
+    { "id": "t1", "label": "All corners clean", "required": true },
+    { "id": "t2", "label": "DRC/LVS/ERC pass", "required": true },
+    { "id": "t3", "label": "Antenna clean", "required": true },
+    { "id": "t4", "label": "IR within budget", "required": true },
+    { "id": "t5", "label": "Release notes filed", "required": false }
+  ]
+}

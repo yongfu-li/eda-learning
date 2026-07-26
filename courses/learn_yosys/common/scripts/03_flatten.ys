@@ -1,0 +1,8 @@
+# Flatten hierarchy so child DFF lives in top.
+read_verilog rtl/tiny_and_or.v
+hierarchy -check -top top
+proc
+flatten
+opt_clean
+stat
+dump

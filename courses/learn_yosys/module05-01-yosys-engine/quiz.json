@@ -1,0 +1,38 @@
+{
+  "module": "module05-01-yosys-engine",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "engine ok?",
+      "choices": [
+        "True",
+        "False",
+        "unknown",
+        "N/A"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "report cells?",
+      "choices": [
+        "7",
+        "6",
+        "11",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "report wires?",
+      "choices": [
+        "11",
+        "7",
+        "6",
+        "4"
+      ],
+      "answer": 0
+    }
+  ]
+}

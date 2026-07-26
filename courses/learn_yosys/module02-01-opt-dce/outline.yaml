@@ -1,0 +1,58 @@
+title: Why opt
+footer: learn_yosys — 01 opt dce
+slides:
+- type: title
+  title: Why opt
+  subtitle: Opt removes unreachable logic such as BUF tied to const0
+  notes: opt removes unreachable logic such as BUF tied to const0.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: after_opt_cells=5, removed c4'
+  notes: 'GOLDEN: after_opt_cells=5, removed c4.'
+- type: image
+  title: Dead BUF scan
+  image: assets/steps/01-scan.png
+  caption: Dead BUF scan
+  notes: opt finds BUF tied to const0.
+- type: image
+  title: BUF c4
+  image: assets/steps/02-buf.png
+  caption: BUF c4
+  notes: 'c4: BUF(const0)→dead never reaches PO.'
+- type: image
+  title: Remove c4
+  image: assets/steps/03-drop.png
+  caption: Remove c4
+  notes: DCE drops unreachable dead cell.
+- type: image
+  title: Five cells
+  image: assets/steps/04-five.png
+  caption: Five cells
+  notes: Remaining comb+seq after opt.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: after_opt_cells=5.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **opt-dce**. Run opt; confirm cells=5 and c4 removed.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call pass_opt_dce(); assert cell_count==5 and c4 in removed
+  notes: Call pass_opt_dce(); assert cell_count==5 and c4 in removed.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Removing live cells
+  - Skipping opt before strash
+  notes: Removing live cells. Skipping opt before strash.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: AIG strash'
+  notes: 'Next: AIG strash.'

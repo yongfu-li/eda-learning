@@ -1,0 +1,58 @@
+title: Why switching
+footer: learn_power — 01 switching power
+slides:
+- type: title
+  title: Why switching
+  subtitle: Dynamic power scales with activity, cap, voltage squared, and frequency
+  notes: Dynamic power scales with activity, cap, voltage squared, and frequency.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: psw_n1=1.0'
+  notes: 'GOLDEN: psw_n1=1.0.'
+- type: image
+  title: Psw formula
+  image: assets/steps/01-formula.png
+  caption: Psw formula
+  notes: Psw = α · C · V² · f per net.
+- type: image
+  title: Net n1
+  image: assets/steps/02-n1.png
+  caption: Net n1
+  notes: 'n1: α=0.5, C=2, V=1, f=1 → Psw=1.0.'
+- type: image
+  title: Net n2
+  image: assets/steps/03-n2.png
+  caption: Net n2
+  notes: 'n2: α=0.2, C=1 → Psw=0.2.'
+- type: image
+  title: Net n3
+  image: assets/steps/04-n3.png
+  caption: Net n3
+  notes: 'n3: α=1.0, C=4 → Psw=4.0.'
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: psw_n1=1.0; chip_psw=5.2.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **switching-power**. Inspect tiny_power; confirm n1 Psw=1.0.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call switching_power(); assert by_net['n1']==1.0
+  notes: Call switching_power(); assert by_net['n1']==1.0.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Forgetting V²
+  - Using leakage instead of switching
+  notes: Forgetting V². Using leakage instead of switching.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: leakage power'
+  notes: 'Next: leakage power.'

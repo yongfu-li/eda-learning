@@ -1,0 +1,38 @@
+{
+  "module": "module99-00-wrap",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Focus of Wrap?",
+      "choices": [
+        "Recap scan flops, SE/SI/SO, stitch, order, lockup, transform",
+        "Place only",
+        "CTS only",
+        "DRC width"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Course id?",
+      "choices": [
+        "learn_dft_insert",
+        "learn_power",
+        "learn_antenna",
+        "learn_signoff"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "marker_count golden?",
+      "choices": [
+        "1",
+        "3",
+        "4",
+        "0"
+      ],
+      "answer": 0
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+# hierarchy + proc: processes → RTLIL cells ($and/$or/$not/$dff/…)
+read_verilog rtl/tiny_and_or.v
+hierarchy -check -top top
+proc
+opt_clean
+stat
+dump

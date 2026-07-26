@@ -1,0 +1,38 @@
+{
+  "module": "module03-03-netlist-transform",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "edge count?",
+      "choices": [
+        "6",
+        "3",
+        "4",
+        "1"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "stitch edges?",
+      "choices": [
+        "3",
+        "6",
+        "1",
+        "4"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "includes lockup?",
+      "choices": [
+        "yes",
+        "no",
+        "only SI",
+        "only SO"
+      ],
+      "answer": 0
+    }
+  ]
+}

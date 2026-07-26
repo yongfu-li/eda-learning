@@ -1,0 +1,58 @@
+title: Why order
+footer: learn_dft_insert — 03 scan order
+slides:
+- type: title
+  title: Why order
+  subtitle: Scan order must include every flop exactly once
+  notes: Scan order must include every flop exactly once.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: order f1→f2→f3→f4; covers_all=true'
+  notes: 'GOLDEN: order f1→f2→f3→f4; covers_all=true.'
+- type: image
+  title: Order list
+  image: assets/steps/01-list.png
+  caption: Order list
+  notes: scan_order defines chain sequence left→right.
+- type: image
+  title: First f1
+  image: assets/steps/02-f1.png
+  caption: First f1
+  notes: Chain starts at f1.
+- type: image
+  title: Middle f2 f3
+  image: assets/steps/03-mid.png
+  caption: Middle f2 f3
+  notes: f2 and f3 in domain d0.
+- type: image
+  title: Tail f4
+  image: assets/steps/04-tail.png
+  caption: Tail f4
+  notes: Chain ends at f4 in d1.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: chain_length=4, covers_all=true.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **scan-order**. Confirm length=4 and covers all flops.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call scan_order_check(); assert length==4 and covers_all
+  notes: Call scan_order_check(); assert length==4 and covers_all.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Duplicate flop in order
+  - Missing f4
+  notes: Duplicate flop in order. Missing f4.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: lockup latch'
+  notes: 'Next: lockup latch.'

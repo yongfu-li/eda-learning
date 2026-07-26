@@ -1,0 +1,58 @@
+title: Why derate
+footer: learn_signoff — 01 derate
+slides:
+- type: title
+  title: Why derate
+  subtitle: Reported path delay scales by the signoff corner derate
+  notes: Reported path delay scales by the signoff corner derate.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: derated=1.1 for delay=1.0'
+  notes: 'GOLDEN: derated=1.1 for delay=1.0.'
+- type: image
+  title: Delay scale
+  image: assets/steps/01-formula.png
+  caption: Delay scale
+  notes: derated = delay × signoff derate.
+- type: image
+  title: Input 1.0
+  image: assets/steps/02-in.png
+  caption: Input 1.0
+  notes: Nominal path delay before derate.
+- type: image
+  title: Derate 1.1
+  image: assets/steps/03-rate.png
+  caption: Derate 1.1
+  notes: Read derate from signoff corner.
+- type: image
+  title: Result 1.1
+  image: assets/steps/04-out.png
+  caption: Result 1.1
+  notes: 1.0 × 1.1 = 1.1 ns derated.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: derated=1.1 for delay=1.0.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **derate**. Run derate on delay=1.0; confirm 1.1.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call apply_derate(1.0); assert derated==1.1
+  notes: Call apply_derate(1.0); assert derated==1.1.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Using wrong corner derate
+  - Forgetting multiply order
+  notes: Using wrong corner derate. Forgetting multiply order.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: check suite'
+  notes: 'Next: check suite.'

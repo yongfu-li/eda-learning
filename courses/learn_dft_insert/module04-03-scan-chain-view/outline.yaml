@@ -1,0 +1,58 @@
+title: Chain view
+footer: learn_dft_insert — 03 scan chain view
+slides:
+- type: title
+  title: Chain view
+  subtitle: Browser view stitches chain, ports, and lockup for sanity check
+  notes: Browser view stitches chain, ports, and lockup for sanity check.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: f1→f2→f3→f4; lockup between f3→f4'
+  notes: 'GOLDEN: f1→f2→f3→f4; lockup between f3→f4.'
+- type: image
+  title: Draw chain
+  image: assets/steps/01-draw.png
+  caption: Draw chain
+  notes: Visualize full scan path SI→f1→…→f4→SO.
+- type: image
+  title: Stitch lines
+  image: assets/steps/02-stitches.png
+  caption: Stitch lines
+  notes: Three stitch edges between flops.
+- type: image
+  title: Lockup highlight
+  image: assets/steps/03-lockup.png
+  caption: Lockup highlight
+  notes: Lockup dashed between f3 and f4.
+- type: image
+  title: SE label
+  image: assets/steps/04-se.png
+  caption: SE label
+  notes: scan_enable shown above chain.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: f1→f2→f3→f4 with lockup f3→f4.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **scan-chain-view**. Confirm full chain + lockup drawing.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Reuse stitch + lockup + transform; drawDft shows chain
+  notes: Reuse stitch + lockup + transform; drawDft shows chain.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Drawing functional D paths instead of scan
+  - Hiding lockup
+  notes: Drawing functional D paths instead of scan. Hiding lockup.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: DFT engine'
+  notes: 'Next: DFT engine.'
