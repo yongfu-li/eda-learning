@@ -1,0 +1,38 @@
+{
+  "module": "module02-03-sparse-lu",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "nnz golden?",
+      "choices": [
+        "6",
+        "3",
+        "9",
+        "12"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "LU solves?",
+      "choices": [
+        "Ax=b",
+        "only transient",
+        "netlist parse",
+        "DRC"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Sparse literacy goal?",
+      "choices": [
+        "nnz + factors",
+        "layout DRC",
+        "CTS",
+        "PEX only"
+      ],
+      "answer": 0
+    }
+  ]
+}

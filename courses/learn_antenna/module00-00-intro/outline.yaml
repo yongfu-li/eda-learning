@@ -1,0 +1,34 @@
+title: Welcome
+footer: learn_antenna — 00 intro
+slides:
+- type: title
+  title: Welcome
+  subtitle: After ERC you still need antenna rules , metal/gate ratio, charge, diodes,
+    jumpers
+  notes: After ERC you still need antenna rules — metal/gate ratio, charge, diodes,
+    jumpers.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'Toy tiny_antenna: n1 ratio 25, n3 diode, jumper breaks n1 → 1 marker'
+  notes: 'Toy tiny_antenna: n1 ratio 25, n3 diode, jumper breaks n1 → 1 marker.'
+- type: bullets
+  title: Two tracks
+  bullets:
+  - Implement track uses common/ solvers; browser lab track uses platform tools
+  notes: Implement track uses common/ solvers; browser lab track uses platform tools.
+- type: bullets
+  title: Toy layout
+  bullets:
+  - 'Tiny_antenna: n1 ratio 25, n3 diode, jumper breaks n1 metal → 1 marker'
+  notes: 'tiny_antenna: n1 ratio 25, n3 diode, jumper breaks n1 metal → 1 marker.'
+- type: bullets
+  title: Path
+  bullets:
+  - Metal → gate → ratio → charge → threshold → diode → jumper → markers → engine
+  notes: Metal → gate → ratio → charge → threshold → diode → jumper → markers → engine.
+- type: bullets
+  title: Begin
+  bullets:
+  - 'Next: metal area per net'
+  notes: 'Next: metal area per net.'

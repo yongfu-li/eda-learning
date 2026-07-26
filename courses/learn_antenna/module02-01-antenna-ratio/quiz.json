@@ -1,0 +1,38 @@
+{
+  "module": "module02-01-antenna-ratio",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "ratio n1?",
+      "choices": [
+        "25",
+        "4",
+        "45",
+        "1"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "ratio n2?",
+      "choices": [
+        "4",
+        "25",
+        "8",
+        "2"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "ratio n3?",
+      "choices": [
+        "45",
+        "40",
+        "25",
+        "5"
+      ],
+      "answer": 0
+    }
+  ]
+}

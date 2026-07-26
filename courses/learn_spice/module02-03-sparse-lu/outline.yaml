@@ -1,0 +1,59 @@
+title: Why sparse
+footer: learn_spice — 03 sparse lu
+slides:
+- type: title
+  title: Why sparse
+  subtitle: Production SPICE uses sparse LU , count nonzeros and inspect L/U structure
+  notes: Production SPICE uses sparse LU — count nonzeros and inspect L/U structure.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: nnz=6 on the toy MNA conductance matrix'
+  notes: 'GOLDEN: nnz=6 on the toy MNA conductance matrix.'
+- type: image
+  title: NNZ
+  image: assets/steps/01-nnz.png
+  caption: NNZ
+  notes: Count nonzeros in G.
+- type: image
+  title: Factor L
+  image: assets/steps/02-l.png
+  caption: Factor L
+  notes: Lower triangular factor.
+- type: image
+  title: Factor U
+  image: assets/steps/03-u.png
+  caption: Factor U
+  notes: Upper triangular factor.
+- type: image
+  title: Fwd/back idea
+  image: assets/steps/04-fb.png
+  caption: Fwd/back idea
+  notes: Solve Ly=b then Ux=y.
+- type: image
+  title: NNZ 6
+  image: assets/steps/05-n6.png
+  caption: NNZ 6
+  notes: GOLDEN nnz=6 on toy G.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **sparse-lu**. Factor G; confirm nnz=6.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call sparse_lu_lite(G from dc_linear_solve); assert nnz==6
+  notes: Call sparse_lu_lite(G from dc_linear_solve); assert nnz==6.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Confusing nnz with matrix dimension
+  - Expecting fill-in on this tiny dense G
+  notes: Confusing nnz with matrix dimension. Expecting fill-in on this tiny dense
+    G.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: Newton-Raphson on the same stamps'
+  notes: 'Next: Newton-Raphson on the same stamps.'

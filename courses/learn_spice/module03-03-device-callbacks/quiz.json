@@ -1,0 +1,38 @@
+{
+  "module": "module03-03-device-callbacks",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Callback returns?",
+      "choices": [
+        "i and g",
+        "only v",
+        "layout bbox",
+        "nnz"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "diode_loop_newton converged?",
+      "choices": [
+        "True",
+        "False",
+        "N/A",
+        "unknown"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "g is?",
+      "choices": [
+        "di/dv",
+        "d2i/dv2",
+        "1/R only",
+        "C/dt"
+      ],
+      "answer": 0
+    }
+  ]
+}

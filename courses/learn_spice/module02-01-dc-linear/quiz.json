@@ -1,0 +1,38 @@
+{
+  "module": "module02-01-dc-linear",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "V2 golden (V)?",
+      "choices": [
+        "3.0",
+        "5.0",
+        "2.0",
+        "2.255"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "V1 golden (V)?",
+      "choices": [
+        "5.0",
+        "3.0",
+        "0.0",
+        "2.5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Divider formula?",
+      "choices": [
+        "Vin*R2/(R1+R2)",
+        "Vin*R1/R2",
+        "Vin/2",
+        "I*R only"
+      ],
+      "answer": 0
+    }
+  ]
+}

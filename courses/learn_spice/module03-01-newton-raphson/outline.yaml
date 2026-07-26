@@ -1,0 +1,60 @@
+title: Why Newton
+footer: learn_spice — 01 newton raphson
+slides:
+- type: title
+  title: Why Newton
+  subtitle: Newton-Raphson linearizes nonlinear devices and iterates until the residual
+    drops
+  notes: Newton-Raphson linearizes nonlinear devices and iterates until the residual
+    drops.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: 1 iteration with linear-only stamps; v2=3.0'
+  notes: 'GOLDEN: 1 iteration with linear-only stamps; v2=3.0.'
+- type: image
+  title: Guess
+  image: assets/steps/01-guess.png
+  caption: Guess
+  notes: Start from linear OP.
+- type: image
+  title: Jacobian
+  image: assets/steps/02-jac.png
+  caption: Jacobian
+  notes: Restamp G each iteration.
+- type: image
+  title: Update
+  image: assets/steps/03-upd.png
+  caption: Update
+  notes: Solve and update x.
+- type: image
+  title: Residual
+  image: assets/steps/04-res.png
+  caption: Residual
+  notes: Stop when |dx| small.
+- type: image
+  title: Converged
+  image: assets/steps/05-conv.png
+  caption: Converged
+  notes: 'GOLDEN: 1 iter, v2=3.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **newton-raphson**. Run NR without diode; confirm 1 iter and v2=3.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call newton_raphson_dc(include_diode=False); assert iters==1 and v2≈3.0
+  notes: Call newton_raphson_dc(include_diode=False); assert iters==1 and v2≈3.0.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Enabling diode when the lesson is linear convergence
+  - Wrong tolerance units
+  notes: Enabling diode when the lesson is linear convergence. Wrong tolerance units.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: device callbacks for diodes'
+  notes: 'Next: device callbacks for diodes.'

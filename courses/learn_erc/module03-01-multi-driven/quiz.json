@@ -1,0 +1,38 @@
+{
+  "module": "module03-01-multi-driven",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "multi_driven_count?",
+      "choices": [
+        "1",
+        "0",
+        "2",
+        "3"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Multi net?",
+      "choices": [
+        "z",
+        "y",
+        "a",
+        "float_n"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Drivers on z?",
+      "choices": [
+        "u2.Y+u3.Y",
+        "u1 only",
+        "none",
+        "short1"
+      ],
+      "answer": 0
+    }
+  ]
+}

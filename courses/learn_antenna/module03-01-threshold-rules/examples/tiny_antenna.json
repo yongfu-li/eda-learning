@@ -1,0 +1,19 @@
+{
+  "limit_ratio": 10.0,
+  "charge_k": 1.0,
+  "gates": [
+    { "id": "g1", "net": "n1", "area": 1.0 },
+    { "id": "g2", "net": "n2", "area": 2.0 },
+    { "id": "g3", "net": "n3", "area": 1.0 }
+  ],
+  "metals": [
+    { "id": "m1", "net": "n1", "layer": 2, "area": 25.0 },
+    { "id": "m2", "net": "n2", "layer": 2, "area": 8.0 },
+    { "id": "m3", "net": "n3", "layer": 3, "area": 40.0 },
+    { "id": "m3b", "net": "n3", "layer": 1, "area": 5.0 }
+  ],
+  "diodes": [
+    { "id": "d1", "net": "n3" }
+  ],
+  "jumpers": []
+}

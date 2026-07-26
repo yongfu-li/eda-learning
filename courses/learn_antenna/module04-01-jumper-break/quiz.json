@@ -1,0 +1,38 @@
+{
+  "module": "module04-01-jumper-break",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "jumper n1 ratio after?",
+      "choices": [
+        "0",
+        "25",
+        "4",
+        "45"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "max_layer on n1?",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "0"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Dropped metal?",
+      "choices": [
+        "m1 L2",
+        "g1",
+        "d1",
+        "m3"
+      ],
+      "answer": 0
+    }
+  ]
+}

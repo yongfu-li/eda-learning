@@ -1,0 +1,38 @@
+{
+  "module": "module05-01-erc-engine",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "engine ok?",
+      "choices": [
+        "True",
+        "False",
+        "unknown",
+        "N/A"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "marker_count?",
+      "choices": [
+        "5",
+        "4",
+        "6",
+        "0"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Engine includes shorts?",
+      "choices": [
+        "yes",
+        "no",
+        "wells only",
+        "SPICE only"
+      ],
+      "answer": 0
+    }
+  ]
+}

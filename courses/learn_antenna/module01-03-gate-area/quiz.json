@@ -1,0 +1,38 @@
+{
+  "module": "module01-03-gate-area",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "gate_area n1?",
+      "choices": [
+        "1",
+        "25",
+        "2",
+        "45"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "gate_count?",
+      "choices": [
+        "3",
+        "4",
+        "1",
+        "8"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "n2 gate area?",
+      "choices": [
+        "2",
+        "8",
+        "1",
+        "4"
+      ],
+      "answer": 0
+    }
+  ]
+}

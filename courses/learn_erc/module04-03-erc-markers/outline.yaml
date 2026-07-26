@@ -1,0 +1,58 @@
+title: Why markers
+footer: learn_erc — 03 erc markers
+slides:
+- type: title
+  title: Why markers
+  subtitle: Signoff ERC emits markers , one record per violation class hit
+  notes: Signoff ERC emits markers — one record per violation class hit.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: marker_count=5 on tiny_erc'
+  notes: 'GOLDEN: marker_count=5 on tiny_erc.'
+- type: image
+  title: Floating m
+  image: assets/steps/01-float.png
+  caption: Floating m
+  notes: One floating marker on float_n.
+- type: image
+  title: Undriven m
+  image: assets/steps/02-undrv.png
+  caption: Undriven m
+  notes: One undriven marker on u2.A.
+- type: image
+  title: Multi m
+  image: assets/steps/03-multi.png
+  caption: Multi m
+  notes: One multi-driven marker on z.
+- type: image
+  title: Short+well
+  image: assets/steps/04-sw.png
+  caption: Short+well
+  notes: Supply short + well error markers.
+- type: image
+  title: Count 5
+  image: assets/steps/05-count.png
+  caption: Count 5
+  notes: 'GOLDEN: marker_count=5.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **erc-markers**. Run collect; confirm 5 markers.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call collect_markers(); assert count==5
+  notes: Call collect_markers(); assert count==5.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Double-counting float as two markers incorrectly in the golden
+  - Missing well
+  notes: Double-counting float as two markers incorrectly in the golden. Missing well.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: erc_engine integration'
+  notes: 'Next: erc_engine integration.'

@@ -1,0 +1,38 @@
+{
+  "module": "module05-01-antenna-engine",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "engine ok?",
+      "choices": [
+        "True",
+        "False",
+        "unknown",
+        "N/A"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "marker_count?",
+      "choices": [
+        "1",
+        "2",
+        "5",
+        "0"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Engine includes jumper?",
+      "choices": [
+        "yes",
+        "no",
+        "diodes only",
+        "ERC only"
+      ],
+      "answer": 0
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+title: Wrap
+footer: learn_antenna — 00 wrap
+slides:
+- type: title
+  title: Wrap
+  subtitle: 'You checked tiny_antenna: n1 ratio 25; n3 diode; 1 marker; jumper clears
+    n1'
+  notes: 'You checked tiny_antenna: n1 ratio 25; n3 diode; 1 marker; jumper clears
+    n1.'
+- type: bullets
+  title: The idea
+  bullets:
+  - 'Natural next: learn_power'
+  notes: 'Natural next: learn_power.'
+- type: bullets
+  title: Recap
+  bullets:
+  - Recap metal/gate area, ratio, charge, threshold, diode, jumper, markers, engine
+  notes: Recap metal/gate area, ratio, charge, threshold, diode, jumper, markers,
+    engine.
+- type: bullets
+  title: Goldens
+  bullets:
+  - N1 ratio 25; raw viol=2; after diode=1; marker=1; jumper n1=0; engine ok
+  notes: n1 ratio 25; raw viol=2; after diode=1; marker=1; jumper n1=0; engine ok.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - 'Natural next: learn_power'
+  notes: 'Natural next: learn_power.'
+- type: bullets
+  title: Close
+  bullets:
+  - Mark the wrap done when you can explain diode and jumper fixes
+  notes: Mark the wrap done when you can explain diode and jumper fixes.

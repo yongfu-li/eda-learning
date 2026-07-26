@@ -1,0 +1,38 @@
+{
+  "module": "module00-00-intro",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Focus of Welcome?",
+      "choices": [
+        "Explain electrical rule checks on a tiny netlist graph after",
+        "Place only",
+        "CTS only",
+        "DRC width"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Course id?",
+      "choices": [
+        "learn_erc",
+        "learn_spice",
+        "learn_power",
+        "learn_drc"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "marker_count golden?",
+      "choices": [
+        "5",
+        "1",
+        "8",
+        "0"
+      ],
+      "answer": 0
+    }
+  ]
+}

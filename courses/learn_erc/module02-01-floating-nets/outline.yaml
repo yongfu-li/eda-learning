@@ -1,0 +1,58 @@
+title: Why floating
+footer: learn_erc — 01 floating nets
+slides:
+- type: title
+  title: Why floating
+  subtitle: A floating net has loads but no driver , classic ERC fail
+  notes: A floating net has loads but no driver — classic ERC fail.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: floating_nets=[''float_n''], count=1'
+  notes: 'GOLDEN: floating_nets=[''float_n''], count=1.'
+- type: image
+  title: No driver
+  image: assets/steps/01-nodrv.png
+  caption: No driver
+  notes: float_n has zero output pins.
+- type: image
+  title: Has load
+  image: assets/steps/02-load.png
+  caption: Has load
+  notes: u2.A loads float_n.
+- type: image
+  title: Not port
+  image: assets/steps/03-port.png
+  caption: Not port
+  notes: float_n is not a primary port.
+- type: image
+  title: Not supply
+  image: assets/steps/04-sup.png
+  caption: Not supply
+  notes: float_n is not vdd/vss.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: floating_count=1.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **floating-nets**. Select float_n; run floating check.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call find_floating_nets(); assert nets==['float_n']
+  notes: Call find_floating_nets(); assert nets==['float_n'].
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Flagging primary inputs as floating
+  - Ignoring unused well nets
+  notes: Flagging primary inputs as floating. Ignoring unused well nets.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: undriven inputs'
+  notes: 'Next: undriven inputs.'

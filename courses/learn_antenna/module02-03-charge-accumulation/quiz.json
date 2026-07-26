@@ -1,0 +1,38 @@
+{
+  "module": "module02-03-charge-accumulation",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "charge n1?",
+      "choices": [
+        "25",
+        "1",
+        "10",
+        "45"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "charge_k on toy?",
+      "choices": [
+        "1",
+        "10",
+        "25",
+        "0"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "charge uses?",
+      "choices": [
+        "metal area",
+        "gate area",
+        "ratio only",
+        "diode count"
+      ],
+      "answer": 0
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "module": "module00-00-intro",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Focus of Welcome?",
+      "choices": [
+        "Explain why post-PEX signoff needs a circuit engine: MNA, Ne",
+        "Place only",
+        "CTS only",
+        "DRC width"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Course id?",
+      "choices": [
+        "learn_spice",
+        "learn_pex",
+        "learn_power",
+        "learn_drc"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Engine dc_v2 golden?",
+      "choices": [
+        "3.0",
+        "2.255",
+        "5.0",
+        "0.0"
+      ],
+      "answer": 0
+    }
+  ]
+}

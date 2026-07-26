@@ -1,0 +1,33 @@
+title: Offline compare
+footer: learn_erc — 03 offline benchmark compare
+slides:
+- type: title
+  title: Offline compare
+  subtitle: Track A prints erc_compare without the browser
+  notes: Track A prints erc_compare without the browser.
+- type: bullets
+  title: The idea
+  bullets:
+  - Load tiny_erc.json; print net_count, floating_count, marker_count, ok
+  notes: Load tiny_erc.json; print net_count, floating_count, marker_count, ok.
+- type: bullets
+  title: Why offline
+  bullets:
+  - Print erc_compare metrics offline without the browser
+  notes: Print erc_compare metrics offline without the browser.
+- type: bullets
+  title: Commands
+  bullets:
+  - Python3 -c "from solvers import erc_compare; print(erc_compare())" in common/
+  notes: python3 -c "from solvers import erc_compare; print(erc_compare())" in common/
+- type: bullets
+  title: What to compare
+  bullets:
+  - Load tiny_erc.json; print net_count, floating_count, marker_count, ok
+  notes: Load tiny_erc.json; print net_count, floating_count, marker_count, ok.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue to the wrap module
+  notes: Continue to the wrap module.

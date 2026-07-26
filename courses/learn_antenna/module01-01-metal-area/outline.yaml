@@ -1,0 +1,58 @@
+title: Metal area
+footer: learn_antenna — 01 metal area
+slides:
+- type: title
+  title: Metal area
+  subtitle: Antenna checks start by summing metal area on each net
+  notes: Antenna checks start by summing metal area on each net.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: metal_area n1=25'
+  notes: 'GOLDEN: metal_area n1=25.'
+- type: image
+  title: Sum metal
+  image: assets/steps/01-sum.png
+  caption: Sum metal
+  notes: Sum metal area per net from layer shapes.
+- type: image
+  title: Net n1
+  image: assets/steps/02-n1.png
+  caption: Net n1
+  notes: n1 has one layer-2 metal m1 area 25.
+- type: image
+  title: Net n2
+  image: assets/steps/03-n2.png
+  caption: Net n2
+  notes: n2 metal m2 area 8.
+- type: image
+  title: Net n3
+  image: assets/steps/04-n3.png
+  caption: Net n3
+  notes: n3 metals m3+m3b sum to 45.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: metal_area n1=25.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **metal-area**. Inspect tiny_antenna; confirm n1 metal=25.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call metal_area_by_net(); assert area['n1']==25
+  notes: Call metal_area_by_net(); assert area['n1']==25.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Double-counting after jumper cap
+  - Ignoring layer filter
+  notes: Double-counting after jumper cap. Ignoring layer filter.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: gate area per net'
+  notes: 'Next: gate area per net.'

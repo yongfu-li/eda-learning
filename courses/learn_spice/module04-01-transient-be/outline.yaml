@@ -1,0 +1,59 @@
+title: Why transient
+footer: learn_spice — 01 transient be
+slides:
+- type: title
+  title: Why transient
+  subtitle: 'Transient analysis steps time: capacitors use companion models at each
+    dt'
+  notes: 'Transient analysis steps time: capacitors use companion models at each dt.'
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: dt=0.5, 4 steps, final_v2≈2.255181 (BE RC from v2_init=0)'
+  notes: 'GOLDEN: dt=0.5, 4 steps, final_v2≈2.255181 (BE RC from v2_init=0).'
+- type: image
+  title: Companion
+  image: assets/steps/01-comp.png
+  caption: Companion
+  notes: C → G=C/dt + history current.
+- type: image
+  title: dt
+  image: assets/steps/02-dt.png
+  caption: dt
+  notes: dt=0.5 on the toy.
+- type: image
+  title: Step 1
+  image: assets/steps/03-s1.png
+  caption: Step 1
+  notes: First BE step from v2=0.
+- type: image
+  title: Waveform
+  image: assets/steps/04-wav.png
+  caption: Waveform
+  notes: Four steps toward DC.
+- type: image
+  title: Final
+  image: assets/steps/05-fin.png
+  caption: Final
+  notes: GOLDEN final≈2.255.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **transient-be**. Run BE; confirm final_v2≈2.255181.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call transient_be(dt=0.5, steps=4); assert abs(final_v2-2.255181)<1e-5
+  notes: Call transient_be(dt=0.5, steps=4); assert abs(final_v2-2.255181)<1e-5.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Using forward Euler by mistake
+  - Wrong initial capacitor voltage
+  notes: Using forward Euler by mistake. Wrong initial capacitor voltage.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: OP then TRAN pipeline'
+  notes: 'Next: OP then TRAN pipeline.'

@@ -1,0 +1,38 @@
+{
+  "module": "module04-03-op-tran-pipeline",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "OP V2 golden?",
+      "choices": [
+        "3.0",
+        "2.255",
+        "0.0",
+        "5.0"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "TRAN starts v2_init?",
+      "choices": [
+        "0",
+        "3.0",
+        "5.0",
+        "OP value"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Pipeline order?",
+      "choices": [
+        "OP then TRAN",
+        "TRAN then OP",
+        "NR only",
+        "LU only"
+      ],
+      "answer": 0
+    }
+  ]
+}

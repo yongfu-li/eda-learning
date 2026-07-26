@@ -1,0 +1,35 @@
+title: Offline compare
+footer: learn_antenna — 03 offline benchmark compare
+slides:
+- type: title
+  title: Offline compare
+  subtitle: Track A prints antenna_compare without the browser
+  notes: Track A prints antenna_compare without the browser.
+- type: bullets
+  title: The idea
+  bullets:
+  - Load tiny_antenna.json; print ratio_n1, violation_count, marker_count, ok
+  notes: Load tiny_antenna.json; print ratio_n1, violation_count, marker_count, ok.
+- type: bullets
+  title: Why offline
+  bullets:
+  - Print antenna_compare metrics offline without the browser
+  notes: Print antenna_compare metrics offline without the browser.
+- type: bullets
+  title: Commands
+  bullets:
+  - Python3 -c "from solvers import antenna_compare; print(antenna_compare())" in
+    common/
+  notes: python3 -c "from solvers import antenna_compare; print(antenna_compare())"
+    in common/
+- type: bullets
+  title: What to compare
+  bullets:
+  - Load tiny_antenna.json; print ratio_n1, violation_count, marker_count, ok
+  notes: Load tiny_antenna.json; print ratio_n1, violation_count, marker_count, ok.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue to the wrap module
+  notes: Continue to the wrap module.

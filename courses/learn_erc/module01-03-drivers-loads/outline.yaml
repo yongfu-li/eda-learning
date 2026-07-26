@@ -1,0 +1,58 @@
+title: Why drivers
+footer: learn_erc — 03 drivers loads
+slides:
+- type: title
+  title: Why drivers
+  subtitle: ERC needs drivers and loads , output pins drive; input pins load
+  notes: ERC needs drivers and loads — output pins drive; input pins load.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: z has 2 drivers; float_n has 0 drivers and 1 load'
+  notes: 'GOLDEN: z has 2 drivers; float_n has 0 drivers and 1 load.'
+- type: image
+  title: Out pins
+  image: assets/steps/01-out.png
+  caption: Out pins
+  notes: Y pins are drivers (dir=out).
+- type: image
+  title: In pins
+  image: assets/steps/02-in.png
+  caption: In pins
+  notes: A pins are loads (dir=in).
+- type: image
+  title: z drivers
+  image: assets/steps/03-z.png
+  caption: z drivers
+  notes: 'Net z: u2.Y and u3.Y — two drivers.'
+- type: image
+  title: float
+  image: assets/steps/04-float.png
+  caption: float
+  notes: 'float_n: zero drivers, one load (u2.A).'
+- type: image
+  title: Count
+  image: assets/steps/05-count.png
+  caption: Count
+  notes: 'GOLDEN: float_n drivers=0, z drivers=2.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **drivers-loads**. Confirm z has 2 drivers and float_n has 0.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call drivers_and_loads(); assert len(by_net['z']['drivers'])==2
+  notes: Call drivers_and_loads(); assert len(by_net['z']['drivers'])==2.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Treating power pins as drivers
+  - Ignoring SHORT io pins
+  notes: Treating power pins as drivers. Ignoring SHORT io pins.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: floating nets'
+  notes: 'Next: floating nets.'

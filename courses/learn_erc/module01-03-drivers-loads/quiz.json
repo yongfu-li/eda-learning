@@ -1,0 +1,38 @@
+{
+  "module": "module01-03-drivers-loads",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "z driver count?",
+      "choices": [
+        "2",
+        "1",
+        "0",
+        "3"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "float_n drivers?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Y pin direction?",
+      "choices": [
+        "out",
+        "in",
+        "power",
+        "ground"
+      ],
+      "answer": 0
+    }
+  ]
+}

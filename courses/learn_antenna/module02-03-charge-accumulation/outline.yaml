@@ -1,0 +1,58 @@
+title: Charge
+footer: learn_antenna — 03 charge accumulation
+slides:
+- type: title
+  title: Charge
+  subtitle: Plasma etch charge scales with exposed metal , toy uses Q=k×metal
+  notes: Plasma etch charge scales with exposed metal — toy uses Q=k×metal.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: charge_n1=25'
+  notes: 'GOLDEN: charge_n1=25.'
+- type: image
+  title: Charge k
+  image: assets/steps/01-k.png
+  caption: Charge k
+  notes: Q = k × metal_area; k=1 on toy.
+- type: image
+  title: n1 Q
+  image: assets/steps/02-n1q.png
+  caption: n1 Q
+  notes: n1 metal 25 → Q=25.
+- type: image
+  title: n2 Q
+  image: assets/steps/03-n2q.png
+  caption: n2 Q
+  notes: n2 Q=8.
+- type: image
+  title: n3 Q
+  image: assets/steps/04-n3q.png
+  caption: n3 Q
+  notes: n3 Q=45.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: charge_n1=25.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **charge-accumulation**. Confirm Q on n1=25.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call charge_by_net(); assert charge['n1']==25
+  notes: Call charge_by_net(); assert charge['n1']==25.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Using ratio instead of metal for Q
+  - Wrong k constant
+  notes: Using ratio instead of metal for Q. Wrong k constant.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: threshold rules'
+  notes: 'Next: threshold rules.'

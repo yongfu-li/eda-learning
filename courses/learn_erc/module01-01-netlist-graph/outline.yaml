@@ -1,0 +1,58 @@
+title: Why graph
+footer: learn_erc — 01 netlist graph
+slides:
+- type: title
+  title: Why graph
+  subtitle: ERC starts from a connectivity graph , instances, nets, and pin edges
+  notes: ERC starts from a connectivity graph — instances, nets, and pin edges.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: 8 nets, 4 instances, 14 pin edges'
+  notes: 'GOLDEN: 8 nets, 4 instances, 14 pin edges.'
+- type: image
+  title: Nets
+  image: assets/steps/01-nets.png
+  caption: Nets
+  notes: 'Eight nets: supplies, ports, float_n, z, well_n.'
+- type: image
+  title: Instances
+  image: assets/steps/02-inst.png
+  caption: Instances
+  notes: 'Four instances: u1, u2, u3, short1.'
+- type: image
+  title: Edges
+  image: assets/steps/03-edges.png
+  caption: Edges
+  notes: Each pin attachment is an inst–net edge.
+- type: image
+  title: Walk
+  image: assets/steps/04-walk.png
+  caption: Walk
+  notes: 'Walk pins on u1 INV: A,Y,VDD,VSS.'
+- type: image
+  title: Count
+  image: assets/steps/05-count.png
+  caption: Count
+  notes: 'GOLDEN: edge_count=14.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **netlist-graph**. Inspect tiny_erc; confirm 8 nets and 14 edges.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call design_stats() and build_connectivity(); assert net_count==8, edge_count==14
+  notes: Call design_stats() and build_connectivity(); assert net_count==8, edge_count==14.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Counting wells as instances
+  - Double-counting supply pins
+  notes: Counting wells as instances. Double-counting supply pins.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: classify drivers vs loads'
+  notes: 'Next: classify drivers vs loads.'

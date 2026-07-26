@@ -1,0 +1,38 @@
+{
+  "module": "module00-00-intro",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Focus of Welcome?",
+      "choices": [
+        "Explain antenna ratio and charge checks on a tiny metal/gate",
+        "Place only",
+        "CTS only",
+        "DRC width"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Course id?",
+      "choices": [
+        "learn_antenna",
+        "learn_erc",
+        "learn_power",
+        "learn_drc"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "marker_count golden?",
+      "choices": [
+        "1",
+        "2",
+        "5",
+        "0"
+      ],
+      "answer": 0
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+title: Why DC
+footer: learn_spice — 01 dc linear
+slides:
+- type: title
+  title: Why DC
+  subtitle: Linear DC finds the operating point before Newton or transient analysis
+  notes: Linear DC finds the operating point before Newton or transient analysis.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: V1=5.0, V2=3.0 from the divider 5×3/(2+3)'
+  notes: 'GOLDEN: V1=5.0, V2=3.0 from the divider 5×3/(2+3).'
+- type: image
+  title: Build
+  image: assets/steps/01-build.png
+  caption: Build
+  notes: Stamp linear R+V system.
+- type: image
+  title: Solve
+  image: assets/steps/02-solve.png
+  caption: Solve
+  notes: Dense solve Gx=b.
+- type: image
+  title: V1=5
+  image: assets/steps/03-v1.png
+  caption: V1=5
+  notes: Node 1 fixed by Vin.
+- type: image
+  title: V2=3
+  image: assets/steps/04-v2.png
+  caption: V2=3
+  notes: Divider 5·3/(2+3)=3.
+- type: image
+  title: Golden
+  image: assets/steps/05-g.png
+  caption: Golden
+  notes: GOLDEN v2_dc=3.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **dc-linear**. Solve DC; confirm V2=3.0.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call dc_linear_solve(); assert abs(volts['2']-3.0)<1e-9 and volts['1']==5.0
+  notes: Call dc_linear_solve(); assert abs(volts['2']-3.0)<1e-9 and volts['1']==5.0.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Including diode in linear DC
+  - Wrong divider formula
+  notes: Including diode in linear DC. Wrong divider formula.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: sparse LU literacy on G'
+  notes: 'Next: sparse LU literacy on G.'

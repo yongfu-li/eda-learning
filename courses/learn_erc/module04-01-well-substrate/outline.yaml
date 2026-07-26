@@ -1,0 +1,58 @@
+title: Why wells
+footer: learn_erc — 01 well substrate
+slides:
+- type: title
+  title: Why wells
+  subtitle: Wells must tie to the right rail , nwell→power, pwell→ground
+  notes: Wells must tie to the right rail — nwell→power, pwell→ground.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: well_error_count=1 , nw1 nwell tied to vss'
+  notes: 'GOLDEN: well_error_count=1 — nw1 nwell tied to vss.'
+- type: image
+  title: nwell rule
+  image: assets/steps/01-nwell.png
+  caption: nwell rule
+  notes: nwell must tie to a power supply.
+- type: image
+  title: Bad tie
+  image: assets/steps/02-bad.png
+  caption: Bad tie
+  notes: nw1.tied_to = vss (ground) — wrong.
+- type: image
+  title: Expected
+  image: assets/steps/03-exp.png
+  caption: Expected
+  notes: Expected power (vdd).
+- type: image
+  title: pwell note
+  image: assets/steps/04-pwell.png
+  caption: pwell note
+  notes: pwell would require ground.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: well_error_count=1.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **well-substrate**. Confirm nw1 error.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call find_well_errors(); assert count==1
+  notes: Call find_well_errors(); assert count==1.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Accepting nwell→vss
+  - Ignoring well records
+  notes: Accepting nwell→vss. Ignoring well records.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: collect ERC markers'
+  notes: 'Next: collect ERC markers.'

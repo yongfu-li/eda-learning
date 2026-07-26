@@ -1,0 +1,38 @@
+{
+  "module": "module05-01-spice-engine",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "dc_v2 golden?",
+      "choices": [
+        "3.0",
+        "2.255",
+        "5.0",
+        "0.0"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "engine ok?",
+      "choices": [
+        "True",
+        "False",
+        "unknown",
+        "N/A"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Engine includes?",
+      "choices": [
+        "DC+NR+TRAN+diode",
+        "netlist only",
+        "PEX only",
+        "CTS"
+      ],
+      "answer": 0
+    }
+  ]
+}

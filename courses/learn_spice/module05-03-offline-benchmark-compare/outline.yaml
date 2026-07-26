@@ -1,0 +1,38 @@
+title: Offline compare
+footer: learn_spice — 03 offline benchmark compare
+slides:
+- type: title
+  title: Offline compare
+  subtitle: Track A prints spice_compare without the browser
+  notes: Track A prints spice_compare without the browser.
+- type: bullets
+  title: The idea
+  bullets:
+  - Load tiny_spice.json; print element_count, mna_size, dc_v2, nr_iters, tran_final_v2,
+    ok
+  notes: Load tiny_spice.json; print element_count, mna_size, dc_v2, nr_iters, tran_final_v2,
+    ok.
+- type: bullets
+  title: Why offline
+  bullets:
+  - Print spice_compare metrics offline without the browser
+  notes: Print spice_compare metrics offline without the browser.
+- type: bullets
+  title: Commands
+  bullets:
+  - Python3 -c "from solvers import spice_compare; print(spice_compare())" in common/
+  notes: python3 -c "from solvers import spice_compare; print(spice_compare())" in
+    common/
+- type: bullets
+  title: What to compare
+  bullets:
+  - Load tiny_spice.json; print element_count, mna_size, dc_v2, nr_iters, tran_final_v2,
+    ok
+  notes: Load tiny_spice.json; print element_count, mna_size, dc_v2, nr_iters, tran_final_v2,
+    ok.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue to the wrap module
+  notes: Continue to the wrap module.

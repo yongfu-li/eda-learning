@@ -1,0 +1,58 @@
+title: Why multi
+footer: learn_erc — 01 multi driven
+slides:
+- type: title
+  title: Why multi
+  subtitle: Two outputs on one net is a fight , multi-driven ERC
+  notes: Two outputs on one net is a fight — multi-driven ERC.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: multi_driven_nets=[''z''] from u2.Y and u3.Y'
+  notes: 'GOLDEN: multi_driven_nets=[''z''] from u2.Y and u3.Y.'
+- type: image
+  title: Count drivers
+  image: assets/steps/01-count.png
+  caption: Count drivers
+  notes: Per net, count dir=out pins.
+- type: image
+  title: Threshold
+  image: assets/steps/02-thr.png
+  caption: Threshold
+  notes: Flag when drivers ≥ 2.
+- type: image
+  title: z fight
+  image: assets/steps/03-fight.png
+  caption: z fight
+  notes: u2.Y and u3.Y both drive z.
+- type: image
+  title: y ok
+  image: assets/steps/04-yok.png
+  caption: y ok
+  notes: y has a single driver — legal.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: multi_driven_count=1.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **multi-driven**. Select z; confirm multi-driven.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call find_multi_driven(); assert nets==['z']
+  notes: Call find_multi_driven(); assert nets==['z'].
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Counting power pins as drivers
+  - Flagging single-driver nets
+  notes: Counting power pins as drivers. Flagging single-driver nets.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: supply shorts'
+  notes: 'Next: supply shorts.'

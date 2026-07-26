@@ -1,0 +1,58 @@
+title: Why undriven
+footer: learn_erc — 03 undriven inputs
+slides:
+- type: title
+  title: Why undriven
+  subtitle: Undriven inputs are the pin-level view of floating connectivity
+  notes: Undriven inputs are the pin-level view of floating connectivity.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: one hit , u2.A on float_n'
+  notes: 'GOLDEN: one hit — u2.A on float_n.'
+- type: image
+  title: Scan loads
+  image: assets/steps/01-scan.png
+  caption: Scan loads
+  notes: Walk every input pin attachment.
+- type: image
+  title: Driver?
+  image: assets/steps/02-drv.png
+  caption: Driver?
+  notes: Skip if the net already has a driver.
+- type: image
+  title: Primary in
+  image: assets/steps/03-pi.png
+  caption: Primary in
+  notes: Primary input ports are allowed undriven.
+- type: image
+  title: Hit
+  image: assets/steps/04-hit.png
+  caption: Hit
+  notes: u2.A on float_n is the golden hit.
+- type: image
+  title: Count
+  image: assets/steps/05-count.png
+  caption: Count
+  notes: 'GOLDEN: undriven_count=1.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **undriven-inputs**. Confirm u2.A undriven.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call find_undriven_inputs(); assert count==1 and hits[0].net=='float_n'
+  notes: Call find_undriven_inputs(); assert count==1 and hits[0].net=='float_n'.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Flagging port a as undriven
+  - Missing the float_n load
+  notes: Flagging port a as undriven. Missing the float_n load.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: multi-driven nets'
+  notes: 'Next: multi-driven nets.'

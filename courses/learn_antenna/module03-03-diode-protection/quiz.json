@@ -1,0 +1,38 @@
+{
+  "module": "module03-03-diode-protection",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "violation count after diode?",
+      "choices": [
+        "1",
+        "2",
+        "0",
+        "3"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Protected net?",
+      "choices": [
+        "n3",
+        "n1",
+        "n2",
+        "none"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Remaining violation net?",
+      "choices": [
+        "n1",
+        "n3",
+        "n2",
+        "all"
+      ],
+      "answer": 0
+    }
+  ]
+}

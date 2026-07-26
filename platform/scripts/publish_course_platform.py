@@ -350,6 +350,63 @@ COURSE_META = {
         "first_lab": "conflict-graph",
         "first_n": "02",
     },
+    "learn_spice": {
+        "title": "SPICE / circuit sim for EDA",
+        "focus": "Netlist → MNA stamps → DC → sparse LU → Newton → device callbacks → TRAN → engine",
+        "prereq": None,
+        "status": "ready",
+        "repo": "learn_spice",
+        "modules_md": ROOT / "courses" / "learn_spice" / "docs" / "MODULES.md",
+        "course_root": ROOT / "courses" / "learn_spice",
+        "lead": (
+            "Circuit-sim engine literacy on a tiny divider+RC — MNA stamps, Newton, sparse LU lite, backward-Euler transient. "
+            "Clips and decks load from "
+            "<code>courses/learn_spice</code> "
+            "(<code>moduleSS-AA-slug/video.mp4</code>). Open the matching browser tool, then mark the lab done."
+        ),
+        "tools_href": "../../tools/index.html#spice",
+        "tools_label": "SPICE tools",
+        "first_lab": "netlist-nodes",
+        "first_n": "02",
+    },
+    "learn_erc": {
+        "title": "ERC for EDA",
+        "focus": "Netlist graph → drivers/loads → floating → undriven → multi-drive → supply shorts → wells → markers → engine",
+        "prereq": None,
+        "status": "ready",
+        "repo": "learn_erc",
+        "modules_md": ROOT / "courses" / "learn_erc" / "docs" / "MODULES.md",
+        "course_root": ROOT / "courses" / "learn_erc",
+        "lead": (
+            "Electrical rule check literacy on tiny_erc — floating gates, multi-drive, supply shorts, well ties, markers. "
+            "Clips and decks load from "
+            "<code>courses/learn_erc</code> "
+            "(<code>moduleSS-AA-slug/video.mp4</code>). Open the matching browser tool, then mark the lab done."
+        ),
+        "tools_href": "../../tools/index.html#erc",
+        "tools_label": "ERC tools",
+        "first_lab": "netlist-graph",
+        "first_n": "02",
+    },
+    "learn_antenna": {
+        "title": "Antenna checks for EDA",
+        "focus": "Metal/gate area → ratio → charge → threshold → diode → jumper → markers → engine",
+        "prereq": "learn_erc",
+        "status": "ready",
+        "repo": "learn_antenna",
+        "modules_md": ROOT / "courses" / "learn_antenna" / "docs" / "MODULES.md",
+        "course_root": ROOT / "courses" / "learn_antenna",
+        "lead": (
+            "Antenna rule check literacy on tiny_antenna — metal/gate ratio, charge, diode protection, jumper break, markers. "
+            "Clips and decks load from "
+            "<code>courses/learn_antenna</code> "
+            "(<code>moduleSS-AA-slug/video.mp4</code>). Open the matching browser tool, then mark the lab done."
+        ),
+        "tools_href": "../../tools/index.html#antenna",
+        "tools_label": "Antenna tools",
+        "first_lab": "metal-area",
+        "first_n": "02",
+    },
 }
 
 COURSE_INDEX = """<!DOCTYPE html>

@@ -1,0 +1,38 @@
+{
+  "module": "module03-01-threshold-rules",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "raw violation count?",
+      "choices": [
+        "2",
+        "1",
+        "3",
+        "0"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "limit_ratio?",
+      "choices": [
+        "10",
+        "25",
+        "45",
+        "1"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "n2 violates raw?",
+      "choices": [
+        "no",
+        "yes",
+        "only with diode",
+        "always"
+      ],
+      "answer": 0
+    }
+  ]
+}

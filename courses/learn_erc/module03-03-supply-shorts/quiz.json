@@ -1,0 +1,38 @@
+{
+  "module": "module03-03-supply-shorts",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "supply_short_count?",
+      "choices": [
+        "1",
+        "0",
+        "2",
+        "4"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Short instance?",
+      "choices": [
+        "short1",
+        "u1",
+        "u2",
+        "nw1"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Bridges?",
+      "choices": [
+        "vdd\u2194vss",
+        "a\u2194b",
+        "y\u2194z",
+        "wells only"
+      ],
+      "answer": 0
+    }
+  ]
+}

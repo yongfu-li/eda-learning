@@ -1,0 +1,36 @@
+title: Wrap
+footer: learn_erc — 00 wrap
+slides:
+- type: title
+  title: Wrap
+  subtitle: 'You checked tiny_erc: 5 markers; float_n; z multi-drive; vdd↔vss short;
+    bad nwell'
+  notes: 'You checked tiny_erc: 5 markers; float_n; z multi-drive; vdd↔vss short;
+    bad nwell.'
+- type: bullets
+  title: The idea
+  bullets:
+  - 'Natural next: learn_antenna or learn_power'
+  notes: 'Natural next: learn_antenna or learn_power.'
+- type: bullets
+  title: Recap
+  bullets:
+  - Recap graph, floating, undriven, multi-drive, shorts, wells, markers, engine
+  notes: Recap graph, floating, undriven, multi-drive, shorts, wells, markers, engine.
+- type: bullets
+  title: Goldens
+  bullets:
+  - 8 nets; 14 edges; floating float_n; multi z; short1; nw1; markers=5; engine ok
+  notes: 8 nets; 14 edges; floating float_n; multi z; short1; nw1; markers=5; engine
+    ok.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - 'Natural next: learn_antenna or learn_power'
+  notes: 'Natural next: learn_antenna or learn_power.'
+- type: bullets
+  title: Close
+  bullets:
+  - Mark the wrap done when you can list the five ERC marker kinds
+  notes: Mark the wrap done when you can list the five ERC marker kinds.

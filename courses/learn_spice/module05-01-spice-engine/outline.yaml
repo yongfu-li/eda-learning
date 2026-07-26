@@ -1,0 +1,58 @@
+title: Why engine
+footer: learn_spice — 01 spice engine
+slides:
+- type: title
+  title: Why engine
+  subtitle: A tiny engine chains DC, NR, transient, and diode checks on one netlist
+  notes: A tiny engine chains DC, NR, transient, and diode checks on one netlist.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: dc_v2=3, nr converged, tran final_v2≈2.255181, diode NR ok'
+  notes: 'GOLDEN: dc_v2=3, nr converged, tran final_v2≈2.255181, diode NR ok.'
+- type: image
+  title: DC
+  image: assets/steps/01-dc.png
+  caption: DC
+  notes: Linear DC V2=3.
+- type: image
+  title: NR
+  image: assets/steps/02-nr.png
+  caption: NR
+  notes: NR converges in 1 iter.
+- type: image
+  title: TRAN
+  image: assets/steps/03-tr.png
+  caption: TRAN
+  notes: BE transient runs.
+- type: image
+  title: Diode NR
+  image: assets/steps/04-d.png
+  caption: Diode NR
+  notes: 1-D diode Newton ok.
+- type: image
+  title: OK
+  image: assets/steps/05-ok.png
+  caption: OK
+  notes: GOLDEN engine ok.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **spice-engine**. Run engine; confirm all goldens.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call spice_engine(); assert ok, dc_v2≈3.0, nr_converged, diode converged
+  notes: Call spice_engine(); assert ok, dc_v2≈3.0, nr_converged, diode converged.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Reporting partial results
+  - Mixing linear and nonlinear paths inconsistently
+  notes: Reporting partial results. Mixing linear and nonlinear paths inconsistently.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: offline benchmark compare, then wrap'
+  notes: 'Next: offline benchmark compare, then wrap.'

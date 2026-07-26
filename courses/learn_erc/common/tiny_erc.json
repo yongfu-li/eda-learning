@@ -1,0 +1,35 @@
+{
+  "nets": ["vdd", "vss", "a", "b", "y", "float_n", "z", "well_n"],
+  "supplies": { "vdd": "power", "vss": "ground" },
+  "ports": { "a": "input", "b": "input", "y": "output" },
+  "instances": [
+    {
+      "id": "u1",
+      "cell": "INV",
+      "pins": { "A": "a", "Y": "y", "VDD": "vdd", "VSS": "vss" }
+    },
+    {
+      "id": "u2",
+      "cell": "INV",
+      "pins": { "A": "float_n", "Y": "z", "VDD": "vdd", "VSS": "vss" }
+    },
+    {
+      "id": "u3",
+      "cell": "BUF",
+      "pins": { "A": "b", "Y": "z", "VDD": "vdd", "VSS": "vss" }
+    },
+    {
+      "id": "short1",
+      "cell": "SHORT",
+      "pins": { "P1": "vdd", "P2": "vss" }
+    }
+  ],
+  "wells": [
+    { "id": "nw1", "type": "nwell", "net": "well_n", "tied_to": "vss" }
+  ],
+  "pin_dirs": {
+    "INV": { "A": "in", "Y": "out", "VDD": "power", "VSS": "ground" },
+    "BUF": { "A": "in", "Y": "out", "VDD": "power", "VSS": "ground" },
+    "SHORT": { "P1": "io", "P2": "io" }
+  }
+}

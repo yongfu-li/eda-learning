@@ -1,0 +1,58 @@
+title: Markers
+footer: learn_antenna — 03 antenna markers
+slides:
+- type: title
+  title: Markers
+  subtitle: Signoff antenna emits one marker per violating net (after diode)
+  notes: Signoff antenna emits one marker per violating net (after diode).
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: marker_count=1 on tiny_antenna'
+  notes: 'GOLDEN: marker_count=1 on tiny_antenna.'
+- type: image
+  title: Violations
+  image: assets/steps/01-viol.png
+  caption: Violations
+  notes: Each ratio hit becomes a marker.
+- type: image
+  title: n1 marker
+  image: assets/steps/02-n1m.png
+  caption: n1 marker
+  notes: n1 ratio 25 > limit.
+- type: image
+  title: n3 skipped
+  image: assets/steps/03-n3skip.png
+  caption: n3 skipped
+  notes: n3 protected by diode — no marker.
+- type: image
+  title: Kind
+  image: assets/steps/04-kind.png
+  caption: Kind
+  notes: kind=antenna_ratio on each hit.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: marker_count=1.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **antenna-markers**. Run collect; confirm 1 marker.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call collect_markers(); assert count==1
+  notes: Call collect_markers(); assert count==1.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Counting raw violations
+  - Missing diode waiver
+  notes: Counting raw violations. Missing diode waiver.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: antenna engine'
+  notes: 'Next: antenna engine.'

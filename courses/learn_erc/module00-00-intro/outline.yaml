@@ -1,0 +1,36 @@
+title: Welcome
+footer: learn_erc — 00 intro
+slides:
+- type: title
+  title: Welcome
+  subtitle: After SPICE you still need electrical rules , floating gates, multi-drive,
+    supply shorts, wells
+  notes: After SPICE you still need electrical rules — floating gates, multi-drive,
+    supply shorts, wells.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'Toy tiny_erc: INV/BUF/SHORT + bad nwell → 5 ERC markers'
+  notes: 'Toy tiny_erc: INV/BUF/SHORT + bad nwell → 5 ERC markers.'
+- type: bullets
+  title: Two tracks
+  bullets:
+  - Implement track uses common/ solvers; browser lab track uses platform tools
+  notes: Implement track uses common/ solvers; browser lab track uses platform tools.
+- type: bullets
+  title: Toy netlist
+  bullets:
+  - 'Tiny_erc: u1 INV, u2 INV on float_n, u3 BUF fighting z, short1 vdd↔vss, bad nwell'
+  notes: 'tiny_erc: u1 INV, u2 INV on float_n, u3 BUF fighting z, short1 vdd↔vss,
+    bad nwell.'
+- type: bullets
+  title: Path
+  bullets:
+  - Graph → drivers → floating → undriven → multi → shorts → wells → markers → engine
+  notes: Graph → drivers → floating → undriven → multi → shorts → wells → markers
+    → engine.
+- type: bullets
+  title: Begin
+  bullets:
+  - 'Next: netlist connectivity graph'
+  notes: 'Next: netlist connectivity graph.'

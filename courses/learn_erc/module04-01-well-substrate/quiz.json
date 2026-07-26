@@ -1,0 +1,38 @@
+{
+  "module": "module04-01-well-substrate",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "well_error_count?",
+      "choices": [
+        "1",
+        "0",
+        "2",
+        "8"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Bad well id?",
+      "choices": [
+        "nw1",
+        "u1",
+        "short1",
+        "z"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "nwell should tie?",
+      "choices": [
+        "power",
+        "ground",
+        "float",
+        "output"
+      ],
+      "answer": 0
+    }
+  ]
+}

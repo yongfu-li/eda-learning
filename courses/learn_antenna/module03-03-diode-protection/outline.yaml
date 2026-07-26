@@ -1,0 +1,58 @@
+title: Why diode
+footer: learn_antenna — 03 diode protection
+slides:
+- type: title
+  title: Why diode
+  subtitle: Foundry diode cells waive antenna on protected nets , n3 here
+  notes: Foundry diode cells waive antenna on protected nets — n3 here.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: violation_count=1 (n1 only after diode)'
+  notes: 'GOLDEN: violation_count=1 (n1 only after diode).'
+- type: image
+  title: Protect diode
+  image: assets/steps/01-diode.png
+  caption: Protect diode
+  notes: d1 on n3 protects that net.
+- type: image
+  title: Skip protected
+  image: assets/steps/02-skip.png
+  caption: Skip protected
+  notes: Protected nets skip ratio check.
+- type: image
+  title: n1 still
+  image: assets/steps/03-n1v.png
+  caption: n1 still
+  notes: n1 ratio 25 still violates.
+- type: image
+  title: n3 waived
+  image: assets/steps/04-n3ok.png
+  caption: n3 waived
+  notes: n3 waived by diode.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: violations=1 (n1 only).'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **diode-protection**. Confirm only n1 violates.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call find_violations(apply_diodes=True); assert count==1 and hits[0]['net']=='n1'
+  notes: Call find_violations(apply_diodes=True); assert count==1 and hits[0]['net']=='n1'.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Forgetting to apply diode list
+  - Still flagging n3
+  notes: Forgetting to apply diode list. Still flagging n3.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: jumper break'
+  notes: 'Next: jumper break.'

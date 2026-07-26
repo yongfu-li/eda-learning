@@ -1,0 +1,58 @@
+title: Engine
+footer: learn_antenna — 01 antenna engine
+slides:
+- type: title
+  title: Engine
+  subtitle: A tiny engine chains area, ratio, charge, violations, jumper, markers
+  notes: A tiny engine chains area, ratio, charge, violations, jumper, markers.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: ratios, violations=1, markers=1, jumper n1=0, ok=True'
+  notes: 'GOLDEN: ratios, violations=1, markers=1, jumper n1=0, ok=True.'
+- type: image
+  title: Stats
+  image: assets/steps/01-stats.png
+  caption: Stats
+  notes: 3 gates, 4 metals, 3 nets.
+- type: image
+  title: Ratios
+  image: assets/steps/02-ratios.png
+  caption: Ratios
+  notes: n1=25, n2=4, n3=45.
+- type: image
+  title: Violations
+  image: assets/steps/03-viol.png
+  caption: Violations
+  notes: 'After diode: 1 violation on n1.'
+- type: image
+  title: Jumper
+  image: assets/steps/04-jmp.png
+  caption: Jumper
+  notes: 'Jumper demo: n1 ratio → 0.'
+- type: image
+  title: OK
+  image: assets/steps/05-ok.png
+  caption: OK
+  notes: 'GOLDEN: engine ok=True.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **antenna-engine**. Run engine; confirm ok.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call antenna_engine(); assert ok and markers.count==1
+  notes: Call antenna_engine(); assert ok and markers.count==1.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Reporting partial checks
+  - Changing toy without updating goldens
+  notes: Reporting partial checks. Changing toy without updating goldens.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: offline compare, then wrap'
+  notes: 'Next: offline compare, then wrap.'

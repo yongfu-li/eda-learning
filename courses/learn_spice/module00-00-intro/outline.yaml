@@ -1,0 +1,33 @@
+title: Welcome
+footer: learn_spice — 00 intro
+slides:
+- type: title
+  title: Welcome
+  subtitle: After PEX you need a circuit engine , MNA, Newton, LU, transient
+  notes: After PEX you need a circuit engine — MNA, Newton, LU, transient.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'Toy tiny_spice: voltage divider V2=3; RC transient; diode 1-D Newton'
+  notes: 'Toy tiny_spice: voltage divider V2=3; RC transient; diode 1-D Newton.'
+- type: bullets
+  title: Two tracks
+  bullets:
+  - Implement track uses common/ solvers; browser lab track uses platform tools
+  notes: Implement track uses common/ solvers; browser lab track uses platform tools.
+- type: bullets
+  title: Toy netlist
+  bullets:
+  - Vin=5 V divider; R1=2, R2=3, Cload=1, Dprot , V2=3 DC; RC transient; diode Newton
+  notes: Vin=5 V divider; R1=2, R2=3, Cload=1, Dprot — V2=3 DC; RC transient; diode
+    Newton.
+- type: bullets
+  title: Path
+  bullets:
+  - Netlist → MNA → DC → sparse LU → Newton → callbacks → BE transient → engine
+  notes: Netlist → MNA → DC → sparse LU → Newton → callbacks → BE transient → engine.
+- type: bullets
+  title: Begin
+  bullets:
+  - 'Next: netlist nodes and ground'
+  notes: 'Next: netlist nodes and ground.'

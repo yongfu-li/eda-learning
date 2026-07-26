@@ -1,0 +1,38 @@
+{
+  "module": "module02-01-floating-nets",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "floating_count?",
+      "choices": [
+        "1",
+        "0",
+        "2",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Floating net id?",
+      "choices": [
+        "float_n",
+        "z",
+        "a",
+        "vdd"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Ports counted floating?",
+      "choices": [
+        "no",
+        "yes",
+        "only outputs",
+        "only vdd"
+      ],
+      "answer": 0
+    }
+  ]
+}

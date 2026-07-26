@@ -1,0 +1,38 @@
+{
+  "module": "module04-03-antenna-markers",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "marker_count?",
+      "choices": [
+        "1",
+        "2",
+        "5",
+        "0"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Marker net?",
+      "choices": [
+        "n1",
+        "n3",
+        "n2",
+        "all"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Marker kind?",
+      "choices": [
+        "antenna_ratio",
+        "floating",
+        "multi_driven",
+        "short"
+      ],
+      "answer": 0
+    }
+  ]
+}

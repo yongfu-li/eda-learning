@@ -1,0 +1,60 @@
+title: Why MNA
+footer: learn_spice — 03 mna stamps
+slides:
+- type: title
+  title: Why MNA
+  subtitle: Modified nodal analysis builds G and b by stamping each element into a
+    shared matrix
+  notes: Modified nodal analysis builds G and b by stamping each element into a shared
+    matrix.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: mna size 3 , unknowns v1, v2, branch current i_Vin'
+  notes: 'GOLDEN: mna size 3 — unknowns v1, v2, branch current i_Vin.'
+- type: image
+  title: Stamp R
+  image: assets/steps/01-r.png
+  caption: Stamp R
+  notes: Conductance 1/R into G.
+- type: image
+  title: Stamp V
+  image: assets/steps/02-v.png
+  caption: Stamp V
+  notes: Voltage source adds branch current unknown.
+- type: image
+  title: Matrix G
+  image: assets/steps/03-g.png
+  caption: Matrix G
+  notes: Build dense G for the toy.
+- type: image
+  title: RHS b
+  image: assets/steps/04-b.png
+  caption: RHS b
+  notes: RHS holds source values.
+- type: image
+  title: Size 3
+  image: assets/steps/05-sz.png
+  caption: Size 3
+  notes: GOLDEN MNA size=3.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **mna-stamps**. Build MNA; confirm matrix size 3.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call build_mna_linear_dc(); assert size==3
+  notes: Call build_mna_linear_dc(); assert size==3.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Forgetting voltage-source branch currents
+  - Stamping C or D in linear DC MNA
+  notes: Forgetting voltage-source branch currents. Stamping C or D in linear DC MNA.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: solve linear DC for V2=3'
+  notes: 'Next: solve linear DC for V2=3.'

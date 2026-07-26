@@ -1,0 +1,60 @@
+title: Why netlists
+footer: learn_spice — 01 netlist nodes
+slides:
+- type: title
+  title: Why netlists
+  subtitle: Every SPICE solve starts from a netlist , nodes, elements, and a ground
+    reference
+  notes: Every SPICE solve starts from a netlist — nodes, elements, and a ground reference.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: 5 elements, 2 unknown nodes (1, 2), ground 0'
+  notes: 'GOLDEN: 5 elements, 2 unknown nodes (1, 2), ground 0.'
+- type: image
+  title: Netlist
+  image: assets/steps/01-nl.png
+  caption: Netlist
+  notes: Toy netlist with five elements.
+- type: image
+  title: Ground
+  image: assets/steps/02-gnd.png
+  caption: Ground
+  notes: Node 0 is ground reference.
+- type: image
+  title: Unknowns
+  image: assets/steps/03-un.png
+  caption: Unknowns
+  notes: 'Unknown voltages: nodes 1 and 2.'
+- type: image
+  title: Elements
+  image: assets/steps/04-el.png
+  caption: Elements
+  notes: V, R, R, C, D types.
+- type: image
+  title: Count
+  image: assets/steps/05-cnt.png
+  caption: Count
+  notes: GOLDEN element_count=5.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **netlist-nodes**. Inspect tiny_spice; confirm 5 elements and 2 unknown
+    nodes.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call netlist_stats(); assert element_count==5, unknown_nodes==2, ground=='0'
+  notes: Call netlist_stats(); assert element_count==5, unknown_nodes==2, ground=='0'.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Counting ground as unknown
+  - Ignoring element ids vs node names
+  notes: Counting ground as unknown. Ignoring element ids vs node names.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: stamp R and V into MNA'
+  notes: 'Next: stamp R and V into MNA.'

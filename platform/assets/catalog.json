@@ -29,6 +29,21 @@
       "section": "Placement"
     },
     {
+      "id": "antenna-engine",
+      "title": "Antenna Engine",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "antenna-markers",
+      "title": "Antenna Markers",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "antenna-ratio",
+      "title": "Antenna Ratio",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "area-deadspace",
       "title": "Area Deadspace",
       "section": "Floorplanning"
@@ -94,6 +109,11 @@
       "section": "Clustering & refinement"
     },
     {
+      "id": "charge-accumulation",
+      "title": "Charge Accumulation",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "clock-buffering",
       "title": "Clock Buffering",
       "section": "Clustering & refinement"
@@ -154,6 +174,11 @@
       "section": "Partitioning"
     },
     {
+      "id": "dc-linear",
+      "title": "Dc Linear",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "density-bins",
       "title": "Density Bins",
       "section": "Placement"
@@ -162,6 +187,16 @@
       "id": "detailed-vs-global",
       "title": "Detailed Vs Global",
       "section": "Legalization"
+    },
+    {
+      "id": "device-callbacks",
+      "title": "Device Callbacks",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "diode-protection",
+      "title": "Diode Protection",
+      "section": "Clustering & refinement"
     },
     {
       "id": "displacement-hpwl",
@@ -189,6 +224,11 @@
       "section": "Clustering & refinement"
     },
     {
+      "id": "drivers-loads",
+      "title": "Drivers Loads",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "edge-overflow",
       "title": "Edge Overflow",
       "section": "Clustering & refinement"
@@ -196,6 +236,16 @@
     {
       "id": "edges-polygons",
       "title": "Edges Polygons",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "erc-engine",
+      "title": "Erc Engine",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "erc-markers",
+      "title": "Erc Markers",
       "section": "Clustering & refinement"
     },
     {
@@ -224,6 +274,11 @@
       "section": "Floorplanning"
     },
     {
+      "id": "floating-nets",
+      "title": "Floating Nets",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "fm-partition",
       "title": "Fm Partition",
       "section": "Partitioning"
@@ -236,6 +291,11 @@
     {
       "id": "forward-retime",
       "title": "Forward Retime",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "gate-area",
+      "title": "Gate Area",
       "section": "Clustering & refinement"
     },
     {
@@ -287,6 +347,11 @@
       "id": "initial-bipartition",
       "title": "Initial Bipartition",
       "section": "Partitioning"
+    },
+    {
+      "id": "jumper-break",
+      "title": "Jumper Break",
+      "section": "Clustering & refinement"
     },
     {
       "id": "kernighan-lin",
@@ -364,6 +429,11 @@
       "section": "Clustering & refinement"
     },
     {
+      "id": "metal-area",
+      "title": "Metal Area",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "min-period",
       "title": "Min Period",
       "section": "Clustering & refinement"
@@ -379,8 +449,18 @@
       "section": "Clustering & refinement"
     },
     {
+      "id": "mna-stamps",
+      "title": "Mna Stamps",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "mp-engine",
       "title": "Mp Engine",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "multi-driven",
+      "title": "Multi Driven",
       "section": "Clustering & refinement"
     },
     {
@@ -421,6 +501,26 @@
     {
       "id": "net-weighting",
       "title": "Net Weighting",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "netlist-graph",
+      "title": "Netlist Graph",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "netlist-nodes",
+      "title": "Netlist Nodes",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "newton-raphson",
+      "title": "Newton Raphson",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "op-tran-pipeline",
+      "title": "Op Tran Pipeline",
       "section": "Clustering & refinement"
     },
     {
@@ -659,6 +759,11 @@
       "section": "Clustering & refinement"
     },
     {
+      "id": "sparse-lu",
+      "title": "Sparse Lu",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "spec-impl",
       "title": "Spec Impl",
       "section": "Clustering & refinement"
@@ -674,6 +779,11 @@
       "section": "Partitioning"
     },
     {
+      "id": "spice-engine",
+      "title": "Spice Engine",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "spread-legalize-lite",
       "title": "Spread Legalize Lite",
       "section": "Placement"
@@ -686,6 +796,11 @@
     {
       "id": "structural-hash",
       "title": "Structural Hash",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "supply-shorts",
+      "title": "Supply Shorts",
       "section": "Clustering & refinement"
     },
     {
@@ -714,6 +829,11 @@
       "section": "Legalization"
     },
     {
+      "id": "threshold-rules",
+      "title": "Threshold Rules",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "timing-aware-clustering",
       "title": "Timing-aware clustering",
       "section": "Clustering & refinement"
@@ -734,6 +854,11 @@
       "section": "Clustering & refinement"
     },
     {
+      "id": "transient-be",
+      "title": "Transient Be",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "triple-color",
       "title": "Triple Color",
       "section": "Clustering & refinement"
@@ -749,6 +874,11 @@
       "section": "Clustering & refinement"
     },
     {
+      "id": "undriven-inputs",
+      "title": "Undriven Inputs",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "van-ginneken",
       "title": "Van Ginneken",
       "section": "Clustering & refinement"
@@ -756,6 +886,11 @@
     {
       "id": "via-assignment",
       "title": "Via Assignment",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "well-substrate",
+      "title": "Well Substrate",
       "section": "Clustering & refinement"
     },
     {
@@ -4112,30 +4247,573 @@
     },
     {
       "id": "learn_spice",
-      "title": "SPICE / circuit sim",
-      "focus": "MNA, Newton, sparse LU, transient",
-      "status": "planned",
+      "title": "SPICE / circuit sim for EDA",
+      "focus": "Netlist \u2192 MNA stamps \u2192 DC \u2192 sparse LU \u2192 Newton \u2192 device callbacks \u2192 TRAN \u2192 engine",
+      "status": "ready",
       "repo": "learn_spice",
       "prereq": null,
-      "labs": []
+      "labs": [
+        {
+          "n": "01",
+          "slug": "intro",
+          "moduleId": "module00-00-intro",
+          "kind": "intro",
+          "title": "Welcome to SPICE",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "02",
+          "slug": "netlist-nodes",
+          "moduleId": "module01-01-netlist-nodes",
+          "kind": "lab",
+          "title": "Netlist nodes and ground",
+          "toolId": "netlist-nodes",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "03",
+          "slug": "mna-stamps",
+          "moduleId": "module01-03-mna-stamps",
+          "kind": "lab",
+          "title": "MNA stamping (R and V)",
+          "toolId": "mna-stamps",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "04",
+          "slug": "dc-linear",
+          "moduleId": "module02-01-dc-linear",
+          "kind": "lab",
+          "title": "Linear DC solve",
+          "toolId": "dc-linear",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "05",
+          "slug": "sparse-lu",
+          "moduleId": "module02-03-sparse-lu",
+          "kind": "lab",
+          "title": "Sparse LU lite",
+          "toolId": "sparse-lu",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "06",
+          "slug": "newton-raphson",
+          "moduleId": "module03-01-newton-raphson",
+          "kind": "lab",
+          "title": "Newton-Raphson DC",
+          "toolId": "newton-raphson",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "07",
+          "slug": "device-callbacks",
+          "moduleId": "module03-03-device-callbacks",
+          "kind": "lab",
+          "title": "Device callbacks (diode)",
+          "toolId": "device-callbacks",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "08",
+          "slug": "transient-be",
+          "moduleId": "module04-01-transient-be",
+          "kind": "lab",
+          "title": "Backward Euler transient",
+          "toolId": "transient-be",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "09",
+          "slug": "op-tran-pipeline",
+          "moduleId": "module04-03-op-tran-pipeline",
+          "kind": "lab",
+          "title": "OP then TRAN pipeline",
+          "toolId": "op-tran-pipeline",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "10",
+          "slug": "spice-engine",
+          "moduleId": "module05-01-spice-engine",
+          "kind": "lab",
+          "title": "SPICE engine integration",
+          "toolId": "spice-engine",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "11",
+          "slug": "offline-benchmark-compare",
+          "moduleId": "module05-03-offline-benchmark-compare",
+          "kind": "offline",
+          "title": "Offline benchmark compare",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "12",
+          "slug": "wrap",
+          "moduleId": "module99-00-wrap",
+          "kind": "wrap",
+          "title": "SPICE path complete",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        }
+      ]
     },
     {
       "id": "learn_erc",
-      "title": "ERC",
-      "focus": "Electrical rule categories",
-      "status": "planned",
+      "title": "ERC for EDA",
+      "focus": "Netlist graph \u2192 drivers/loads \u2192 floating \u2192 undriven \u2192 multi-drive \u2192 supply shorts \u2192 wells \u2192 markers \u2192 engine",
+      "status": "ready",
       "repo": "learn_erc",
       "prereq": null,
-      "labs": []
+      "labs": [
+        {
+          "n": "01",
+          "slug": "intro",
+          "moduleId": "module00-00-intro",
+          "kind": "intro",
+          "title": "Welcome to ERC",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "02",
+          "slug": "netlist-graph",
+          "moduleId": "module01-01-netlist-graph",
+          "kind": "lab",
+          "title": "Netlist connectivity graph",
+          "toolId": "netlist-graph",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "03",
+          "slug": "drivers-loads",
+          "moduleId": "module01-03-drivers-loads",
+          "kind": "lab",
+          "title": "Drivers and loads",
+          "toolId": "drivers-loads",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "04",
+          "slug": "floating-nets",
+          "moduleId": "module02-01-floating-nets",
+          "kind": "lab",
+          "title": "Floating nets",
+          "toolId": "floating-nets",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "05",
+          "slug": "undriven-inputs",
+          "moduleId": "module02-03-undriven-inputs",
+          "kind": "lab",
+          "title": "Undriven inputs",
+          "toolId": "undriven-inputs",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "06",
+          "slug": "multi-driven",
+          "moduleId": "module03-01-multi-driven",
+          "kind": "lab",
+          "title": "Multi-driven nets",
+          "toolId": "multi-driven",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "07",
+          "slug": "supply-shorts",
+          "moduleId": "module03-03-supply-shorts",
+          "kind": "lab",
+          "title": "Supply shorts",
+          "toolId": "supply-shorts",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "08",
+          "slug": "well-substrate",
+          "moduleId": "module04-01-well-substrate",
+          "kind": "lab",
+          "title": "Well and substrate ties",
+          "toolId": "well-substrate",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "09",
+          "slug": "erc-markers",
+          "moduleId": "module04-03-erc-markers",
+          "kind": "lab",
+          "title": "ERC markers",
+          "toolId": "erc-markers",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "10",
+          "slug": "erc-engine",
+          "moduleId": "module05-01-erc-engine",
+          "kind": "lab",
+          "title": "ERC engine integration",
+          "toolId": "erc-engine",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "11",
+          "slug": "offline-benchmark-compare",
+          "moduleId": "module05-03-offline-benchmark-compare",
+          "kind": "offline",
+          "title": "Offline benchmark compare",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "12",
+          "slug": "wrap",
+          "moduleId": "module99-00-wrap",
+          "kind": "wrap",
+          "title": "ERC path complete",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        }
+      ]
     },
     {
       "id": "learn_antenna",
-      "title": "Antenna checks",
-      "focus": "Antenna ratio / charge accumulation",
-      "status": "planned",
+      "title": "Antenna checks for EDA",
+      "focus": "Metal/gate area \u2192 ratio \u2192 charge \u2192 threshold \u2192 diode \u2192 jumper \u2192 markers \u2192 engine",
+      "status": "ready",
       "repo": "learn_antenna",
-      "prereq": null,
-      "labs": []
+      "prereq": "learn_erc",
+      "labs": [
+        {
+          "n": "01",
+          "slug": "intro",
+          "moduleId": "module00-00-intro",
+          "kind": "intro",
+          "title": "Welcome to antenna checks",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "02",
+          "slug": "metal-area",
+          "moduleId": "module01-01-metal-area",
+          "kind": "lab",
+          "title": "Metal area per net",
+          "toolId": "metal-area",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "03",
+          "slug": "gate-area",
+          "moduleId": "module01-03-gate-area",
+          "kind": "lab",
+          "title": "Gate area per net",
+          "toolId": "gate-area",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "04",
+          "slug": "antenna-ratio",
+          "moduleId": "module02-01-antenna-ratio",
+          "kind": "lab",
+          "title": "Antenna ratio",
+          "toolId": "antenna-ratio",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "05",
+          "slug": "charge-accumulation",
+          "moduleId": "module02-03-charge-accumulation",
+          "kind": "lab",
+          "title": "Charge accumulation",
+          "toolId": "charge-accumulation",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "06",
+          "slug": "threshold-rules",
+          "moduleId": "module03-01-threshold-rules",
+          "kind": "lab",
+          "title": "Threshold rules",
+          "toolId": "threshold-rules",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "07",
+          "slug": "diode-protection",
+          "moduleId": "module03-03-diode-protection",
+          "kind": "lab",
+          "title": "Diode protection",
+          "toolId": "diode-protection",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "08",
+          "slug": "jumper-break",
+          "moduleId": "module04-01-jumper-break",
+          "kind": "lab",
+          "title": "Jumper break",
+          "toolId": "jumper-break",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "09",
+          "slug": "antenna-markers",
+          "moduleId": "module04-03-antenna-markers",
+          "kind": "lab",
+          "title": "Antenna markers",
+          "toolId": "antenna-markers",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "10",
+          "slug": "antenna-engine",
+          "moduleId": "module05-01-antenna-engine",
+          "kind": "lab",
+          "title": "Antenna engine integration",
+          "toolId": "antenna-engine",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "11",
+          "slug": "offline-benchmark-compare",
+          "moduleId": "module05-03-offline-benchmark-compare",
+          "kind": "offline",
+          "title": "Offline benchmark compare",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "12",
+          "slug": "wrap",
+          "moduleId": "module99-00-wrap",
+          "kind": "wrap",
+          "title": "Antenna path complete",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        }
+      ]
     },
     {
       "id": "learn_power",

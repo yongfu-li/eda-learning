@@ -1,0 +1,38 @@
+{
+  "module": "module02-03-undriven-inputs",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "undriven_count?",
+      "choices": [
+        "1",
+        "0",
+        "2",
+        "4"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Hit instance?",
+      "choices": [
+        "u2",
+        "u1",
+        "u3",
+        "short1"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Port a undriven?",
+      "choices": [
+        "no (primary in)",
+        "yes",
+        "only if BUF",
+        "always"
+      ],
+      "answer": 0
+    }
+  ]
+}

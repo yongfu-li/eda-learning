@@ -40,6 +40,12 @@ import { PATTERN_ALGOS } from "./pattern-algos.js";
 import { drawPatternMatching, STARTER as PATTERN_STARTER, CHIP as PATTERN_CHIP } from "../../assets/pattern-matching-core.js";
 import { MULTI_PATTERN_ALGOS } from "./multi-patterning-algos.js";
 import { drawMultiPatterning, STARTER as MP_STARTER, CHIP as MP_CHIP } from "../../assets/multi-patterning-core.js";
+import { SPICE_ALGOS } from "./spice-algos.js";
+import { drawSpice, STARTER as SPICE_STARTER } from "../../assets/spice-core.js";
+import { ERC_ALGOS } from "./erc-algos.js";
+import { drawErc, STARTER as ERC_STARTER } from "../../assets/erc-core.js";
+import { ANTENNA_ALGOS } from "./antenna-algos.js";
+import { drawAntenna, STARTER as ANTENNA_STARTER } from "../../assets/antenna-core.js";
 import { drawEquivalence } from "../../assets/equivalence-core.js";
 import { drawRetiming } from "../../assets/retiming-core.js";
 import { drawSynthesis } from "../../assets/synthesis-core.js";
@@ -1696,6 +1702,9 @@ export const ALGOS = {
   ...COMPACTION_ALGOS,
   ...PATTERN_ALGOS,
   ...MULTI_PATTERN_ALGOS,
+  ...SPICE_ALGOS,
+  ...ERC_ALGOS,
+  ...ANTENNA_ALGOS,
 };
 
 function qs() {
@@ -1819,6 +1828,38 @@ function render() {
       selectedSink: s.selectedSink || null,
       highlight: s.highlight || [],
       showSkew: s.showSkew !== false,
+    });
+  } else if (pack.kind === "antenna") {
+
+    drawAntenna(canvas, {
+
+      design: s.design || ANTENNA_STARTER,
+
+      highlight: s.highlight || [],
+
+      selected: s.selected || [],
+
+      markers: s.markers || [],
+
+      metricText: s.metricText || null,
+
+    });
+
+  } else if (pack.kind === "erc") {
+    drawErc(canvas, {
+      design: s.design || ERC_STARTER,
+      highlight: s.highlight || [],
+      selected: s.selected || [],
+      markers: s.markers || [],
+      metricText: s.metricText || null,
+    });
+  } else if (pack.kind === "spice") {
+    drawSpice(canvas, {
+      net: s.net || SPICE_STARTER,
+      volts: s.volts || null,
+      history: s.history || null,
+      highlight: s.highlight || [],
+      metricText: s.metricText || null,
     });
   } else if (pack.kind === "multipattern") {
     drawMultiPatterning(canvas, {

@@ -1,0 +1,38 @@
+{
+  "module": "module04-03-erc-markers",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "marker_count?",
+      "choices": [
+        "5",
+        "1",
+        "3",
+        "8"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Includes well?",
+      "choices": [
+        "yes",
+        "no",
+        "only floats",
+        "only shorts"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Multi marker net?",
+      "choices": [
+        "z",
+        "y",
+        "a",
+        "vdd"
+      ],
+      "answer": 0
+    }
+  ]
+}

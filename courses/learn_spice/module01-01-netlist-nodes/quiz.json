@@ -1,0 +1,38 @@
+{
+  "module": "module01-01-netlist-nodes",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "element_count golden?",
+      "choices": [
+        "5",
+        "3",
+        "2",
+        "6"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "unknown_nodes golden?",
+      "choices": [
+        "2",
+        "3",
+        "5",
+        "0"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "ground node?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "Vin"
+      ],
+      "answer": 0
+    }
+  ]
+}

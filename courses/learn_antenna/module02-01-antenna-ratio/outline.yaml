@@ -1,0 +1,58 @@
+title: Why ratio
+footer: learn_antenna — 01 antenna ratio
+slides:
+- type: title
+  title: Why ratio
+  subtitle: Foundry antenna rules compare metal exposure to gate area
+  notes: Foundry antenna rules compare metal exposure to gate area.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: n1=25, n2=4, n3=45'
+  notes: 'GOLDEN: n1=25, n2=4, n3=45.'
+- type: image
+  title: Ratio formula
+  image: assets/steps/01-formula.png
+  caption: Ratio
+  notes: ratio = metal_area / gate_area per net.
+- type: image
+  title: n1
+  image: assets/steps/02-n1r.png
+  caption: n1
+  notes: 'n1: 25/1 = 25.'
+- type: image
+  title: n2
+  image: assets/steps/03-n2r.png
+  caption: n2
+  notes: 'n2: 8/2 = 4.'
+- type: image
+  title: n3
+  image: assets/steps/04-n3r.png
+  caption: n3
+  notes: 'n3: 45/1 = 45.'
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: n1=25, n2=4, n3=45.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **antenna-ratio**. Confirm the three golden ratios.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call antenna_ratios(); assert ratios['n1']==25, ratios['n2']==4, ratios['n3']==45
+  notes: Call antenna_ratios(); assert ratios['n1']==25, ratios['n2']==4, ratios['n3']==45.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Dividing gate/metal
+  - Forgetting multi-layer metal sum
+  notes: Dividing gate/metal. Forgetting multi-layer metal sum.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: charge accumulation'
+  notes: 'Next: charge accumulation.'

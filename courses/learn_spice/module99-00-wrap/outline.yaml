@@ -1,0 +1,36 @@
+title: Wrap
+footer: learn_spice — 00 wrap
+slides:
+- type: title
+  title: Wrap
+  subtitle: 'You solved tiny_spice: 5 elements, MNA size 3, V2=3 DC, BE final≈2.255,
+    engine ok'
+  notes: 'You solved tiny_spice: 5 elements, MNA size 3, V2=3 DC, BE final≈2.255,
+    engine ok.'
+- type: bullets
+  title: The idea
+  bullets:
+  - 'Natural next: learn_power or learn_pex / learn_erc'
+  notes: 'Natural next: learn_power or learn_pex / learn_erc.'
+- type: bullets
+  title: Recap
+  bullets:
+  - Recap netlist, MNA, LU, Newton, callbacks, transient, engine goldens
+  notes: Recap netlist, MNA, LU, Newton, callbacks, transient, engine goldens.
+- type: bullets
+  title: Goldens
+  bullets:
+  - 5 elements; MNA size 3; V2=3 DC; nnz=6; NR 1 iter; final_v2≈2.255181; engine ok
+  notes: 5 elements; MNA size 3; V2=3 DC; nnz=6; NR 1 iter; final_v2≈2.255181; engine
+    ok.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - 'Natural next: learn_power or learn_pex / learn_erc'
+  notes: 'Natural next: learn_power or learn_pex / learn_erc.'
+- type: bullets
+  title: Close
+  bullets:
+  - Mark the wrap done when you can explain OP vs TRAN on tiny_spice
+  notes: Mark the wrap done when you can explain OP vs TRAN on tiny_spice.

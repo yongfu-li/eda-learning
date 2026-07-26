@@ -1,0 +1,58 @@
+title: Why jumper
+footer: learn_antenna — 01 jumper break
+slides:
+- type: title
+  title: Why jumper
+  subtitle: A jumper on lower metal breaks antenna path , drops high-layer metal
+  notes: A jumper on lower metal breaks antenna path — drops high-layer metal.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: jumper on n1 max_layer=1 → ratio 0'
+  notes: 'GOLDEN: jumper on n1 max_layer=1 → ratio 0.'
+- type: image
+  title: Add jumper
+  image: assets/steps/01-jumper.png
+  caption: Add jumper
+  notes: Jumper caps max metal layer on a net.
+- type: image
+  title: Before
+  image: assets/steps/02-before.png
+  caption: Before
+  notes: n1 ratio 25 with layer-2 metal.
+- type: image
+  title: Cap L1
+  image: assets/steps/03-cap.png
+  caption: Cap L1
+  notes: max_layer=1 drops m1 (layer 2).
+- type: image
+  title: After
+  image: assets/steps/04-after.png
+  caption: After
+  notes: n1 metal area 0 → ratio 0.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: jumper_n1_ratio=0.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **jumper-break**. Apply jumper; confirm n1 ratio=0.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call jumper_effect(); assert after_ratio==0
+  notes: Call jumper_effect(); assert after_ratio==0.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Not filtering by layer
+  - Applying jumper to wrong net
+  notes: Not filtering by layer. Applying jumper to wrong net.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: antenna markers'
+  notes: 'Next: antenna markers.'

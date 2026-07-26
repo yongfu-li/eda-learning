@@ -1,0 +1,58 @@
+title: Why callbacks
+footer: learn_spice — 03 device callbacks
+slides:
+- type: title
+  title: Why callbacks
+  subtitle: Nonlinear devices expose i(v) and g=di/dv to the MNA Newton loop
+  notes: Nonlinear devices expose i(v) and g=di/dv to the MNA Newton loop.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: diode_loop_newton converges; callback returns i and g at vd'
+  notes: 'GOLDEN: diode_loop_newton converges; callback returns i and g at vd.'
+- type: image
+  title: i(v)
+  image: assets/steps/01-i.png
+  caption: i(v)
+  notes: Diode current Is(exp(v/Vt)-1).
+- type: image
+  title: g=di/dv
+  image: assets/steps/02-g.png
+  caption: g=di/dv
+  notes: Conductance for Jacobian.
+- type: image
+  title: 1-D loop
+  image: assets/steps/03-loop.png
+  caption: 1-D loop
+  notes: Series R+diode Newton.
+- type: image
+  title: Converge
+  image: assets/steps/04-cv.png
+  caption: Converge
+  notes: diode_loop_newton converges.
+- type: image
+  title: Hook
+  image: assets/steps/05-hook.png
+  caption: Hook
+  notes: Callbacks plug into MNA stamps.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **device-callbacks**. Run callback + 1-D loop; confirm convergence.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call device_callback_diode(0.0) and diode_loop_newton(); assert converged
+  notes: Call device_callback_diode(0.0) and diode_loop_newton(); assert converged.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Using linear diode model
+  - Forgetting companion conductance in transient
+  notes: Using linear diode model. Forgetting companion conductance in transient.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: backward-Euler transient on RC'
+  notes: 'Next: backward-Euler transient on RC.'

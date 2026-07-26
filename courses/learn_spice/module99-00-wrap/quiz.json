@@ -1,0 +1,38 @@
+{
+  "module": "module99-00-wrap",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Focus of Wrap?",
+      "choices": [
+        "Recap netlist, MNA, LU, Newton, callbacks, transient, engine",
+        "Place only",
+        "CTS only",
+        "DRC width"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Course id?",
+      "choices": [
+        "learn_spice",
+        "learn_pex",
+        "learn_power",
+        "learn_drc"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Engine dc_v2 golden?",
+      "choices": [
+        "3.0",
+        "2.255",
+        "5.0",
+        "0.0"
+      ],
+      "answer": 0
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+title: Why engine
+footer: learn_erc — 01 erc engine
+slides:
+- type: title
+  title: Why engine
+  subtitle: A tiny engine chains every ERC check and reports ok when goldens match
+  notes: A tiny engine chains every ERC check and reports ok when goldens match.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: floating=1, undriven=1, multi=1, short=1, well=1, markers=5, ok=True'
+  notes: 'GOLDEN: floating=1, undriven=1, multi=1, short=1, well=1, markers=5, ok=True.'
+- type: image
+  title: Stats
+  image: assets/steps/01-stats.png
+  caption: Stats
+  notes: 8 nets / 4 instances.
+- type: image
+  title: Float+undrv
+  image: assets/steps/02-fu.png
+  caption: Float+undrv
+  notes: float_n + u2.A.
+- type: image
+  title: Multi+short
+  image: assets/steps/03-ms.png
+  caption: Multi+short
+  notes: z fight + vdd↔vss short.
+- type: image
+  title: Well
+  image: assets/steps/04-well.png
+  caption: Well
+  notes: nw1 nwell error.
+- type: image
+  title: OK
+  image: assets/steps/05-ok.png
+  caption: OK
+  notes: 'GOLDEN: engine ok=True.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **erc-engine**. Run engine; confirm ok.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call erc_engine(); assert ok and markers.count==5
+  notes: Call erc_engine(); assert ok and markers.count==5.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Reporting partial checks
+  - Changing the toy without updating goldens
+  notes: Reporting partial checks. Changing the toy without updating goldens.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: offline compare, then wrap'
+  notes: 'Next: offline compare, then wrap.'

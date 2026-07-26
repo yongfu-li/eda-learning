@@ -1,0 +1,57 @@
+# Module 03-01-threshold-rules: Threshold rules
+
+
+
+**Module id:** `module03-01-threshold-rules`  
+
+**Kind:** `lab` · Primary lab: `threshold-rules` · **ref**
+
+
+
+[← Charge](../module02-03-charge-accumulation/README.md) · [Course README](../README.md) · [Diode →](../module03-03-diode-protection/README.md)
+
+
+
+## Outcomes
+
+
+
+After this module you can: **Flag nets with ratio > limit_ratio (no diode protection).**
+
+
+
+## Two tracks (pick one or both)
+
+
+
+### Track A — Implement (hands-on)
+
+
+
+1. Open [EXAMPLES.md](EXAMPLES.md); implement **antenna threshold violation detection** on `examples/tiny_antenna.json`.
+
+2. Complete [CHECKLIST.md](CHECKLIST.md).
+
+
+
+### Track B — Browser lab (online)
+
+
+
+1. Local: http://127.0.0.1:8080/tools/threshold-rules/
+
+2. Live: https://universal-verification-methodology.github.io/learning/tools/threshold-rules/
+
+
+
+## Media
+
+
+
+| Artifact | Path |
+|----------|------|
+| Transcript | [transcript.md](transcript.md) |
+| Outline | [outline.yaml](outline.yaml) |
+| Slides | [slides.pptx](slides.pptx) · [slides.pdf](slides.pdf) |
+| Video | [video.mp4](video.mp4) |
+| Quiz | [quiz.json](quiz.json) |
