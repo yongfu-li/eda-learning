@@ -266,6 +266,22 @@ LAB_TO_ALGO: dict[str, tuple[str, int]] = {
     "fsm-detect": ("fsm-detect", 5),
     "abc-handoff": ("abc-handoff", 5),
     "yosys-algo-engine": ("yosys-algo-engine", 5),
+    "rtlil-cpp-model": ("rtlil-cpp-model", 5),
+    "pass-registration": ("pass-registration", 5),
+    "read-opt-clean": ("read-opt-clean", 5),
+    "contribute-pass": ("contribute-pass", 5),
+    "timing-graph-map": ("timing-graph-map", 5),
+    "sdc-clocks": ("sdc-clocks", 5),
+    "arrival-required": ("arrival-required", 5),
+    "slack-critical": ("slack-critical", 5),
+    "report-checks": ("report-checks", 5),
+    "opensta-engine": ("opensta-engine", 5),
+    "opensta-cli": ("opensta-cli", 5),
+    "liberty-vocab": ("liberty-vocab", 5),
+    "real-read-netlist": ("real-read-netlist", 5),
+    "real-sdc": ("real-sdc", 5),
+    "real-report-checks": ("real-report-checks", 5),
+    "opensta-evidence": ("opensta-evidence", 5),
 }
 
 BEGIN_MARK = "<!-- algorithm-walkthrough -->"

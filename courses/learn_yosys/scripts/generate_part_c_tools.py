@@ -563,7 +563,6 @@ def write_scripts() -> None:
     for _, mid in labs:
         media.append(f'bash "$NAR" "courses/learn_yosys/{mid}"')
     media += [
-        'bash "$NAR" courses/learn_yosys/module05-03-offline-benchmark-compare',
         'bash "$NAR" courses/learn_yosys/module99-00-wrap',
         "python3 platform/scripts/publish_course_platform.py learn_yosys",
         "echo MEDIA_PARTC_OK",

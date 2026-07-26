@@ -3,11 +3,11 @@
 **Module id:** `module99-00-wrap`  
 **Kind:** `wrap`
 
-[← Offline compare](../module05-03-offline-benchmark-compare/README.md) · [Course README](../README.md) · End →
+[← Contribute](../module15-03-contribute-pass/README.md) · [Course README](../README.md) · End →
 
 ## You can now
 
-**Recap Part A pass map, Part B real CLI evidence, and Part C algorithms bound to Yosys (proc/opt/techmap/extract/memory/fsm/ABC).**
+**Recap Part A pass map, Part B real CLI evidence, Part C algorithms bound to Yosys (proc/opt/techmap/extract/memory/fsm/ABC), and Part D internals literacy (RTLIL C++ / Pass / contribute).**
 
 ## Next course
 

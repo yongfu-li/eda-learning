@@ -1,0 +1,38 @@
+{
+  "moduleId": "module01-01-timing-graph-map",
+  "items": [
+    {
+      "q": "How many cells in tiny_opensta?",
+      "choices": [
+        "3",
+        "1",
+        "10",
+        "0"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Timing graph nodes come from?",
+      "choices": [
+        "cells and pins",
+        "GDS only",
+        "Liberty only",
+        "OpenROAD only"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "u1 cell type?",
+      "choices": [
+        "AND2",
+        "NAND4",
+        "DFF",
+        "MUX"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+title: Why read a real pass
+footer: learn_yosys — 01 read opt clean
+slides:
+- type: title
+  title: Why read a real pass
+  subtitle: Algorithms in Part C match moves
+  notes: Algorithms in Part C match moves. Now map those moves onto the real C++ file
+    shape.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: mark used from outputs; delete unused cells; then unused wires'
+  - Prefer proc before opt_clean
+  notes: 'GOLDEN: mark used from outputs; delete unused cells; then unused wires.
+    Prefer proc before opt_clean.'
+- type: image
+  title: File home
+  image: assets/steps/01-home.png
+  caption: File home
+  notes: 'Real file: passes/opt/opt_clean.cc — OptCleanPass.'
+- type: image
+  title: Mark used
+  image: assets/steps/02-mark.png
+  caption: Mark used
+  notes: Walk drivers and keep signals that fan out.
+- type: image
+  title: Remove cells
+  image: assets/steps/03-rm-cells.png
+  caption: Remove cells
+  notes: rmunused_module_cells drops unused cells.
+- type: image
+  title: Remove wires
+  image: assets/steps/04-rm-wires.png
+  caption: Remove wires
+  notes: rmunused_module_signals cleans leftover nets.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: mark → rm cells → rm wires; processes empty.'
+- type: bullets
+  title: Browser lab track
+  bullets:
+  - Open **read-opt-clean**
+  - Step the mark/delete pipeline and check
+  notes: Open **read-opt-clean**. Step the mark/delete pipeline and check.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call read_opt_clean(); assert stage order and process guard
+  notes: Call read_opt_clean(); assert stage order and process guard.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Expecting opt_clean to lower processes
+  - Deleting wires before cells blindly
+  notes: Expecting opt_clean to lower processes. Deleting wires before cells blindly.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder, call read_opt_clean and print the stages
+  notes: From the common folder, call read_opt_clean and print the stages.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_yosys/common
+
+    python3 -c "from internals_solvers import read_opt_clean; print(read_opt_clean())"'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the opt_clean flow in plain steps
+  notes: Here is the opt_clean flow in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: "for module in selected:\n  if processes: warn/skip\n  mark_used(outputs)\n\
+    \  rmunused_module_cells\n  rmunused_module_signals"
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - 'Next: contribute a minimal pass of your own'
+  notes: 'Next: contribute a minimal pass of your own.'

@@ -1,0 +1,38 @@
+{
+  "moduleId": "module15-03-contribute-pass",
+  "items": [
+    {
+      "q": "New pass source usually lives under?",
+      "choices": [
+        "passes/<area>/<name>.cc",
+        "platform/tools/",
+        "common/rtl/",
+        "docs/SCOPE.md"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Minimal stub needs?",
+      "choices": [
+        "Pass subclass + REGISTER_PASS + execute",
+        "only README",
+        "only quiz.json",
+        "only Liberty"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "After adding a .cc you must?",
+      "choices": [
+        "add to Makefile / build and rebuild",
+        "only restart browser",
+        "edit goldens.json",
+        "run OpenLane"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

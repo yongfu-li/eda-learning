@@ -1,0 +1,38 @@
+{
+  "moduleId": "module02-01-arrival-required",
+  "items": [
+    {
+      "q": "Arrival at y?",
+      "choices": [
+        "2.0",
+        "10",
+        "8",
+        "0"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Required at y (ideal)?",
+      "choices": [
+        "10",
+        "2",
+        "8",
+        "0"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Arrivals propagate which way?",
+      "choices": [
+        "forward (inputs\u2192outputs)",
+        "only backward",
+        "random",
+        "GDS only"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

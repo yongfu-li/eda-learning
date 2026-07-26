@@ -1,0 +1,86 @@
+title: Why real OpenSTA
+footer: learn_opensta — 03 liberty vocab
+slides:
+- type: title
+  title: Why real OpenSTA
+  subtitle: Name liberty cells AND2/BUF/INV used by tiny_combo
+  notes: Name liberty cells AND2/BUF/INV used by tiny_combo.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: Liberty cells AND2, BUF, INV; linked cells=3'
+  notes: 'GOLDEN: Liberty cells AND2, BUF, INV; linked cells=3.'
+- type: image
+  title: Liberty file
+  image: assets/steps/01-lib.png
+  caption: Liberty file
+  notes: tiny_opensta_lib.lib holds AND2, BUF, INV.
+- type: image
+  title: AND2
+  image: assets/steps/02-and2.png
+  caption: AND2
+  notes: AND2 has ~1.0 ns delay in this teaching library.
+- type: image
+  title: BUF
+  image: assets/steps/03-buf.png
+  caption: BUF
+  notes: BUF has ~0.5 ns delay.
+- type: image
+  title: INV
+  image: assets/steps/04-inv.png
+  caption: INV
+  notes: INV has ~0.5 ns delay.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: liberty cells AND2,BUF,INV.'
+- type: bullets
+  title: Browser lab track
+  bullets:
+  - Open **liberty-vocab**
+  - Build the Tcl recipe or open evidence stages, then Check
+  notes: Open **liberty-vocab**. Build the Tcl recipe or open evidence stages, then
+    Check.
+- type: bullets
+  title: Implement track
+  bullets:
+  - From common/, run real_solvers.py and confirm REAL_OPENSTA_OK
+  notes: From common/, run real_solvers.py and confirm REAL_OPENSTA_OK.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Editing goldens by hand without re-running sta
+  - Confusing Part A map JSON with real liberty delays
+  notes: Editing goldens by hand without re-running sta. Confusing Part A map JSON
+    with real liberty delays.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder, run the real OpenSTA self-test
+  notes: From the common folder, run the real OpenSTA self-test.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_opensta/common
+
+    python3 real_solvers.py'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the check in plain steps
+  notes: Here is the check in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: 'Liberty cells AND2, BUF, INV; linked cells=3.
+
+    ok if goldens match'
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue the Part B evidence track, then wrap , algorithms and internals come
+    later
+  notes: Continue the Part B evidence track, then wrap — algorithms and internals
+    come later.

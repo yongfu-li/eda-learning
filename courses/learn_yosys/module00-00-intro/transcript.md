@@ -6,7 +6,7 @@
 
 ## Slide 1 — Why Yosys
 
-learn_yosys has three parts: Part A is the interactive pass map on a small netlist; Part B drives real Yosys with .ys scripts on tiny_and_or.v; Part C teaches Yosys algorithms bound to real evidence.
+learn_yosys has four parts: Part A is the interactive pass map; Part B drives real Yosys on tiny_and_or.v; Part C teaches algorithms bound to real evidence; Part D orients you to the Yosys C++ tree so you can contribute.
 
 ## Slide 2 — Part A pass map
 
@@ -20,14 +20,18 @@ Part B: real binary, RTLIL cells, and checked-in goldens from Yosys 0.9 on tiny_
 
 Part C: proc_mux, proc_dff ($adff), opt, techmap, extract, memory, fsm, and ABC handoff — each bound to real Yosys stats.
 
-## Slide 5 — Implement track
+## Slide 5 — Part D internals
 
-Implement track: common/solvers.py (pass map), common/real_solvers.py (evidence), and common/algo_solvers.py plus partc_bind.py (algorithms). Browser labs mirror all three.
+Part D: RTLIL C++ pillars, Pass registration, reading opt_clean, and a contribute checklist — orientation, not a full Yosys clone.
 
-## Slide 6 — Browser lab track
+## Slide 6 — Implement track
 
-Open the course labs. Start at the pass-map proc lab, continue into the real CLI modules, then the Part C algorithm labs.
+Implement track: common/solvers.py, real_solvers.py, algo_solvers.py plus partc_bind.py, and internals_solvers.py. Browser labs mirror each part.
 
-## Slide 7 — Next
+## Slide 7 — Browser lab track
 
-Start with the pass-map proc lab for pass names, continue into the real CLI modules, then the Part C algorithm labs.
+Open the course labs. Start at the pass-map proc lab, continue into CLI, algorithms, then internals.
+
+## Slide 8 — Next
+
+Start with the pass-map proc lab for pass names, then CLI, algorithms, and internals.

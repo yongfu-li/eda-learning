@@ -1,0 +1,83 @@
+title: Why SDC
+footer: learn_opensta — 03 sdc clocks
+slides:
+- type: title
+  title: Why SDC
+  subtitle: Declare create_clock period and name on clk
+  notes: Declare create_clock period and name on clk.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: create_clock -period 10 → clk period=10'
+  notes: 'GOLDEN: create_clock -period 10 → clk period=10.'
+- type: image
+  title: Clock port
+  image: assets/steps/01-port.png
+  caption: Clock port
+  notes: Port clk is the clock source.
+- type: image
+  title: create_clock
+  image: assets/steps/02-create.png
+  caption: create_clock
+  notes: SDC create_clock names the clock and sets period.
+- type: image
+  title: Period 10
+  image: assets/steps/03-period.png
+  caption: Period 10
+  notes: Period is 10 time units on this tiny design.
+- type: image
+  title: Ideal network
+  image: assets/steps/04-ideal.png
+  caption: Ideal network
+  notes: Part A uses an ideal clock — no network latency yet.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: clock clk period=10.'
+- type: bullets
+  title: Browser lab track
+  bullets:
+  - Open **sdc-clocks**
+  - Run the stage buttons and Check the goldens
+  notes: Open **sdc-clocks**. Run the stage buttons and Check the goldens.
+- type: bullets
+  title: Implement track
+  bullets:
+  - From common/, run solvers.py and confirm OPENSTA_MAP_OK
+  notes: From common/, run solvers.py and confirm OPENSTA_MAP_OK.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Mixing algorithm STA from learn_sta with OpenSTA command names
+  - Forgetting the clock period when reading slack
+  notes: Mixing algorithm STA from learn_sta with OpenSTA command names. Forgetting
+    the clock period when reading slack.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder, run the OpenSTA map self-test
+  notes: From the common folder, run the OpenSTA map self-test.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_opensta/common
+
+    python3 solvers.py'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the check in plain steps
+  notes: Here is the check in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: 'create_clock -period 10 → clk period=10.
+
+    ok if goldens match'
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue the OpenSTA Part A map, then the real CLI track
+  notes: Continue the OpenSTA Part A map, then the real CLI track.

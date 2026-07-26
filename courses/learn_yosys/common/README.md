@@ -35,3 +35,14 @@ python3 partc_bind.py
 ```
 
 Real bind stages: proc → opt → techmap → extract (ANDOR2) → memory ($mem 4×8) → fsm ($fsm) → abc/aigmap.
+
+## Part D — internals / contribute
+
+Solvers: `internals_solvers.py` · excerpts: `internals/` (hello_pass stub, opt_clean flow notes).
+
+```bash
+cd courses/learn_yosys/common
+python3 internals_solvers.py
+```
+
+Orientation only — open the upstream Yosys tree with intent; do not expect a full C++ clone in the browser.

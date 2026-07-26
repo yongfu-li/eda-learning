@@ -1,11 +1,11 @@
 file '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module99-00-wrap/frames/slide-1.png'
-duration 9.528
+duration 8.712
 file '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module99-00-wrap/frames/slide-2.png'
-duration 11.352
+duration 9.936
 file '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module99-00-wrap/frames/slide-3.png'
 duration 8.592
 file '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module99-00-wrap/frames/slide-4.png'
-duration 11.688
+duration 13.776
 file '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module99-00-wrap/frames/slide-5.png'
-duration 5.208
+duration 9.168
 file '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module99-00-wrap/frames/slide-5.png'

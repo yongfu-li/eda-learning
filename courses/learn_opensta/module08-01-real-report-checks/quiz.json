@@ -1,0 +1,38 @@
+{
+  "moduleId": "module08-01-real-report-checks",
+  "items": [
+    {
+      "q": "Path delay golden?",
+      "choices": [
+        "2.0",
+        "8",
+        "10",
+        "0"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Slack golden?",
+      "choices": [
+        "8.0",
+        "2",
+        "10",
+        "0"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Endpoint?",
+      "choices": [
+        "y",
+        "clk",
+        "a",
+        "u1"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

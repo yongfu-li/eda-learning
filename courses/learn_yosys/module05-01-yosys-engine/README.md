@@ -3,7 +3,7 @@
 **Module id:** `module05-01-yosys-engine`  
 **Kind:** `lab` · Primary lab: `yosys-engine` · **ref**
 
-[← Why synth](../module04-03-synth-script/README.md) · [Course README](../README.md) · [Offline compare →](../module05-03-offline-benchmark-compare/README.md)
+[← Why synth](../module04-03-synth-script/README.md) · [Course README](../README.md) · [Yosys CLI →](../module06-01-yosys-cli/README.md)
 
 ## Outcomes
 

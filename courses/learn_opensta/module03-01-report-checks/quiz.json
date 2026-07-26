@@ -1,0 +1,38 @@
+{
+  "moduleId": "module03-01-report-checks",
+  "items": [
+    {
+      "q": "OpenSTA path report command?",
+      "choices": [
+        "report_checks",
+        "create_clock",
+        "opt_clean",
+        "write_verilog"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Report endpoint?",
+      "choices": [
+        "y",
+        "clk",
+        "a",
+        "n1"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Reported slack golden?",
+      "choices": [
+        "8",
+        "2",
+        "10",
+        "0"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

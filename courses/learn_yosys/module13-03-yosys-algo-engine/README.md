@@ -3,7 +3,7 @@
 **Module id:** `module13-03-yosys-algo-engine`  
 **Kind:** `lab` · Primary lab: `yosys-algo-engine` · **ref**
 
-[← ABC handoff](../module13-01-abc-handoff/README.md) · [Course README](../README.md) · [Offline compare →](../module05-03-offline-benchmark-compare/README.md)
+[← ABC handoff](../module13-01-abc-handoff/README.md) · [Course README](../README.md) · [RTLIL C++ →](../module14-01-rtlil-cpp-model/README.md)
 
 ## Outcomes
 

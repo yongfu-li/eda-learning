@@ -1,0 +1,879 @@
+
+======== module00-00-intro ========
+Synced 8 slides from transcript -> outline.yaml + slides.md
+Wrote /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module00-00-intro/slides.pptx
+OK: transcript consistent with outline (/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module00-00-intro)
+Converting with soffice ...
+Warning: failed to launch javaldx - java may not function correctly
+convert /tmp/book_slides_pdf_262133/slides.pptx -> /tmp/book_slides_pdf_262133/slides.pdf using filter : impress_pdf_Export
+OK: /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module00-00-intro/slides.pdf (26357 bytes)
+Wrote /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module00-00-intro/audio/full.mp3 (8 deck slides / 8 spoken, 91.8s) and /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module00-00-intro/audio/slide_timings.json
+Rasterizing /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module00-00-intro/slides.pdf at 200 DPI ...
+Using slide timings from /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module00-00-intro/audio/slide_timings.json
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 11 (Ubuntu 11.2.0-19ubuntu1)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Input #0, concat, from '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module00-00-intro/frames/concat.txt':
+  Duration: N/A, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: png, rgb24(pc), 2667x1500 [SAR 7874:7874 DAR 889:500], 25 fps, 25 tbr, 25 tbn, 25 tbc
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x562b939a41c0] using SAR=4096/4095
+[libx264 @ 0x562b939a41c0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2 AVX512
+[libx264 @ 0x562b939a41c0] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0x562b939a41c0] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module00-00-intro/frames/silent.mp4':
+  Metadata:
+    encoder         : Lavf58.76.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 1920x1080 [SAR 8001:8000 DAR 889:500], q=2-31, 30 fps, 15360 tbn
+    Metadata:
+      encoder         : Lavc58.134.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=  853 fps=337 q=29.0 size=       0kB time=00:00:26.46 bitrate=   0.0kbits/s dup=850 drop=0 speed=10.5x    More than 1000 frames duplicated
+frame= 1129 fps=246 q=29.0 size=       0kB time=00:00:35.66 bitrate=   0.0kbits/s dup=1125 drop=0 speed=7.77x    frame= 1494 fps=247 q=29.0 size=       0kB time=00:00:47.83 bitrate=   0.0kbits/s dup=1489 drop=0 speed= 7.9x    frame= 1820 fps=234 q=29.0 size=       0kB time=00:00:58.70 bitrate=   0.0kbits/s dup=1814 drop=0 speed=7.56x    frame= 2304 fps=242 q=29.0 size=     256kB time=00:01:14.83 bitrate=  28.0kbits/s dup=2297 drop=0 speed=7.87x    frame= 2557 fps=213 q=29.0 size=     256kB time=00:01:23.26 bitrate=  25.2kbits/s dup=2549 drop=0 speed=6.95x    frame= 2756 fps=208 q=29.0 size=     256kB time=00:01:29.90 bitrate=  23.3kbits/s dup=2747 drop=0 speed=6.77x    frame= 2756 fps=193 q=29.0 size=     256kB time=00:01:29.90 bitrate=  23.3kbits/s dup=2747 drop=0 speed= 6.3x    frame= 3007 fps=193 q=-1.0 Lsize=     503kB time=00:01:40.13 bitrate=  41.2kbits/s dup=2998 drop=0 speed=6.44x    
+video:467kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 7.715780%
+[libx264 @ 0x562b939a41c0] frame I:13    Avg QP: 9.97  size: 13079
+[libx264 @ 0x562b939a41c0] frame P:757   Avg QP:10.70  size:   156
+[libx264 @ 0x562b939a41c0] frame B:2237  Avg QP:13.68  size:    85
+[libx264 @ 0x562b939a41c0] consecutive B-frames:  0.8%  0.1%  0.2% 99.0%
+[libx264 @ 0x562b939a41c0] mb I  I16..4: 52.4% 44.7%  2.9%
+[libx264 @ 0x562b939a41c0] mb P  I16..4:  0.0%  0.0%  0.0%  P16..4:  0.0%  0.0%  0.0%  0.0%  0.0%    skip:100.0%
+[libx264 @ 0x562b939a41c0] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  0.3%  0.0%  0.0%  direct: 0.0%  skip:99.7%  L0:66.7% L1:33.3% BI: 0.0%
+[libx264 @ 0x562b939a41c0] 8x8 transform intra:44.4% inter:7.9%
+[libx264 @ 0x562b939a41c0] coded y,uvDC,uvAC intra: 2.5% 0.9% 0.9% inter: 0.0% 0.0% 0.0%
+[libx264 @ 0x562b939a41c0] i16 v,h,dc,p: 96%  1%  3%  0%
+[libx264 @ 0x562b939a41c0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 78%  6% 15%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x562b939a41c0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 43% 14% 16%  3%  4%  5%  5%  4%  5%
+[libx264 @ 0x562b939a41c0] i8c dc,h,v,p: 99%  0%  0%  0%
+[libx264 @ 0x562b939a41c0] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x562b939a41c0] ref P L0: 76.3%  4.9% 17.9%  0.9%
+[libx264 @ 0x562b939a41c0] ref B L0: 46.0% 53.9%  0.1%
+[libx264 @ 0x562b939a41c0] ref B L1: 99.9%  0.1%
+[libx264 @ 0x562b939a41c0] kb/s:38.13
+Muxing audio: /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module00-00-intro/audio/full.mp3
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 11 (Ubuntu 11.2.0-19ubuntu1)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module00-00-intro/frames/silent.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.76.100
+  Duration: 00:01:40.23, start: 0.000000, bitrate: 41 kb/s
+  Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p, 1920x1080 [SAR 4096:4095 DAR 65536:36855], 38 kb/s, SAR 8001:8000 DAR 889:500, 30 fps, 30 tbr, 15360 tbn, 60 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+Input #1, mp3, from '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module00-00-intro/audio/full.mp3':
+  Metadata:
+    encoder         : Lavf58.76.100
+  Duration: 00:01:31.82, start: 0.022042, bitrate: 48 kb/s
+  Stream #1:0: Audio: mp3, 24000 Hz, mono, fltp, 48 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #1:0 -> #0:1 (mp3 (mp3float) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0x55a45fe52700] using SAR=4096/4095
+[libx264 @ 0x55a45fe52700] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2 AVX512
+[libx264 @ 0x55a45fe52700] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0x55a45fe52700] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+[aac @ 0x55a45fe54140] Too many bits 8192.000000 > 6144 per frame requested, clamping to max
+Output #0, mp4, to '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module00-00-intro/video.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.76.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(progressive), 1920x1080 [SAR 8001:8000 DAR 889:500], q=2-31, 30 fps, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.134.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 24000 Hz, mono, fltp, 144 kb/s
+    Metadata:
+      encoder         : Lavc58.134.100 aac
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=  120 fps=0.0 q=29.0 size=       0kB time=00:00:02.03 bitrate=   0.2kbits/s speed=3.76x    [mp3float @ 0x55a45fdc4780] overread, skip -6 enddists: -2 -2
+frame=  231 fps=220 q=29.0 size=       0kB time=00:00:05.73 bitrate=   0.1kbits/s speed=5.45x    frame=  333 fps=215 q=29.0 size=       0kB time=00:00:09.13 bitrate=   0.0kbits/s speed=5.89x    [mp3float @ 0x55a45fdc4780] overread, skip -7 enddists: -4 -4
+frame=  441 fps=215 q=29.0 size=       0kB time=00:00:12.75 bitrate=   0.0kbits/s speed=6.21x    [mp3float @ 0x55a45fdc4780] overread, skip -7 enddists: -1 -1
+frame=  545 fps=213 q=29.0 size=     256kB time=00:00:16.21 bitrate= 129.4kbits/s speed=6.33x    [mp3float @ 0x55a45fdc4780] overread, skip -6 enddists: -5 -5
+frame=  659 fps=215 q=29.0 size=     256kB time=00:00:20.00 bitrate= 104.9kbits/s speed=6.53x    frame=  756 fps=212 q=29.0 size=     256kB time=00:00:23.25 bitrate=  90.2kbits/s speed=6.53x    frame=  849 fps=209 q=29.0 size=     256kB time=00:00:26.36 bitrate=  79.5kbits/s speed=6.49x    frame=  943 fps=206 q=29.0 size=     512kB time=00:00:29.46 bitrate= 142.4kbits/s speed=6.44x    frame=  999 fps=197 q=29.0 size=     512kB time=00:00:31.36 bitrate= 133.8kbits/s speed=6.17x    [mp3float @ 0x55a45fdc4780] overread, skip -5 enddists: -4 -4
+frame= 1053 fps=188 q=29.0 size=     512kB time=00:00:33.13 bitrate= 126.6kbits/s speed=5.92x    frame= 1155 fps=189 q=29.0 size=     512kB time=00:00:36.56 bitrate= 114.7kbits/s speed=   6x    frame= 1241 fps=188 q=29.0 size=     512kB time=00:00:39.42 bitrate= 106.4kbits/s speed=5.97x    frame= 1339 fps=188 q=29.0 size=     768kB time=00:00:42.66 bitrate= 147.5kbits/s speed=   6x    frame= 1446 fps=190 q=29.0 size=     768kB time=00:00:46.23 bitrate= 136.1kbits/s speed=6.07x    frame= 1547 fps=190 q=29.0 size=     768kB time=00:00:49.62 bitrate= 126.8kbits/s speed=6.11x    frame= 1639 fps=190 q=29.0 size=     768kB time=00:00:52.69 bitrate= 119.4kbits/s speed=6.11x    frame= 1717 fps=188 q=29.0 size=     768kB time=00:00:55.26 bitrate= 113.8kbits/s speed=6.05x    frame= 1804 fps=187 q=29.0 size=    1024kB time=00:00:58.16 bitrate= 144.2kbits/s speed=6.04x    frame= 1904 fps=188 q=29.0 size=    1024kB time=00:01:01.52 bitrate= 136.4kbits/s speed=6.07x    frame= 2003 fps=188 q=29.0 size=    1024kB time=00:01:04.80 bitrate= 129.5kbits/s speed=6.09x    [mp3float @ 0x55a45fdc4780] overread, skip -7 enddists: -5 -5
+frame= 2087 fps=187 q=29.0 size=    1024kB time=00:01:07.60 bitrate= 124.1kbits/s speed=6.07x    frame= 2177 fps=187 q=29.0 size=    1024kB time=00:01:10.60 bitrate= 118.8kbits/s speed=6.06x    frame= 2266 fps=187 q=29.0 size=    1280kB time=00:01:13.60 bitrate= 142.5kbits/s speed=6.06x    frame= 2346 fps=185 q=29.0 size=    1280kB time=00:01:16.23 bitrate= 137.6kbits/s speed=6.02x    frame= 2435 fps=185 q=29.0 size=    1280kB time=00:01:19.20 bitrate= 132.4kbits/s speed=6.02x    frame= 2508 fps=184 q=29.0 size=    1280kB time=00:01:21.66 bitrate= 128.4kbits/s speed=5.98x    frame= 2586 fps=183 q=29.0 size=    1280kB time=00:01:24.23 bitrate= 124.5kbits/s speed=5.95x    [mp3float @ 0x55a45fdc4780] overread, skip -7 enddists: -3 -3
+frame= 2682 fps=183 q=29.0 size=    1536kB time=00:01:27.43 bitrate= 143.9kbits/s speed=5.96x    frame= 2769 fps=183 q=29.0 size=    1536kB time=00:01:30.33 bitrate= 139.3kbits/s speed=5.96x    [mp4 @ 0x55a45fe51c80] Starting second pass: moving the moov atom to the beginning of the file
+frame= 2810 fps=180 q=-1.0 Lsize=    1745kB time=00:01:33.56 bitrate= 152.8kbits/s speed=6.01x    
+video:436kB audio:1236kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 4.407488%
+[libx264 @ 0x55a45fe52700] frame I:12    Avg QP: 7.81  size: 12736
+[libx264 @ 0x55a45fe52700] frame P:707   Avg QP:10.81  size:   161
+[libx264 @ 0x55a45fe52700] frame B:2091  Avg QP:13.67  size:    86
+[libx264 @ 0x55a45fe52700] consecutive B-frames:  0.7%  0.0%  0.3% 98.9%
+[libx264 @ 0x55a45fe52700] mb I  I16..4: 72.8% 24.3%  2.9%
+[libx264 @ 0x55a45fe52700] mb P  I16..4:  0.0%  0.0%  0.0%  P16..4:  0.0%  0.0%  0.0%  0.0%  0.0%    skip:99.9%
+[libx264 @ 0x55a45fe52700] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  0.3%  0.0%  0.0%  direct: 0.0%  skip:99.7%  L0:67.1% L1:32.9% BI: 0.0%
+[libx264 @ 0x55a45fe52700] 8x8 transform intra:24.3% inter:8.5%
+[libx264 @ 0x55a45fe52700] coded y,uvDC,uvAC intra: 2.6% 1.0% 0.9% inter: 0.0% 0.0% 0.0%
+[libx264 @ 0x55a45fe52700] i16 v,h,dc,p: 97%  1%  2%  0%
+[libx264 @ 0x55a45fe52700] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 71%  3% 26%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x55a45fe52700] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 42% 14% 17%  3%  4%  5%  5%  4%  5%
+[libx264 @ 0x55a45fe52700] i8c dc,h,v,p: 99%  0%  0%  0%
+[libx264 @ 0x55a45fe52700] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x55a45fe52700] ref P L0: 79.5%  5.5% 13.8%  1.2%
+[libx264 @ 0x55a45fe52700] ref B L0: 46.8% 53.1%  0.1%
+[libx264 @ 0x55a45fe52700] ref B L1: 99.9%  0.1%
+[libx264 @ 0x55a45fe52700] kb/s:38.05
+[aac @ 0x55a45fe54140] Qavg: 65532.691
+OK: /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module00-00-intro/video.mp4 (8 slides)
+
+Done: 1 module/part(s) synced and narrated.
+
+======== module14-01-rtlil-cpp-model ========
+Synced 15 slides from transcript -> outline.yaml + slides.md
+Wrote /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module14-01-rtlil-cpp-model/slides.pptx
+OK: transcript consistent with outline (/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module14-01-rtlil-cpp-model)
+Converting with soffice ...
+Warning: failed to launch javaldx - java may not function correctly
+convert /tmp/book_slides_pdf_262479/slides.pptx -> /tmp/book_slides_pdf_262479/slides.pdf using filter : impress_pdf_Export
+OK: /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module14-01-rtlil-cpp-model/slides.pdf (142880 bytes)
+Wrote /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module14-01-rtlil-cpp-model/audio/full.mp3 (15 deck slides / 13 spoken, 68.7s) and /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module14-01-rtlil-cpp-model/audio/slide_timings.json
+Rasterizing /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module14-01-rtlil-cpp-model/slides.pdf at 200 DPI ...
+Using slide timings from /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module14-01-rtlil-cpp-model/audio/slide_timings.json
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 11 (Ubuntu 11.2.0-19ubuntu1)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Input #0, concat, from '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module14-01-rtlil-cpp-model/frames/concat.txt':
+  Duration: N/A, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: png, rgb24(pc), 2667x1500 [SAR 7874:7874 DAR 889:500], 25 fps, 25 tbr, 25 tbn, 25 tbc
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x556d1a2d21c0] using SAR=4096/4095
+[libx264 @ 0x556d1a2d21c0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2 AVX512
+[libx264 @ 0x556d1a2d21c0] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0x556d1a2d21c0] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module14-01-rtlil-cpp-model/frames/silent.mp4':
+  Metadata:
+    encoder         : Lavf58.76.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 1920x1080 [SAR 8001:8000 DAR 889:500], q=2-31, 30 fps, 15360 tbn
+    Metadata:
+      encoder         : Lavc58.134.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=  464 fps=318 q=29.0 size=       0kB time=00:00:13.50 bitrate=   0.0kbits/s dup=461 drop=0 speed=9.24x    frame=  560 fps=233 q=29.0 size=       0kB time=00:00:16.70 bitrate=   0.0kbits/s dup=556 drop=0 speed=6.95x    frame=  806 fps=231 q=29.0 size=       0kB time=00:00:24.90 bitrate=   0.0kbits/s dup=800 drop=0 speed=7.15x    frame=  909 fps=216 q=29.0 size=       0kB time=00:00:28.33 bitrate=   0.0kbits/s dup=902 drop=0 speed=6.74x    More than 1000 frames duplicated
+frame= 1091 fps=231 q=29.0 size=       0kB time=00:00:34.40 bitrate=   0.0kbits/s dup=1083 drop=0 speed=7.29x    frame= 1269 fps=216 q=29.0 size=       0kB time=00:00:40.33 bitrate=   0.0kbits/s dup=1260 drop=0 speed=6.87x    frame= 1487 fps=219 q=29.0 size=     256kB time=00:00:47.60 bitrate=  44.1kbits/s dup=1477 drop=0 speed=7.01x    frame= 1704 fps=219 q=29.0 size=     256kB time=00:00:54.83 bitrate=  38.3kbits/s dup=1693 drop=0 speed=7.03x    frame= 1770 fps=197 q=29.0 size=     256kB time=00:00:57.03 bitrate=  36.8kbits/s dup=1758 drop=0 speed=6.34x    frame= 1891 fps=194 q=29.0 size=     256kB time=00:01:01.06 bitrate=  34.3kbits/s dup=1877 drop=0 speed=6.25x    frame= 2063 fps=195 q=29.0 size=     256kB time=00:01:06.80 bitrate=  31.4kbits/s dup=2047 drop=0 speed=6.31x    frame= 2063 fps=182 q=29.0 size=     256kB time=00:01:06.80 bitrate=  31.4kbits/s dup=2047 drop=0 speed=5.89x    frame= 2116 fps=181 q=-1.0 Lsize=     427kB time=00:01:10.43 bitrate=  49.7kbits/s dup=2100 drop=0 speed=6.01x    
+video:402kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 6.386082%
+[libx264 @ 0x556d1a2d21c0] frame I:11    Avg QP:13.19  size: 14458
+[libx264 @ 0x556d1a2d21c0] frame P:530   Avg QP:11.61  size:   214
+[libx264 @ 0x556d1a2d21c0] frame B:1575  Avg QP:13.80  size:    88
+[libx264 @ 0x556d1a2d21c0] consecutive B-frames:  0.7%  0.2%  0.3% 98.9%
+[libx264 @ 0x556d1a2d21c0] mb I  I16..4: 48.4% 48.5%  3.1%
+[libx264 @ 0x556d1a2d21c0] mb P  I16..4:  0.2%  0.1%  0.0%  P16..4:  0.1%  0.0%  0.0%  0.0%  0.0%    skip:99.6%
+[libx264 @ 0x556d1a2d21c0] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  0.4%  0.0%  0.0%  direct: 0.0%  skip:99.6%  L0:65.4% L1:34.6% BI: 0.0%
+[libx264 @ 0x556d1a2d21c0] 8x8 transform intra:46.4% inter:49.7%
+[libx264 @ 0x556d1a2d21c0] coded y,uvDC,uvAC intra: 6.5% 1.9% 1.2% inter: 0.0% 0.0% 0.0%
+[libx264 @ 0x556d1a2d21c0] i16 v,h,dc,p: 84% 13%  3%  0%
+[libx264 @ 0x556d1a2d21c0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 57% 23% 20%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x556d1a2d21c0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 42% 20% 15%  2%  4%  5%  4%  4%  4%
+[libx264 @ 0x556d1a2d21c0] i8c dc,h,v,p: 94%  5%  1%  0%
+[libx264 @ 0x556d1a2d21c0] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x556d1a2d21c0] ref P L0: 81.1%  3.7% 14.0%  1.2%
+[libx264 @ 0x556d1a2d21c0] ref B L0: 43.7% 56.3%  0.0%
+[libx264 @ 0x556d1a2d21c0] ref B L1: 99.8%  0.2%
+[libx264 @ 0x556d1a2d21c0] kb/s:46.59
+Muxing audio: /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module14-01-rtlil-cpp-model/audio/full.mp3
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 11 (Ubuntu 11.2.0-19ubuntu1)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module14-01-rtlil-cpp-model/frames/silent.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.76.100
+  Duration: 00:01:10.53, start: 0.000000, bitrate: 49 kb/s
+  Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p, 1920x1080 [SAR 4096:4095 DAR 65536:36855], 46 kb/s, SAR 8001:8000 DAR 889:500, 30 fps, 30 tbr, 15360 tbn, 60 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+Input #1, mp3, from '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module14-01-rtlil-cpp-model/audio/full.mp3':
+  Metadata:
+    encoder         : Lavf58.76.100
+  Duration: 00:01:08.71, start: 0.022042, bitrate: 48 kb/s
+  Stream #1:0: Audio: mp3, 24000 Hz, mono, fltp, 48 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #1:0 -> #0:1 (mp3 (mp3float) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0x559deb495200] using SAR=4096/4095
+[libx264 @ 0x559deb495200] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2 AVX512
+[libx264 @ 0x559deb495200] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0x559deb495200] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+[aac @ 0x559deb496c40] Too many bits 8192.000000 > 6144 per frame requested, clamping to max
+Output #0, mp4, to '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module14-01-rtlil-cpp-model/video.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.76.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(progressive), 1920x1080 [SAR 8001:8000 DAR 889:500], q=2-31, 30 fps, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.134.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 24000 Hz, mono, fltp, 144 kb/s
+    Metadata:
+      encoder         : Lavc58.134.100 aac
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=   99 fps=0.0 q=29.0 size=       0kB time=00:00:01.33 bitrate=   0.3kbits/s speed=2.47x    frame=  171 fps=164 q=29.0 size=       0kB time=00:00:03.73 bitrate=   0.1kbits/s speed=3.59x    [mp3float @ 0x559deb3fdfc0] overread, skip -7 enddists: -3 -3
+frame=  266 fps=172 q=29.0 size=       0kB time=00:00:06.90 bitrate=   0.1kbits/s speed=4.45x    frame=  367 fps=179 q=29.0 size=       0kB time=00:00:10.26 bitrate=   0.0kbits/s speed=   5x    [mp3float @ 0x559deb3fdfc0] overread, skip -6 enddists: -3 -3
+[mp3float @ 0x559deb3fdfc0] overread, skip -7 enddists: -6 -6
+frame=  465 fps=182 q=29.0 size=       0kB time=00:00:13.53 bitrate=   0.0kbits/s speed= 5.3x    frame=  545 fps=178 q=29.0 size=     256kB time=00:00:16.20 bitrate= 129.5kbits/s speed= 5.3x    frame=  627 fps=176 q=29.0 size=     256kB time=00:00:18.93 bitrate= 110.8kbits/s speed= 5.3x    [mp3float @ 0x559deb3fdfc0] overread, skip -7 enddists: -2 -2
+frame=  715 fps=176 q=29.0 size=     256kB time=00:00:21.86 bitrate=  95.9kbits/s speed=5.37x    frame=  802 fps=175 q=29.0 size=     256kB time=00:00:24.76 bitrate=  84.7kbits/s speed=5.42x    frame=  900 fps=177 q=29.0 size=     256kB time=00:00:28.03 bitrate=  74.8kbits/s speed=5.53x    frame= 1000 fps=179 q=29.0 size=     512kB time=00:00:31.36 bitrate= 133.7kbits/s speed=5.63x    [mp3float @ 0x559deb3fdfc0] overread, skip -7 enddists: -1 -1
+frame= 1095 fps=180 q=29.0 size=     512kB time=00:00:34.53 bitrate= 121.5kbits/s speed=5.68x    frame= 1194 fps=182 q=29.0 size=     512kB time=00:00:37.83 bitrate= 110.9kbits/s speed=5.75x    frame= 1299 fps=184 q=29.0 size=     512kB time=00:00:41.34 bitrate= 101.5kbits/s speed=5.84x    frame= 1400 fps=185 q=29.0 size=     768kB time=00:00:44.70 bitrate= 140.8kbits/s speed=5.89x    [mp3float @ 0x559deb3fdfc0] overread, skip -5 enddists: -3 -3
+frame= 1507 fps=186 q=29.0 size=     768kB time=00:00:48.26 bitrate= 130.4kbits/s speed=5.97x    frame= 1607 fps=187 q=29.0 size=     768kB time=00:00:51.60 bitrate= 121.9kbits/s speed=6.01x    [mp3float @ 0x559deb3fdfc0] overread, skip -7 enddists: -5 -5
+frame= 1700 fps=187 q=29.0 size=     768kB time=00:00:54.70 bitrate= 115.0kbits/s speed=6.02x    frame= 1793 fps=187 q=29.0 size=     768kB time=00:00:57.80 bitrate= 108.9kbits/s speed=6.03x    frame= 1873 fps=186 q=29.0 size=    1024kB time=00:01:00.46 bitrate= 138.7kbits/s speed=5.99x    frame= 1960 fps=185 q=29.0 size=    1024kB time=00:01:03.36 bitrate= 132.4kbits/s speed=5.98x    frame= 2047 fps=185 q=29.0 size=    1024kB time=00:01:06.26 bitrate= 126.6kbits/s speed=5.98x    [mp3float @ 0x559deb3fdfc0] overread, skip -5 enddists: -1 -1
+[mp4 @ 0x559deb3ee900] Starting second pass: moving the moov atom to the beginning of the file
+frame= 2116 fps=183 q=-1.0 Lsize=    1284kB time=00:01:10.43 bitrate= 149.4kbits/s speed=6.09x    
+video:397kB audio:832kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 4.529501%
+[libx264 @ 0x559deb495200] frame I:11    Avg QP:10.77  size: 14382
+[libx264 @ 0x559deb495200] frame P:531   Avg QP:11.12  size:   201
+[libx264 @ 0x559deb495200] frame B:1574  Avg QP:14.02  size:    89
+[libx264 @ 0x559deb495200] consecutive B-frames:  0.7%  0.2%  0.4% 98.7%
+[libx264 @ 0x559deb495200] mb I  I16..4: 48.2% 48.6%  3.1%
+[libx264 @ 0x559deb495200] mb P  I16..4:  0.1%  0.2%  0.0%  P16..4:  0.1%  0.0%  0.0%  0.0%  0.0%    skip:99.6%
+[libx264 @ 0x559deb495200] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  0.3%  0.0%  0.0%  direct: 0.0%  skip:99.6%  L0:62.5% L1:37.5% BI: 0.0%
+[libx264 @ 0x559deb495200] 8x8 transform intra:50.9% inter:22.1%
+[libx264 @ 0x559deb495200] coded y,uvDC,uvAC intra: 2.7% 2.0% 1.4% inter: 0.0% 0.0% 0.0%
+[libx264 @ 0x559deb495200] i16 v,h,dc,p: 86% 11%  3%  0%
+[libx264 @ 0x559deb495200] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 71% 16% 13%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x559deb495200] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 42% 20% 14%  3%  4%  5%  4%  4%  4%
+[libx264 @ 0x559deb495200] i8c dc,h,v,p: 94%  5%  1%  0%
+[libx264 @ 0x559deb495200] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x559deb495200] ref P L0: 65.8%  2.9% 20.0% 11.2%
+[libx264 @ 0x559deb495200] ref B L0: 43.5% 56.5%  0.1%
+[libx264 @ 0x559deb495200] ref B L1: 98.4%  1.6%
+[libx264 @ 0x559deb495200] kb/s:46.02
+[aac @ 0x559deb496c40] Qavg: 65532.492
+OK: /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module14-01-rtlil-cpp-model/video.mp4 (15 slides)
+
+Done: 1 module/part(s) synced and narrated.
+
+======== module14-03-pass-registration ========
+Synced 15 slides from transcript -> outline.yaml + slides.md
+Wrote /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module14-03-pass-registration/slides.pptx
+OK: transcript consistent with outline (/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module14-03-pass-registration)
+Converting with soffice ...
+Warning: failed to launch javaldx - java may not function correctly
+convert /tmp/book_slides_pdf_262791/slides.pptx -> /tmp/book_slides_pdf_262791/slides.pdf using filter : impress_pdf_Export
+OK: /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module14-03-pass-registration/slides.pdf (146021 bytes)
+Wrote /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module14-03-pass-registration/audio/full.mp3 (15 deck slides / 13 spoken, 62.2s) and /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module14-03-pass-registration/audio/slide_timings.json
+Rasterizing /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module14-03-pass-registration/slides.pdf at 200 DPI ...
+Using slide timings from /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module14-03-pass-registration/audio/slide_timings.json
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 11 (Ubuntu 11.2.0-19ubuntu1)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Input #0, concat, from '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module14-03-pass-registration/frames/concat.txt':
+  Duration: N/A, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: png, rgb24(pc), 2667x1500 [SAR 7874:7874 DAR 889:500], 25 fps, 25 tbr, 25 tbn, 25 tbc
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x55c4c1985a80] using SAR=4096/4095
+[libx264 @ 0x55c4c1985a80] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2 AVX512
+[libx264 @ 0x55c4c1985a80] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0x55c4c1985a80] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module14-03-pass-registration/frames/silent.mp4':
+  Metadata:
+    encoder         : Lavf58.76.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 1920x1080 [SAR 8001:8000 DAR 889:500], q=2-31, 30 fps, 15360 tbn
+    Metadata:
+      encoder         : Lavc58.134.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=  387 fps=324 q=29.0 size=       0kB time=00:00:10.93 bitrate=   0.0kbits/s dup=384 drop=0 speed=9.15x    frame=  481 fps=226 q=29.0 size=       0kB time=00:00:14.06 bitrate=   0.0kbits/s dup=477 drop=0 speed=6.62x    frame=  603 fps=227 q=29.0 size=       0kB time=00:00:18.13 bitrate=   0.0kbits/s dup=598 drop=0 speed=6.84x    frame=  716 fps=219 q=29.0 size=       0kB time=00:00:21.90 bitrate=   0.0kbits/s dup=710 drop=0 speed= 6.7x    frame=  825 fps=209 q=29.0 size=       0kB time=00:00:25.53 bitrate=   0.0kbits/s dup=818 drop=0 speed=6.47x    frame=  948 fps=208 q=29.0 size=       0kB time=00:00:29.63 bitrate=   0.0kbits/s dup=940 drop=0 speed= 6.5x    More than 1000 frames duplicated
+frame= 1107 fps=206 q=29.0 size=       0kB time=00:00:34.93 bitrate=   0.0kbits/s dup=1098 drop=0 speed=6.51x    frame= 1277 fps=205 q=29.0 size=       0kB time=00:00:40.60 bitrate=   0.0kbits/s dup=1267 drop=0 speed=6.53x    frame= 1455 fps=205 q=29.0 size=     256kB time=00:00:46.53 bitrate=  45.1kbits/s dup=1444 drop=0 speed=6.56x    frame= 1536 fps=193 q=29.0 size=     256kB time=00:00:49.23 bitrate=  42.6kbits/s dup=1524 drop=0 speed= 6.2x    frame= 1671 fps=191 q=29.0 size=     256kB time=00:00:53.73 bitrate=  39.0kbits/s dup=1657 drop=0 speed=6.13x    frame= 1867 fps=196 q=29.0 size=     256kB time=00:01:00.26 bitrate=  34.8kbits/s dup=1851 drop=0 speed=6.34x    frame= 1867 fps=181 q=29.0 size=     256kB time=00:01:00.26 bitrate=  34.8kbits/s dup=1851 drop=0 speed=5.83x    frame= 1921 fps=180 q=-1.0 Lsize=     420kB time=00:01:03.93 bitrate=  53.8kbits/s dup=1905 drop=0 speed=5.97x    
+video:397kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 5.882498%
+[libx264 @ 0x55c4c1985a80] frame I:12    Avg QP:10.63  size: 15784
+[libx264 @ 0x55c4c1985a80] frame P:482   Avg QP:11.59  size:   205
+[libx264 @ 0x55c4c1985a80] frame B:1427  Avg QP:13.75  size:    82
+[libx264 @ 0x55c4c1985a80] consecutive B-frames:  0.8%  0.1%  0.8% 98.3%
+[libx264 @ 0x55c4c1985a80] mb I  I16..4: 55.7% 40.8%  3.6%
+[libx264 @ 0x55c4c1985a80] mb P  I16..4:  0.1%  0.0%  0.0%  P16..4:  0.1%  0.0%  0.0%  0.0%  0.0%    skip:99.7%
+[libx264 @ 0x55c4c1985a80] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  0.2%  0.0%  0.0%  direct: 0.0%  skip:99.8%  L0:61.1% L1:38.9% BI: 0.0%
+[libx264 @ 0x55c4c1985a80] 8x8 transform intra:39.1% inter:66.8%
+[libx264 @ 0x55c4c1985a80] coded y,uvDC,uvAC intra: 3.6% 2.1% 1.3% inter: 0.0% 0.0% 0.0%
+[libx264 @ 0x55c4c1985a80] i16 v,h,dc,p: 85% 12%  2%  0%
+[libx264 @ 0x55c4c1985a80] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 51% 25% 24%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x55c4c1985a80] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 38% 25% 14%  2%  4%  5%  5%  3%  4%
+[libx264 @ 0x55c4c1985a80] i8c dc,h,v,p: 94%  5%  1%  0%
+[libx264 @ 0x55c4c1985a80] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x55c4c1985a80] ref P L0: 90.4%  4.3%  4.5%  0.8%
+[libx264 @ 0x55c4c1985a80] ref B L0: 41.8% 57.9%  0.3%
+[libx264 @ 0x55c4c1985a80] ref B L1: 99.4%  0.6%
+[libx264 @ 0x55c4c1985a80] kb/s:50.69
+Muxing audio: /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module14-03-pass-registration/audio/full.mp3
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 11 (Ubuntu 11.2.0-19ubuntu1)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module14-03-pass-registration/frames/silent.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.76.100
+  Duration: 00:01:04.03, start: 0.000000, bitrate: 53 kb/s
+  Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p, 1920x1080 [SAR 4096:4095 DAR 65536:36855], 50 kb/s, SAR 8001:8000 DAR 889:500, 30 fps, 30 tbr, 15360 tbn, 60 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+Input #1, mp3, from '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module14-03-pass-registration/audio/full.mp3':
+  Metadata:
+    encoder         : Lavf58.76.100
+  Duration: 00:01:02.18, start: 0.022042, bitrate: 48 kb/s
+  Stream #1:0: Audio: mp3, 24000 Hz, mono, fltp, 48 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #1:0 -> #0:1 (mp3 (mp3float) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0x560ed02c4c00] using SAR=4096/4095
+[libx264 @ 0x560ed02c4c00] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2 AVX512
+[libx264 @ 0x560ed02c4c00] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0x560ed02c4c00] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+[aac @ 0x560ed02c97c0] Too many bits 8192.000000 > 6144 per frame requested, clamping to max
+Output #0, mp4, to '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module14-03-pass-registration/video.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.76.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(progressive), 1920x1080 [SAR 8001:8000 DAR 889:500], q=2-31, 30 fps, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.134.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 24000 Hz, mono, fltp, 144 kb/s
+    Metadata:
+      encoder         : Lavc58.134.100 aac
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=   83 fps=0.0 q=29.0 size=       0kB time=00:00:00.80 bitrate=   0.5kbits/s speed=1.38x    frame=  177 fps=164 q=29.0 size=       0kB time=00:00:03.93 bitrate=   0.1kbits/s speed=3.64x    frame=  266 fps=168 q=29.0 size=       0kB time=00:00:06.90 bitrate=   0.1kbits/s speed=4.36x    frame=  355 fps=170 q=29.0 size=       0kB time=00:00:09.86 bitrate=   0.0kbits/s speed=4.74x    frame=  435 fps=168 q=29.0 size=       0kB time=00:00:12.53 bitrate=   0.0kbits/s speed=4.85x    frame=  525 fps=170 q=29.0 size=     256kB time=00:00:15.53 bitrate= 135.0kbits/s speed=5.04x    [mp3float @ 0x560ed0240400] overread, skip -8 enddists: -1 -1
+frame=  609 fps=170 q=29.0 size=     256kB time=00:00:18.34 bitrate= 114.3kbits/s speed=5.12x    frame=  689 fps=169 q=29.0 size=     256kB time=00:00:21.00 bitrate=  99.9kbits/s speed=5.14x    frame=  778 fps=170 q=29.0 size=     256kB time=00:00:23.96 bitrate=  87.5kbits/s speed=5.22x    frame=  866 fps=170 q=29.0 size=     256kB time=00:00:26.90 bitrate=  78.0kbits/s speed=5.27x    frame=  947 fps=169 q=29.0 size=     512kB time=00:00:29.60 bitrate= 141.7kbits/s speed=5.28x    frame= 1040 fps=170 q=29.0 size=     512kB time=00:00:32.72 bitrate= 128.2kbits/s speed=5.36x    frame= 1131 fps=171 q=29.0 size=     512kB time=00:00:35.73 bitrate= 117.4kbits/s speed=5.41x    frame= 1228 fps=173 q=29.0 size=     512kB time=00:00:38.96 bitrate= 107.6kbits/s speed=5.48x    [mp3float @ 0x560ed0240400] overread, skip -7 enddists: -1 -1
+frame= 1313 fps=172 q=29.0 size=     512kB time=00:00:41.80 bitrate= 100.4kbits/s speed=5.49x    [mp3float @ 0x560ed0240400] overread, skip -10 enddists: -1 -1
+[mp3float @ 0x560ed0240400] overread, skip -7 enddists: -3 -3
+frame= 1402 fps=173 q=29.0 size=     768kB time=00:00:44.80 bitrate= 140.4kbits/s speed=5.52x    frame= 1489 fps=173 q=29.0 size=     768kB time=00:00:47.70 bitrate= 131.9kbits/s speed=5.54x    frame= 1574 fps=173 q=29.0 size=     768kB time=00:00:50.50 bitrate= 124.6kbits/s speed=5.54x    frame= 1645 fps=171 q=29.0 size=     768kB time=00:00:52.86 bitrate= 119.0kbits/s speed=5.49x    frame= 1727 fps=170 q=29.0 size=    1024kB time=00:00:55.60 bitrate= 150.9kbits/s speed=5.49x    [mp3float @ 0x560ed0240400] overread, skip -8 enddists: -7 -7
+frame= 1805 fps=170 q=29.0 size=    1024kB time=00:00:58.24 bitrate= 144.0kbits/s speed=5.48x    [mp3float @ 0x560ed0240400] overread, skip -4 enddists: -1 -1
+frame= 1900 fps=170 q=29.0 size=    1024kB time=00:01:01.36 bitrate= 136.7kbits/s speed=5.51x    [mp4 @ 0x560ed02c4140] Starting second pass: moving the moov atom to the beginning of the file
+frame= 1921 fps=168 q=-1.0 Lsize=    1183kB time=00:01:03.93 bitrate= 151.6kbits/s speed=5.61x    
+video:395kB audio:737kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 4.465142%
+[libx264 @ 0x560ed02c4c00] frame I:12    Avg QP: 8.23  size: 15682
+[libx264 @ 0x560ed02c4c00] frame P:482   Avg QP:11.11  size:   195
+[libx264 @ 0x560ed02c4c00] frame B:1427  Avg QP:14.05  size:    85
+[libx264 @ 0x560ed02c4c00] consecutive B-frames:  0.8%  0.1%  0.8% 98.3%
+[libx264 @ 0x560ed02c4c00] mb I  I16..4: 74.5% 22.1%  3.4%
+[libx264 @ 0x560ed02c4c00] mb P  I16..4:  0.1%  0.0%  0.0%  P16..4:  0.0%  0.0%  0.0%  0.0%  0.0%    skip:99.8%
+[libx264 @ 0x560ed02c4c00] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  0.3%  0.0%  0.0%  direct: 0.0%  skip:99.7%  L0:53.8% L1:46.2% BI: 0.0%
+[libx264 @ 0x560ed02c4c00] 8x8 transform intra:21.6% inter:16.5%
+[libx264 @ 0x560ed02c4c00] coded y,uvDC,uvAC intra: 2.8% 2.1% 1.4% inter: 0.0% 0.0% 0.0%
+[libx264 @ 0x560ed02c4c00] i16 v,h,dc,p: 89%  9%  2%  0%
+[libx264 @ 0x560ed02c4c00] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 54% 24% 22%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x560ed02c4c00] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 41% 20% 14%  3%  4%  5%  5%  4%  5%
+[libx264 @ 0x560ed02c4c00] i8c dc,h,v,p: 94%  5%  1%  0%
+[libx264 @ 0x560ed02c4c00] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x560ed02c4c00] ref P L0: 71.1%  3.2% 17.4%  8.3%
+[libx264 @ 0x560ed02c4c00] ref B L0: 33.1% 66.6%  0.3%
+[libx264 @ 0x560ed02c4c00] ref B L1: 99.7%  0.3%
+[libx264 @ 0x560ed02c4c00] kb/s:50.44
+[aac @ 0x560ed02c97c0] Qavg: 65533.668
+OK: /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module14-03-pass-registration/video.mp4 (15 slides)
+
+Done: 1 module/part(s) synced and narrated.
+
+======== module15-01-read-opt-clean ========
+Synced 15 slides from transcript -> outline.yaml + slides.md
+Wrote /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module15-01-read-opt-clean/slides.pptx
+OK: transcript consistent with outline (/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module15-01-read-opt-clean)
+Converting with soffice ...
+Warning: failed to launch javaldx - java may not function correctly
+convert /tmp/book_slides_pdf_263398/slides.pptx -> /tmp/book_slides_pdf_263398/slides.pdf using filter : impress_pdf_Export
+OK: /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module15-01-read-opt-clean/slides.pdf (141255 bytes)
+Wrote /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module15-01-read-opt-clean/audio/full.mp3 (15 deck slides / 13 spoken, 69.2s) and /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module15-01-read-opt-clean/audio/slide_timings.json
+Rasterizing /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module15-01-read-opt-clean/slides.pdf at 200 DPI ...
+Using slide timings from /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module15-01-read-opt-clean/audio/slide_timings.json
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 11 (Ubuntu 11.2.0-19ubuntu1)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Input #0, concat, from '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module15-01-read-opt-clean/frames/concat.txt':
+  Duration: N/A, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: png, rgb24(pc), 2667x1500 [SAR 7874:7874 DAR 889:500], 25 fps, 25 tbr, 25 tbn, 25 tbc
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x55573780ea80] using SAR=4096/4095
+[libx264 @ 0x55573780ea80] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2 AVX512
+[libx264 @ 0x55573780ea80] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0x55573780ea80] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module15-01-read-opt-clean/frames/silent.mp4':
+  Metadata:
+    encoder         : Lavf58.76.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 1920x1080 [SAR 8001:8000 DAR 889:500], q=2-31, 30 fps, 15360 tbn
+    Metadata:
+      encoder         : Lavc58.134.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=  475 fps=191 q=29.0 size=       0kB time=00:00:13.86 bitrate=   0.0kbits/s dup=472 drop=0 speed=5.58x    frame=  660 fps=135 q=29.0 size=       0kB time=00:00:20.03 bitrate=   0.0kbits/s dup=656 drop=0 speed=4.11x    frame=  763 fps=109 q=29.0 size=       0kB time=00:00:23.46 bitrate=   0.0kbits/s dup=758 drop=0 speed=3.36x    frame=  891 fps=110 q=29.0 size=       0kB time=00:00:27.73 bitrate=   0.0kbits/s dup=885 drop=0 speed=3.43x    More than 1000 frames duplicated
+frame= 1026 fps=110 q=29.0 size=       0kB time=00:00:32.23 bitrate=   0.0kbits/s dup=1019 drop=0 speed=3.47x    frame= 1169 fps=107 q=29.0 size=       0kB time=00:00:37.00 bitrate=   0.0kbits/s dup=1161 drop=0 speed= 3.4x    frame= 1329 fps=105 q=29.0 size=       0kB time=00:00:42.33 bitrate=   0.0kbits/s dup=1320 drop=0 speed=3.36x    frame= 1482 fps=106 q=29.0 size=     256kB time=00:00:47.43 bitrate=  44.2kbits/s dup=1472 drop=0 speed= 3.4x    frame= 1687 fps=108 q=29.0 size=     256kB time=00:00:54.26 bitrate=  38.7kbits/s dup=1676 drop=0 speed=3.46x    frame= 1771 fps=101 q=29.0 size=     256kB time=00:00:57.06 bitrate=  36.8kbits/s dup=1759 drop=0 speed=3.27x    frame= 1855 fps=102 q=29.0 size=     256kB time=00:00:59.86 bitrate=  35.0kbits/s dup=1842 drop=0 speed=3.28x    frame= 1911 fps= 99 q=29.0 size=     256kB time=00:01:01.73 bitrate=  34.0kbits/s dup=1897 drop=0 speed=3.21x    frame= 1969 fps= 98 q=29.0 size=     256kB time=00:01:03.66 bitrate=  32.9kbits/s dup=1954 drop=0 speed=3.18x    frame= 2078 fps=101 q=29.0 size=     256kB time=00:01:07.30 bitrate=  31.2kbits/s dup=2062 drop=0 speed=3.27x    frame= 2078 fps= 95 q=29.0 size=     256kB time=00:01:07.30 bitrate=  31.2kbits/s dup=2062 drop=0 speed=3.09x    frame= 2134 fps= 95 q=-1.0 Lsize=     460kB time=00:01:11.03 bitrate=  53.1kbits/s dup=2118 drop=0 speed=3.16x    
+video:434kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 5.956528%
+[libx264 @ 0x55573780ea80] frame I:12    Avg QP:10.97  size: 17220
+[libx264 @ 0x55573780ea80] frame P:535   Avg QP:11.69  size:   197
+[libx264 @ 0x55573780ea80] frame B:1587  Avg QP:13.71  size:    83
+[libx264 @ 0x55573780ea80] consecutive B-frames:  0.7%  0.2%  0.3% 98.8%
+[libx264 @ 0x55573780ea80] mb I  I16..4: 69.2% 26.5%  4.3%
+[libx264 @ 0x55573780ea80] mb P  I16..4:  0.1%  0.1%  0.0%  P16..4:  0.2%  0.0%  0.0%  0.0%  0.0%    skip:99.5%
+[libx264 @ 0x55573780ea80] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  0.2%  0.0%  0.0%  direct: 0.0%  skip:99.8%  L0:69.1% L1:30.9% BI: 0.0%
+[libx264 @ 0x55573780ea80] 8x8 transform intra:29.6% inter:90.0%
+[libx264 @ 0x55573780ea80] coded y,uvDC,uvAC intra: 3.9% 1.8% 1.2% inter: 0.0% 0.0% 0.0%
+[libx264 @ 0x55573780ea80] i16 v,h,dc,p: 82% 16%  2%  0%
+[libx264 @ 0x55573780ea80] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 60% 17% 23%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x55573780ea80] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 36% 28% 14%  2%  4%  4%  4%  3%  4%
+[libx264 @ 0x55573780ea80] i8c dc,h,v,p: 94%  5%  1%  0%
+[libx264 @ 0x55573780ea80] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x55573780ea80] ref P L0: 46.8% 50.8%  1.8%  0.6%
+[libx264 @ 0x55573780ea80] ref B L0: 36.4% 63.5%  0.1%
+[libx264 @ 0x55573780ea80] ref B L1: 99.4%  0.6%
+[libx264 @ 0x55573780ea80] kb/s:49.93
+Muxing audio: /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module15-01-read-opt-clean/audio/full.mp3
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 11 (Ubuntu 11.2.0-19ubuntu1)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module15-01-read-opt-clean/frames/silent.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.76.100
+  Duration: 00:01:11.13, start: 0.000000, bitrate: 52 kb/s
+  Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p, 1920x1080 [SAR 4096:4095 DAR 65536:36855], 50 kb/s, SAR 8001:8000 DAR 889:500, 30 fps, 30 tbr, 15360 tbn, 60 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+Input #1, mp3, from '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module15-01-read-opt-clean/audio/full.mp3':
+  Metadata:
+    encoder         : Lavf58.76.100
+  Duration: 00:01:09.24, start: 0.022042, bitrate: 48 kb/s
+  Stream #1:0: Audio: mp3, 24000 Hz, mono, fltp, 48 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #1:0 -> #0:1 (mp3 (mp3float) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0x5610b5331240] using SAR=4096/4095
+[libx264 @ 0x5610b5331240] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2 AVX512
+[libx264 @ 0x5610b5331240] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0x5610b5331240] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+[aac @ 0x5610b5336240] Too many bits 8192.000000 > 6144 per frame requested, clamping to max
+Output #0, mp4, to '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module15-01-read-opt-clean/video.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.76.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(progressive), 1920x1080 [SAR 8001:8000 DAR 889:500], q=2-31, 30 fps, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.134.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 24000 Hz, mono, fltp, 144 kb/s
+    Metadata:
+      encoder         : Lavc58.134.100 aac
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=   61 fps=0.0 q=29.0 size=       0kB time=00:00:00.08 bitrate=   4.5kbits/s speed=0.147x    [mp3float @ 0x5610b529acc0] overread, skip -7 enddists: -1 -1
+frame=  120 fps=110 q=29.0 size=       0kB time=00:00:02.03 bitrate=   0.2kbits/s speed=1.86x    frame=  180 fps=111 q=29.0 size=       0kB time=00:00:04.03 bitrate=   0.1kbits/s speed= 2.5x    frame=  239 fps=113 q=29.0 size=       0kB time=00:00:06.00 bitrate=   0.1kbits/s speed=2.83x    frame=  282 fps=108 q=29.0 size=       0kB time=00:00:07.43 bitrate=   0.1kbits/s speed=2.84x    frame=  333 fps=106 q=29.0 size=       0kB time=00:00:09.13 bitrate=   0.0kbits/s speed=2.91x    frame=  396 fps=109 q=29.0 size=       0kB time=00:00:11.23 bitrate=   0.0kbits/s speed=3.08x    [mp3float @ 0x5610b529acc0] overread, skip -8 enddists: -2 -2
+frame=  437 fps=105 q=29.0 size=       0kB time=00:00:12.60 bitrate=   0.0kbits/s speed=3.04x    frame=  493 fps=106 q=29.0 size=       0kB time=00:00:14.46 bitrate=   0.0kbits/s speed=3.11x    frame=  531 fps=102 q=29.0 size=     256kB time=00:00:15.73 bitrate= 133.3kbits/s speed=3.02x    frame=  583 fps=102 q=29.0 size=     256kB time=00:00:17.46 bitrate= 120.1kbits/s speed=3.06x    frame=  636 fps=102 q=29.0 size=     256kB time=00:00:19.23 bitrate= 109.1kbits/s speed=3.08x    frame=  687 fps=102 q=29.0 size=     256kB time=00:00:20.93 bitrate= 100.2kbits/s speed= 3.1x    frame=  737 fps=102 q=29.0 size=     256kB time=00:00:22.60 bitrate=  92.8kbits/s speed=3.12x    frame=  772 fps=100 q=29.0 size=     256kB time=00:00:23.76 bitrate=  88.3kbits/s speed=3.06x    frame=  823 fps= 99 q=29.0 size=     256kB time=00:00:25.47 bitrate=  82.3kbits/s speed=3.08x    frame=  849 fps= 97 q=29.0 size=     256kB time=00:00:26.36 bitrate=  79.5kbits/s speed=   3x    frame=  879 fps= 95 q=29.0 size=     256kB time=00:00:27.33 bitrate=  76.7kbits/s speed=2.94x    frame=  918 fps= 94 q=29.0 size=     512kB time=00:00:28.67 bitrate= 146.3kbits/s speed=2.92x    frame=  966 fps= 94 q=29.0 size=     512kB time=00:00:30.23 bitrate= 138.7kbits/s speed=2.93x    [mp3float @ 0x5610b529acc0] overread, skip -6 enddists: -1 -1
+frame= 1013 fps= 93 q=29.0 size=     512kB time=00:00:31.80 bitrate= 131.9kbits/s speed=2.93x    frame= 1066 fps= 94 q=29.0 size=     512kB time=00:00:33.56 bitrate= 125.0kbits/s speed=2.95x    frame= 1116 fps= 94 q=29.0 size=     512kB time=00:00:35.23 bitrate= 119.1kbits/s speed=2.97x    frame= 1167 fps= 94 q=29.0 size=     512kB time=00:00:36.93 bitrate= 113.6kbits/s speed=2.98x    frame= 1212 fps= 94 q=29.0 size=     512kB time=00:00:38.43 bitrate= 109.1kbits/s speed=2.98x    frame= 1261 fps= 94 q=29.0 size=     512kB time=00:00:40.10 bitrate= 104.6kbits/s speed=2.99x    frame= 1318 fps= 95 q=29.0 size=     512kB time=00:00:41.96 bitrate= 100.0kbits/s speed=3.02x    [mp3float @ 0x5610b529acc0] overread, skip -7 enddists: -2 -2
+frame= 1372 fps= 95 q=29.0 size=     768kB time=00:00:43.76 bitrate= 143.8kbits/s speed=3.04x    frame= 1421 fps= 95 q=29.0 size=     768kB time=00:00:45.40 bitrate= 138.6kbits/s speed=3.05x    frame= 1478 fps= 96 q=29.0 size=     768kB time=00:00:47.30 bitrate= 133.0kbits/s speed=3.07x    frame= 1529 fps= 96 q=29.0 size=     768kB time=00:00:49.02 bitrate= 128.3kbits/s speed=3.08x    frame= 1583 fps= 96 q=29.0 size=     768kB time=00:00:50.80 bitrate= 123.9kbits/s speed=3.09x    frame= 1640 fps= 97 q=29.0 size=     768kB time=00:00:52.70 bitrate= 119.4kbits/s speed=3.11x    frame= 1690 fps= 97 q=29.0 size=     768kB time=00:00:54.40 bitrate= 115.7kbits/s speed=3.11x    frame= 1738 fps= 97 q=29.0 size=     768kB time=00:00:55.96 bitrate= 112.4kbits/s speed=3.11x    frame= 1784 fps= 97 q=29.0 size=     768kB time=00:00:57.50 bitrate= 109.4kbits/s speed=3.11x    frame= 1830 fps= 96 q=29.0 size=    1024kB time=00:00:59.03 bitrate= 142.1kbits/s speed=3.11x    frame= 1880 fps= 96 q=29.0 size=    1024kB time=00:01:00.70 bitrate= 138.2kbits/s speed=3.12x    frame= 1913 fps= 96 q=29.0 size=    1024kB time=00:01:01.80 bitrate= 135.7kbits/s speed=3.09x    frame= 1956 fps= 95 q=26.0 size=    1024kB time=00:01:03.23 bitrate= 132.7kbits/s speed=3.09x    frame= 2005 fps= 95 q=29.0 size=    1024kB time=00:01:04.86 bitrate= 129.3kbits/s speed=3.09x    frame= 2058 fps= 96 q=29.0 size=    1024kB time=00:01:06.63 bitrate= 125.9kbits/s speed= 3.1x    frame= 2110 fps= 96 q=29.0 size=    1024kB time=00:01:08.36 bitrate= 122.7kbits/s speed=3.11x    [mp4 @ 0x5610b52999c0] Starting second pass: moving the moov atom to the beginning of the file
+frame= 2133 fps= 94 q=-1.0 Lsize=    1305kB time=00:01:11.00 bitrate= 150.6kbits/s speed=3.15x    
+video:421kB audio:828kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 4.491092%
+[libx264 @ 0x5610b5331240] frame I:12    Avg QP: 9.16  size: 17015
+[libx264 @ 0x5610b5331240] frame P:535   Avg QP:11.17  size:   173
+[libx264 @ 0x5610b5331240] frame B:1586  Avg QP:13.70  size:    84
+[libx264 @ 0x5610b5331240] consecutive B-frames:  0.8%  0.1%  0.3% 98.8%
+[libx264 @ 0x5610b5331240] mb I  I16..4: 77.6% 18.5%  3.9%
+[libx264 @ 0x5610b5331240] mb P  I16..4:  0.0%  0.2%  0.0%  P16..4:  0.0%  0.0%  0.0%  0.0%  0.0%    skip:99.7%
+[libx264 @ 0x5610b5331240] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  0.3%  0.0%  0.0%  direct: 0.0%  skip:99.7%  L0:71.1% L1:28.9% BI: 0.0%
+[libx264 @ 0x5610b5331240] 8x8 transform intra:23.1% inter:13.6%
+[libx264 @ 0x5610b5331240] coded y,uvDC,uvAC intra: 3.2% 1.9% 1.2% inter: 0.0% 0.0% 0.0%
+[libx264 @ 0x5610b5331240] i16 v,h,dc,p: 83% 15%  2%  0%
+[libx264 @ 0x5610b5331240] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 57% 21% 21%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x5610b5331240] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 41% 20% 15%  3%  4%  5%  5%  4%  5%
+[libx264 @ 0x5610b5331240] i8c dc,h,v,p: 94%  4%  1%  0%
+[libx264 @ 0x5610b5331240] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x5610b5331240] ref P L0: 72.8%  5.3% 14.3%  7.6%
+[libx264 @ 0x5610b5331240] ref B L0: 34.2% 65.7%  0.0%
+[libx264 @ 0x5610b5331240] ref B L1: 99.6%  0.4%
+[libx264 @ 0x5610b5331240] kb/s:48.46
+[aac @ 0x5610b5336240] Qavg: 65532.945
+OK: /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module15-01-read-opt-clean/video.mp4 (15 slides)
+
+Done: 1 module/part(s) synced and narrated.
+
+======== module15-03-contribute-pass ========
+Synced 15 slides from transcript -> outline.yaml + slides.md
+Wrote /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module15-03-contribute-pass/slides.pptx
+OK: transcript consistent with outline (/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module15-03-contribute-pass)
+Converting with soffice ...
+Warning: failed to launch javaldx - java may not function correctly
+convert /tmp/book_slides_pdf_263780/slides.pptx -> /tmp/book_slides_pdf_263780/slides.pdf using filter : impress_pdf_Export
+OK: /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module15-03-contribute-pass/slides.pdf (144601 bytes)
+Wrote /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module15-03-contribute-pass/audio/full.mp3 (15 deck slides / 13 spoken, 70.9s) and /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module15-03-contribute-pass/audio/slide_timings.json
+Rasterizing /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module15-03-contribute-pass/slides.pdf at 200 DPI ...
+Using slide timings from /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module15-03-contribute-pass/audio/slide_timings.json
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 11 (Ubuntu 11.2.0-19ubuntu1)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Input #0, concat, from '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module15-03-contribute-pass/frames/concat.txt':
+  Duration: N/A, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: png, rgb24(pc), 2667x1500 [SAR 7874:7874 DAR 889:500], 25 fps, 25 tbr, 25 tbn, 25 tbc
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x55ab8e51e1c0] using SAR=4096/4095
+[libx264 @ 0x55ab8e51e1c0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2 AVX512
+[libx264 @ 0x55ab8e51e1c0] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0x55ab8e51e1c0] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module15-03-contribute-pass/frames/silent.mp4':
+  Metadata:
+    encoder         : Lavf58.76.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 1920x1080 [SAR 8001:8000 DAR 889:500], q=2-31, 30 fps, 15360 tbn
+    Metadata:
+      encoder         : Lavc58.134.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=  464 fps=327 q=29.0 size=       0kB time=00:00:13.50 bitrate=   0.0kbits/s dup=461 drop=0 speed=9.52x    frame=  615 fps=237 q=29.0 size=       0kB time=00:00:18.53 bitrate=   0.0kbits/s dup=611 drop=0 speed=7.14x    frame=  781 fps=220 q=29.0 size=       0kB time=00:00:24.06 bitrate=   0.0kbits/s dup=776 drop=0 speed=6.79x    frame=  881 fps=192 q=29.0 size=       0kB time=00:00:27.40 bitrate=   0.0kbits/s dup=875 drop=0 speed=5.98x    More than 1000 frames duplicated
+frame= 1008 fps=186 q=29.0 size=       0kB time=00:00:31.63 bitrate=   0.0kbits/s dup=1001 drop=0 speed=5.84x    frame= 1161 fps=192 q=29.0 size=       0kB time=00:00:36.73 bitrate=   0.0kbits/s dup=1153 drop=0 speed=6.07x    frame= 1327 fps=194 q=29.0 size=       0kB time=00:00:42.26 bitrate=   0.0kbits/s dup=1318 drop=0 speed=6.18x    frame= 1479 fps=194 q=29.0 size=     256kB time=00:00:47.33 bitrate=  44.3kbits/s dup=1469 drop=0 speed=6.22x    frame= 1687 fps=204 q=29.0 size=     256kB time=00:00:54.26 bitrate=  38.7kbits/s dup=1676 drop=0 speed=6.57x    frame= 1767 fps=195 q=29.0 size=     256kB time=00:00:56.93 bitrate=  36.8kbits/s dup=1755 drop=0 speed=6.27x    frame= 1901 fps=192 q=29.0 size=     256kB time=00:01:01.40 bitrate=  34.2kbits/s dup=1887 drop=0 speed=6.21x    frame= 2129 fps=201 q=29.0 size=     256kB time=00:01:09.00 bitrate=  30.4kbits/s dup=2113 drop=0 speed=6.52x    frame= 2129 fps=184 q=29.0 size=     256kB time=00:01:09.00 bitrate=  30.4kbits/s dup=2113 drop=0 speed=5.96x    frame= 2181 fps=183 q=-1.0 Lsize=     448kB time=00:01:12.60 bitrate=  50.6kbits/s dup=2165 drop=0 speed=6.08x    
+video:422kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 6.257216%
+[libx264 @ 0x55ab8e51e1c0] frame I:12    Avg QP:10.08  size: 15878
+[libx264 @ 0x55ab8e51e1c0] frame P:547   Avg QP:11.79  size:   196
+[libx264 @ 0x55ab8e51e1c0] frame B:1622  Avg QP:13.74  size:    82
+[libx264 @ 0x55ab8e51e1c0] consecutive B-frames:  0.8%  0.1%  0.3% 98.9%
+[libx264 @ 0x55ab8e51e1c0] mb I  I16..4: 74.9% 21.0%  4.0%
+[libx264 @ 0x55ab8e51e1c0] mb P  I16..4:  0.0%  0.1%  0.0%  P16..4:  0.2%  0.0%  0.0%  0.0%  0.0%    skip:99.6%
+[libx264 @ 0x55ab8e51e1c0] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  0.2%  0.0%  0.0%  direct: 0.0%  skip:99.8%  L0:71.1% L1:28.9% BI: 0.0%
+[libx264 @ 0x55ab8e51e1c0] 8x8 transform intra:24.8% inter:94.0%
+[libx264 @ 0x55ab8e51e1c0] coded y,uvDC,uvAC intra: 3.1% 1.8% 1.2% inter: 0.0% 0.0% 0.0%
+[libx264 @ 0x55ab8e51e1c0] i16 v,h,dc,p: 83% 15%  2%  0%
+[libx264 @ 0x55ab8e51e1c0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 53% 18% 29%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x55ab8e51e1c0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 36% 29% 13%  2%  3%  4%  4%  3%  4%
+[libx264 @ 0x55ab8e51e1c0] i8c dc,h,v,p: 95%  4%  1%  0%
+[libx264 @ 0x55ab8e51e1c0] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x55ab8e51e1c0] ref P L0: 25.7% 71.7%  2.2%  0.4%
+[libx264 @ 0x55ab8e51e1c0] ref B L0: 37.0% 63.0%  0.0%
+[libx264 @ 0x55ab8e51e1c0] ref B L1: 99.8%  0.2%
+[libx264 @ 0x55ab8e51e1c0] kb/s:47.48
+Muxing audio: /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module15-03-contribute-pass/audio/full.mp3
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 11 (Ubuntu 11.2.0-19ubuntu1)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module15-03-contribute-pass/frames/silent.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.76.100
+  Duration: 00:01:12.70, start: 0.000000, bitrate: 50 kb/s
+  Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p, 1920x1080 [SAR 4096:4095 DAR 65536:36855], 47 kb/s, SAR 8001:8000 DAR 889:500, 30 fps, 30 tbr, 15360 tbn, 60 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+Input #1, mp3, from '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module15-03-contribute-pass/audio/full.mp3':
+  Metadata:
+    encoder         : Lavf58.76.100
+  Duration: 00:01:10.92, start: 0.022042, bitrate: 48 kb/s
+  Stream #1:0: Audio: mp3, 24000 Hz, mono, fltp, 48 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #1:0 -> #0:1 (mp3 (mp3float) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0x55d8a17b1c40] using SAR=4096/4095
+[libx264 @ 0x55d8a17b1c40] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2 AVX512
+[libx264 @ 0x55d8a17b1c40] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0x55d8a17b1c40] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+[aac @ 0x55d8a1859080] Too many bits 8192.000000 > 6144 per frame requested, clamping to max
+Output #0, mp4, to '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module15-03-contribute-pass/video.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.76.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(progressive), 1920x1080 [SAR 8001:8000 DAR 889:500], q=2-31, 30 fps, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.134.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 24000 Hz, mono, fltp, 144 kb/s
+    Metadata:
+      encoder         : Lavc58.134.100 aac
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=   91 fps=0.0 q=29.0 size=       0kB time=00:00:01.06 bitrate=   0.4kbits/s speed=1.98x    frame=  176 fps=169 q=29.0 size=       0kB time=00:00:03.90 bitrate=   0.1kbits/s speed=3.75x    frame=  257 fps=167 q=29.0 size=       0kB time=00:00:06.60 bitrate=   0.1kbits/s speed=4.29x    frame=  339 fps=166 q=29.0 size=       0kB time=00:00:09.33 bitrate=   0.0kbits/s speed=4.58x    [mp3float @ 0x55d8a17c1f80] overread, skip -7 enddists: -6 -6
+frame=  412 fps=162 q=29.0 size=       0kB time=00:00:11.77 bitrate=   0.0kbits/s speed=4.63x    [mp3float @ 0x55d8a17c1f80] overread, skip -9 enddists: -8 -8
+frame=  492 fps=160 q=26.0 size=       0kB time=00:00:14.46 bitrate=   0.0kbits/s speed= 4.7x    frame=  569 fps=159 q=29.0 size=     256kB time=00:00:17.00 bitrate= 123.4kbits/s speed=4.75x    frame=  656 fps=161 q=29.0 size=     256kB time=00:00:19.90 bitrate= 105.4kbits/s speed=4.88x    [mp3float @ 0x55d8a17c1f80] overread, skip -6 enddists: -3 -3
+[mp3float @ 0x55d8a17c1f80] overread, skip -5 enddists: -3 -3
+frame=  742 fps=161 q=26.0 size=     256kB time=00:00:22.76 bitrate=  92.1kbits/s speed=4.93x    [mp3float @ 0x55d8a17c1f80] overread, skip -6 enddists: -4 -4
+frame=  833 fps=162 q=29.0 size=     256kB time=00:00:25.80 bitrate=  81.3kbits/s speed=5.03x    frame=  926 fps=164 q=29.0 size=     256kB time=00:00:28.90 bitrate=  72.6kbits/s speed=5.13x    [mp3float @ 0x55d8a17c1f80] overread, skip -7 enddists: -5 -5
+frame= 1011 fps=165 q=29.0 size=     512kB time=00:00:31.74 bitrate= 132.1kbits/s speed=5.17x    frame= 1101 fps=166 q=29.0 size=     512kB time=00:00:34.73 bitrate= 120.8kbits/s speed=5.24x    frame= 1194 fps=167 q=29.0 size=     512kB time=00:00:37.83 bitrate= 110.9kbits/s speed= 5.3x    frame= 1276 fps=167 q=29.0 size=     512kB time=00:00:40.56 bitrate= 103.4kbits/s speed=5.31x    frame= 1372 fps=168 q=29.0 size=     512kB time=00:00:43.76 bitrate=  95.8kbits/s speed=5.36x    frame= 1464 fps=169 q=29.0 size=     768kB time=00:00:46.83 bitrate= 134.3kbits/s speed= 5.4x    frame= 1555 fps=170 q=29.0 size=     768kB time=00:00:49.86 bitrate= 126.2kbits/s speed=5.44x    frame= 1649 fps=171 q=29.0 size=     768kB time=00:00:53.00 bitrate= 118.7kbits/s speed=5.48x    frame= 1744 fps=171 q=29.0 size=     768kB time=00:00:56.16 bitrate= 112.0kbits/s speed=5.52x    frame= 1830 fps=171 q=29.0 size=    1024kB time=00:00:59.03 bitrate= 142.1kbits/s speed=5.53x    frame= 1916 fps=171 q=29.0 size=    1024kB time=00:01:01.90 bitrate= 135.5kbits/s speed=5.54x    frame= 1989 fps=170 q=29.0 size=    1024kB time=00:01:04.34 bitrate= 130.4kbits/s speed=5.51x    frame= 2040 fps=167 q=29.0 size=    1024kB time=00:01:06.03 bitrate= 127.0kbits/s speed=5.42x    frame= 2125 fps=167 q=29.0 size=    1024kB time=00:01:08.86 bitrate= 121.8kbits/s speed=5.43x    [mp4 @ 0x55d8a17b0f40] Starting second pass: moving the moov atom to the beginning of the file
+frame= 2181 fps=163 q=-1.0 Lsize=    1319kB time=00:01:12.60 bitrate= 148.9kbits/s speed=5.41x    
+video:407kB audio:855kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 4.546397%
+[libx264 @ 0x55d8a17b1c40] frame I:12    Avg QP: 9.27  size: 15780
+[libx264 @ 0x55d8a17b1c40] frame P:547   Avg QP:11.50  size:   175
+[libx264 @ 0x55d8a17b1c40] frame B:1622  Avg QP:13.81  size:    81
+[libx264 @ 0x55d8a17b1c40] consecutive B-frames:  0.8%  0.1%  0.3% 98.9%
+[libx264 @ 0x55d8a17b1c40] mb I  I16..4: 73.4% 23.0%  3.5%
+[libx264 @ 0x55d8a17b1c40] mb P  I16..4:  0.0%  0.1%  0.0%  P16..4:  0.0%  0.0%  0.0%  0.0%  0.0%    skip:99.7%
+[libx264 @ 0x55d8a17b1c40] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  0.2%  0.0%  0.0%  direct: 0.0%  skip:99.8%  L0:66.5% L1:33.5% BI: 0.0%
+[libx264 @ 0x55d8a17b1c40] 8x8 transform intra:26.9% inter:15.2%
+[libx264 @ 0x55d8a17b1c40] coded y,uvDC,uvAC intra: 3.0% 1.8% 1.2% inter: 0.0% 0.0% 0.0%
+[libx264 @ 0x55d8a17b1c40] i16 v,h,dc,p: 82% 16%  2%  0%
+[libx264 @ 0x55d8a17b1c40] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 52% 19% 29%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x55d8a17b1c40] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 41% 20% 14%  3%  4%  5%  5%  4%  4%
+[libx264 @ 0x55d8a17b1c40] i8c dc,h,v,p: 94%  4%  1%  0%
+[libx264 @ 0x55d8a17b1c40] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x55d8a17b1c40] ref P L0: 66.3%  3.3% 18.8% 11.6%
+[libx264 @ 0x55d8a17b1c40] ref B L0: 34.8% 65.2%  0.0%
+[libx264 @ 0x55d8a17b1c40] ref B L1: 99.8%  0.2%
+[libx264 @ 0x55d8a17b1c40] kb/s:45.79
+[aac @ 0x55d8a1859080] Qavg: 65534.066
+OK: /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module15-03-contribute-pass/video.mp4 (15 slides)
+
+Done: 1 module/part(s) synced and narrated.
+
+======== module99-00-wrap ========
+Synced 5 slides from transcript -> outline.yaml + slides.md
+Wrote /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module99-00-wrap/slides.pptx
+OK: transcript consistent with outline (/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module99-00-wrap)
+Converting with soffice ...
+Warning: failed to launch javaldx - java may not function correctly
+convert /tmp/book_slides_pdf_264382/slides.pptx -> /tmp/book_slides_pdf_264382/slides.pdf using filter : impress_pdf_Export
+OK: /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module99-00-wrap/slides.pdf (22186 bytes)
+Wrote /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module99-00-wrap/audio/full.mp3 (5 deck slides / 5 spoken, 50.2s) and /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module99-00-wrap/audio/slide_timings.json
+Rasterizing /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module99-00-wrap/slides.pdf at 200 DPI ...
+Using slide timings from /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module99-00-wrap/audio/slide_timings.json
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 11 (Ubuntu 11.2.0-19ubuntu1)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Input #0, concat, from '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module99-00-wrap/frames/concat.txt':
+  Duration: N/A, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: png, rgb24(pc), 2667x1500 [SAR 7874:7874 DAR 889:500], 25 fps, 25 tbr, 25 tbn, 25 tbc
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x559e2b132cc0] using SAR=4096/4095
+[libx264 @ 0x559e2b132cc0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2 AVX512
+[libx264 @ 0x559e2b132cc0] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0x559e2b132cc0] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module99-00-wrap/frames/silent.mp4':
+  Metadata:
+    encoder         : Lavf58.76.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 1920x1080 [SAR 8001:8000 DAR 889:500], q=2-31, 30 fps, 15360 tbn
+    Metadata:
+      encoder         : Lavc58.134.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=  560 fps=195 q=29.0 size=       0kB time=00:00:16.70 bitrate=   0.0kbits/s dup=557 drop=0 speed= 5.8x    frame=  818 fps=151 q=29.0 size=       0kB time=00:00:25.30 bitrate=   0.0kbits/s dup=814 drop=0 speed=4.66x    More than 1000 frames duplicated
+frame= 1231 fps=167 q=29.0 size=       0kB time=00:00:39.06 bitrate=   0.0kbits/s dup=1226 drop=0 speed=5.29x    frame= 1507 fps=142 q=29.0 size=     256kB time=00:00:48.26 bitrate=  43.5kbits/s dup=1501 drop=0 speed=4.54x    frame= 1507 fps=118 q=29.0 size=     256kB time=00:00:48.26 bitrate=  43.5kbits/s dup=1501 drop=0 speed=3.79x    frame= 1781 fps=114 q=-1.0 Lsize=     346kB time=00:00:59.26 bitrate=  47.8kbits/s dup=1775 drop=0 speed= 3.8x    
+video:324kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 6.689928%
+[libx264 @ 0x559e2b132cc0] frame I:9     Avg QP: 9.09  size: 18613
+[libx264 @ 0x559e2b132cc0] frame P:449   Avg QP:10.63  size:   120
+[libx264 @ 0x559e2b132cc0] frame B:1323  Avg QP:13.67  size:    83
+[libx264 @ 0x559e2b132cc0] consecutive B-frames:  0.9%  0.1%  0.2% 98.8%
+[libx264 @ 0x559e2b132cc0] mb I  I16..4: 82.6% 13.2%  4.2%
+[libx264 @ 0x559e2b132cc0] mb P  I16..4:  0.0%  0.0%  0.0%  P16..4:  0.0%  0.0%  0.0%  0.0%  0.0%    skip:100.0%
+[libx264 @ 0x559e2b132cc0] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  0.2%  0.0%  0.0%  direct: 0.0%  skip:99.8%  L0:66.0% L1:34.0% BI: 0.0%
+[libx264 @ 0x559e2b132cc0] 8x8 transform intra:13.7% inter:10.3%
+[libx264 @ 0x559e2b132cc0] coded y,uvDC,uvAC intra: 3.3% 0.8% 0.7% inter: 0.0% 0.0% 0.0%
+[libx264 @ 0x559e2b132cc0] i16 v,h,dc,p: 97%  1%  2%  0%
+[libx264 @ 0x559e2b132cc0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 46%  4% 50%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x559e2b132cc0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 44% 14% 15%  3%  5%  5%  5%  4%  5%
+[libx264 @ 0x559e2b132cc0] i8c dc,h,v,p: 99%  0%  0%  0%
+[libx264 @ 0x559e2b132cc0] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x559e2b132cc0] ref P L0: 77.3%  2.6% 18.6%  1.5%
+[libx264 @ 0x559e2b132cc0] ref B L0: 45.8% 54.2%
+[libx264 @ 0x559e2b132cc0] kb/s:44.67
+Muxing audio: /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module99-00-wrap/audio/full.mp3
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 11 (Ubuntu 11.2.0-19ubuntu1)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module99-00-wrap/frames/silent.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.76.100
+  Duration: 00:00:59.37, start: 0.000000, bitrate: 47 kb/s
+  Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p, 1920x1080 [SAR 4096:4095 DAR 65536:36855], 44 kb/s, SAR 8001:8000 DAR 889:500, 30 fps, 30 tbr, 15360 tbn, 60 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+Input #1, mp3, from '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module99-00-wrap/audio/full.mp3':
+  Metadata:
+    encoder         : Lavf58.76.100
+  Duration: 00:00:50.18, start: 0.022042, bitrate: 48 kb/s
+  Stream #1:0: Audio: mp3, 24000 Hz, mono, fltp, 48 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #1:0 -> #0:1 (mp3 (mp3float) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0x56161e1efb40] using SAR=4096/4095
+[libx264 @ 0x56161e1efb40] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2 AVX512
+[libx264 @ 0x56161e1efb40] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0x56161e1efb40] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+[aac @ 0x56161e1f1700] Too many bits 8192.000000 > 6144 per frame requested, clamping to max
+Output #0, mp4, to '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module99-00-wrap/video.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.76.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(progressive), 1920x1080 [SAR 8001:8000 DAR 889:500], q=2-31, 30 fps, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.134.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 24000 Hz, mono, fltp, 144 kb/s
+    Metadata:
+      encoder         : Lavc58.134.100 aac
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=   57 fps=0.0 q=29.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=  117 fps=105 q=29.0 size=       0kB time=00:00:01.93 bitrate=   0.2kbits/s speed=1.74x    frame=  176 fps=109 q=29.0 size=       0kB time=00:00:03.92 bitrate=   0.1kbits/s speed=2.42x    frame=  239 fps=112 q=29.0 size=       0kB time=00:00:06.00 bitrate=   0.1kbits/s speed=2.82x    frame=  294 fps=112 q=29.0 size=       0kB time=00:00:07.83 bitrate=   0.0kbits/s speed=2.98x    frame=  345 fps=110 q=29.0 size=       0kB time=00:00:09.53 bitrate=   0.0kbits/s speed=3.03x    frame=  391 fps=107 q=29.0 size=       0kB time=00:00:11.06 bitrate=   0.0kbits/s speed=3.03x    frame=  455 fps=110 q=29.0 size=     256kB time=00:00:13.20 bitrate= 158.9kbits/s speed=3.18x    frame=  514 fps=110 q=29.0 size=     256kB time=00:00:15.16 bitrate= 138.3kbits/s speed=3.26x    frame=  568 fps=110 q=29.0 size=     256kB time=00:00:16.96 bitrate= 123.6kbits/s speed=3.29x    frame=  623 fps=110 q=29.0 size=     256kB time=00:00:18.80 bitrate= 111.6kbits/s speed=3.32x    frame=  693 fps=112 q=29.0 size=     256kB time=00:00:21.13 bitrate=  99.3kbits/s speed=3.43x    frame=  751 fps=113 q=29.0 size=     256kB time=00:00:23.06 bitrate=  90.9kbits/s speed=3.46x    frame=  810 fps=113 q=29.0 size=     256kB time=00:00:25.03 bitrate=  83.8kbits/s speed=3.49x    [mp3float @ 0x56161e159c00] overread, skip -7 enddists: -4 -4
+frame=  861 fps=112 q=29.0 size=     512kB time=00:00:26.75 bitrate= 156.8kbits/s speed=3.47x    frame=  929 fps=113 q=29.0 size=     512kB time=00:00:29.00 bitrate= 144.6kbits/s speed=3.53x    frame=  991 fps=114 q=29.0 size=     512kB time=00:00:31.06 bitrate= 135.0kbits/s speed=3.56x    frame= 1063 fps=115 q=29.0 size=     512kB time=00:00:33.49 bitrate= 125.2kbits/s speed=3.63x    frame= 1122 fps=115 q=29.0 size=     512kB time=00:00:35.43 bitrate= 118.4kbits/s speed=3.64x    frame= 1190 fps=116 q=29.0 size=     512kB time=00:00:37.71 bitrate= 111.2kbits/s speed=3.68x    frame= 1254 fps=117 q=29.0 size=     512kB time=00:00:39.83 bitrate= 105.3kbits/s speed= 3.7x    frame= 1313 fps=117 q=29.0 size=     768kB time=00:00:41.80 bitrate= 150.5kbits/s speed=3.71x    frame= 1379 fps=117 q=29.0 size=     768kB time=00:00:44.03 bitrate= 142.9kbits/s speed=3.74x    frame= 1423 fps=116 q=29.0 size=     768kB time=00:00:45.46 bitrate= 138.4kbits/s speed=3.71x    [mp3float @ 0x56161e159c00] overread, skip -7 enddists: -6 -6
+[mp3float @ 0x56161e159c00] overread, skip -6 enddists: -5 -5
+frame= 1492 fps=117 q=29.0 size=     768kB time=00:00:47.76 bitrate= 131.7kbits/s speed=3.74x    frame= 1551 fps=117 q=29.0 size=     768kB time=00:00:49.73 bitrate= 126.5kbits/s speed=3.75x    [mp4 @ 0x56161e15d980] Starting second pass: moving the moov atom to the beginning of the file
+frame= 1561 fps=114 q=-1.0 Lsize=     994kB time=00:00:51.93 bitrate= 156.8kbits/s speed= 3.8x    
+video:288kB audio:665kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 4.324813%
+[libx264 @ 0x56161e1efb40] frame I:8     Avg QP: 9.73  size: 18567
+[libx264 @ 0x56161e1efb40] frame P:394   Avg QP:10.59  size:   125
+[libx264 @ 0x56161e1efb40] frame B:1159  Avg QP:13.67  size:    83
+[libx264 @ 0x56161e1efb40] consecutive B-frames:  1.0%  0.1%  0.0% 98.9%
+[libx264 @ 0x56161e1efb40] mb I  I16..4: 73.5% 22.2%  4.3%
+[libx264 @ 0x56161e1efb40] mb P  I16..4:  0.0%  0.0%  0.0%  P16..4:  0.0%  0.0%  0.0%  0.0%  0.0%    skip:99.9%
+[libx264 @ 0x56161e1efb40] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  0.2%  0.0%  0.0%  direct: 0.0%  skip:99.8%  L0:66.5% L1:33.5% BI: 0.0%
+[libx264 @ 0x56161e1efb40] 8x8 transform intra:22.7% inter:9.6%
+[libx264 @ 0x56161e1efb40] coded y,uvDC,uvAC intra: 3.3% 0.8% 0.7% inter: 0.0% 0.0% 0.0%
+[libx264 @ 0x56161e1efb40] i16 v,h,dc,p: 96%  2%  2%  0%
+[libx264 @ 0x56161e1efb40] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 51%  2% 47%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x56161e1efb40] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 46% 13% 14%  3%  4%  5%  5%  4%  5%
+[libx264 @ 0x56161e1efb40] i8c dc,h,v,p: 99%  0%  0%  0%
+[libx264 @ 0x56161e1efb40] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x56161e1efb40] ref P L0: 83.8%  2.5% 13.0%  0.7%
+[libx264 @ 0x56161e1efb40] ref B L0: 45.6% 54.4%
+[libx264 @ 0x56161e1efb40] kb/s:45.18
+[aac @ 0x56161e1f1700] Qavg: 65532.902
+OK: /mnt/d/proj/designs/eda_learning/courses/learn_yosys/module99-00-wrap/video.mp4 (5 slides)
+
+Done: 1 module/part(s) synced and narrated.
+updated catalog (31 modules, 236 tools, 40 courses)
+OK   course-media/learn_yosys: already linked
+wrote learn_yosys: index + 31 lab shells (pages.js)
+wrote platform/courses/index.html (path-map)
+updated platform/index.html
+media ready: 31/31 video+pdf · quizzes: 31
+MEDIA_PARTD_OK

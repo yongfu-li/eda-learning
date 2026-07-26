@@ -1,7 +1,7 @@
 [
   {
     "slide": 1,
-    "duration": 15.048
+    "duration": 16.464
   },
   {
     "slide": 2,
@@ -17,14 +17,18 @@
   },
   {
     "slide": 5,
-    "duration": 17.616
+    "duration": 10.848
   },
   {
     "slide": 6,
-    "duration": 9.432
+    "duration": 16.128
   },
   {
     "slide": 7,
-    "duration": 8.208
+    "duration": 8.448
+  },
+  {
+    "slide": 8,
+    "duration": 6.624
   }
 ]

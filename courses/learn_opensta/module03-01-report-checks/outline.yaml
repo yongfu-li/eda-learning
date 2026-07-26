@@ -1,0 +1,83 @@
+title: Why report_checks
+footer: learn_opensta — 01 report checks
+slides:
+- type: title
+  title: Why report_checks
+  subtitle: Read a report_checks-shaped endpoint summary
+  notes: Read a report_checks-shaped endpoint summary.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: endpoint y; path delay 2; slack 8'
+  notes: 'GOLDEN: endpoint y; path delay 2; slack 8.'
+- type: image
+  title: report_checks
+  image: assets/steps/01-cmd.png
+  caption: report_checks
+  notes: OpenSTA report_checks prints worst paths.
+- type: image
+  title: Endpoint
+  image: assets/steps/02-endpoint.png
+  caption: Endpoint
+  notes: The endpoint of interest is output y.
+- type: image
+  title: Path cells
+  image: assets/steps/03-path.png
+  caption: Path cells
+  notes: The report path lists u1, u2, u3.
+- type: image
+  title: Reported slack
+  image: assets/steps/04-slack.png
+  caption: Reported slack
+  notes: The reported slack matches 8.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: endpoint y; slack 8.'
+- type: bullets
+  title: Browser lab track
+  bullets:
+  - Open **report-checks**
+  - Run the stage buttons and Check the goldens
+  notes: Open **report-checks**. Run the stage buttons and Check the goldens.
+- type: bullets
+  title: Implement track
+  bullets:
+  - From common/, run solvers.py and confirm OPENSTA_MAP_OK
+  notes: From common/, run solvers.py and confirm OPENSTA_MAP_OK.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Mixing algorithm STA from learn_sta with OpenSTA command names
+  - Forgetting the clock period when reading slack
+  notes: Mixing algorithm STA from learn_sta with OpenSTA command names. Forgetting
+    the clock period when reading slack.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder, run the OpenSTA map self-test
+  notes: From the common folder, run the OpenSTA map self-test.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_opensta/common
+
+    python3 solvers.py'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the check in plain steps
+  notes: Here is the check in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: 'endpoint y; path delay 2; slack 8.
+
+    ok if goldens match'
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue the OpenSTA Part A map, then the real CLI track
+  notes: Continue the OpenSTA Part A map, then the real CLI track.

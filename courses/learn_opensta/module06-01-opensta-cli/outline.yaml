@@ -1,0 +1,86 @@
+title: Why real OpenSTA
+footer: learn_opensta — 01 opensta cli
+slides:
+- type: title
+  title: Why real OpenSTA
+  subtitle: Invoke sta -exit script.tcl; recipe starts read_liberty→read_verilog→link_design
+  notes: Invoke sta -exit script.tcl; recipe starts read_liberty→read_verilog→link_design.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: First three cmds: read_liberty, read_verilog, link_design'
+  notes: 'GOLDEN: First three cmds: read_liberty, read_verilog, link_design.'
+- type: image
+  title: sta -exit
+  image: assets/steps/01-invoke.png
+  caption: sta -exit
+  notes: OpenSTA runs Tcl with sta -no_splash -exit script.tcl.
+- type: image
+  title: read_liberty
+  image: assets/steps/02-lib.png
+  caption: read_liberty
+  notes: First load the liberty timing models.
+- type: image
+  title: read_verilog
+  image: assets/steps/03-v.png
+  caption: read_verilog
+  notes: Then read the gate-level netlist.
+- type: image
+  title: link_design
+  image: assets/steps/04-link.png
+  caption: link_design
+  notes: link_design binds cell instances to liberty.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: recipe prefix liberty→verilog→link.'
+- type: bullets
+  title: Browser lab track
+  bullets:
+  - Open **opensta-cli**
+  - Build the Tcl recipe or open evidence stages, then Check
+  notes: Open **opensta-cli**. Build the Tcl recipe or open evidence stages, then
+    Check.
+- type: bullets
+  title: Implement track
+  bullets:
+  - From common/, run real_solvers.py and confirm REAL_OPENSTA_OK
+  notes: From common/, run real_solvers.py and confirm REAL_OPENSTA_OK.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Editing goldens by hand without re-running sta
+  - Confusing Part A map JSON with real liberty delays
+  notes: Editing goldens by hand without re-running sta. Confusing Part A map JSON
+    with real liberty delays.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder, run the real OpenSTA self-test
+  notes: From the common folder, run the real OpenSTA self-test.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_opensta/common
+
+    python3 real_solvers.py'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the check in plain steps
+  notes: Here is the check in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: 'First three cmds: read_liberty, read_verilog, link_design.
+
+    ok if goldens match'
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue the Part B evidence track, then wrap , algorithms and internals come
+    later
+  notes: Continue the Part B evidence track, then wrap — algorithms and internals
+    come later.

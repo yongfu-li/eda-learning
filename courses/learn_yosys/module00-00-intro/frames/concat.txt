@@ -1,5 +1,5 @@
 file '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module00-00-intro/frames/slide-1.png'
-duration 15.048
+duration 16.464
 file '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module00-00-intro/frames/slide-2.png'
 duration 11.952
 file '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module00-00-intro/frames/slide-3.png'
@@ -7,9 +7,11 @@ duration 9.168
 file '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module00-00-intro/frames/slide-4.png'
 duration 12.192
 file '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module00-00-intro/frames/slide-5.png'
-duration 17.616
+duration 10.848
 file '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module00-00-intro/frames/slide-6.png'
-duration 9.432
+duration 16.128
 file '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module00-00-intro/frames/slide-7.png'
-duration 8.208
-file '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module00-00-intro/frames/slide-7.png'
+duration 8.448
+file '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module00-00-intro/frames/slide-8.png'
+duration 6.624
+file '/mnt/d/proj/designs/eda_learning/courses/learn_yosys/module00-00-intro/frames/slide-8.png'

@@ -1,0 +1,38 @@
+{
+  "moduleId": "module07-01-real-read-netlist",
+  "items": [
+    {
+      "q": "Top module name?",
+      "choices": [
+        "tiny_combo",
+        "top",
+        "clk",
+        "y"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "How many instances after link?",
+      "choices": [
+        "3",
+        "1",
+        "10",
+        "0"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Instance names?",
+      "choices": [
+        "u1,u2,u3",
+        "c1,c2",
+        "and1",
+        "dff0"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

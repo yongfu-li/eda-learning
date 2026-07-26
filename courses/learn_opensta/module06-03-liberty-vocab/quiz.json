@@ -1,0 +1,38 @@
+{
+  "moduleId": "module06-03-liberty-vocab",
+  "items": [
+    {
+      "q": "Teaching liberty cells?",
+      "choices": [
+        "AND2, BUF, INV",
+        "$and only",
+        "NAND4 only",
+        "DFF only"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "AND2 delay in tiny lib ~?",
+      "choices": [
+        "1.0",
+        "10",
+        "8",
+        "0"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Liberty file role?",
+      "choices": [
+        "timing models for cells",
+        "GDS only",
+        "LVS only",
+        "SDC only"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

@@ -12,6 +12,8 @@ Real Yosys evidence for Part C:
 - `rtl/tiny_mem.v` — `memory_collect` → `$mem`
 - `rtl/tiny_fsm.v` — `fsm_extract` → `$fsm`
 
-**In:** Full learn_yosys path — pass map + real CLI/RTLIL/synth + algorithms bound to Yosys evidence.
+**Part D (internals / contribute):** orientation to the Yosys C++ tree — RTLIL pillars (`kernel/rtlil.h`), Pass registration (`REGISTER_PASS`), reading `opt_clean.cc`, and a contribute checklist. Track A: `internals_solvers.py` + excerpts under `common/internals/`. Not a reimplementation of Yosys.
+
+**In:** Full learn_yosys path — pass map + real CLI/RTLIL/synth + algorithms bound to Yosys evidence + internals literacy for contributors.
 
 **Out:** Industrial Liberty techmap, FPGA `synth_ice40`/`synth_xilinx` deep dives, ABC internals beyond handoff literacy, OpenROAD P&R (see `learn_openroad`). Cloning the full Yosys/ABC C++ codebase in JS.

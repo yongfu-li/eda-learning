@@ -1,0 +1,38 @@
+{
+  "moduleId": "module08-03-real-evidence",
+  "items": [
+    {
+      "q": "Engine ok means?",
+      "choices": [
+        "all Part B goldens match",
+        "Magic DRC clean",
+        "LVS only",
+        "Place only"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Recipe length?",
+      "choices": [
+        "7",
+        "3",
+        "1",
+        "20"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "engine_ok?",
+      "choices": [
+        "True",
+        "False",
+        "None",
+        "N/A"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

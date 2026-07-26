@@ -14,7 +14,6 @@ bash "$NAR" "courses/learn_yosys/module12-01-memory-map-algo"
 bash "$NAR" "courses/learn_yosys/module12-03-fsm-detect"
 bash "$NAR" "courses/learn_yosys/module13-01-abc-handoff"
 bash "$NAR" "courses/learn_yosys/module13-03-yosys-algo-engine"
-bash "$NAR" courses/learn_yosys/module05-03-offline-benchmark-compare
 bash "$NAR" courses/learn_yosys/module99-00-wrap
 python3 platform/scripts/publish_course_platform.py learn_yosys
 echo MEDIA_PARTC_OK

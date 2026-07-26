@@ -1,0 +1,1035 @@
+
+======== module06-01-opensta-cli ========
+Synced 15 slides from transcript -> outline.yaml + slides.md
+Wrote /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module06-01-opensta-cli/slides.pptx
+OK: transcript consistent with outline (/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module06-01-opensta-cli)
+Converting with soffice ...
+Warning: failed to launch javaldx - java may not function correctly
+convert /tmp/book_slides_pdf_287625/slides.pptx -> /tmp/book_slides_pdf_287625/slides.pdf using filter : impress_pdf_Export
+OK: /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module06-01-opensta-cli/slides.pdf (143677 bytes)
+Wrote /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module06-01-opensta-cli/audio/full.mp3 (15 deck slides / 13 spoken, 68.9s) and /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module06-01-opensta-cli/audio/slide_timings.json
+Rasterizing /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module06-01-opensta-cli/slides.pdf at 200 DPI ...
+Using slide timings from /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module06-01-opensta-cli/audio/slide_timings.json
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 11 (Ubuntu 11.2.0-19ubuntu1)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Input #0, concat, from '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module06-01-opensta-cli/frames/concat.txt':
+  Duration: N/A, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: png, rgb24(pc), 2667x1500 [SAR 7874:7874 DAR 889:500], 25 fps, 25 tbr, 25 tbn, 25 tbc
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x5646d81791c0] using SAR=4096/4095
+[libx264 @ 0x5646d81791c0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2 AVX512
+[libx264 @ 0x5646d81791c0] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0x5646d81791c0] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module06-01-opensta-cli/frames/silent.mp4':
+  Metadata:
+    encoder         : Lavf58.76.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 1920x1080 [SAR 8001:8000 DAR 889:500], q=2-31, 30 fps, 15360 tbn
+    Metadata:
+      encoder         : Lavc58.134.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=  453 fps=365 q=29.0 size=       0kB time=00:00:13.13 bitrate=   0.0kbits/s dup=450 drop=0 speed=10.6x    frame=  641 fps=310 q=29.0 size=       0kB time=00:00:19.40 bitrate=   0.0kbits/s dup=637 drop=0 speed=9.38x    frame=  731 fps=244 q=29.0 size=       0kB time=00:00:22.40 bitrate=   0.0kbits/s dup=726 drop=0 speed=7.49x    frame=  929 fps=226 q=29.0 size=       0kB time=00:00:29.00 bitrate=   0.0kbits/s dup=922 drop=0 speed=7.05x    More than 1000 frames duplicated
+frame= 1040 fps=219 q=29.0 size=       0kB time=00:00:32.70 bitrate=   0.0kbits/s dup=1032 drop=0 speed=6.88x    frame= 1255 fps=232 q=29.0 size=       0kB time=00:00:39.86 bitrate=   0.0kbits/s dup=1246 drop=0 speed=7.36x    frame= 1469 fps=228 q=29.0 size=       0kB time=00:00:47.00 bitrate=   0.0kbits/s dup=1459 drop=0 speed= 7.3x    frame= 1670 fps=224 q=29.0 size=     256kB time=00:00:53.70 bitrate=  39.1kbits/s dup=1659 drop=0 speed=7.19x    frame= 1739 fps=210 q=29.0 size=     256kB time=00:00:56.00 bitrate=  37.5kbits/s dup=1727 drop=0 speed=6.76x    frame= 1848 fps=207 q=29.0 size=     256kB time=00:00:59.63 bitrate=  35.2kbits/s dup=1834 drop=0 speed=6.68x    frame= 2069 fps=198 q=29.0 size=     256kB time=00:01:07.00 bitrate=  31.3kbits/s dup=2053 drop=0 speed= 6.4x    frame= 2108 fps=196 q=-1.0 Lsize=     411kB time=00:01:10.16 bitrate=  48.0kbits/s dup=2092 drop=0 speed=6.52x    
+video:386kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 6.616627%
+[libx264 @ 0x5646d81791c0] frame I:11    Avg QP:11.81  size: 15334
+[libx264 @ 0x5646d81791c0] frame P:531   Avg QP:11.45  size:   188
+[libx264 @ 0x5646d81791c0] frame B:1566  Avg QP:13.70  size:    80
+[libx264 @ 0x5646d81791c0] consecutive B-frames:  0.9%  0.1%  0.1% 98.9%
+[libx264 @ 0x5646d81791c0] mb I  I16..4: 64.7% 32.0%  3.3%
+[libx264 @ 0x5646d81791c0] mb P  I16..4:  0.2%  0.0%  0.0%  P16..4:  0.1%  0.0%  0.0%  0.0%  0.0%    skip:99.6%
+[libx264 @ 0x5646d81791c0] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  0.2%  0.0%  0.0%  direct: 0.0%  skip:99.8%  L0:63.5% L1:36.4% BI: 0.0%
+[libx264 @ 0x5646d81791c0] 8x8 transform intra:29.4% inter:63.9%
+[libx264 @ 0x5646d81791c0] coded y,uvDC,uvAC intra: 3.9% 2.0% 1.2% inter: 0.0% 0.0% 0.0%
+[libx264 @ 0x5646d81791c0] i16 v,h,dc,p: 90%  8%  2%  0%
+[libx264 @ 0x5646d81791c0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 66% 10% 23%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x5646d81791c0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 41% 20% 15%  3%  4%  5%  4%  4%  4%
+[libx264 @ 0x5646d81791c0] i8c dc,h,v,p: 94%  5%  1%  0%
+[libx264 @ 0x5646d81791c0] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x5646d81791c0] ref P L0: 78.9%  3.9% 16.5%  0.7%
+[libx264 @ 0x5646d81791c0] ref B L0: 39.4% 60.5%  0.1%
+[libx264 @ 0x5646d81791c0] ref B L1: 99.6%  0.4%
+[libx264 @ 0x5646d81791c0] kb/s:44.91
+Muxing audio: /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module06-01-opensta-cli/audio/full.mp3
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 11 (Ubuntu 11.2.0-19ubuntu1)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module06-01-opensta-cli/frames/silent.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.76.100
+  Duration: 00:01:10.27, start: 0.000000, bitrate: 47 kb/s
+  Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p, 1920x1080 [SAR 4096:4095 DAR 65536:36855], 44 kb/s, SAR 8001:8000 DAR 889:500, 30 fps, 30 tbr, 15360 tbn, 60 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+Input #1, mp3, from '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module06-01-opensta-cli/audio/full.mp3':
+  Metadata:
+    encoder         : Lavf58.76.100
+  Duration: 00:01:08.90, start: 0.022042, bitrate: 48 kb/s
+  Stream #1:0: Audio: mp3, 24000 Hz, mono, fltp, 48 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #1:0 -> #0:1 (mp3 (mp3float) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0x557367ae3280] using SAR=4096/4095
+[libx264 @ 0x557367ae3280] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2 AVX512
+[libx264 @ 0x557367ae3280] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0x557367ae3280] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+[aac @ 0x557367ae4200] Too many bits 8192.000000 > 6144 per frame requested, clamping to max
+Output #0, mp4, to '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module06-01-opensta-cli/video.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.76.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(progressive), 1920x1080 [SAR 8001:8000 DAR 889:500], q=2-31, 30 fps, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.134.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 24000 Hz, mono, fltp, 144 kb/s
+    Metadata:
+      encoder         : Lavc58.134.100 aac
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    [mp3float @ 0x557367a3e100] overread, skip -6 enddists: -3 -3
+frame=  106 fps=0.0 q=29.0 size=       0kB time=00:00:01.56 bitrate=   0.2kbits/s speed=2.82x    [mp3float @ 0x557367a3e100] overread, skip -5 enddists: -1 -1
+[mp3float @ 0x557367a3e100] overread, skip -8 enddists: -1 -1
+frame=  214 fps=202 q=29.0 size=       0kB time=00:00:05.16 bitrate=   0.1kbits/s speed=4.87x    frame=  313 fps=200 q=29.0 size=       0kB time=00:00:08.46 bitrate=   0.0kbits/s speed=5.42x    [mp3float @ 0x557367a3e100] overread, skip -5 enddists: -1 -1
+[mp3float @ 0x557367a3e100] overread, skip -7 enddists: -3 -3
+frame=  422 fps=205 q=29.0 size=       0kB time=00:00:12.10 bitrate=   0.0kbits/s speed=5.86x    frame=  523 fps=204 q=29.0 size=     256kB time=00:00:15.46 bitrate= 135.6kbits/s speed=6.03x    frame=  584 fps=190 q=29.0 size=     256kB time=00:00:17.53 bitrate= 119.6kbits/s speed= 5.7x    [mp3float @ 0x557367a3e100] overread, skip -5 enddists: -2 -2
+frame=  688 fps=192 q=29.0 size=     256kB time=00:00:20.99 bitrate=  99.9kbits/s speed=5.86x    frame=  774 fps=189 q=29.0 size=     256kB time=00:00:23.83 bitrate=  88.0kbits/s speed=5.83x    [mp3float @ 0x557367a3e100] overread, skip -8 enddists: -6 -6
+frame=  843 fps=183 q=29.0 size=     256kB time=00:00:26.13 bitrate=  80.3kbits/s speed=5.69x    frame=  906 fps=177 q=29.0 size=     512kB time=00:00:28.23 bitrate= 148.6kbits/s speed=5.53x    frame=  971 fps=173 q=29.0 size=     512kB time=00:00:30.42 bitrate= 137.9kbits/s speed=5.42x    frame= 1028 fps=168 q=29.0 size=     512kB time=00:00:32.34 bitrate= 129.7kbits/s speed=5.29x    frame= 1075 fps=162 q=29.0 size=     512kB time=00:00:33.87 bitrate= 123.8kbits/s speed=5.11x    frame= 1146 fps=161 q=29.0 size=     512kB time=00:00:36.23 bitrate= 115.8kbits/s speed=5.08x    frame= 1222 fps=160 q=29.0 size=     512kB time=00:00:38.76 bitrate= 108.2kbits/s speed=5.08x    frame= 1292 fps=159 q=29.0 size=     512kB time=00:00:41.10 bitrate= 102.1kbits/s speed=5.06x    [mp3float @ 0x557367a3e100] overread, skip -8 enddists: -5 -5
+frame= 1359 fps=157 q=29.0 size=     768kB time=00:00:43.33 bitrate= 145.2kbits/s speed=5.02x    frame= 1433 fps=157 q=29.0 size=     768kB time=00:00:45.80 bitrate= 137.4kbits/s speed=5.01x    [mp3float @ 0x557367a3e100] overread, skip -8 enddists: -7 -7
+frame= 1514 fps=157 q=29.0 size=     768kB time=00:00:48.50 bitrate= 129.7kbits/s speed=5.01x    frame= 1579 fps=155 q=29.0 size=     768kB time=00:00:50.66 bitrate= 124.2kbits/s speed=4.98x    frame= 1647 fps=154 q=29.0 size=     768kB time=00:00:52.93 bitrate= 118.9kbits/s speed=4.95x    [mp3float @ 0x557367a3e100] overread, skip -7 enddists: -2 -2
+frame= 1711 fps=153 q=29.0 size=     768kB time=00:00:55.06 bitrate= 114.3kbits/s speed=4.92x    frame= 1780 fps=152 q=29.0 size=    1024kB time=00:00:57.36 bitrate= 146.2kbits/s speed= 4.9x    [mp3float @ 0x557367a3e100] overread, skip -7 enddists: -5 -5
+frame= 1845 fps=151 q=29.0 size=    1024kB time=00:00:59.53 bitrate= 140.9kbits/s speed=4.87x    frame= 1889 fps=148 q=29.0 size=    1024kB time=00:01:01.00 bitrate= 137.5kbits/s speed=4.79x    frame= 1944 fps=147 q=29.0 size=    1024kB time=00:01:02.83 bitrate= 133.5kbits/s speed=4.75x    [mp3float @ 0x557367a3e100] overread, skip -8 enddists: -6 -6
+frame= 2010 fps=146 q=29.0 size=    1024kB time=00:01:05.03 bitrate= 129.0kbits/s speed=4.73x    frame= 2079 fps=146 q=29.0 size=    1024kB time=00:01:07.33 bitrate= 124.6kbits/s speed=4.73x    [mp4 @ 0x557367a48e80] Starting second pass: moving the moov atom to the beginning of the file
+frame= 2108 fps=143 q=-1.0 Lsize=    1308kB time=00:01:10.16 bitrate= 152.7kbits/s speed=4.77x    
+video:381kB audio:871kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 4.442990%
+[libx264 @ 0x557367ae3280] frame I:11    Avg QP: 9.88  size: 15212
+[libx264 @ 0x557367ae3280] frame P:531   Avg QP:11.21  size:   181
+[libx264 @ 0x557367ae3280] frame B:1566  Avg QP:13.70  size:    80
+[libx264 @ 0x557367ae3280] consecutive B-frames:  0.9%  0.1%  0.1% 98.9%
+[libx264 @ 0x557367ae3280] mb I  I16..4: 72.2% 24.6%  3.3%
+[libx264 @ 0x557367ae3280] mb P  I16..4:  0.1%  0.1%  0.0%  P16..4:  0.0%  0.0%  0.0%  0.0%  0.0%    skip:99.7%
+[libx264 @ 0x557367ae3280] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  0.2%  0.0%  0.0%  direct: 0.0%  skip:99.8%  L0:68.9% L1:31.1% BI: 0.0%
+[libx264 @ 0x557367ae3280] 8x8 transform intra:27.7% inter:18.3%
+[libx264 @ 0x557367ae3280] coded y,uvDC,uvAC intra: 2.7% 2.0% 1.3% inter: 0.0% 0.0% 0.0%
+[libx264 @ 0x557367ae3280] i16 v,h,dc,p: 91%  7%  2%  0%
+[libx264 @ 0x557367ae3280] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 55% 24% 22%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x557367ae3280] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 41% 19% 15%  3%  4%  5%  4%  4%  4%
+[libx264 @ 0x557367ae3280] i8c dc,h,v,p: 94%  5%  1%  0%
+[libx264 @ 0x557367ae3280] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x557367ae3280] ref P L0: 76.2%  2.6% 12.6%  8.6%
+[libx264 @ 0x557367ae3280] ref B L0: 30.6% 69.4%  0.1%
+[libx264 @ 0x557367ae3280] ref B L1: 99.6%  0.4%
+[libx264 @ 0x557367ae3280] kb/s:44.32
+[aac @ 0x557367ae4200] Qavg: 65534.039
+OK: /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module06-01-opensta-cli/video.mp4 (15 slides)
+
+Done: 1 module/part(s) synced and narrated.
+
+======== module06-03-liberty-vocab ========
+Synced 15 slides from transcript -> outline.yaml + slides.md
+Wrote /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module06-03-liberty-vocab/slides.pptx
+OK: transcript consistent with outline (/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module06-03-liberty-vocab)
+Converting with soffice ...
+Warning: failed to launch javaldx - java may not function correctly
+convert /tmp/book_slides_pdf_288229/slides.pptx -> /tmp/book_slides_pdf_288229/slides.pdf using filter : impress_pdf_Export
+OK: /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module06-03-liberty-vocab/slides.pdf (152774 bytes)
+Wrote /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module06-03-liberty-vocab/audio/full.mp3 (15 deck slides / 13 spoken, 66.7s) and /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module06-03-liberty-vocab/audio/slide_timings.json
+Rasterizing /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module06-03-liberty-vocab/slides.pdf at 200 DPI ...
+Using slide timings from /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module06-03-liberty-vocab/audio/slide_timings.json
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 11 (Ubuntu 11.2.0-19ubuntu1)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Input #0, concat, from '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module06-03-liberty-vocab/frames/concat.txt':
+  Duration: N/A, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: png, rgb24(pc), 2667x1500 [SAR 7874:7874 DAR 889:500], 25 fps, 25 tbr, 25 tbn, 25 tbc
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x5576ccab31c0] using SAR=4096/4095
+[libx264 @ 0x5576ccab31c0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2 AVX512
+[libx264 @ 0x5576ccab31c0] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0x5576ccab31c0] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module06-03-liberty-vocab/frames/silent.mp4':
+  Metadata:
+    encoder         : Lavf58.76.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 1920x1080 [SAR 8001:8000 DAR 889:500], q=2-31, 30 fps, 15360 tbn
+    Metadata:
+      encoder         : Lavc58.134.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=  349 fps=163 q=29.0 size=       0kB time=00:00:09.66 bitrate=   0.0kbits/s dup=346 drop=0 speed=4.53x    frame=  521 fps=148 q=29.0 size=       0kB time=00:00:15.40 bitrate=   0.0kbits/s dup=517 drop=0 speed=4.38x    frame=  651 fps=133 q=29.0 size=       0kB time=00:00:19.73 bitrate=   0.0kbits/s dup=646 drop=0 speed=4.02x    frame=  753 fps=134 q=29.0 size=       0kB time=00:00:23.13 bitrate=   0.0kbits/s dup=747 drop=0 speed=4.11x    frame=  855 fps=138 q=29.0 size=       0kB time=00:00:26.53 bitrate=   0.0kbits/s dup=848 drop=0 speed=4.28x    frame=  978 fps=135 q=29.0 size=       0kB time=00:00:30.63 bitrate=   0.0kbits/s dup=970 drop=0 speed=4.21x    More than 1000 frames duplicated
+frame= 1188 fps=143 q=29.0 size=       0kB time=00:00:37.63 bitrate=   0.0kbits/s dup=1179 drop=0 speed=4.52x    frame= 1403 fps=151 q=29.0 size=       0kB time=00:00:44.80 bitrate=   0.0kbits/s dup=1393 drop=0 speed=4.82x    frame= 1604 fps=152 q=29.0 size=     256kB time=00:00:51.50 bitrate=  40.7kbits/s dup=1593 drop=0 speed=4.88x    frame= 1671 fps=145 q=29.0 size=     256kB time=00:00:53.73 bitrate=  39.0kbits/s dup=1659 drop=0 speed=4.65x    frame= 1781 fps=144 q=29.0 size=     256kB time=00:00:57.40 bitrate=  36.5kbits/s dup=1767 drop=0 speed=4.63x    frame= 2001 fps=155 q=29.0 size=     256kB time=00:01:04.73 bitrate=  32.4kbits/s dup=1985 drop=0 speed=   5x    frame= 2001 fps=143 q=29.0 size=     256kB time=00:01:04.73 bitrate=  32.4kbits/s dup=1985 drop=0 speed=4.63x    frame= 2040 fps=142 q=-1.0 Lsize=     400kB time=00:01:07.90 bitrate=  48.3kbits/s dup=2024 drop=0 speed=4.74x    
+video:375kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 6.594407%
+[libx264 @ 0x5576ccab31c0] frame I:11    Avg QP:10.55  size: 14943
+[libx264 @ 0x5576ccab31c0] frame P:513   Avg QP:11.42  size:   180
+[libx264 @ 0x5576ccab31c0] frame B:1516  Avg QP:13.72  size:    84
+[libx264 @ 0x5576ccab31c0] consecutive B-frames:  0.8%  0.2%  0.1% 98.8%
+[libx264 @ 0x5576ccab31c0] mb I  I16..4: 69.8% 26.9%  3.3%
+[libx264 @ 0x5576ccab31c0] mb P  I16..4:  0.2%  0.1%  0.0%  P16..4:  0.1%  0.0%  0.0%  0.0%  0.0%    skip:99.6%
+[libx264 @ 0x5576ccab31c0] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  0.3%  0.0%  0.0%  direct: 0.0%  skip:99.7%  L0:62.8% L1:37.2% BI: 0.0%
+[libx264 @ 0x5576ccab31c0] 8x8 transform intra:27.9% inter:69.5%
+[libx264 @ 0x5576ccab31c0] coded y,uvDC,uvAC intra: 6.0% 1.9% 1.3% inter: 0.0% 0.0% 0.0%
+[libx264 @ 0x5576ccab31c0] i16 v,h,dc,p: 89%  9%  2%  0%
+[libx264 @ 0x5576ccab31c0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 66% 14% 20%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x5576ccab31c0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 41% 21% 14%  3%  4%  5%  4%  4%  4%
+[libx264 @ 0x5576ccab31c0] i8c dc,h,v,p: 94%  4%  1%  0%
+[libx264 @ 0x5576ccab31c0] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x5576ccab31c0] ref P L0: 84.8%  3.9% 10.6%  0.8%
+[libx264 @ 0x5576ccab31c0] ref B L0: 38.3% 61.6%  0.1%
+[libx264 @ 0x5576ccab31c0] ref B L1: 98.8%  1.2%
+[libx264 @ 0x5576ccab31c0] kb/s:45.14
+Muxing audio: /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module06-03-liberty-vocab/audio/full.mp3
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 11 (Ubuntu 11.2.0-19ubuntu1)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module06-03-liberty-vocab/frames/silent.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.76.100
+  Duration: 00:01:08.00, start: 0.000000, bitrate: 48 kb/s
+  Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p, 1920x1080 [SAR 4096:4095 DAR 65536:36855], 45 kb/s, SAR 8001:8000 DAR 889:500, 30 fps, 30 tbr, 15360 tbn, 60 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+Input #1, mp3, from '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module06-03-liberty-vocab/audio/full.mp3':
+  Metadata:
+    encoder         : Lavf58.76.100
+  Duration: 00:01:06.67, start: 0.022042, bitrate: 48 kb/s
+  Stream #1:0: Audio: mp3, 24000 Hz, mono, fltp, 48 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #1:0 -> #0:1 (mp3 (mp3float) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0x563dc681d600] using SAR=4096/4095
+[libx264 @ 0x563dc681d600] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2 AVX512
+[libx264 @ 0x563dc681d600] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0x563dc681d600] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+[aac @ 0x563dc681e2c0] Too many bits 8192.000000 > 6144 per frame requested, clamping to max
+Output #0, mp4, to '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module06-03-liberty-vocab/video.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.76.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(progressive), 1920x1080 [SAR 8001:8000 DAR 889:500], q=2-31, 30 fps, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.134.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 24000 Hz, mono, fltp, 144 kb/s
+    Metadata:
+      encoder         : Lavc58.134.100 aac
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=   62 fps=0.0 q=29.0 size=       0kB time=00:00:00.10 bitrate=   3.8kbits/s speed=0.144x    frame=  168 fps=139 q=29.0 size=       0kB time=00:00:03.63 bitrate=   0.1kbits/s speed=3.01x    [mp3float @ 0x563dc6789ac0] overread, skip -6 enddists: -3 -3
+frame=  266 fps=156 q=29.0 size=       0kB time=00:00:06.91 bitrate=   0.1kbits/s speed=4.05x    frame=  381 fps=173 q=29.0 size=       0kB time=00:00:10.73 bitrate=   0.0kbits/s speed=4.86x    frame=  477 fps=176 q=29.0 size=     256kB time=00:00:13.93 bitrate= 150.5kbits/s speed=5.14x    frame=  582 fps=181 q=29.0 size=     256kB time=00:00:17.43 bitrate= 120.3kbits/s speed=5.42x    frame=  692 fps=186 q=29.0 size=     256kB time=00:00:21.10 bitrate=  99.4kbits/s speed=5.67x    frame=  761 fps=180 q=29.0 size=     256kB time=00:00:23.40 bitrate=  89.6kbits/s speed=5.54x    frame=  868 fps=184 q=29.0 size=     256kB time=00:00:26.96 bitrate=  77.8kbits/s speed= 5.7x    frame=  966 fps=185 q=29.0 size=     512kB time=00:00:30.23 bitrate= 138.7kbits/s speed=5.78x    frame= 1071 fps=187 q=29.0 size=     512kB time=00:00:33.73 bitrate= 124.3kbits/s speed=5.88x    [mp3float @ 0x563dc6789ac0] overread, skip -6 enddists: -5 -5
+frame= 1192 fps=191 q=29.0 size=     512kB time=00:00:37.76 bitrate= 111.1kbits/s speed=6.05x    frame= 1258 fps=187 q=29.0 size=     512kB time=00:00:39.96 bitrate= 105.0kbits/s speed=5.93x    frame= 1375 fps=190 q=29.0 size=     768kB time=00:00:43.86 bitrate= 143.4kbits/s speed=6.05x    [mp3float @ 0x563dc6789ac0] overread, skip -8 enddists: -7 -7
+frame= 1480 fps=191 q=29.0 size=     768kB time=00:00:47.36 bitrate= 132.8kbits/s speed=6.11x    frame= 1601 fps=194 q=29.0 size=     768kB time=00:00:51.40 bitrate= 122.4kbits/s speed=6.23x    [mp3float @ 0x563dc6789ac0] overread, skip -7 enddists: -2 -2
+frame= 1706 fps=195 q=29.0 size=     768kB time=00:00:54.90 bitrate= 114.6kbits/s speed=6.27x    [mp3float @ 0x563dc6789ac0] overread, skip -7 enddists: -5 -5
+frame= 1809 fps=195 q=29.0 size=    1024kB time=00:00:58.33 bitrate= 143.8kbits/s speed= 6.3x    frame= 1885 fps=193 q=29.0 size=    1024kB time=00:01:00.86 bitrate= 137.8kbits/s speed=6.24x    [mp3float @ 0x563dc6789ac0] overread, skip -6 enddists: -4 -4
+frame= 1976 fps=193 q=29.0 size=    1024kB time=00:01:03.90 bitrate= 131.3kbits/s speed=6.23x    [mp4 @ 0x563dc678aec0] Starting second pass: moving the moov atom to the beginning of the file
+frame= 2040 fps=191 q=-1.0 Lsize=    1258kB time=00:01:07.90 bitrate= 151.8kbits/s speed=6.35x    
+video:372kB audio:832kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 4.476274%
+[libx264 @ 0x563dc681d600] frame I:11    Avg QP:10.43  size: 14874
+[libx264 @ 0x563dc681d600] frame P:513   Avg QP:11.20  size:   170
+[libx264 @ 0x563dc681d600] frame B:1516  Avg QP:13.73  size:    85
+[libx264 @ 0x563dc681d600] consecutive B-frames:  0.8%  0.1%  0.4% 98.6%
+[libx264 @ 0x563dc681d600] mb I  I16..4: 68.5% 28.3%  3.2%
+[libx264 @ 0x563dc681d600] mb P  I16..4:  0.2%  0.0%  0.0%  P16..4:  0.1%  0.0%  0.0%  0.0%  0.0%    skip:99.6%
+[libx264 @ 0x563dc681d600] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  0.4%  0.0%  0.0%  direct: 0.0%  skip:99.6%  L0:73.0% L1:27.0% BI: 0.0%
+[libx264 @ 0x563dc681d600] 8x8 transform intra:26.6% inter:25.0%
+[libx264 @ 0x563dc681d600] coded y,uvDC,uvAC intra: 2.6% 1.9% 1.3% inter: 0.0% 0.0% 0.0%
+[libx264 @ 0x563dc681d600] i16 v,h,dc,p: 88% 10%  2%  0%
+[libx264 @ 0x563dc681d600] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 48% 27% 24%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x563dc681d600] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 41% 20% 14%  3%  4%  5%  4%  4%  4%
+[libx264 @ 0x563dc681d600] i8c dc,h,v,p: 94%  5%  1%  0%
+[libx264 @ 0x563dc681d600] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x563dc681d600] ref P L0: 42.4%  1.5% 38.0% 18.1%
+[libx264 @ 0x563dc681d600] ref B L0: 38.3% 61.6%  0.1%
+[libx264 @ 0x563dc681d600] ref B L1: 99.6%  0.4%
+[libx264 @ 0x563dc681d600] kb/s:44.67
+[aac @ 0x563dc681e2c0] Qavg: 65531.703
+OK: /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module06-03-liberty-vocab/video.mp4 (15 slides)
+
+Done: 1 module/part(s) synced and narrated.
+
+======== module07-01-real-read-netlist ========
+Synced 15 slides from transcript -> outline.yaml + slides.md
+Wrote /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module07-01-real-read-netlist/slides.pptx
+OK: transcript consistent with outline (/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module07-01-real-read-netlist)
+Converting with soffice ...
+Warning: failed to launch javaldx - java may not function correctly
+convert /tmp/book_slides_pdf_288779/slides.pptx -> /tmp/book_slides_pdf_288779/slides.pdf using filter : impress_pdf_Export
+OK: /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module07-01-real-read-netlist/slides.pdf (150334 bytes)
+Wrote /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module07-01-real-read-netlist/audio/full.mp3 (15 deck slides / 13 spoken, 60.1s) and /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module07-01-real-read-netlist/audio/slide_timings.json
+Rasterizing /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module07-01-real-read-netlist/slides.pdf at 200 DPI ...
+Using slide timings from /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module07-01-real-read-netlist/audio/slide_timings.json
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 11 (Ubuntu 11.2.0-19ubuntu1)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Input #0, concat, from '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module07-01-real-read-netlist/frames/concat.txt':
+  Duration: N/A, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: png, rgb24(pc), 2667x1500 [SAR 7874:7874 DAR 889:500], 25 fps, 25 tbr, 25 tbn, 25 tbc
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x55c6d7f31b00] using SAR=4096/4095
+[libx264 @ 0x55c6d7f31b00] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2 AVX512
+[libx264 @ 0x55c6d7f31b00] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0x55c6d7f31b00] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module07-01-real-read-netlist/frames/silent.mp4':
+  Metadata:
+    encoder         : Lavf58.76.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 1920x1080 [SAR 8001:8000 DAR 889:500], q=2-31, 30 fps, 15360 tbn
+    Metadata:
+      encoder         : Lavc58.134.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=  327 fps=104 q=29.0 size=       0kB time=00:00:08.93 bitrate=   0.0kbits/s dup=324 drop=0 speed=2.85x    frame=  452 fps= 87 q=29.0 size=       0kB time=00:00:13.10 bitrate=   0.0kbits/s dup=448 drop=0 speed=2.53x    frame=  517 fps= 77 q=29.0 size=       0kB time=00:00:15.26 bitrate=   0.0kbits/s dup=512 drop=0 speed=2.27x    frame=  589 fps= 79 q=29.0 size=       0kB time=00:00:17.66 bitrate=   0.0kbits/s dup=583 drop=0 speed=2.36x    frame=  657 fps= 78 q=29.0 size=       0kB time=00:00:19.93 bitrate=   0.0kbits/s dup=650 drop=0 speed=2.38x    frame=  777 fps= 86 q=29.0 size=       0kB time=00:00:23.93 bitrate=   0.0kbits/s dup=769 drop=0 speed=2.65x    frame=  991 fps= 97 q=29.0 size=       0kB time=00:00:31.06 bitrate=   0.0kbits/s dup=982 drop=0 speed=3.05x    More than 1000 frames duplicated
+frame= 1205 fps= 95 q=29.0 size=       0kB time=00:00:38.20 bitrate=   0.0kbits/s dup=1195 drop=0 speed=3.02x    frame= 1406 fps=100 q=29.0 size=       0kB time=00:00:44.90 bitrate=   0.0kbits/s dup=1395 drop=0 speed=3.18x    frame= 1475 fps= 94 q=29.0 size=       0kB time=00:00:47.20 bitrate=   0.0kbits/s dup=1463 drop=0 speed=   3x    frame= 1543 fps= 95 q=29.0 size=     256kB time=00:00:49.46 bitrate=  42.4kbits/s dup=1530 drop=0 speed=3.04x    frame= 1584 fps= 94 q=29.0 size=     256kB time=00:00:50.83 bitrate=  41.3kbits/s dup=1570 drop=0 speed=3.01x    frame= 1623 fps= 93 q=29.0 size=     256kB time=00:00:52.13 bitrate=  40.2kbits/s dup=1608 drop=0 speed=2.99x    frame= 1803 fps= 91 q=29.0 size=     256kB time=00:00:58.13 bitrate=  36.1kbits/s dup=1787 drop=0 speed=2.93x    frame= 1842 fps= 90 q=-1.0 Lsize=     357kB time=00:01:01.30 bitrate=  47.7kbits/s dup=1826 drop=0 speed=2.98x    
+video:335kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 6.700933%
+[libx264 @ 0x55c6d7f31b00] frame I:10    Avg QP:11.02  size: 14904
+[libx264 @ 0x55c6d7f31b00] frame P:462   Avg QP:11.49  size:   177
+[libx264 @ 0x55c6d7f31b00] frame B:1370  Avg QP:13.72  size:    81
+[libx264 @ 0x55c6d7f31b00] consecutive B-frames:  0.8%  0.0%  0.7% 98.6%
+[libx264 @ 0x55c6d7f31b00] mb I  I16..4: 66.2% 30.5%  3.3%
+[libx264 @ 0x55c6d7f31b00] mb P  I16..4:  0.3%  0.0%  0.0%  P16..4:  0.1%  0.0%  0.0%  0.0%  0.0%    skip:99.6%
+[libx264 @ 0x55c6d7f31b00] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  0.3%  0.0%  0.0%  direct: 0.0%  skip:99.7%  L0:68.7% L1:31.3% BI: 0.0%
+[libx264 @ 0x55c6d7f31b00] 8x8 transform intra:28.3% inter:58.4%
+[libx264 @ 0x55c6d7f31b00] coded y,uvDC,uvAC intra: 4.1% 1.6% 1.2% inter: 0.0% 0.0% 0.0%
+[libx264 @ 0x55c6d7f31b00] i16 v,h,dc,p: 91%  7%  2%  0%
+[libx264 @ 0x55c6d7f31b00] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 64% 14% 22%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x55c6d7f31b00] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 42% 21% 14%  3%  4%  5%  4%  3%  4%
+[libx264 @ 0x55c6d7f31b00] i8c dc,h,v,p: 96%  3%  1%  0%
+[libx264 @ 0x55c6d7f31b00] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x55c6d7f31b00] ref P L0: 86.1%  4.4%  8.8%  0.7%
+[libx264 @ 0x55c6d7f31b00] ref B L0: 33.0% 67.0%  0.1%
+[libx264 @ 0x55c6d7f31b00] ref B L1: 99.7%  0.3%
+[libx264 @ 0x55c6d7f31b00] kb/s:44.55
+Muxing audio: /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module07-01-real-read-netlist/audio/full.mp3
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 11 (Ubuntu 11.2.0-19ubuntu1)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module07-01-real-read-netlist/frames/silent.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.76.100
+  Duration: 00:01:01.40, start: 0.000000, bitrate: 47 kb/s
+  Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p, 1920x1080 [SAR 4096:4095 DAR 65536:36855], 44 kb/s, SAR 8001:8000 DAR 889:500, 30 fps, 30 tbr, 15360 tbn, 60 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+Input #1, mp3, from '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module07-01-real-read-netlist/audio/full.mp3':
+  Metadata:
+    encoder         : Lavf58.76.100
+  Duration: 00:01:00.10, start: 0.022042, bitrate: 48 kb/s
+  Stream #1:0: Audio: mp3, 24000 Hz, mono, fltp, 48 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #1:0 -> #0:1 (mp3 (mp3float) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0x55613cd53bc0] using SAR=4096/4095
+[libx264 @ 0x55613cd53bc0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2 AVX512
+[libx264 @ 0x55613cd53bc0] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0x55613cd53bc0] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+[aac @ 0x55613cd55200] Too many bits 8192.000000 > 6144 per frame requested, clamping to max
+Output #0, mp4, to '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module07-01-real-read-netlist/video.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.76.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(progressive), 1920x1080 [SAR 8001:8000 DAR 889:500], q=2-31, 30 fps, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.134.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 24000 Hz, mono, fltp, 144 kb/s
+    Metadata:
+      encoder         : Lavc58.134.100 aac
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=   36 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=   92 fps= 86 q=29.0 size=       0kB time=00:00:01.10 bitrate=   0.3kbits/s speed=1.02x    frame=  156 fps= 98 q=29.0 size=       0kB time=00:00:03.23 bitrate=   0.1kbits/s speed=2.04x    frame=  213 fps=102 q=29.0 size=       0kB time=00:00:05.13 bitrate=   0.1kbits/s speed=2.46x    frame=  285 fps=109 q=29.0 size=       0kB time=00:00:07.55 bitrate=   0.1kbits/s speed= 2.9x    frame=  344 fps=110 q=29.0 size=       0kB time=00:00:09.50 bitrate=   0.0kbits/s speed=3.05x    frame=  414 fps=114 q=29.0 size=       0kB time=00:00:11.83 bitrate=   0.0kbits/s speed=3.27x    frame=  481 fps=117 q=29.0 size=     256kB time=00:00:14.06 bitrate= 149.1kbits/s speed=3.41x    [mp3float @ 0x55613ccd1140] overread, skip -6 enddists: -5 -5
+frame=  552 fps=119 q=29.0 size=     256kB time=00:00:16.43 bitrate= 127.6kbits/s speed=3.55x    frame=  596 fps=116 q=29.0 size=     256kB time=00:00:17.92 bitrate= 117.0kbits/s speed=3.49x    frame=  641 fps=112 q=29.0 size=     256kB time=00:00:19.40 bitrate= 108.1kbits/s speed=3.39x    frame=  684 fps=110 q=29.0 size=     256kB time=00:00:20.83 bitrate= 100.7kbits/s speed=3.35x    [mp3float @ 0x55613ccd1140] overread, skip -6 enddists: -2 -2
+frame=  740 fps=110 q=29.0 size=     256kB time=00:00:22.74 bitrate=  92.2kbits/s speed=3.38x    frame=  811 fps=112 q=29.0 size=     256kB time=00:00:25.06 bitrate=  83.7kbits/s speed=3.46x    frame=  868 fps=112 q=29.0 size=     256kB time=00:00:26.96 bitrate=  77.8kbits/s speed=3.48x    frame=  931 fps=113 q=29.0 size=     256kB time=00:00:29.06 bitrate=  72.2kbits/s speed=3.52x    frame=  993 fps=113 q=29.0 size=     512kB time=00:00:31.13 bitrate= 134.7kbits/s speed=3.56x    frame= 1041 fps=112 q=29.0 size=     512kB time=00:00:32.73 bitrate= 128.1kbits/s speed=3.53x    frame= 1092 fps=112 q=29.0 size=     512kB time=00:00:34.43 bitrate= 121.8kbits/s speed=3.53x    frame= 1160 fps=113 q=29.0 size=     512kB time=00:00:36.73 bitrate= 114.2kbits/s speed=3.58x    frame= 1219 fps=113 q=29.0 size=     512kB time=00:00:38.66 bitrate= 108.5kbits/s speed=3.59x    [mp3float @ 0x55613ccd1140] overread, skip -7 enddists: -6 -6
+frame= 1273 fps=113 q=29.0 size=     512kB time=00:00:40.46 bitrate= 103.7kbits/s speed=3.59x    frame= 1304 fps=111 q=29.0 size=     512kB time=00:00:41.50 bitrate= 101.1kbits/s speed=3.52x    frame= 1333 fps=108 q=29.0 size=     512kB time=00:00:42.49 bitrate=  98.7kbits/s speed=3.45x    frame= 1363 fps=106 q=29.0 size=     512kB time=00:00:43.47 bitrate=  96.5kbits/s speed=3.39x    frame= 1413 fps=106 q=29.0 size=     768kB time=00:00:45.14 bitrate= 139.4kbits/s speed=3.39x    frame= 1451 fps=104 q=26.0 size=     768kB time=00:00:46.40 bitrate= 135.6kbits/s speed=3.33x    frame= 1514 fps=105 q=29.0 size=     768kB time=00:00:48.50 bitrate= 129.7kbits/s speed=3.36x    [mp3float @ 0x55613ccd1140] overread, skip -8 enddists: -6 -6
+frame= 1578 fps=106 q=29.0 size=     768kB time=00:00:50.63 bitrate= 124.3kbits/s speed=3.39x    frame= 1630 fps=106 q=29.0 size=     768kB time=00:00:52.36 bitrate= 120.1kbits/s speed=3.39x    frame= 1680 fps=105 q=29.0 size=     768kB time=00:00:54.03 bitrate= 116.4kbits/s speed=3.39x    [mp3float @ 0x55613ccd1140] overread, skip -6 enddists: -1 -1
+frame= 1738 fps=106 q=29.0 size=     768kB time=00:00:55.96 bitrate= 112.4kbits/s speed= 3.4x    frame= 1779 fps=105 q=29.0 size=     768kB time=00:00:57.33 bitrate= 109.7kbits/s speed=3.37x    frame= 1841 fps=105 q=29.0 size=    1024kB time=00:00:59.40 bitrate= 141.2kbits/s speed= 3.4x    [mp4 @ 0x55613cd53140] Starting second pass: moving the moov atom to the beginning of the file
+frame= 1842 fps=103 q=-1.0 Lsize=    1111kB time=00:01:01.30 bitrate= 148.5kbits/s speed=3.43x    
+video:331kB audio:732kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 4.587490%
+[libx264 @ 0x55613cd53bc0] frame I:10    Avg QP:10.87  size: 14834
+[libx264 @ 0x55613cd53bc0] frame P:462   Avg QP:11.30  size:   167
+[libx264 @ 0x55613cd53bc0] frame B:1370  Avg QP:13.72  size:    82
+[libx264 @ 0x55613cd53bc0] consecutive B-frames:  0.8%  0.0%  0.7% 98.6%
+[libx264 @ 0x55613cd53bc0] mb I  I16..4: 67.2% 29.5%  3.3%
+[libx264 @ 0x55613cd53bc0] mb P  I16..4:  0.1%  0.2%  0.0%  P16..4:  0.0%  0.0%  0.0%  0.0%  0.0%    skip:99.6%
+[libx264 @ 0x55613cd53bc0] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  0.3%  0.0%  0.0%  direct: 0.0%  skip:99.7%  L0:75.5% L1:24.5% BI: 0.0%
+[libx264 @ 0x55613cd53bc0] 8x8 transform intra:32.6% inter:38.3%
+[libx264 @ 0x55613cd53bc0] coded y,uvDC,uvAC intra: 2.5% 1.7% 1.2% inter: 0.0% 0.0% 0.0%
+[libx264 @ 0x55613cd53bc0] i16 v,h,dc,p: 91%  7%  2%  0%
+[libx264 @ 0x55613cd53bc0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 33% 44% 22%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x55613cd53bc0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 41% 20% 16%  3%  4%  5%  4%  4%  4%
+[libx264 @ 0x55613cd53bc0] i8c dc,h,v,p: 95%  3%  1%  0%
+[libx264 @ 0x55613cd53bc0] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x55613cd53bc0] ref P L0: 53.3%  2.3% 22.6% 21.7%
+[libx264 @ 0x55613cd53bc0] ref B L0: 23.0% 76.9%  0.1%
+[libx264 @ 0x55613cd53bc0] ref B L1: 99.8%  0.2%
+[libx264 @ 0x55613cd53bc0] kb/s:44.01
+[aac @ 0x55613cd55200] Qavg: 65534.172
+OK: /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module07-01-real-read-netlist/video.mp4 (15 slides)
+
+Done: 1 module/part(s) synced and narrated.
+
+======== module07-03-real-sdc ========
+Synced 15 slides from transcript -> outline.yaml + slides.md
+Wrote /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module07-03-real-sdc/slides.pptx
+OK: transcript consistent with outline (/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module07-03-real-sdc)
+Converting with soffice ...
+Warning: failed to launch javaldx - java may not function correctly
+convert /tmp/book_slides_pdf_289238/slides.pptx -> /tmp/book_slides_pdf_289238/slides.pdf using filter : impress_pdf_Export
+OK: /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module07-03-real-sdc/slides.pdf (161079 bytes)
+Wrote /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module07-03-real-sdc/audio/full.mp3 (15 deck slides / 13 spoken, 61.9s) and /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module07-03-real-sdc/audio/slide_timings.json
+Rasterizing /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module07-03-real-sdc/slides.pdf at 200 DPI ...
+Using slide timings from /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module07-03-real-sdc/audio/slide_timings.json
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 11 (Ubuntu 11.2.0-19ubuntu1)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Input #0, concat, from '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module07-03-real-sdc/frames/concat.txt':
+  Duration: N/A, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: png, rgb24(pc), 2667x1500 [SAR 7874:7874 DAR 889:500], 25 fps, 25 tbr, 25 tbn, 25 tbc
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x56390bbdb1c0] using SAR=4096/4095
+[libx264 @ 0x56390bbdb1c0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2 AVX512
+[libx264 @ 0x56390bbdb1c0] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0x56390bbdb1c0] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module07-03-real-sdc/frames/silent.mp4':
+  Metadata:
+    encoder         : Lavf58.76.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 1920x1080 [SAR 8001:8000 DAR 889:500], q=2-31, 30 fps, 15360 tbn
+    Metadata:
+      encoder         : Lavc58.134.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=  257 fps=227 q=29.0 size=       0kB time=00:00:06.60 bitrate=   0.1kbits/s dup=254 drop=0 speed=5.83x    frame=  495 fps=233 q=29.0 size=       0kB time=00:00:14.53 bitrate=   0.0kbits/s dup=490 drop=0 speed=6.85x    frame=  619 fps=231 q=29.0 size=       0kB time=00:00:18.66 bitrate=   0.0kbits/s dup=613 drop=0 speed=6.98x    frame=  716 fps=221 q=29.0 size=       0kB time=00:00:21.90 bitrate=   0.0kbits/s dup=709 drop=0 speed=6.76x    frame=  834 fps=211 q=29.0 size=       0kB time=00:00:25.83 bitrate=   0.0kbits/s dup=826 drop=0 speed=6.54x    More than 1000 frames duplicated
+frame= 1046 fps=229 q=29.0 size=       0kB time=00:00:32.90 bitrate=   0.0kbits/s dup=1037 drop=0 speed=7.19x    frame= 1260 fps=210 q=29.0 size=       0kB time=00:00:40.03 bitrate=   0.0kbits/s dup=1250 drop=0 speed=6.68x    frame= 1461 fps=198 q=29.0 size=     256kB time=00:00:46.73 bitrate=  44.9kbits/s dup=1450 drop=0 speed=6.33x    frame= 1530 fps=185 q=29.0 size=     256kB time=00:00:49.03 bitrate=  42.8kbits/s dup=1518 drop=0 speed=5.94x    frame= 1638 fps=185 q=29.0 size=     256kB time=00:00:52.63 bitrate=  39.9kbits/s dup=1624 drop=0 speed=5.96x    frame= 1859 fps=196 q=29.0 size=     256kB time=00:01:00.00 bitrate=  35.0kbits/s dup=1843 drop=0 speed=6.33x    frame= 1859 fps=181 q=29.0 size=     256kB time=00:01:00.00 bitrate=  35.0kbits/s dup=1843 drop=0 speed=5.83x    frame= 1898 fps=180 q=-1.0 Lsize=     382kB time=00:01:03.16 bitrate=  49.5kbits/s dup=1882 drop=0 speed=5.98x    
+video:359kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 6.438042%
+[libx264 @ 0x56390bbdb1c0] frame I:11    Avg QP:10.17  size: 15001
+[libx264 @ 0x56390bbdb1c0] frame P:476   Avg QP:11.61  size:   190
+[libx264 @ 0x56390bbdb1c0] frame B:1411  Avg QP:13.70  size:    79
+[libx264 @ 0x56390bbdb1c0] consecutive B-frames:  0.8%  0.1%  0.0% 99.1%
+[libx264 @ 0x56390bbdb1c0] mb I  I16..4: 70.9% 25.7%  3.3%
+[libx264 @ 0x56390bbdb1c0] mb P  I16..4:  0.3%  0.0%  0.0%  P16..4:  0.1%  0.0%  0.0%  0.0%  0.0%    skip:99.6%
+[libx264 @ 0x56390bbdb1c0] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  0.2%  0.0%  0.0%  direct: 0.0%  skip:99.8%  L0:63.9% L1:36.1% BI: 0.0%
+[libx264 @ 0x56390bbdb1c0] 8x8 transform intra:24.2% inter:39.0%
+[libx264 @ 0x56390bbdb1c0] coded y,uvDC,uvAC intra: 3.8% 2.0% 1.4% inter: 0.0% 0.0% 0.0%
+[libx264 @ 0x56390bbdb1c0] i16 v,h,dc,p: 92%  6%  2%  0%
+[libx264 @ 0x56390bbdb1c0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 60% 19% 21%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x56390bbdb1c0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 39% 22% 15%  3%  4%  5%  4%  4%  4%
+[libx264 @ 0x56390bbdb1c0] i8c dc,h,v,p: 94%  4%  1%  0%
+[libx264 @ 0x56390bbdb1c0] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x56390bbdb1c0] ref P L0: 94.6%  1.7%  3.2%  0.5%
+[libx264 @ 0x56390bbdb1c0] ref B L0: 36.9% 63.0%  0.1%
+[libx264 @ 0x56390bbdb1c0] ref B L1: 98.9%  1.1%
+[libx264 @ 0x56390bbdb1c0] kb/s:46.38
+Muxing audio: /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module07-03-real-sdc/audio/full.mp3
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 11 (Ubuntu 11.2.0-19ubuntu1)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module07-03-real-sdc/frames/silent.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.76.100
+  Duration: 00:01:03.27, start: 0.000000, bitrate: 49 kb/s
+  Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p, 1920x1080 [SAR 4096:4095 DAR 65536:36855], 46 kb/s, SAR 8001:8000 DAR 889:500, 30 fps, 30 tbr, 15360 tbn, 60 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+Input #1, mp3, from '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module07-03-real-sdc/audio/full.mp3':
+  Metadata:
+    encoder         : Lavf58.76.100
+  Duration: 00:01:01.92, start: 0.022042, bitrate: 48 kb/s
+  Stream #1:0: Audio: mp3, 24000 Hz, mono, fltp, 48 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #1:0 -> #0:1 (mp3 (mp3float) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0x562736385b00] using SAR=4096/4095
+[libx264 @ 0x562736385b00] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2 AVX512
+[libx264 @ 0x562736385b00] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0x562736385b00] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+[aac @ 0x5627363973c0] Too many bits 8192.000000 > 6144 per frame requested, clamping to max
+Output #0, mp4, to '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module07-03-real-sdc/video.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.76.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(progressive), 1920x1080 [SAR 8001:8000 DAR 889:500], q=2-31, 30 fps, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.134.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 24000 Hz, mono, fltp, 144 kb/s
+    Metadata:
+      encoder         : Lavc58.134.100 aac
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=  116 fps=0.0 q=29.0 size=       0kB time=00:00:01.90 bitrate=   0.2kbits/s speed=3.36x    frame=  217 fps=204 q=29.0 size=       0kB time=00:00:05.26 bitrate=   0.1kbits/s speed=4.95x    frame=  333 fps=213 q=29.0 size=       0kB time=00:00:09.13 bitrate=   0.0kbits/s speed=5.83x    frame=  436 fps=211 q=29.0 size=       0kB time=00:00:12.56 bitrate=   0.0kbits/s speed=6.08x    [mp3float @ 0x562736365e00] overread, skip -5 enddists: -3 -3
+[mp3float @ 0x562736365e00] overread, skip -7 enddists: -2 -2
+frame=  528 fps=206 q=29.0 size=     256kB time=00:00:15.63 bitrate= 134.2kbits/s speed=6.09x    frame=  620 fps=202 q=29.0 size=     256kB time=00:00:18.70 bitrate= 112.2kbits/s speed=6.08x    frame=  700 fps=195 q=29.0 size=     256kB time=00:00:21.36 bitrate=  98.2kbits/s speed=5.97x    frame=  796 fps=195 q=29.0 size=     256kB time=00:00:24.56 bitrate=  85.4kbits/s speed=6.02x    frame=  888 fps=194 q=29.0 size=     256kB time=00:00:27.63 bitrate=  75.9kbits/s speed=6.02x    [mp3float @ 0x562736365e00] overread, skip -6 enddists: -4 -4
+frame=  991 fps=195 q=29.0 size=     512kB time=00:00:31.06 bitrate= 135.0kbits/s speed= 6.1x    frame= 1087 fps=194 q=29.0 size=     512kB time=00:00:34.26 bitrate= 122.4kbits/s speed= 6.1x    [mp3float @ 0x562736365e00] overread, skip -9 enddists: -6 -6
+frame= 1192 fps=195 q=29.0 size=     512kB time=00:00:37.76 bitrate= 111.1kbits/s speed=6.17x    [mp3float @ 0x562736365e00] overread, skip -7 enddists: -6 -6
+frame= 1291 fps=195 q=29.0 size=     512kB time=00:00:41.06 bitrate= 102.1kbits/s speed= 6.2x    frame= 1395 fps=196 q=29.0 size=     768kB time=00:00:44.53 bitrate= 141.3kbits/s speed=6.25x    frame= 1494 fps=196 q=29.0 size=     768kB time=00:00:47.87 bitrate= 131.4kbits/s speed=6.28x    frame= 1589 fps=196 q=29.0 size=     768kB time=00:00:51.00 bitrate= 123.4kbits/s speed=6.28x    [mp3float @ 0x562736365e00] overread, skip -7 enddists: -5 -5
+frame= 1685 fps=195 q=29.0 size=     768kB time=00:00:54.20 bitrate= 116.1kbits/s speed=6.29x    frame= 1740 fps=191 q=29.0 size=     768kB time=00:00:56.03 bitrate= 112.3kbits/s speed=6.14x    [mp3float @ 0x562736365e00] overread, skip -7 enddists: -2 -2
+frame= 1843 fps=191 q=29.0 size=    1024kB time=00:00:59.46 bitrate= 141.1kbits/s speed=6.18x    [mp4 @ 0x562736385040] Starting second pass: moving the moov atom to the beginning of the file
+frame= 1898 fps=189 q=-1.0 Lsize=    1163kB time=00:01:03.16 bitrate= 150.8kbits/s speed= 6.3x    
+video:354kB audio:758kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 4.513937%
+[libx264 @ 0x562736385b00] frame I:11    Avg QP: 9.63  size: 14886
+[libx264 @ 0x562736385b00] frame P:476   Avg QP:11.42  size:   181
+[libx264 @ 0x562736385b00] frame B:1411  Avg QP:13.68  size:    80
+[libx264 @ 0x562736385b00] consecutive B-frames:  0.8%  0.2%  0.2% 98.8%
+[libx264 @ 0x562736385b00] mb I  I16..4: 76.3% 20.3%  3.3%
+[libx264 @ 0x562736385b00] mb P  I16..4:  0.1%  0.2%  0.0%  P16..4:  0.1%  0.0%  0.0%  0.0%  0.0%    skip:99.6%
+[libx264 @ 0x562736385b00] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  0.2%  0.0%  0.0%  direct: 0.0%  skip:99.8%  L0:62.9% L1:37.1% BI: 0.0%
+[libx264 @ 0x562736385b00] 8x8 transform intra:24.3% inter:26.5%
+[libx264 @ 0x562736385b00] coded y,uvDC,uvAC intra: 2.6% 2.0% 1.3% inter: 0.0% 0.0% 0.0%
+[libx264 @ 0x562736385b00] i16 v,h,dc,p: 92%  6%  2%  0%
+[libx264 @ 0x562736385b00] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 44% 34% 22%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x562736385b00] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 39% 21% 16%  3%  4%  5%  4%  4%  4%
+[libx264 @ 0x562736385b00] i8c dc,h,v,p: 94%  4%  1%  0%
+[libx264 @ 0x562736385b00] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x562736385b00] ref P L0: 57.3%  1.8% 24.0% 16.9%
+[libx264 @ 0x562736385b00] ref B L0: 28.8% 71.2%  0.1%
+[libx264 @ 0x562736385b00] ref B L1: 99.6%  0.4%
+[libx264 @ 0x562736385b00] kb/s:45.80
+[aac @ 0x5627363973c0] Qavg: 65533.902
+OK: /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module07-03-real-sdc/video.mp4 (15 slides)
+
+Done: 1 module/part(s) synced and narrated.
+
+======== module08-01-real-report-checks ========
+Synced 15 slides from transcript -> outline.yaml + slides.md
+Wrote /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module08-01-real-report-checks/slides.pptx
+OK: transcript consistent with outline (/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module08-01-real-report-checks)
+Converting with soffice ...
+Warning: failed to launch javaldx - java may not function correctly
+convert /tmp/book_slides_pdf_289796/slides.pptx -> /tmp/book_slides_pdf_289796/slides.pdf using filter : impress_pdf_Export
+OK: /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module08-01-real-report-checks/slides.pdf (166196 bytes)
+Wrote /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module08-01-real-report-checks/audio/full.mp3 (15 deck slides / 13 spoken, 63.5s) and /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module08-01-real-report-checks/audio/slide_timings.json
+Rasterizing /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module08-01-real-report-checks/slides.pdf at 200 DPI ...
+Using slide timings from /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module08-01-real-report-checks/audio/slide_timings.json
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 11 (Ubuntu 11.2.0-19ubuntu1)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Input #0, concat, from '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module08-01-real-report-checks/frames/concat.txt':
+  Duration: N/A, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: png, rgb24(pc), 2667x1500 [SAR 7874:7874 DAR 889:500], 25 fps, 25 tbr, 25 tbn, 25 tbc
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x55afbc500b00] using SAR=4096/4095
+[libx264 @ 0x55afbc500b00] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2 AVX512
+[libx264 @ 0x55afbc500b00] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0x55afbc500b00] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module08-01-real-report-checks/frames/silent.mp4':
+  Metadata:
+    encoder         : Lavf58.76.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 1920x1080 [SAR 8001:8000 DAR 889:500], q=2-31, 30 fps, 15360 tbn
+    Metadata:
+      encoder         : Lavc58.134.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=  293 fps=186 q=29.0 size=       0kB time=00:00:07.80 bitrate=   0.0kbits/s dup=290 drop=0 speed=4.95x    frame=  437 fps=142 q=29.0 size=       0kB time=00:00:12.60 bitrate=   0.0kbits/s dup=433 drop=0 speed=4.11x    frame=  507 fps=115 q=29.0 size=       0kB time=00:00:14.93 bitrate=   0.0kbits/s dup=502 drop=0 speed=3.39x    frame=  579 fps=116 q=29.0 size=       0kB time=00:00:17.33 bitrate=   0.0kbits/s dup=573 drop=0 speed=3.47x    frame=  741 fps=132 q=29.0 size=       0kB time=00:00:22.73 bitrate=   0.0kbits/s dup=734 drop=0 speed=4.03x    frame=  877 fps=115 q=29.0 size=       0kB time=00:00:27.26 bitrate=   0.0kbits/s dup=869 drop=0 speed=3.57x    More than 1000 frames duplicated
+frame= 1093 fps=111 q=29.0 size=       0kB time=00:00:34.46 bitrate=   0.0kbits/s dup=1084 drop=0 speed= 3.5x    frame= 1307 fps=112 q=29.0 size=       0kB time=00:00:41.60 bitrate=   0.0kbits/s dup=1297 drop=0 speed=3.56x    frame= 1508 fps=111 q=29.0 size=     256kB time=00:00:48.30 bitrate=  43.4kbits/s dup=1497 drop=0 speed=3.56x    frame= 1577 fps=100 q=29.0 size=     256kB time=00:00:50.60 bitrate=  41.5kbits/s dup=1565 drop=0 speed=3.22x    frame= 1644 fps=100 q=29.0 size=     256kB time=00:00:52.83 bitrate=  39.7kbits/s dup=1631 drop=0 speed=3.21x    frame= 1685 fps= 97 q=29.0 size=     256kB time=00:00:54.20 bitrate=  38.7kbits/s dup=1671 drop=0 speed=3.13x    frame= 1725 fps= 95 q=29.0 size=     256kB time=00:00:55.53 bitrate=  37.8kbits/s dup=1710 drop=0 speed=3.05x    frame= 1905 fps=102 q=29.0 size=     256kB time=00:01:01.53 bitrate=  34.1kbits/s dup=1889 drop=0 speed=3.29x    frame= 1905 fps= 91 q=29.0 size=     256kB time=00:01:01.53 bitrate=  34.1kbits/s dup=1889 drop=0 speed=2.95x    frame= 1944 fps= 91 q=-1.0 Lsize=     394kB time=00:01:04.70 bitrate=  49.9kbits/s dup=1928 drop=0 speed=3.02x    
+video:370kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 6.375433%
+[libx264 @ 0x55afbc500b00] frame I:11    Avg QP:10.74  size: 15955
+[libx264 @ 0x55afbc500b00] frame P:489   Avg QP:11.83  size:   181
+[libx264 @ 0x55afbc500b00] frame B:1444  Avg QP:13.70  size:    79
+[libx264 @ 0x55afbc500b00] consecutive B-frames:  0.9%  0.1%  0.5% 98.6%
+[libx264 @ 0x55afbc500b00] mb I  I16..4: 69.9% 26.6%  3.5%
+[libx264 @ 0x55afbc500b00] mb P  I16..4:  0.2%  0.0%  0.0%  P16..4:  0.0%  0.0%  0.0%  0.0%  0.0%    skip:99.7%
+[libx264 @ 0x55afbc500b00] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  0.2%  0.0%  0.0%  direct: 0.0%  skip:99.8%  L0:65.4% L1:34.6% BI: 0.0%
+[libx264 @ 0x55afbc500b00] 8x8 transform intra:25.1% inter:38.9%
+[libx264 @ 0x55afbc500b00] coded y,uvDC,uvAC intra: 3.9% 2.0% 1.3% inter: 0.0% 0.0% 0.0%
+[libx264 @ 0x55afbc500b00] i16 v,h,dc,p: 91%  7%  2%  0%
+[libx264 @ 0x55afbc500b00] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 58% 16% 26%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x55afbc500b00] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 39% 22% 16%  3%  4%  5%  4%  4%  4%
+[libx264 @ 0x55afbc500b00] i8c dc,h,v,p: 94%  5%  1%  0%
+[libx264 @ 0x55afbc500b00] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x55afbc500b00] ref P L0: 85.7%  6.5%  6.8%  1.0%
+[libx264 @ 0x55afbc500b00] ref B L0: 35.3% 64.7%
+[libx264 @ 0x55afbc500b00] ref B L1: 99.8%  0.2%
+[libx264 @ 0x55afbc500b00] kb/s:46.73
+Muxing audio: /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module08-01-real-report-checks/audio/full.mp3
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 11 (Ubuntu 11.2.0-19ubuntu1)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module08-01-real-report-checks/frames/silent.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.76.100
+  Duration: 00:01:04.80, start: 0.000000, bitrate: 49 kb/s
+  Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p, 1920x1080 [SAR 4096:4095 DAR 65536:36855], 46 kb/s, SAR 8001:8000 DAR 889:500, 30 fps, 30 tbr, 15360 tbn, 60 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+Input #1, mp3, from '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module08-01-real-report-checks/audio/full.mp3':
+  Metadata:
+    encoder         : Lavf58.76.100
+  Duration: 00:01:03.48, start: 0.022042, bitrate: 48 kb/s
+  Stream #1:0: Audio: mp3, 24000 Hz, mono, fltp, 48 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #1:0 -> #0:1 (mp3 (mp3float) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0x55b3b49227c0] using SAR=4096/4095
+[libx264 @ 0x55b3b49227c0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2 AVX512
+[libx264 @ 0x55b3b49227c0] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0x55b3b49227c0] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+[aac @ 0x55b3b4923940] Too many bits 8192.000000 > 6144 per frame requested, clamping to max
+Output #0, mp4, to '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module08-01-real-report-checks/video.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.76.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(progressive), 1920x1080 [SAR 8001:8000 DAR 889:500], q=2-31, 30 fps, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.134.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 24000 Hz, mono, fltp, 144 kb/s
+    Metadata:
+      encoder         : Lavc58.134.100 aac
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=   71 fps=0.0 q=29.0 size=       0kB time=00:00:00.40 bitrate=   1.0kbits/s speed=0.669x    [mp3float @ 0x55b3b48978c0] overread, skip -5 enddists: -2 -2
+frame=  111 fps=100 q=29.0 size=       0kB time=00:00:01.73 bitrate=   0.2kbits/s speed=1.56x    [mp3float @ 0x55b3b48978c0] overread, skip -7 enddists: -6 -6
+[mp3float @ 0x55b3b48978c0] overread, skip -8 enddists: -3 -3
+frame=  168 fps=104 q=29.0 size=       0kB time=00:00:03.63 bitrate=   0.1kbits/s speed=2.25x    frame=  238 fps=113 q=29.0 size=       0kB time=00:00:05.97 bitrate=   0.1kbits/s speed=2.83x    frame=  300 fps=114 q=29.0 size=       0kB time=00:00:08.03 bitrate=   0.0kbits/s speed=3.06x    frame=  362 fps=115 q=29.0 size=       0kB time=00:00:10.10 bitrate=   0.0kbits/s speed=3.22x    frame=  403 fps=111 q=29.0 size=       0kB time=00:00:11.46 bitrate=   0.0kbits/s speed=3.15x    [mp3float @ 0x55b3b48978c0] overread, skip -7 enddists: -5 -5
+frame=  470 fps=113 q=29.0 size=     256kB time=00:00:13.70 bitrate= 153.1kbits/s speed= 3.3x    frame=  529 fps=114 q=29.0 size=     256kB time=00:00:15.66 bitrate= 133.9kbits/s speed=3.36x    frame=  591 fps=114 q=29.0 size=     256kB time=00:00:17.74 bitrate= 118.2kbits/s speed=3.44x    frame=  653 fps=115 q=29.0 size=     256kB time=00:00:19.84 bitrate= 105.7kbits/s speed= 3.5x    frame=  728 fps=118 q=29.0 size=     256kB time=00:00:22.30 bitrate=  94.1kbits/s speed=3.61x    [mp3float @ 0x55b3b48978c0] overread, skip -7 enddists: -6 -6
+frame=  780 fps=117 q=29.0 size=     256kB time=00:00:24.06 bitrate=  87.2kbits/s speed= 3.6x    [mp3float @ 0x55b3b48978c0] overread, skip -5 enddists: -1 -1
+frame=  879 fps=122 q=29.0 size=     256kB time=00:00:27.33 bitrate=  76.7kbits/s speed=3.81x    frame=  984 fps=128 q=29.0 size=     512kB time=00:00:30.83 bitrate= 136.0kbits/s speed=4.01x    frame= 1095 fps=134 q=29.0 size=     512kB time=00:00:34.56 bitrate= 121.4kbits/s speed=4.22x    [mp3float @ 0x55b3b48978c0] overread, skip -8 enddists: -4 -4
+frame= 1196 fps=138 q=29.0 size=     512kB time=00:00:37.90 bitrate= 110.7kbits/s speed=4.36x    frame= 1292 fps=141 q=29.0 size=     512kB time=00:00:41.13 bitrate= 102.0kbits/s speed=4.47x    [mp3float @ 0x55b3b48978c0] overread, skip -8 enddists: -7 -7
+frame= 1387 fps=143 q=29.0 size=     768kB time=00:00:44.26 bitrate= 142.1kbits/s speed=4.56x    frame= 1489 fps=146 q=29.0 size=     768kB time=00:00:47.70 bitrate= 131.9kbits/s speed=4.67x    [mp3float @ 0x55b3b48978c0] overread, skip -7 enddists: -2 -2
+frame= 1584 fps=148 q=29.0 size=     768kB time=00:00:50.83 bitrate= 123.8kbits/s speed=4.75x    [mp3float @ 0x55b3b48978c0] overread, skip -7 enddists: -5 -5
+frame= 1678 fps=150 q=29.0 size=     768kB time=00:00:53.97 bitrate= 116.6kbits/s speed=4.81x    frame= 1766 fps=151 q=29.0 size=    1024kB time=00:00:56.90 bitrate= 147.4kbits/s speed=4.86x    frame= 1825 fps=149 q=29.0 size=    1024kB time=00:00:58.86 bitrate= 142.5kbits/s speed=4.82x    [mp3float @ 0x55b3b48978c0] overread, skip -7 enddists: -2 -2
+frame= 1916 fps=151 q=29.0 size=    1024kB time=00:01:01.90 bitrate= 135.5kbits/s speed=4.86x    [mp4 @ 0x55b3b4921d40] Starting second pass: moving the moov atom to the beginning of the file
+frame= 1944 fps=149 q=-1.0 Lsize=    1201kB time=00:01:04.70 bitrate= 152.1kbits/s speed=4.96x    
+video:368kB audio:782kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 4.469029%
+[libx264 @ 0x55b3b49227c0] frame I:11    Avg QP:10.44  size: 15889
+[libx264 @ 0x55b3b49227c0] frame P:489   Avg QP:11.36  size:   176
+[libx264 @ 0x55b3b49227c0] frame B:1444  Avg QP:13.70  size:    80
+[libx264 @ 0x55b3b49227c0] consecutive B-frames:  0.9%  0.1%  0.5% 98.6%
+[libx264 @ 0x55b3b49227c0] mb I  I16..4: 70.0% 26.6%  3.5%
+[libx264 @ 0x55b3b49227c0] mb P  I16..4:  0.1%  0.2%  0.0%  P16..4:  0.0%  0.0%  0.0%  0.0%  0.0%    skip:99.6%
+[libx264 @ 0x55b3b49227c0] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  0.2%  0.0%  0.0%  direct: 0.0%  skip:99.8%  L0:69.1% L1:30.9% BI: 0.0%
+[libx264 @ 0x55b3b49227c0] 8x8 transform intra:29.9% inter:21.2%
+[libx264 @ 0x55b3b49227c0] coded y,uvDC,uvAC intra: 2.8% 2.0% 1.4% inter: 0.0% 0.0% 0.0%
+[libx264 @ 0x55b3b49227c0] i16 v,h,dc,p: 90%  8%  2%  0%
+[libx264 @ 0x55b3b49227c0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 48% 30% 22%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x55b3b49227c0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 40% 20% 16%  3%  4%  5%  4%  4%  4%
+[libx264 @ 0x55b3b49227c0] i8c dc,h,v,p: 94%  4%  1%  0%
+[libx264 @ 0x55b3b49227c0] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x55b3b49227c0] ref P L0: 81.0%  3.9%  9.3%  5.7%
+[libx264 @ 0x55b3b49227c0] ref B L0: 32.3% 67.6%  0.1%
+[libx264 @ 0x55b3b49227c0] ref B L1: 99.9%  0.1%
+[libx264 @ 0x55b3b49227c0] kb/s:46.48
+[aac @ 0x55b3b4923940] Qavg: 65531.617
+OK: /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module08-01-real-report-checks/video.mp4 (15 slides)
+
+Done: 1 module/part(s) synced and narrated.
+
+======== module08-03-real-evidence ========
+Synced 15 slides from transcript -> outline.yaml + slides.md
+Wrote /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module08-03-real-evidence/slides.pptx
+OK: transcript consistent with outline (/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module08-03-real-evidence)
+Converting with soffice ...
+Warning: failed to launch javaldx - java may not function correctly
+convert /tmp/book_slides_pdf_290299/slides.pptx -> /tmp/book_slides_pdf_290299/slides.pdf using filter : impress_pdf_Export
+OK: /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module08-03-real-evidence/slides.pdf (164416 bytes)
+Wrote /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module08-03-real-evidence/audio/full.mp3 (15 deck slides / 13 spoken, 59.9s) and /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module08-03-real-evidence/audio/slide_timings.json
+Rasterizing /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module08-03-real-evidence/slides.pdf at 200 DPI ...
+Using slide timings from /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module08-03-real-evidence/audio/slide_timings.json
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 11 (Ubuntu 11.2.0-19ubuntu1)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Input #0, concat, from '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module08-03-real-evidence/frames/concat.txt':
+  Duration: N/A, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: png, rgb24(pc), 2667x1500 [SAR 7874:7874 DAR 889:500], 25 fps, 25 tbr, 25 tbn, 25 tbc
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x5623ff9b11c0] using SAR=4096/4095
+[libx264 @ 0x5623ff9b11c0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2 AVX512
+[libx264 @ 0x5623ff9b11c0] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0x5623ff9b11c0] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module08-03-real-evidence/frames/silent.mp4':
+  Metadata:
+    encoder         : Lavf58.76.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 1920x1080 [SAR 8001:8000 DAR 889:500], q=2-31, 30 fps, 15360 tbn
+    Metadata:
+      encoder         : Lavc58.134.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=  261 fps=244 q=29.0 size=       0kB time=00:00:06.73 bitrate=   0.1kbits/s dup=258 drop=0 speed= 6.3x    frame=  366 fps=215 q=29.0 size=       0kB time=00:00:10.23 bitrate=   0.0kbits/s dup=362 drop=0 speed=6.02x    frame=  456 fps=206 q=29.0 size=       0kB time=00:00:13.23 bitrate=   0.0kbits/s dup=451 drop=0 speed=5.98x    frame=  630 fps=204 q=29.0 size=       0kB time=00:00:19.03 bitrate=   0.0kbits/s dup=623 drop=0 speed=6.17x    frame=  770 fps=207 q=29.0 size=       0kB time=00:00:23.70 bitrate=   0.0kbits/s dup=762 drop=0 speed=6.38x    frame=  985 fps=225 q=29.0 size=       0kB time=00:00:30.86 bitrate=   0.0kbits/s dup=976 drop=0 speed=7.05x    More than 1000 frames duplicated
+frame= 1199 fps=226 q=29.0 size=       0kB time=00:00:38.00 bitrate=   0.0kbits/s dup=1189 drop=0 speed=7.15x    frame= 1400 fps=217 q=29.0 size=       0kB time=00:00:44.70 bitrate=   0.0kbits/s dup=1389 drop=0 speed=6.94x    frame= 1469 fps=188 q=29.0 size=     256kB time=00:00:47.00 bitrate=  44.6kbits/s dup=1457 drop=0 speed=6.03x    frame= 1578 fps=180 q=29.0 size=     256kB time=00:00:50.63 bitrate=  41.4kbits/s dup=1564 drop=0 speed=5.77x    frame= 1619 fps=174 q=29.0 size=     256kB time=00:00:52.00 bitrate=  40.3kbits/s dup=1604 drop=0 speed=5.59x    frame= 1799 fps=158 q=29.0 size=     256kB time=00:00:58.00 bitrate=  36.2kbits/s dup=1783 drop=0 speed=5.11x    frame= 1838 fps=154 q=-1.0 Lsize=     376kB time=00:01:01.16 bitrate=  50.4kbits/s dup=1822 drop=0 speed=5.14x    
+video:354kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 6.329740%
+[libx264 @ 0x5623ff9b11c0] frame I:10    Avg QP:11.42  size: 15015
+[libx264 @ 0x5623ff9b11c0] frame P:462   Avg QP:12.00  size:   210
+[libx264 @ 0x5623ff9b11c0] frame B:1366  Avg QP:13.75  size:    84
+[libx264 @ 0x5623ff9b11c0] consecutive B-frames:  0.8%  0.2%  0.2% 98.8%
+[libx264 @ 0x5623ff9b11c0] mb I  I16..4: 65.9% 30.7%  3.4%
+[libx264 @ 0x5623ff9b11c0] mb P  I16..4:  0.3%  0.1%  0.0%  P16..4:  0.1%  0.0%  0.0%  0.0%  0.0%    skip:99.6%
+[libx264 @ 0x5623ff9b11c0] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  0.3%  0.0%  0.0%  direct: 0.0%  skip:99.7%  L0:63.2% L1:36.8% BI: 0.0%
+[libx264 @ 0x5623ff9b11c0] 8x8 transform intra:28.3% inter:48.1%
+[libx264 @ 0x5623ff9b11c0] coded y,uvDC,uvAC intra: 4.3% 2.1% 1.3% inter: 0.0% 0.0% 0.0%
+[libx264 @ 0x5623ff9b11c0] i16 v,h,dc,p: 90%  8%  2%  0%
+[libx264 @ 0x5623ff9b11c0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 62% 16% 22%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x5623ff9b11c0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 41% 21% 15%  2%  4%  5%  4%  3%  4%
+[libx264 @ 0x5623ff9b11c0] i8c dc,h,v,p: 94%  5%  1%  0%
+[libx264 @ 0x5623ff9b11c0] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x5623ff9b11c0] ref P L0: 75.2%  8.2% 15.5%  1.1%
+[libx264 @ 0x5623ff9b11c0] ref B L0: 41.2% 58.7%  0.1%
+[libx264 @ 0x5623ff9b11c0] ref B L1: 99.7%  0.3%
+[libx264 @ 0x5623ff9b11c0] kb/s:47.20
+Muxing audio: /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module08-03-real-evidence/audio/full.mp3
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 11 (Ubuntu 11.2.0-19ubuntu1)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module08-03-real-evidence/frames/silent.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.76.100
+  Duration: 00:01:01.27, start: 0.000000, bitrate: 50 kb/s
+  Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p, 1920x1080 [SAR 4096:4095 DAR 65536:36855], 47 kb/s, SAR 8001:8000 DAR 889:500, 30 fps, 30 tbr, 15360 tbn, 60 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+Input #1, mp3, from '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module08-03-real-evidence/audio/full.mp3':
+  Metadata:
+    encoder         : Lavf58.76.100
+  Duration: 00:00:59.90, start: 0.022042, bitrate: 48 kb/s
+  Stream #1:0: Audio: mp3, 24000 Hz, mono, fltp, 48 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #1:0 -> #0:1 (mp3 (mp3float) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0x55b493a17f40] using SAR=4096/4095
+[libx264 @ 0x55b493a17f40] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2 AVX512
+[libx264 @ 0x55b493a17f40] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0x55b493a17f40] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+[aac @ 0x55b493a19980] Too many bits 8192.000000 > 6144 per frame requested, clamping to max
+Output #0, mp4, to '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module08-03-real-evidence/video.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.76.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(progressive), 1920x1080 [SAR 8001:8000 DAR 889:500], q=2-31, 30 fps, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.134.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 24000 Hz, mono, fltp, 144 kb/s
+    Metadata:
+      encoder         : Lavc58.134.100 aac
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=   70 fps=0.0 q=29.0 size=       0kB time=00:00:00.36 bitrate=   1.0kbits/s speed=0.603x    frame=  140 fps=125 q=29.0 size=       0kB time=00:00:02.70 bitrate=   0.1kbits/s speed=2.42x    frame=  190 fps=118 q=29.0 size=       0kB time=00:00:04.36 bitrate=   0.1kbits/s speed= 2.7x    frame=  264 fps=125 q=29.0 size=       0kB time=00:00:06.83 bitrate=   0.1kbits/s speed=3.23x    frame=  326 fps=124 q=29.0 size=       0kB time=00:00:08.91 bitrate=   0.0kbits/s speed=3.39x    frame=  390 fps=124 q=29.0 size=       0kB time=00:00:11.03 bitrate=   0.0kbits/s speed=3.51x    frame=  463 fps=127 q=29.0 size=       0kB time=00:00:13.46 bitrate=   0.0kbits/s speed=3.69x    [mp3float @ 0x55b49399dfc0] overread, skip -6 enddists: -1 -1
+frame=  531 fps=128 q=29.0 size=     256kB time=00:00:15.73 bitrate= 133.3kbits/s speed=3.79x    frame=  596 fps=128 q=29.0 size=     256kB time=00:00:17.92 bitrate= 117.0kbits/s speed=3.84x    frame=  656 fps=127 q=29.0 size=     256kB time=00:00:19.90 bitrate= 105.4kbits/s speed=3.84x    frame=  705 fps=124 q=29.0 size=     256kB time=00:00:21.53 bitrate=  97.4kbits/s speed=3.79x    frame=  765 fps=124 q=29.0 size=     256kB time=00:00:23.53 bitrate=  89.1kbits/s speed=3.81x    frame=  821 fps=123 q=29.0 size=     256kB time=00:00:25.42 bitrate=  82.5kbits/s speed=3.81x    frame=  893 fps=124 q=29.0 size=     256kB time=00:00:27.80 bitrate=  75.5kbits/s speed=3.87x    frame=  954 fps=124 q=29.0 size=     512kB time=00:00:29.83 bitrate= 140.6kbits/s speed=3.88x    frame= 1025 fps=125 q=29.0 size=     512kB time=00:00:32.20 bitrate= 130.3kbits/s speed=3.93x    frame= 1091 fps=126 q=29.0 size=     512kB time=00:00:34.40 bitrate= 121.9kbits/s speed=3.96x    frame= 1159 fps=126 q=29.0 size=     512kB time=00:00:36.66 bitrate= 114.4kbits/s speed=3.99x    [mp3float @ 0x55b49399dfc0] overread, skip -8 enddists: -7 -7
+frame= 1224 fps=126 q=29.0 size=     512kB time=00:00:38.86 bitrate= 107.9kbits/s speed=4.01x    frame= 1291 fps=127 q=29.0 size=     512kB time=00:00:41.06 bitrate= 102.1kbits/s speed=4.03x    frame= 1336 fps=125 q=29.0 size=     512kB time=00:00:42.56 bitrate=  98.5kbits/s speed=3.97x    frame= 1404 fps=125 q=29.0 size=     768kB time=00:00:44.83 bitrate= 140.3kbits/s speed=3.99x    frame= 1464 fps=125 q=29.0 size=     768kB time=00:00:46.83 bitrate= 134.3kbits/s speed=3.99x    frame= 1534 fps=125 q=29.0 size=     768kB time=00:00:49.16 bitrate= 128.0kbits/s speed=4.02x    [mp3float @ 0x55b49399dfc0] overread, skip -7 enddists: -5 -5
+frame= 1603 fps=126 q=29.0 size=     768kB time=00:00:51.46 bitrate= 122.3kbits/s speed=4.04x    frame= 1663 fps=125 q=26.0 size=     768kB time=00:00:53.46 bitrate= 117.7kbits/s speed=4.03x    frame= 1734 fps=126 q=29.0 size=     768kB time=00:00:55.83 bitrate= 112.7kbits/s speed=4.05x    [mp3float @ 0x55b49399dfc0] overread, skip -7 enddists: -2 -2
+frame= 1804 fps=126 q=29.0 size=    1024kB time=00:00:58.16 bitrate= 144.2kbits/s speed=4.07x    [mp4 @ 0x55b493a17240] Starting second pass: moving the moov atom to the beginning of the file
+frame= 1838 fps=125 q=-1.0 Lsize=    1132kB time=00:01:01.16 bitrate= 151.5kbits/s speed=4.14x    
+video:354kB audio:729kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 4.490632%
+[libx264 @ 0x55b493a17f40] frame I:10    Avg QP:10.61  size: 14976
+[libx264 @ 0x55b493a17f40] frame P:462   Avg QP:11.22  size:   204
+[libx264 @ 0x55b493a17f40] frame B:1366  Avg QP:13.80  size:    86
+[libx264 @ 0x55b493a17f40] consecutive B-frames:  0.8%  0.2%  0.2% 98.8%
+[libx264 @ 0x55b493a17f40] mb I  I16..4: 71.4% 25.3%  3.4%
+[libx264 @ 0x55b493a17f40] mb P  I16..4:  0.2%  0.2%  0.0%  P16..4:  0.0%  0.0%  0.0%  0.0%  0.0%    skip:99.6%
+[libx264 @ 0x55b493a17f40] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  0.3%  0.0%  0.0%  direct: 0.0%  skip:99.7%  L0:70.4% L1:29.6% BI: 0.0%
+[libx264 @ 0x55b493a17f40] 8x8 transform intra:28.8% inter:24.6%
+[libx264 @ 0x55b493a17f40] coded y,uvDC,uvAC intra: 2.8% 2.1% 1.4% inter: 0.0% 0.0% 0.0%
+[libx264 @ 0x55b493a17f40] i16 v,h,dc,p: 90%  8%  2%  0%
+[libx264 @ 0x55b493a17f40] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 45% 33% 22%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x55b493a17f40] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 40% 21% 16%  3%  4%  5%  4%  3%  4%
+[libx264 @ 0x55b493a17f40] i8c dc,h,v,p: 94%  4%  1%  0%
+[libx264 @ 0x55b493a17f40] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x55b493a17f40] ref P L0: 81.2%  3.6% 11.4%  3.8%
+[libx264 @ 0x55b493a17f40] ref B L0: 32.1% 67.7%  0.1%
+[libx264 @ 0x55b493a17f40] ref B L1: 99.8%  0.2%
+[libx264 @ 0x55b493a17f40] kb/s:47.23
+[aac @ 0x55b493a19980] Qavg: 65535.465
+OK: /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module08-03-real-evidence/video.mp4 (15 slides)
+
+Done: 1 module/part(s) synced and narrated.
+
+======== module99-00-wrap ========
+Synced 3 slides from transcript -> outline.yaml + slides.md
+Wrote /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module99-00-wrap/slides.pptx
+OK: transcript consistent with outline (/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module99-00-wrap)
+Converting with soffice ...
+Warning: failed to launch javaldx - java may not function correctly
+convert /tmp/book_slides_pdf_290797/slides.pptx -> /tmp/book_slides_pdf_290797/slides.pdf using filter : impress_pdf_Export
+OK: /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module99-00-wrap/slides.pdf (20676 bytes)
+Wrote /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module99-00-wrap/audio/full.mp3 (3 deck slides / 3 spoken, 26.4s) and /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module99-00-wrap/audio/slide_timings.json
+Rasterizing /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module99-00-wrap/slides.pdf at 200 DPI ...
+Using slide timings from /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module99-00-wrap/audio/slide_timings.json
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 11 (Ubuntu 11.2.0-19ubuntu1)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Input #0, concat, from '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module99-00-wrap/frames/concat.txt':
+  Duration: N/A, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: png, rgb24(pc), 2667x1500 [SAR 7874:7874 DAR 889:500], 25 fps, 25 tbr, 25 tbn, 25 tbc
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x555a7216c8c0] using SAR=4096/4095
+[libx264 @ 0x555a7216c8c0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2 AVX512
+[libx264 @ 0x555a7216c8c0] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0x555a7216c8c0] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module99-00-wrap/frames/silent.mp4':
+  Metadata:
+    encoder         : Lavf58.76.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 1920x1080 [SAR 8001:8000 DAR 889:500], q=2-31, 30 fps, 15360 tbn
+    Metadata:
+      encoder         : Lavc58.134.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=  521 fps=239 q=29.0 size=       0kB time=00:00:15.40 bitrate=   0.0kbits/s dup=518 drop=0 speed=7.06x    frame=  792 fps=176 q=29.0 size=       0kB time=00:00:24.43 bitrate=   0.0kbits/s dup=788 drop=0 speed=5.41x    frame=  792 fps=118 q=29.0 size=       0kB time=00:00:24.43 bitrate=   0.0kbits/s dup=788 drop=0 speed=3.65x    More than 1000 frames duplicated
+frame= 1061 fps=119 q=-1.0 Lsize=     188kB time=00:00:35.26 bitrate=  43.6kbits/s dup=1057 drop=0 speed=3.95x    
+video:175kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 7.607000%
+[libx264 @ 0x555a7216c8c0] frame I:6     Avg QP: 9.93  size: 16610
+[libx264 @ 0x555a7216c8c0] frame P:268   Avg QP:10.44  size:    81
+[libx264 @ 0x555a7216c8c0] frame B:787   Avg QP:13.67  size:    72
+[libx264 @ 0x555a7216c8c0] consecutive B-frames:  1.0%  0.2%  0.0% 98.8%
+[libx264 @ 0x555a7216c8c0] mb I  I16..4: 79.5% 16.7%  3.8%
+[libx264 @ 0x555a7216c8c0] mb P  I16..4:  0.0%  0.0%  0.0%  P16..4:  0.0%  0.0%  0.0%  0.0%  0.0%    skip:100.0%
+[libx264 @ 0x555a7216c8c0] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  0.0%  0.0%  0.0%  direct: 0.0%  skip:100.0%  L0:70.5% L1:29.5% BI: 0.0%
+[libx264 @ 0x555a7216c8c0] 8x8 transform intra:16.8% inter:3.0%
+[libx264 @ 0x555a7216c8c0] coded y,uvDC,uvAC intra: 2.7% 0.8% 0.7% inter: 0.0% 0.0% 0.0%
+[libx264 @ 0x555a7216c8c0] i16 v,h,dc,p: 97%  1%  2%  0%
+[libx264 @ 0x555a7216c8c0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 68%  4% 29%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x555a7216c8c0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 47% 13% 13%  3%  4%  6%  5%  4%  5%
+[libx264 @ 0x555a7216c8c0] i8c dc,h,v,p: 99%  0%  0%  0%
+[libx264 @ 0x555a7216c8c0] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x555a7216c8c0] ref P L0: 87.0%  3.2%  6.9%  2.9%
+[libx264 @ 0x555a7216c8c0] ref B L0: 29.0% 71.0%
+[libx264 @ 0x555a7216c8c0] ref B L1: 99.5%  0.5%
+[libx264 @ 0x555a7216c8c0] kb/s:40.29
+Muxing audio: /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module99-00-wrap/audio/full.mp3
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 11 (Ubuntu 11.2.0-19ubuntu1)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module99-00-wrap/frames/silent.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.76.100
+  Duration: 00:00:35.37, start: 0.000000, bitrate: 43 kb/s
+  Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p, 1920x1080 [SAR 4096:4095 DAR 65536:36855], 40 kb/s, SAR 8001:8000 DAR 889:500, 30 fps, 30 tbr, 15360 tbn, 60 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+Input #1, mp3, from '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module99-00-wrap/audio/full.mp3':
+  Metadata:
+    encoder         : Lavf58.76.100
+  Duration: 00:00:26.38, start: 0.022042, bitrate: 48 kb/s
+  Stream #1:0: Audio: mp3, 24000 Hz, mono, fltp, 48 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #1:0 -> #0:1 (mp3 (mp3float) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0x562e508dcf40] using SAR=4096/4095
+[libx264 @ 0x562e508dcf40] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2 AVX512
+[libx264 @ 0x562e508dcf40] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0x562e508dcf40] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+[aac @ 0x562e508de980] Too many bits 8192.000000 > 6144 per frame requested, clamping to max
+Output #0, mp4, to '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module99-00-wrap/video.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.76.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(progressive), 1920x1080 [SAR 8001:8000 DAR 889:500], q=2-31, 30 fps, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.134.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 24000 Hz, mono, fltp, 144 kb/s
+    Metadata:
+      encoder         : Lavc58.134.100 aac
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=   70 fps=0.0 q=29.0 size=       0kB time=00:00:00.36 bitrate=   1.0kbits/s speed=0.632x    frame=  131 fps=120 q=29.0 size=       0kB time=00:00:02.40 bitrate=   0.2kbits/s speed= 2.2x    [mp3float @ 0x562e5087bd80] overread, skip -7 enddists: -4 -4
+frame=  195 fps=122 q=29.0 size=       0kB time=00:00:04.53 bitrate=   0.1kbits/s speed=2.84x    frame=  223 fps=106 q=29.0 size=       0kB time=00:00:05.46 bitrate=   0.1kbits/s speed=2.59x    frame=  284 fps=109 q=29.0 size=       0kB time=00:00:07.50 bitrate=   0.1kbits/s speed=2.88x    frame=  353 fps=113 q=29.0 size=       0kB time=00:00:09.80 bitrate=   0.0kbits/s speed=3.13x    frame=  410 fps=112 q=29.0 size=       0kB time=00:00:11.70 bitrate=   0.0kbits/s speed=3.21x    frame=  474 fps=114 q=29.0 size=     256kB time=00:00:13.83 bitrate= 151.6kbits/s speed=3.32x    frame=  524 fps=112 q=29.0 size=     256kB time=00:00:15.50 bitrate= 135.3kbits/s speed=3.31x    frame=  578 fps=112 q=29.0 size=     256kB time=00:00:17.30 bitrate= 121.2kbits/s speed=3.34x    [mp3float @ 0x562e5087bd80] overread, skip -8 enddists: -4 -4
+frame=  646 fps=113 q=29.0 size=     256kB time=00:00:19.56 bitrate= 107.2kbits/s speed=3.43x    frame=  712 fps=115 q=29.0 size=     256kB time=00:00:21.76 bitrate=  96.4kbits/s speed=3.51x    [mp3float @ 0x562e5087bd80] overread, skip -7 enddists: -2 -2
+frame=  755 fps=112 q=29.0 size=     256kB time=00:00:23.20 bitrate=  90.4kbits/s speed=3.46x    frame=  815 fps=112 q=26.0 size=     256kB time=00:00:25.21 bitrate=  83.2kbits/s speed=3.48x    [mp4 @ 0x562e508dc4c0] Starting second pass: moving the moov atom to the beginning of the file
+frame=  847 fps=109 q=-1.0 Lsize=     528kB time=00:00:28.13 bitrate= 153.8kbits/s speed=3.63x    
+video:143kB audio:362kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 4.481095%
+[libx264 @ 0x562e508dcf40] frame I:5     Avg QP:10.45  size: 16486
+[libx264 @ 0x562e508dcf40] frame P:214   Avg QP:10.47  size:    81
+[libx264 @ 0x562e508dcf40] frame B:628   Avg QP:13.67  size:    73
+[libx264 @ 0x562e508dcf40] consecutive B-frames:  1.1%  0.2%  0.0% 98.7%
+[libx264 @ 0x562e508dcf40] mb I  I16..4: 76.6% 19.5%  3.9%
+[libx264 @ 0x562e508dcf40] mb P  I16..4:  0.0%  0.0%  0.0%  P16..4:  0.0%  0.0%  0.0%  0.0%  0.0%    skip:100.0%
+[libx264 @ 0x562e508dcf40] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  0.0%  0.0%  0.0%  direct: 0.0%  skip:100.0%  L0:67.0% L1:33.0% BI: 0.0%
+[libx264 @ 0x562e508dcf40] 8x8 transform intra:19.5% inter:5.9%
+[libx264 @ 0x562e508dcf40] coded y,uvDC,uvAC intra: 2.7% 0.9% 0.8% inter: 0.0% 0.0% 0.0%
+[libx264 @ 0x562e508dcf40] i16 v,h,dc,p: 97%  1%  2%  0%
+[libx264 @ 0x562e508dcf40] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 56%  3% 41%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x562e508dcf40] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 46% 13% 14%  3%  4%  5%  5%  4%  5%
+[libx264 @ 0x562e508dcf40] i8c dc,h,v,p: 99%  0%  0%  0%
+[libx264 @ 0x562e508dcf40] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x562e508dcf40] ref P L0: 90.5%  2.0%  5.5%  2.0%
+[libx264 @ 0x562e508dcf40] ref B L0: 40.4% 59.4%  0.1%
+[libx264 @ 0x562e508dcf40] ref B L1: 99.6%  0.4%
+[libx264 @ 0x562e508dcf40] kb/s:41.35
+[aac @ 0x562e508de980] Qavg: 65533.996
+OK: /mnt/d/proj/designs/eda_learning/courses/learn_opensta/module99-00-wrap/video.mp4 (3 slides)
+
+Done: 1 module/part(s) synced and narrated.
+updated catalog (21 modules, 247 tools, 44 courses)
+OK   course-media/learn_opensta: already linked
+wrote learn_opensta: index + 21 lab shells (pages.js)
+wrote platform/courses/index.html (path-map)
+updated platform/index.html
+media ready: 14/21 video+pdf · quizzes: 21
+MEDIA_OPENSTA_PARTB_OK

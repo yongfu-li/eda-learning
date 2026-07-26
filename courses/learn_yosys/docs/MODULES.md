@@ -28,5 +28,8 @@
 | `module12-03-fsm-detect` | `lab` | [fsm detect](../module12-03-fsm-detect/README.md) | `fsm-detect` | **ref** |
 | `module13-01-abc-handoff` | `lab` | [ABC handoff](../module13-01-abc-handoff/README.md) | `abc-handoff` | **ref** |
 | `module13-03-yosys-algo-engine` | `lab` | [Yosys algo engine](../module13-03-yosys-algo-engine/README.md) | `yosys-algo-engine` | **ref** |
-| `module05-03-offline-benchmark-compare` | `offline` | [Offline benchmark compare](../module05-03-offline-benchmark-compare/README.md) | offline | — |
+| `module14-01-rtlil-cpp-model` | `lab` | [RTLIL C++ model](../module14-01-rtlil-cpp-model/README.md) | `rtlil-cpp-model` | **ref** |
+| `module14-03-pass-registration` | `lab` | [Pass registration](../module14-03-pass-registration/README.md) | `pass-registration` | **ref** |
+| `module15-01-read-opt-clean` | `lab` | [Read opt_clean](../module15-01-read-opt-clean/README.md) | `read-opt-clean` | **ref** |
+| `module15-03-contribute-pass` | `lab` | [Contribute a pass](../module15-03-contribute-pass/README.md) | `contribute-pass` | **ref** |
 | `module99-00-wrap` | `wrap` | [Yosys path complete](../module99-00-wrap/README.md) | — | — |

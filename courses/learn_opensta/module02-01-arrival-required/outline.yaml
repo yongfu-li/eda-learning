@@ -1,0 +1,83 @@
+title: Why Arrival
+footer: learn_opensta — 01 arrival required
+slides:
+- type: title
+  title: Why Arrival
+  subtitle: Propagate arrivals and set required at the endpoint
+  notes: Propagate arrivals and set required at the endpoint.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: A(y)=2.0; R(y)=10.0'
+  notes: 'GOLDEN: A(y)=2.0; R(y)=10.0.'
+- type: image
+  title: Input arrivals
+  image: assets/steps/01-inputs.png
+  caption: Input arrivals
+  notes: Primary inputs a and b arrive at time 0.
+- type: image
+  title: Forward propagate
+  image: assets/steps/02-forward.png
+  caption: Forward propagate
+  notes: Arrival grows by cell delay along the cone.
+- type: image
+  title: Arrival at y
+  image: assets/steps/03-ay.png
+  caption: Arrival at y
+  notes: Arrival at endpoint y is 2.0.
+- type: image
+  title: Required at y
+  image: assets/steps/04-ry.png
+  caption: Required at y
+  notes: Required at y equals the clock period 10.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: A(y)=2 and R(y)=10.'
+- type: bullets
+  title: Browser lab track
+  bullets:
+  - Open **arrival-required**
+  - Run the stage buttons and Check the goldens
+  notes: Open **arrival-required**. Run the stage buttons and Check the goldens.
+- type: bullets
+  title: Implement track
+  bullets:
+  - From common/, run solvers.py and confirm OPENSTA_MAP_OK
+  notes: From common/, run solvers.py and confirm OPENSTA_MAP_OK.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Mixing algorithm STA from learn_sta with OpenSTA command names
+  - Forgetting the clock period when reading slack
+  notes: Mixing algorithm STA from learn_sta with OpenSTA command names. Forgetting
+    the clock period when reading slack.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder, run the OpenSTA map self-test
+  notes: From the common folder, run the OpenSTA map self-test.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_opensta/common
+
+    python3 solvers.py'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the check in plain steps
+  notes: Here is the check in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: 'A(y)=2.0; R(y)=10.0.
+
+    ok if goldens match'
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue the OpenSTA Part A map, then the real CLI track
+  notes: Continue the OpenSTA Part A map, then the real CLI track.

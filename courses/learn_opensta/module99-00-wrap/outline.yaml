@@ -1,0 +1,22 @@
+title: Parts A and B complete
+footer: learn_opensta — 00 wrap
+slides:
+- type: title
+  title: Parts A and B complete
+  subtitle: You finished the OpenSTA map and the real CLI evidence path on tiny_combo
+    with liberty-lite
+  notes: You finished the OpenSTA map and the real CLI evidence path on tiny_combo
+    with liberty-lite.
+- type: bullets
+  title: What you can do
+  bullets:
+  - You can run sta scripts, link AND2/BUF/INV, declare a 10-unit clock
+  notes: You can run sta scripts, link AND2/BUF/INV, declare a 10-unit clock, and
+    read report_checks with delay 2 and slack 8.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Algorithms bound to OpenSTA reports and internals literacy come next
+  notes: Algorithms bound to OpenSTA reports and internals literacy come next, then
+    Magic/Netgen/KLayout and OpenROAD/OpenLane.

@@ -1,0 +1,86 @@
+title: Why real OpenSTA
+footer: learn_opensta — 01 real read netlist
+slides:
+- type: title
+  title: Why real OpenSTA
+  subtitle: Link tiny_combo and see instances u1/u2/u3
+  notes: Link tiny_combo and see instances u1/u2/u3.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: top=tiny_combo; cells u1,u2,u3'
+  notes: 'GOLDEN: top=tiny_combo; cells u1,u2,u3.'
+- type: image
+  title: Top design
+  image: assets/steps/01-top.png
+  caption: Top design
+  notes: link_design tiny_combo sets the top.
+- type: image
+  title: Instance u1
+  image: assets/steps/02-u1.png
+  caption: Instance u1
+  notes: u1 is AND2.
+- type: image
+  title: Instance u2
+  image: assets/steps/03-u2.png
+  caption: Instance u2
+  notes: u2 is BUF.
+- type: image
+  title: Instance u3
+  image: assets/steps/04-u3.png
+  caption: Instance u3
+  notes: u3 is INV.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: cell_count=3 after link.'
+- type: bullets
+  title: Browser lab track
+  bullets:
+  - Open **real-read-netlist**
+  - Build the Tcl recipe or open evidence stages, then Check
+  notes: Open **real-read-netlist**. Build the Tcl recipe or open evidence stages,
+    then Check.
+- type: bullets
+  title: Implement track
+  bullets:
+  - From common/, run real_solvers.py and confirm REAL_OPENSTA_OK
+  notes: From common/, run real_solvers.py and confirm REAL_OPENSTA_OK.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Editing goldens by hand without re-running sta
+  - Confusing Part A map JSON with real liberty delays
+  notes: Editing goldens by hand without re-running sta. Confusing Part A map JSON
+    with real liberty delays.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder, run the real OpenSTA self-test
+  notes: From the common folder, run the real OpenSTA self-test.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_opensta/common
+
+    python3 real_solvers.py'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the check in plain steps
+  notes: Here is the check in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: 'top=tiny_combo; cells u1,u2,u3.
+
+    ok if goldens match'
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue the Part B evidence track, then wrap , algorithms and internals come
+    later
+  notes: Continue the Part B evidence track, then wrap — algorithms and internals
+    come later.

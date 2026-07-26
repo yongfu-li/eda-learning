@@ -1,0 +1,38 @@
+{
+  "moduleId": "module06-01-opensta-cli",
+  "items": [
+    {
+      "q": "Typical OpenSTA invocation?",
+      "choices": [
+        "sta -no_splash -exit script.tcl",
+        "yosys -s",
+        "magic",
+        "netgen"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "First recipe command?",
+      "choices": [
+        "read_liberty",
+        "report_checks",
+        "flatten",
+        "synth"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Third recipe command?",
+      "choices": [
+        "link_design",
+        "opt",
+        "abc",
+        "write_verilog"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

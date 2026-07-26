@@ -1,0 +1,44 @@
+{
+  "tool": "OpenSTA",
+  "version": "3.1.0",
+  "rtl_file": "rtl/tiny_combo.v",
+  "lib_file": "lib/tiny_opensta_lib.lib",
+  "top": "tiny_combo",
+  "recipe_ids": [
+    "read_liberty",
+    "read_verilog",
+    "link_design",
+    "create_clock",
+    "set_input_delay",
+    "set_output_delay",
+    "report_checks"
+  ],
+  "liberty_cells": ["AND2", "BUF", "INV"],
+  "stages": {
+    "read_link": {
+      "cell_count": 3,
+      "cell_names": ["u1", "u2", "u3"],
+      "top": "tiny_combo",
+      "lib_cells": ["AND2", "BUF", "INV"]
+    },
+    "sdc": {
+      "clock": "clk",
+      "period": 10.0
+    },
+    "report_checks": {
+      "endpoint": "y",
+      "startpoint": "b",
+      "path_delay": 2.0,
+      "required": 10.0,
+      "slack": 8.0,
+      "met": true
+    }
+  },
+  "after_read_cells": 3,
+  "clock_name": "clk",
+  "clock_period": 10.0,
+  "path_delay": 2.0,
+  "slack": 8.0,
+  "endpoint": "y",
+  "engine_ok": true
+}

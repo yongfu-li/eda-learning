@@ -1,0 +1,83 @@
+title: Why Slack
+footer: learn_opensta — 03 slack critical
+slides:
+- type: title
+  title: Why Slack
+  subtitle: Compute slack = required − arrival on the critical path
+  notes: Compute slack = required − arrival on the critical path.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: slack = 10 − 2 = 8'
+  notes: 'GOLDEN: slack = 10 − 2 = 8.'
+- type: image
+  title: Critical path
+  image: assets/steps/01-path.png
+  caption: Critical path
+  notes: The only data path is a/b → u1 → u2 → u3 → y.
+- type: image
+  title: Path delay
+  image: assets/steps/02-delay.png
+  caption: Path delay
+  notes: Sum of cell delays is 2.0.
+- type: image
+  title: Slack formula
+  image: assets/steps/03-formula.png
+  caption: Slack formula
+  notes: Slack equals required minus arrival.
+- type: image
+  title: Slack value
+  image: assets/steps/04-value.png
+  caption: Slack value
+  notes: With period 10 and arrival 2, slack is 8.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: slack=8 at period 10.'
+- type: bullets
+  title: Browser lab track
+  bullets:
+  - Open **slack-critical**
+  - Run the stage buttons and Check the goldens
+  notes: Open **slack-critical**. Run the stage buttons and Check the goldens.
+- type: bullets
+  title: Implement track
+  bullets:
+  - From common/, run solvers.py and confirm OPENSTA_MAP_OK
+  notes: From common/, run solvers.py and confirm OPENSTA_MAP_OK.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Mixing algorithm STA from learn_sta with OpenSTA command names
+  - Forgetting the clock period when reading slack
+  notes: Mixing algorithm STA from learn_sta with OpenSTA command names. Forgetting
+    the clock period when reading slack.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder, run the OpenSTA map self-test
+  notes: From the common folder, run the OpenSTA map self-test.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_opensta/common
+
+    python3 solvers.py'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the check in plain steps
+  notes: Here is the check in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: 'slack = 10 − 2 = 8.
+
+    ok if goldens match'
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue the OpenSTA Part A map, then the real CLI track
+  notes: Continue the OpenSTA Part A map, then the real CLI track.

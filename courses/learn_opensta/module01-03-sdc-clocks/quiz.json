@@ -1,0 +1,38 @@
+{
+  "moduleId": "module01-03-sdc-clocks",
+  "items": [
+    {
+      "q": "SDC command to declare a clock?",
+      "choices": [
+        "create_clock",
+        "report_checks",
+        "read_verilog",
+        "link_design"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Tiny design clock period?",
+      "choices": [
+        "10",
+        "2",
+        "8",
+        "1"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Clock port name?",
+      "choices": [
+        "clk",
+        "y",
+        "a",
+        "reset"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

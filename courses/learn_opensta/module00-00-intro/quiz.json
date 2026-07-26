@@ -1,0 +1,28 @@
+{
+  "module": "module00-00-intro",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "learn_opensta is primarily about?",
+      "choices": [
+        "OpenSTA tool literacy (map → CLI → algorithms → internals)",
+        "OpenROAD placement only",
+        "Magic DRC only",
+        "SPICE transient only"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Algorithm prereq course?",
+      "choices": ["learn_sta", "learn_routing", "learn_spice", "learn_dft_insert"],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "OpenSTA is used heavily by?",
+      "choices": ["OpenLane / OpenROAD timing", "KLayout only", "Netgen only", "Verilator only"],
+      "answer": 0
+    }
+  ]
+}

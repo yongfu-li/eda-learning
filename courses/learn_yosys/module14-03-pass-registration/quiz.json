@@ -1,0 +1,38 @@
+{
+  "moduleId": "module14-03-pass-registration",
+  "items": [
+    {
+      "q": "How does Yosys discover a new pass?",
+      "choices": [
+        "REGISTER_PASS macro",
+        "edit catalog.json",
+        "browser only",
+        "Liberty file"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Pass work happens in which method?",
+      "choices": [
+        "execute(args, design)",
+        "main()",
+        "synth()",
+        "stat()"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Selection usually comes from?",
+      "choices": [
+        "extra_args / design selection stack",
+        "random",
+        "ABC only",
+        "OpenROAD"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

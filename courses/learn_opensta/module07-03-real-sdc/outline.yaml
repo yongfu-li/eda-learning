@@ -1,0 +1,85 @@
+title: Why real OpenSTA
+footer: learn_opensta — 03 real sdc
+slides:
+- type: title
+  title: Why real OpenSTA
+  subtitle: Apply create_clock period 10 and I/O delays
+  notes: Apply create_clock period 10 and I/O delays.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: clock clk period=10'
+  notes: 'GOLDEN: clock clk period=10.'
+- type: image
+  title: create_clock
+  image: assets/steps/01-clk.png
+  caption: create_clock
+  notes: create_clock -name clk -period 10.
+- type: image
+  title: Input delay
+  image: assets/steps/02-in.png
+  caption: Input delay
+  notes: set_input_delay 0 on all inputs.
+- type: image
+  title: Output delay
+  image: assets/steps/03-out.png
+  caption: Output delay
+  notes: set_output_delay 0 on all outputs.
+- type: image
+  title: Ideal network
+  image: assets/steps/04-ideal.png
+  caption: Ideal network
+  notes: Clock network delay is ideal in this lab.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: clock clk period=10.'
+- type: bullets
+  title: Browser lab track
+  bullets:
+  - Open **real-sdc**
+  - Build the Tcl recipe or open evidence stages, then Check
+  notes: Open **real-sdc**. Build the Tcl recipe or open evidence stages, then Check.
+- type: bullets
+  title: Implement track
+  bullets:
+  - From common/, run real_solvers.py and confirm REAL_OPENSTA_OK
+  notes: From common/, run real_solvers.py and confirm REAL_OPENSTA_OK.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Editing goldens by hand without re-running sta
+  - Confusing Part A map JSON with real liberty delays
+  notes: Editing goldens by hand without re-running sta. Confusing Part A map JSON
+    with real liberty delays.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder, run the real OpenSTA self-test
+  notes: From the common folder, run the real OpenSTA self-test.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_opensta/common
+
+    python3 real_solvers.py'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the check in plain steps
+  notes: Here is the check in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: 'clock clk period=10.
+
+    ok if goldens match'
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue the Part B evidence track, then wrap , algorithms and internals come
+    later
+  notes: Continue the Part B evidence track, then wrap — algorithms and internals
+    come later.

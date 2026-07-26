@@ -19,6 +19,5 @@ bash "$NAR" "courses/learn_yosys/module07-01-real-proc"
 bash "$NAR" "courses/learn_yosys/module07-03-real-flatten-opt"
 bash "$NAR" "courses/learn_yosys/module08-01-aigmap-synth"
 bash "$NAR" "courses/learn_yosys/module08-03-real-evidence"
-bash "$NAR" "courses/learn_yosys/module05-03-offline-benchmark-compare"
 bash "$NAR" "courses/learn_yosys/module99-00-wrap"
 echo MEDIA_OK

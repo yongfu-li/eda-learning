@@ -1,0 +1,28 @@
+{
+  "note": "Teaching IR for OpenSTA Part A map (not the OpenSTA binary).",
+  "clock": {"name": "clk", "period": 10.0},
+  "ports": {
+    "in": ["a", "b"],
+    "out": ["y"],
+    "clk": ["clk"]
+  },
+  "pins": ["a", "b", "n1", "n2", "y", "clk"],
+  "cells": [
+    {"id": "u1", "type": "AND2", "a": "a", "b": "b", "y": "n1", "delay": 1.0},
+    {"id": "u2", "type": "BUF", "a": "n1", "y": "n2", "delay": 0.5},
+    {"id": "u3", "type": "INV", "a": "n2", "y": "y", "delay": 0.5}
+  ],
+  "arrivals": {"a": 0.0, "b": 0.0, "n1": 1.0, "n2": 1.5, "y": 2.0},
+  "required": {"y": 10.0},
+  "goldens": {
+    "cell_count": 3,
+    "path_delay": 2.0,
+    "slack_at_period_10": 8.0,
+    "arrival_y": 2.0,
+    "required_y": 10.0,
+    "clock_period": 10.0,
+    "clock_name": "clk",
+    "report_endpoint": "y",
+    "engine_ok": true
+  }
+}

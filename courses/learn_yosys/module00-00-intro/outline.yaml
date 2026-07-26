@@ -3,10 +3,10 @@ footer: learn_yosys — 00 intro
 slides:
 - type: title
   title: Why Yosys
-  subtitle: Learn_yosys has three parts
-  notes: 'learn_yosys has three parts: Part A is the interactive pass map on a small
-    netlist; Part B drives real Yosys with .ys scripts on tiny_and_or.v; Part C teaches
-    Yosys algorithms bound to real evidence.'
+  subtitle: Learn_yosys has four parts
+  notes: 'learn_yosys has four parts: Part A is the interactive pass map; Part B drives
+    real Yosys on tiny_and_or.v; Part C teaches algorithms bound to real evidence;
+    Part D orients you to the Yosys C++ tree so you can contribute.'
 - type: bullets
   title: Part A pass map
   bullets:
@@ -26,24 +26,29 @@ slides:
   notes: 'Part C: proc_mux, proc_dff ($adff), opt, techmap, extract, memory, fsm,
     and ABC handoff — each bound to real Yosys stats.'
 - type: bullets
+  title: Part D internals
+  bullets:
+  - 'Part D: RTLIL C++ pillars, Pass registration, reading opt_clean'
+  notes: 'Part D: RTLIL C++ pillars, Pass registration, reading opt_clean, and a contribute
+    checklist — orientation, not a full Yosys clone.'
+- type: bullets
   title: Implement track
   bullets:
   - Implement track
-  - Browser labs mirror all three
-  notes: 'Implement track: common/solvers.py (pass map), common/real_solvers.py (evidence),
-    and common/algo_solvers.py plus partc_bind.py (algorithms). Browser labs mirror
-    all three.'
+  - Browser labs mirror each part
+  notes: 'Implement track: common/solvers.py, real_solvers.py, algo_solvers.py plus
+    partc_bind.py, and internals_solvers.py. Browser labs mirror each part.'
 - type: bullets
   title: Browser lab track
   bullets:
   - Open the course labs
-  - Start at the pass-map proc lab
-  notes: Open the course labs. Start at the pass-map proc lab, continue into the real
-    CLI modules, then the Part C algorithm labs.
+  - Start at the pass-map proc lab, continue into CLI, algorithms, then internals
+  notes: Open the course labs. Start at the pass-map proc lab, continue into CLI,
+    algorithms, then internals.
 - type: bullets
   title: Next
   bullets:
   - Complete the quiz for this part
-  - Start with the pass-map proc lab for pass names
-  notes: Start with the pass-map proc lab for pass names, continue into the real CLI
-    modules, then the Part C algorithm labs.
+  - Start with the pass-map proc lab for pass names, then CLI, algorithms, and internals
+  notes: Start with the pass-map proc lab for pass names, then CLI, algorithms, and
+    internals.

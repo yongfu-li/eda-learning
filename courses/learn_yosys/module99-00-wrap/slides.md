@@ -6,12 +6,12 @@ paginate: true
 
 # Path complete
 
-You finished Part A pass map, Part B real Yosys evidence on tiny_and_or.v, and Part C algorithms bound to real Yosys
+You finished Part A pass map, Part B real Yosys evidence, Part C algorithms bound to Yosys
 
 ---
 
 ## What you can do
-- You can name the pass map, run real Yosys scripts
+- Open the Yosys C++ tree with intent
 
 ---
 
@@ -20,10 +20,11 @@ You finished Part A pass map, Part B real Yosys evidence on tiny_and_or.v, and P
 
 ---
 
-## Three layers
-- Pass-map labs teach the pass order
-- Real modules teach the CLI, RTLIL, and evidence
-- Algorithm labs teach the moves and bind them to Yosys
+## Four layers
+- Pass-map labs teach order
+- Real modules teach CLI and RTLIL
+- Algorithm labs teach moves and bind them
+- Internals labs teach how to read and extend the C++ tree
 
 ---
 

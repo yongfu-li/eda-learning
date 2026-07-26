@@ -1,0 +1,38 @@
+{
+  "moduleId": "module02-03-slack-critical",
+  "items": [
+    {
+      "q": "Slack formula?",
+      "choices": [
+        "required \u2212 arrival",
+        "arrival \u2212 required",
+        "period only",
+        "delay \u00d7 2"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Slack on tiny design?",
+      "choices": [
+        "8",
+        "2",
+        "10",
+        "0"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Path delay sum?",
+      "choices": [
+        "2.0",
+        "8",
+        "10",
+        "0.5"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

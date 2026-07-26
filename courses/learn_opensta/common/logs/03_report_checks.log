@@ -1,0 +1,39 @@
+Startpoint: b (input port clocked by clk)
+Endpoint: y (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+     Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------
+            0.000    0.000    0.000   clock clk (rise edge)
+                     0.000    0.000   clock network delay (ideal)
+                     0.000    0.000 v input external delay
+   0.010    0.000    0.000    0.000 v b (in)
+            0.000    0.000    0.000 v u1/B (AND2)
+   0.010    0.010    1.000    1.000 v u1/Y (AND2)
+            0.010    0.000    1.000 v u2/A (BUF)
+   0.010    0.010    0.500    1.500 v u2/Y (BUF)
+            0.010    0.000    1.500 v u3/A (INV)
+   0.000    0.010    0.500    2.000 ^ u3/Y (INV)
+            0.010    0.000    2.000 ^ y (out)
+                              2.000   data arrival time
+
+            0.000   10.000   10.000   clock clk (rise edge)
+                     0.000   10.000   clock network delay (ideal)
+                     0.000   10.000   clock reconvergence pessimism
+                     0.000   10.000   output external delay
+                             10.000   data required time
+---------------------------------------------------------------------------
+                             10.000   data required time
+                             -2.000   data arrival time
+---------------------------------------------------------------------------
+                              8.000   slack (MET)
+
+
+max_delay/setup group clk
+
+                                     Required   Actual
+Endpoint                                Delay    Delay    Slack
+---------------------------------------------------------------
+y (output)                             10.000    2.000    8.000 (MET)
+

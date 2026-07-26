@@ -3,12 +3,12 @@
   "questions": [
     {
       "id": "q1",
-      "question": "Focus of Wrap?",
+      "question": "What does learn_yosys cover end-to-end?",
       "choices": [
-        "Recap proc, flatten, opt, strash, rewrite, techmap, synth, e",
-        "Place only",
+        "Pass map, real CLI evidence, algorithms+bind, and internals/contribute",
+        "Place and route only",
         "CTS only",
-        "DRC width"
+        "GDS signoff only"
       ],
       "answer": 0
     },
@@ -25,12 +25,12 @@
     },
     {
       "id": "q3",
-      "question": "engine_ok golden?",
+      "question": "Part D is primarily about?",
       "choices": [
-        "True",
-        "False",
-        "unknown",
-        "N/A"
+        "Opening the Yosys C++ tree with intent (RTLIL/Pass/contribute)",
+        "Cloning full ABC in the browser",
+        "Liberty techmap only",
+        "OpenROAD legalization"
       ],
       "answer": 0
     }

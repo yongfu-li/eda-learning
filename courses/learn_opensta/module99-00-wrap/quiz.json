@@ -1,0 +1,8 @@
+{
+  "module": "module99-00-wrap",
+  "questions": [
+    {"id": "q1", "question": "Course id?", "choices": ["learn_opensta", "learn_sta", "learn_yosys", "learn_openlane"], "answer": 0},
+    {"id": "q2", "question": "Part B proves?", "choices": ["Real OpenSTA CLI/reports", "Magic DRC only", "Place only", "LVS only"], "answer": 0},
+    {"id": "q3", "question": "Next after OpenSTA tools?", "choices": ["OpenROAD / OpenLane", "Unix only", "SPICE only", "FPGA bitstream only"], "answer": 0}
+  ]
+}

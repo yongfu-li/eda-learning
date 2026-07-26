@@ -1,0 +1,83 @@
+title: Why Timing
+footer: learn_opensta — 01 timing graph map
+slides:
+- type: title
+  title: Why Timing
+  subtitle: Map netlist cells to the OpenSTA timing graph
+  notes: Map netlist cells to the OpenSTA timing graph.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: 3 cells u1/u2/u3; graph nodes = cells + pins'
+  notes: 'GOLDEN: 3 cells u1/u2/u3; graph nodes = cells + pins.'
+- type: image
+  title: Three cells
+  image: assets/steps/01-cells.png
+  caption: Three cells
+  notes: Tiny netlist has AND2, BUF, and INV.
+- type: image
+  title: Pins
+  image: assets/steps/02-pins.png
+  caption: Pins
+  notes: Primary pins a, b, y plus internal nets.
+- type: image
+  title: Delay arcs
+  image: assets/steps/03-arcs.png
+  caption: Delay arcs
+  notes: Each cell carries a delay that becomes a timing arc.
+- type: image
+  title: Timing graph
+  image: assets/steps/04-graph.png
+  caption: Timing graph
+  notes: OpenSTA builds a graph from cells and pins.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: cell_count=3.'
+- type: bullets
+  title: Browser lab track
+  bullets:
+  - Open **timing-graph-map**
+  - Run the stage buttons and Check the goldens
+  notes: Open **timing-graph-map**. Run the stage buttons and Check the goldens.
+- type: bullets
+  title: Implement track
+  bullets:
+  - From common/, run solvers.py and confirm OPENSTA_MAP_OK
+  notes: From common/, run solvers.py and confirm OPENSTA_MAP_OK.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Mixing algorithm STA from learn_sta with OpenSTA command names
+  - Forgetting the clock period when reading slack
+  notes: Mixing algorithm STA from learn_sta with OpenSTA command names. Forgetting
+    the clock period when reading slack.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder, run the OpenSTA map self-test
+  notes: From the common folder, run the OpenSTA map self-test.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_opensta/common
+
+    python3 solvers.py'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the check in plain steps
+  notes: Here is the check in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: '3 cells u1/u2/u3; graph nodes = cells + pins.
+
+    ok if goldens match'
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue the OpenSTA Part A map, then the real CLI track
+  notes: Continue the OpenSTA Part A map, then the real CLI track.

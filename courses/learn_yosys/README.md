@@ -4,7 +4,7 @@
 [![Role](https://img.shields.io/badge/role-course-blue)](../../eda.md)
 [![Domain](https://img.shields.io/badge/domain-Yosys-orange)](docs/MODULES.md)
 
-**learn_yosys** is the open learning path for *Yosys* — Part A **pass map** on `tiny_yosys.json`, Part B **real Yosys CLI/RTLIL evidence** on `rtl/tiny_and_or.v`, then Part C **algorithms bound to real Yosys** on `tiny_algo.json` (+ dedicated RTL) (`proc_mux` → opt → techmap → extract → memory/fsm → abc handoff).
+**learn_yosys** is the open learning path for *Yosys* — Part A **pass map** on `tiny_yosys.json`, Part B **real Yosys CLI/RTLIL evidence** on `rtl/tiny_and_or.v`, Part C **algorithms bound to real Yosys** on `tiny_algo.json` (+ dedicated RTL), then Part D **internals / contribute** (RTLIL C++ model, Pass registration, read `opt_clean`, contribute checklist).
 
 ## Table of contents
 
@@ -45,7 +45,10 @@
 - [fsm detect](module12-03-fsm-detect/README.md)
 - [ABC handoff](module13-01-abc-handoff/README.md)
 - [Yosys algo engine](module13-03-yosys-algo-engine/README.md)
-- [Offline benchmark compare](module05-03-offline-benchmark-compare/README.md)
+- [RTLIL C++ model](module14-01-rtlil-cpp-model/README.md)
+- [Pass registration](module14-03-pass-registration/README.md)
+- [Read opt_clean](module15-01-read-opt-clean/README.md)
+- [Contribute a pass](module15-03-contribute-pass/README.md)
 - [Yosys path complete](module99-00-wrap/README.md)
 
 Optional media (`slides.pptx`, `slides.pdf`, `video.mp4`) is produced with module-slides.
@@ -64,7 +67,11 @@ Open [platform courses](../../platform/courses/learn_yosys/) after publish, or w
 python3 courses/learn_yosys/scripts/scaffold_course.py
 bash courses/learn_yosys/scripts/capture_all_walkthroughs.sh
 bash courses/learn_yosys/scripts/capture_lab_snaps.sh
+bash courses/learn_yosys/scripts/capture_part_c.sh
+bash courses/learn_yosys/scripts/capture_part_d.sh
 bash courses/learn_yosys/scripts/build_all_media.sh
+bash courses/learn_yosys/scripts/build_part_c_media.sh
+bash courses/learn_yosys/scripts/build_part_d_media.sh
 python3 .cursor/skills/module-slides/scripts/verify_course_readme.py courses/learn_yosys --modules
 python3 platform/scripts/publish_course_platform.py learn_yosys
 ```
@@ -73,7 +80,7 @@ python3 platform/scripts/publish_course_platform.py learn_yosys
 
 | Track | Path |
 |-------|------|
-| A Implement | [`common/`](common/) (`solvers.py`, `real_solvers.py`, `algo_solvers.py`) |
+| A Implement | [`common/`](common/) (`solvers.py`, `real_solvers.py`, `algo_solvers.py`, `internals_solvers.py`) |
 | B Browser | platform tools `#yosys` |
 
 See [docs/TWO_TRACKS.md](docs/TWO_TRACKS.md).
@@ -108,7 +115,10 @@ See [docs/TWO_TRACKS.md](docs/TWO_TRACKS.md).
 | `module12-03-fsm-detect` | [fsm detect](module12-03-fsm-detect/README.md) |
 | `module13-01-abc-handoff` | [ABC handoff](module13-01-abc-handoff/README.md) |
 | `module13-03-yosys-algo-engine` | [Yosys algo engine](module13-03-yosys-algo-engine/README.md) |
-| `module05-03-offline-benchmark-compare` | [Offline benchmark compare](module05-03-offline-benchmark-compare/README.md) |
+| `module14-01-rtlil-cpp-model` | [RTLIL C++ model](module14-01-rtlil-cpp-model/README.md) |
+| `module14-03-pass-registration` | [Pass registration](module14-03-pass-registration/README.md) |
+| `module15-01-read-opt-clean` | [Read opt_clean](module15-01-read-opt-clean/README.md) |
+| `module15-03-contribute-pass` | [Contribute a pass](module15-03-contribute-pass/README.md) |
 | `module99-00-wrap` | [Yosys path complete](module99-00-wrap/README.md) |
 
 Full table: [docs/MODULES.md](docs/MODULES.md).

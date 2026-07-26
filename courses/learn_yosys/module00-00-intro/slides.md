@@ -6,7 +6,7 @@ paginate: true
 
 # Why Yosys
 
-Learn_yosys has three parts
+Learn_yosys has four parts
 
 ---
 
@@ -25,19 +25,24 @@ Learn_yosys has three parts
 
 ---
 
+## Part D internals
+- Part D: RTLIL C++ pillars, Pass registration, reading opt_clean
+
+---
+
 ## Implement track
 - Implement track
-- Browser labs mirror all three
+- Browser labs mirror each part
 
 ---
 
 ## Browser lab track
 - Open the course labs
-- Start at the pass-map proc lab
+- Start at the pass-map proc lab, continue into CLI, algorithms, then internals
 
 ---
 
 ## Next
 - Complete the quiz for this part
-- Start with the pass-map proc lab for pass names
+- Start with the pass-map proc lab for pass names, then CLI, algorithms, and internals
 

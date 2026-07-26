@@ -3,16 +3,16 @@ footer: learn_yosys — 00 wrap
 slides:
 - type: title
   title: Path complete
-  subtitle: You finished Part A pass map, Part B real Yosys evidence on tiny_and_or.v,
-    and Part C algorithms bound to real Yosys
-  notes: You finished Part A pass map, Part B real Yosys evidence on tiny_and_or.v,
-    and Part C algorithms bound to real Yosys.
+  subtitle: You finished Part A pass map, Part B real Yosys evidence, Part C algorithms
+    bound to Yosys
+  notes: You finished Part A pass map, Part B real Yosys evidence, Part C algorithms
+    bound to Yosys, and Part D internals literacy.
 - type: bullets
   title: What you can do
   bullets:
-  - You can name the pass map, run real Yosys scripts
-  notes: You can name the pass map, run real Yosys scripts, and explain the algorithms
-    behind proc, opt, techmap, extract, memory, fsm, and ABC handoff.
+  - Open the Yosys C++ tree with intent
+  notes: You can name the pass map, run real Yosys scripts, explain the algorithms
+    behind proc through ABC, and open the Yosys C++ tree with intent.
 - type: bullets
   title: Evidence
   bullets:
@@ -20,16 +20,19 @@ slides:
   notes: Checked-in logs and goldens under common/logs and common/evidence — including
     Part C partc/ — prove the real binary path.
 - type: bullets
-  title: Three layers
+  title: Four layers
   bullets:
-  - Pass-map labs teach the pass order
-  - Real modules teach the CLI, RTLIL, and evidence
-  - Algorithm labs teach the moves and bind them to Yosys
-  notes: Pass-map labs teach the pass order. Real modules teach the CLI, RTLIL, and
-    evidence. Algorithm labs teach the moves and bind them to Yosys.
+  - Pass-map labs teach order
+  - Real modules teach CLI and RTLIL
+  - Algorithm labs teach moves and bind them
+  - Internals labs teach how to read and extend the C++ tree
+  notes: Pass-map labs teach order. Real modules teach CLI and RTLIL. Algorithm labs
+    teach moves and bind them. Internals labs teach how to read and extend the C++
+    tree.
 - type: bullets
   title: Next
   bullets:
   - Complete the quiz for this part
   - Continue to OpenROAD or OpenLane when you are ready for place and route evidence
-  notes: Continue to OpenROAD or OpenLane when you are ready for place and route evidence.
+  notes: Continue to OpenROAD or OpenLane when you are ready for place and route evidence
+    — or clone YosysHQ/yosys and try a tiny pass stub.

@@ -1,0 +1,38 @@
+{
+  "moduleId": "module15-01-read-opt-clean",
+  "items": [
+    {
+      "q": "opt_clean primarily removes?",
+      "choices": [
+        "unused cells and wires",
+        "Liberty cells",
+        "GDS layers",
+        "scan chains"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Typical first mark step?",
+      "choices": [
+        "mark used from outputs/drivers",
+        "delete everything",
+        "run abc",
+        "write_verilog"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Processes present means?",
+      "choices": [
+        "prefer proc first \u2014 opt_clean wants empty processes",
+        "always OK",
+        "need flatten only",
+        "need OpenROAD"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

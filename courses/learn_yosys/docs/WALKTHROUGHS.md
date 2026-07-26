@@ -27,3 +27,7 @@
 | `fsm-detect` | `module12-03-fsm-detect` | 5 |
 | `abc-handoff` | `module13-01-abc-handoff` | 5 |
 | `yosys-algo-engine` | `module13-03-yosys-algo-engine` | 5 |
+| `rtlil-cpp-model` | `module14-01-rtlil-cpp-model` | 5 |
+| `pass-registration` | `module14-03-pass-registration` | 5 |
+| `read-opt-clean` | `module15-01-read-opt-clean` | 5 |
+| `contribute-pass` | `module15-03-contribute-pass` | 5 |

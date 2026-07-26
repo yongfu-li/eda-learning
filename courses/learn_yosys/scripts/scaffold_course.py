@@ -175,16 +175,12 @@ MODULES_META = [
       ("OK", "05-ok", "GOLDEN: engine_ok=True.")],
      "Open **yosys-engine**. Run engine; confirm ok and report 7/11.",
      "Call yosys_engine(); assert ok and report cell/wire counts.",
-     "Reporting partial passes. Changing toy without updating goldens.",
-     "Next: offline compare, then wrap.",
+     "Reporting partial passes. Changing IR without updating goldens.",
+     "Next: Yosys CLI modules (Part B), then wrap.",
      "engine: all passes → report; ok ← counts match GOLDENS",
      [{"q": "engine ok?", "choices": ["True", "False", "unknown", "N/A"], "answer": 0},
       {"q": "report cells?", "choices": ["7", "6", "11", "5"], "answer": 0},
       {"q": "report wires?", "choices": ["11", "7", "6", "4"], "answer": 0}]),
-    ("module05-03-offline-benchmark-compare", "offline", "Offline benchmark compare", "Offline compare", None,
-     "Print yosys_compare metrics offline without the browser.", None,
-     "Track A prints yosys_compare without the browser.",
-     "Load tiny_yosys.json; print rtl_cells, after_opt, nand_area, report_cells, ok."),
     ("module99-00-wrap", "wrap", "Yosys path complete", "Wrap", None,
      "Recap proc, flatten, opt, strash, rewrite, techmap, synth, engine.", None,
      "You checked tiny_yosys: 6 RTL cells; flatten→1; opt→5; strash→4; rewrite→3; nand 6/7; report 7/11; engine ok.",
@@ -507,7 +503,7 @@ set -euo pipefail
 cd /mnt/d/proj/designs/eda_learning
 for m in courses/learn_yosys/module*/; do
   base=$(basename "$m")
-  case "$base" in module00-*|module05-03-*|module99-*) continue ;; esac
+  case "$base" in module00-*|module99-*) continue ;; esac
   python3 .cursor/skills/module-slides/scripts/capture_lab_snapshot.py "$m" || true
 done
 echo LAB_SNAPS_OK

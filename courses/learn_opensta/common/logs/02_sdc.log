@@ -1,0 +1,3 @@
+CLOCKS=clk
+PERIOD=10
+SDC_OK

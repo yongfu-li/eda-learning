@@ -1,0 +1,32 @@
+title: Why OpenSTA
+footer: learn_opensta — 00 intro
+slides:
+- type: title
+  title: Why OpenSTA
+  subtitle: OpenLane and OpenROAD lean on OpenSTA for static timing
+  notes: 'OpenLane and OpenROAD lean on OpenSTA for static timing. This course teaches
+    the tool the same way learn_yosys teaches Yosys: map, then real CLI, then algorithms,
+    then internals.'
+- type: bullets
+  title: Four parts
+  bullets:
+  - Part A is the interactive timing map
+  - Part B drives real OpenSTA with Tcl
+  - Part C binds algorithms to report goldens
+  - Part D orients you to the C++ tree
+  notes: Part A is the interactive timing map. Part B drives real OpenSTA with Tcl.
+    Part C binds algorithms to report goldens. Part D orients you to the C++ tree.
+- type: bullets
+  title: Prereq
+  bullets:
+  - You should already know STA ideas from learn_sta , arrival, required, slack
+  - Here those ideas become OpenSTA commands and reports
+  notes: You should already know STA ideas from learn_sta — arrival, required, slack.
+    Here those ideas become OpenSTA commands and reports.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Start with the timing graph map lab
+  notes: Start with the timing graph map lab, then SDC clocks, then the real CLI modules
+    when evidence is ready.
