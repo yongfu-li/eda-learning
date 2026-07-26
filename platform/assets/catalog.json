@@ -9,6 +9,11 @@
       "section": "Legalization"
     },
     {
+      "id": "activity-factors",
+      "title": "Activity Factors",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "affinity-metrics",
       "title": "Affinity metrics",
       "section": "Clustering & refinement"
@@ -41,6 +46,11 @@
     {
       "id": "antenna-ratio",
       "title": "Antenna Ratio",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "apply-ecos",
+      "title": "Apply Ecos",
       "section": "Clustering & refinement"
     },
     {
@@ -109,8 +119,18 @@
       "section": "Clustering & refinement"
     },
     {
+      "id": "chain-stitch",
+      "title": "Chain Stitch",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "charge-accumulation",
       "title": "Charge Accumulation",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "check-suite",
+      "title": "Check Suite",
       "section": "Clustering & refinement"
     },
     {
@@ -154,6 +174,11 @@
       "section": "Clustering & refinement"
     },
     {
+      "id": "corners",
+      "title": "Corners",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "counterexample",
       "title": "Counterexample",
       "section": "Clustering & refinement"
@@ -184,6 +209,11 @@
       "section": "Placement"
     },
     {
+      "id": "derate",
+      "title": "Derate",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "detailed-vs-global",
       "title": "Detailed Vs Global",
       "section": "Legalization"
@@ -191,6 +221,16 @@
     {
       "id": "device-callbacks",
       "title": "Device Callbacks",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "dft-engine",
+      "title": "Dft Engine",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "dft-markers",
+      "title": "Dft Markers",
       "section": "Clustering & refinement"
     },
     {
@@ -229,6 +269,11 @@
       "section": "Clustering & refinement"
     },
     {
+      "id": "eco-loop",
+      "title": "Eco Loop",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "edge-overflow",
       "title": "Edge Overflow",
       "section": "Clustering & refinement"
@@ -236,6 +281,11 @@
     {
       "id": "edges-polygons",
       "title": "Edges Polygons",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "em-literacy",
+      "title": "Em Literacy",
       "section": "Clustering & refinement"
     },
     {
@@ -324,6 +374,11 @@
       "section": "Floorplanning"
     },
     {
+      "id": "hierarchy-flatten",
+      "title": "Hierarchy Flatten",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "hpwl-metrics",
       "title": "Hpwl Metrics",
       "section": "Placement"
@@ -347,6 +402,11 @@
       "id": "initial-bipartition",
       "title": "Initial Bipartition",
       "section": "Partitioning"
+    },
+    {
+      "id": "ir-drop",
+      "title": "Ir Drop",
+      "section": "Clustering & refinement"
     },
     {
       "id": "jumper-break",
@@ -384,6 +444,11 @@
       "section": "Clustering & refinement"
     },
     {
+      "id": "leakage-power",
+      "title": "Leakage Power",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "lee-maze",
       "title": "Lee Maze",
       "section": "Clustering & refinement"
@@ -401,6 +466,11 @@
     {
       "id": "library-cells",
       "title": "Library Cells",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "lockup-latch",
+      "title": "Lockup Latch",
       "section": "Clustering & refinement"
     },
     {
@@ -514,6 +584,11 @@
       "section": "Clustering & refinement"
     },
     {
+      "id": "netlist-transform",
+      "title": "Netlist Transform",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "newton-raphson",
       "title": "Newton Raphson",
       "section": "Clustering & refinement"
@@ -521,6 +596,11 @@
     {
       "id": "op-tran-pipeline",
       "title": "Op Tran Pipeline",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "opt-dce",
+      "title": "Opt Dce",
       "section": "Clustering & refinement"
     },
     {
@@ -574,8 +654,28 @@
       "section": "Clustering & refinement"
     },
     {
+      "id": "power-engine",
+      "title": "Power Engine",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "power-grid",
+      "title": "Power Grid",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "power-markers",
+      "title": "Power Markers",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "probabilistic-demand",
       "title": "Probabilistic Demand",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "proc-elaborate",
+      "title": "Proc Elaborate",
       "section": "Clustering & refinement"
     },
     {
@@ -596,6 +696,11 @@
     {
       "id": "register-count",
       "title": "Register Count",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "rewrite-balance",
+      "title": "Rewrite Balance",
       "section": "Clustering & refinement"
     },
     {
@@ -636,6 +741,26 @@
     {
       "id": "sat-cnf-lite",
       "title": "Sat Cnf Lite",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "scan-chain-view",
+      "title": "Scan Chain View",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "scan-enable",
+      "title": "Scan Enable",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "scan-flops",
+      "title": "Scan Flops",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "scan-order",
+      "title": "Scan Order",
       "section": "Clustering & refinement"
     },
     {
@@ -696,6 +821,21 @@
     {
       "id": "shear-lite",
       "title": "Shear Lite",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "signoff-corner",
+      "title": "Signoff Corner",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "signoff-engine",
+      "title": "Signoff Engine",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "signoff-markers",
+      "title": "Signoff Markers",
       "section": "Clustering & refinement"
     },
     {
@@ -804,13 +944,38 @@
       "section": "Clustering & refinement"
     },
     {
+      "id": "switching-power",
+      "title": "Switching Power",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "synth-script",
+      "title": "Synth Script",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "tapeout-checklist",
+      "title": "Tapeout Checklist",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "tapping-points",
       "title": "Tapping Points",
       "section": "Clustering & refinement"
     },
     {
+      "id": "techmap-area",
+      "title": "Techmap Area",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "techmap-cover",
       "title": "Techmap Cover",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "techmap-delay",
+      "title": "Techmap Delay",
       "section": "Clustering & refinement"
     },
     {
@@ -847,6 +1012,11 @@
       "id": "timing-graph",
       "title": "Timing Graph",
       "section": "Static timing analysis"
+    },
+    {
+      "id": "total-power",
+      "title": "Total Power",
+      "section": "Clustering & refinement"
     },
     {
       "id": "track-usage",
@@ -901,6 +1071,11 @@
     {
       "id": "wire-rc",
       "title": "Wire Rc",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "yosys-engine",
+      "title": "Yosys Engine",
       "section": "Clustering & refinement"
     },
     {
@@ -4817,39 +4992,763 @@
     },
     {
       "id": "learn_power",
-      "title": "Power analysis",
-      "focus": "Switching/leakage, IR drop lite",
-      "status": "planned",
+      "title": "Power analysis for EDA",
+      "focus": "Switching/leakage \u2192 activity \u2192 grid \u2192 IR drop \u2192 EM \u2192 markers \u2192 engine",
+      "status": "ready",
       "repo": "learn_power",
-      "prereq": null,
-      "labs": []
+      "prereq": "learn_antenna",
+      "labs": [
+        {
+          "n": "01",
+          "slug": "intro",
+          "moduleId": "module00-00-intro",
+          "kind": "intro",
+          "title": "Welcome to power analysis",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "02",
+          "slug": "switching-power",
+          "moduleId": "module01-01-switching-power",
+          "kind": "lab",
+          "title": "Switching power",
+          "toolId": "switching-power",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "03",
+          "slug": "leakage-power",
+          "moduleId": "module01-03-leakage-power",
+          "kind": "lab",
+          "title": "Leakage power",
+          "toolId": "leakage-power",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "04",
+          "slug": "total-power",
+          "moduleId": "module02-01-total-power",
+          "kind": "lab",
+          "title": "Total power",
+          "toolId": "total-power",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "05",
+          "slug": "activity-factors",
+          "moduleId": "module02-03-activity-factors",
+          "kind": "lab",
+          "title": "Activity factors",
+          "toolId": "activity-factors",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "06",
+          "slug": "power-grid",
+          "moduleId": "module03-01-power-grid",
+          "kind": "lab",
+          "title": "Power grid",
+          "toolId": "power-grid",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "07",
+          "slug": "ir-drop",
+          "moduleId": "module03-03-ir-drop",
+          "kind": "lab",
+          "title": "IR drop",
+          "toolId": "ir-drop",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "08",
+          "slug": "em-literacy",
+          "moduleId": "module04-01-em-literacy",
+          "kind": "lab",
+          "title": "EM literacy",
+          "toolId": "em-literacy",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "09",
+          "slug": "power-markers",
+          "moduleId": "module04-03-power-markers",
+          "kind": "lab",
+          "title": "Power markers",
+          "toolId": "power-markers",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "10",
+          "slug": "power-engine",
+          "moduleId": "module05-01-power-engine",
+          "kind": "lab",
+          "title": "Power engine integration",
+          "toolId": "power-engine",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "11",
+          "slug": "offline-benchmark-compare",
+          "moduleId": "module05-03-offline-benchmark-compare",
+          "kind": "offline",
+          "title": "Offline benchmark compare",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "12",
+          "slug": "wrap",
+          "moduleId": "module99-00-wrap",
+          "kind": "wrap",
+          "title": "Power path complete",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        }
+      ]
     },
     {
       "id": "learn_dft_insert",
-      "title": "DFT insert",
-      "focus": "Scan / DFT as netlist transforms",
-      "status": "planned",
+      "title": "DFT insert for EDA",
+      "focus": "Scan SDFF \u2192 SE/SI/SO \u2192 stitch \u2192 order \u2192 lockup \u2192 transform \u2192 markers \u2192 engine",
+      "status": "ready",
       "repo": "learn_dft_insert",
-      "prereq": null,
-      "labs": []
+      "prereq": "learn_power",
+      "labs": [
+        {
+          "n": "01",
+          "slug": "intro",
+          "moduleId": "module00-00-intro",
+          "kind": "intro",
+          "title": "Welcome to DFT insert",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "02",
+          "slug": "scan-flops",
+          "moduleId": "module01-01-scan-flops",
+          "kind": "lab",
+          "title": "Scan flops",
+          "toolId": "scan-flops",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "03",
+          "slug": "scan-enable",
+          "moduleId": "module01-03-scan-enable",
+          "kind": "lab",
+          "title": "Scan enable",
+          "toolId": "scan-enable",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "04",
+          "slug": "chain-stitch",
+          "moduleId": "module02-01-chain-stitch",
+          "kind": "lab",
+          "title": "Chain stitch",
+          "toolId": "chain-stitch",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "05",
+          "slug": "scan-order",
+          "moduleId": "module02-03-scan-order",
+          "kind": "lab",
+          "title": "Scan order",
+          "toolId": "scan-order",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "06",
+          "slug": "lockup-latch",
+          "moduleId": "module03-01-lockup-latch",
+          "kind": "lab",
+          "title": "Lockup latch",
+          "toolId": "lockup-latch",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "07",
+          "slug": "netlist-transform",
+          "moduleId": "module03-03-netlist-transform",
+          "kind": "lab",
+          "title": "Netlist transform",
+          "toolId": "netlist-transform",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "08",
+          "slug": "dft-markers",
+          "moduleId": "module04-01-dft-markers",
+          "kind": "lab",
+          "title": "DFT markers",
+          "toolId": "dft-markers",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "09",
+          "slug": "scan-chain-view",
+          "moduleId": "module04-03-scan-chain-view",
+          "kind": "lab",
+          "title": "Scan chain view",
+          "toolId": "scan-chain-view",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "10",
+          "slug": "dft-engine",
+          "moduleId": "module05-01-dft-engine",
+          "kind": "lab",
+          "title": "DFT engine integration",
+          "toolId": "dft-engine",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "11",
+          "slug": "offline-benchmark-compare",
+          "moduleId": "module05-03-offline-benchmark-compare",
+          "kind": "offline",
+          "title": "Offline benchmark compare",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "12",
+          "slug": "wrap",
+          "moduleId": "module99-00-wrap",
+          "kind": "wrap",
+          "title": "DFT insert path complete",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        }
+      ]
     },
     {
       "id": "learn_signoff",
-      "title": "Signoff literacy",
-      "focus": "Corners, ECO loop, tapeout hooks",
-      "status": "planned",
+      "title": "Signoff for EDA",
+      "focus": "Corners \u2192 signoff corner \u2192 derate \u2192 checks \u2192 ECO \u2192 tapeout \u2192 markers \u2192 engine",
+      "status": "ready",
       "repo": "learn_signoff",
-      "prereq": null,
-      "labs": []
+      "prereq": "learn_dft_insert",
+      "labs": [
+        {
+          "n": "01",
+          "slug": "intro",
+          "moduleId": "module00-00-intro",
+          "kind": "intro",
+          "title": "Welcome to signoff",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "02",
+          "slug": "corners",
+          "moduleId": "module01-01-corners",
+          "kind": "lab",
+          "title": "PVT corners",
+          "toolId": "corners",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "03",
+          "slug": "signoff-corner",
+          "moduleId": "module01-03-signoff-corner",
+          "kind": "lab",
+          "title": "Signoff corner pick",
+          "toolId": "signoff-corner",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "04",
+          "slug": "derate",
+          "moduleId": "module02-01-derate",
+          "kind": "lab",
+          "title": "Derate formula",
+          "toolId": "derate",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "05",
+          "slug": "check-suite",
+          "moduleId": "module02-03-check-suite",
+          "kind": "lab",
+          "title": "Check suite",
+          "toolId": "check-suite",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "06",
+          "slug": "eco-loop",
+          "moduleId": "module03-01-eco-loop",
+          "kind": "lab",
+          "title": "ECO plan",
+          "toolId": "eco-loop",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "07",
+          "slug": "apply-ecos",
+          "moduleId": "module03-03-apply-ecos",
+          "kind": "lab",
+          "title": "Apply fixes",
+          "toolId": "apply-ecos",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "08",
+          "slug": "tapeout-checklist",
+          "moduleId": "module04-01-tapeout-checklist",
+          "kind": "lab",
+          "title": "Tapeout items",
+          "toolId": "tapeout-checklist",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "09",
+          "slug": "signoff-markers",
+          "moduleId": "module04-03-signoff-markers",
+          "kind": "lab",
+          "title": "Fail markers",
+          "toolId": "signoff-markers",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "10",
+          "slug": "signoff-engine",
+          "moduleId": "module05-01-signoff-engine",
+          "kind": "lab",
+          "title": "Signoff engine integration",
+          "toolId": "signoff-engine",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "11",
+          "slug": "offline-benchmark-compare",
+          "moduleId": "module05-03-offline-benchmark-compare",
+          "kind": "offline",
+          "title": "Offline benchmark compare",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "12",
+          "slug": "wrap",
+          "moduleId": "module99-00-wrap",
+          "kind": "wrap",
+          "title": "Signoff path complete",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        }
+      ]
     },
     {
       "id": "learn_yosys",
-      "title": "Yosys evidence",
-      "focus": "Synth CLI / reports vs toy engines",
-      "status": "planned",
+      "title": "Yosys pass pipeline",
+      "focus": "proc \u2192 flatten \u2192 opt \u2192 strash \u2192 rewrite \u2192 techmap \u2192 report",
+      "status": "ready",
       "repo": "learn_yosys",
-      "prereq": null,
-      "labs": []
+      "prereq": "learn_synthesis",
+      "labs": [
+        {
+          "n": "01",
+          "slug": "intro",
+          "moduleId": "module00-00-intro",
+          "kind": "intro",
+          "title": "Welcome to Yosys passes",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "02",
+          "slug": "proc-elaborate",
+          "moduleId": "module01-01-proc-elaborate",
+          "kind": "lab",
+          "title": "Proc elaborate",
+          "toolId": "proc-elaborate",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "03",
+          "slug": "hierarchy-flatten",
+          "moduleId": "module01-03-hierarchy-flatten",
+          "kind": "lab",
+          "title": "Hierarchy flatten",
+          "toolId": "hierarchy-flatten",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "04",
+          "slug": "opt-dce",
+          "moduleId": "module02-01-opt-dce",
+          "kind": "lab",
+          "title": "Opt / DCE",
+          "toolId": "opt-dce",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "05",
+          "slug": "aig-strash",
+          "moduleId": "module02-03-aig-strash",
+          "kind": "lab",
+          "title": "AIG strash",
+          "toolId": "aig-strash",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "06",
+          "slug": "rewrite-balance",
+          "moduleId": "module03-01-rewrite-balance",
+          "kind": "lab",
+          "title": "Rewrite balance",
+          "toolId": "rewrite-balance",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "07",
+          "slug": "techmap-area",
+          "moduleId": "module03-03-techmap-area",
+          "kind": "lab",
+          "title": "Techmap area",
+          "toolId": "techmap-area",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "08",
+          "slug": "techmap-delay",
+          "moduleId": "module04-01-techmap-delay",
+          "kind": "lab",
+          "title": "Techmap delay",
+          "toolId": "techmap-delay",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "09",
+          "slug": "synth-script",
+          "moduleId": "module04-03-synth-script",
+          "kind": "lab",
+          "title": "Synth script",
+          "toolId": "synth-script",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "10",
+          "slug": "yosys-engine",
+          "moduleId": "module05-01-yosys-engine",
+          "kind": "lab",
+          "title": "Yosys engine integration",
+          "toolId": "yosys-engine",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "11",
+          "slug": "offline-benchmark-compare",
+          "moduleId": "module05-03-offline-benchmark-compare",
+          "kind": "offline",
+          "title": "Offline benchmark compare",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "12",
+          "slug": "wrap",
+          "moduleId": "module99-00-wrap",
+          "kind": "wrap",
+          "title": "Yosys path complete",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        }
+      ]
     },
     {
       "id": "learn_openroad",

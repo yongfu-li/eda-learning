@@ -407,6 +407,82 @@ COURSE_META = {
         "first_lab": "metal-area",
         "first_n": "02",
     },
+    "learn_power": {
+        "title": "Power analysis for EDA",
+        "focus": "Switching/leakage → activity → grid → IR drop → EM → markers → engine",
+        "prereq": "learn_antenna",
+        "status": "ready",
+        "repo": "learn_power",
+        "modules_md": ROOT / "courses" / "learn_power" / "docs" / "MODULES.md",
+        "course_root": ROOT / "courses" / "learn_power",
+        "lead": (
+            "Power analysis literacy on tiny_power — Psw/Pleak, activity, grid IR drop, EM limits, markers. "
+            "Clips and decks load from "
+            "<code>courses/learn_power</code> "
+            "(<code>moduleSS-AA-slug/video.mp4</code>). Open the matching browser tool, then mark the lab done."
+        ),
+        "tools_href": "../../tools/index.html#power",
+        "tools_label": "Power tools",
+        "first_lab": "switching-power",
+        "first_n": "02",
+    },
+    "learn_dft_insert": {
+        "title": "DFT insert for EDA",
+        "focus": "Scan SDFF → SE/SI/SO → stitch → order → lockup → transform → markers → engine",
+        "prereq": "learn_power",
+        "status": "ready",
+        "repo": "learn_dft_insert",
+        "modules_md": ROOT / "courses" / "learn_dft_insert" / "docs" / "MODULES.md",
+        "course_root": ROOT / "courses" / "learn_dft_insert",
+        "lead": (
+            "DFT insert literacy on tiny_dft — scan SDFF cells, SE/SI/SO ports, chain stitch, "
+            "lockup latches, netlist transform, markers. Clips and decks load from "
+            "<code>courses/learn_dft_insert</code> "
+            "(<code>moduleSS-AA-slug/video.mp4</code>). Open the matching browser tool, then mark the lab done."
+        ),
+        "tools_href": "../../tools/index.html#dft",
+        "tools_label": "DFT tools",
+        "first_lab": "scan-flops",
+        "first_n": "02",
+    },
+    "learn_signoff": {
+        "title": "Signoff for EDA",
+        "focus": "Corners → signoff corner → derate → checks → ECO → tapeout → markers → engine",
+        "prereq": "learn_dft_insert",
+        "status": "ready",
+        "repo": "learn_signoff",
+        "modules_md": ROOT / "courses" / "learn_signoff" / "docs" / "MODULES.md",
+        "course_root": ROOT / "courses" / "learn_signoff",
+        "lead": (
+            "Signoff literacy on tiny_signoff — PVT corners, signoff derate, check suite, "
+            "ECO loop, tapeout checklist, markers. Clips and decks load from "
+            "<code>courses/learn_signoff</code> "
+            "(<code>moduleSS-AA-slug/video.mp4</code>). Open the matching browser tool, then mark the lab done."
+        ),
+        "tools_href": "../../tools/index.html#signoff",
+        "tools_label": "Signoff tools",
+        "first_lab": "corners",
+        "first_n": "02",
+    },
+    "learn_yosys": {
+        "title": "Yosys (toy + real CLI)",
+        "focus": "toy passes → real read/proc/flatten/opt/synth evidence",
+        "prereq": "learn_synthesis",
+        "status": "ready",
+        "repo": "learn_yosys",
+        "modules_md": ROOT / "courses" / "learn_yosys" / "docs" / "MODULES.md",
+        "course_root": ROOT / "courses" / "learn_yosys",
+        "lead": (
+            "Part A toy pass literacy + Part B real Yosys CLI/RTLIL evidence on tiny_and_or.v "
+            "(read → proc → flatten → opt → synth). Clips and decks load from "
+            "<code>courses/learn_yosys</code> "
+            "(<code>moduleSS-AA-slug/video.mp4</code>). Open the matching browser tool, then mark the lab done."
+        ),
+        "tools_href": "../../tools/index.html#yosys",
+        "tools_label": "Yosys tools",
+        "first_lab": "proc-elaborate",
+        "first_n": "02",
+    },
 }
 
 COURSE_INDEX = """<!DOCTYPE html>
@@ -609,7 +685,7 @@ LADDER_STUBS: dict[str, dict[str, str]] = {
     "learn_power": {"title": "Power analysis", "focus": "Switching/leakage, IR drop lite"},
     "learn_dft_insert": {"title": "DFT insert", "focus": "Scan / DFT as netlist transforms"},
     "learn_signoff": {"title": "Signoff literacy", "focus": "Corners, ECO loop, tapeout hooks"},
-    "learn_yosys": {"title": "Yosys evidence", "focus": "Synth CLI / reports vs toy engines"},
+    "learn_yosys": {"title": "Yosys (toy + real CLI)", "focus": "toy passes → real synth evidence"},
     "learn_openroad": {"title": "OpenROAD evidence", "focus": "Place/CTS/route vs PD algorithm courses"},
     "learn_openlane": {"title": "OpenLane flow", "focus": "RTL→GDS flow literacy"},
     "learn_fpga_cad": {"title": "FPGA CAD", "focus": "Packing/place/route differences"},

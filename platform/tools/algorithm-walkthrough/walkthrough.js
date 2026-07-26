@@ -46,6 +46,16 @@ import { ERC_ALGOS } from "./erc-algos.js";
 import { drawErc, STARTER as ERC_STARTER } from "../../assets/erc-core.js";
 import { ANTENNA_ALGOS } from "./antenna-algos.js";
 import { drawAntenna, STARTER as ANTENNA_STARTER } from "../../assets/antenna-core.js";
+import { POWER_ALGOS } from "./power-algos.js";
+import { drawPower, STARTER as POWER_STARTER } from "../../assets/power-core.js";
+import { DFT_ALGOS } from "./dft-algos.js";
+import { drawDft, STARTER as DFT_STARTER } from "../../assets/dft-core.js";
+import { SIGNOFF_ALGOS } from "./signoff-algos.js";
+import { drawSignoff, STARTER as SIGNOFF_STARTER } from "../../assets/signoff-core.js";
+import { YOSYS_ALGOS } from "./yosys-algos.js";
+import { drawYosys, STARTER as YOSYS_STARTER } from "../../assets/yosys-core.js";
+import { REAL_YOSYS_ALGOS } from "./real-yosys-algos.js";
+import { drawRealYosys, STAGES as REAL_YOSYS_STAGES } from "../../assets/real-yosys-core.js";
 import { drawEquivalence } from "../../assets/equivalence-core.js";
 import { drawRetiming } from "../../assets/retiming-core.js";
 import { drawSynthesis } from "../../assets/synthesis-core.js";
@@ -1705,6 +1715,11 @@ export const ALGOS = {
   ...SPICE_ALGOS,
   ...ERC_ALGOS,
   ...ANTENNA_ALGOS,
+  ...POWER_ALGOS,
+  ...DFT_ALGOS,
+  ...SIGNOFF_ALGOS,
+  ...YOSYS_ALGOS,
+  ...REAL_YOSYS_ALGOS,
 };
 
 function qs() {
@@ -1845,6 +1860,60 @@ function render() {
 
     });
 
+  } else if (pack.kind === "power") {
+    drawPower(canvas, {
+      design: s.design || POWER_STARTER,
+      highlight: s.highlight || [],
+      selected: s.selected || [],
+      markers: s.markers || [],
+      irVolts: s.irVolts || null,
+      metricText: s.metricText || null,
+    });
+  } else if (pack.kind === "dft") {
+
+    drawDft(canvas, {
+
+      design: s.design || DFT_STARTER,
+
+      highlight: s.highlight || [],
+
+      selected: s.selected || [],
+
+      markers: s.markers || [],
+
+      metricText: s.metricText || null,
+
+    });
+
+  } else if (pack.kind === "signoff") {
+    drawSignoff(canvas, {
+      design: s.design || SIGNOFF_STARTER,
+      checks: s.checks || null,
+      highlight: s.highlight || [],
+      selected: s.selected || [],
+      markers: s.markers || [],
+      showEcos: s.showEcos !== false,
+      showTapeout: s.showTapeout !== false,
+      metricText: s.metricText || null,
+    });
+  } else if (pack.kind === "real_yosys") {
+    drawRealYosys(canvas, {
+      stage: s.stage || REAL_YOSYS_STAGES.empty,
+      highlightTypes: s.highlightTypes || [],
+      selected: s.selected || [],
+      metricText: s.metricText || null,
+    });
+  } else if (pack.kind === "yosys") {
+    drawYosys(canvas, {
+      design: s.design || YOSYS_STARTER,
+      highlight: s.highlight || [],
+      removed: s.removed || [],
+      merged: s.merged || [],
+      selected: s.selected || [],
+      stageLabel: s.stageLabel || null,
+      metricText: s.metricText || null,
+      showNand: s.showNand === true,
+    });
   } else if (pack.kind === "erc") {
     drawErc(canvas, {
       design: s.design || ERC_STARTER,
