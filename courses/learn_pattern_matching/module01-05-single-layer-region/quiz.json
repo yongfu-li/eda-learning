@@ -1,0 +1,38 @@
+{
+  "module": "module01-05-single-layer-region",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Width markers?",
+      "choices": [
+        "1",
+        "0",
+        "2",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Which shape is thin?",
+      "choices": [
+        "D",
+        "A",
+        "V",
+        "C"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "min_width M1?",
+      "choices": [
+        "3",
+        "1",
+        "2",
+        "8"
+      ],
+      "answer": 0
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+title: Boolean
+footer: learn_pattern_matching — 05 layered boolean
+slides:
+- type: title
+  title: Boolean
+  subtitle: Boolean patterns combine coverage predicates across layers (AND / OR /
+    AND-NOT)
+  notes: Boolean patterns combine coverage predicates across layers (AND / OR / AND-NOT).
+- type: bullets
+  title: The idea
+  bullets:
+  - V covered by M1 and not by M2 → and_not hit
+  - GOLDEN boolean_and_hits=1
+  notes: V covered by M1 and not by M2 → and_not hit. GOLDEN boolean_and_hits=1.
+- type: image
+  title: Cover M1
+  image: assets/steps/01-m1.png
+  caption: Cover M1
+  notes: V is covered (contained) by M1 A.
+- type: image
+  title: Cover M2
+  image: assets/steps/02-m2.png
+  caption: Cover M2
+  notes: V is not covered by M2 C.
+- type: image
+  title: And-not
+  image: assets/steps/03-andnot.png
+  caption: And-not
+  notes: and_not = M1 ∧ ¬M2 matches V.
+- type: image
+  title: And
+  image: assets/steps/04-and.png
+  caption: And
+  notes: and = M1 ∧ M2 matches none on the toy.
+- type: image
+  title: Hit
+  image: assets/steps/05-hit.png
+  caption: Hit
+  notes: 'GOLDEN: one and_not hit on V.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **layered-boolean**. Run Boolean and_not; confirm hit on V.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call layered_boolean('and_not'); assert one hit on V
+  notes: Call layered_boolean('and_not'); assert one hit on V.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Confusing overlap with containment
+  - Swapping AND and AND-NOT
+  notes: Confusing overlap with containment. Swapping AND and AND-NOT.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: full match engine pass'
+  notes: 'Next: full match engine pass.'

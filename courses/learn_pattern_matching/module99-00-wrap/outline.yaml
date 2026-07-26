@@ -1,0 +1,34 @@
+title: Wrap
+footer: learn_pattern_matching — 00 wrap
+slides:
+- type: title
+  title: Wrap
+  subtitle: 'You matched tiny_patterns: 3 engine markers (width, space, enclosure)'
+  notes: 'You matched tiny_patterns: 3 engine markers (width, space, enclosure).'
+- type: bullets
+  title: The idea
+  bullets:
+  - 'Natural next: learn_drc or learn_multi_patterning / learn_rule_dsl'
+  notes: 'Natural next: learn_drc or learn_multi_patterning / learn_rule_dsl.'
+- type: bullets
+  title: Recap
+  bullets:
+  - Recap single/multi-layer patterns; continue to learn_drc or learn_multi_patterning
+  notes: Recap single/multi-layer patterns; continue to learn_drc or learn_multi_patterning.
+- type: bullets
+  title: Goldens
+  bullets:
+  - 'Three match-engine markers: width on D, space A B, enclosure via versus M2'
+  notes: 'Three match-engine markers: width on D, space A B, enclosure via versus
+    M2.'
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - 'Natural next: learn_drc or learn_multi_patterning / learn_rule_dsl'
+  notes: 'Natural next: learn_drc or learn_multi_patterning / learn_rule_dsl.'
+- type: bullets
+  title: Close
+  bullets:
+  - Mark the wrap done when you can explain single versus multi-layer matching
+  notes: Mark the wrap done when you can explain single versus multi-layer matching.

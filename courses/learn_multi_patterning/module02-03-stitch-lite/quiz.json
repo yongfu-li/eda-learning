@@ -1,0 +1,38 @@
+{
+  "module": "module02-03-stitch-lite",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "stitch_makes_dp?",
+      "choices": [
+        "True",
+        "False",
+        "3 masks",
+        "N/A"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Feature split?",
+      "choices": [
+        "C \u2192 C1,C2",
+        "A \u2192 A1,A2",
+        "D removed",
+        "F only"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Stitch goal?",
+      "choices": [
+        "restore DP",
+        "add TP always",
+        "SADP mandrels",
+        "DRC width"
+      ],
+      "answer": 0
+    }
+  ]
+}

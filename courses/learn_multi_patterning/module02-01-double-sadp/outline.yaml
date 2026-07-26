@@ -1,0 +1,59 @@
+title: SADP lite
+footer: learn_multi_patterning — 01 double sadp
+slides:
+- type: title
+  title: SADP lite
+  subtitle: SADP is not LELE coloring , mandrels print first; spacers form between
+    mandrels
+  notes: SADP is not LELE coloring — mandrels print first; spacers form between mandrels.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: mandrel_count=3 (A, D, F on the toy greedy pick)'
+  notes: 'GOLDEN: mandrel_count=3 (A, D, F on the toy greedy pick).'
+- type: image
+  title: Mandrel
+  image: assets/steps/01-man.png
+  caption: Mandrel
+  notes: SADP starts from mandrel features.
+- type: image
+  title: Spacer
+  image: assets/steps/02-sp.png
+  caption: Spacer
+  notes: Neighbors can be spacer-defined.
+- type: image
+  title: Independent set
+  image: assets/steps/03-ind.png
+  caption: Independent set
+  notes: Mandrels form an independent set.
+- type: image
+  title: Assign
+  image: assets/steps/04-asg.png
+  caption: Assign
+  notes: Greedy MIS → mandrels A,D,F.
+- type: image
+  title: Count 3
+  image: assets/steps/05-n.png
+  caption: Count 3
+  notes: GOLDEN mandrel_count=3.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **double-sadp**. Run SADP assign; confirm mandrel_count=3.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call sadp_assign(); assert mandrel_count==3
+  notes: Call sadp_assign(); assert mandrel_count==3.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Treating SADP as 2-coloring
+  - Expecting same result as LELE
+  notes: Treating SADP as 2-coloring. Expecting same result as LELE.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: stitch to break odd cycles'
+  notes: 'Next: stitch to break odd cycles.'

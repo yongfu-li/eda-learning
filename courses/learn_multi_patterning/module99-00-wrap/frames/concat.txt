@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/eda_learning/courses/learn_multi_patterning/module99-00-wrap/frames/slide-1.png'
+duration 10.824
+file '/mnt/d/proj/designs/eda_learning/courses/learn_multi_patterning/module99-00-wrap/frames/slide-2.png'
+duration 5.544
+file '/mnt/d/proj/designs/eda_learning/courses/learn_multi_patterning/module99-00-wrap/frames/slide-3.png'
+duration 7.272
+file '/mnt/d/proj/designs/eda_learning/courses/learn_multi_patterning/module99-00-wrap/frames/slide-4.png'
+duration 8.808
+file '/mnt/d/proj/designs/eda_learning/courses/learn_multi_patterning/module99-00-wrap/frames/slide-5.png'
+duration 5.544
+file '/mnt/d/proj/designs/eda_learning/courses/learn_multi_patterning/module99-00-wrap/frames/slide-6.png'
+duration 6.192
+file '/mnt/d/proj/designs/eda_learning/courses/learn_multi_patterning/module99-00-wrap/frames/slide-6.png'

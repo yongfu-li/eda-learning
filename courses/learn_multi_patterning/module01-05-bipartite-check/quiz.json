@@ -1,0 +1,38 @@
+{
+  "module": "module01-05-bipartite-check",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "path_lele ok?",
+      "choices": [
+        "True",
+        "False",
+        "3 masks",
+        "unknown"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Path nodes checked?",
+      "choices": [
+        "D-E-F",
+        "A-B-C",
+        "A-F only",
+        "none"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Bipartite means?",
+      "choices": [
+        "2-colorable",
+        "3-colorable",
+        "no edges",
+        "SADP only"
+      ],
+      "answer": 0
+    }
+  ]
+}

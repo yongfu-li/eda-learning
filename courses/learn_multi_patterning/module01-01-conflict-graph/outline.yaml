@@ -1,0 +1,60 @@
+title: Why conflicts
+footer: learn_multi_patterning — 01 conflict graph
+slides:
+- type: title
+  title: Why conflicts
+  subtitle: Multi-patterning starts by finding which features cannot share the same
+    mask
+  notes: Multi-patterning starts by finding which features cannot share the same mask.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: 6 nodes, 5 edges (A-B, A-C, B-C, D-E, E-F), min_same_mask=2'
+  notes: 'GOLDEN: 6 nodes, 5 edges (A-B, A-C, B-C, D-E, E-F), min_same_mask=2.'
+- type: image
+  title: Features
+  image: assets/steps/01-feat.png
+  caption: Features
+  notes: Six features A–F on the toy.
+- type: image
+  title: Min space
+  image: assets/steps/02-min.png
+  caption: Min space
+  notes: min_same_mask=2.
+- type: image
+  title: Edges
+  image: assets/steps/03-edges.png
+  caption: Edges
+  notes: Conflict if gap < 2 → 5 edges.
+- type: image
+  title: Triangle
+  image: assets/steps/04-tri.png
+  caption: Triangle
+  notes: A–B–C form a triangle.
+- type: image
+  title: Path
+  image: assets/steps/05-path.png
+  caption: Path
+  notes: D–E–F is a path.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **conflict-graph**. Build graph; confirm 6 nodes and 5 edges.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call build_conflict_graph(); assert feature_count==6 and edge_count==5
+  notes: Call build_conflict_graph(); assert feature_count==6 and edge_count==5.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Using center distance instead of bbox gap
+  - Forgetting min_same_mask from JSON
+  notes: Using center distance instead of bbox gap. Forgetting min_same_mask from
+    JSON.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: LELE double patterning as 2-coloring'
+  notes: 'Next: LELE double patterning as 2-coloring.'

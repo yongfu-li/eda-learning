@@ -1,0 +1,60 @@
+title: Markers
+footer: learn_pattern_matching — 03 marker emit
+slides:
+- type: title
+  title: Markers
+  subtitle: A marker is a typed hit (width/space/…) pointing at shapes , DRC later
+    maps markers to violations
+  notes: A marker is a typed hit (width/space/…) pointing at shapes — DRC later maps
+    markers to violations.
+- type: bullets
+  title: The idea
+  bullets:
+  - Emit_markers combines width and space → at least 2 markers (D + A–B)
+  notes: emit_markers combines width and space → at least 2 markers (D + A–B).
+- type: image
+  title: Types
+  image: assets/steps/01-types.png
+  caption: Types
+  notes: Markers carry type, layer, shapes, value, limit.
+- type: image
+  title: Width hit
+  image: assets/steps/02-w.png
+  caption: Width hit
+  notes: Width marker on D.
+- type: image
+  title: Space hit
+  image: assets/steps/03-s.png
+  caption: Space hit
+  notes: Space marker on A,B.
+- type: image
+  title: List
+  image: assets/steps/04-list.png
+  caption: List
+  notes: emit_markers returns the combined list.
+- type: image
+  title: Count
+  image: assets/steps/05-n.png
+  caption: Count
+  notes: At least 2 single-layer markers.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **marker-emit**. Run Emit markers; confirm ≥2 markers.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call emit_markers(); assert len >= 2
+  notes: Call emit_markers(); assert len >= 2.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Dropping value/limit fields
+  - Mixing multi-layer into emit early
+  notes: Dropping value/limit fields. Mixing multi-layer into emit early.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: multi-layer via enclosure'
+  notes: 'Next: multi-layer via enclosure.'

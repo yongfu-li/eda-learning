@@ -1,0 +1,38 @@
+{
+  "module": "module03-01-multi-layer-via",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "m1_ok?",
+      "choices": [
+        "True",
+        "False",
+        "unknown",
+        "only Y"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "enclosure markers?",
+      "choices": [
+        "1",
+        "0",
+        "3",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Outer fail layer?",
+      "choices": [
+        "M2",
+        "M1",
+        "VIA",
+        "poly"
+      ],
+      "answer": 0
+    }
+  ]
+}

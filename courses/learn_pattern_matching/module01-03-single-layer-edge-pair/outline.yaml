@@ -1,0 +1,61 @@
+title: Edge pair
+footer: learn_pattern_matching — 03 single layer edge pair
+slides:
+- type: title
+  title: Edge pair
+  subtitle: Spacing patterns compare facing edges of same-layer shapes with overlapping
+    projections
+  notes: Spacing patterns compare facing edges of same-layer shapes with overlapping
+    projections.
+- type: bullets
+  title: The idea
+  bullets:
+  - On M1, A–B gap is 1 but min_space=2 → one space marker
+  - GOLDEN space_markers=1
+  notes: On M1, A–B gap is 1 but min_space=2 → one space marker. GOLDEN space_markers=1.
+- type: image
+  title: Neighbors
+  image: assets/steps/01-nb.png
+  caption: Neighbors
+  notes: A left of B on M1 with y-projection overlap.
+- type: image
+  title: Gap
+  image: assets/steps/02-gap.png
+  caption: Gap
+  notes: Gap A→B equals 1 (x 10→11).
+- type: image
+  title: Limit
+  image: assets/steps/03-limit.png
+  caption: Limit
+  notes: min_space[M1]=2.
+- type: image
+  title: Marker
+  image: assets/steps/04-mark.png
+  caption: Marker
+  notes: Emit space marker on shapes A,B.
+- type: image
+  title: Count
+  image: assets/steps/05-count.png
+  caption: Count
+  notes: 'GOLDEN: one M1 space marker.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **single-layer-edge-pair**. Run Match space; confirm one A–B marker.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call match_space(layer='M1'); assert len==1 and shapes {A,B}
+  notes: Call match_space(layer='M1'); assert len==1 and shapes {A,B}.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Matching without projection overlap
+  - Checking different layers as one pair
+  notes: Matching without projection overlap. Checking different layers as one pair.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: single-layer region / enclosure'
+  notes: 'Next: single-layer region / enclosure.'

@@ -1,0 +1,58 @@
+title: LELE overview
+footer: learn_multi_patterning — 03 double lele
+slides:
+- type: title
+  title: LELE overview
+  subtitle: LELE double patterning assigns two lithography masks by 2-coloring conflicts
+  notes: LELE double patterning assigns two lithography masks by 2-coloring conflicts.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: lele_double ok=False on the full graph (triangle A-B-C)'
+  notes: 'GOLDEN: lele_double ok=False on the full graph (triangle A-B-C).'
+- type: image
+  title: LELE idea
+  image: assets/steps/01-idea.png
+  caption: LELE idea
+  notes: LELE DP = two masks via 2-coloring.
+- type: image
+  title: Two masks
+  image: assets/steps/02-two.png
+  caption: Two masks
+  notes: Assign color 0/1 to features.
+- type: image
+  title: Color attempt
+  image: assets/steps/03-try.png
+  caption: Color attempt
+  notes: BFS 2-color the conflict graph.
+- type: image
+  title: Odd cycle
+  image: assets/steps/04-odd.png
+  caption: Odd cycle
+  notes: Triangle A-B-C is an odd cycle.
+- type: image
+  title: Fail
+  image: assets/steps/05-fail.png
+  caption: Fail
+  notes: 'GOLDEN: lele_double ok=False.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **double-lele**. Run LELE; confirm ok=False on tiny_mp.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call lele_double(); assert ok is False
+  notes: Call lele_double(); assert ok is False.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Assuming DP always works
+  - Ignoring odd cycles in the full layout
+  notes: Assuming DP always works. Ignoring odd cycles in the full layout.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: bipartite check on a subgraph'
+  notes: 'Next: bipartite check on a subgraph.'

@@ -36,6 +36,10 @@ import { RETIMING_ALGOS } from "./retiming-algos.js";
 import { EQUIVALENCE_ALGOS } from "./equivalence-algos.js";
 import { COMPACTION_ALGOS } from "./compaction-algos.js";
 import { drawCompaction } from "../../assets/compaction-core.js";
+import { PATTERN_ALGOS } from "./pattern-algos.js";
+import { drawPatternMatching, STARTER as PATTERN_STARTER, CHIP as PATTERN_CHIP } from "../../assets/pattern-matching-core.js";
+import { MULTI_PATTERN_ALGOS } from "./multi-patterning-algos.js";
+import { drawMultiPatterning, STARTER as MP_STARTER, CHIP as MP_CHIP } from "../../assets/multi-patterning-core.js";
 import { drawEquivalence } from "../../assets/equivalence-core.js";
 import { drawRetiming } from "../../assets/retiming-core.js";
 import { drawSynthesis } from "../../assets/synthesis-core.js";
@@ -1690,6 +1694,8 @@ export const ALGOS = {
   ...RETIMING_ALGOS,
   ...EQUIVALENCE_ALGOS,
   ...COMPACTION_ALGOS,
+  ...PATTERN_ALGOS,
+  ...MULTI_PATTERN_ALGOS,
 };
 
 function qs() {
@@ -1813,6 +1819,26 @@ function render() {
       selectedSink: s.selectedSink || null,
       highlight: s.highlight || [],
       showSkew: s.showSkew !== false,
+    });
+  } else if (pack.kind === "multipattern") {
+    drawMultiPatterning(canvas, {
+      features: s.features || MP_STARTER,
+      chip: s.chip || MP_CHIP,
+      selected: s.selected || null,
+      highlight: s.highlight || [],
+      colors: s.colors || null,
+      graph: s.graph || null,
+      mandrels: s.mandrels || [],
+      metricText: s.metricText || null,
+    });
+  } else if (pack.kind === "pattern") {
+    drawPatternMatching(canvas, {
+      shapes: s.shapes || PATTERN_STARTER,
+      chip: s.chip || PATTERN_CHIP,
+      selected: s.selected || null,
+      highlight: s.highlight || [],
+      markers: s.markers || [],
+      metricText: s.metricText || null,
     });
   } else if (pack.kind === "compaction") {
     drawCompaction(canvas, {

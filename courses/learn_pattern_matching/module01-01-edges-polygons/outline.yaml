@@ -1,0 +1,58 @@
+title: Why edges
+footer: learn_pattern_matching — 01 edges polygons
+slides:
+- type: title
+  title: Why edges
+  subtitle: Pattern engines begin with polygons and their edges on named layers
+  notes: Pattern engines begin with polygons and their edges on named layers.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: 5 shapes, 3 layers, 20 edges (4 per shape), 3 shapes on M1'
+  notes: 'GOLDEN: 5 shapes, 3 layers, 20 edges (4 per shape), 3 shapes on M1.'
+- type: image
+  title: Shapes
+  image: assets/steps/01-shapes.png
+  caption: Shapes
+  notes: 'Five rectangles: A,B,D on M1; C on M2; V on VIA.'
+- type: image
+  title: Layers
+  image: assets/steps/02-layers.png
+  caption: Layers
+  notes: Layers M1, M2, VIA — GOLDEN layer_count=3.
+- type: image
+  title: Edges
+  image: assets/steps/03-edges.png
+  caption: Edges
+  notes: Each rect yields 4 edges → 20 total.
+- type: image
+  title: Select A
+  image: assets/steps/04-a.png
+  caption: Select A
+  notes: A is 8×4 on M1 at left.
+- type: image
+  title: Stats
+  image: assets/steps/05-stats.png
+  caption: Stats
+  notes: geometry_stats reports counts and widths.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **edges-polygons**. Select shapes; confirm shape_count=5 and edge_count=20.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call geometry_stats(); assert shape_count==5 and edge_count==20
+  notes: Call geometry_stats(); assert shape_count==5 and edge_count==20.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Counting only cells
+  - Mixing chip size with shape count
+  notes: Counting only cells. Mixing chip size with shape count.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: single-layer edge-pair spacing'
+  notes: 'Next: single-layer edge-pair spacing.'

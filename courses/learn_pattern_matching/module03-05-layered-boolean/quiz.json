@@ -1,0 +1,38 @@
+{
+  "module": "module03-05-layered-boolean",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "and_not hits?",
+      "choices": [
+        "1",
+        "0",
+        "3",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Hit shape?",
+      "choices": [
+        "V",
+        "D",
+        "B",
+        "C"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "and_not means?",
+      "choices": [
+        "M1 and not M2",
+        "M1 or M2",
+        "space only",
+        "width only"
+      ],
+      "answer": 0
+    }
+  ]
+}

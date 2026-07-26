@@ -1,0 +1,58 @@
+title: MP engine
+footer: learn_multi_patterning — 01 mp engine
+slides:
+- type: title
+  title: MP engine
+  subtitle: A tiny MP engine picks the minimum mask count that succeeds on the layout
+  notes: A tiny MP engine picks the minimum mask count that succeeds on the layout.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: best_masks=3, dp_ok=False, tp_ok=True'
+  notes: 'GOLDEN: best_masks=3, dp_ok=False, tp_ok=True.'
+- type: image
+  title: Try DP
+  image: assets/steps/01-dp.png
+  caption: Try DP
+  notes: First try LELE double.
+- type: image
+  title: Fail
+  image: assets/steps/02-fail.png
+  caption: Fail
+  notes: DP fails on the triangle.
+- type: image
+  title: Try TP
+  image: assets/steps/03-tp.png
+  caption: Try TP
+  notes: Fall back to triple.
+- type: image
+  title: Best 3
+  image: assets/steps/04-best.png
+  caption: Best 3
+  notes: best_masks=3.
+- type: image
+  title: Report
+  image: assets/steps/05-rep.png
+  caption: Report
+  notes: Engine reports DP/TP/QP outcome.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **mp-engine**. Run engine; confirm best_masks=3.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call mp_engine(); assert best_masks==3 and dp_ok is False and tp_ok is True
+  notes: Call mp_engine(); assert best_masks==3 and dp_ok is False and tp_ok is True.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Stopping after DP failure
+  - Reporting QP when TP already succeeds
+  notes: Stopping after DP failure. Reporting QP when TP already succeeds.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: offline benchmark compare, then wrap'
+  notes: 'Next: offline benchmark compare, then wrap.'

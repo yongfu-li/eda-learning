@@ -1,0 +1,35 @@
+title: Wrap
+footer: learn_multi_patterning — 00 wrap
+slides:
+- type: title
+  title: Wrap
+  subtitle: 'You decomposed tiny_mp: 5 conflicts, DP fails, TP uses 3 masks, stitch
+    restores DP, engine best_masks=3'
+  notes: 'You decomposed tiny_mp: 5 conflicts, DP fails, TP uses 3 masks, stitch restores
+    DP, engine best_masks=3.'
+- type: bullets
+  title: The idea
+  bullets:
+  - 'Natural next: learn_drc or learn_rule_dsl'
+  notes: 'Natural next: learn_drc or learn_rule_dsl.'
+- type: bullets
+  title: Recap
+  bullets:
+  - Recap conflict graphs, DP/TP/QP, SADP, stitch, and engine goldens
+  notes: Recap conflict graphs, DP/TP/QP, SADP, stitch, and engine goldens.
+- type: bullets
+  title: Goldens
+  bullets:
+  - Five conflicts; DP fails; TP uses 3 masks; stitch restores DP; engine best_masks=3
+  notes: Five conflicts; DP fails; TP uses 3 masks; stitch restores DP; engine best_masks=3.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - 'Natural next: learn_drc or learn_rule_dsl'
+  notes: 'Natural next: learn_drc or learn_rule_dsl.'
+- type: bullets
+  title: Close
+  bullets:
+  - Mark the wrap done when you can explain DP vs TP vs QP on tiny_mp
+  notes: Mark the wrap done when you can explain DP vs TP vs QP on tiny_mp.

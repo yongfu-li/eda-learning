@@ -1,0 +1,60 @@
+title: Engine
+footer: learn_pattern_matching — 01 match engine
+slides:
+- type: title
+  title: Engine
+  subtitle: A tiny match engine chains single-layer and multi-layer patterns into
+    one marker list
+  notes: A tiny match engine chains single-layer and multi-layer patterns into one
+    marker list.
+- type: bullets
+  title: The idea
+  bullets:
+  - GOLDEN match_engine_markers=3 (width 1 + space 1 + enclosure 1)
+  notes: GOLDEN match_engine_markers=3 (width 1 + space 1 + enclosure 1).
+- type: image
+  title: Pipeline
+  image: assets/steps/01-pipe.png
+  caption: Pipeline
+  notes: Width → space → via enclosure.
+- type: image
+  title: Width
+  image: assets/steps/02-w.png
+  caption: Width
+  notes: One width marker.
+- type: image
+  title: Space
+  image: assets/steps/03-s.png
+  caption: Space
+  notes: One space marker.
+- type: image
+  title: Encl
+  image: assets/steps/04-e.png
+  caption: Encl
+  notes: One enclosure marker.
+- type: image
+  title: Total
+  image: assets/steps/05-n.png
+  caption: Total
+  notes: count=3 on tiny_patterns.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **match-engine**. Run Match engine; confirm count=3.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call match_engine(); assert count==3
+  notes: Call match_engine(); assert count==3.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Stopping after width only
+  - Double-counting boolean as DRC markers
+  notes: Stopping after width only. Double-counting boolean as DRC markers.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: offline compare, then wrap'
+  notes: 'Next: offline compare, then wrap.'

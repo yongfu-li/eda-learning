@@ -312,6 +312,44 @@ COURSE_META = {
         "first_lab": "leaf-cells",
         "first_n": "02",
     },
+    "learn_pattern_matching": {
+        "title": "Pattern matching for EDA",
+        "focus": "Edges → single-layer space/width → scanline → markers → multi-layer via/boolean → match engine",
+        "prereq": None,
+        "status": "ready",
+        "repo": "learn_pattern_matching",
+        "modules_md": ROOT / "courses" / "learn_pattern_matching" / "docs" / "MODULES.md",
+        "course_root": ROOT / "courses" / "learn_pattern_matching",
+        "lead": (
+            "DRC-style edge/region pattern matching on a tiny multi-layer layout — space, width, via enclosure, boolean. "
+            "Clips and decks load from "
+            "<code>courses/learn_pattern_matching</code> "
+            "(<code>moduleSS-AA-slug/video.mp4</code>). Open the matching browser tool, then mark the lab done."
+        ),
+        "tools_href": "../../tools/index.html#pattern-matching",
+        "tools_label": "Pattern matching tools",
+        "first_lab": "edges-polygons",
+        "first_n": "02",
+    },
+    "learn_multi_patterning": {
+        "title": "Multi-patterning for EDA",
+        "focus": "Conflict graph → LELE DP → bipartite → SADP → stitch → TP/QP coloring → MP engine",
+        "prereq": None,
+        "status": "ready",
+        "repo": "learn_multi_patterning",
+        "modules_md": ROOT / "courses" / "learn_multi_patterning" / "docs" / "MODULES.md",
+        "course_root": ROOT / "courses" / "learn_multi_patterning",
+        "lead": (
+            "Double/triple/quad patterning literacy — LELE 2-coloring, SADP mandrels, stitch repair, TP/QP coloring. "
+            "Clips and decks load from "
+            "<code>courses/learn_multi_patterning</code> "
+            "(<code>moduleSS-AA-slug/video.mp4</code>). Open the matching browser tool, then mark the lab done."
+        ),
+        "tools_href": "../../tools/index.html#multi-patterning",
+        "tools_label": "Multi-patterning tools",
+        "first_lab": "conflict-graph",
+        "first_n": "02",
+    },
 }
 
 COURSE_INDEX = """<!DOCTYPE html>
@@ -506,7 +544,7 @@ LADDER_STUBS: dict[str, dict[str, str]] = {
     "learn_drc": {"title": "DRC", "focus": "Rule deck → width/spacing/enclosure checkers"},
     "learn_lvs": {"title": "LVS", "focus": "Device recognition, net extract, graph compare"},
     "learn_pex": {"title": "PEX", "focus": "R/C from geometry, network reduction"},
-    "learn_multi_patterning": {"title": "Multi-patterning", "focus": "Coloring / decomposition constraints"},
+    "learn_multi_patterning": {"title": "Multi-patterning", "focus": "DP/TP/QP coloring, LELE, SADP, stitch"},
     "learn_rule_dsl": {"title": "Rule DSL", "focus": "SVRF-/DRC-like rule language → checkers"},
     "learn_spice": {"title": "SPICE / circuit sim", "focus": "MNA, Newton, sparse LU, transient"},
     "learn_erc": {"title": "ERC", "focus": "Electrical rule categories"},

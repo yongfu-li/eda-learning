@@ -1,0 +1,61 @@
+title: DP feasibility
+footer: learn_multi_patterning — 05 bipartite check
+slides:
+- type: title
+  title: DP feasibility
+  subtitle: A subgraph that is bipartite can still be double-patterned even when the
+    full chip is not
+  notes: A subgraph that is bipartite can still be double-patterned even when the
+    full chip is not.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: path_lele ok=True on nodes D, E, F'
+  notes: 'GOLDEN: path_lele ok=True on nodes D, E, F.'
+- type: image
+  title: Subgraph
+  image: assets/steps/01-sub.png
+  caption: Subgraph
+  notes: Restrict to D–E–F.
+- type: image
+  title: BFS color
+  image: assets/steps/02-bfs.png
+  caption: BFS color
+  notes: 2-color BFS on the path.
+- type: image
+  title: Path DEF
+  image: assets/steps/03-def.png
+  caption: Path DEF
+  notes: Path has no odd cycle.
+- type: image
+  title: Colors 0/1
+  image: assets/steps/04-cols.png
+  caption: Colors 0/1
+  notes: Alternate colors along the path.
+- type: image
+  title: OK
+  image: assets/steps/05-ok.png
+  caption: OK
+  notes: 'GOLDEN: path_lele ok=True.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **bipartite-check**. Run path check; confirm ok=True for D-E-F.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call path_lele(); assert ok is True
+  notes: Call path_lele(); assert ok is True.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Testing full graph when the lesson is subgraph feasibility
+  - Confusing LELE with SADP
+  notes: Testing full graph when the lesson is subgraph feasibility. Confusing LELE
+    with SADP.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: SADP mandrel assignment'
+  notes: 'Next: SADP mandrel assignment.'

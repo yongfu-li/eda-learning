@@ -1,0 +1,38 @@
+{
+  "module": "module03-03-triple-decomp",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Greedy k on this lab?",
+      "choices": [
+        "3",
+        "2",
+        "4",
+        "1"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Backtrack searches?",
+      "choices": [
+        "complete assignments",
+        "mandrels only",
+        "DRC width",
+        "via enclosure"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Toy colors_used?",
+      "choices": [
+        "3",
+        "2",
+        "4",
+        "5"
+      ],
+      "answer": 0
+    }
+  ]
+}

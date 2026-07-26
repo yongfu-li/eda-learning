@@ -1,0 +1,61 @@
+title: Interactions
+footer: learn_pattern_matching — 03 multi layer interaction
+slides:
+- type: title
+  title: Interactions
+  subtitle: Interaction patterns find shapes on different layers whose regions overlap
+    , candidates for via/contact checks
+  notes: Interaction patterns find shapes on different layers whose regions overlap
+    — candidates for via/contact checks.
+- type: bullets
+  title: The idea
+  bullets:
+  - V overlaps A (VIA∩M1)
+  - 'GOLDEN: at least the (A,V) pair'
+  notes: 'V overlaps A (VIA∩M1). GOLDEN: at least the (A,V) pair.'
+- type: image
+  title: Cross
+  image: assets/steps/01-cross.png
+  caption: Cross
+  notes: Only different-layer pairs qualify.
+- type: image
+  title: Overlap
+  image: assets/steps/02-ov.png
+  caption: Overlap
+  notes: Axis-aligned rectangle overlap test.
+- type: image
+  title: AV
+  image: assets/steps/03-av.png
+  caption: AV
+  notes: Pair A–V is present.
+- type: image
+  title: List
+  image: assets/steps/04-list.png
+  caption: List
+  notes: multi_layer_interactions returns pairs.
+- type: image
+  title: Use
+  image: assets/steps/05-use.png
+  caption: Use
+  notes: Interactions feed enclosure and boolean patterns.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **multi-layer-interaction**. Run Interactions; confirm A–V pair.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call multi_layer_interactions(); assert ('A','V') in pairs
+  notes: Call multi_layer_interactions(); assert ('A','V') in pairs.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Including same-layer overlaps
+  - Using center distance only
+  notes: Including same-layer overlaps. Using center distance only.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: layered boolean'
+  notes: 'Next: layered boolean.'

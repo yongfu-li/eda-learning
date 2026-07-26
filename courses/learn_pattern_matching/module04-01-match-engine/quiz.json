@@ -1,0 +1,38 @@
+{
+  "module": "module04-01-match-engine",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Engine marker count?",
+      "choices": [
+        "3",
+        "1",
+        "5",
+        "20"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Includes enclosure?",
+      "choices": [
+        "yes",
+        "no",
+        "only width",
+        "only boolean"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Toy shape count?",
+      "choices": [
+        "5",
+        "3",
+        "2",
+        "10"
+      ],
+      "answer": 0
+    }
+  ]
+}

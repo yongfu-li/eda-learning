@@ -1,0 +1,59 @@
+title: Region width
+footer: learn_pattern_matching — 05 single layer region
+slides:
+- type: title
+  title: Region width
+  subtitle: Width patterns treat a polygon as a region and measure its smallest extent
+  notes: Width patterns treat a polygon as a region and measure its smallest extent.
+- type: bullets
+  title: The idea
+  bullets:
+  - D is 1×6 on M1; min_width[M1]=3 → width marker
+  - GOLDEN width_markers=1
+  notes: D is 1×6 on M1; min_width[M1]=3 → width marker. GOLDEN width_markers=1.
+- type: image
+  title: Thin D
+  image: assets/steps/01-d.png
+  caption: Thin D
+  notes: D width=1 height=6.
+- type: image
+  title: Min width
+  image: assets/steps/02-mw.png
+  caption: Min width
+  notes: min_width[M1]=3.
+- type: image
+  title: Measure
+  image: assets/steps/03-min.png
+  caption: Measure
+  notes: thin = min(w,h) = 1.
+- type: image
+  title: Marker
+  image: assets/steps/04-mark.png
+  caption: Marker
+  notes: Emit width marker on D.
+- type: image
+  title: Others
+  image: assets/steps/05-ok.png
+  caption: Others
+  notes: A,B,C,V pass their layer min_width.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **single-layer-region**. Run Match width; confirm marker on D.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call match_width(); assert one marker on D
+  notes: Call match_width(); assert one marker on D.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Using area instead of min(w,h)
+  - Applying M2 limits to M1
+  notes: Using area instead of min(w,h). Applying M2 limits to M1.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: scanline sweep'
+  notes: 'Next: scanline sweep.'

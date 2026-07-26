@@ -1,0 +1,38 @@
+{
+  "module": "module03-01-triple-color",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "colors_used golden?",
+      "choices": [
+        "3",
+        "2",
+        "4",
+        "1"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Triple ok on toy?",
+      "choices": [
+        "True",
+        "False",
+        "unknown",
+        "only path"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Method taught?",
+      "choices": [
+        "backtrack",
+        "SADP",
+        "scanline",
+        "boolean"
+      ],
+      "answer": 0
+    }
+  ]
+}

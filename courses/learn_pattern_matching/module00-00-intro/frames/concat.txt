@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/eda_learning/courses/learn_pattern_matching/module00-00-intro/frames/slide-1.png'
+duration 8.568
+file '/mnt/d/proj/designs/eda_learning/courses/learn_pattern_matching/module00-00-intro/frames/slide-2.png'
+duration 12.912
+file '/mnt/d/proj/designs/eda_learning/courses/learn_pattern_matching/module00-00-intro/frames/slide-3.png'
+duration 5.856
+file '/mnt/d/proj/designs/eda_learning/courses/learn_pattern_matching/module00-00-intro/frames/slide-4.png'
+duration 5.736
+file '/mnt/d/proj/designs/eda_learning/courses/learn_pattern_matching/module00-00-intro/frames/slide-5.png'
+duration 8.016
+file '/mnt/d/proj/designs/eda_learning/courses/learn_pattern_matching/module00-00-intro/frames/slide-6.png'
+duration 2.904
+file '/mnt/d/proj/designs/eda_learning/courses/learn_pattern_matching/module00-00-intro/frames/slide-6.png'

@@ -1,0 +1,63 @@
+title: Via enclose
+footer: learn_pattern_matching — 01 multi layer via
+slides:
+- type: title
+  title: Via enclose
+  subtitle: 'Enclosure is a region pattern across layers: inner VIA must sit inside
+    outer metal with margin'
+  notes: 'Enclosure is a region pattern across layers: inner VIA must sit inside outer
+    metal with margin.'
+- type: bullets
+  title: The idea
+  bullets:
+  - V inside A on M1 with margins ≥1 → OK
+  - V not inside C on M2 → enclosure marker
+  - GOLDEN enclosure_markers=1
+  notes: V inside A on M1 with margins ≥1 → OK. V not inside C on M2 → enclosure marker.
+    GOLDEN enclosure_markers=1.
+- type: image
+  title: Via V
+  image: assets/steps/01-v.png
+  caption: Via V
+  notes: V is 2×2 on VIA inside A.
+- type: image
+  title: M1 OK
+  image: assets/steps/02-m1.png
+  caption: M1 OK
+  notes: Enclosed by A with margin ≥1.
+- type: image
+  title: M2 fail
+  image: assets/steps/03-m2.png
+  caption: M2 fail
+  notes: C does not contain V.
+- type: image
+  title: Marker
+  image: assets/steps/04-mark.png
+  caption: Marker
+  notes: One enclosure marker (VIA vs M2).
+- type: image
+  title: API
+  image: assets/steps/05-api.png
+  caption: API
+  notes: multi_layer_via_check reports m1_ok / m2_ok.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **multi-layer-via**. Run Via check; confirm m1_ok and one M2 marker.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call multi_layer_via_check(); assert m1_ok and enclosure_markers==1
+  notes: Call multi_layer_via_check(); assert m1_ok and enclosure_markers==1.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Requiring same-layer enclosure
+  - Ignoring margin limit
+  notes: Requiring same-layer enclosure. Ignoring margin limit.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: multi-layer interactions'
+  notes: 'Next: multi-layer interactions.'

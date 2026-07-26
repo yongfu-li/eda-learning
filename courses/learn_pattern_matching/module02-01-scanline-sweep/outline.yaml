@@ -1,0 +1,61 @@
+title: Scanline
+footer: learn_pattern_matching — 01 scanline sweep
+slides:
+- type: title
+  title: Scanline
+  subtitle: Production matchers often sweep a scanline across edges instead of O(n²)
+    pairs only
+  notes: Production matchers often sweep a scanline across edges instead of O(n²)
+    pairs only.
+- type: bullets
+  title: The idea
+  bullets:
+  - M1 has 3 shapes → 6 events (enter/leave each)
+  - Events sort by x then enter-before-leave
+  notes: M1 has 3 shapes → 6 events (enter/leave each). Events sort by x then enter-before-leave.
+- type: image
+  title: Enter
+  image: assets/steps/01-enter.png
+  caption: Enter
+  notes: Enter event at shape x0.
+- type: image
+  title: Leave
+  image: assets/steps/02-leave.png
+  caption: Leave
+  notes: Leave event at shape x1.
+- type: image
+  title: Sort
+  image: assets/steps/03-sort.png
+  caption: Sort
+  notes: Sort by x; enters before leaves at same x.
+- type: image
+  title: M1 count
+  image: assets/steps/04-n.png
+  caption: M1 count
+  notes: 'GOLDEN: 6 events on M1.'
+- type: image
+  title: Use
+  image: assets/steps/05-use.png
+  caption: Use
+  notes: Active set between events drives pair checks.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **scanline-sweep**. Run Scanline M1; confirm 6 events.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call scanline_events('M1'); assert len==6
+  notes: Call scanline_events('M1'); assert len==6.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Forgetting leave events
+  - Sorting leaves before enters at same x
+  notes: Forgetting leave events. Sorting leaves before enters at same x.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: marker emission'
+  notes: 'Next: marker emission.'

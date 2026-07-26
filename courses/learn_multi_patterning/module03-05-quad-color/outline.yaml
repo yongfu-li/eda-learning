@@ -1,0 +1,60 @@
+title: Quad patterning
+footer: learn_multi_patterning — 05 quad color
+slides:
+- type: title
+  title: Quad patterning
+  subtitle: Quad patterning reserves four masks; greedy coloring shows headroom when
+    fewer suffice
+  notes: Quad patterning reserves four masks; greedy coloring shows headroom when
+    fewer suffice.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: colors_used=3, k=4, ok=True on tiny_mp'
+  notes: 'GOLDEN: colors_used=3, k=4, ok=True on tiny_mp.'
+- type: image
+  title: Four masks
+  image: assets/steps/01-four.png
+  caption: Four masks
+  notes: QP allows up to 4 masks.
+- type: image
+  title: Greedy
+  image: assets/steps/02-gr.png
+  caption: Greedy
+  notes: Greedy 4-color the graph.
+- type: image
+  title: Used 3
+  image: assets/steps/03-u3.png
+  caption: Used 3
+  notes: Toy only needs 3 colors.
+- type: image
+  title: Headroom
+  image: assets/steps/04-head.png
+  caption: Headroom
+  notes: Extra mask is headroom.
+- type: image
+  title: OK
+  image: assets/steps/05-ok.png
+  caption: OK
+  notes: GOLDEN qp ok colors_used=3.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **quad-color**. Run quad greedy; confirm colors_used=3.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call quad_pattern(method='greedy'); assert ok and colors_used==3
+  notes: Call quad_pattern(method='greedy'); assert ok and colors_used==3.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Requiring all four masks used
+  - Confusing QP with TP
+  notes: Requiring all four masks used. Confusing QP with TP.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: multi-patterning engine pass'
+  notes: 'Next: multi-patterning engine pass.'

@@ -1,0 +1,38 @@
+{
+  "module": "module04-01-mp-engine",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "best_masks golden?",
+      "choices": [
+        "3",
+        "2",
+        "4",
+        "6"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "dp_ok on toy?",
+      "choices": [
+        "False",
+        "True",
+        "N/A",
+        "unknown"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "tp_ok on toy?",
+      "choices": [
+        "True",
+        "False",
+        "only path",
+        "no"
+      ],
+      "answer": 0
+    }
+  ]
+}

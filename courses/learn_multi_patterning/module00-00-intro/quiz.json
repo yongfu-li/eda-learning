@@ -1,0 +1,38 @@
+{
+  "module": "module00-00-intro",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Focus of Welcome?",
+      "choices": [
+        "Explain why same-mask spacing forces DP/TP/QP decomposition ",
+        "Place only",
+        "CTS only",
+        "SPICE"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Course id?",
+      "choices": [
+        "learn_multi_patterning",
+        "learn_drc",
+        "learn_pattern_matching",
+        "learn_compaction"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Engine best_masks golden?",
+      "choices": [
+        "3",
+        "2",
+        "6",
+        "0"
+      ],
+      "answer": 0
+    }
+  ]
+}

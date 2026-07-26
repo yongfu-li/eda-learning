@@ -1,0 +1,38 @@
+{
+  "module": "module01-03-double-lele",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "lele_double ok on full graph?",
+      "choices": [
+        "False",
+        "True",
+        "unknown",
+        "N/A"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Why DP fails?",
+      "choices": [
+        "triangle A-B-C",
+        "path D-E-F",
+        "no edges",
+        "min_same_mask=0"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "LELE mask count if ok?",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "1"
+      ],
+      "answer": 0
+    }
+  ]
+}

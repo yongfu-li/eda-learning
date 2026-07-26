@@ -1,0 +1,61 @@
+title: Decomp literacy
+footer: learn_multi_patterning — 03 triple decomp
+slides:
+- type: title
+  title: Decomp literacy
+  subtitle: Production flows may use greedy heuristics or exact backtrack , know when
+    they differ
+  notes: Production flows may use greedy heuristics or exact backtrack — know when
+    they differ.
+- type: bullets
+  title: The idea
+  bullets:
+  - On tiny_mp both methods succeed; colors_used=3 for greedy and backtrack
+  notes: On tiny_mp both methods succeed; colors_used=3 for greedy and backtrack.
+- type: image
+  title: Greedy
+  image: assets/steps/01-g.png
+  caption: Greedy
+  notes: Greedy 3-color in id order.
+- type: image
+  title: Backtrack
+  image: assets/steps/02-b.png
+  caption: Backtrack
+  notes: Backtrack finds a valid coloring.
+- type: image
+  title: Same used
+  image: assets/steps/03-same.png
+  caption: Same used
+  notes: Both use 3 on the toy.
+- type: image
+  title: Methods
+  image: assets/steps/04-meth.png
+  caption: Methods
+  notes: 'Decomp literacy: greedy vs search.'
+- type: image
+  title: Choose
+  image: assets/steps/05-ch.png
+  caption: Choose
+  notes: Prefer BT when greedy fails.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **triple-decomp**. Run both methods; compare colors_used.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Compare color_greedy(G,3) vs color_backtrack(G,3); assert both ok
+  notes: Compare color_greedy(G,3) vs color_backtrack(G,3); assert both ok.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Assuming greedy always equals backtrack
+  - Ignoring failure cases on larger graphs
+  notes: Assuming greedy always equals backtrack. Ignoring failure cases on larger
+    graphs.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: quad patterning with headroom'
+  notes: 'Next: quad patterning with headroom.'

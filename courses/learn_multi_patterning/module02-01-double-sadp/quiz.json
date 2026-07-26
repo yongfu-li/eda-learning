@@ -1,0 +1,38 @@
+{
+  "module": "module02-01-double-sadp",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "mandrel_count golden?",
+      "choices": [
+        "3",
+        "2",
+        "6",
+        "5"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "SADP is LELE?",
+      "choices": [
+        "no",
+        "yes",
+        "same as TP",
+        "quad only"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Spacers are?",
+      "choices": [
+        "non-mandrel features",
+        "mask 0 only",
+        "DRC markers",
+        "vias"
+      ],
+      "answer": 0
+    }
+  ]
+}

@@ -59,6 +59,11 @@
       "section": "Clustering & refinement"
     },
     {
+      "id": "bipartite-check",
+      "title": "Bipartite Check",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "boolean-network",
       "title": "Boolean Network",
       "section": "Clustering & refinement"
@@ -106,6 +111,11 @@
     {
       "id": "compact-2d",
       "title": "Compact 2D",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "conflict-graph",
+      "title": "Conflict Graph",
       "section": "Clustering & refinement"
     },
     {
@@ -164,6 +174,16 @@
       "section": "Clustering & refinement"
     },
     {
+      "id": "double-lele",
+      "title": "Double Lele",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "double-sadp",
+      "title": "Double Sadp",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "drc-spacing",
       "title": "Drc Spacing",
       "section": "Clustering & refinement"
@@ -171,6 +191,11 @@
     {
       "id": "edge-overflow",
       "title": "Edge Overflow",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "edges-polygons",
+      "title": "Edges Polygons",
       "section": "Clustering & refinement"
     },
     {
@@ -284,6 +309,11 @@
       "section": "Clustering & refinement"
     },
     {
+      "id": "layered-boolean",
+      "title": "Layered Boolean",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "leaf-cells",
       "title": "Leaf Cells",
       "section": "Clustering & refinement"
@@ -319,6 +349,16 @@
       "section": "Floorplanning"
     },
     {
+      "id": "marker-emit",
+      "title": "Marker Emit",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "match-engine",
+      "title": "Match Engine",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "maze-gcell-route",
       "title": "Maze Gcell Route",
       "section": "Clustering & refinement"
@@ -336,6 +376,21 @@
     {
       "id": "mmm-tree",
       "title": "Mmm Tree",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "mp-engine",
+      "title": "Mp Engine",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "multi-layer-interaction",
+      "title": "Multi Layer Interaction",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "multi-layer-via",
+      "title": "Multi Layer Via",
       "section": "Clustering & refinement"
     },
     {
@@ -424,6 +479,11 @@
       "section": "Clustering & refinement"
     },
     {
+      "id": "quad-color",
+      "title": "Quad Color",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "quadratic-place",
       "title": "Quadratic Place",
       "section": "Placement"
@@ -476,6 +536,11 @@
     {
       "id": "sat-cnf-lite",
       "title": "Sat Cnf Lite",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "scanline-sweep",
+      "title": "Scanline Sweep",
       "section": "Clustering & refinement"
     },
     {
@@ -537,6 +602,16 @@
       "id": "simulated-annealing-fp",
       "title": "Simulated Annealing Fp",
       "section": "Floorplanning"
+    },
+    {
+      "id": "single-layer-edge-pair",
+      "title": "Single Layer Edge Pair",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "single-layer-region",
+      "title": "Single Layer Region",
+      "section": "Clustering & refinement"
     },
     {
       "id": "site-row-model",
@@ -604,6 +679,11 @@
       "section": "Placement"
     },
     {
+      "id": "stitch-lite",
+      "title": "Stitch Lite",
+      "section": "Clustering & refinement"
+    },
+    {
       "id": "structural-hash",
       "title": "Structural Hash",
       "section": "Clustering & refinement"
@@ -651,6 +731,16 @@
     {
       "id": "track-usage",
       "title": "Track Usage",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "triple-color",
+      "title": "Triple Color",
+      "section": "Clustering & refinement"
+    },
+    {
+      "id": "triple-decomp",
+      "title": "Triple Decomp",
       "section": "Clustering & refinement"
     },
     {
@@ -3606,12 +3696,193 @@
     },
     {
       "id": "learn_pattern_matching",
-      "title": "Pattern matching",
-      "focus": "DRC-style edge/region patterns",
-      "status": "planned",
+      "title": "Pattern matching for EDA",
+      "focus": "Edges \u2192 single-layer space/width \u2192 scanline \u2192 markers \u2192 multi-layer via/boolean \u2192 match engine",
+      "status": "ready",
       "repo": "learn_pattern_matching",
       "prereq": null,
-      "labs": []
+      "labs": [
+        {
+          "n": "01",
+          "slug": "intro",
+          "moduleId": "module00-00-intro",
+          "kind": "intro",
+          "title": "Welcome to pattern matching",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "02",
+          "slug": "edges-polygons",
+          "moduleId": "module01-01-edges-polygons",
+          "kind": "lab",
+          "title": "Edges and polygons",
+          "toolId": "edges-polygons",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "03",
+          "slug": "single-layer-edge-pair",
+          "moduleId": "module01-03-single-layer-edge-pair",
+          "kind": "lab",
+          "title": "Single-layer edge-pair (space)",
+          "toolId": "single-layer-edge-pair",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "04",
+          "slug": "single-layer-region",
+          "moduleId": "module01-05-single-layer-region",
+          "kind": "lab",
+          "title": "Single-layer region (width)",
+          "toolId": "single-layer-region",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "05",
+          "slug": "scanline-sweep",
+          "moduleId": "module02-01-scanline-sweep",
+          "kind": "lab",
+          "title": "Scanline edge sweep",
+          "toolId": "scanline-sweep",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "06",
+          "slug": "marker-emit",
+          "moduleId": "module02-03-marker-emit",
+          "kind": "lab",
+          "title": "Marker emit",
+          "toolId": "marker-emit",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "07",
+          "slug": "multi-layer-via",
+          "moduleId": "module03-01-multi-layer-via",
+          "kind": "lab",
+          "title": "Multi-layer via enclosure",
+          "toolId": "multi-layer-via",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "08",
+          "slug": "multi-layer-interaction",
+          "moduleId": "module03-03-multi-layer-interaction",
+          "kind": "lab",
+          "title": "Multi-layer interactions",
+          "toolId": "multi-layer-interaction",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "09",
+          "slug": "layered-boolean",
+          "moduleId": "module03-05-layered-boolean",
+          "kind": "lab",
+          "title": "Layered boolean (AND/OR)",
+          "toolId": "layered-boolean",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "10",
+          "slug": "match-engine",
+          "moduleId": "module04-01-match-engine",
+          "kind": "lab",
+          "title": "Match engine pass",
+          "toolId": "match-engine",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "11",
+          "slug": "offline-benchmark-compare",
+          "moduleId": "module05-01-offline-benchmark-compare",
+          "kind": "offline",
+          "title": "Offline benchmark compare",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "12",
+          "slug": "wrap",
+          "moduleId": "module99-00-wrap",
+          "kind": "wrap",
+          "title": "Pattern matching path complete",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        }
+      ]
     },
     {
       "id": "learn_drc",
@@ -3642,12 +3913,193 @@
     },
     {
       "id": "learn_multi_patterning",
-      "title": "Multi-patterning",
-      "focus": "Coloring / decomposition constraints",
-      "status": "planned",
+      "title": "Multi-patterning for EDA",
+      "focus": "Conflict graph \u2192 LELE DP \u2192 bipartite \u2192 SADP \u2192 stitch \u2192 TP/QP coloring \u2192 MP engine",
+      "status": "ready",
       "repo": "learn_multi_patterning",
       "prereq": null,
-      "labs": []
+      "labs": [
+        {
+          "n": "01",
+          "slug": "intro",
+          "moduleId": "module00-00-intro",
+          "kind": "intro",
+          "title": "Welcome to multi-patterning",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "02",
+          "slug": "conflict-graph",
+          "moduleId": "module01-01-conflict-graph",
+          "kind": "lab",
+          "title": "Conflict graph construction",
+          "toolId": "conflict-graph",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "03",
+          "slug": "double-lele",
+          "moduleId": "module01-03-double-lele",
+          "kind": "lab",
+          "title": "LELE double patterning",
+          "toolId": "double-lele",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "04",
+          "slug": "bipartite-check",
+          "moduleId": "module01-05-bipartite-check",
+          "kind": "lab",
+          "title": "Bipartite check (DP feasibility)",
+          "toolId": "bipartite-check",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "05",
+          "slug": "double-sadp",
+          "moduleId": "module02-01-double-sadp",
+          "kind": "lab",
+          "title": "SADP lite (mandrels + spacers)",
+          "toolId": "double-sadp",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "06",
+          "slug": "stitch-lite",
+          "moduleId": "module02-03-stitch-lite",
+          "kind": "lab",
+          "title": "Stitch lite (break odd cycle)",
+          "toolId": "stitch-lite",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "07",
+          "slug": "triple-color",
+          "moduleId": "module03-01-triple-color",
+          "kind": "lab",
+          "title": "Triple patterning (3-color)",
+          "toolId": "triple-color",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "08",
+          "slug": "triple-decomp",
+          "moduleId": "module03-03-triple-decomp",
+          "kind": "lab",
+          "title": "Triple decomp literacy",
+          "toolId": "triple-decomp",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "09",
+          "slug": "quad-color",
+          "moduleId": "module03-05-quad-color",
+          "kind": "lab",
+          "title": "Quad patterning (4-color greedy)",
+          "toolId": "quad-color",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "10",
+          "slug": "mp-engine",
+          "moduleId": "module04-01-mp-engine",
+          "kind": "lab",
+          "title": "Multi-patterning engine",
+          "toolId": "mp-engine",
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "11",
+          "slug": "offline-benchmark-compare",
+          "moduleId": "module05-01-offline-benchmark-compare",
+          "kind": "offline",
+          "title": "Offline benchmark compare",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        },
+        {
+          "n": "12",
+          "slug": "wrap",
+          "moduleId": "module99-00-wrap",
+          "kind": "wrap",
+          "title": "Multi-patterning path complete",
+          "toolId": null,
+          "status": "shipped",
+          "media": {
+            "video": true,
+            "pdf": true,
+            "pptx": true,
+            "quiz": true
+          }
+        }
+      ]
     },
     {
       "id": "learn_rule_dsl",

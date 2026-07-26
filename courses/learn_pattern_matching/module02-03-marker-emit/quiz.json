@@ -1,0 +1,38 @@
+{
+  "module": "module02-03-marker-emit",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Marker fields include?",
+      "choices": [
+        "type+shapes",
+        "only color",
+        "SDF only",
+        "clock"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "emit_markers includes?",
+      "choices": [
+        "width+space",
+        "LVS only",
+        "CTS",
+        "IR drop"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Thin shape marker?",
+      "choices": [
+        "D",
+        "C",
+        "chip",
+        "M2"
+      ],
+      "answer": 0
+    }
+  ]
+}

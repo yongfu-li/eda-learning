@@ -1,0 +1,38 @@
+{
+  "module": "module02-01-scanline-sweep",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "M1 scan events?",
+      "choices": [
+        "6",
+        "3",
+        "12",
+        "20"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Enter uses?",
+      "choices": [
+        "x0",
+        "x1",
+        "y1",
+        "area"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Leave uses?",
+      "choices": [
+        "x1",
+        "x0",
+        "layer",
+        "via"
+      ],
+      "answer": 0
+    }
+  ]
+}

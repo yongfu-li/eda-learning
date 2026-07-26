@@ -1,0 +1,38 @@
+{
+  "module": "module03-05-quad-color",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "colors_used golden?",
+      "choices": [
+        "3",
+        "4",
+        "2",
+        "6"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "k for quad?",
+      "choices": [
+        "4",
+        "3",
+        "2",
+        "1"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Quad ok on toy?",
+      "choices": [
+        "True",
+        "False",
+        "DP only",
+        "unknown"
+      ],
+      "answer": 0
+    }
+  ]
+}

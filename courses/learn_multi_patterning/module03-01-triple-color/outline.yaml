@@ -1,0 +1,59 @@
+title: Triple patterning
+footer: learn_multi_patterning — 01 triple color
+slides:
+- type: title
+  title: Triple patterning
+  subtitle: When two masks fail, triple patterning assigns three masks with a 3-coloring
+  notes: When two masks fail, triple patterning assigns three masks with a 3-coloring.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: colors_used=3, ok=True on tiny_mp'
+  notes: 'GOLDEN: colors_used=3, ok=True on tiny_mp.'
+- type: image
+  title: Need 3
+  image: assets/steps/01-need.png
+  caption: Need 3
+  notes: Triangle needs a third mask.
+- type: image
+  title: Backtrack
+  image: assets/steps/02-bt.png
+  caption: Backtrack
+  notes: Search a valid 3-coloring.
+- type: image
+  title: Assign
+  image: assets/steps/03-asg.png
+  caption: Assign
+  notes: Assign colors 1..3.
+- type: image
+  title: Used 3
+  image: assets/steps/04-used.png
+  caption: Used 3
+  notes: colors_used=3.
+- type: image
+  title: Success
+  image: assets/steps/05-ok.png
+  caption: Success
+  notes: GOLDEN TP ok with 3 masks.
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **triple-color**. Run triple backtrack; confirm colors_used=3.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call triple_pattern(method='backtrack'); assert ok and colors_used==3
+  notes: Call triple_pattern(method='backtrack'); assert ok and colors_used==3.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Greedy-only when backtrack is required
+  - Stopping at 2 colors after stitch lesson
+  notes: Greedy-only when backtrack is required. Stopping at 2 colors after stitch
+    lesson.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: compare greedy vs backtrack decompositions'
+  notes: 'Next: compare greedy vs backtrack decompositions.'

@@ -1,0 +1,38 @@
+title: Welcome
+footer: learn_pattern_matching — 00 intro
+slides:
+- type: title
+  title: Welcome
+  subtitle: Physical verification starts by matching geometry patterns , edge pairs,
+    regions, markers , before full DRC decks
+  notes: Physical verification starts by matching geometry patterns — edge pairs,
+    regions, markers — before full DRC decks.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'This course uses tiny_patterns: M1 shapes A,B,D, M2 shape C, via V'
+  - 'Goldens: width on D, space A–B, enclosure fail V vs M2 → 3 markers'
+  notes: 'This course uses tiny_patterns: M1 shapes A,B,D, M2 shape C, via V. Goldens:
+    width on D, space A–B, enclosure fail V vs M2 → 3 markers.'
+- type: bullets
+  title: Two tracks
+  bullets:
+  - Implement track uses common/ solvers; browser lab track uses platform tools
+  notes: Implement track uses common/ solvers; browser lab track uses platform tools.
+- type: bullets
+  title: Toy layout
+  bullets:
+  - Five shapes on M1, M2, and VIA; three engine markers on the golden
+  notes: Five shapes on M1, M2, and VIA; three engine markers on the golden.
+- type: bullets
+  title: Path
+  bullets:
+  - Edge-pair space, width region, scanline, markers, via, interactions, boolean,
+    engine
+  notes: Edges, edge-pair space, width region, scanline, markers, via, interactions,
+    boolean, engine.
+- type: bullets
+  title: Begin
+  bullets:
+  - 'Next: edges and polygons'
+  notes: 'Next: edges and polygons.'

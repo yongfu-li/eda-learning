@@ -1,0 +1,38 @@
+title: Welcome
+footer: learn_multi_patterning — 00 intro
+slides:
+- type: title
+  title: Welcome
+  subtitle: Same-mask spacing forces features onto multiple masks , double (DP), triple
+    (TP), or quad (QP) patterning
+  notes: Same-mask spacing forces features onto multiple masks — double (DP), triple
+    (TP), or quad (QP) patterning.
+- type: bullets
+  title: The idea
+  bullets:
+  - Features A–F; triangle A-B-C blocks DP; path D-E-F is 2-colorable; TP needs 3
+    masks
+  notes: 'Toy tiny_mp: features A–F; triangle A-B-C blocks DP; path D-E-F is 2-colorable;
+    TP needs 3 masks.'
+- type: bullets
+  title: Two tracks
+  bullets:
+  - Implement track uses common/ solvers; browser lab track uses platform tools
+  notes: Implement track uses common/ solvers; browser lab track uses platform tools.
+- type: bullets
+  title: Toy layout
+  bullets:
+  - Six features A–F; triangle A-B-C blocks DP; path D-E-F is 2-colorable; TP needs
+    3 masks
+  notes: Six features A–F; triangle A-B-C blocks DP; path D-E-F is 2-colorable; TP
+    needs 3 masks.
+- type: bullets
+  title: Path
+  bullets:
+  - Conflict graph, LELE, bipartite check, SADP, stitch, triple/quad color, engine
+  notes: Conflict graph, LELE, bipartite check, SADP, stitch, triple/quad color, engine.
+- type: bullets
+  title: Begin
+  bullets:
+  - 'Next: conflict graph construction'
+  notes: 'Next: conflict graph construction.'

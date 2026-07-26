@@ -1,0 +1,38 @@
+{
+  "module": "module03-03-multi-layer-interaction",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "A\u2013V interaction?",
+      "choices": [
+        "yes",
+        "no",
+        "same layer",
+        "only M2"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Same-layer pairs?",
+      "choices": [
+        "excluded",
+        "required",
+        "only vias",
+        "always"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Test used?",
+      "choices": [
+        "rect overlap",
+        "HPWL",
+        "STA slack",
+        "BFS"
+      ],
+      "answer": 0
+    }
+  ]
+}

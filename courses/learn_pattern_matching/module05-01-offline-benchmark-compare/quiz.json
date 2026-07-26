@@ -1,0 +1,38 @@
+{
+  "module": "module05-01-offline-benchmark-compare",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Focus of Offline?",
+      "choices": [
+        "Print pattern_compare metrics offline without the browser.",
+        "Place only",
+        "CTS only",
+        "SPICE"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Course id?",
+      "choices": [
+        "learn_pattern_matching",
+        "learn_drc",
+        "learn_compaction",
+        "learn_sta"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Engine marker count golden?",
+      "choices": [
+        "3",
+        "1",
+        "20",
+        "0"
+      ],
+      "answer": 0
+    }
+  ]
+}
