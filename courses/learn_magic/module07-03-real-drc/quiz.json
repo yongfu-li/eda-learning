@@ -1,0 +1,38 @@
+{
+  "moduleId": "module07-03-real-drc",
+  "items": [
+    {
+      "q": "DRC error count golden?",
+      "choices": [
+        "1",
+        "0",
+        "6",
+        "3"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Violation shape?",
+      "choices": [
+        "thin",
+        "m1y",
+        "ca",
+        "g"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Violation layer?",
+      "choices": [
+        "metal1",
+        "poly",
+        "ndiff",
+        "nwell"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

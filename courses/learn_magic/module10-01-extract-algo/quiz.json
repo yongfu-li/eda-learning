@@ -1,0 +1,38 @@
+{
+  "moduleId": "module10-01-extract-algo",
+  "items": [
+    {
+      "q": "Extract node count?",
+      "choices": [
+        "3",
+        "6",
+        "1",
+        "0"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Layers extracted?",
+      "choices": [
+        "poly, ndiff, pdiff",
+        "metal1 only",
+        "nwell only",
+        "GDS only"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Extract purpose?",
+      "choices": [
+        "device/active regions",
+        "STA slack",
+        "LEF only",
+        "Verilog sim"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

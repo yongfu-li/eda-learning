@@ -1,0 +1,86 @@
+title: Why algorithms
+footer: learn_opensta — 03 levelize propagate
+slides:
+- type: title
+  title: Why algorithms
+  subtitle: Levelize the graph and propagate arrivals/required
+  notes: Levelize the graph and propagate arrivals/required.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: levels a/b=0…y=3; A(y)=2 R(y)=10'
+  notes: 'GOLDEN: levels a/b=0…y=3; A(y)=2 R(y)=10.'
+- type: image
+  title: Levelize
+  image: assets/steps/01-level.png
+  caption: Levelize
+  notes: Inputs at level 0; each arc raises sink level by 1.
+- type: image
+  title: Level n1
+  image: assets/steps/02-n1.png
+  caption: Level n1
+  notes: n1 is level 1.
+- type: image
+  title: Arrival y
+  image: assets/steps/03-ay.png
+  caption: Arrival y
+  notes: Forward max arrival reaches y at 2.0.
+- type: image
+  title: Required y
+  image: assets/steps/04-ry.png
+  caption: Required y
+  notes: Required at y equals period 10.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: A(y)=2 R(y)=10.'
+- type: bullets
+  title: Browser lab track
+  bullets:
+  - Open **levelize-propagate**
+  - Run Graph / Levelize / Propagate / Slack / Bind, then Check
+  notes: Open **levelize-propagate**. Run Graph / Levelize / Propagate / Slack / Bind,
+    then Check.
+- type: bullets
+  title: Implement track
+  bullets:
+  - From common/, run algo_solvers.py and partc_bind.py
+  notes: From common/, run algo_solvers.py and partc_bind.py.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Changing tiny_algo_sta without updating Part B liberty delays
+  - Ignoring the bind side
+  notes: Changing tiny_algo_sta without updating Part B liberty delays. Ignoring the
+    bind side.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder, run the Part C self-tests
+  notes: From the common folder, run the Part C self-tests.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_opensta/common
+
+    python3 algo_solvers.py
+
+    python3 partc_bind.py'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the check in plain steps
+  notes: Here is the check in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: 'levels a/b=0…y=3; A(y)=2 R(y)=10.
+
+    ok if goldens match and bind'
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue Part C, then wrap , internals literacy is next
+  notes: Continue Part C, then wrap — internals literacy is next.

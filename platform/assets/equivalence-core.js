@@ -479,30 +479,63 @@ export function drawEquivalence(canvas, opts = {}) {
   const highlight = new Set(opts.highlight || []);
   const selected = opts.selected || null;
   const assignment = opts.assignment || null;
-  const values = assignment ? (() => {
-    const vals = { ...assignment };
-    const gmap = gateMap(circuit);
-    for (const gid of topoOrder(circuit)) {
-      const g = gmap[gid];
-      vals[gid] = evalOp(
-        g.op,
-        g.inputs.map((i) => vals[i] ?? 0)
-      );
-    }
-    return vals;
-  })() : null;
+  const paper = !!opts.paper;
+  const ink = paper ? "#000000" : "#0f172a";
+  const PAPER_FONT =
+    "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
+  const PAPER_FILL = {
+    pi: "#1d4ed8",
+    state: "#6d28d9",
+    gate: "#0f6b5c",
+    out: "#9f1239",
+  };
+  const PAPER_GATES = ["#0f6b5c", "#b45309", "#0369a1", "#c2410c", "#7c3aed"];
+
+  const values = assignment
+    ? (() => {
+        const vals = { ...assignment };
+        const gmap = gateMap(circuit);
+        for (const gid of topoOrder(circuit)) {
+          const g = gmap[gid];
+          vals[gid] = evalOp(
+            g.op,
+            g.inputs.map((i) => vals[i] ?? 0)
+          );
+        }
+        return vals;
+      })()
+    : null;
+
+  if (paper) canvas.style.background = "#ffffff";
 
   const { ctx, w, h } = fitHiDpiCanvas(canvas, { w: 640, h: LAB_CANVAS_CSS_HEIGHT });
   ctx.clearRect(0, 0, w, h);
-  ctx.fillStyle = "#f8fafc";
+  ctx.fillStyle = paper ? "#ffffff" : "#f8fafc";
   ctx.fillRect(0, 0, w, h);
-  const pad = 28;
+  const pad = paper ? 36 : 28;
+  const legendH = paper ? 28 : 0;
+  const titleH = paper && opts.metricText ? 22 : 0;
   const CHIP_W = 11;
   const CHIP_H = 8;
-  const scale = Math.min((w - 2 * pad) / CHIP_W, (h - 2 * pad) / CHIP_H);
+  const scale = Math.min(
+    (w - 2 * pad) / CHIP_W,
+    (h - 2 * pad - legendH - titleH) / CHIP_H
+  );
   const ox = (w - CHIP_W * scale) / 2;
-  const oy = h - pad - (h - 2 * pad - CHIP_H * scale) / 2;
+  const oy =
+    h - pad - legendH - (h - 2 * pad - legendH - titleH - CHIP_H * scale) / 2;
   const toScreen = (x, y) => ({ sx: ox + x * scale, sy: oy - y * scale });
+
+  if (paper) {
+    ctx.strokeStyle = "#cbd5e1";
+    ctx.lineWidth = 1;
+    ctx.strokeRect(
+      pad * 0.55,
+      pad * 0.55 + titleH * 0.3,
+      w - pad * 1.1,
+      h - pad * 1.1 - legendH
+    );
+  }
 
   for (const g of circuit.gates || []) {
     for (const inp of g.inputs) {
@@ -512,12 +545,30 @@ export function drawEquivalence(canvas, opts = {}) {
       const p0 = toScreen(a.x, a.y);
       const p1 = toScreen(b.x, b.y);
       const hot = highlight.has(g.id) || highlight.has(inp);
-      ctx.strokeStyle = hot ? "rgba(234,179,8,0.95)" : "rgba(100,116,139,0.75)";
-      ctx.lineWidth = hot ? 3 : 2;
+      ctx.strokeStyle = paper
+        ? hot
+          ? "#b45309"
+          : "#64748b"
+        : hot
+          ? "rgba(234,179,8,0.95)"
+          : "rgba(100,116,139,0.75)";
+      ctx.lineWidth = paper ? (hot ? 3 : 1.75) : hot ? 3 : 2;
       ctx.beginPath();
       ctx.moveTo(p0.sx, p0.sy);
       ctx.lineTo(p1.sx, p1.sy);
       ctx.stroke();
+      if (paper) {
+        const ang = Math.atan2(p1.sy - p0.sy, p1.sx - p0.sx);
+        const tipX = p1.sx - 14 * Math.cos(ang);
+        const tipY = p1.sy - 14 * Math.sin(ang);
+        ctx.beginPath();
+        ctx.moveTo(tipX, tipY);
+        ctx.lineTo(tipX - 7 * Math.cos(ang - 0.4), tipY - 7 * Math.sin(ang - 0.4));
+        ctx.lineTo(tipX - 7 * Math.cos(ang + 0.4), tipY - 7 * Math.sin(ang + 0.4));
+        ctx.closePath();
+        ctx.fillStyle = ctx.strokeStyle;
+        ctx.fill();
+      }
     }
   }
 
@@ -526,56 +577,140 @@ export function drawEquivalence(canvas, opts = {}) {
     if (!p) continue;
     const { sx, sy } = toScreen(p.x, p.y);
     const active = selected === pi || highlight.has(pi);
-    ctx.fillStyle = "#3b82f6";
+    const rad = paper ? (active ? 15 : 13) : active ? 15 : 13;
     ctx.beginPath();
-    ctx.arc(sx, sy, active ? 15 : 13, 0, Math.PI * 2);
+    ctx.arc(sx, sy, rad, 0, Math.PI * 2);
+    ctx.fillStyle = paper ? PAPER_FILL.pi : "#3b82f6";
     ctx.fill();
-    ctx.fillStyle = "#0f172a";
-    ctx.font = "12px ui-sans-serif, system-ui";
-    ctx.fillText(pi, sx - 4, sy + 4);
-    if (values) {
-      ctx.fillStyle = "#1d4ed8";
-      ctx.fillText(String(values[pi] ?? 0), sx + 12, sy - 10);
+    if (paper) {
+      ctx.strokeStyle = ink;
+      ctx.lineWidth = active ? 2.25 : 1.35;
+      ctx.stroke();
     }
+    ctx.fillStyle = paper ? "#ffffff" : "#0f172a";
+    ctx.font = paper ? `bold 12px ${PAPER_FONT}` : "12px ui-sans-serif, system-ui";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(pi, sx, sy);
+    if (values) {
+      ctx.fillStyle = paper ? ink : "#1d4ed8";
+      ctx.font = paper ? `bold 11px ${PAPER_FONT}` : "12px ui-sans-serif, system-ui";
+      ctx.fillText(String(values[pi] ?? 0), sx + rad + 8, sy - 8);
+    }
+    ctx.textAlign = "start";
+    ctx.textBaseline = "alphabetic";
   }
 
   for (const st of circuit.state || []) {
     const p = layout[st];
     if (!p) continue;
     const { sx, sy } = toScreen(p.x, p.y);
-    ctx.fillStyle = "#a855f7";
-    ctx.fillRect(sx - 14, sy - 12, 28, 24);
-    ctx.fillStyle = "#fff";
-    ctx.font = "11px ui-sans-serif, system-ui";
-    ctx.fillText(st, sx - 6, sy + 4);
+    ctx.fillStyle = paper ? PAPER_FILL.state : "#a855f7";
+    if (paper) ctx.globalAlpha = 0.92;
+    ctx.fillRect(sx - 16, sy - 13, 32, 26);
+    ctx.globalAlpha = 1;
+    if (paper) {
+      ctx.strokeStyle = ink;
+      ctx.lineWidth = 1.5;
+      ctx.strokeRect(sx - 16, sy - 13, 32, 26);
+    }
+    ctx.fillStyle = "#ffffff";
+    ctx.font = paper ? `bold 11px ${PAPER_FONT}` : "11px ui-sans-serif, system-ui";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(st, sx, sy);
+    ctx.textAlign = "start";
+    ctx.textBaseline = "alphabetic";
   }
 
+  let gateIdx = 0;
   for (const g of circuit.gates || []) {
     const p = layout[g.id];
     if (!p) continue;
     const { sx, sy } = toScreen(p.x, p.y);
     const active = selected === g.id || highlight.has(g.id);
     const isOut = !!g.output;
-    ctx.fillStyle = isOut ? "#ef4444" : active ? "#22c55e" : "#4ade80";
-    ctx.fillRect(sx - 22, sy - 14, 44, 28);
-    ctx.strokeStyle = "#14532d";
-    ctx.strokeRect(sx - 22, sy - 14, 44, 28);
-    ctx.fillStyle = "#0f172a";
-    ctx.font = "10px ui-sans-serif, system-ui";
-    ctx.fillText(g.op, sx - 14, sy - 2);
-    ctx.fillText(g.id, sx - 10, sy + 12);
+    const bw = paper ? 48 : 44;
+    const bh = paper ? 30 : 28;
+    ctx.fillStyle = paper
+      ? isOut
+        ? PAPER_FILL.out
+        : PAPER_GATES[gateIdx % PAPER_GATES.length]
+      : isOut
+        ? "#ef4444"
+        : active
+          ? "#22c55e"
+          : "#4ade80";
+    gateIdx += 1;
+    if (paper) ctx.globalAlpha = 0.92;
+    ctx.fillRect(sx - bw / 2, sy - bh / 2, bw, bh);
+    ctx.globalAlpha = 1;
+    ctx.strokeStyle = paper ? ink : "#14532d";
+    ctx.lineWidth = paper ? (active ? 2.25 : 1.5) : 1;
+    ctx.strokeRect(sx - bw / 2, sy - bh / 2, bw, bh);
+    ctx.fillStyle = "#ffffff";
+    ctx.font = paper ? `bold 10px ${PAPER_FONT}` : "10px ui-sans-serif, system-ui";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(g.op, sx, sy - 6);
+    ctx.fillText(g.id, sx, sy + 8);
     if (values && values[g.id] != null) {
-      ctx.fillStyle = "#7c3aed";
-      ctx.fillText(`=${values[g.id]}`, sx + 24, sy + 4);
+      ctx.fillStyle = paper ? "#6d28d9" : "#7c3aed";
+      ctx.font = paper ? `bold 11px ${PAPER_FONT}` : "10px ui-sans-serif, system-ui";
+      ctx.fillText(`=${values[g.id]}`, sx + bw / 2 + 10, sy);
     }
+    ctx.textAlign = "start";
+    ctx.textBaseline = "alphabetic";
   }
 
   if (opts.metricText) {
-    ctx.fillStyle = "rgba(15,23,42,0.85)";
-    ctx.fillRect(pad, pad - 4, Math.min(420, w - 2 * pad), 22);
-    ctx.fillStyle = "#f8fafc";
-    ctx.font = "13px ui-sans-serif, system-ui";
-    ctx.fillText(opts.metricText, pad + 8, pad + 12);
+    if (paper) {
+      ctx.fillStyle = ink;
+      ctx.font = `bold 13px ${PAPER_FONT}`;
+      ctx.textAlign = "left";
+      ctx.fillText(opts.metricText, pad, pad - 10);
+    } else {
+      ctx.fillStyle = "rgba(15,23,42,0.85)";
+      ctx.fillRect(pad, pad - 4, Math.min(420, w - 2 * pad), 22);
+      ctx.fillStyle = "#f8fafc";
+      ctx.font = "13px ui-sans-serif, system-ui";
+      ctx.fillText(opts.metricText, pad + 8, pad + 12);
+    }
+  }
+
+  if (paper) {
+    const ly = h - Math.round(legendH / 2) - 2;
+    let lx = pad;
+    ctx.font = `11px ${PAPER_FONT}`;
+    ctx.textAlign = "left";
+    ctx.textBaseline = "middle";
+    const items = [
+      { label: "PI", color: PAPER_FILL.pi, shape: "circle" },
+      { label: "gate", color: PAPER_FILL.gate, shape: "rect" },
+      { label: "PO", color: PAPER_FILL.out, shape: "rect" },
+      { label: "state", color: PAPER_FILL.state, shape: "rect" },
+    ];
+    for (const it of items) {
+      if (it.shape === "circle") {
+        ctx.beginPath();
+        ctx.arc(lx + 5, ly, 5, 0, Math.PI * 2);
+        ctx.fillStyle = it.color;
+        ctx.fill();
+        ctx.strokeStyle = ink;
+        ctx.lineWidth = 1.2;
+        ctx.stroke();
+      } else {
+        ctx.fillStyle = it.color;
+        ctx.fillRect(lx, ly - 5, 10, 10);
+        ctx.strokeStyle = ink;
+        ctx.lineWidth = 1.2;
+        ctx.strokeRect(lx, ly - 5, 10, 10);
+      }
+      ctx.fillStyle = ink;
+      ctx.fillText(it.label, lx + 16, ly);
+      lx += 16 + ctx.measureText(it.label).width + 16;
+    }
+    ctx.textBaseline = "alphabetic";
   }
 
   return { layout, toScreen };

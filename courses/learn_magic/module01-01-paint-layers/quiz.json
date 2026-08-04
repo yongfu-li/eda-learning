@@ -1,0 +1,38 @@
+{
+  "moduleId": "module01-01-paint-layers",
+  "items": [
+    {
+      "q": "How many rects in tiny_inv?",
+      "choices": [
+        "6",
+        "1",
+        "10",
+        "0"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "metal1 paint count?",
+      "choices": [
+        "2",
+        "6",
+        "1",
+        "0"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Which layer is the gate?",
+      "choices": [
+        "poly",
+        "metal1",
+        "nwell",
+        "contact"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "module": "module03-03-lvs-compare",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "mismatch_count?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "4"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "matched_nets?",
+      "choices": [
+        "4",
+        "2",
+        "6",
+        "0"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "compare ok?",
+      "choices": [
+        "True",
+        "False",
+        "unknown",
+        "N/A"
+      ],
+      "answer": 0
+    }
+  ]
+}

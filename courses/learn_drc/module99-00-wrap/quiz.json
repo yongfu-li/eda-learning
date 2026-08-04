@@ -1,0 +1,38 @@
+{
+  "module": "module99-00-wrap",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Focus of Wrap?",
+      "choices": [
+        "Recap deck, width, spacing, enclosure, markers, multi-layer,",
+        "Place only",
+        "CTS only",
+        "ERC floating"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Course id?",
+      "choices": [
+        "learn_drc",
+        "learn_pattern_matching",
+        "learn_lvs",
+        "learn_erc"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "violation_count golden?",
+      "choices": [
+        "3",
+        "1",
+        "8",
+        "0"
+      ],
+      "answer": 0
+    }
+  ]
+}

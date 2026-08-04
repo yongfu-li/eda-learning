@@ -1,0 +1,38 @@
+{
+  "moduleId": "module03-01-lvs-report-map",
+  "items": [
+    {
+      "q": "Matched devices golden?",
+      "choices": [
+        "2",
+        "4",
+        "0",
+        "1"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Mismatch count?",
+      "choices": [
+        "0",
+        "2",
+        "4",
+        "1"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Report summarizes?",
+      "choices": [
+        "LVS compare results",
+        "Place only",
+        "STA only",
+        "GDS stream"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

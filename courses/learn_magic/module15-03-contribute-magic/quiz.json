@@ -1,0 +1,38 @@
+{
+  "moduleId": "module15-03-contribute-magic",
+  "items": [
+    {
+      "q": "New command source often lives under?",
+      "choices": [
+        "commands/*.c",
+        "platform/tools only",
+        "common/rtl only",
+        "docs/SCOPE.md only"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Minimal stub needs?",
+      "choices": [
+        "Tcl cmd + register + Makefile + rebuild",
+        "only README",
+        "only quiz",
+        "only Liberty"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Smoke after rebuild?",
+      "choices": [
+        "magic -help drc",
+        "only browser restart",
+        "edit goldens.json",
+        "run sta"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "moduleId": "module02-01-contact-paint",
+  "items": [
+    {
+      "q": "Contact count golden?",
+      "choices": [
+        "1",
+        "6",
+        "0",
+        "2"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Contact id?",
+      "choices": [
+        "ca",
+        "thin",
+        "g",
+        "m1y"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Contact bridges?",
+      "choices": [
+        "poly and metal1",
+        "nwell only",
+        "STA clk",
+        "GDS only"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

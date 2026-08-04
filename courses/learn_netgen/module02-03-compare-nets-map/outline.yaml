@@ -1,0 +1,82 @@
+title: Why Compare
+footer: learn_netgen — 03 compare nets map
+slides:
+- type: title
+  title: Why Compare
+  subtitle: Match net names between schematic and layout
+  notes: Match net names between schematic and layout.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: matched_nets=4'
+  notes: 'GOLDEN: matched_nets=4.'
+- type: image
+  title: Four nets
+  image: assets/steps/01-nets.png
+  caption: Four nets
+  notes: A, Y, VDD, VSS appear on both sides.
+- type: image
+  title: All match
+  image: assets/steps/02-match.png
+  caption: All match
+  notes: Set intersection gives four matched nets.
+- type: image
+  title: Schematic nets
+  image: assets/steps/03-sch.png
+  caption: Schematic nets
+  notes: Schematic net names from devices + ports.
+- type: image
+  title: Layout nets
+  image: assets/steps/04-lay.png
+  caption: Layout nets
+  notes: Layout net names from extract SPICE.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: matched_nets=4.'
+- type: bullets
+  title: Browser lab track
+  bullets:
+  - Open **compare-nets-map**
+  - Run the stage buttons and Check the goldens
+  notes: Open **compare-nets-map**. Run the stage buttons and Check the goldens.
+- type: bullets
+  title: Implement track
+  bullets:
+  - From common/, run solvers.py and confirm NETGEN_PARTA_OK
+  notes: From common/, run solvers.py and confirm NETGEN_PARTA_OK.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Confusing schematic SPICE with layout extract
+  - Forgetting permute on source/drain
+  notes: Confusing schematic SPICE with layout extract. Forgetting permute on source/drain.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder, run the Netgen map self-test
+  notes: From the common folder, run the Netgen map self-test.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_netgen/common
+
+    python3 solvers.py'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the check in plain steps
+  notes: Here is the check in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: 'matched_nets=4.
+
+    ok if goldens match'
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue the Netgen Part A map, then the real CLI track
+  notes: Continue the Netgen Part A map, then the real CLI track.

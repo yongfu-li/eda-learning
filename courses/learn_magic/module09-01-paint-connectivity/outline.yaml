@@ -1,0 +1,86 @@
+title: Why algorithms
+footer: learn_magic — 01 paint connectivity
+slides:
+- type: title
+  title: Why algorithms
+  subtitle: Flood-fill metal1 nets; contact bridges poly and metal1
+  notes: Flood-fill metal1 nets; contact bridges poly and metal1.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: metal1_net_shapes=2; contact_count=1'
+  notes: 'GOLDEN: metal1_net_shapes=2; contact_count=1.'
+- type: image
+  title: metal1 shapes
+  image: assets/steps/01-m1.png
+  caption: metal1 shapes
+  notes: 'Two metal1 rectangles: m1y and thin (touching).'
+- type: image
+  title: One metal1 net
+  image: assets/steps/02-net.png
+  caption: One metal1 net
+  notes: Flood-fill connects m1y and thin.
+- type: image
+  title: Contact ca
+  image: assets/steps/03-ca.png
+  caption: Contact ca
+  notes: Contact bridges poly gate g and metal1.
+- type: image
+  title: poly link
+  image: assets/steps/04-poly.png
+  caption: poly link
+  notes: poly layer participates via contact.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: metal1_net_shapes=2 contact=1.'
+- type: bullets
+  title: Browser lab track
+  bullets:
+  - Open **paint-connectivity**
+  - Run connectivity / DRC / extract / bind, then Check
+  notes: Open **paint-connectivity**. Run connectivity / DRC / extract / bind, then
+    Check.
+- type: bullets
+  title: Implement track
+  bullets:
+  - From common/, run algo_solvers.py and partc_bind.py
+  notes: From common/, run algo_solvers.py and partc_bind.py.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Changing tiny_algo_magic without updating Part B goldens
+  - Ignoring the bind side
+  notes: Changing tiny_algo_magic without updating Part B goldens. Ignoring the bind
+    side.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder, run the Part C self-tests
+  notes: From the common folder, run the Part C self-tests.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_magic/common
+
+    python3 algo_solvers.py
+
+    python3 partc_bind.py'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the check in plain steps
+  notes: Here is the check in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: 'metal1_net_shapes=2; contact_count=1.
+
+    ok if goldens match and bind'
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue Part C, then internals literacy
+  notes: Continue Part C, then internals literacy.

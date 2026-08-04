@@ -1,0 +1,37 @@
+title: Wrap
+footer: learn_lvs — 00 wrap
+slides:
+- type: title
+  title: Wrap
+  subtitle: 'You checked tiny_lvs: mn1/mp1 schematic; X0/X1 layout; 4 nets bound;
+    matched_devices=2; engine ok'
+  notes: 'You checked tiny_lvs: mn1/mp1 schematic; X0/X1 layout; 4 nets bound; matched_devices=2;
+    engine ok.'
+- type: bullets
+  title: The idea
+  bullets:
+  - 'Natural next: learn_pex'
+  notes: 'Natural next: learn_pex.'
+- type: bullets
+  title: Recap
+  bullets:
+  - Recap schematic graph
+  notes: Recap schematic graph, device recog, net extract, layout graph, binding,
+    match, compare, engine.
+- type: bullets
+  title: Goldens
+  bullets:
+  - 2 sch devices; X0/X1 layout; 4 nets; matched_devices=2; mismatch=0; engine ok
+  notes: 2 sch devices; X0/X1 layout; 4 nets; matched_devices=2; mismatch=0; engine
+    ok.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - 'Natural next: learn_pex'
+  notes: 'Natural next: learn_pex.'
+- type: bullets
+  title: Close
+  bullets:
+  - Mark the wrap done when you can list the LVS pipeline stages
+  notes: Mark the wrap done when you can list the LVS pipeline stages.

@@ -1,0 +1,28 @@
+{
+  "note": "Netlist teaching IR for Netgen Part C (not the Netgen binary).",
+  "cell": "tiny_inv",
+  "schematic": {
+    "ports": { "A": "input", "Y": "output", "VDD": "power", "VSS": "ground" },
+    "devices": [
+      { "id": "mn1", "type": "nmos", "pins": { "G": "A", "D": "Y", "S": "VSS" } },
+      { "id": "mp1", "type": "pmos", "pins": { "G": "A", "D": "Y", "S": "VDD" } }
+    ]
+  },
+  "layout": {
+    "ports": { "A": "input", "Y": "output", "VDD": "power", "VSS": "ground" },
+    "devices": [
+      { "id": "X0", "type": "nmos", "pins": { "G": "A", "D": "Y", "S": "VSS" } },
+      { "id": "X1", "type": "pmos", "pins": { "G": "A", "D": "Y", "S": "VDD" } }
+    ]
+  },
+  "classes": { "nmos": "nmos", "pmos": "pmos" },
+  "permute": { "nmos": ["D", "S"], "pmos": ["D", "S"] },
+  "goldens": {
+    "hash_device_count": 2,
+    "matched_nets": 4,
+    "permute_ok": true,
+    "matched_devices": 2,
+    "mismatch_count": 0,
+    "engine_ok": true
+  }
+}

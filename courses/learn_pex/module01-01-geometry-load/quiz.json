@@ -1,0 +1,38 @@
+{
+  "module": "module01-01-geometry-load",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "segment_count golden?",
+      "choices": [
+        "4",
+        "3",
+        "5",
+        "8"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "layer_count golden?",
+      "choices": [
+        "3",
+        "4",
+        "2",
+        "1"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "first segment id?",
+      "choices": [
+        "s1",
+        "s2",
+        "v1",
+        "n1"
+      ],
+      "answer": 0
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+title: Why Magic internals
+footer: learn_magic — 03 contribute magic
+slides:
+- type: title
+  title: Why Magic internals
+  subtitle: Know where a new Tcl command lives and the minimal stub to build
+  notes: Know where a new Tcl command lives and the minimal stub to build.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: commands/cmd_drc.c + Tcl register + Makefile + magic -help drc'
+  notes: 'GOLDEN: commands/cmd_drc.c + Tcl register + Makefile + magic -help drc.'
+- type: image
+  title: Tree layout
+  image: assets/steps/01-tree.png
+  caption: Tree layout
+  notes: tiles/planes/cells hold layout; commands/ holds Tcl.
+- type: image
+  title: Stub file
+  image: assets/steps/02-stub.png
+  caption: Stub file
+  notes: 'Minimal .c: Tcl command drc registration.'
+- type: image
+  title: Makefile hook
+  image: assets/steps/03-build.png
+  caption: Makefile hook
+  notes: Add object to Makefile and rebuild Magic.
+- type: image
+  title: Smoke
+  image: assets/steps/04-smoke.png
+  caption: Smoke
+  notes: magic -help drc proves the command exists.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: path + tcl + makefile + rebuild + help.'
+- type: bullets
+  title: Browser lab track
+  bullets:
+  - Open **contribute-magic**
+  - Click through stages and check goldens
+  notes: Open **contribute-magic**. Click through stages and check goldens.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call contribute_magic() in internals_solvers; assert golden match
+  notes: Call contribute_magic() in internals_solvers; assert golden match.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Treating browser JSON as the C API
+  - Confusing Tile with OpenSTA Graph
+  notes: Treating browser JSON as the C API. Confusing Tile with OpenSTA Graph.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder, run the internals self-test
+  notes: From the common folder, run the internals self-test.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_magic/common
+
+    python3 internals_solvers.py'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the checklist in plain steps
+  notes: Here is the checklist in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: commands/cmd_drc.c + Tcl register + Makefile + magic -help drc.
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Wrap the Magic path , map, CLI evidence, algorithms, and C tree literacy
+  notes: Wrap the Magic path — map, CLI evidence, algorithms, and C tree literacy.

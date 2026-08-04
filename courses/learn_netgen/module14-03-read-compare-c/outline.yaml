@@ -1,0 +1,80 @@
+title: Why Netgen internals
+footer: learn_netgen — 03 read compare c
+slides:
+- type: title
+  title: Why Netgen internals
+  subtitle: Read the compare flow bound to Part B goldens
+  notes: Read the compare flow bound to Part B goldens.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: read_sch→read_lay→hash→match→emit (matched=2/4)'
+  notes: 'GOLDEN: read_sch→read_lay→hash→match→emit (matched=2/4).'
+- type: image
+  title: read_sch
+  image: assets/steps/01-sch.png
+  caption: read_sch
+  notes: Parse schematic SPICE into Netlist.
+- type: image
+  title: read_lay
+  image: assets/steps/02-lay.png
+  caption: read_lay
+  notes: Parse layout SPICE into Netlist.
+- type: image
+  title: hash_devices
+  image: assets/steps/03-hash.png
+  caption: hash_devices
+  notes: Group devices by class.
+- type: image
+  title: match_nets
+  image: assets/steps/04-match.png
+  caption: match_nets
+  notes: Compare net connectivity.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: matched=2/4 mismatch=0.'
+- type: bullets
+  title: Browser lab
+  bullets:
+  - Open **read-compare-c**
+  notes: Open **read-compare-c**.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call read_compare_c() in internals_solvers
+  notes: Call read_compare_c() in internals_solvers.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Treating browser JSON as the C API
+  notes: Treating browser JSON as the C API.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder, run the internals self-test
+  notes: From the common folder, run the internals self-test.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_netgen/common
+
+    python3 internals_solvers.py'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the checklist in plain steps
+  notes: Here is the checklist in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: 'read_sch→read_lay→hash→match→emit (matched=2/4).
+
+    ok if goldens match INTERNALS_GOLDENS'
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Wrap the Netgen path
+  notes: Wrap the Netgen path.

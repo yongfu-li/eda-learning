@@ -1,0 +1,38 @@
+{
+  "moduleId": "module10-01-marker-emit-algo",
+  "items": [
+    {
+      "q": "Marker count?",
+      "choices": [
+        "1",
+        "0",
+        "2",
+        "4"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Marker shape?",
+      "choices": [
+        "m0",
+        "p0",
+        "poly",
+        "GDS"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Emit from?",
+      "choices": [
+        "width violations",
+        "LVS compare",
+        "Place",
+        "STA"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

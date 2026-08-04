@@ -1,0 +1,38 @@
+{
+  "moduleId": "module15-03-contribute-klayout",
+  "items": [
+    {
+      "q": "Entry point often under?",
+      "choices": [
+        "src/lay/layMain/layMain.cc",
+        "platform/tools only",
+        "docs only",
+        "Liberty only"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Smoke after build?",
+      "choices": [
+        "klayout -h",
+        "browser restart",
+        "edit goldens",
+        "sta"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Contribute path in lab?",
+      "choices": [
+        "layMain.cc",
+        "magic-core.js",
+        "yosys.cc",
+        "LEF"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

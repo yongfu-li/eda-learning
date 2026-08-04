@@ -4,7 +4,7 @@
 [![Role](https://img.shields.io/badge/role-course-blue)](../../eda.md)
 [![Domain](https://img.shields.io/badge/domain-OpenSTA-orange)](docs/MODULES.md)
 
-**learn_opensta** is the open learning path for *OpenSTA* — **Part A timing/report map** and **Part B real CLI evidence** are ready. Parts C–D (algorithms, internals) are planned next. Companion to [learn_sta](../learn_sta/README.md).
+**learn_opensta** is the open learning path for *OpenSTA* — **Parts A–D** (timing map, real CLI evidence, algorithms bound to report goldens, internals / contribute) are ready. Companion to [learn_sta](../learn_sta/README.md).
 
 ## Table of contents
 
@@ -52,9 +52,10 @@ Open [platform courses](../../platform/courses/learn_opensta/) after publish, or
 ## Author: publish or update
 
 ```bash
-python3 courses/learn_opensta/scripts/generate_part_a.py
-bash courses/learn_opensta/scripts/capture_part_a.sh
-bash courses/learn_opensta/scripts/build_part_a_media.sh
+# Part D (also part_a / part_b / part_c scripts)
+python3 courses/learn_opensta/scripts/scaffold_part_d.py
+bash courses/learn_opensta/scripts/capture_part_d.sh
+bash courses/learn_opensta/scripts/build_part_d_media.sh
 python3 .cursor/skills/module-slides/scripts/verify_course_readme.py courses/learn_opensta --modules
 python3 platform/scripts/publish_course_platform.py learn_opensta
 ```

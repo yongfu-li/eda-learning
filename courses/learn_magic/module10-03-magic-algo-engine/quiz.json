@@ -1,0 +1,38 @@
+{
+  "moduleId": "module10-03-magic-algo-engine",
+  "items": [
+    {
+      "q": "Engine ok means?",
+      "choices": [
+        "all Part C goldens + bind",
+        "Magic binary only",
+        "LVS only",
+        "Place only"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Bind compares to?",
+      "choices": [
+        "Part B evidence goldens",
+        "Liberty",
+        "ABC",
+        "Verilator"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "GDS layer golden?",
+      "choices": [
+        "6",
+        "1",
+        "49",
+        "0"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "moduleId": "module03-03-magic-engine",
+  "items": [
+    {
+      "q": "Engine ok means?",
+      "choices": [
+        "every Part A golden matches",
+        "OpenROAD placed",
+        "LVS passed",
+        "STA slack=8"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "rect_count golden?",
+      "choices": [
+        "6",
+        "3",
+        "1",
+        "0"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "engine_ok flag?",
+      "choices": [
+        "True",
+        "False",
+        "None",
+        "N/A"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "module": "module99-00-wrap",
+  "questions": [
+    {"id": "q1", "question": "Course id?", "choices": ["learn_klayout", "learn_sta", "learn_yosys", "learn_openlane"], "answer": 0},
+    {"id": "q2", "question": "Part B proves?", "choices": ["Real KLayout CLI/reports", "OpenSTA timing only", "Place only", "LVS only"], "answer": 0},
+    {"id": "q3", "question": "Golden width violations on tiny_rect?", "choices": ["1", "0", "2", "4"], "answer": 0}
+  ]
+}

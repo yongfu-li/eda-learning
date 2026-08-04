@@ -1,0 +1,59 @@
+title: RC network
+footer: learn_pex — 01 rc network
+slides:
+- type: title
+  title: RC network
+  subtitle: RC network chains segment resistors in series; attach ground C at metal
+    nodes
+  notes: RC network chains segment resistors in series; attach ground C at metal nodes.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: series chain; nodes include in/out'
+  notes: 'GOLDEN: series chain; nodes include in/out.'
+- type: image
+  title: Order
+  image: assets/steps/01-order.png
+  caption: Order
+  notes: 'Series path: s1 → s2 → v1 → s3.'
+- type: image
+  title: Resistors
+  image: assets/steps/02-resistors.png
+  caption: Resistors
+  notes: Four R edges in series from in to out.
+- type: image
+  title: Nodes
+  image: assets/steps/03-nodes.png
+  caption: Nodes
+  notes: Nodes include in and out ports.
+- type: image
+  title: Caps
+  image: assets/steps/04-caps.png
+  caption: Caps
+  notes: Three C branches to gnd on metal nodes.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: series chain; nodes include in/out.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **rc-network**. Select in and out; confirm series chain.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call build_rc_network(); assert nodes include 'in' and 'out' and r_count==4
+  notes: Call build_rc_network(); assert nodes include 'in' and 'out' and r_count==4.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Parallel instead of series R
+  - Attaching C on VIA node
+  notes: Parallel instead of series R. Attaching C on VIA node.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: network reduction'
+  notes: 'Next: network reduction.'

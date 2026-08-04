@@ -1,0 +1,28 @@
+{
+  "note": "Timing-graph teaching IR for OpenSTA Part C (not the OpenSTA binary).",
+  "clock": {"name": "clk", "period": 10.0},
+  "pins": [
+    {"id": "a", "kind": "input"},
+    {"id": "b", "kind": "input"},
+    {"id": "n1", "kind": "internal"},
+    {"id": "n2", "kind": "internal"},
+    {"id": "y", "kind": "output"}
+  ],
+  "arcs": [
+    {"id": "u1A", "from": "a", "to": "n1", "delay": 1.0, "cell": "u1"},
+    {"id": "u1B", "from": "b", "to": "n1", "delay": 1.0, "cell": "u1"},
+    {"id": "u2", "from": "n1", "to": "n2", "delay": 0.5, "cell": "u2"},
+    {"id": "u3", "from": "n2", "to": "y", "delay": 0.5, "cell": "u3"}
+  ],
+  "goldens": {
+    "pin_count": 5,
+    "arc_count": 4,
+    "levels": {"a": 0, "b": 0, "n1": 1, "n2": 2, "y": 3},
+    "arrival_y": 2.0,
+    "required_y": 10.0,
+    "slack_y": 8.0,
+    "critical_path": ["b", "n1", "n2", "y"],
+    "path_delay": 2.0,
+    "engine_ok": true
+  }
+}

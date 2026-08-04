@@ -1,0 +1,60 @@
+title: Capacitance
+footer: learn_pex — 05 capacitance extract
+slides:
+- type: title
+  title: Capacitance
+  subtitle: Capacitance extract uses c_area*area + c_perim*perimeter on metals; skip
+    VIA
+  notes: Capacitance extract uses c_area*area + c_perim*perimeter on metals; skip
+    VIA.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: C_total=1.376; 3 caps'
+  notes: 'GOLDEN: C_total=1.376; 3 caps.'
+- type: image
+  title: Formula
+  image: assets/steps/01-formula.png
+  caption: Formula
+  notes: C = c_area*area + c_perim*perimeter on M1/M2.
+- type: image
+  title: s1
+  image: assets/steps/02-s1.png
+  caption: s1
+  notes: Ground C on s1 M1 segment.
+- type: image
+  title: s2
+  image: assets/steps/03-s2.png
+  caption: s2
+  notes: Ground C on s2 M1 segment.
+- type: image
+  title: s3
+  image: assets/steps/04-s3.png
+  caption: s3
+  notes: Ground C on s3 M2 segment.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: C_total=1.376; 3 caps.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **capacitance-extract**. Select s1; confirm C_total=1.376 and 3 caps.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call extract_capacitance(); assert c_total==1.376 and count==3
+  notes: Call extract_capacitance(); assert c_total==1.376 and count==3.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Adding VIA capacitance
+  - Using length instead of area for C
+  notes: Adding VIA capacitance. Using length instead of area for C.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: RC network build'
+  notes: 'Next: RC network build.'

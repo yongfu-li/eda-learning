@@ -1,0 +1,38 @@
+{
+  "module": "module00-00-intro",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Focus of Welcome?",
+      "choices": [
+        "Explain layout vs schematic compare after DRC literacy.",
+        "Place only",
+        "CTS only",
+        "DRC width"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Course id?",
+      "choices": [
+        "learn_lvs",
+        "learn_drc",
+        "learn_pex",
+        "learn_erc"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "matched_devices golden?",
+      "choices": [
+        "2",
+        "1",
+        "4",
+        "0"
+      ],
+      "answer": 0
+    }
+  ]
+}

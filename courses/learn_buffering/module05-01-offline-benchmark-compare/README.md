@@ -1,36 +1,17 @@
-# Module 05-01-offline-benchmark-compare: Offline benchmark compare
+# Module 05-01: Offline benchmark compare
 
 **Module id:** `module05-01-offline-benchmark-compare`  
-**Kind:** `offline`
+**Kind:** `lab` · Primary activity: [Buffering benchmark](../../../platform/benchmarks/buffering/index.html) · **Shipped**
 
-[← Sequential](../module04-01-sequential-buffer/README.md) · [Course README](../README.md) · [Wrap →](../module99-00-wrap/README.md)
+[← Sequential buffer](../module04-01-sequential-buffer/README.md) · [Course README](../README.md) · [Wrap →](../module99-00-wrap/README.md)
 
 ## Outcomes
 
-After this module you can: **Compare wire-only, Van Ginneken, and slew-driven delays offline on tiny_buf.**
+After this module you can: **Compare buffer-insertion engines on shared nets by delay, slew violations, buffer count, and runtime — including your own uploaded JS solver.**
 
-## Track A
+## Lab track
 
-1. Load `../common/tiny_buf.json`.
-2. Compare `van_ginneken_net` vs `slew_driven_insert`.
-3. Complete [CHECKLIST.md](CHECKLIST.md).
-
-## Media
-
-| Artifact | Path |
-|----------|------|
-| Transcript | [transcript.md](transcript.md) |
-| Outline | [outline.yaml](outline.yaml) |
-| Slides | [slides.pptx](slides.pptx) · [slides.pdf](slides.pdf) |
-| Video | [video.mp4](video.mp4) |
-| Quiz | [quiz.json](quiz.json) |
-
-
-## Files
-
-```
-module05-01-offline-benchmark-compare/
-├── README.md · CHECKLIST.md · EXAMPLES.md
-├── outline.yaml · transcript.md · quiz.json
-└── (optional) examples/ · assets/
-```
+1. Open the [buffering benchmark](../../../platform/benchmarks/buffering/index.html).
+2. Run the Hard suite; compare wire-only / Van Ginneken / slew-driven / sequential / portfolio.
+3. Load an Example builtin, Register, and confirm it appears above builtins.
+4. Complete [CHECKLIST.md](CHECKLIST.md).

@@ -1,0 +1,7 @@
+tech load tech/scmos.tech
+load layouts/tiny_inv.mag
+RECTS=6
+CONTACTS=1
+CELL=tiny_inv
+save layouts/tiny_inv.mag
+SAVED=1

@@ -1,0 +1,80 @@
+title: Why Netgen internals
+footer: learn_netgen — 01 netcomp model
+slides:
+- type: title
+  title: Why Netgen internals
+  subtitle: Map Obj / Netlist / Element to the Netgen C tree
+  notes: Map Obj / Netlist / Element to the Netgen C tree.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: Name the three pillars and how Netlist holds devices'
+  notes: 'GOLDEN: Name the three pillars and how Netlist holds devices.'
+- type: image
+  title: Obj
+  image: assets/steps/01-obj.png
+  caption: Obj
+  notes: Obj holds Tcl strings, hashes, lists.
+- type: image
+  title: Netlist
+  image: assets/steps/02-netlist.png
+  caption: Netlist
+  notes: Netlist holds ports, devices, nets.
+- type: image
+  title: Element
+  image: assets/steps/03-element.png
+  caption: Element
+  notes: Element holds pins and device properties.
+- type: image
+  title: Nesting
+  image: assets/steps/04-nest.png
+  caption: Nesting
+  notes: Obj values feed Netlist; Element wraps devices.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: Obj, Netlist, Element — three pillars.'
+- type: bullets
+  title: Browser lab
+  bullets:
+  - Open **netcomp-model**
+  notes: Open **netcomp-model**.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call netcomp_model() in internals_solvers
+  notes: Call netcomp_model() in internals_solvers.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Treating browser JSON as the C API
+  notes: Treating browser JSON as the C API.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder, run the internals self-test
+  notes: From the common folder, run the internals self-test.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_netgen/common
+
+    python3 internals_solvers.py'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the checklist in plain steps
+  notes: Here is the checklist in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: 'Name the three pillars and how Netlist holds devices.
+
+    ok if goldens match INTERNALS_GOLDENS'
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Wrap the Netgen path
+  notes: Wrap the Netgen path.

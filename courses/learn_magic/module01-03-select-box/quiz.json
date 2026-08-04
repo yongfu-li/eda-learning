@@ -1,0 +1,38 @@
+{
+  "moduleId": "module01-03-select-box",
+  "items": [
+    {
+      "q": "Selected thin shape id?",
+      "choices": [
+        "thin",
+        "m1y",
+        "ca",
+        "nw"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "thin metal1 width?",
+      "choices": [
+        "1",
+        "2",
+        "6",
+        "10"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Select is used for?",
+      "choices": [
+        "edit / DRC focus",
+        "GDS only",
+        "STA only",
+        "LVS only"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

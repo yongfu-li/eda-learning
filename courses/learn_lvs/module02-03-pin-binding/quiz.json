@@ -1,0 +1,38 @@
+{
+  "module": "module02-03-pin-binding",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "X0 maps to?",
+      "choices": [
+        "mn1",
+        "mp1",
+        "X1",
+        "net_a"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "net bind count?",
+      "choices": [
+        "4",
+        "2",
+        "6",
+        "1"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "net_a maps to?",
+      "choices": [
+        "a",
+        "y",
+        "net_y",
+        "vdd"
+      ],
+      "answer": 0
+    }
+  ]
+}

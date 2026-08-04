@@ -357,28 +357,81 @@ export function ripupDetailed(routes, usage, cap, terminals, nets = NETS) {
   return routes.map((r) => (r.netIndex === worst ? { ...r, segments: newSegs } : r));
 }
 
+/** Total grid hops across all detailed routes. */
+export function wireLength(routes) {
+  let total = 0;
+  for (const r of routes || []) {
+    const path = segmentsToPath(r.segments || []);
+    total += Math.max(0, path.length - 1);
+  }
+  return total;
+}
+
+function usageColor(u, cap, paper = false) {
+  const t = Math.max(0, Math.min(1, u / Math.max(cap, 1)));
+  if (paper) {
+    const stops = [
+      [226, 232, 240],
+      [15, 107, 92],
+      [180, 83, 9],
+      [159, 18, 57],
+    ];
+    const i = t < 0.33 ? 0 : t < 0.66 ? 1 : t < 0.9 ? 2 : 3;
+    const [r, g, b] = stops[i];
+    return `rgb(${r},${g},${b})`;
+  }
+  return `rgba(${Math.round(60 + 180 * t)},${Math.round(160 - 100 * t)},${Math.round(220 - 80 * t)},0.85)`;
+}
+
+/**
+ * opts: positions, usage, routes, highlight, selectedNet, cap, paper, metricText
+ */
 export function drawDetailedRoute(canvas, opts = {}) {
   const positions = opts.positions || PLACEMENT;
   const routes = opts.routes || [];
   const usage = opts.usage || {};
   const cap = opts.cap ?? TRACK_CAPACITY;
   const highlight = new Set(opts.highlight || []);
+  const paper = !!opts.paper;
+  const ink = paper ? "#000000" : "#0f172a";
+  const PAPER_FONT =
+    "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
+  const PAPER_PALETTE = [
+    "#1d4ed8",
+    "#0f6b5c",
+    "#b45309",
+    "#7c3aed",
+    "#be123c",
+    "#0e7490",
+  ];
+  if (paper) canvas.style.background = "#ffffff";
+
   const { ctx, w, h } = fitHiDpiCanvas(canvas, { w: 640, h: LAB_CANVAS_CSS_HEIGHT });
   ctx.clearRect(0, 0, w, h);
+  if (paper) {
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(0, 0, w, h);
+  }
   const pad = 28;
-  const scale = Math.min((w - 2 * pad) / CHIP_W, (h - 2 * pad) / CHIP_H);
+  const legendH = paper ? 28 : 0;
+  const scale = Math.min((w - 2 * pad) / CHIP_W, (h - 2 * pad - legendH) / CHIP_H);
   const ox = (w - CHIP_W * scale) / 2;
-  const oy = h - pad - (h - 2 * pad - CHIP_H * scale) / 2;
+  const oy = h - pad - legendH - (h - 2 * pad - legendH - CHIP_H * scale) / 2;
   const toScreen = (x, y) => ({ sx: ox + x * scale, sy: oy - y * scale });
 
   for (const b of BLOCKAGES) {
     const p0 = toScreen(b.x, b.y + b.h);
-    ctx.fillStyle = "rgba(100,116,139,0.45)";
+    ctx.fillStyle = paper ? "#e2e8f0" : "rgba(100,116,139,0.45)";
     ctx.fillRect(p0.sx, p0.sy, b.w * scale, b.h * scale);
+    if (paper) {
+      ctx.strokeStyle = ink;
+      ctx.lineWidth = 1;
+      ctx.strokeRect(p0.sx, p0.sy, b.w * scale, b.h * scale);
+    }
   }
 
-  ctx.strokeStyle = "#cbd5e1";
-  ctx.lineWidth = 1;
+  ctx.strokeStyle = paper ? "#cbd5e1" : "#cbd5e1";
+  ctx.lineWidth = paper ? 1.1 : 1;
   for (let x = 0; x <= GRID_NX; x++) {
     const a = toScreen(x, 0);
     const b = toScreen(x, CHIP_H);
@@ -402,16 +455,18 @@ export function drawDetailedRoute(canvas, opts = {}) {
     const [x1, y1] = b.split(",").map(Number);
     const p0 = toScreen(x0 + 0.5, y0 + 0.5);
     const p1 = toScreen(x1 + 0.5, y1 + 0.5);
-    const t = Math.min(1, u / Math.max(cap, 1));
-    ctx.strokeStyle = `rgba(${Math.round(60 + 180 * t)},${Math.round(160 - 100 * t)},${Math.round(220 - 80 * t)},0.85)`;
-    ctx.lineWidth = 2 + Math.min(5, u * 2);
+    ctx.strokeStyle = usageColor(u, cap, paper);
+    ctx.lineWidth = paper ? 2 + Math.min(5, u * 1.25) : 2 + Math.min(5, u * 2);
     ctx.beginPath();
     ctx.moveTo(p0.sx, p0.sy);
     ctx.lineTo(p1.sx, p1.sy);
     ctx.stroke();
     if (u > cap) {
-      ctx.strokeStyle = "rgba(220,38,38,0.9)";
+      ctx.strokeStyle = paper ? "#9f1239" : "rgba(220,38,38,0.9)";
       ctx.setLineDash([4, 3]);
+      ctx.beginPath();
+      ctx.moveTo(p0.sx, p0.sy);
+      ctx.lineTo(p1.sx, p1.sy);
       ctx.stroke();
       ctx.setLineDash([]);
     }
@@ -422,8 +477,14 @@ export function drawDetailedRoute(canvas, opts = {}) {
     if (!r.segments?.length) return;
     const path = segmentsToPath(r.segments);
     const active = sel == null || sel === idx;
-    ctx.strokeStyle = active ? "rgba(14,165,233,0.8)" : "rgba(148,163,184,0.35)";
-    ctx.lineWidth = active ? 3 : 1.5;
+    ctx.strokeStyle = paper
+      ? active
+        ? PAPER_PALETTE[idx % PAPER_PALETTE.length]
+        : "rgba(148,163,184,0.35)"
+      : active
+        ? "rgba(14,165,233,0.8)"
+        : "rgba(148,163,184,0.35)";
+    ctx.lineWidth = active ? (paper ? 2.75 : 3) : 1.5;
     ctx.beginPath();
     const s0 = toScreen(path[0].x + 0.5, path[0].y + 0.5);
     ctx.moveTo(s0.sx, s0.sy);
@@ -435,30 +496,70 @@ export function drawDetailedRoute(canvas, opts = {}) {
     for (const s of r.segments) {
       if (s.via) {
         const v = toScreen(s.x + 0.5, s.y + 0.5);
-        ctx.fillStyle = "#f59e0b";
+        ctx.fillStyle = paper ? "#b45309" : "#f59e0b";
         ctx.beginPath();
-        ctx.arc(v.sx, v.sy, 4, 0, Math.PI * 2);
+        ctx.arc(v.sx, v.sy, paper ? 3.5 : 4, 0, Math.PI * 2);
         ctx.fill();
+        if (paper) {
+          ctx.strokeStyle = ink;
+          ctx.lineWidth = 1;
+          ctx.stroke();
+        }
       }
     }
   });
 
   const origin = toScreen(0, CHIP_H);
-  ctx.strokeStyle = "#334155";
-  ctx.lineWidth = 2;
+  ctx.strokeStyle = paper ? "#000000" : "#334155";
+  ctx.lineWidth = paper ? 2.25 : 2;
   ctx.strokeRect(origin.sx, origin.sy, CHIP_W * scale, CHIP_H * scale);
 
   for (const id of CELLS) {
     const p = positions[id];
     if (!p) continue;
     const { sx, sy } = toScreen(p.x, p.y);
+    const idx = CELLS.indexOf(id);
     ctx.beginPath();
-    ctx.arc(sx, sy, highlight.has(id) ? 10 : 7, 0, Math.PI * 2);
-    ctx.fillStyle = highlight.has(id) ? "#0ea5e9" : "#1e293b";
+    ctx.arc(sx, sy, highlight.has(id) ? 10 : paper ? 6.5 : 7, 0, Math.PI * 2);
+    ctx.fillStyle = paper
+      ? PAPER_PALETTE[idx % PAPER_PALETTE.length]
+      : highlight.has(id)
+        ? "#0ea5e9"
+        : "#1e293b";
     ctx.fill();
-    ctx.fillStyle = "#0f172a";
-    ctx.font = "12px ui-sans-serif, system-ui";
+    if (paper) {
+      ctx.strokeStyle = ink;
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+    }
+    ctx.fillStyle = ink;
+    ctx.font = paper ? `bold 12px ${PAPER_FONT}` : "12px ui-sans-serif, system-ui";
     ctx.fillText(id, sx + 8, sy - 8);
+  }
+
+  if (paper) {
+    if (opts.metricText) {
+      ctx.fillStyle = ink;
+      ctx.font = `bold 12px ${PAPER_FONT}`;
+      ctx.textBaseline = "alphabetic";
+      ctx.fillText(opts.metricText, pad, pad - 8);
+    }
+    const ly = h - Math.round(legendH / 2) - 2;
+    let lx = pad;
+    ctx.font = `11px ${PAPER_FONT}`;
+    routes.forEach((r, idx) => {
+      if (!r.segments?.length) return;
+      ctx.beginPath();
+      ctx.arc(lx + 5, ly, 4, 0, Math.PI * 2);
+      ctx.fillStyle = PAPER_PALETTE[idx % PAPER_PALETTE.length];
+      ctx.fill();
+      ctx.strokeStyle = ink;
+      ctx.lineWidth = 1.25;
+      ctx.stroke();
+      ctx.fillStyle = ink;
+      ctx.fillText(`N${idx}`, lx + 12, ly + 4);
+      lx += 42;
+    });
   }
   return { scale, ox, oy, toScreen };
 }

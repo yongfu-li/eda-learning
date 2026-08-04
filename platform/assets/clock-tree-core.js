@@ -408,21 +408,75 @@ export function sequentialCts(positions = PLACEMENT, order = CELLS, source = CLO
   };
 }
 
+/** Matches partition-benchmark-plots PALETTE (paper figures). */
+const PAPER_PALETTE = [
+  "#1d4ed8",
+  "#0f6b5c",
+  "#b45309",
+  "#9f1239",
+  "#6d28d9",
+  "#c2410c",
+  "#0369a1",
+  "#a21caf",
+  "#4f46e5",
+  "#ca8a04",
+];
+const PAPER_FONT =
+  "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
+
+const LAB_SINK_COLORS = {
+  A: "#ef4444",
+  B: "#f97316",
+  C: "#22c55e",
+  D: "#3b82f6",
+  E: "#a855f7",
+  F: "#ec4899",
+};
+
+function paperSinkColor(id, index) {
+  const i = CELLS.indexOf(id);
+  return PAPER_PALETTE[(i >= 0 ? i : index) % PAPER_PALETTE.length];
+}
+
 export function drawClockTree(canvas, opts = {}) {
   const positions = opts.positions || PLACEMENT;
   const tree = opts.tree || emptyTree(positions);
   const selectedSink = opts.selectedSink || null;
   const highlight = new Set(opts.highlight || []);
+  const paper = !!opts.paper;
+  const ink = paper ? "#000000" : "#0f172a";
+  const bg = paper ? "#ffffff" : null;
+  const grid = paper ? "#e5e5e5" : "#cbd5e1";
+  const edgeColor = paper ? "#334155" : "rgba(14,165,233,0.75)";
+  const edgeHot = paper ? "#b45309" : "rgba(234,179,8,0.95)";
+  const chipStroke = paper ? "#000000" : "#334155";
+  const bufFill = paper ? PAPER_PALETTE[2] : "#f59e0b";
+  const bufStroke = paper ? "#000000" : "#92400e";
+  const srcFill = paper ? "#000000" : "#eab308";
+  const labelFont = paper
+    ? `bold 12px ${PAPER_FONT}`
+    : "12px ui-sans-serif, system-ui";
+  const metricFont = paper
+    ? `bold 13px ${PAPER_FONT}`
+    : "13px ui-sans-serif, system-ui";
+
+  if (paper) canvas.style.background = "#ffffff";
+
   const { ctx, w, h } = fitHiDpiCanvas(canvas, { w: 640, h: LAB_CANVAS_CSS_HEIGHT });
   ctx.clearRect(0, 0, w, h);
+  if (bg) {
+    ctx.fillStyle = bg;
+    ctx.fillRect(0, 0, w, h);
+  }
   const pad = 28;
-  const scale = Math.min((w - 2 * pad) / CHIP_W, (h - 2 * pad) / CHIP_H);
+  const legendH = paper ? 28 : 0;
+  const scale = Math.min((w - 2 * pad) / CHIP_W, (h - 2 * pad - legendH) / CHIP_H);
   const ox = (w - CHIP_W * scale) / 2;
-  const oy = h - pad - (h - 2 * pad - CHIP_H * scale) / 2;
+  const oy = h - pad - legendH - (h - 2 * pad - legendH - CHIP_H * scale) / 2;
   const toScreen = (x, y) => ({ sx: ox + x * scale, sy: oy - y * scale });
 
-  ctx.strokeStyle = "#cbd5e1";
-  ctx.lineWidth = 1;
+  ctx.strokeStyle = grid;
+  ctx.lineWidth = paper ? 1.1 : 1;
   for (let x = 0; x <= CHIP_W; x++) {
     const a = toScreen(x, 0);
     const b = toScreen(x, CHIP_H);
@@ -441,7 +495,10 @@ export function drawClockTree(canvas, opts = {}) {
   }
 
   const pathKeys =
-    selectedSink != null ? pathFromSource(tree, sinkPoints(positions).find((s) => s.id === selectedSink)).keys : [];
+    selectedSink != null
+      ? pathFromSource(tree, sinkPoints(positions).find((s) => s.id === selectedSink))
+          .keys
+      : [];
 
   for (const e of tree.edges || []) {
     const p0 = toScreen(e.x1 + 0.5, e.y1 + 0.5);
@@ -451,13 +508,14 @@ export function drawClockTree(canvas, opts = {}) {
       pathKeys.some((k) => {
         const [x, y] = k.split(",").map(Number);
         return (
-          (samePoint({ x, y }, { x: e.x1, y: e.y1 }) && samePoint({ x, y }, { x: e.x2, y: e.y2 })) ||
+          (samePoint({ x, y }, { x: e.x1, y: e.y1 }) &&
+            samePoint({ x, y }, { x: e.x2, y: e.y2 })) ||
           (Math.abs(x - e.x1) < 0.01 && Math.abs(y - e.y1) < 0.01) ||
           (Math.abs(x - e.x2) < 0.01 && Math.abs(y - e.y2) < 0.01)
         );
       });
-    ctx.strokeStyle = onPath ? "rgba(234,179,8,0.95)" : "rgba(14,165,233,0.75)";
-    ctx.lineWidth = onPath ? 3.5 : 2.5;
+    ctx.strokeStyle = onPath ? edgeHot : edgeColor;
+    ctx.lineWidth = onPath ? (paper ? 3.25 : 3.5) : paper ? 2.25 : 2.5;
     ctx.beginPath();
     ctx.moveTo(p0.sx, p0.sy);
     ctx.lineTo(p1.sx, p1.sy);
@@ -466,16 +524,16 @@ export function drawClockTree(canvas, opts = {}) {
 
   for (const b of tree.buffers || []) {
     const { sx, sy } = toScreen(b.x, b.y);
-    ctx.fillStyle = "#f59e0b";
+    ctx.fillStyle = bufFill;
     ctx.fillRect(sx - 6, sy - 6, 12, 12);
-    ctx.strokeStyle = "#92400e";
-    ctx.lineWidth = 1.5;
+    ctx.strokeStyle = bufStroke;
+    ctx.lineWidth = paper ? 1.75 : 1.5;
     ctx.strokeRect(sx - 6, sy - 6, 12, 12);
   }
 
   const src = tree.source || CLOCK_SOURCE;
   const srcSc = toScreen(src.x, src.y);
-  ctx.fillStyle = "#eab308";
+  ctx.fillStyle = srcFill;
   ctx.beginPath();
   for (let i = 0; i < 5; i++) {
     const a = (Math.PI * 2 * i) / 5 - Math.PI / 2;
@@ -487,48 +545,100 @@ export function drawClockTree(canvas, opts = {}) {
   }
   ctx.closePath();
   ctx.fill();
-  ctx.fillStyle = "#713f12";
-  ctx.font = "11px ui-sans-serif, system-ui";
+  if (paper) {
+    ctx.strokeStyle = ink;
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+  }
+  ctx.fillStyle = paper ? ink : "#713f12";
+  ctx.font = paper ? `bold 11px ${PAPER_FONT}` : "11px ui-sans-serif, system-ui";
+  ctx.textAlign = "left";
+  ctx.textBaseline = "alphabetic";
   ctx.fillText("CLK", srcSc.sx + 10, srcSc.sy - 6);
 
-  const sinkColors = {
-    A: "#ef4444",
-    B: "#f97316",
-    C: "#22c55e",
-    D: "#3b82f6",
-    E: "#a855f7",
-    F: "#ec4899",
-  };
-
-  for (const id of CELLS) {
+  CELLS.forEach((id, i) => {
     const p = positions[id];
-    if (!p) continue;
+    if (!p) return;
     const { sx, sy } = toScreen(p.x, p.y);
     const active = selectedSink === id || highlight.has(id);
     ctx.beginPath();
     ctx.arc(sx, sy, active ? 10 : 7, 0, Math.PI * 2);
-    ctx.fillStyle = sinkColors[id] || "#1e293b";
+    ctx.fillStyle = paper ? paperSinkColor(id, i) : LAB_SINK_COLORS[id] || "#1e293b";
     ctx.fill();
-    ctx.strokeStyle = active ? "#0f172a" : "rgba(15,23,42,0.35)";
-    ctx.lineWidth = active ? 2 : 1;
+    ctx.strokeStyle = paper ? ink : active ? "#0f172a" : "rgba(15,23,42,0.35)";
+    ctx.lineWidth = paper ? 1.5 : active ? 2 : 1;
     ctx.stroke();
-    ctx.fillStyle = "#0f172a";
-    ctx.font = "12px ui-sans-serif, system-ui";
+    ctx.fillStyle = ink;
+    ctx.font = labelFont;
     ctx.fillText(id, sx + 8, sy - 8);
-  }
+  });
 
   const origin = toScreen(0, CHIP_H);
-  ctx.strokeStyle = "#334155";
-  ctx.lineWidth = 2;
+  ctx.strokeStyle = chipStroke;
+  ctx.lineWidth = paper ? 2.25 : 2;
   ctx.strokeRect(origin.sx, origin.sy, CHIP_W * scale, CHIP_H * scale);
+
+  if (paper) {
+    const ly = h - Math.round(legendH / 2) - 2;
+    let lx = pad;
+    ctx.font = `bold 12px ${PAPER_FONT}`;
+    ctx.textBaseline = "middle";
+    ctx.textAlign = "left";
+    // CLK star swatch
+    ctx.fillStyle = srcFill;
+    ctx.beginPath();
+    for (let i = 0; i < 5; i++) {
+      const a = (Math.PI * 2 * i) / 5 - Math.PI / 2;
+      const x = lx + 6 + Math.cos(a) * 6;
+      const y = ly + Math.sin(a) * 6;
+      if (i === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.closePath();
+    ctx.fill();
+    ctx.strokeStyle = ink;
+    ctx.lineWidth = 1.25;
+    ctx.stroke();
+    ctx.fillStyle = ink;
+    ctx.fillText("CLK", lx + 16, ly);
+    lx += ctx.measureText("CLK").width + 36;
+    CELLS.forEach((id, i) => {
+      ctx.beginPath();
+      ctx.arc(lx + 5, ly, 5, 0, Math.PI * 2);
+      ctx.fillStyle = paperSinkColor(id, i);
+      ctx.fill();
+      ctx.strokeStyle = ink;
+      ctx.lineWidth = 1.25;
+      ctx.stroke();
+      ctx.fillStyle = ink;
+      ctx.fillText(id, lx + 14, ly);
+      lx += ctx.measureText(id).width + 28;
+    });
+    if ((tree.buffers || []).length) {
+      ctx.fillStyle = bufFill;
+      ctx.fillRect(lx, ly - 5, 11, 11);
+      ctx.strokeStyle = ink;
+      ctx.strokeRect(lx, ly - 5, 11, 11);
+      ctx.fillStyle = ink;
+      ctx.fillText("BUF", lx + 16, ly);
+    }
+  }
 
   if (opts.showSkew !== false && (tree.edges?.length || 0) > 0) {
     const sk = skew(tree, positions);
-    ctx.fillStyle = "rgba(15,23,42,0.82)";
-    ctx.fillRect(pad, pad - 4, 132, 22);
-    ctx.fillStyle = "#f8fafc";
-    ctx.font = "13px ui-sans-serif, system-ui";
-    ctx.fillText(`skew: ${sk.toFixed(2)}`, pad + 8, pad + 12);
+    if (paper) {
+      ctx.fillStyle = ink;
+      ctx.font = metricFont;
+      ctx.textAlign = "left";
+      ctx.textBaseline = "alphabetic";
+      ctx.fillText(`skew: ${sk.toFixed(2)}`, pad, pad + 8);
+    } else {
+      ctx.fillStyle = "rgba(15,23,42,0.82)";
+      ctx.fillRect(pad, pad - 4, 132, 22);
+      ctx.fillStyle = "#f8fafc";
+      ctx.font = metricFont;
+      ctx.fillText(`skew: ${sk.toFixed(2)}`, pad + 8, pad + 12);
+    }
   }
 
   return { scale, ox, oy, toScreen };

@@ -1,11 +1,22 @@
 # Checklist — Offline benchmark compare
 
-## Offline harness
+## Platform scoreboard (runtime · memory)
 
-- [ ] Ran the compare script on at least one shared instance
-- [ ] Recorded toy-engine vs external metrics (or documented tool missing)
-- [ ] Named one discrepancy and a hypothesis
+- [ ] Opened **Benchmarks → Partitioning** (not a Tools lab)
+- [ ] Selective tiny: every row has runtime (ms) and memory
+- [ ] Read the Runtime vs memory scatter
+- [ ] Dataset average over tiny + medium (ms shows min–max)
+- [ ] Uploaded (or loaded example) solver appears **above** builtins
+- [ ] Still checked cut/balance — quality is not ignored
 
-## Done when
+## Fair-compare hygiene
 
-- [ ] I can explain how to judge partition quality across tools
+- [ ] Same instance set for every algo in a run
+- [ ] Fixed random seed when comparing random / seeded refiners
+- [ ] Knew whether memory was heap-delta or structural estimate (*)
+
+## Optional external tool
+
+- [ ] Exported `common/tiny_graph.json` or `common/medium_graph.json`
+- [ ] Ran an open partitioner (KaHyPar / Metis-style) **or** documented the install gap
+- [ ] Filled a short comparison table (quality / balance / runtime / memory / notes)

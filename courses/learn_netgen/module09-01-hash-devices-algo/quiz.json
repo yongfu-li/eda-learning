@@ -1,0 +1,38 @@
+{
+  "moduleId": "module09-01-hash-devices-algo",
+  "items": [
+    {
+      "q": "Hash device count?",
+      "choices": [
+        "2",
+        "4",
+        "0",
+        "6"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Classes?",
+      "choices": [
+        "nmos, pmos",
+        "metal1",
+        "STA",
+        "GDS"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Hash used for?",
+      "choices": [
+        "device compare groups",
+        "Place",
+        "STA",
+        "GDS"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

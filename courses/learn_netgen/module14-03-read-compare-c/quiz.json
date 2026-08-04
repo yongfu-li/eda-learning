@@ -1,0 +1,38 @@
+{
+  "moduleId": "module14-03-read-compare-c",
+  "items": [
+    {
+      "q": "Part B matched devices?",
+      "choices": [
+        "2",
+        "0",
+        "4",
+        "6"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "First compare stage?",
+      "choices": [
+        "read_sch",
+        "delete GDS",
+        "abc",
+        "place"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Matched nets golden?",
+      "choices": [
+        "4",
+        "2",
+        "0",
+        "6"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

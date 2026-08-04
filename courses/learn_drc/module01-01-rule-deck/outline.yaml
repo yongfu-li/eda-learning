@@ -1,0 +1,58 @@
+title: Rule deck
+footer: learn_drc — 01 rule deck
+slides:
+- type: title
+  title: Rule deck
+  subtitle: DRC starts from a rule deck , typed rules with limits on each layer
+  notes: DRC starts from a rule deck — typed rules with limits on each layer.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: rule_count=8'
+  notes: 'GOLDEN: rule_count=8.'
+- type: image
+  title: Deck
+  image: assets/steps/01-deck.png
+  caption: Deck
+  notes: Eight rules in the tiny_drc deck.
+- type: image
+  title: Types
+  image: assets/steps/02-types.png
+  caption: Types
+  notes: width, space, enclosure, boolean rule types.
+- type: image
+  title: Layers
+  image: assets/steps/03-layers.png
+  caption: Layers
+  notes: Rules reference M1, M2, and VIA layers.
+- type: image
+  title: Load
+  image: assets/steps/04-load.png
+  caption: Load
+  notes: load_deck returns rules and by_type buckets.
+- type: image
+  title: Count
+  image: assets/steps/05-count.png
+  caption: Count
+  notes: 'GOLDEN: rule_count=8.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **rule-deck**. Inspect the deck; confirm 8 rules.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call load_deck(); assert rule_count==8
+  notes: Call load_deck(); assert rule_count==8.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Counting shapes as rules
+  - Ignoring boolean rules in the total
+  notes: Counting shapes as rules. Ignoring boolean rules in the total.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: width checker'
+  notes: 'Next: width checker.'

@@ -1,0 +1,38 @@
+{
+  "moduleId": "module01-03-device-classes-map",
+  "items": [
+    {
+      "q": "Class count golden?",
+      "choices": [
+        "2",
+        "4",
+        "1",
+        "0"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "nmos class maps to?",
+      "choices": [
+        "nmos",
+        "pmos",
+        "poly",
+        "metal1"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Classes used for?",
+      "choices": [
+        "device compare groups",
+        "STA slack",
+        "GDS only",
+        "Place only"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "module": "module02-03-violation-markers",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "violation_count?",
+      "choices": [
+        "3",
+        "1",
+        "4",
+        "8"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Includes width on D?",
+      "choices": [
+        "yes",
+        "no",
+        "only space",
+        "only enc"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Each has rule_id?",
+      "choices": [
+        "yes",
+        "no",
+        "optional",
+        "deck only"
+      ],
+      "answer": 0
+    }
+  ]
+}

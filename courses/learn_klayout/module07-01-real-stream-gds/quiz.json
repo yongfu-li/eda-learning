@@ -1,0 +1,38 @@
+{
+  "moduleId": "module07-01-real-stream-gds",
+  "items": [
+    {
+      "q": "Shape count golden?",
+      "choices": [
+        "2",
+        "4",
+        "0",
+        "6"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Cell name?",
+      "choices": [
+        "tiny_rect",
+        "top",
+        "inv",
+        "clk"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "stream_ok?",
+      "choices": [
+        "True",
+        "False",
+        "None",
+        "N/A"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

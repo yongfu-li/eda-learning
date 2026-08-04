@@ -1,0 +1,82 @@
+title: Why LVS
+footer: learn_netgen — 01 lvs report map
+slides:
+- type: title
+  title: Why LVS
+  subtitle: 'LVS report: matched devices and mismatches'
+  notes: 'LVS report: matched devices and mismatches.'
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: matched_devices=2; mismatch=0'
+  notes: 'GOLDEN: matched_devices=2; mismatch=0.'
+- type: image
+  title: Device match
+  image: assets/steps/01-dev.png
+  caption: Device match
+  notes: Two devices matched by type count.
+- type: image
+  title: nmos/pmos
+  image: assets/steps/02-type.png
+  caption: nmos/pmos
+  notes: One nmos + one pmos each side.
+- type: image
+  title: Zero mismatch
+  image: assets/steps/03-mism.png
+  caption: Zero mismatch
+  notes: mismatch_count=0 on tiny_inv.
+- type: image
+  title: LVS report
+  image: assets/steps/04-report.png
+  caption: LVS report
+  notes: Netgen report summarizes compare.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: matched_devices=2 mismatch=0.'
+- type: bullets
+  title: Browser lab track
+  bullets:
+  - Open **lvs-report-map**
+  - Run the stage buttons and Check the goldens
+  notes: Open **lvs-report-map**. Run the stage buttons and Check the goldens.
+- type: bullets
+  title: Implement track
+  bullets:
+  - From common/, run solvers.py and confirm NETGEN_PARTA_OK
+  notes: From common/, run solvers.py and confirm NETGEN_PARTA_OK.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Confusing schematic SPICE with layout extract
+  - Forgetting permute on source/drain
+  notes: Confusing schematic SPICE with layout extract. Forgetting permute on source/drain.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder, run the Netgen map self-test
+  notes: From the common folder, run the Netgen map self-test.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_netgen/common
+
+    python3 solvers.py'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the check in plain steps
+  notes: Here is the check in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: 'matched_devices=2; mismatch=0.
+
+    ok if goldens match'
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue the Netgen Part A map, then the real CLI track
+  notes: Continue the Netgen Part A map, then the real CLI track.

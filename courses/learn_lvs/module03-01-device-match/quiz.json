@@ -1,0 +1,38 @@
+{
+  "module": "module03-01-device-match",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "matched_devices?",
+      "choices": [
+        "2",
+        "1",
+        "0",
+        "4"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "mismatch_count?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "4"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "X1 schematic?",
+      "choices": [
+        "mp1",
+        "mn1",
+        "X0",
+        "net_y"
+      ],
+      "answer": 0
+    }
+  ]
+}

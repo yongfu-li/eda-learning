@@ -1,0 +1,38 @@
+{
+  "module": "module01-05-net-extract",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "layout net count?",
+      "choices": [
+        "4",
+        "2",
+        "6",
+        "9"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "gate net id?",
+      "choices": [
+        "net_a",
+        "net_y",
+        "a",
+        "y"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "output net?",
+      "choices": [
+        "net_y",
+        "net_a",
+        "net_vdd",
+        "net_vss"
+      ],
+      "answer": 0
+    }
+  ]
+}

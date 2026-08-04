@@ -1,0 +1,38 @@
+{
+  "moduleId": "module07-03-real-drc-script",
+  "items": [
+    {
+      "q": "Width violations golden?",
+      "choices": [
+        "1",
+        "0",
+        "2",
+        "4"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Violating shape?",
+      "choices": [
+        "m0",
+        "p0",
+        "poly",
+        "metal1"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Violation type?",
+      "choices": [
+        "width",
+        "LVS",
+        "STA",
+        "LEF"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

@@ -245,8 +245,26 @@ export function placementFeedbackLite(positions, capacity = CAPACITY) {
   return out;
 }
 
-function heatColor(t) {
+function heatColor(t, paper = false) {
   const u = Math.max(0, Math.min(1, t));
+  if (paper) {
+    // Cool white → brand teal → amber → crimson (readable on white bg)
+    const stops = [
+      [255, 255, 255],
+      [15, 107, 92],
+      [180, 83, 9],
+      [159, 18, 57],
+    ];
+    const x = u * (stops.length - 1);
+    const i = Math.min(stops.length - 2, Math.floor(x));
+    const f = x - i;
+    const a = stops[i];
+    const b = stops[i + 1];
+    const r = Math.round(a[0] + (b[0] - a[0]) * f);
+    const g = Math.round(a[1] + (b[1] - a[1]) * f);
+    const bl = Math.round(a[2] + (b[2] - a[2]) * f);
+    return `rgba(${r},${g},${bl},${0.15 + 0.7 * u})`;
+  }
   const r = Math.round(40 + 200 * u);
   const g = Math.round(180 - 140 * u);
   const b = Math.round(80 - 40 * u);
@@ -255,12 +273,29 @@ function heatColor(t) {
 
 /**
  * Draw chip + GCell heat + cell markers. `heat` is demand or congestion matrix.
+ * opts.paper — white bg + plot palette (benchmark figures).
  */
 export function drawCongestion(canvas, opts = {}) {
   const positions = opts.positions || PLACEMENT;
   const capacity = opts.capacity ?? CAPACITY;
   const heatMode = opts.heatMode || "cong"; // cong | demand
-  // Default heat from RUDY so walkthrough frames show a map without per-step heat fields.
+  const paper = !!opts.paper;
+  const ink = paper ? "#000000" : "#0f172a";
+  const PAPER_FONT =
+    "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
+  const PAPER_PALETTE = [
+    "#1d4ed8",
+    "#0f6b5c",
+    "#b45309",
+    "#9f1239",
+    "#6d28d9",
+    "#c2410c",
+    "#0369a1",
+    "#a21caf",
+  ];
+
+  if (paper) canvas.style.background = "#ffffff";
+
   const heat =
     opts.heat != null
       ? opts.heat
@@ -270,14 +305,18 @@ export function drawCongestion(canvas, opts = {}) {
   const highlight = new Set(opts.highlight || []);
   const { ctx, w, h } = fitHiDpiCanvas(canvas, { w: 640, h: LAB_CANVAS_CSS_HEIGHT });
   ctx.clearRect(0, 0, w, h);
+  if (paper) {
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(0, 0, w, h);
+  }
   const pad = 28;
-  const scale = Math.min((w - 2 * pad) / CHIP_W, (h - 2 * pad) / CHIP_H);
+  const legendH = paper ? 28 : 0;
+  const scale = Math.min((w - 2 * pad) / CHIP_W, (h - 2 * pad - legendH) / CHIP_H);
   const ox = (w - CHIP_W * scale) / 2;
-  const oy = h - pad - (h - 2 * pad - CHIP_H * scale) / 2;
+  const oy = h - pad - legendH - (h - 2 * pad - legendH - CHIP_H * scale) / 2;
 
   const toScreen = (x, y) => ({ sx: ox + x * scale, sy: oy - y * scale });
 
-  // heat tiles
   let cong = null;
   if (heat) {
     cong = heatMode === "demand" ? congestionMap(heat, capacity) : heat;
@@ -287,19 +326,18 @@ export function drawCongestion(canvas, opts = {}) {
       for (let j = 0; j < GCELL_NY; j++) {
         const r = gcellRect(i, j);
         const p0 = toScreen(r.x, r.y + r.h);
-        ctx.fillStyle = heatColor(maxC > 0 ? cong[i][j] / maxC : 0);
+        ctx.fillStyle = heatColor(maxC > 0 ? cong[i][j] / maxC : 0, paper);
         ctx.fillRect(p0.sx, p0.sy, r.w * scale, r.h * scale);
       }
     }
   }
 
-  // chip outline + gcell grid
   const origin = toScreen(0, CHIP_H);
-  ctx.strokeStyle = "#334155";
-  ctx.lineWidth = 2;
+  ctx.strokeStyle = paper ? "#000000" : "#334155";
+  ctx.lineWidth = paper ? 2.25 : 2;
   ctx.strokeRect(origin.sx, origin.sy, CHIP_W * scale, CHIP_H * scale);
-  ctx.strokeStyle = "#94a3b8";
-  ctx.lineWidth = 1;
+  ctx.strokeStyle = paper ? "#94a3b8" : "#94a3b8";
+  ctx.lineWidth = paper ? 1.25 : 1;
   for (let i = 1; i < GCELL_NX; i++) {
     const a = toScreen(i * CELL_W, 0);
     const b = toScreen(i * CELL_W, CHIP_H);
@@ -317,10 +355,9 @@ export function drawCongestion(canvas, opts = {}) {
     ctx.stroke();
   }
 
-  // nets
   if (opts.showNets !== false) {
-    ctx.strokeStyle = "rgba(100,116,139,0.45)";
-    ctx.lineWidth = 1;
+    ctx.strokeStyle = paper ? "rgba(51,65,85,0.45)" : "rgba(100,116,139,0.45)";
+    ctx.lineWidth = paper ? 1.25 : 1;
     for (const net of NETS) {
       if (net.length < 2) continue;
       const b = netBBox(net, positions);
@@ -330,18 +367,52 @@ export function drawCongestion(canvas, opts = {}) {
     }
   }
 
-  // cells
-  for (const id of CELLS) {
+  CELLS.forEach((id, idx) => {
     const p = positions[id];
-    if (!p) continue;
+    if (!p) return;
     const { sx, sy } = toScreen(p.x, p.y);
     ctx.beginPath();
     ctx.arc(sx, sy, highlight.has(id) ? 10 : 7, 0, Math.PI * 2);
-    ctx.fillStyle = highlight.has(id) ? "#0ea5e9" : "#1e293b";
+    ctx.fillStyle = paper
+      ? PAPER_PALETTE[idx % PAPER_PALETTE.length]
+      : highlight.has(id)
+        ? "#0ea5e9"
+        : "#1e293b";
     ctx.fill();
-    ctx.fillStyle = "#0f172a";
-    ctx.font = "12px ui-sans-serif, system-ui";
+    if (paper) {
+      ctx.strokeStyle = ink;
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+    }
+    ctx.fillStyle = ink;
+    ctx.font = paper ? `bold 12px ${PAPER_FONT}` : "12px ui-sans-serif, system-ui";
     ctx.fillText(id, sx + 8, sy - 8);
+  });
+
+  if (paper) {
+    const ly = h - Math.round(legendH / 2) - 2;
+    let lx = pad;
+    ctx.font = `bold 12px ${PAPER_FONT}`;
+    ctx.textBaseline = "middle";
+    ctx.textAlign = "left";
+    CELLS.forEach((id, idx) => {
+      ctx.beginPath();
+      ctx.arc(lx + 5, ly, 5, 0, Math.PI * 2);
+      ctx.fillStyle = PAPER_PALETTE[idx % PAPER_PALETTE.length];
+      ctx.fill();
+      ctx.strokeStyle = ink;
+      ctx.lineWidth = 1.25;
+      ctx.stroke();
+      ctx.fillStyle = ink;
+      ctx.fillText(id, lx + 14, ly);
+      lx += ctx.measureText(id).width + 28;
+    });
+    if (opts.metricText) {
+      ctx.fillStyle = ink;
+      ctx.font = `bold 12px ${PAPER_FONT}`;
+      ctx.textBaseline = "alphabetic";
+      ctx.fillText(opts.metricText, pad, pad - 8);
+    }
   }
 
   return { scale, ox, oy, toScreen, cong };

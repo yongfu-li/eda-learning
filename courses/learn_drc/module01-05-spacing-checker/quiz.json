@@ -1,0 +1,38 @@
+{
+  "module": "module01-05-spacing-checker",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "space violation count?",
+      "choices": [
+        "1",
+        "0",
+        "2",
+        "3"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Violating pair?",
+      "choices": [
+        "A\u2013B",
+        "A\u2013D",
+        "B\u2013C",
+        "D\u2013V"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Golden rule id?",
+      "choices": [
+        "S.M1",
+        "W.M1",
+        "E.VIA_M1",
+        "S.M2"
+      ],
+      "answer": 0
+    }
+  ]
+}

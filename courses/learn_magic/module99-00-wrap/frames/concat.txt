@@ -1,0 +1,7 @@
+file '/mnt/d/proj/designs/eda_learning/courses/learn_magic/module99-00-wrap/frames/slide-1.png'
+duration 8.544
+file '/mnt/d/proj/designs/eda_learning/courses/learn_magic/module99-00-wrap/frames/slide-2.png'
+duration 11.016
+file '/mnt/d/proj/designs/eda_learning/courses/learn_magic/module99-00-wrap/frames/slide-3.png'
+duration 6.456
+file '/mnt/d/proj/designs/eda_learning/courses/learn_magic/module99-00-wrap/frames/slide-3.png'

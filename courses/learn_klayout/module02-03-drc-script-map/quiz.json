@@ -1,0 +1,38 @@
+{
+  "moduleId": "module02-03-drc-script-map",
+  "items": [
+    {
+      "q": "Width violations golden?",
+      "choices": [
+        "1",
+        "0",
+        "2",
+        "4"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Violating shape?",
+      "choices": [
+        "m0",
+        "p0",
+        "A",
+        "VDD"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "m0 width?",
+      "choices": [
+        "20",
+        "50",
+        "40",
+        "100"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

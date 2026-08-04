@@ -1,0 +1,7 @@
+tech load tech/scmos.tech
+load layouts/tiny_inv.mag
+drc check
+DRC_ERRORS=1
+THIN=thin
+LAYER=metal1
+RULE=min_width

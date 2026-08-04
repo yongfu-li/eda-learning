@@ -1,0 +1,6 @@
+tech load tech/scmos.tech
+load layouts/tiny_inv.mag
+gds write layouts/tiny_inv.gds
+GDS_LAYERS=6
+METAL1_GDS=49
+CONTACT_GDS=25

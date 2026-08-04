@@ -1,0 +1,38 @@
+{
+  "moduleId": "module14-03-read-drc-runner",
+  "items": [
+    {
+      "q": "Part B width violations?",
+      "choices": [
+        "1",
+        "0",
+        "2",
+        "4"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "First DRC stage?",
+      "choices": [
+        "load_layout",
+        "delete GDS",
+        "abc",
+        "place"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Marker count golden?",
+      "choices": [
+        "1",
+        "0",
+        "2",
+        "4"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

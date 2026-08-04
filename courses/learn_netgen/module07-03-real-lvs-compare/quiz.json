@@ -1,0 +1,38 @@
+{
+  "moduleId": "module07-03-real-lvs-compare",
+  "items": [
+    {
+      "q": "Matched nets golden?",
+      "choices": [
+        "4",
+        "2",
+        "0",
+        "6"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Matched devices golden?",
+      "choices": [
+        "2",
+        "4",
+        "0",
+        "1"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Mismatch count?",
+      "choices": [
+        "0",
+        "2",
+        "4",
+        "1"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

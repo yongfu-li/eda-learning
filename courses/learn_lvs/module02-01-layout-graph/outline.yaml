@@ -1,0 +1,58 @@
+title: Layout graph
+footer: learn_lvs — 01 layout graph
+slides:
+- type: title
+  title: Layout graph
+  subtitle: Layout graph mirrors schematic , devices X0/X1 with pin-to-net edges
+  notes: Layout graph mirrors schematic — devices X0/X1 with pin-to-net edges.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: 2 devices, 4 nets, 6 edges'
+  notes: 'GOLDEN: 2 devices, 4 nets, 6 edges.'
+- type: image
+  title: Devices
+  image: assets/steps/01-devices.png
+  caption: Devices
+  notes: 'Two layout devices: X0 nmos, X1 pmos.'
+- type: image
+  title: Nets
+  image: assets/steps/02-nets.png
+  caption: Nets
+  notes: 'Four layout nets: net_a, net_y, net_vss, net_vdd.'
+- type: image
+  title: Pins
+  image: assets/steps/03-pins.png
+  caption: Pins
+  notes: Each device has G/D/S pins on layout nets.
+- type: image
+  title: Edges
+  image: assets/steps/04-edges.png
+  caption: Edges
+  notes: Six pin edges (3 per device).
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: edge_count=6.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **layout-graph**. Confirm X0/X1 and 6 pin edges.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call layout_graph(); assert device_count==2 and edge_count==6
+  notes: Call layout_graph(); assert device_count==2 and edge_count==6.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Using schematic net names on layout graph
+  - Missing a pin edge
+  notes: Using schematic net names on layout graph. Missing a pin edge.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: pin / name binding'
+  notes: 'Next: pin / name binding.'

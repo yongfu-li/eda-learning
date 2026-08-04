@@ -1,0 +1,38 @@
+{
+  "moduleId": "module10-01-permute-pins-algo",
+  "items": [
+    {
+      "q": "Pins that permute?",
+      "choices": [
+        "D and S",
+        "G",
+        "A",
+        "VDD"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "permute_ok?",
+      "choices": [
+        "True",
+        "False",
+        "None",
+        "N/A"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Applies to?",
+      "choices": [
+        "MOSFET S/D",
+        "All pins",
+        "Ports",
+        "GDS"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

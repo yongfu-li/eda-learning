@@ -1,0 +1,83 @@
+title: Why Contact
+footer: learn_magic — 01 contact paint
+slides:
+- type: title
+  title: Why Contact
+  subtitle: Paint a contact cut between poly and metal1
+  notes: Paint a contact cut between poly and metal1.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: contact_count=1 (ca)'
+  notes: 'GOLDEN: contact_count=1 (ca).'
+- type: image
+  title: Contact ca
+  image: assets/steps/01-ca.png
+  caption: Contact ca
+  notes: One contact between poly and metal1.
+- type: image
+  title: Between layers
+  image: assets/steps/02-between.png
+  caption: Between layers
+  notes: Contact bridges poly (g) and metal1 (m1y).
+- type: image
+  title: Contact paint
+  image: assets/steps/03-paint.png
+  caption: Contact paint
+  notes: Magic contact command paints the cut.
+- type: image
+  title: Highlight
+  image: assets/steps/04-highlight.png
+  caption: Highlight
+  notes: Contact + gate + m1y highlighted.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: contact_count=1.'
+- type: bullets
+  title: Browser lab track
+  bullets:
+  - Open **contact-paint**
+  - Run the stage buttons and Check the goldens
+  notes: Open **contact-paint**. Run the stage buttons and Check the goldens.
+- type: bullets
+  title: Implement track
+  bullets:
+  - From common/, run solvers.py and confirm MAGIC_PARTA_OK
+  notes: From common/, run solvers.py and confirm MAGIC_PARTA_OK.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Mixing KLayout viewer shortcuts with Magic paint commands
+  - Forgetting min_width when reading DRC errors
+  notes: Mixing KLayout viewer shortcuts with Magic paint commands. Forgetting min_width
+    when reading DRC errors.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder, run the Magic map self-test
+  notes: From the common folder, run the Magic map self-test.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_magic/common
+
+    python3 solvers.py'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the check in plain steps
+  notes: Here is the check in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: 'contact_count=1 (ca).
+
+    ok if goldens match'
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue the Magic Part A map, then the real CLI track
+  notes: Continue the Magic Part A map, then the real CLI track.

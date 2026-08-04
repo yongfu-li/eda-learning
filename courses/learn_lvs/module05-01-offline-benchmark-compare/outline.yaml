@@ -1,0 +1,38 @@
+title: Offline compare
+footer: learn_lvs — 01 offline benchmark compare
+slides:
+- type: title
+  title: Offline compare
+  subtitle: Track A prints lvs_compare_metrics without the browser
+  notes: Track A prints lvs_compare_metrics without the browser.
+- type: bullets
+  title: The idea
+  bullets:
+  - Load tiny_lvs.json; print sch_devices, lay_devices, matched_nets, mismatch_count,
+    ok
+  notes: Load tiny_lvs.json; print sch_devices, lay_devices, matched_nets, mismatch_count,
+    ok.
+- type: bullets
+  title: Why offline
+  bullets:
+  - Print lvs_compare_metrics offline without the browser
+  notes: Print lvs_compare_metrics offline without the browser.
+- type: bullets
+  title: Commands
+  bullets:
+  - Python3 -c "from solvers import lvs_compare_metrics
+  notes: python3 -c "from solvers import lvs_compare_metrics; print(lvs_compare_metrics())"
+    in common/
+- type: bullets
+  title: What to compare
+  bullets:
+  - Load tiny_lvs.json; print sch_devices, lay_devices, matched_nets, mismatch_count,
+    ok
+  notes: Load tiny_lvs.json; print sch_devices, lay_devices, matched_nets, mismatch_count,
+    ok.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue to the wrap module
+  notes: Continue to the wrap module.

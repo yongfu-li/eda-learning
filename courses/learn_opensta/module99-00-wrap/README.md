@@ -3,11 +3,11 @@
 **Module id:** `module99-00-wrap`  
 **Kind:** `wrap`
 
-[← Real evidence](../module08-03-real-evidence/README.md) · [Course README](../README.md) · End →
+[← Contribute](../module15-03-contribute-opensta/README.md) · [Course README](../README.md) · End →
 
 ## Outcomes
 
-**Recap Part A map and Part B real OpenSTA evidence (CLI → liberty → link → SDC → report_checks → engine). Parts C–D ship next.**
+**Recap Parts A–D: timing map, real OpenSTA evidence, algorithms bound to reports, and internals / contribute literacy.**
 
 ## Media
 

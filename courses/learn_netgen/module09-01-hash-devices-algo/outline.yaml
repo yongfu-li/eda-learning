@@ -1,0 +1,82 @@
+title: Why algorithms
+footer: learn_netgen — 01 hash devices algo
+slides:
+- type: title
+  title: Why algorithms
+  subtitle: Hash devices by nmos/pmos class for compare
+  notes: Hash devices by nmos/pmos class for compare.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: hash_device_count=2'
+  notes: 'GOLDEN: hash_device_count=2.'
+- type: image
+  title: Device classes
+  image: assets/steps/01-class.png
+  caption: Device classes
+  notes: Group mn1/mp1 and X0/X1 by type.
+- type: image
+  title: Hash buckets
+  image: assets/steps/02-hash.png
+  caption: Hash buckets
+  notes: Two class buckets for compare.
+- type: image
+  title: Schematic side
+  image: assets/steps/03-sch.png
+  caption: Schematic side
+  notes: mn1 nmos, mp1 pmos.
+- type: image
+  title: Layout side
+  image: assets/steps/04-lay.png
+  caption: Layout side
+  notes: X0 nmos, X1 pmos.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: hash_device_count=2.'
+- type: bullets
+  title: Browser lab
+  bullets:
+  - Open **hash-devices-algo**
+  notes: Open **hash-devices-algo**.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Run algo_solvers.py and partc_bind.py
+  notes: Run algo_solvers.py and partc_bind.py.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Changing tiny_algo_netgen without updating Part B goldens
+  notes: Changing tiny_algo_netgen without updating Part B goldens.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder, run the Part C self-tests
+  notes: From the common folder, run the Part C self-tests.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_netgen/common
+
+    python3 algo_solvers.py
+
+    python3 partc_bind.py'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the check in plain steps
+  notes: Here is the check in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: 'hash_device_count=2.
+
+    ok if goldens match and bind'
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue Part C, then internals
+  notes: Continue Part C, then internals.

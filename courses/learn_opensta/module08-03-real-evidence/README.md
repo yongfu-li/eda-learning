@@ -3,7 +3,7 @@
 **Module id:** `module08-03-real-evidence`  
 **Kind:** `lab` · Primary lab: `opensta-evidence` · **ref**
 
-[← report_checks](../module08-01-real-report-checks/README.md) · [Course README](../README.md) · [Wrap →](../module99-00-wrap/README.md)
+[← report_checks](../module08-01-real-report-checks/README.md) · [Course README](../README.md) · [Graph build →](../module09-01-graph-build/README.md)
 
 ## Outcomes
 

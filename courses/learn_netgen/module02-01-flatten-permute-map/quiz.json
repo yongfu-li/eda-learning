@@ -1,0 +1,38 @@
+{
+  "moduleId": "module02-01-flatten-permute-map",
+  "items": [
+    {
+      "q": "Pins that permute?",
+      "choices": [
+        "D and S",
+        "G only",
+        "A and Y",
+        "VDD only"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "permute_ok golden?",
+      "choices": [
+        "True",
+        "False",
+        "None",
+        "N/A"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Permute applies to?",
+      "choices": [
+        "MOSFET source/drain",
+        "All pins",
+        "Ports only",
+        "GDS layers"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

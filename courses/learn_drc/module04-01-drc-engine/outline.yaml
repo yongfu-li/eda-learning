@@ -1,0 +1,58 @@
+title: Engine
+footer: learn_drc — 01 drc engine
+slides:
+- type: title
+  title: Engine
+  subtitle: A tiny engine chains every checker and reports ok when goldens match
+  notes: A tiny engine chains every checker and reports ok when goldens match.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: ok=True viol=3'
+  notes: 'GOLDEN: ok=True viol=3.'
+- type: image
+  title: Deck
+  image: assets/steps/01-deck.png
+  caption: Deck
+  notes: Load deck rule_count=8.
+- type: image
+  title: Checks
+  image: assets/steps/02-checks.png
+  caption: Checks
+  notes: Run width, space, and enclosure checkers.
+- type: image
+  title: Viol
+  image: assets/steps/03-viol.png
+  caption: Viol
+  notes: Collect geometry violations count=3.
+- type: image
+  title: Bool
+  image: assets/steps/04-bool.png
+  caption: Bool
+  notes: Boolean hit=1 on V (separate from viol count).
+- type: image
+  title: OK
+  image: assets/steps/05-ok.png
+  caption: OK
+  notes: 'GOLDEN: ok=True viol=3.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **drc-engine**. Run engine; confirm ok.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call drc_engine(); assert ok and violations.count==3
+  notes: Call drc_engine(); assert ok and violations.count==3.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Reporting partial checks
+  - Changing the toy without updating goldens
+  notes: Reporting partial checks. Changing the toy without updating goldens.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: offline compare, then wrap'
+  notes: 'Next: offline compare, then wrap.'

@@ -7,9 +7,26 @@
   border: 1px solid var(--line);
   background: #f7faf9;
 }
+/* Paper figure chrome — match XY plot canvases (black hairline, white field). */
+.cluster-canvas.bench-paper,
+canvas.bench-paper,
+canvas.bench-scatter {
+  border-radius: 0;
+  border: 1px solid #000;
+  background: #ffffff;
+  height: 480px;
+  max-height: min(480px, 55vh);
+  min-height: 320px;
+}
 @media (max-width: 700px) {
   .cluster-canvas {
     height: 360px;
+  }
+  .cluster-canvas.bench-paper,
+  canvas.bench-paper,
+  canvas.bench-scatter {
+    height: 360px;
+    min-height: 260px;
   }
 }
 .metrics-pre {

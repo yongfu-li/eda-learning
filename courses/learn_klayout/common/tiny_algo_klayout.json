@@ -1,0 +1,20 @@
+{
+  "note": "Layout teaching IR for KLayout Part C (not the KLayout binary).",
+  "cell": "tiny_rect",
+  "dbu": 0.001,
+  "layers": {"poly": 66, "metal1": 68},
+  "shapes": [
+    {"id": "p0", "layer": "poly", "box": [0, 0, 100, 50]},
+    {"id": "m0", "layer": "metal1", "box": [0, 0, 200, 20]}
+  ],
+  "rules": {
+    "poly": {"min_width": 40},
+    "metal1": {"min_width": 40, "min_spacing": 40}
+  },
+  "goldens": {
+    "layer_query_count": 2,
+    "width_violations": 1,
+    "marker_count": 1,
+    "engine_ok": true
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "module": "module99-00-wrap",
+  "questions": [
+    {"id": "q1", "question": "Course id?", "choices": ["learn_netgen", "learn_sta", "learn_yosys", "learn_openlane"], "answer": 0},
+    {"id": "q2", "question": "Part B proves?", "choices": ["Real Netgen CLI/reports", "OpenSTA timing only", "Place only", "DRC only"], "answer": 0},
+    {"id": "q3", "question": "Golden mismatch count?", "choices": ["0", "2", "4", "6"], "answer": 0}
+  ]
+}

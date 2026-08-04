@@ -1,0 +1,38 @@
+{
+  "moduleId": "module06-01-magic-cli",
+  "items": [
+    {
+      "q": "Typical Magic batch invocation?",
+      "choices": [
+        "magic -dnull -noconsole script.tcl",
+        "sta -exit",
+        "yosys -s",
+        "netgen"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "First recipe command?",
+      "choices": [
+        "tech_load",
+        "gds_write",
+        "drc check",
+        "abc"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Second recipe command?",
+      "choices": [
+        "load_cell",
+        "report_checks",
+        "flatten",
+        "opt"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

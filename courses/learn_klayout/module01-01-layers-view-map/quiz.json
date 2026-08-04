@@ -1,0 +1,38 @@
+{
+  "moduleId": "module01-01-layers-view-map",
+  "items": [
+    {
+      "q": "Layer count golden?",
+      "choices": [
+        "2",
+        "4",
+        "1",
+        "0"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "poly GDS layer?",
+      "choices": [
+        "66",
+        "68",
+        "1",
+        "0"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Layers used for?",
+      "choices": [
+        "GDS layer visibility",
+        "STA slack",
+        "SPICE only",
+        "Place only"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

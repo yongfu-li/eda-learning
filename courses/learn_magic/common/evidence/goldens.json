@@ -1,0 +1,45 @@
+{
+  "tool": "Magic",
+  "version": "8.3",
+  "cell": "tiny_inv",
+  "tech_file": "tech/scmos.tech",
+  "layout_file": "layouts/tiny_inv.mag",
+  "gds_file": "layouts/tiny_inv.gds",
+  "recipe_ids": [
+    "tech_load",
+    "load_cell",
+    "paint_verify",
+    "save",
+    "drc_check",
+    "gds_write"
+  ],
+  "tech_layers": ["ndiff", "pdiff", "poly", "metal1", "nwell", "contact"],
+  "stages": {
+    "tech_vocab": {
+      "layer_count": 6,
+      "layers": ["ndiff", "pdiff", "poly", "metal1", "nwell", "contact"]
+    },
+    "paint_save": {
+      "rect_count": 6,
+      "contact_count": 1,
+      "cell": "tiny_inv",
+      "saved": true
+    },
+    "drc": {
+      "error_count": 1,
+      "thin_shape": "thin",
+      "layer": "metal1",
+      "rule": "min_width"
+    },
+    "gds": {
+      "layer_count": 6,
+      "metal1_gds": 49,
+      "contact_gds": 25
+    }
+  },
+  "rect_count": 6,
+  "contact_count": 1,
+  "drc_error_count": 1,
+  "gds_layer_count": 6,
+  "engine_ok": true
+}

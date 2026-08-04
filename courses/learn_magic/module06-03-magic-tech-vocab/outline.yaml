@@ -1,0 +1,84 @@
+title: Why real Magic
+footer: learn_magic — 03 magic tech vocab
+slides:
+- type: title
+  title: Why real Magic
+  subtitle: Name the six teaching layers in scmos.tech
+  notes: Name the six teaching layers in scmos.tech.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: Layers ndiff,pdiff,poly,metal1,nwell,contact; count=6'
+  notes: 'GOLDEN: Layers ndiff,pdiff,poly,metal1,nwell,contact; count=6.'
+- type: image
+  title: Tech file
+  image: assets/steps/01-tech.png
+  caption: Tech file
+  notes: scmos.tech defines layer planes and DRC rules.
+- type: image
+  title: ndiff
+  image: assets/steps/02-nd.png
+  caption: ndiff
+  notes: ndiff is active diffusion (n-type).
+- type: image
+  title: poly
+  image: assets/steps/03-poly.png
+  caption: poly
+  notes: poly is the gate layer.
+- type: image
+  title: metal1
+  image: assets/steps/04-m1.png
+  caption: metal1
+  notes: metal1 routes signals; min_width=2 in lab.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: six teaching layers.'
+- type: bullets
+  title: Browser lab track
+  bullets:
+  - Open **magic-tech-vocab**
+  - Build the Magic recipe or open evidence stages, then Check
+  notes: Open **magic-tech-vocab**. Build the Magic recipe or open evidence stages,
+    then Check.
+- type: bullets
+  title: Implement track
+  bullets:
+  - From common/, run real_solvers.py and confirm REAL_MAGIC_OK
+  notes: From common/, run real_solvers.py and confirm REAL_MAGIC_OK.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Editing goldens by hand without re-running scripts
+  - Confusing Part A map JSON with checked-in logs
+  notes: Editing goldens by hand without re-running scripts. Confusing Part A map
+    JSON with checked-in logs.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder, run the real Magic self-test
+  notes: From the common folder, run the real Magic self-test.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_magic/common
+
+    python3 real_solvers.py'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the check in plain steps
+  notes: Here is the check in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: 'Layers ndiff,pdiff,poly,metal1,nwell,contact; count=6.
+
+    ok if goldens match'
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue the Part B evidence track, then algorithms and internals
+  notes: Continue the Part B evidence track, then algorithms and internals.

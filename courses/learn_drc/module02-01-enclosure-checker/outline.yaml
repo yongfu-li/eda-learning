@@ -1,0 +1,59 @@
+title: Enclosure
+footer: learn_drc — 01 enclosure checker
+slides:
+- type: title
+  title: Enclosure
+  subtitle: Enclosure rules require VIA (inner) to sit inside metal (outer) by a margin
+  notes: Enclosure rules require VIA (inner) to sit inside metal (outer) by a margin.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: enc=1 V vs M2, E.VIA_M2'
+  notes: 'GOLDEN: enc=1 V vs M2, E.VIA_M2.'
+- type: image
+  title: Rule
+  image: assets/steps/01-rule.png
+  caption: Rule
+  notes: 'E.VIA_M2: VIA inside M2 by limit 1.'
+- type: image
+  title: VIA
+  image: assets/steps/02-via.png
+  caption: VIA
+  notes: Inner shape V on VIA layer.
+- type: image
+  title: M2
+  image: assets/steps/03-m2.png
+  caption: M2
+  notes: Outer M2 shape C should enclose V.
+- type: image
+  title: Margin
+  image: assets/steps/04-margin.png
+  caption: Margin
+  notes: V is not enclosed by M2 — violation.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: enc=1 V vs M2, E.VIA_M2.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **enclosure-checker**. Select V; run enclosure check.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call check_enclosure(); assert count==1 and inner=='V'
+  notes: Call check_enclosure(); assert count==1 and inner=='V'.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Checking M1 enclosure when M2 is the failing outer
+  - Using overlap instead of contains
+  notes: Checking M1 enclosure when M2 is the failing outer. Using overlap instead
+    of contains.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: collect violation markers'
+  notes: 'Next: collect violation markers.'

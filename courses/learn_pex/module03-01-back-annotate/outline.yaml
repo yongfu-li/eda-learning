@@ -1,0 +1,58 @@
+title: Annotate
+footer: learn_pex — 01 back annotate
+slides:
+- type: title
+  title: Annotate
+  subtitle: Back-annotate writes r_total and c_total onto net n1 with port list
+  notes: Back-annotate writes r_total and c_total onto net n1 with port list.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: net n1 annotated'
+  notes: 'GOLDEN: net n1 annotated.'
+- type: image
+  title: Net
+  image: assets/steps/01-net.png
+  caption: Net
+  notes: Target net n1 from tiny_pex.
+- type: image
+  title: R total
+  image: assets/steps/02-r.png
+  caption: R total
+  notes: r_total=3.06 from reduced network.
+- type: image
+  title: C total
+  image: assets/steps/03-c.png
+  caption: C total
+  notes: c_total=1.376 from reduced network.
+- type: image
+  title: Ports
+  image: assets/steps/04-ports.png
+  caption: Ports
+  notes: Ports in and out on n1.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: net n1 annotated.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **back-annotate**. Select n1; confirm annotation count=1.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call back_annotate(); assert net=='n1' and count==1
+  notes: Call back_annotate(); assert net=='n1' and count==1.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Annotating wrong net
+  - Missing port list on annotation
+  notes: Annotating wrong net. Missing port list on annotation.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: SPEF-lite emit'
+  notes: 'Next: SPEF-lite emit.'

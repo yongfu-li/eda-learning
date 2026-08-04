@@ -1,0 +1,38 @@
+{
+  "moduleId": "module07-01-real-read-spice",
+  "items": [
+    {
+      "q": "Schematic device count?",
+      "choices": [
+        "2",
+        "4",
+        "0",
+        "6"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Layout device count?",
+      "choices": [
+        "2",
+        "1",
+        "3",
+        "0"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Net count each side?",
+      "choices": [
+        "4",
+        "2",
+        "6",
+        "0"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/eda_learning/courses/learn_pex/module00-00-intro/frames/slide-1.png'
+duration 10.032
+file '/mnt/d/proj/designs/eda_learning/courses/learn_pex/module00-00-intro/frames/slide-2.png'
+duration 12.0
+file '/mnt/d/proj/designs/eda_learning/courses/learn_pex/module00-00-intro/frames/slide-3.png'
+duration 5.856
+file '/mnt/d/proj/designs/eda_learning/courses/learn_pex/module00-00-intro/frames/slide-4.png'
+duration 10.656
+file '/mnt/d/proj/designs/eda_learning/courses/learn_pex/module00-00-intro/frames/slide-5.png'
+duration 5.904
+file '/mnt/d/proj/designs/eda_learning/courses/learn_pex/module00-00-intro/frames/slide-6.png'
+duration 2.64
+file '/mnt/d/proj/designs/eda_learning/courses/learn_pex/module00-00-intro/frames/slide-6.png'

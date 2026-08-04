@@ -1,0 +1,38 @@
+{
+  "moduleId": "module08-01-real-gds",
+  "items": [
+    {
+      "q": "GDS layer count golden?",
+      "choices": [
+        "6",
+        "1",
+        "49",
+        "0"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "metal1 GDS layer?",
+      "choices": [
+        "49",
+        "6",
+        "25",
+        "46"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Streamout command?",
+      "choices": [
+        "gds write",
+        "read_liberty",
+        "create_clock",
+        "place"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

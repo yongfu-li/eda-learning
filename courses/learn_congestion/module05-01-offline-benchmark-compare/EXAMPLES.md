@@ -1,7 +1,10 @@
 # Examples — Offline benchmark compare
 
-1. Export the same tiny_cong instance used in RUDY / overflow labs.
-2. Run your toy estimator; record total overflow, max overflow, wall time.
-3. If available, compare against a reference congestion map.
-4. Fill a comparison table: quality, overflow, runtime, notes.
-5. If the external tool is missing, document install blockers and still validate your harness I/O.
+## Platform benchmark (preferred)
+
+Open [`platform/benchmarks/congestion/index.html`](../../../platform/benchmarks/congestion/index.html):
+
+1. Preset **Hard** → **Run benchmark**.
+2. Confirm **Portfolio** / multipass / strong spread cut Σ overflow vs identity / pure RUDY.
+3. Compare RUDY vs probabilistic estimators on the same seeds.
+4. **Example** → Multipass RUDY feedback → **Load example** → **Register solver**.

@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/eda_learning/courses/learn_drc/module00-00-intro/frames/slide-1.png'
+duration 7.344
+file '/mnt/d/proj/designs/eda_learning/courses/learn_drc/module00-00-intro/frames/slide-2.png'
+duration 7.32
+file '/mnt/d/proj/designs/eda_learning/courses/learn_drc/module00-00-intro/frames/slide-3.png'
+duration 5.856
+file '/mnt/d/proj/designs/eda_learning/courses/learn_drc/module00-00-intro/frames/slide-4.png'
+duration 7.728
+file '/mnt/d/proj/designs/eda_learning/courses/learn_drc/module00-00-intro/frames/slide-5.png'
+duration 4.392
+file '/mnt/d/proj/designs/eda_learning/courses/learn_drc/module00-00-intro/frames/slide-6.png'
+duration 2.544
+file '/mnt/d/proj/designs/eda_learning/courses/learn_drc/module00-00-intro/frames/slide-6.png'

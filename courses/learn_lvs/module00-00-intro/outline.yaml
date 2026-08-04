@@ -1,0 +1,34 @@
+title: Welcome
+footer: learn_lvs — 00 intro
+slides:
+- type: title
+  title: Welcome
+  subtitle: After DRC you still need LVS , schematic graph, device recognition, net
+    extract, binding, compare
+  notes: After DRC you still need LVS — schematic graph, device recognition, net extract,
+    binding, compare.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'Toy tiny_lvs: INV schematic mn1/mp1 vs layout X0/X1 → four matched nets'
+  notes: 'Toy tiny_lvs: INV schematic mn1/mp1 vs layout X0/X1 → four matched nets.'
+- type: bullets
+  title: Two tracks
+  bullets:
+  - Implement track uses common/ solvers; browser lab track uses platform tools
+  notes: Implement track uses common/ solvers; browser lab track uses platform tools.
+- type: bullets
+  title: Toy design
+  bullets:
+  - 'Tiny_lvs: schematic mn1/mp1 INV; layout X0/X1; four bound nets'
+  notes: 'tiny_lvs: schematic mn1/mp1 INV; layout X0/X1; four bound nets.'
+- type: bullets
+  title: Path
+  bullets:
+  - Schematic → recog → extract → layout → binding → match → compare → engine
+  notes: Schematic → recog → extract → layout → binding → match → compare → engine.
+- type: bullets
+  title: Begin
+  bullets:
+  - 'Next: schematic connectivity graph'
+  notes: 'Next: schematic connectivity graph.'

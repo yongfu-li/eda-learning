@@ -1,0 +1,38 @@
+{
+  "module": "module04-01-drc-engine",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "engine ok?",
+      "choices": [
+        "True",
+        "False",
+        "unknown",
+        "N/A"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "violation_count?",
+      "choices": [
+        "3",
+        "1",
+        "4",
+        "8"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Engine includes boolean?",
+      "choices": [
+        "yes",
+        "no",
+        "violations only",
+        "deck only"
+      ],
+      "answer": 0
+    }
+  ]
+}

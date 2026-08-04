@@ -82,9 +82,15 @@ export function hitPin(canvas, timing, clientX, clientY, levels = null, radius =
  * @param {boolean} [opts.showDelay=true]
  */
 export function drawTimingGraph(canvas, timing, opts = {}) {
+  const paper = !!opts.paper;
+  const ink = paper ? "#000000" : "#0f172a";
+  const PAPER_FONT =
+    "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
+  if (paper) canvas.style.background = "#ffffff";
+
   const { ctx, w, h } = fitHiDpiCanvas(canvas);
   ctx.clearRect(0, 0, w, h);
-  ctx.fillStyle = "#f7faf9";
+  ctx.fillStyle = paper ? "#ffffff" : "#f7faf9";
   ctx.fillRect(0, 0, w, h);
 
   const levels = opts.levels || null;
@@ -93,8 +99,13 @@ export function drawTimingGraph(canvas, timing, opts = {}) {
   const tags = opts.tags || {};
   const showDelay = opts.showDelay !== false;
   const pos = pinPositions(canvas, timing, levels);
+  const PAPER_FILL = {
+    port: "#0f6b5c",
+    cell_in: "#1d4ed8",
+    cell_out: "#7c3aed",
+    default: "#334155",
+  };
 
-  // Arcs
   for (const a of timing.arcs) {
     const A = pos[a.from];
     const B = pos[a.to];
@@ -104,14 +115,33 @@ export function drawTimingGraph(canvas, timing, opts = {}) {
     ctx.beginPath();
     ctx.moveTo(A.x, A.y);
     ctx.lineTo(B.x, B.y);
-    ctx.strokeStyle = hi ? "#c45c26" : a.kind === "cell" ? "#6b4c9a" : "#94a3b8";
-    ctx.lineWidth = hi ? 3 : a.kind === "cell" ? 2.5 : 1.5;
+    ctx.strokeStyle = paper
+      ? hi
+        ? "#be123c"
+        : a.kind === "cell"
+          ? "#7c3aed"
+          : "#64748b"
+      : hi
+        ? "#c45c26"
+        : a.kind === "cell"
+          ? "#6b4c9a"
+          : "#94a3b8";
+    ctx.lineWidth = paper
+      ? hi
+        ? 3
+        : a.kind === "cell"
+          ? 2.25
+          : 1.5
+      : hi
+        ? 3
+        : a.kind === "cell"
+          ? 2.5
+          : 1.5;
     if (a.kind === "net" && !hi) ctx.setLineDash([5, 4]);
     else ctx.setLineDash([]);
     ctx.stroke();
     ctx.setLineDash([]);
 
-    // arrow head
     const ang = Math.atan2(B.y - A.y, B.x - A.x);
     const tipX = B.x - 14 * Math.cos(ang);
     const tipY = B.y - 14 * Math.sin(ang);
@@ -126,20 +156,31 @@ export function drawTimingGraph(canvas, timing, opts = {}) {
       tipY - 8 * Math.sin(ang + 0.4)
     );
     ctx.closePath();
-    ctx.fillStyle = hi ? "#c45c26" : a.kind === "cell" ? "#6b4c9a" : "#94a3b8";
+    ctx.fillStyle = paper
+      ? hi
+        ? "#be123c"
+        : a.kind === "cell"
+          ? "#7c3aed"
+          : "#64748b"
+      : hi
+        ? "#c45c26"
+        : a.kind === "cell"
+          ? "#6b4c9a"
+          : "#94a3b8";
     ctx.fill();
 
     if (showDelay) {
       const mx = (A.x + B.x) / 2;
       const my = (A.y + B.y) / 2 - 8;
-      ctx.fillStyle = "#334155";
-      ctx.font = "11px ui-monospace, monospace";
+      ctx.fillStyle = paper ? ink : "#334155";
+      ctx.font = paper
+        ? `11px ${PAPER_FONT}`
+        : "11px ui-monospace, monospace";
       ctx.textAlign = "center";
       ctx.fillText(String(a.delay), mx, my);
     }
   }
 
-  // Pins
   const pinR = Math.max(13, Math.min(20, Math.min(w, h) * 0.028));
   for (const p of timing.pins) {
     const P = pos[p.id];
@@ -148,26 +189,39 @@ export function drawTimingGraph(canvas, timing, opts = {}) {
     const r = hi ? pinR + 3 : pinR;
     ctx.beginPath();
     ctx.arc(P.x, P.y, r, 0, Math.PI * 2);
-    ctx.fillStyle = KIND_FILL[p.kind] || KIND_FILL.default;
+    ctx.fillStyle = paper
+      ? PAPER_FILL[p.kind] || PAPER_FILL.default
+      : KIND_FILL[p.kind] || KIND_FILL.default;
     ctx.fill();
-    if (hi) {
-      ctx.strokeStyle = "#c45c26";
-      ctx.lineWidth = 3;
-      ctx.stroke();
-    }
-    ctx.fillStyle = "#0f172a";
-    ctx.font = `${Math.max(11, Math.min(14, pinR))}px system-ui, sans-serif`;
+    ctx.strokeStyle = paper ? ink : hi ? "#c45c26" : "transparent";
+    ctx.lineWidth = paper ? (hi ? 2.5 : 1.25) : 3;
+    if (paper || hi) ctx.stroke();
+    ctx.fillStyle = paper ? ink : "#0f172a";
+    ctx.font = paper
+      ? `${Math.max(11, Math.min(14, pinR))}px ${PAPER_FONT}`
+      : `${Math.max(11, Math.min(14, pinR))}px system-ui, sans-serif`;
     ctx.textAlign = "center";
     ctx.fillText(p.id, P.x, P.y + r + 14);
     if (levels) {
-      ctx.fillStyle = "#64748b";
-      ctx.font = "10px ui-monospace, monospace";
+      ctx.fillStyle = paper ? "#475569" : "#64748b";
+      ctx.font = paper
+        ? `10px ${PAPER_FONT}`
+        : "10px ui-monospace, monospace";
       ctx.fillText(`L${levels[p.id]}`, P.x, P.y + 4);
     }
     if (tags[p.id] != null && tags[p.id] !== "") {
-      ctx.fillStyle = "#0f172a";
-      ctx.font = "10px ui-monospace, monospace";
+      ctx.fillStyle = paper ? ink : "#0f172a";
+      ctx.font = paper
+        ? `10px ${PAPER_FONT}`
+        : "10px ui-monospace, monospace";
       ctx.fillText(String(tags[p.id]), P.x, P.y - r - 4);
     }
+  }
+
+  if (paper && opts.metricText) {
+    ctx.fillStyle = ink;
+    ctx.font = `bold 12px ${PAPER_FONT}`;
+    ctx.textAlign = "left";
+    ctx.fillText(opts.metricText, 16, 18);
   }
 }

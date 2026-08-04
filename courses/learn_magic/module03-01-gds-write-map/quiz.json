@@ -1,0 +1,38 @@
+{
+  "moduleId": "module03-01-gds-write-map",
+  "items": [
+    {
+      "q": "GDS layer count?",
+      "choices": [
+        "6",
+        "1",
+        "49",
+        "0"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "metal1 GDS number?",
+      "choices": [
+        "49",
+        "6",
+        "25",
+        "1"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "gds write maps?",
+      "choices": [
+        "Magic layers \u2192 GDS numbers",
+        "STA slack",
+        "Verilog ports",
+        "Liberty arcs"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

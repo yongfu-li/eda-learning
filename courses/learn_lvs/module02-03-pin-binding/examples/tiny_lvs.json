@@ -1,0 +1,37 @@
+{
+  "schematic": {
+    "ports": { "a": "input", "y": "output", "vdd": "power", "vss": "ground" },
+    "devices": [
+      { "id": "mn1", "type": "nmos", "pins": { "G": "a", "D": "y", "S": "vss" } },
+      { "id": "mp1", "type": "pmos", "pins": { "G": "a", "D": "y", "S": "vdd" } }
+    ]
+  },
+  "layout": {
+    "layers": ["DIFF", "POLY", "M1", "NPLUS", "PPLUS"],
+    "shapes": [
+      { "id": "ndiff", "layer": "DIFF", "x0": 2, "y0": 2, "x1": 10, "y1": 6 },
+      { "id": "pdiff", "layer": "DIFF", "x0": 2, "y0": 10, "x1": 10, "y1": 14 },
+      { "id": "poly", "layer": "POLY", "x0": 5, "y0": 1, "x1": 7, "y1": 15 },
+      { "id": "nplus", "layer": "NPLUS", "x0": 2, "y0": 2, "x1": 10, "y1": 6 },
+      { "id": "pplus", "layer": "PPLUS", "x0": 2, "y0": 10, "x1": 10, "y1": 14 },
+      { "id": "m1_a", "layer": "M1", "x0": 5, "y0": 7, "x1": 7, "y1": 9 },
+      { "id": "m1_y", "layer": "M1", "x0": 8, "y0": 4, "x1": 14, "y1": 12 },
+      { "id": "m1_vss", "layer": "M1", "x0": 0, "y0": 2, "x1": 3, "y1": 6 },
+      { "id": "m1_vdd", "layer": "M1", "x0": 0, "y0": 10, "x1": 3, "y1": 14 }
+    ],
+    "devices": [
+      { "id": "X0", "type": "nmos", "pins": { "G": "net_a", "D": "net_y", "S": "net_vss" }, "from_shapes": ["ndiff", "poly", "nplus"] },
+      { "id": "X1", "type": "pmos", "pins": { "G": "net_a", "D": "net_y", "S": "net_vdd" }, "from_shapes": ["pdiff", "poly", "pplus"] }
+    ],
+    "nets": {
+      "net_a": { "shapes": ["poly", "m1_a"], "port": "a" },
+      "net_y": { "shapes": ["m1_y"], "port": "y" },
+      "net_vss": { "shapes": ["m1_vss", "ndiff"], "port": "vss" },
+      "net_vdd": { "shapes": ["m1_vdd", "pdiff"], "port": "vdd" }
+    }
+  },
+  "binding": {
+    "devices": { "X0": "mn1", "X1": "mp1" },
+    "nets": { "net_a": "a", "net_y": "y", "net_vss": "vss", "net_vdd": "vdd" }
+  }
+}

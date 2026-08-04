@@ -1,0 +1,21 @@
+title: Parts A–D complete
+footer: learn_magic — 00 wrap
+slides:
+- type: title
+  title: Parts A–D complete
+  subtitle: You finished the Magic map, real CLI evidence, algorithms bound to DRC/GDS
+    goldens, and C tree literacy
+  notes: You finished the Magic map, real CLI evidence, algorithms bound to DRC/GDS
+    goldens, and C tree literacy.
+- type: bullets
+  title: What you can do
+  bullets:
+  - You can match DRC=1 on thin metal1, GDS layers=6, contact=1
+  notes: You can match DRC=1 on thin metal1, GDS layers=6, contact=1, and open Tile/Plane/CellDef
+    with intent to contribute.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - 'Next tools on the OpenLane path: Netgen, KLayout, then OpenROAD and OpenLane'
+  notes: 'Next tools on the OpenLane path: Netgen, KLayout, then OpenROAD and OpenLane.'

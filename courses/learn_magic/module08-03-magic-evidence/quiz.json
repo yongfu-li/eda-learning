@@ -1,0 +1,38 @@
+{
+  "moduleId": "module08-03-magic-evidence",
+  "items": [
+    {
+      "q": "Engine ok means?",
+      "choices": [
+        "all Part B goldens match",
+        "STA slack=8",
+        "LVS only",
+        "Place only"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Recipe length?",
+      "choices": [
+        "6",
+        "3",
+        "1",
+        "20"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Lab id (unique)?",
+      "choices": [
+        "magic-evidence",
+        "real-evidence",
+        "magic-engine",
+        "opensta-evidence"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

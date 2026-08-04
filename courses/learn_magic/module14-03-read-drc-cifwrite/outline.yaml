@@ -1,0 +1,80 @@
+title: Why Magic internals
+footer: learn_magic — 03 read drc cifwrite
+slides:
+- type: title
+  title: Why Magic internals
+  subtitle: Read the DRC scan → marker shape bound to Part B goldens
+  notes: Read the DRC scan → marker shape bound to Part B goldens.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: load_rules → scan_region → emit_marker (drc=1); cifwrite stages'
+  notes: 'GOLDEN: load_rules → scan_region → emit_marker (drc=1); cifwrite stages.'
+- type: image
+  title: load_rules
+  image: assets/steps/01-rules.png
+  caption: load_rules
+  notes: Load tech min_width for metal1 from Plane.
+- type: image
+  title: scan_region
+  image: assets/steps/02-scan.png
+  caption: scan_region
+  notes: Walk tiles on the active plane.
+- type: image
+  title: emit_marker
+  image: assets/steps/03-emit.png
+  caption: emit_marker
+  notes: Flag thin rect (width=1 < limit=2).
+- type: image
+  title: cifwrite
+  image: assets/steps/04-cif.png
+  caption: cifwrite
+  notes: flatten → write_cif → verify_layers (6 GDS layers).
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: DRC→Part B drc=1; GDS layers=6.'
+- type: bullets
+  title: Browser lab track
+  bullets:
+  - Open **read-drc-cifwrite**
+  - Click through stages and check goldens
+  notes: Open **read-drc-cifwrite**. Click through stages and check goldens.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call read_drc_cifwrite() in internals_solvers; assert golden match
+  notes: Call read_drc_cifwrite() in internals_solvers; assert golden match.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Treating browser JSON as the C API
+  - Confusing Tile with OpenSTA Graph
+  notes: Treating browser JSON as the C API. Confusing Tile with OpenSTA Graph.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder, run the internals self-test
+  notes: From the common folder, run the internals self-test.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_magic/common
+
+    python3 internals_solvers.py'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the checklist in plain steps
+  notes: Here is the checklist in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: load_rules → scan_region → emit_marker (drc=1); cifwrite stages.
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Wrap the Magic path , map, CLI evidence, algorithms, and C tree literacy
+  notes: Wrap the Magic path — map, CLI evidence, algorithms, and C tree literacy.

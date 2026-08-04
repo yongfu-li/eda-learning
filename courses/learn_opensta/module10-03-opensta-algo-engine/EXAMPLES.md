@@ -4,13 +4,13 @@
 
 ```bash
 cd courses/learn_opensta/common
-python3 solvers.py
+python3 algo_solvers.py
+python3 partc_bind.py
 ```
 
 ## Pseudocode
 
 ```text
-load tiny_opensta.json
-compute path_delay and slack
-ok if goldens match
+engine ok; bind slack 8↔8.
+ok if algo goldens match and bind to Part B report
 ```

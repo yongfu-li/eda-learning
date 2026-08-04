@@ -343,23 +343,46 @@ function packRowAvoiding(ids, positions, blocked) {
 }
 
 /**
- * Abacus-lite: process cells by increasing original x; for each cell try each
- * row, place at leftmost legal site after already-placed cells, pick min
- * L1 displacement from original.
+ * Abacus-lite: process cells by increasing original x (or opts.order); for each
+ * cell try each row, place at a feasible site, pick min L1 displacement
+ * (or opts.costFn(id, cand, partial) when provided).
  */
 export function abacusLegalize(positions, opts = {}) {
   const fixed = opts.fixed || {};
   const origin = clonePositions(positions);
-  const order = [...CELLS]
-    .filter((id) => !fixed[id])
-    .sort((a, b) => positions[a].x - positions[b].x || a.localeCompare(b));
+  const order = (opts.order || [...CELLS])
+    .filter((id) => !fixed[id] && CELLS.includes(id))
+    .concat(
+      [...CELLS].filter(
+        (id) =>
+          !fixed[id] &&
+          !(opts.order || []).includes(id)
+      )
+    );
+  // Deduplicate while preserving order preference
+  const seen = new Set();
+  const seq = [];
+  for (const id of order) {
+    if (seen.has(id) || fixed[id]) continue;
+    seen.add(id);
+    seq.push(id);
+  }
+  for (const id of CELLS) {
+    if (!seen.has(id) && !fixed[id]) seq.push(id);
+  }
 
   const placed = {};
   for (const [fid, fp] of Object.entries(fixed)) {
     placed[fid] = { x: fp.x, y: fp.y };
   }
 
-  for (const id of order) {
+  const costFn =
+    typeof opts.costFn === "function"
+      ? opts.costFn
+      : (id, cand) =>
+          Math.abs(cand.x - origin[id].x) + Math.abs(cand.y - origin[id].y);
+
+  for (const id of seq) {
     const w = cellWidth(id);
     let best = null;
     let bestCost = Infinity;
@@ -370,8 +393,6 @@ export function abacusLegalize(positions, opts = {}) {
         .map(([cid, p]) => ({ x0: p.x, x1: p.x + cellWidth(cid) }))
         .sort((a, b) => a.x0 - b.x0);
       const prefer = snapX(origin[id].x, w);
-      let x = prefer;
-      // Find feasible x ≥ prefer, else search from 0
       const tryPlace = (start) => {
         let xx = start;
         let guard = 0;
@@ -391,23 +412,32 @@ export function abacusLegalize(positions, opts = {}) {
         }
         return null;
       };
-      let cand = tryPlace(prefer);
-      if (cand == null) cand = tryPlace(0);
-      if (cand == null) continue;
-      const cost =
-        Math.abs(cand - origin[id].x) + Math.abs(y - origin[id].y);
-      if (cost < bestCost || (near(cost, bestCost) && (best == null || cand < best.x))) {
-        bestCost = cost;
-        best = { x: cand, y };
+      // Try prefer, 0, and a few site offsets near prefer
+      const starts = [
+        prefer,
+        0,
+        Math.max(0, prefer - 2),
+        Math.max(0, prefer - 4),
+      ];
+      for (const start of starts) {
+        const candX = tryPlace(start);
+        if (candX == null) continue;
+        const cand = { x: candX, y };
+        const cost = costFn(id, cand, placed, origin);
+        if (
+          cost < bestCost ||
+          (near(cost, bestCost) && (best == null || cand.x < best.x))
+        ) {
+          bestCost = cost;
+          best = cand;
+        }
       }
     }
     if (!best) {
-      // Fallback: snap in place
       best = { x: snapX(origin[id].x, w), y: snapY(origin[id].y) };
     }
     placed[id] = best;
   }
-  // Ensure all cells present
   const out = {};
   for (const id of CELLS) out[id] = placed[id] || greedySnap(positions)[id];
   return out;
@@ -435,49 +465,32 @@ export function detailedLegalize(positions, opts = {}) {
 
 /**
  * Draw legalization canvas: chip outline, row lines, cell rectangles.
+ * opts.paper — white bg + plot palette (benchmark figures).
  */
 export function drawLegalization(canvas, opts = {}) {
   const positions = opts.positions || {};
   const highlight = new Set(opts.highlight || []);
-  const { ctx, w: W, h: H } = fitHiDpiCanvas(canvas);
-  ctx.clearRect(0, 0, W, H);
-  ctx.fillStyle = "#f7f4ef";
-  ctx.fillRect(0, 0, W, H);
-
-  const pad = 28;
-  const scaleX = (W - 2 * pad) / CHIP_W;
-  const scaleY = (H - 2 * pad) / CHIP_H;
-
-  const toX = (x) => pad + x * scaleX;
-  const toY = (y) => H - pad - y * scaleY; // lower-left origin
-
-  // Chip
-  ctx.strokeStyle = "#2c3e50";
-  ctx.lineWidth = 2;
-  ctx.strokeRect(toX(0), toY(CHIP_H), CHIP_W * scaleX, CHIP_H * scaleY);
-
-  // Rows
-  ctx.strokeStyle = "#b0bec5";
-  ctx.lineWidth = 1;
-  ctx.setLineDash([4, 4]);
-  for (const y of ROW_YS) {
-    ctx.beginPath();
-    ctx.moveTo(toX(0), toY(y));
-    ctx.lineTo(toX(CHIP_W), toY(y));
-    ctx.stroke();
-  }
-  ctx.setLineDash([]);
-
-  // Site ticks
-  ctx.strokeStyle = "#eceff1";
-  for (let s = 0; s <= CHIP_W; s++) {
-    ctx.beginPath();
-    ctx.moveTo(toX(s), toY(0));
-    ctx.lineTo(toX(s), toY(CHIP_H));
-    ctx.stroke();
-  }
-
-  const palette = {
+  const paper = !!opts.paper;
+  const ink = paper ? "#000000" : "#263238";
+  const bg = paper ? "#ffffff" : "#f7f4ef";
+  const grid = paper ? "#e5e5e5" : "#eceff1";
+  const rowStroke = paper ? "#94a3b8" : "#b0bec5";
+  const chipStroke = paper ? "#000000" : "#2c3e50";
+  const PAPER_FONT =
+    "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
+const PAPER_PALETTE = [
+  "#1d4ed8",
+  "#0f6b5c",
+  "#b45309",
+  "#9f1239",
+  "#6d28d9",
+  "#c2410c",
+  "#0369a1",
+  "#a21caf",
+  "#4f46e5",
+  "#ca8a04",
+];
+  const labPalette = {
     A: "#1565c0",
     B: "#2e7d32",
     C: "#6a1b9a",
@@ -486,32 +499,100 @@ export function drawLegalization(canvas, opts = {}) {
     F: "#ad1457",
   };
 
-  const labelPx = Math.max(13, Math.min(20, Math.round(14 * Math.min(scaleX, scaleY))));
+  if (paper) canvas.style.background = "#ffffff";
 
-  for (const id of CELLS) {
+  const { ctx, w: W, h: H } = fitHiDpiCanvas(canvas);
+  ctx.clearRect(0, 0, W, H);
+  ctx.fillStyle = bg;
+  ctx.fillRect(0, 0, W, H);
+
+  const pad = 28;
+  const legendH = paper ? 28 : 0;
+  const scaleX = (W - 2 * pad) / CHIP_W;
+  const scaleY = (H - 2 * pad - legendH) / CHIP_H;
+
+  const toX = (x) => pad + x * scaleX;
+  const toY = (y) => H - pad - legendH - y * scaleY; // lower-left origin
+
+  ctx.strokeStyle = chipStroke;
+  ctx.lineWidth = paper ? 2.25 : 2;
+  ctx.strokeRect(toX(0), toY(CHIP_H), CHIP_W * scaleX, CHIP_H * scaleY);
+
+  ctx.strokeStyle = rowStroke;
+  ctx.lineWidth = paper ? 1.25 : 1;
+  ctx.setLineDash(paper ? [5, 4] : [4, 4]);
+  for (const y of ROW_YS) {
+    ctx.beginPath();
+    ctx.moveTo(toX(0), toY(y));
+    ctx.lineTo(toX(CHIP_W), toY(y));
+    ctx.stroke();
+  }
+  ctx.setLineDash([]);
+
+  ctx.strokeStyle = grid;
+  ctx.lineWidth = paper ? 1.1 : 1;
+  for (let s = 0; s <= CHIP_W; s++) {
+    ctx.beginPath();
+    ctx.moveTo(toX(s), toY(0));
+    ctx.lineTo(toX(s), toY(CHIP_H));
+    ctx.stroke();
+  }
+
+  const labelPx = Math.max(
+    13,
+    Math.min(20, Math.round(14 * Math.min(scaleX, scaleY)))
+  );
+
+  CELLS.forEach((id, i) => {
     const p = positions[id];
-    if (!p) continue;
+    if (!p) return;
     const w = cellWidth(id);
     const x0 = toX(p.x);
     const y0 = toY(p.y + ROW_H);
     const ww = w * scaleX;
     const hh = ROW_H * scaleY;
-    ctx.fillStyle = palette[id] || "#455a64";
-    ctx.globalAlpha = highlight.size && !highlight.has(id) ? 0.35 : 0.85;
+    ctx.fillStyle = paper
+      ? PAPER_PALETTE[i % PAPER_PALETTE.length]
+      : labPalette[id] || "#455a64";
+    ctx.globalAlpha = highlight.size && !highlight.has(id) ? 0.35 : paper ? 0.92 : 0.85;
     ctx.fillRect(x0, y0, ww, hh);
     ctx.globalAlpha = 1;
-    ctx.strokeStyle = highlight.has(id) ? "#c62828" : "#263238";
-    ctx.lineWidth = highlight.has(id) ? 3 : 1.5;
+    ctx.strokeStyle = highlight.has(id) ? (paper ? "#b45309" : "#c62828") : ink;
+    ctx.lineWidth = highlight.has(id) ? 3 : paper ? 1.75 : 1.5;
     ctx.strokeRect(x0, y0, ww, hh);
     ctx.fillStyle = "#fff";
-    ctx.font = `bold ${labelPx}px sans-serif`;
+    ctx.font = paper
+      ? `bold ${labelPx}px ${PAPER_FONT}`
+      : `bold ${labelPx}px sans-serif`;
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     ctx.fillText(id, x0 + ww / 2, y0 + hh / 2);
+  });
+
+  if (paper) {
+    const ly = H - Math.round(legendH / 2) - 2;
+    let lx = pad;
+    ctx.font = `bold 12px ${PAPER_FONT}`;
+    ctx.textBaseline = "middle";
+    ctx.textAlign = "left";
+    CELLS.forEach((id, i) => {
+      ctx.fillStyle = PAPER_PALETTE[i % PAPER_PALETTE.length];
+      ctx.fillRect(lx, ly - 5, 14, 11);
+      ctx.strokeStyle = ink;
+      ctx.lineWidth = 1.25;
+      ctx.strokeRect(lx, ly - 5, 14, 11);
+      ctx.fillStyle = ink;
+      ctx.fillText(id, lx + 18, ly);
+      lx += ctx.measureText(id).width + 34;
+    });
   }
 
-  ctx.fillStyle = "#546e7a";
-  ctx.font = "12px sans-serif";
+  ctx.fillStyle = paper ? ink : "#546e7a";
+  ctx.font = paper ? `bold 12px ${PAPER_FONT}` : "12px sans-serif";
   ctx.textAlign = "left";
-  ctx.fillText(`chip ${CHIP_W}×${CHIP_H} · ${N_ROWS} rows · site ${SITE_W}`, pad, 16);
+  ctx.textBaseline = "alphabetic";
+  const meta =
+    opts.metricText ||
+    `chip ${CHIP_W}×${CHIP_H} · ${N_ROWS} rows · site ${SITE_W}`;
+  ctx.fillText(meta, pad, paper ? pad - 8 : 16);
 }

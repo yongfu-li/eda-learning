@@ -1,0 +1,38 @@
+{
+  "moduleId": "module08-03-netgen-evidence",
+  "items": [
+    {
+      "q": "Engine ok means?",
+      "choices": [
+        "all Part B goldens match",
+        "STA slack=8",
+        "DRC only",
+        "Place only"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Recipe length?",
+      "choices": [
+        "6",
+        "3",
+        "1",
+        "20"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Lab id (unique)?",
+      "choices": [
+        "netgen-evidence",
+        "real-evidence",
+        "netgen-engine",
+        "magic-evidence"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

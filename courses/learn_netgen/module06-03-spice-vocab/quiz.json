@@ -1,0 +1,38 @@
+{
+  "moduleId": "module06-03-spice-vocab",
+  "items": [
+    {
+      "q": "Teaching device count?",
+      "choices": [
+        "2",
+        "4",
+        "1",
+        "6"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Port names?",
+      "choices": [
+        "A,Y,VDD,VSS",
+        "clk,rst",
+        "G,D,S only",
+        "LEF only"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Device classes?",
+      "choices": [
+        "nmos, pmos",
+        "metal1 only",
+        "STA only",
+        "GDS only"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+title: Why contribute
+footer: learn_opensta — 03 contribute opensta
+slides:
+- type: title
+  title: Why contribute
+  subtitle: Reading is not enough
+  notes: Reading is not enough. A contributor knows where a command lives and how
+    it enters the build.
+- type: bullets
+  title: The idea
+  bullets:
+  - Add app/HelloCmd.cc, register the Tcl command, hook CMake, rebuild, sta -help
+    hello_cmd
+  notes: 'GOLDEN: add app/HelloCmd.cc, register the Tcl command, hook CMake, rebuild,
+    sta -help hello_cmd.'
+- type: image
+  title: Tree layout
+  image: assets/steps/01-tree.png
+  caption: Tree layout
+  notes: network/graph/sdc/search hold the engine; app/ holds Tcl cmds.
+- type: image
+  title: Stub file
+  image: assets/steps/02-stub.png
+  caption: Stub file
+  notes: 'Minimal .cc: Cmd subclass and command name hello_cmd.'
+- type: image
+  title: CMake hook
+  image: assets/steps/03-build.png
+  caption: CMake hook
+  notes: Add the object to CMakeLists and rebuild OpenSTA.
+- type: image
+  title: Smoke
+  image: assets/steps/04-smoke.png
+  caption: Smoke
+  notes: sta -help hello_cmd proves the command exists.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: path + tcl_cmd + cmake + rebuild + help smoke.'
+- type: bullets
+  title: Browser lab track
+  bullets:
+  - Open **contribute-opensta**
+  - Assemble the contribute checklist and check
+  notes: Open **contribute-opensta**. Assemble the contribute checklist and check.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call contribute_opensta(); assert checklist length and smoke cmd
+  notes: Call contribute_opensta(); assert checklist length and smoke cmd.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Editing only docs
+  - Forgetting the CMake entry
+  - Skipping help smoke
+  notes: Editing only docs. Forgetting the CMake entry. Skipping help smoke.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder, call contribute_opensta and print the checklist
+  notes: From the common folder, call contribute_opensta and print the checklist.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_opensta/common
+
+    python3 -c "from internals_solvers import contribute_opensta; print(contribute_opensta())"'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the contribute checklist in plain steps
+  notes: Here is the contribute checklist in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: 'path ← app/HelloCmd.cc
+
+    register Tcl cmd hello_cmd
+
+    add to CMake; rebuild
+
+    smoke ← sta -help hello_cmd'
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Wrap the OpenSTA path , you can use OpenSTA and open the C++ tree with intent
+  notes: Wrap the OpenSTA path — you can use OpenSTA and open the C++ tree with intent.

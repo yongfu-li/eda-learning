@@ -1,0 +1,38 @@
+{
+  "moduleId": "module02-01-stream-gds-map",
+  "items": [
+    {
+      "q": "Shape count golden?",
+      "choices": [
+        "2",
+        "4",
+        "1",
+        "0"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "stream_ok?",
+      "choices": [
+        "True",
+        "False",
+        "None",
+        "N/A"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Stream writes?",
+      "choices": [
+        "GDS with layer map",
+        "SPICE netlist",
+        "SDC only",
+        "LEF abstract"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

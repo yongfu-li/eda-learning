@@ -1,0 +1,38 @@
+{
+  "moduleId": "module02-03-compare-nets-map",
+  "items": [
+    {
+      "q": "Matched net count?",
+      "choices": [
+        "4",
+        "2",
+        "6",
+        "0"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Net names include?",
+      "choices": [
+        "A,Y,VDD,VSS",
+        "mn1 only",
+        "GDS only",
+        "LEF only"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Compare matches?",
+      "choices": [
+        "schematic vs layout net names",
+        "STA slack",
+        "Verilog ports",
+        "Liberty arcs"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

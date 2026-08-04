@@ -255,26 +255,37 @@ export function drawCompaction(canvas, opts = {}) {
   const highlight = new Set(opts.highlight || []);
   const selected = opts.selected || null;
   const graph = opts.graph || null;
+  const paper = !!opts.paper;
+  const ink = paper ? "#000000" : "#0f172a";
+  const PAPER_FONT =
+    "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
+  const PAPER_FILL = ["#1d4ed8", "#0f6b5c", "#b45309", "#7c3aed", "#be123c"];
+  if (paper) canvas.style.background = "#ffffff";
 
   const { ctx, w, h } = fitHiDpiCanvas(canvas, { w: 640, h: LAB_CANVAS_CSS_HEIGHT });
   ctx.clearRect(0, 0, w, h);
-  ctx.fillStyle = "#f8fafc";
+  ctx.fillStyle = paper ? "#ffffff" : "#f8fafc";
   ctx.fillRect(0, 0, w, h);
   const pad = 28;
+  const legendH = paper ? 26 : 0;
   const CW = chip.x1 - chip.x0;
   const CH = chip.y1 - chip.y0;
-  const scale = Math.min((w - 2 * pad) / CW, (h - 2 * pad) / CH);
+  const scale = Math.min((w - 2 * pad) / CW, (h - 2 * pad - legendH) / CH);
   const ox = (w - CW * scale) / 2;
-  const oy = h - pad - (h - 2 * pad - CH * scale) / 2;
+  const oy = h - pad - legendH - (h - 2 * pad - legendH - CH * scale) / 2;
   const toScreen = (x, y) => ({ sx: ox + (x - chip.x0) * scale, sy: oy - (y - chip.y0) * scale });
 
-  // chip outline
   const c0 = toScreen(chip.x0, chip.y0);
   const c1 = toScreen(chip.x1, chip.y1);
-  ctx.strokeStyle = "rgba(148,163,184,0.8)";
+  ctx.strokeStyle = paper ? ink : "rgba(148,163,184,0.8)";
+  ctx.lineWidth = paper ? 2 : 1;
   ctx.strokeRect(c0.sx, c1.sy, c1.sx - c0.sx, c0.sy - c1.sy);
+  if (paper) {
+    ctx.fillStyle = "#f8fafc";
+    ctx.fillRect(c0.sx, c1.sy, c1.sx - c0.sx, c0.sy - c1.sy);
+  }
 
-  if (graph) {
+  if (graph && !paper) {
     ctx.strokeStyle = "rgba(234,179,8,0.35)";
     ctx.setLineDash([4, 4]);
     for (const [dst, src] of graph.edges) {
@@ -284,13 +295,14 @@ export function drawCompaction(canvas, opts = {}) {
     ctx.setLineDash([]);
   }
 
+  let cellIdx = 0;
   for (const o of objects) {
     const p0 = toScreen(o.x0, o.y0);
     const p1 = toScreen(o.x1, o.y1);
     const hot = selected === o.id || highlight.has(o.id);
     if (o.kind === "wire") {
-      ctx.strokeStyle = hot ? "#f59e0b" : "#64748b";
-      ctx.lineWidth = hot ? 4 : 3;
+      ctx.strokeStyle = paper ? (hot ? "#be123c" : "#334155") : hot ? "#f59e0b" : "#64748b";
+      ctx.lineWidth = paper ? (hot ? 3.5 : 2.5) : hot ? 4 : 3;
       ctx.beginPath();
       if (o.points && o.points.length >= 2) {
         const pts = o.points.map((p) => toScreen(p.x, p.y));
@@ -301,26 +313,62 @@ export function drawCompaction(canvas, opts = {}) {
         ctx.lineTo(p1.sx, p1.sy);
       }
       ctx.stroke();
-      ctx.fillStyle = "#0f172a";
-      ctx.font = "11px ui-sans-serif, system-ui";
+      ctx.fillStyle = paper ? ink : "#0f172a";
+      ctx.font = paper ? `11px ${PAPER_FONT}` : "11px ui-sans-serif, system-ui";
       ctx.fillText(o.id, (p0.sx + p1.sx) / 2, p0.sy - 6);
     } else {
-      ctx.fillStyle = hot ? "#22c55e" : "#86efac";
+      ctx.fillStyle = paper
+        ? PAPER_FILL[cellIdx % PAPER_FILL.length]
+        : hot
+          ? "#22c55e"
+          : "#86efac";
+      if (paper) ctx.globalAlpha = 0.88;
       ctx.fillRect(p0.sx, p1.sy, p1.sx - p0.sx, p0.sy - p1.sy);
-      ctx.strokeStyle = "#14532d";
+      ctx.globalAlpha = 1;
+      ctx.strokeStyle = paper ? ink : "#14532d";
+      ctx.lineWidth = paper ? 1.5 : 1;
       ctx.strokeRect(p0.sx, p1.sy, p1.sx - p0.sx, p0.sy - p1.sy);
-      ctx.fillStyle = "#0f172a";
-      ctx.font = "12px ui-sans-serif, system-ui";
+      ctx.fillStyle = paper ? "#ffffff" : "#0f172a";
+      ctx.font = paper
+        ? `bold 12px ${PAPER_FONT}`
+        : "12px ui-sans-serif, system-ui";
       ctx.fillText(o.id, p0.sx + 6, (p0.sy + p1.sy) / 2 + 4);
+      cellIdx += 1;
     }
   }
 
   if (opts.metricText) {
-    ctx.fillStyle = "rgba(15,23,42,0.85)";
-    ctx.fillRect(pad, pad - 4, Math.min(440, w - 2 * pad), 22);
-    ctx.fillStyle = "#f8fafc";
-    ctx.font = "13px ui-sans-serif, system-ui";
-    ctx.fillText(opts.metricText, pad + 8, pad + 12);
+    if (paper) {
+      ctx.fillStyle = ink;
+      ctx.font = `bold 12px ${PAPER_FONT}`;
+      ctx.fillText(opts.metricText, pad, pad - 6);
+    } else {
+      ctx.fillStyle = "rgba(15,23,42,0.85)";
+      ctx.fillRect(pad, pad - 4, Math.min(440, w - 2 * pad), 22);
+      ctx.fillStyle = "#f8fafc";
+      ctx.font = "13px ui-sans-serif, system-ui";
+      ctx.fillText(opts.metricText, pad + 8, pad + 12);
+    }
+  }
+
+  if (paper) {
+    const ly = h - Math.round(legendH / 2) - 2;
+    let lx = pad;
+    ctx.font = `11px ${PAPER_FONT}`;
+    ctx.textBaseline = "middle";
+    const cells = objects.filter((o) => o.kind !== "wire");
+    cells.forEach((o, i) => {
+      ctx.beginPath();
+      ctx.arc(lx + 5, ly, 4, 0, Math.PI * 2);
+      ctx.fillStyle = PAPER_FILL[i % PAPER_FILL.length];
+      ctx.fill();
+      ctx.strokeStyle = ink;
+      ctx.lineWidth = 1.25;
+      ctx.stroke();
+      ctx.fillStyle = ink;
+      ctx.fillText(o.id, lx + 12, ly);
+      lx += 36;
+    });
   }
   return { scale, toScreen };
 }

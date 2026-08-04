@@ -1,0 +1,7 @@
+file '/mnt/d/proj/designs/eda_learning/courses/learn_netgen/module99-00-wrap/frames/slide-1.png'
+duration 8.136
+file '/mnt/d/proj/designs/eda_learning/courses/learn_netgen/module99-00-wrap/frames/slide-2.png'
+duration 8.808
+file '/mnt/d/proj/designs/eda_learning/courses/learn_netgen/module99-00-wrap/frames/slide-3.png'
+duration 5.04
+file '/mnt/d/proj/designs/eda_learning/courses/learn_netgen/module99-00-wrap/frames/slide-3.png'

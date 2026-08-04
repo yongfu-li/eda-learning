@@ -1,0 +1,37 @@
+title: Welcome
+footer: learn_pex — 00 intro
+slides:
+- type: title
+  title: Welcome
+  subtitle: After LVS you still need PEX , geometry load, R/C extract, RC network,
+    reduce, back-annotate, SPEF-lite
+  notes: After LVS you still need PEX — geometry load, R/C extract, RC network, reduce,
+    back-annotate, SPEF-lite.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'Toy tiny_pex: four segments on net n1 → R_total=3.06, C_total=1.376, SPEF-lite
+    emit'
+  notes: 'Toy tiny_pex: four segments on net n1 → R_total=3.06, C_total=1.376, SPEF-lite
+    emit.'
+- type: bullets
+  title: Two tracks
+  bullets:
+  - Implement track uses common/ solvers; browser lab track uses platform tools
+  notes: Implement track uses common/ solvers; browser lab track uses platform tools.
+- type: bullets
+  title: Toy design
+  bullets:
+  - 'Tiny_pex: four segments on net n1; R_total=3.06; C_total=1.376'
+  notes: 'tiny_pex: four segments on net n1; R_total=3.06; C_total=1.376.'
+- type: bullets
+  title: Path
+  bullets:
+  - Geometry → R extract → C extract → RC network → reduce → annotate → SPEF → engine
+  notes: Geometry → R extract → C extract → RC network → reduce → annotate → SPEF
+    → engine.
+- type: bullets
+  title: Begin
+  bullets:
+  - 'Next: geometry load'
+  notes: 'Next: geometry load.'

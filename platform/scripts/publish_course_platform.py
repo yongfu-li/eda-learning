@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parents[2]
 PLATFORM = ROOT / "platform"
 CATALOG = PLATFORM / "assets" / "catalog.json"
 # Bump when site-config.js / pages.js media URL logic changes (bust browser cache on Pages).
-ASSET_V = "20260723b"
+ASSET_V = "20260726a"
 
 ROW = re.compile(
     r"^\|\s*`?(module\d{2}-\d{2}-[a-z0-9-]+)`?\s*\|\s*`([^`]+)`\s*\|\s*\[([^\]]+)\]"
@@ -331,6 +331,63 @@ COURSE_META = {
         "first_lab": "edges-polygons",
         "first_n": "02",
     },
+    "learn_drc": {
+        "title": "DRC for EDA",
+        "focus": "Rule deck → width/spacing/enclosure → markers → multi-layer → boolean → engine",
+        "prereq": "learn_pattern_matching",
+        "status": "ready",
+        "repo": "learn_drc",
+        "modules_md": ROOT / "courses" / "learn_drc" / "docs" / "MODULES.md",
+        "course_root": ROOT / "courses" / "learn_drc",
+        "lead": (
+            "Design rule check literacy on tiny_drc — rule deck load, width/spacing/enclosure checkers, "
+            "violation markers, multi-layer rules, deck boolean, engine. Clips and decks load from "
+            "<code>courses/learn_drc</code> "
+            "(<code>moduleSS-AA-slug/video.mp4</code>). Open the matching browser tool, then mark the lab done."
+        ),
+        "tools_href": "../../tools/index.html#drc",
+        "tools_label": "DRC tools",
+        "first_lab": "rule-deck",
+        "first_n": "02",
+    },
+    "learn_lvs": {
+        "title": "LVS for EDA",
+        "focus": "Schematic graph → device recog → net extract → layout graph → binding → match → compare → engine",
+        "prereq": "learn_drc",
+        "status": "ready",
+        "repo": "learn_lvs",
+        "modules_md": ROOT / "courses" / "learn_lvs" / "docs" / "MODULES.md",
+        "course_root": ROOT / "courses" / "learn_lvs",
+        "lead": (
+            "Layout vs schematic compare literacy on tiny_lvs — schematic graph, device recognition, "
+            "net extraction, layout graph, pin binding, device match, LVS compare, engine. Clips and decks load from "
+            "<code>courses/learn_lvs</code> "
+            "(<code>moduleSS-AA-slug/video.mp4</code>). Open the matching browser tool, then mark the lab done."
+        ),
+        "tools_href": "../../tools/index.html#lvs",
+        "tools_label": "LVS tools",
+        "first_lab": "schematic-graph",
+        "first_n": "02",
+    },
+    "learn_pex": {
+        "title": "PEX for EDA",
+        "focus": "Geometry load → R extract → C extract → RC network → reduce → annotate → SPEF-lite → engine",
+        "prereq": "learn_lvs",
+        "status": "ready",
+        "repo": "learn_pex",
+        "modules_md": ROOT / "courses" / "learn_pex" / "docs" / "MODULES.md",
+        "course_root": ROOT / "courses" / "learn_pex",
+        "lead": (
+            "Parasitic extraction literacy on tiny_pex — geometry load, resistance/capacitance extract, "
+            "RC network build, network reduction, back-annotate, SPEF-lite emit, engine. Clips and decks load from "
+            "<code>courses/learn_pex</code> "
+            "(<code>moduleSS-AA-slug/video.mp4</code>). Open the matching browser tool, then mark the lab done."
+        ),
+        "tools_href": "../../tools/index.html#pex",
+        "tools_label": "PEX tools",
+        "first_lab": "geometry-load",
+        "first_n": "02",
+    },
     "learn_multi_patterning": {
         "title": "Multi-patterning for EDA",
         "focus": "Conflict graph → LELE DP → bipartite → SADP → stitch → TP/QP coloring → MP engine",
@@ -465,22 +522,119 @@ COURSE_META = {
         "first_n": "02",
     },
     "learn_yosys": {
-        "title": "Yosys (toy + real CLI)",
-        "focus": "toy passes → real read/proc/flatten/opt/synth evidence",
+        "title": "Yosys (CLI + algorithms)",
+        "focus": "pass map → real synth → algorithms → internals",
         "prereq": "learn_synthesis",
         "status": "ready",
         "repo": "learn_yosys",
         "modules_md": ROOT / "courses" / "learn_yosys" / "docs" / "MODULES.md",
         "course_root": ROOT / "courses" / "learn_yosys",
         "lead": (
-            "Part A toy pass literacy + Part B real Yosys CLI/RTLIL evidence on tiny_and_or.v "
-            "(read → proc → flatten → opt → synth). Clips and decks load from "
+            "Part A pass map on tiny_yosys.json + Part B real Yosys CLI/RTLIL evidence on tiny_and_or.v "
+            "(read → proc → flatten → opt → synth) + Part C algorithms bound to real Yosys "
+            "(proc/opt/techmap/extract/memory/fsm/abc on tiny_algo + dedicated RTL) + Part D internals "
+            "(RTLIL C++ model, Pass registration, read opt_clean, contribute checklist). "
+            "Clips and decks load from "
             "<code>courses/learn_yosys</code> "
             "(<code>moduleSS-AA-slug/video.mp4</code>). Open the matching browser tool, then mark the lab done."
         ),
         "tools_href": "../../tools/index.html#yosys",
         "tools_label": "Yosys tools",
         "first_lab": "proc-elaborate",
+        "first_n": "02",
+    },
+    "learn_opensta": {
+        "title": "OpenSTA (CLI + timing)",
+        "focus": "report map → real STA evidence → algorithms → internals",
+        "prereq": "learn_sta",
+        "status": "ready",
+        "repo": "learn_opensta",
+        "modules_md": ROOT / "courses" / "learn_opensta" / "docs" / "MODULES.md",
+        "course_root": ROOT / "courses" / "learn_opensta",
+        "lead": (
+            "Part A timing/report map + Part B real OpenSTA CLI evidence on tiny_combo "
+            "(delay 2 / slack 8) + Part C algorithms bound to those report goldens "
+            "+ Part D internals "
+            "(STA C++ model, read find_path/report, contribute checklist). "
+            "Clips and decks load from "
+            "<code>courses/learn_opensta</code> "
+            "(<code>moduleSS-AA-slug/video.mp4</code>). Open the matching browser tool, then mark the lab done."
+        ),
+        "tools_href": "../../tools/index.html#opensta",
+        "tools_label": "OpenSTA tools",
+        "first_lab": "timing-graph-map",
+        "first_n": "02",
+    },
+    "learn_magic": {
+        "title": "Magic (layout / DRC)",
+        "focus": "layout map → real Magic evidence → algorithms → internals",
+        "prereq": "learn_digital",
+        "status": "ready",
+        "repo": "learn_magic",
+        "modules_md": ROOT / "courses" / "learn_magic" / "docs" / "MODULES.md",
+        "course_root": ROOT / "courses" / "learn_magic",
+        "lead": (
+            "Part A layout/DRC/GDS map on tiny_inv "
+            "(6 rects; metal1=2; contact=1; DRC on thin; GDS layers=6) "
+            "+ Part B real Magic CLI evidence "
+            "+ Part C algorithms bound to DRC/GDS goldens "
+            "+ Part D internals "
+            "(Tile/Plane model, read DRC/cifwrite, contribute checklist). "
+            "Parts A–D ready. Clips and decks load from "
+            "<code>courses/learn_magic</code> "
+            "(<code>moduleSS-AA-slug/video.mp4</code>). Open the matching browser tool, then mark the lab done."
+        ),
+        "tools_href": "../../tools/index.html#magic",
+        "tools_label": "Magic tools",
+        "first_lab": "paint-layers",
+        "first_n": "02",
+    },
+    "learn_netgen": {
+        "title": "Netgen (LVS compare)",
+        "focus": "LVS map → real Netgen evidence → algorithms → internals",
+        "prereq": "learn_lvs or learn_magic",
+        "status": "ready",
+        "repo": "learn_netgen",
+        "modules_md": ROOT / "courses" / "learn_netgen" / "docs" / "MODULES.md",
+        "course_root": ROOT / "courses" / "learn_netgen",
+        "lead": (
+            "Part A LVS compare map on tiny_inv "
+            "(sch/lay devices=2; matched_nets=4; matched_devices=2; mismatch=0; classes=2) "
+            "+ Part B real Netgen CLI evidence "
+            "+ Part C algorithms bound to LVS goldens "
+            "+ Part D internals "
+            "(Obj/Netlist/Element model, read compare C, contribute checklist). "
+            "Parts A–D ready. Clips and decks load from "
+            "<code>courses/learn_netgen</code> "
+            "(<code>moduleSS-AA-slug/video.mp4</code>). Open the matching browser tool, then mark the lab done."
+        ),
+        "tools_href": "../../tools/index.html#netgen",
+        "tools_label": "Netgen tools",
+        "first_lab": "read-netlists-map",
+        "first_n": "02",
+    },
+    "learn_klayout": {
+        "title": "KLayout (GDS / DRC)",
+        "focus": "viewer map → real KLayout evidence → algorithms → internals",
+        "prereq": "learn_magic or learn_drc",
+        "status": "ready",
+        "repo": "learn_klayout",
+        "modules_md": ROOT / "courses" / "learn_klayout" / "docs" / "MODULES.md",
+        "course_root": ROOT / "courses" / "learn_klayout",
+        "lead": (
+            "Part A viewer/stream/DRC map on tiny_rect "
+            "(layer_count=2; width_violations=1 on m0; marker_count=1; stream_ok=True) "
+            "+ Part B real KLayout CLI evidence "
+            "+ Part C algorithms bound to DRC goldens "
+            "+ Part D internals "
+            "(Layout/Cell/Instance model, read DRC runner, contribute checklist). "
+            "Parts A–D ready. Clips and decks load from "
+            "<code>courses/learn_klayout</code> "
+            "(<code>moduleSS-AA-slug/video.mp4</code>). Open the matching browser tool, then mark the lab done."
+        ),
+        "tools_href": "../../tools/index.html#klayout",
+        "tools_label": "KLayout tools",
+        "first_lab": "layers-view-map",
         "first_n": "02",
     },
 }
@@ -502,6 +656,7 @@ COURSE_INDEX = """<!DOCTYPE html>
         <nav class="site-nav" aria-label="Site">
           <a href="../../index.html">Home</a>
           <a href="../index.html" class="is-active" aria-current="page">Courses</a>
+          <a href="../../benchmarks/index.html">Benchmarks</a>
           <a href="../../tools/index.html">Tools</a>
         </nav>
         <div class="site-search" data-site-search></div>
@@ -557,6 +712,7 @@ LAB_TPL = """<!DOCTYPE html>
         <nav class="site-nav" aria-label="Site">
           <a href="../../../../index.html">Home</a>
           <a href="../../../index.html" class="is-active" aria-current="page">Courses</a>
+          <a href="../../../../benchmarks/index.html">Benchmarks</a>
           <a href="../../../../tools/index.html">Tools</a>
         </nav>
         <div class="site-search" data-site-search></div>
@@ -601,6 +757,7 @@ COURSES_INDEX = """<!DOCTYPE html>
         <nav class="site-nav" aria-label="Site">
           <a href="../index.html">Home</a>
           <a href="index.html" class="is-active" aria-current="page">Courses</a>
+          <a href="../benchmarks/index.html">Benchmarks</a>
           <a href="../tools/index.html">Tools</a>
         </nav>
         <div class="site-search" data-site-search></div>
@@ -646,7 +803,8 @@ PATH_LADDER_ROWS: list[list[str]] = [
     ["learn_multi_patterning", "learn_rule_dsl"],
     ["learn_spice", "learn_erc", "learn_antenna"],
     ["learn_power", "learn_dft_insert", "learn_signoff"],
-    ["learn_yosys", "learn_openroad", "learn_openlane", "learn_fpga_cad"],
+    ["learn_yosys", "learn_opensta", "learn_magic", "learn_netgen"],
+    ["learn_klayout", "learn_openroad", "learn_openlane", "learn_fpga_cad"],
     ["learn_analog_layout", "learn_ml_eda", "learn_pdks"],
 ]
 
@@ -685,7 +843,11 @@ LADDER_STUBS: dict[str, dict[str, str]] = {
     "learn_power": {"title": "Power analysis", "focus": "Switching/leakage, IR drop lite"},
     "learn_dft_insert": {"title": "DFT insert", "focus": "Scan / DFT as netlist transforms"},
     "learn_signoff": {"title": "Signoff literacy", "focus": "Corners, ECO loop, tapeout hooks"},
-    "learn_yosys": {"title": "Yosys (toy + real CLI)", "focus": "toy passes → real synth evidence"},
+    "learn_yosys": {"title": "Yosys (CLI + algorithms)", "focus": "pass map → real synth → algorithms → internals"},
+    "learn_opensta": {"title": "OpenSTA (CLI + timing)", "focus": "report map → real STA evidence → algorithms → internals"},
+    "learn_magic": {"title": "Magic (layout / DRC)", "focus": "GDS streamout, DRC, antenna vs layout algorithms"},
+    "learn_netgen": {"title": "Netgen (LVS)", "focus": "device extract + netlist compare evidence"},
+    "learn_klayout": {"title": "KLayout (GDS / DRC)", "focus": "viewer, streamout, DRC scripts vs Magic"},
     "learn_openroad": {"title": "OpenROAD evidence", "focus": "Place/CTS/route vs PD algorithm courses"},
     "learn_openlane": {"title": "OpenLane flow", "focus": "RTL→GDS flow literacy"},
     "learn_fpga_cad": {"title": "FPGA CAD", "focus": "Packing/place/route differences"},

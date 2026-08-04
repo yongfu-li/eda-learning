@@ -1,0 +1,28 @@
+{
+  "module": "module00-00-intro",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "learn_netgen is primarily about?",
+      "choices": [
+        "Netgen LVS tool literacy (map → CLI → algorithms → internals)",
+        "OpenROAD placement only",
+        "SPICE transient only",
+        "UVM sequences only"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "LVS prereq course?",
+      "choices": ["learn_lvs or learn_magic", "learn_routing", "learn_spice", "learn_dft_insert"],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Netgen is used heavily by?",
+      "choices": ["OpenLane LVS flow", "Verilator only", "Yosys synthesis only", "Magic paint only"],
+      "answer": 0
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "moduleId": "module09-01-paint-connectivity",
+  "items": [
+    {
+      "q": "metal1 net shape count?",
+      "choices": [
+        "2",
+        "1",
+        "6",
+        "0"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Contact count golden?",
+      "choices": [
+        "1",
+        "6",
+        "3",
+        "0"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Contact id in tiny_inv?",
+      "choices": [
+        "ca",
+        "thin",
+        "m1y",
+        "g"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

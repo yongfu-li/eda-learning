@@ -19,7 +19,7 @@ Status: **ref** = browser lab shipped under `platform/tools/` (algorithm modules
 | `module03-03-terminal-propagation` | `lab` | [Terminal propagation](../module03-03-terminal-propagation/README.md) | `terminal-propagation` | **ref** |
 | `module03-05-hypergraph-partition` | `lab` | [Hypergraph partitioning](../module03-05-hypergraph-partition/README.md) | `hypergraph-partition` | **ref** |
 | `module04-01-multilevel-partition` | `lab` | [Multilevel partitioning](../module04-01-multilevel-partition/README.md) | `multilevel-partition` | **ref** |
-| `module05-01-offline-benchmark-compare` | `offline` | [Offline benchmark compare](../module05-01-offline-benchmark-compare/README.md) | offline harness | P |
+| `module05-01-offline-benchmark-compare` | `lab` | [Offline benchmark compare](../module05-01-offline-benchmark-compare/README.md) | `benchmarks/partitioning` | S |
 | `module99-00-wrap` | `wrap` | [Partitioning path complete](../module99-00-wrap/README.md) | — | — |
 
 ## Sections

@@ -1,0 +1,58 @@
+title: Engine
+footer: learn_pex — 01 pex engine
+slides:
+- type: title
+  title: Engine
+  subtitle: A tiny engine chains every PEX stage and reports ok when goldens match
+  notes: A tiny engine chains every PEX stage and reports ok when goldens match.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: ok=True'
+  notes: 'GOLDEN: ok=True.'
+- type: image
+  title: Geo
+  image: assets/steps/01-geo.png
+  caption: Geo
+  notes: Geometry segment_count=4, layer_count=3.
+- type: image
+  title: R/C
+  image: assets/steps/02-rc.png
+  caption: R/C
+  notes: Resistance r_total=3.06; capacitance c_total=1.376.
+- type: image
+  title: Reduce
+  image: assets/steps/03-reduce.png
+  caption: Reduce
+  notes: Reduce after_nodes=2; R_eq/C_eq match.
+- type: image
+  title: SPEF
+  image: assets/steps/04-spef.png
+  caption: SPEF
+  notes: SPEF res_count=1, cap_count=1.
+- type: image
+  title: OK
+  image: assets/steps/05-ok.png
+  caption: OK
+  notes: 'GOLDEN: ok=True.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **pex-engine**. Run engine; confirm ok.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call pex_engine(); assert ok is True
+  notes: Call pex_engine(); assert ok is True.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Reporting partial stages
+  - Changing toy without updating goldens
+  notes: Reporting partial stages. Changing toy without updating goldens.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: offline compare, then wrap'
+  notes: 'Next: offline compare, then wrap.'

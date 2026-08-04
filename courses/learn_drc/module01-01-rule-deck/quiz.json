@@ -1,0 +1,38 @@
+{
+  "module": "module01-01-rule-deck",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "rule_count golden?",
+      "choices": [
+        "8",
+        "5",
+        "3",
+        "12"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "width rules?",
+      "choices": [
+        "3",
+        "2",
+        "8",
+        "1"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Deck layer count?",
+      "choices": [
+        "3",
+        "5",
+        "8",
+        "2"
+      ],
+      "answer": 0
+    }
+  ]
+}

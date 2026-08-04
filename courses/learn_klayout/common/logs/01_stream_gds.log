@@ -1,0 +1,4 @@
+STREAM_OK=true
+SHAPE_COUNT=2
+CELL=tiny_rect
+DBU=0.001

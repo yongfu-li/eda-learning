@@ -1,0 +1,58 @@
+title: Reduce
+footer: learn_pex — 03 network reduce
+slides:
+- type: title
+  title: Reduce
+  subtitle: Network reduction collapses the chain to in–out R_eq and lumped C_eq
+  notes: Network reduction collapses the chain to in–out R_eq and lumped C_eq.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: after_nodes=2; R_eq=3.06 C_eq=1.376'
+  notes: 'GOLDEN: after_nodes=2; R_eq=3.06 C_eq=1.376.'
+- type: image
+  title: Before
+  image: assets/steps/01-before.png
+  caption: Before
+  notes: Full chain has 5 nodes before reduce.
+- type: image
+  title: Series R
+  image: assets/steps/02-series.png
+  caption: Series R
+  notes: Sum series R → R_eq=3.06.
+- type: image
+  title: Sum C
+  image: assets/steps/03-sumc.png
+  caption: Sum C
+  notes: Sum ground C → C_eq=1.376.
+- type: image
+  title: After
+  image: assets/steps/04-after.png
+  caption: After
+  notes: Reduced to 2 signal ports (in/out).
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: after_nodes=2; R_eq=3.06 C_eq=1.376.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **network-reduce**. Select R_eq; confirm after_nodes=2.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call reduce_network(); assert after_nodes==2 and r_eq==3.06 and c_eq==1.376
+  notes: Call reduce_network(); assert after_nodes==2 and r_eq==3.06 and c_eq==1.376.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Reducing C before R
+  - Keeping internal nodes after reduce
+  notes: Reducing C before R. Keeping internal nodes after reduce.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: back-annotate nets'
+  notes: 'Next: back-annotate nets.'

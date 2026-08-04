@@ -1,0 +1,38 @@
+{
+  "moduleId": "module09-03-match-nets-algo",
+  "items": [
+    {
+      "q": "Matched nets?",
+      "choices": [
+        "4",
+        "2",
+        "0",
+        "6"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Match method?",
+      "choices": [
+        "set intersection",
+        "STA",
+        "LEF",
+        "ABC"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Net names?",
+      "choices": [
+        "A,Y,VDD,VSS",
+        "mn1 only",
+        "GDS",
+        "Liberty"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

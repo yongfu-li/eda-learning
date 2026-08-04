@@ -1,0 +1,38 @@
+{
+  "moduleId": "module09-01-layer-query-algo",
+  "items": [
+    {
+      "q": "Layer query count?",
+      "choices": [
+        "2",
+        "4",
+        "0",
+        "6"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Layers queried?",
+      "choices": [
+        "poly, metal1",
+        "metal1 only",
+        "STA",
+        "GDS only"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Query groups?",
+      "choices": [
+        "shapes by layer",
+        "STA slack",
+        "LEF",
+        "ABC"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

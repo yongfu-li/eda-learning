@@ -1,21 +1,21 @@
 ---
 marp: true
-title: Parts A and B complete
+title: Parts A–D complete
 paginate: true
 ---
 
-# Parts A and B complete
+# Parts A–D complete
 
-You finished the OpenSTA map and the real CLI evidence path on tiny_combo with liberty-lite
+You finished the OpenSTA map, real CLI evidence, algorithms bound to report_checks, and C++ tree literacy
 
 ---
 
 ## What you can do
-- You can run sta scripts, link AND2/BUF/INV, declare a 10-unit clock
+- You can match report slack 8 on path b to y
 
 ---
 
 ## Next
 - Complete the quiz for this part
-- Algorithms bound to OpenSTA reports and internals literacy come next
+- Next tools on the OpenLane path: Magic, Netgen, KLayout, then OpenROAD and OpenLane
 

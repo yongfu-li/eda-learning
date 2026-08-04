@@ -1,8 +1,38 @@
 {
   "moduleId": "module10-03-opensta-algo-engine",
   "items": [
-    {"id": "q0", "q": "This lab id?", "choices": ["opensta-algo-engine", "yosys-cli", "opt-dce", "proc-mux"], "answer": 0},
-    {"id": "q1", "q": "Course?", "choices": ["learn_opensta", "learn_yosys", "learn_magic", "learn_netgen"], "answer": 0},
-    {"id": "q2", "q": "Prereq algorithms course?", "choices": ["learn_sta", "learn_routing", "learn_spice", "learn_erc"], "answer": 0}
+    {
+      "q": "Engine ok means?",
+      "choices": [
+        "all Part C goldens + bind",
+        "Magic only",
+        "LVS only",
+        "Place only"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Bind compares to?",
+      "choices": [
+        "Part B report_checks goldens",
+        "GDS",
+        "ABC",
+        "Verilator"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "engine_ok?",
+      "choices": [
+        "True",
+        "False",
+        "None",
+        "N/A"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
   ]
 }

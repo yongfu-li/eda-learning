@@ -1,0 +1,58 @@
+title: Pin binding
+footer: learn_lvs — 03 pin binding
+slides:
+- type: title
+  title: Pin binding
+  subtitle: Binding table maps layout X0→mn1 and layout nets to schematic ports
+  notes: Binding table maps layout X0→mn1 and layout nets to schematic ports.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: X0→mn1, X1→mp1; 4 net binds'
+  notes: 'GOLDEN: X0→mn1, X1→mp1; 4 net binds.'
+- type: image
+  title: Dev bind
+  image: assets/steps/01-dev.png
+  caption: Dev bind
+  notes: 'Device binding: X0→mn1, X1→mp1.'
+- type: image
+  title: Net bind
+  image: assets/steps/02-net.png
+  caption: Net bind
+  notes: 'Net binding: net_a→a, net_y→y.'
+- type: image
+  title: Supplies
+  image: assets/steps/03-sup.png
+  caption: Supplies
+  notes: net_vss→vss, net_vdd→vdd.
+- type: image
+  title: Pairs
+  image: assets/steps/04-pairs.png
+  caption: Pairs
+  notes: Four net pairs and two device pairs.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: device_count=2, net_count=4.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **pin-binding**. Select X0 and mn1; confirm binding table.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call pin_binding(); assert devices['X0']=='mn1' and len(nets)==4
+  notes: Call pin_binding(); assert devices['X0']=='mn1' and len(nets)==4.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Binding by position instead of connectivity
+  - Missing a supply bind
+  notes: Binding by position instead of connectivity. Missing a supply bind.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: device matching'
+  notes: 'Next: device matching.'

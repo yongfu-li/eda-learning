@@ -13,6 +13,55 @@
   function toolHref(toolId, depth) {
     if (!toolId) return null;
     const prefix = "../".repeat(depth);
+    // First-class benchmark surfaces (not under tools/)
+    if (toolId === "partition-benchmark" || toolId === "benchmarks/partitioning") {
+      return `${prefix}benchmarks/partitioning/index.html`;
+    }
+    if (toolId === "cluster-benchmark" || toolId === "benchmarks/clustering") {
+      return `${prefix}benchmarks/clustering/index.html`;
+    }
+    if (toolId === "clock-tree-benchmark" || toolId === "benchmarks/clock-tree") {
+      return `${prefix}benchmarks/clock-tree/index.html`;
+    }
+    if (toolId === "buffer-benchmark" || toolId === "benchmarks/buffering") {
+      return `${prefix}benchmarks/buffering/index.html`;
+    }
+    if (toolId === "legal-benchmark" || toolId === "benchmarks/legalization") {
+      return `${prefix}benchmarks/legalization/index.html`;
+    }
+    if (toolId === "cong-benchmark" || toolId === "benchmarks/congestion") {
+      return `${prefix}benchmarks/congestion/index.html`;
+    }
+    if (toolId === "gr-benchmark" || toolId === "benchmarks/global-routing") {
+      return `${prefix}benchmarks/global-routing/index.html`;
+    }
+    if (toolId === "dr-benchmark" || toolId === "benchmarks/detailed-routing") {
+      return `${prefix}benchmarks/detailed-routing/index.html`;
+    }
+    if (toolId === "place-benchmark" || toolId === "benchmarks/placement") {
+      return `${prefix}benchmarks/placement/index.html`;
+    }
+    if (toolId === "floor-benchmark" || toolId === "benchmarks/floorplanning") {
+      return `${prefix}benchmarks/floorplanning/index.html`;
+    }
+    if (toolId === "compact-benchmark" || toolId === "benchmarks/compaction") {
+      return `${prefix}benchmarks/compaction/index.html`;
+    }
+    if (toolId === "sta-benchmark" || toolId === "benchmarks/sta") {
+      return `${prefix}benchmarks/sta/index.html`;
+    }
+    if (toolId === "retime-benchmark" || toolId === "benchmarks/retiming") {
+      return `${prefix}benchmarks/retiming/index.html`;
+    }
+    if (toolId === "equiv-benchmark" || toolId === "benchmarks/equivalence") {
+      return `${prefix}benchmarks/equivalence/index.html`;
+    }
+    if (toolId === "synth-benchmark" || toolId === "benchmarks/synthesis") {
+      return `${prefix}benchmarks/synthesis/index.html`;
+    }
+    if (String(toolId).startsWith("benchmarks/")) {
+      return `${prefix}${toolId}/index.html`;
+    }
     return `${prefix}tools/${toolId}/index.html`;
   }
 
@@ -112,7 +161,8 @@
     ["learn_multi_patterning", "learn_rule_dsl"],
     ["learn_spice", "learn_erc", "learn_antenna"],
     ["learn_power", "learn_dft_insert", "learn_signoff"],
-    ["learn_yosys", "learn_openroad", "learn_openlane", "learn_fpga_cad"],
+    ["learn_yosys", "learn_opensta", "learn_magic", "learn_netgen"],
+    ["learn_klayout", "learn_openroad", "learn_openlane", "learn_fpga_cad"],
     ["learn_analog_layout", "learn_ml_eda", "learn_pdks"],
   ];
 
@@ -204,6 +254,27 @@
       const next = idx < labs.length - 1 ? labs[idx + 1] : null;
       const done = D.labDone(courseId, slug);
       const tool = toolHref(lab.toolId, 4);
+      const isBench =
+        lab.toolId === "partition-benchmark" ||
+        lab.toolId === "cluster-benchmark" ||
+        lab.toolId === "clock-tree-benchmark" ||
+        lab.toolId === "buffer-benchmark" ||
+        lab.toolId === "legal-benchmark" ||
+        lab.toolId === "cong-benchmark" ||
+        lab.toolId === "gr-benchmark" ||
+        lab.toolId === "dr-benchmark" ||
+        lab.toolId === "place-benchmark" ||
+        lab.toolId === "floor-benchmark" ||
+        lab.toolId === "compact-benchmark" ||
+        lab.toolId === "sta-benchmark" ||
+        lab.toolId === "retime-benchmark" ||
+        lab.toolId === "equiv-benchmark" ||
+        lab.toolId === "synth-benchmark" ||
+        String(lab.toolId || "").startsWith("benchmarks/");
+      const openLabel = isBench ? "Open benchmark" : "Open tool";
+      const openHint = isBench
+        ? ` — run the shared dataset scoreboard (upload optional).`
+        : ` — load the starter example, then try challenges.`;
       const media = mediaUrls(course, lab);
       const titleEl = document.querySelector("[data-lab-title]");
       if (titleEl) titleEl.textContent = lab.title;
@@ -230,7 +301,7 @@
             }
             ${
               tool
-                ? `<a class="btn btn-primary" href="${tool}">Open tool</a>`
+                ? `<a class="btn btn-primary" href="${tool}">${openLabel}</a>`
                 : `<span class="btn btn-ghost is-disabled">No browser tool</span>`
             }
             <a class="btn btn-secondary" href="${escape(media.slidesPptx)}">Download PPTX</a>
@@ -261,7 +332,7 @@
           <li>Watch the clip (from the course repo) or skim the slides.</li>
           ${
             tool
-              ? `<li><a href="${tool}">Open the browser tool</a>${lab.toolId ? ` (<code>${escape(lab.toolId)}</code>)` : ""} — load the starter example, then try challenges.</li>`
+              ? `<li><a href="${tool}">${isBench ? "Open the benchmark" : "Open the browser tool"}</a>${lab.toolId ? ` (<code>${escape(lab.toolId)}</code>)` : ""}${openHint}</li>`
               : `<li>This step is ${escape(kindLabel(lab.kind)).toLowerCase()} — no primary tool; follow the module README on GitHub.</li>`
           }
           <li>Optional: practice Track A from

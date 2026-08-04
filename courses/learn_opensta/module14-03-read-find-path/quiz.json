@@ -1,8 +1,38 @@
 {
   "moduleId": "module14-03-read-find-path",
   "items": [
-    {"id": "q0", "q": "This lab id?", "choices": ["read-find-path", "yosys-cli", "opt-dce", "proc-mux"], "answer": 0},
-    {"id": "q1", "q": "Course?", "choices": ["learn_opensta", "learn_yosys", "learn_magic", "learn_netgen"], "answer": 0},
-    {"id": "q2", "q": "Prereq algorithms course?", "choices": ["learn_sta", "learn_routing", "learn_spice", "learn_erc"], "answer": 0}
+    {
+      "q": "Part B slack golden on tiny_combo?",
+      "choices": [
+        "8.0",
+        "2.0",
+        "10",
+        "0"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "First FindPath teaching stage?",
+      "choices": [
+        "tag_endpoints",
+        "delete GDS",
+        "run abc",
+        "place"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "report_checks formats?",
+      "choices": [
+        "start/end/delay/slack path",
+        "LEF only",
+        "DEF only",
+        "PDF only"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
   ]
 }

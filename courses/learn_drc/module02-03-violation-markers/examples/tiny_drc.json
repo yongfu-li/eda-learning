@@ -1,0 +1,21 @@
+{
+  "chip": { "x0": 0, "y0": 0, "x1": 24, "y1": 16 },
+  "layers": ["M1", "M2", "VIA"],
+  "shapes": [
+    { "id": "A", "layer": "M1", "x0": 2, "y0": 2, "x1": 10, "y1": 6 },
+    { "id": "B", "layer": "M1", "x0": 11, "y0": 2, "x1": 15, "y1": 5 },
+    { "id": "D", "layer": "M1", "x0": 18, "y0": 2, "x1": 19, "y1": 8 },
+    { "id": "C", "layer": "M2", "x0": 4, "y0": 8, "x1": 14, "y1": 12 },
+    { "id": "V", "layer": "VIA", "x0": 5, "y0": 3, "x1": 7, "y1": 5 }
+  ],
+  "deck": [
+    { "id": "W.M1", "type": "width", "layer": "M1", "limit": 3 },
+    { "id": "W.M2", "type": "width", "layer": "M2", "limit": 3 },
+    { "id": "W.VIA", "type": "width", "layer": "VIA", "limit": 2 },
+    { "id": "S.M1", "type": "space", "layer": "M1", "limit": 2 },
+    { "id": "S.M2", "type": "space", "layer": "M2", "limit": 2 },
+    { "id": "E.VIA_M1", "type": "enclosure", "inner": "VIA", "outer": "M1", "limit": 1 },
+    { "id": "E.VIA_M2", "type": "enclosure", "inner": "VIA", "outer": "M2", "limit": 1 },
+    { "id": "B.VIA_M1_not_M2", "type": "boolean", "mode": "and_not", "inner": "VIA", "must": "M1", "must_not": "M2" }
+  ]
+}

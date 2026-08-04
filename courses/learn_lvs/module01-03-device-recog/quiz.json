@@ -1,0 +1,38 @@
+{
+  "module": "module01-03-device-recog",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "nmos count?",
+      "choices": [
+        "1",
+        "0",
+        "2",
+        "4"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "pmos count?",
+      "choices": [
+        "1",
+        "0",
+        "2",
+        "4"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "layout nmos id?",
+      "choices": [
+        "X0",
+        "X1",
+        "mn1",
+        "mp1"
+      ],
+      "answer": 0
+    }
+  ]
+}

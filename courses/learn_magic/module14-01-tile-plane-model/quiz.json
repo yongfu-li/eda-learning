@@ -1,0 +1,38 @@
+{
+  "moduleId": "module14-01-tile-plane-model",
+  "items": [
+    {
+      "q": "Which pillar holds painted geometry?",
+      "choices": [
+        "Tile",
+        "Plane only",
+        "Liberty only",
+        "GDS"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "DRC rules live in which pillar?",
+      "choices": [
+        "Plane",
+        "Tile only",
+        "Magic binary only",
+        "Quiz only"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Cell ports/metadata live in?",
+      "choices": [
+        "CellDef",
+        "Tile only",
+        "Netgen",
+        "OpenSTA"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

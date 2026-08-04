@@ -226,89 +226,216 @@ export function drawSynthesis(canvas, opts = {}) {
   const mapping = opts.mapping || null;
   const cuts = opts.cuts || null;
   const selected = opts.selectedNode ?? null;
+  const paper = !!opts.paper;
+  const ink = paper ? "#000000" : "#0f172a";
+  const PAPER_FONT =
+    "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
+  const PAPER_FILL = {
+    pi: "#1d4ed8",
+    and: "#0f6b5c",
+    mapped: "#b45309",
+    po: "#9f1239",
+    bubble: "#6d28d9",
+  };
+  const PAPER_AND = ["#0f6b5c", "#0369a1", "#c2410c", "#7c3aed"];
+
+  if (paper) canvas.style.background = "#ffffff";
+
   const { ctx, w, h } = fitHiDpiCanvas(canvas, { w: 640, h: LAB_CANVAS_CSS_HEIGHT });
   ctx.clearRect(0, 0, w, h);
-  const pad = 28;
+  const pad = paper ? 36 : 28;
+  const legendH = paper ? 28 : 0;
+  const titleH = paper && opts.metricText ? 22 : 0;
   const CHIP_W = 12;
   const CHIP_H = 8;
-  const scale = Math.min((w - 2 * pad) / CHIP_W, (h - 2 * pad) / CHIP_H);
+  const scale = Math.min(
+    (w - 2 * pad) / CHIP_W,
+    (h - 2 * pad - legendH - titleH) / CHIP_H
+  );
   const ox = (w - CHIP_W * scale) / 2;
-  const oy = h - pad - (h - 2 * pad - CHIP_H * scale) / 2;
+  const oy =
+    h - pad - legendH - (h - 2 * pad - legendH - titleH - CHIP_H * scale) / 2;
   const toScreen = (x, y) => ({ sx: ox + x * scale, sy: oy - y * scale });
 
-  ctx.fillStyle = "#f8fafc";
+  ctx.fillStyle = paper ? "#ffffff" : "#f8fafc";
   ctx.fillRect(0, 0, w, h);
 
-  const by = nodeById(nodes);
+  if (paper) {
+    ctx.strokeStyle = "#cbd5e1";
+    ctx.lineWidth = 1;
+    ctx.strokeRect(
+      pad * 0.55,
+      pad * 0.55 + titleH * 0.3,
+      w - pad * 1.1,
+      h - pad * 1.1 - legendH
+    );
+  }
+
   // edges
   for (const n of nodes) {
     if (n.type !== "and") continue;
     const p1 = layout[n.id];
+    if (!p1) continue;
     for (const [cid, comp] of n.fanin) {
       const p0 = layout[cid];
+      if (!p0) continue;
       const a = toScreen(p0.x, p0.y);
       const b = toScreen(p1.x, p1.y);
       const hot = highlight.has(n.id) || highlight.has(cid) || selected === n.id;
-      ctx.strokeStyle = hot ? "rgba(234,179,8,0.95)" : "rgba(100,116,139,0.75)";
-      ctx.lineWidth = hot ? 3 : 2;
+      ctx.strokeStyle = paper
+        ? hot
+          ? "#b45309"
+          : "#64748b"
+        : hot
+          ? "rgba(234,179,8,0.95)"
+          : "rgba(100,116,139,0.75)";
+      ctx.lineWidth = paper ? (hot ? 3 : 1.75) : hot ? 3 : 2;
       ctx.beginPath();
       ctx.moveTo(a.sx, a.sy);
       ctx.lineTo(b.sx, b.sy);
       ctx.stroke();
+      if (paper) {
+        const ang = Math.atan2(b.sy - a.sy, b.sx - a.sx);
+        const tipX = b.sx - 12 * Math.cos(ang);
+        const tipY = b.sy - 12 * Math.sin(ang);
+        ctx.beginPath();
+        ctx.moveTo(tipX, tipY);
+        ctx.lineTo(tipX - 7 * Math.cos(ang - 0.4), tipY - 7 * Math.sin(ang - 0.4));
+        ctx.lineTo(tipX - 7 * Math.cos(ang + 0.4), tipY - 7 * Math.sin(ang + 0.4));
+        ctx.closePath();
+        ctx.fillStyle = ctx.strokeStyle;
+        ctx.fill();
+      }
       if (comp) {
         const mx = (a.sx + b.sx) / 2;
         const my = (a.sy + b.sy) / 2;
         ctx.beginPath();
-        ctx.arc(mx, my, 5, 0, Math.PI * 2);
-        ctx.fillStyle = "#a855f7";
+        ctx.arc(mx, my, paper ? 5.5 : 5, 0, Math.PI * 2);
+        ctx.fillStyle = paper ? PAPER_FILL.bubble : "#a855f7";
         ctx.fill();
+        if (paper) {
+          ctx.strokeStyle = ink;
+          ctx.lineWidth = 1.2;
+          ctx.stroke();
+        }
       }
     }
   }
 
+  let andIdx = 0;
   for (const n of nodes) {
     const p = layout[n.id];
     if (!p) continue;
     const { sx, sy } = toScreen(p.x, p.y);
     const active = selected === n.id || highlight.has(n.id);
     if (n.type === "pi") {
-      ctx.fillStyle = active ? "#3b82f6" : "#60a5fa";
+      const rad = paper ? (active ? 15 : 13) : active ? 14 : 12;
       ctx.beginPath();
-      ctx.arc(sx, sy, active ? 14 : 12, 0, Math.PI * 2);
+      ctx.arc(sx, sy, rad, 0, Math.PI * 2);
+      ctx.fillStyle = paper ? PAPER_FILL.pi : active ? "#3b82f6" : "#60a5fa";
       ctx.fill();
-      ctx.fillStyle = "#0f172a";
-      ctx.font = "13px ui-sans-serif, system-ui";
-      ctx.fillText(n.name, sx - 4, sy + 4);
+      if (paper) {
+        ctx.strokeStyle = ink;
+        ctx.lineWidth = active ? 2.25 : 1.35;
+        ctx.stroke();
+      }
+      ctx.fillStyle = paper ? "#ffffff" : "#0f172a";
+      ctx.font = paper ? `bold 13px ${PAPER_FONT}` : "13px ui-sans-serif, system-ui";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText(n.name, sx, sy);
+      ctx.textAlign = "start";
+      ctx.textBaseline = "alphabetic";
     } else {
       const cell = mapping?.find((m) => m.node === n.id);
-      ctx.fillStyle = cell ? "#f59e0b" : active ? "#22c55e" : "#4ade80";
-      ctx.fillRect(sx - 16, sy - 12, 32, 24);
-      ctx.strokeStyle = "#14532d";
-      ctx.lineWidth = 1.5;
-      ctx.strokeRect(sx - 16, sy - 12, 32, 24);
-      ctx.fillStyle = "#0f172a";
-      ctx.font = "11px ui-sans-serif, system-ui";
-      ctx.fillText(cell ? cell.cell : `∧${n.id}`, sx - 14, sy + 4);
+      const bw = paper ? 40 : 32;
+      const bh = paper ? 28 : 24;
+      ctx.fillStyle = paper
+        ? cell
+          ? PAPER_FILL.mapped
+          : PAPER_AND[andIdx % PAPER_AND.length]
+        : cell
+          ? "#f59e0b"
+          : active
+            ? "#22c55e"
+            : "#4ade80";
+      andIdx += 1;
+      if (paper) ctx.globalAlpha = 0.92;
+      ctx.fillRect(sx - bw / 2, sy - bh / 2, bw, bh);
+      ctx.globalAlpha = 1;
+      ctx.strokeStyle = paper ? ink : "#14532d";
+      ctx.lineWidth = paper ? (active ? 2.25 : 1.5) : 1.5;
+      ctx.strokeRect(sx - bw / 2, sy - bh / 2, bw, bh);
+      ctx.fillStyle = "#ffffff";
+      ctx.font = paper
+        ? `bold 10px ${PAPER_FONT}`
+        : "11px ui-sans-serif, system-ui";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText(cell ? cell.cell : `∧${n.id}`, sx, sy);
       if (n.po) {
-        ctx.fillStyle = "#ef4444";
-        ctx.fillText(n.po, sx + 18, sy - 8);
+        ctx.fillStyle = paper ? PAPER_FILL.po : "#ef4444";
+        ctx.font = paper ? `bold 11px ${PAPER_FONT}` : "11px ui-sans-serif, system-ui";
+        ctx.fillText(n.po, sx + bw / 2 + 10, sy - 10);
       }
+      ctx.textAlign = "start";
+      ctx.textBaseline = "alphabetic";
     }
     if (cuts && cuts[n.id] && selected === n.id) {
-      ctx.fillStyle = "rgba(15,23,42,0.8)";
-      ctx.fillRect(sx - 20, sy + 16, 80, 18);
-      ctx.fillStyle = "#f8fafc";
-      ctx.font = "11px ui-sans-serif, system-ui";
-      ctx.fillText(`cuts:${cuts[n.id].length}`, sx - 16, sy + 29);
+      ctx.fillStyle = paper ? ink : "rgba(15,23,42,0.8)";
+      ctx.font = paper ? `11px ${PAPER_FONT}` : "11px ui-sans-serif, system-ui";
+      ctx.fillText(`cuts:${cuts[n.id].length}`, sx - 16, sy + 26);
     }
   }
 
   if (opts.metricText) {
-    ctx.fillStyle = "rgba(15,23,42,0.85)";
-    ctx.fillRect(pad, pad - 4, 240, 22);
-    ctx.fillStyle = "#f8fafc";
-    ctx.font = "13px ui-sans-serif, system-ui";
-    ctx.fillText(opts.metricText, pad + 8, pad + 12);
+    if (paper) {
+      ctx.fillStyle = ink;
+      ctx.font = `bold 13px ${PAPER_FONT}`;
+      ctx.textAlign = "left";
+      ctx.fillText(opts.metricText, pad, pad - 10);
+    } else {
+      ctx.fillStyle = "rgba(15,23,42,0.85)";
+      ctx.fillRect(pad, pad - 4, Math.min(420, w - 2 * pad), 22);
+      ctx.fillStyle = "#f8fafc";
+      ctx.font = "13px ui-sans-serif, system-ui";
+      ctx.fillText(opts.metricText, pad + 8, pad + 12);
+    }
+  }
+
+  if (paper) {
+    const ly = h - Math.round(legendH / 2) - 2;
+    let lx = pad;
+    ctx.font = `11px ${PAPER_FONT}`;
+    ctx.textAlign = "left";
+    ctx.textBaseline = "middle";
+    const items = [
+      { label: "PI", color: PAPER_FILL.pi, shape: "circle" },
+      { label: "AND", color: PAPER_FILL.and, shape: "rect" },
+      { label: "mapped", color: PAPER_FILL.mapped, shape: "rect" },
+      { label: "comp", color: PAPER_FILL.bubble, shape: "circle" },
+    ];
+    for (const it of items) {
+      if (it.shape === "circle") {
+        ctx.beginPath();
+        ctx.arc(lx + 5, ly, 5, 0, Math.PI * 2);
+        ctx.fillStyle = it.color;
+        ctx.fill();
+        ctx.strokeStyle = ink;
+        ctx.lineWidth = 1.2;
+        ctx.stroke();
+      } else {
+        ctx.fillStyle = it.color;
+        ctx.fillRect(lx, ly - 5, 10, 10);
+        ctx.strokeStyle = ink;
+        ctx.lineWidth = 1.2;
+        ctx.strokeRect(lx, ly - 5, 10, 10);
+      }
+      ctx.fillStyle = ink;
+      ctx.fillText(it.label, lx + 16, ly);
+      lx += 16 + ctx.measureText(it.label).width + 16;
+    }
+    ctx.textBaseline = "alphabetic";
   }
 
   return { scale, toScreen };

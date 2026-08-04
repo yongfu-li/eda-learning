@@ -1,6 +1,16 @@
 # Examples — Offline benchmark compare
 
-## Harness
+## Platform benchmark (preferred)
+
+Open [`platform/benchmarks/clustering/index.html`](../../../platform/benchmarks/clustering/index.html):
+
+1. Preset **Hard** → **Run benchmark** (default).
+2. Confirm **Multi-start constructive + FM** ranks above single-seed FM (terminals / cut / critical nets).
+3. Click a scoreboard row to inspect the cluster view.
+4. **Example** → pick Fiduccia–Mattheyses → **Load example** → **Register solver**.
+5. Confirm your upload ranks above builtins and appears in the plots.
+
+## Local harness (optional)
 
 Compare engines on the same tiny graph:
 

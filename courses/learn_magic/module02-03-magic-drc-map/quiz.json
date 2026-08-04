@@ -1,0 +1,38 @@
+{
+  "moduleId": "module02-03-magic-drc-map",
+  "items": [
+    {
+      "q": "DRC error count?",
+      "choices": [
+        "1",
+        "6",
+        "0",
+        "2"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Violation shape?",
+      "choices": [
+        "thin",
+        "m1y",
+        "ca",
+        "nw"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "metal1 min_width?",
+      "choices": [
+        "2",
+        "1",
+        "6",
+        "10"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

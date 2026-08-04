@@ -13,6 +13,8 @@
       <p class="brand"><a href="../index.html">EDA Algorithms Platform</a></p>
       <nav class="site-nav" aria-label="Site">
         <a href="../index.html">Home</a>
+        <a href="../courses/index.html">Courses</a>
+        <a href="../benchmarks/index.html">Benchmarks</a>
         <a href="index.html" class="is-active" aria-current="page">Tools</a>
       </nav>
     </div>
@@ -116,6 +118,10 @@
           <div class="chapter-meta">V-cycle stages: coarsen → project → refine → P0/P1.</div>
         </li>
       </ul>
+      <p class="chal-hint" style="margin-top:0.75rem">
+        Looking for the scoreboard / upload harness?
+        Use <a href="../benchmarks/partitioning/index.html">Benchmarks → Partitioning</a>.
+      </p>
     </section>
     <section class="tools-stage" id="placement">
       <h2>Placement</h2>
@@ -395,7 +401,7 @@
         <li><a href="techmap-area/">Techmap area</a></li>
         <li><a href="techmap-delay/">Techmap delay</a></li>
         <li><a href="synth-script/">Synth script</a></li>
-        <li><a href="yosys-engine/">Yosys engine (toy)</a></li>
+        <li><a href="yosys-engine/">Yosys engine</a></li>
 
         <li><a href="yosys-cli/">Yosys CLI &amp; scripts</a></li>
         <li><a href="rtlil-vocab/">RTLIL vocabulary</a></li>
@@ -403,6 +409,123 @@
         <li><a href="real-flatten-opt/">Real flatten &amp; opt</a></li>
         <li><a href="aigmap-synth/">aigmap &amp; synth</a></li>
         <li><a href="real-evidence/">Real Yosys evidence</a></li>
+
+        <li><a href="proc-mux/">proc_mux</a></li>
+        <li><a href="proc-dff-arst/">proc_dff + ARST</a></li>
+        <li><a href="opt-clean-expr/">opt_clean + opt_expr</a></li>
+        <li><a href="opt-merge-algo/">opt_merge</a></li>
+        <li><a href="techmap-mapfile/">techmap mapfile</a></li>
+        <li><a href="extract-subcircuit/">extract</a></li>
+        <li><a href="memory-map-algo/">memory_map</a></li>
+        <li><a href="fsm-detect/">fsm_detect</a></li>
+        <li><a href="abc-handoff/">ABC handoff</a></li>
+        <li><a href="yosys-algo-engine/">Yosys algo engine</a></li>
+        <li><a href="rtlil-cpp-model/">RTLIL C++ model</a></li>
+        <li><a href="pass-registration/">Pass registration</a></li>
+        <li><a href="read-opt-clean/">Read opt_clean</a></li>
+        <li><a href="contribute-pass/">Contribute a pass</a></li>
+      </ul>
+    </section>
+
+    <section class="tool-section" id="opensta">
+      <h2>OpenSTA</h2>
+      <ul class="tool-list">
+        <li><a href="timing-graph-map/">Timing graph map</a></li>
+        <li><a href="sdc-clocks/">SDC clocks</a></li>
+        <li><a href="arrival-required/">Arrival &amp; required</a></li>
+        <li><a href="slack-critical/">Slack &amp; critical path</a></li>
+        <li><a href="report-checks/">report_checks</a></li>
+        <li><a href="opensta-engine/">OpenSTA engine</a></li>
+        <li><a href="opensta-cli/">OpenSTA CLI</a></li>
+        <li><a href="liberty-vocab/">Liberty vocabulary</a></li>
+        <li><a href="real-read-netlist/">Real read / link</a></li>
+        <li><a href="real-sdc/">Real SDC</a></li>
+        <li><a href="real-report-checks/">Real report_checks</a></li>
+        <li><a href="opensta-evidence/">Real OpenSTA evidence</a></li>
+        <li><a href="graph-build/">Graph build</a></li>
+        <li><a href="levelize-propagate/">Levelize &amp; propagate</a></li>
+        <li><a href="slack-algo/">Slack algorithm</a></li>
+        <li><a href="opensta-algo-engine/">OpenSTA algo engine</a></li>
+        <li><a href="sta-cpp-model/">STA C++ model</a></li>
+        <li><a href="read-find-path/">Read find_path / report</a></li>
+        <li><a href="contribute-opensta/">Contribute to OpenSTA</a></li>
+      </ul>
+    </section>
+
+    <section class="tool-section" id="magic">
+      <h2>Magic</h2>
+      <ul class="tool-list">
+        <li><a href="paint-layers/">Paint layers</a></li>
+        <li><a href="select-box/">Select box</a></li>
+        <li><a href="contact-paint/">Contact paint</a></li>
+        <li><a href="magic-drc-map/">Magic DRC map</a></li>
+        <li><a href="gds-write-map/">GDS write map</a></li>
+        <li><a href="magic-engine/">Magic engine</a></li>
+        <li><a href="magic-cli/">Magic CLI</a></li>
+        <li><a href="magic-tech-vocab/">Magic tech vocabulary</a></li>
+        <li><a href="real-paint-save/">Real paint / save</a></li>
+        <li><a href="real-drc/">Real DRC</a></li>
+        <li><a href="real-gds/">Real GDS streamout</a></li>
+        <li><a href="magic-evidence/">Real Magic evidence</a></li>
+        <li><a href="paint-connectivity/">Paint connectivity</a></li>
+        <li><a href="drc-region-algo/">DRC region algorithm</a></li>
+        <li><a href="extract-algo/">Extract algorithm</a></li>
+        <li><a href="magic-algo-engine/">Magic algo engine</a></li>
+        <li><a href="tile-plane-model/">Tile / Plane model</a></li>
+        <li><a href="read-drc-cifwrite/">Read DRC / cifwrite</a></li>
+        <li><a href="contribute-magic/">Contribute to Magic</a></li>
+      </ul>
+    </section>
+
+
+
+    <section class="tool-section" id="netgen">
+      <h2>Netgen</h2>
+      <ul class="tool-list">
+        <li><a href="read-netlists-map/">Read netlists map</a></li>
+        <li><a href="device-classes-map/">Device classes map</a></li>
+        <li><a href="flatten-permute-map/">Flatten permute map</a></li>
+        <li><a href="compare-nets-map/">Compare nets map</a></li>
+        <li><a href="lvs-report-map/">LVS report map</a></li>
+        <li><a href="netgen-engine/">Netgen engine</a></li>
+        <li><a href="netgen-cli/">Netgen CLI</a></li>
+        <li><a href="spice-vocab/">SPICE vocabulary</a></li>
+        <li><a href="real-read-spice/">Real read SPICE</a></li>
+        <li><a href="real-lvs-compare/">Real LVS compare</a></li>
+        <li><a href="real-lvs-report/">Real LVS report</a></li>
+        <li><a href="netgen-evidence/">Real Netgen evidence</a></li>
+        <li><a href="hash-devices-algo/">Hash devices algorithm</a></li>
+        <li><a href="match-nets-algo/">Match nets algorithm</a></li>
+        <li><a href="permute-pins-algo/">Permute pins algorithm</a></li>
+        <li><a href="netgen-algo-engine/">Netgen algo engine</a></li>
+        <li><a href="netcomp-model/">Obj / Netlist / Element model</a></li>
+        <li><a href="read-compare-c/">Read compare C</a></li>
+        <li><a href="contribute-netgen/">Contribute to Netgen</a></li>
+      </ul>
+    </section>
+
+    <section class="tool-section" id="klayout">
+      <h2>KLayout</h2>
+      <ul class="tool-list">
+        <li><a href="layers-view-map/">Layers view map</a></li>
+        <li><a href="cell-hierarchy-map/">Cell hierarchy map</a></li>
+        <li><a href="stream-gds-map/">Stream GDS map</a></li>
+        <li><a href="drc-script-map/">DRC script map</a></li>
+        <li><a href="markers-report-map/">Markers report map</a></li>
+        <li><a href="klayout-engine/">KLayout engine</a></li>
+        <li><a href="klayout-cli/">KLayout CLI</a></li>
+        <li><a href="gds-vocab/">GDS vocabulary</a></li>
+        <li><a href="real-stream-gds/">Real stream GDS</a></li>
+        <li><a href="real-drc-script/">Real DRC script</a></li>
+        <li><a href="real-markers/">Real DRC markers</a></li>
+        <li><a href="klayout-evidence/">Real KLayout evidence</a></li>
+        <li><a href="layer-query-algo/">Layer query algorithm</a></li>
+        <li><a href="width-spacing-algo/">Width spacing algorithm</a></li>
+        <li><a href="marker-emit-algo/">Marker emit algorithm</a></li>
+        <li><a href="klayout-algo-engine/">KLayout algo engine</a></li>
+        <li><a href="layout-cell-model/">Layout / Cell / Instance model</a></li>
+        <li><a href="read-drc-runner/">Read DRC runner</a></li>
+        <li><a href="contribute-klayout/">Contribute to KLayout</a></li>
       </ul>
     </section>
 
@@ -434,6 +557,51 @@
         <li><a href="triple-decomp/">Triple decomp</a></li>
         <li><a href="quad-color/">Quad color</a></li>
         <li><a href="mp-engine/">MP engine</a></li>
+      </ul>
+    </section>
+
+
+    <section class="tool-section" id="drc">
+      <h2>DRC / design rules</h2>
+      <ul class="tool-list">
+        <li><a href="rule-deck/">Rule deck</a></li>
+        <li><a href="width-checker/">Width checker</a></li>
+        <li><a href="spacing-checker/">Spacing checker</a></li>
+        <li><a href="enclosure-checker/">Enclosure checker</a></li>
+        <li><a href="violation-markers/">DRC violations</a></li>
+        <li><a href="multi-layer-deck/">Multi-layer deck</a></li>
+        <li><a href="deck-boolean/">Deck boolean</a></li>
+        <li><a href="drc-engine/">DRC engine</a></li>
+      </ul>
+    </section>
+
+
+    <section class="tool-section" id="lvs">
+      <h2>LVS / layout vs schematic</h2>
+      <ul class="tool-list">
+        <li><a href="schematic-graph/">Schematic graph</a></li>
+        <li><a href="device-recog/">Device recognition</a></li>
+        <li><a href="net-extract/">Net extraction</a></li>
+        <li><a href="layout-graph/">Layout graph</a></li>
+        <li><a href="pin-binding/">Pin binding</a></li>
+        <li><a href="device-match/">Device match</a></li>
+        <li><a href="lvs-compare/">LVS compare</a></li>
+        <li><a href="lvs-engine/">LVS engine</a></li>
+      </ul>
+    </section>
+
+
+    <section class="tool-section" id="pex">
+      <h2>PEX / parasitic extract</h2>
+      <ul class="tool-list">
+        <li><a href="geometry-load/">Geometry load</a></li>
+        <li><a href="resistance-extract/">Resistance extract</a></li>
+        <li><a href="capacitance-extract/">Capacitance extract</a></li>
+        <li><a href="rc-network/">RC network build</a></li>
+        <li><a href="network-reduce/">Network reduction</a></li>
+        <li><a href="back-annotate/">Back-annotate nets</a></li>
+        <li><a href="spef-lite/">SPEF-lite emit</a></li>
+        <li><a href="pex-engine/">PEX engine</a></li>
       </ul>
     </section>
 

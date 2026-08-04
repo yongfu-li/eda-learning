@@ -1,0 +1,86 @@
+title: Why STA C++
+footer: learn_opensta — 01 sta cpp model
+slides:
+- type: title
+  title: Why STA C++
+  subtitle: Browser IR and JSON are maps
+  notes: Browser IR and JSON are maps. Real OpenSTA stores the same ideas as C++ objects.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: Network, Graph, Sdc, Search , Search drives arrivals and path reports'
+  notes: 'GOLDEN: Network, Graph, Sdc, Search — Search drives arrivals and path reports.'
+- type: image
+  title: Network
+  image: assets/steps/01-network.png
+  caption: Network
+  notes: Network holds pins, nets, and instances.
+- type: image
+  title: Graph
+  image: assets/steps/02-graph.png
+  caption: Graph
+  notes: Graph is the timing vertex/edge view of the netlist.
+- type: image
+  title: Sdc
+  image: assets/steps/03-sdc.png
+  caption: Sdc
+  notes: Sdc stores clocks and timing constraints.
+- type: image
+  title: Search
+  image: assets/steps/04-search.png
+  caption: Search
+  notes: Search propagates arrivals and finds paths for reports.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: four pillars — Network, Graph, Sdc, Search.'
+- type: bullets
+  title: Browser lab track
+  bullets:
+  - Open **sta-cpp-model**
+  - Click through the four pillars and check the goldens
+  notes: Open **sta-cpp-model**. Click through the four pillars and check the goldens.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call sta_cpp_model() in internals_solvers; assert pillar count and nesting
+  notes: Call sta_cpp_model() in internals_solvers; assert pillar count and nesting.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Treating JSON keys as the C++ API
+  - Confusing Graph with physical Magick layout
+  notes: Treating JSON keys as the C++ API. Confusing Graph with physical Magick layout.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder, run the internals solvers self-test
+  notes: From the common folder, run the internals solvers self-test.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_opensta/common
+
+    python3 internals_solvers.py'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the OpenSTA nesting in plain steps
+  notes: Here is the OpenSTA nesting in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: 'Network → pins/nets/instances
+
+    Graph → vertices/edges from Network
+
+    Sdc → clocks/constraints
+
+    Search → arrivals + FindPath for reports'
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - 'Next: read the FindPath to report_checks shape in the OpenSTA tree'
+  notes: 'Next: read the FindPath to report_checks shape in the OpenSTA tree.'

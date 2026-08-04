@@ -1,0 +1,38 @@
+{
+  "moduleId": "module06-01-klayout-cli",
+  "items": [
+    {
+      "q": "Typical KLayout batch invocation?",
+      "choices": [
+        "klayout -b -r script.drc",
+        "sta -exit",
+        "magic -dnull",
+        "yosys -s"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "First recipe command?",
+      "choices": [
+        "stream_gds",
+        "gds_write",
+        "compare",
+        "abc"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Second recipe command?",
+      "choices": [
+        "load_drc",
+        "report_checks",
+        "flatten",
+        "opt"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

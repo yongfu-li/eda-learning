@@ -1,0 +1,38 @@
+{
+  "moduleId": "module08-01-real-lvs-report",
+  "items": [
+    {
+      "q": "Class count golden?",
+      "choices": [
+        "2",
+        "4",
+        "0",
+        "6"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Report command?",
+      "choices": [
+        "report",
+        "read_liberty",
+        "create_clock",
+        "place"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Mismatch golden?",
+      "choices": [
+        "0",
+        "2",
+        "4",
+        "1"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

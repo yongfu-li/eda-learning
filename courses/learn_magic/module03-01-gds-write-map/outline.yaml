@@ -1,0 +1,83 @@
+title: Why GDS
+footer: learn_magic — 01 gds write map
+slides:
+- type: title
+  title: Why GDS
+  subtitle: Map Magic layers to GDS layer numbers
+  notes: Map Magic layers to GDS layer numbers.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: gds_layer_count=6; metal1→49'
+  notes: 'GOLDEN: gds_layer_count=6; metal1→49.'
+- type: image
+  title: GDS map
+  image: assets/steps/01-map.png
+  caption: GDS map
+  notes: Magic gds write maps layer names to GDS numbers.
+- type: image
+  title: metal1→49
+  image: assets/steps/02-metal1.png
+  caption: metal1→49
+  notes: metal1 streams as GDS layer 49.
+- type: image
+  title: Six entries
+  image: assets/steps/03-count.png
+  caption: Six entries
+  notes: Six layer/contact mappings in gds_map.
+- type: image
+  title: Streamout
+  image: assets/steps/04-stream.png
+  caption: Streamout
+  notes: Part A uses a fixed map — real Magic writes .gds.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: gds_layer_count=6.'
+- type: bullets
+  title: Browser lab track
+  bullets:
+  - Open **gds-write-map**
+  - Run the stage buttons and Check the goldens
+  notes: Open **gds-write-map**. Run the stage buttons and Check the goldens.
+- type: bullets
+  title: Implement track
+  bullets:
+  - From common/, run solvers.py and confirm MAGIC_PARTA_OK
+  notes: From common/, run solvers.py and confirm MAGIC_PARTA_OK.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Mixing KLayout viewer shortcuts with Magic paint commands
+  - Forgetting min_width when reading DRC errors
+  notes: Mixing KLayout viewer shortcuts with Magic paint commands. Forgetting min_width
+    when reading DRC errors.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder, run the Magic map self-test
+  notes: From the common folder, run the Magic map self-test.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_magic/common
+
+    python3 solvers.py'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the check in plain steps
+  notes: Here is the check in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: 'gds_layer_count=6; metal1→49.
+
+    ok if goldens match'
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue the Magic Part A map, then the real CLI track
+  notes: Continue the Magic Part A map, then the real CLI track.

@@ -1,0 +1,84 @@
+title: Why real Magic
+footer: learn_magic — 03 magic evidence
+slides:
+- type: title
+  title: Why real Magic
+  subtitle: Run the full real Magic engine against goldens
+  notes: Run the full real Magic engine against goldens.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: real_magic_engine ok=True'
+  notes: 'GOLDEN: real_magic_engine ok=True.'
+- type: image
+  title: Full recipe
+  image: assets/steps/01-recipe.png
+  caption: Full recipe
+  notes: Golden recipe has six Tcl stages.
+- type: image
+  title: Paint golden
+  image: assets/steps/02-paint.png
+  caption: Paint golden
+  notes: Still six rects and one contact.
+- type: image
+  title: DRC golden
+  image: assets/steps/03-drc.png
+  caption: DRC golden
+  notes: DRC error count remains 1.
+- type: image
+  title: GDS golden
+  image: assets/steps/04-gds.png
+  caption: GDS golden
+  notes: GDS layer count remains 6.
+- type: image
+  title: Engine
+  image: assets/steps/05-golden.png
+  caption: Engine
+  notes: 'GOLDEN: real_magic_engine ok=True.'
+- type: bullets
+  title: Browser lab track
+  bullets:
+  - Open **magic-evidence**
+  - Build the Magic recipe or open evidence stages, then Check
+  notes: Open **magic-evidence**. Build the Magic recipe or open evidence stages,
+    then Check.
+- type: bullets
+  title: Implement track
+  bullets:
+  - From common/, run real_solvers.py and confirm REAL_MAGIC_OK
+  notes: From common/, run real_solvers.py and confirm REAL_MAGIC_OK.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Editing goldens by hand without re-running scripts
+  - Confusing Part A map JSON with checked-in logs
+  notes: Editing goldens by hand without re-running scripts. Confusing Part A map
+    JSON with checked-in logs.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder, run the real Magic self-test
+  notes: From the common folder, run the real Magic self-test.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_magic/common
+
+    python3 real_solvers.py'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the check in plain steps
+  notes: Here is the check in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: 'real_magic_engine ok=True.
+
+    ok if goldens match'
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue the Part B evidence track, then algorithms and internals
+  notes: Continue the Part B evidence track, then algorithms and internals.

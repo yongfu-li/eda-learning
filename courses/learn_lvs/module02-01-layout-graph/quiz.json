@@ -1,0 +1,38 @@
+{
+  "module": "module02-01-layout-graph",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "lay device_count?",
+      "choices": [
+        "2",
+        "4",
+        "6",
+        "1"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "lay edge_count?",
+      "choices": [
+        "6",
+        "4",
+        "8",
+        "2"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "pmos layout id?",
+      "choices": [
+        "X1",
+        "X0",
+        "mp1",
+        "mn1"
+      ],
+      "answer": 0
+    }
+  ]
+}

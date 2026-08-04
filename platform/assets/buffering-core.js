@@ -217,6 +217,27 @@ export function sequentialBuffer(mode = "van_ginneken") {
   };
 }
 
+/** Matches partition-benchmark-plots PALETTE (paper figures). */
+const PAPER_PALETTE = [
+  "#1d4ed8",
+  "#0f6b5c",
+  "#b45309",
+  "#9f1239",
+  "#6d28d9",
+  "#c2410c",
+  "#0369a1",
+  "#a21caf",
+  "#4f46e5",
+  "#ca8a04",
+];
+const PAPER_FONT =
+  "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
+
+function paperSinkColor(id, index) {
+  const fixed = { S0: PAPER_PALETTE[0], S1: PAPER_PALETTE[1], S2: PAPER_PALETTE[2] };
+  return fixed[id] || PAPER_PALETTE[index % PAPER_PALETTE.length];
+}
+
 export function drawBuffering(canvas, opts = {}) {
   const driver = opts.driver || DRIVER;
   const sinks = opts.sinks || SINKS;
@@ -225,16 +246,41 @@ export function drawBuffering(canvas, opts = {}) {
   const buffers = opts.buffers || [];
   const highlight = new Set(opts.highlight || []);
   const selectedEdge = opts.selectedEdge || null;
+  const paper = !!opts.paper;
+  const ink = paper ? "#000000" : "#0f172a";
+  const bg = paper ? "#ffffff" : null;
+  const grid = paper ? "#e5e5e5" : "#cbd5e1";
+  const edgeColor = paper ? "#334155" : "rgba(14,165,233,0.8)";
+  const edgeHot = paper ? "#b45309" : "rgba(234,179,8,0.95)";
+  const chipStroke = paper ? "#000000" : "#334155";
+  const bufFill = paper ? PAPER_PALETTE[2] : "#f59e0b";
+  const invFill = paper ? PAPER_PALETTE[4] : "#a855f7";
+  const bufStroke = paper ? "#000000" : "#78350f";
+  const driverFill = paper ? "#000000" : "#eab308";
+  const labelFont = paper
+    ? `bold 12px ${PAPER_FONT}`
+    : "12px ui-sans-serif, system-ui";
+  const metricFont = paper
+    ? `bold 13px ${PAPER_FONT}`
+    : "13px ui-sans-serif, system-ui";
+
+  if (paper) canvas.style.background = "#ffffff";
+
   const { ctx, w, h } = fitHiDpiCanvas(canvas, { w: 640, h: LAB_CANVAS_CSS_HEIGHT });
   ctx.clearRect(0, 0, w, h);
+  if (bg) {
+    ctx.fillStyle = bg;
+    ctx.fillRect(0, 0, w, h);
+  }
   const pad = 28;
-  const scale = Math.min((w - 2 * pad) / CHIP_W, (h - 2 * pad) / CHIP_H);
+  const legendH = paper ? 28 : 0;
+  const scale = Math.min((w - 2 * pad) / CHIP_W, (h - 2 * pad - legendH) / CHIP_H);
   const ox = (w - CHIP_W * scale) / 2;
-  const oy = h - pad - (h - 2 * pad - CHIP_H * scale) / 2;
+  const oy = h - pad - legendH - (h - 2 * pad - legendH - CHIP_H * scale) / 2;
   const toScreen = (x, y) => ({ sx: ox + x * scale, sy: oy - y * scale });
 
-  ctx.strokeStyle = "#cbd5e1";
-  ctx.lineWidth = 1;
+  ctx.strokeStyle = grid;
+  ctx.lineWidth = paper ? 1.1 : 1;
   for (let x = 0; x <= CHIP_W; x++) {
     const a = toScreen(x, 0);
     const b = toScreen(x, CHIP_H);
@@ -256,11 +302,12 @@ export function drawBuffering(canvas, opts = {}) {
   for (const e of edges) {
     const a = nodes[e.a];
     const b = nodes[e.b];
+    if (!a || !b) continue;
     const p0 = toScreen(a.x, a.y);
     const p1 = toScreen(b.x, b.y);
     const hot = selectedEdge === e.id || highlight.has(e.id);
-    ctx.strokeStyle = hot ? "rgba(234,179,8,0.95)" : "rgba(14,165,233,0.8)";
-    ctx.lineWidth = hot ? 3.5 : 2.5;
+    ctx.strokeStyle = hot ? edgeHot : edgeColor;
+    ctx.lineWidth = hot ? (paper ? 3.25 : 3.5) : paper ? 2.25 : 2.5;
     ctx.beginPath();
     ctx.moveTo(p0.sx, p0.sy);
     ctx.lineTo(p1.sx, p1.sy);
@@ -269,56 +316,130 @@ export function drawBuffering(canvas, opts = {}) {
 
   for (const s of sites) {
     const { sx, sy } = toScreen(s.x, s.y);
-    ctx.fillStyle = "rgba(148,163,184,0.9)";
+    ctx.fillStyle = paper ? "#94a3b8" : "rgba(148,163,184,0.9)";
     ctx.beginPath();
-    ctx.arc(sx, sy, 4, 0, Math.PI * 2);
+    ctx.arc(sx, sy, paper ? 3.5 : 4, 0, Math.PI * 2);
     ctx.fill();
+    if (paper) {
+      ctx.strokeStyle = ink;
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    }
   }
 
   for (const b of buffers) {
     const { sx, sy } = toScreen(b.x, b.y);
-    ctx.fillStyle = b.invert || b.buf === "INV_X1" ? "#a855f7" : "#f59e0b";
+    const invert = !!(b.invert || b.buf === "INV_X1");
+    ctx.fillStyle = invert ? invFill : bufFill;
     ctx.fillRect(sx - 7, sy - 7, 14, 14);
-    ctx.strokeStyle = "#78350f";
-    ctx.lineWidth = 1.5;
+    ctx.strokeStyle = bufStroke;
+    ctx.lineWidth = paper ? 1.75 : 1.5;
     ctx.strokeRect(sx - 7, sy - 7, 14, 14);
   }
 
   const dSc = toScreen(driver.x, driver.y);
-  ctx.fillStyle = "#eab308";
+  ctx.fillStyle = driverFill;
   ctx.beginPath();
   ctx.moveTo(dSc.sx, dSc.sy - 10);
   ctx.lineTo(dSc.sx + 9, dSc.sy + 8);
   ctx.lineTo(dSc.sx - 9, dSc.sy + 8);
   ctx.closePath();
   ctx.fill();
-  ctx.fillStyle = "#713f12";
-  ctx.font = "12px ui-sans-serif, system-ui";
-  ctx.fillText("D", dSc.sx + 10, dSc.sy - 4);
+  if (paper) {
+    ctx.strokeStyle = ink;
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+  }
+  ctx.fillStyle = paper ? ink : "#713f12";
+  ctx.font = labelFont;
+  ctx.textAlign = "left";
+  ctx.textBaseline = "alphabetic";
+  ctx.fillText(driver.id || "D", dSc.sx + 10, dSc.sy - 4);
 
-  const colors = { S0: "#22c55e", S1: "#3b82f6", S2: "#ef4444" };
-  for (const s of sinks) {
+  const labColors = paper
+    ? null
+    : { S0: "#22c55e", S1: "#3b82f6", S2: "#ef4444" };
+  sinks.forEach((s, i) => {
     const { sx, sy } = toScreen(s.x, s.y);
     const active = highlight.has(s.id);
     ctx.beginPath();
     ctx.arc(sx, sy, active ? 10 : 7, 0, Math.PI * 2);
-    ctx.fillStyle = colors[s.id] || "#1e293b";
+    ctx.fillStyle = paper
+      ? paperSinkColor(s.id, i)
+      : labColors[s.id] || "#1e293b";
     ctx.fill();
-    ctx.fillStyle = "#0f172a";
+    if (paper) {
+      ctx.strokeStyle = ink;
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+    }
+    ctx.fillStyle = ink;
+    ctx.font = labelFont;
     ctx.fillText(s.id, sx + 8, sy - 8);
-  }
+  });
 
   const origin = toScreen(0, CHIP_H);
-  ctx.strokeStyle = "#334155";
-  ctx.lineWidth = 2;
+  ctx.strokeStyle = chipStroke;
+  ctx.lineWidth = paper ? 2.25 : 2;
   ctx.strokeRect(origin.sx, origin.sy, CHIP_W * scale, CHIP_H * scale);
 
+  if (paper) {
+    const ly = h - Math.round(legendH / 2) - 2;
+    let lx = pad;
+    ctx.font = `bold 12px ${PAPER_FONT}`;
+    ctx.textBaseline = "middle";
+    ctx.textAlign = "left";
+    const swatch = (fill, label, shape) => {
+      if (shape === "tri") {
+        ctx.fillStyle = fill;
+        ctx.beginPath();
+        ctx.moveTo(lx + 6, ly - 6);
+        ctx.lineTo(lx + 12, ly + 5);
+        ctx.lineTo(lx, ly + 5);
+        ctx.closePath();
+        ctx.fill();
+        ctx.strokeStyle = ink;
+        ctx.lineWidth = 1.25;
+        ctx.stroke();
+      } else if (shape === "sq") {
+        ctx.fillStyle = fill;
+        ctx.fillRect(lx, ly - 5, 11, 11);
+        ctx.strokeStyle = ink;
+        ctx.lineWidth = 1.25;
+        ctx.strokeRect(lx, ly - 5, 11, 11);
+      } else {
+        ctx.beginPath();
+        ctx.arc(lx + 5, ly, 5, 0, Math.PI * 2);
+        ctx.fillStyle = fill;
+        ctx.fill();
+        ctx.strokeStyle = ink;
+        ctx.lineWidth = 1.25;
+        ctx.stroke();
+      }
+      ctx.fillStyle = ink;
+      ctx.fillText(label, lx + 16, ly);
+      lx += ctx.measureText(label).width + 36;
+    };
+    swatch(driverFill, "Driver", "tri");
+    sinks.forEach((s, i) => swatch(paperSinkColor(s.id, i), s.id, "circ"));
+    swatch(bufFill, "BUF", "sq");
+    swatch(invFill, "INV", "sq");
+  }
+
   if (opts.metricText) {
-    ctx.fillStyle = "rgba(15,23,42,0.82)";
-    ctx.fillRect(pad, pad - 4, 200, 22);
-    ctx.fillStyle = "#f8fafc";
-    ctx.font = "13px ui-sans-serif, system-ui";
-    ctx.fillText(opts.metricText, pad + 8, pad + 12);
+    if (paper) {
+      ctx.fillStyle = ink;
+      ctx.font = metricFont;
+      ctx.textAlign = "left";
+      ctx.textBaseline = "alphabetic";
+      ctx.fillText(opts.metricText, pad, pad + 8);
+    } else {
+      ctx.fillStyle = "rgba(15,23,42,0.82)";
+      ctx.fillRect(pad, pad - 4, 200, 22);
+      ctx.fillStyle = "#f8fafc";
+      ctx.font = metricFont;
+      ctx.fillText(opts.metricText, pad + 8, pad + 12);
+    }
   }
 
   return { scale, ox, oy, toScreen };

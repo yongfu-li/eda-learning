@@ -1,0 +1,28 @@
+{
+  "module": "module00-00-intro",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "learn_klayout is primarily about?",
+      "choices": [
+        "KLayout GDS/DRC tool literacy (map → CLI → algorithms → internals)",
+        "OpenROAD placement only",
+        "SPICE transient only",
+        "UVM sequences only"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Layout/DRC prereq course?",
+      "choices": ["learn_magic or learn_drc", "learn_routing", "learn_spice", "learn_dft_insert"],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "KLayout is used heavily by?",
+      "choices": ["OpenLane GDS/DRC flow", "Verilator only", "Yosys synthesis only", "Magic paint only"],
+      "answer": 0
+    }
+  ]
+}

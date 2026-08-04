@@ -1,8 +1,38 @@
 {
   "moduleId": "module10-01-slack-algo",
   "items": [
-    {"id": "q0", "q": "This lab id?", "choices": ["slack-algo", "yosys-cli", "opt-dce", "proc-mux"], "answer": 0},
-    {"id": "q1", "q": "Course?", "choices": ["learn_opensta", "learn_yosys", "learn_magic", "learn_netgen"], "answer": 0},
-    {"id": "q2", "q": "Prereq algorithms course?", "choices": ["learn_sta", "learn_routing", "learn_spice", "learn_erc"], "answer": 0}
+    {
+      "q": "Slack golden?",
+      "choices": [
+        "8",
+        "2",
+        "10",
+        "0"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Critical path starts at?",
+      "choices": [
+        "b",
+        "a",
+        "y",
+        "clk"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Slack formula?",
+      "choices": [
+        "required \u2212 arrival",
+        "arrival \u2212 required",
+        "period only",
+        "delay\u00d72"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
   ]
 }

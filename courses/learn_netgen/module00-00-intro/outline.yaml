@@ -1,0 +1,31 @@
+title: Why Netgen
+footer: learn_netgen — 00 intro
+slides:
+- type: title
+  title: Why Netgen
+  subtitle: OpenLane uses Netgen for LVS , comparing schematic and layout netlists
+  notes: 'OpenLane uses Netgen for LVS — comparing schematic and layout netlists.
+    This course teaches the tool the same way learn_yosys teaches Yosys: map, then
+    real CLI, then algorithms, then internals.'
+- type: bullets
+  title: Four parts
+  bullets:
+  - Part A is the interactive LVS map
+  - Part B drives real Netgen with Tcl
+  - Part C binds algorithms to LVS goldens
+  - Part D orients you to the netcomp C tree
+  notes: Part A is the interactive LVS map. Part B drives real Netgen with Tcl. Part
+    C binds algorithms to LVS goldens. Part D orients you to the netcomp C tree.
+- type: bullets
+  title: Prereq
+  bullets:
+  - You should know LVS basics from learn_lvs or layout from learn_magic
+  notes: You should know LVS basics from learn_lvs or layout from learn_magic — devices,
+    nets, compare reports.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Start with the read netlists map lab, then device classes, then the real CLI modules
+  notes: Start with the read netlists map lab, then device classes, then the real
+    CLI modules.

@@ -1,0 +1,36 @@
+title: Welcome
+footer: learn_drc — 00 intro
+slides:
+- type: title
+  title: Welcome
+  subtitle: After pattern matching you still need a rule deck , width, spacing, enclosure,
+    boolean, violations
+  notes: After pattern matching you still need a rule deck — width, spacing, enclosure,
+    boolean, violations.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'Toy tiny_drc: five shapes + eight rules → three geometry violations + one boolean
+    hit'
+  notes: 'Toy tiny_drc: five shapes + eight rules → three geometry violations + one
+    boolean hit.'
+- type: bullets
+  title: Two tracks
+  bullets:
+  - Implement track uses common/ solvers; browser lab track uses platform tools
+  notes: Implement track uses common/ solvers; browser lab track uses platform tools.
+- type: bullets
+  title: Toy layout
+  bullets:
+  - 'Tiny_drc: shapes A,B,D on M1; C on M2; V on VIA; eight-rule deck'
+  notes: 'tiny_drc: shapes A,B,D on M1; C on M2; V on VIA; eight-rule deck.'
+- type: bullets
+  title: Path
+  bullets:
+  - Deck → width → spacing → enclosure → markers → multi-layer → boolean → engine
+  notes: Deck → width → spacing → enclosure → markers → multi-layer → boolean → engine.
+- type: bullets
+  title: Begin
+  bullets:
+  - 'Next: rule deck load'
+  notes: 'Next: rule deck load.'

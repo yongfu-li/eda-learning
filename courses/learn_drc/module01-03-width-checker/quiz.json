@@ -1,0 +1,38 @@
+{
+  "module": "module01-03-width-checker",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "width violation count?",
+      "choices": [
+        "1",
+        "0",
+        "2",
+        "3"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Violating shape?",
+      "choices": [
+        "D",
+        "A",
+        "B",
+        "V"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Golden rule id?",
+      "choices": [
+        "W.M1",
+        "S.M1",
+        "E.VIA_M2",
+        "B.VIA_M1_not_M2"
+      ],
+      "answer": 0
+    }
+  ]
+}

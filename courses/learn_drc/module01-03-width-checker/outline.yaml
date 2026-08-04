@@ -1,0 +1,58 @@
+title: Width
+footer: learn_drc — 03 width checker
+slides:
+- type: title
+  title: Width
+  subtitle: Width rules flag shapes whose min(width,height) is below the deck limit
+  notes: Width rules flag shapes whose min(width,height) is below the deck limit.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: width viol=1 on D, rule W.M1'
+  notes: 'GOLDEN: width viol=1 on D, rule W.M1.'
+- type: image
+  title: Rule
+  image: assets/steps/01-rule.png
+  caption: Rule
+  notes: W.M1 width limit 3 on M1 layer.
+- type: image
+  title: Scan
+  image: assets/steps/02-scan.png
+  caption: Scan
+  notes: Walk M1 shapes A, B, and D.
+- type: image
+  title: Measure
+  image: assets/steps/03-measure.png
+  caption: Measure
+  notes: Compare min(width,height) to limit.
+- type: image
+  title: Hit
+  image: assets/steps/04-hit.png
+  caption: Hit
+  notes: Shape D is too narrow — width=1.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: width viol=1, rule W.M1.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **width-checker**. Select D; run width check.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call check_width(); assert count==1 and violations[0].shapes==['D']
+  notes: Call check_width(); assert count==1 and violations[0].shapes==['D'].
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Using max edge instead of min dimension
+  - Missing rule_id on violations
+  notes: Using max edge instead of min dimension. Missing rule_id on violations.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: spacing checker'
+  notes: 'Next: spacing checker.'

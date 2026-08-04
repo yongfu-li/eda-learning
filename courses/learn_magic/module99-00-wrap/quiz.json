@@ -1,0 +1,8 @@
+{
+  "module": "module99-00-wrap",
+  "questions": [
+    {"id": "q1", "question": "Course id?", "choices": ["learn_magic", "learn_sta", "learn_yosys", "learn_openlane"], "answer": 0},
+    {"id": "q2", "question": "Part B proves?", "choices": ["Real Magic CLI/reports", "OpenSTA timing only", "Place only", "LVS only"], "answer": 0},
+    {"id": "q3", "question": "Next after Magic tools?", "choices": ["Netgen / KLayout / OpenLane", "Unix only", "SPICE only", "FPGA bitstream only"], "answer": 0}
+  ]
+}

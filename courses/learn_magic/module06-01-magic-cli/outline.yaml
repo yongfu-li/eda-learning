@@ -1,0 +1,84 @@
+title: Why real Magic
+footer: learn_magic — 01 magic cli
+slides:
+- type: title
+  title: Why real Magic
+  subtitle: Invoke magic -dnull -noconsole script.tcl; recipe starts tech_load→load_cell
+  notes: Invoke magic -dnull -noconsole script.tcl; recipe starts tech_load→load_cell.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: First two cmds: tech_load, load_cell'
+  notes: 'GOLDEN: First two cmds: tech_load, load_cell.'
+- type: image
+  title: magic -dnull
+  image: assets/steps/01-invoke.png
+  caption: magic -dnull
+  notes: Magic runs Tcl with magic -dnull -noconsole script.tcl.
+- type: image
+  title: tech load
+  image: assets/steps/02-tech.png
+  caption: tech load
+  notes: First load the technology file.
+- type: image
+  title: load cell
+  image: assets/steps/03-cell.png
+  caption: load cell
+  notes: Then load the tiny_inv layout.
+- type: image
+  title: paint verify
+  image: assets/steps/04-verify.png
+  caption: paint verify
+  notes: Verify rect and contact counts.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: recipe prefix tech_load→load_cell.'
+- type: bullets
+  title: Browser lab track
+  bullets:
+  - Open **magic-cli**
+  - Build the Magic recipe or open evidence stages, then Check
+  notes: Open **magic-cli**. Build the Magic recipe or open evidence stages, then
+    Check.
+- type: bullets
+  title: Implement track
+  bullets:
+  - From common/, run real_solvers.py and confirm REAL_MAGIC_OK
+  notes: From common/, run real_solvers.py and confirm REAL_MAGIC_OK.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Editing goldens by hand without re-running scripts
+  - Confusing Part A map JSON with checked-in logs
+  notes: Editing goldens by hand without re-running scripts. Confusing Part A map
+    JSON with checked-in logs.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder, run the real Magic self-test
+  notes: From the common folder, run the real Magic self-test.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_magic/common
+
+    python3 real_solvers.py'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the check in plain steps
+  notes: Here is the check in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: 'First two cmds: tech_load, load_cell.
+
+    ok if goldens match'
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue the Part B evidence track, then algorithms and internals
+  notes: Continue the Part B evidence track, then algorithms and internals.

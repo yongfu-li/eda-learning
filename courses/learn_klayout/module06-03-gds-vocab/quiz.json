@@ -1,0 +1,38 @@
+{
+  "moduleId": "module06-03-gds-vocab",
+  "items": [
+    {
+      "q": "Teaching layer count?",
+      "choices": [
+        "2",
+        "4",
+        "1",
+        "6"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "poly layer number?",
+      "choices": [
+        "66",
+        "68",
+        "1",
+        "0"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "DBU golden?",
+      "choices": [
+        "0.001",
+        "1.0",
+        "0.01",
+        "10"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

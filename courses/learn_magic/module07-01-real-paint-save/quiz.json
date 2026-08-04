@@ -1,0 +1,38 @@
+{
+  "moduleId": "module07-01-real-paint-save",
+  "items": [
+    {
+      "q": "Cell name?",
+      "choices": [
+        "tiny_inv",
+        "top",
+        "clk",
+        "thin"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Rect count golden?",
+      "choices": [
+        "6",
+        "1",
+        "3",
+        "0"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Contact count golden?",
+      "choices": [
+        "1",
+        "6",
+        "0",
+        "3"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

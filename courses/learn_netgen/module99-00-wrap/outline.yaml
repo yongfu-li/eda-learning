@@ -1,0 +1,22 @@
+title: Parts A–D complete
+footer: learn_netgen — 00 wrap
+slides:
+- type: title
+  title: Parts A–D complete
+  subtitle: You finished the Netgen map, real CLI evidence, algorithms bound to LVS
+    goldens, and netcomp C tree literacy
+  notes: You finished the Netgen map, real CLI evidence, algorithms bound to LVS goldens,
+    and netcomp C tree literacy.
+- type: bullets
+  title: What you can do
+  bullets:
+  - You can match LVS golden matched=2/4 mismatch=0 and open Obj/Netlist/Element with
+    intent
+  notes: You can match LVS golden matched=2/4 mismatch=0 and open Obj/Netlist/Element
+    with intent to contribute.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - 'Next on the OpenLane path: KLayout, OpenROAD, OpenLane'
+  notes: 'Next on the OpenLane path: KLayout, OpenROAD, OpenLane.'

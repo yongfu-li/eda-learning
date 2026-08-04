@@ -1,0 +1,38 @@
+{
+  "moduleId": "module06-03-magic-tech-vocab",
+  "items": [
+    {
+      "q": "Teaching layer count?",
+      "choices": [
+        "6",
+        "3",
+        "1",
+        "10"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Gate layer name?",
+      "choices": [
+        "poly",
+        "metal1",
+        "ndiff",
+        "contact"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "metal1 GDS number in lab?",
+      "choices": [
+        "49",
+        "6",
+        "25",
+        "1"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

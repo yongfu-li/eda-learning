@@ -1,0 +1,38 @@
+{
+  "module": "module02-03-network-reduce",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "after_nodes golden?",
+      "choices": [
+        "2",
+        "5",
+        "4",
+        "3"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "R_eq golden?",
+      "choices": [
+        "3.06",
+        "0.5",
+        "1.376",
+        "2.0"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "C_eq golden?",
+      "choices": [
+        "1.376",
+        "3.06",
+        "0.5",
+        "2.0"
+      ],
+      "answer": 0
+    }
+  ]
+}

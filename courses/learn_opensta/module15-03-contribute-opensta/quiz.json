@@ -1,8 +1,38 @@
 {
   "moduleId": "module15-03-contribute-opensta",
   "items": [
-    {"id": "q0", "q": "This lab id?", "choices": ["contribute-opensta", "yosys-cli", "opt-dce", "proc-mux"], "answer": 0},
-    {"id": "q1", "q": "Course?", "choices": ["learn_opensta", "learn_yosys", "learn_magic", "learn_netgen"], "answer": 0},
-    {"id": "q2", "q": "Prereq algorithms course?", "choices": ["learn_sta", "learn_routing", "learn_spice", "learn_erc"], "answer": 0}
+    {
+      "q": "New command source often lives under?",
+      "choices": [
+        "app/*.cc",
+        "platform/tools only",
+        "common/rtl only",
+        "docs/SCOPE.md only"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Minimal stub needs?",
+      "choices": [
+        "Tcl cmd + register + CMake + rebuild",
+        "only README",
+        "only quiz",
+        "only Liberty"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Smoke after rebuild?",
+      "choices": [
+        "sta -help hello_cmd",
+        "only browser restart",
+        "edit goldens.json",
+        "run Magic"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
   ]
 }

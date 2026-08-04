@@ -1,0 +1,1 @@
+# Marker emit algorithm

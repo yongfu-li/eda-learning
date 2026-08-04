@@ -1,0 +1,38 @@
+{
+  "module": "module03-03-deck-boolean",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "boolean hit count?",
+      "choices": [
+        "1",
+        "0",
+        "2",
+        "3"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Hit shape?",
+      "choices": [
+        "V",
+        "A",
+        "C",
+        "D"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Rule mode?",
+      "choices": [
+        "and_not",
+        "and",
+        "or",
+        "xor"
+      ],
+      "answer": 0
+    }
+  ]
+}

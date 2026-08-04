@@ -614,4 +614,13 @@ export function clusterColor(id, palette) {
   return palette[h % palette.length];
 }
 
-export const PALETTE = ["#0f6b5c", "#b45309", "#1d4ed8", "#9f1239", "#6d28d9", "#047857"];
+export const PALETTE = [
+  "#1d4ed8",
+  "#0f6b5c",
+  "#b45309",
+  "#9f1239",
+  "#6d28d9",
+  "#c2410c",
+  "#0369a1",
+  "#a21caf",
+];

@@ -1,0 +1,38 @@
+{
+  "moduleId": "module10-03-klayout-algo-engine",
+  "items": [
+    {
+      "q": "Engine ok means?",
+      "choices": [
+        "all Part C + bind",
+        "binary only",
+        "LVS",
+        "Place"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Bind compares to?",
+      "choices": [
+        "Part B evidence",
+        "Liberty",
+        "ABC",
+        "Verilator"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Width violation golden?",
+      "choices": [
+        "1",
+        "0",
+        "2",
+        "4"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

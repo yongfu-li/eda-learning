@@ -1,0 +1,38 @@
+{
+  "moduleId": "module14-01-layout-cell-model",
+  "items": [
+    {
+      "q": "Which pillar holds shapes?",
+      "choices": [
+        "Cell",
+        "Layout only",
+        "Liberty",
+        "GDS stream only"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Instance holds?",
+      "choices": [
+        "cell placement + transform",
+        "STA slack",
+        "Magic tiles",
+        "LEF"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Pillar count?",
+      "choices": [
+        "3",
+        "2",
+        "6",
+        "1"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+title: Schematic graph
+footer: learn_lvs — 01 schematic graph
+slides:
+- type: title
+  title: Schematic graph
+  subtitle: LVS starts from the schematic , devices, nets, and pin edges before layout
+    extract
+  notes: LVS starts from the schematic — devices, nets, and pin edges before layout
+    extract.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: 2 devices, 4 nets, mn1/mp1'
+  notes: 'GOLDEN: 2 devices, 4 nets, mn1/mp1.'
+- type: image
+  title: Devices
+  image: assets/steps/01-devices.png
+  caption: Devices
+  notes: 'Two schematic devices: mn1 (nmos) and mp1 (pmos).'
+- type: image
+  title: Nets
+  image: assets/steps/02-nets.png
+  caption: Nets
+  notes: 'Four nets: a, y, vdd, vss.'
+- type: image
+  title: Pins
+  image: assets/steps/03-pins.png
+  caption: Pins
+  notes: Each device pin attaches to a net (G/D/S).
+- type: image
+  title: Edges
+  image: assets/steps/04-edges.png
+  caption: Edges
+  notes: Six pin edges across mn1 and mp1.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: device_count=2, net_count=4.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **schematic-graph**. Inspect tiny_lvs; confirm mn1/mp1 and 4 nets.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call schematic_graph(); assert device_count==2 and net_count==4
+  notes: Call schematic_graph(); assert device_count==2 and net_count==4.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Counting layout shapes as schematic devices
+  - Missing supply nets
+  notes: Counting layout shapes as schematic devices. Missing supply nets.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: device recognition'
+  notes: 'Next: device recognition.'

@@ -1,8 +1,38 @@
 {
   "moduleId": "module09-01-graph-build",
   "items": [
-    {"id": "q0", "q": "This lab id?", "choices": ["graph-build", "yosys-cli", "opt-dce", "proc-mux"], "answer": 0},
-    {"id": "q1", "q": "Course?", "choices": ["learn_opensta", "learn_yosys", "learn_magic", "learn_netgen"], "answer": 0},
-    {"id": "q2", "q": "Prereq algorithms course?", "choices": ["learn_sta", "learn_routing", "learn_spice", "learn_erc"], "answer": 0}
+    {
+      "q": "Pin count golden?",
+      "choices": [
+        "5",
+        "3",
+        "1",
+        "10"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Arc count golden?",
+      "choices": [
+        "4",
+        "2",
+        "8",
+        "0"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Graph nodes are?",
+      "choices": [
+        "pins + arcs",
+        "GDS only",
+        "Liberty only",
+        "SDC only"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
   ]
 }

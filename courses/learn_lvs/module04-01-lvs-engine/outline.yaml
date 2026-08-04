@@ -1,0 +1,58 @@
+title: Engine
+footer: learn_lvs — 01 lvs engine
+slides:
+- type: title
+  title: Engine
+  subtitle: A tiny engine chains every LVS stage and reports ok when goldens match
+  notes: A tiny engine chains every LVS stage and reports ok when goldens match.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: ok=True'
+  notes: 'GOLDEN: ok=True.'
+- type: image
+  title: Sch
+  image: assets/steps/01-sch.png
+  caption: Sch
+  notes: Schematic graph device_count=2, net_count=4.
+- type: image
+  title: Recog
+  image: assets/steps/02-recog.png
+  caption: Recog
+  notes: Recognize nmos=1, pmos=1.
+- type: image
+  title: Extract
+  image: assets/steps/03-extract.png
+  caption: Extract
+  notes: Extract 4 layout nets.
+- type: image
+  title: Compare
+  image: assets/steps/04-compare.png
+  caption: Compare
+  notes: Compare mismatch_count=0, matched_nets=4.
+- type: image
+  title: OK
+  image: assets/steps/05-ok.png
+  caption: OK
+  notes: 'GOLDEN: ok=True.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **lvs-engine**. Run engine; confirm ok.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call lvs_engine(); assert ok is True
+  notes: Call lvs_engine(); assert ok is True.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Reporting partial stages
+  - Changing toy without updating goldens
+  notes: Reporting partial stages. Changing toy without updating goldens.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: offline compare, then wrap'
+  notes: 'Next: offline compare, then wrap.'

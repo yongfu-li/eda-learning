@@ -1,0 +1,38 @@
+{
+  "module": "module02-01-rc-network",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "nodes include in?",
+      "choices": [
+        "yes",
+        "no",
+        "gnd only",
+        "n1 only"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "R edge count?",
+      "choices": [
+        "4",
+        "3",
+        "2",
+        "1"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "network shape?",
+      "choices": [
+        "series chain",
+        "parallel",
+        "star",
+        "mesh"
+      ],
+      "answer": 0
+    }
+  ]
+}

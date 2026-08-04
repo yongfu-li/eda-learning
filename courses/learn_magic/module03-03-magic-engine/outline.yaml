@@ -1,0 +1,83 @@
+title: Why Magic
+footer: learn_magic — 03 magic engine
+slides:
+- type: title
+  title: Why Magic
+  subtitle: Run the full Part A engine; ok when every golden matches
+  notes: Run the full Part A engine; ok when every golden matches.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: magic_engine ok=True'
+  notes: 'GOLDEN: magic_engine ok=True.'
+- type: image
+  title: Paint ok
+  image: assets/steps/01-paint.png
+  caption: Paint ok
+  notes: Paint layers stage passes.
+- type: image
+  title: Select ok
+  image: assets/steps/02-select.png
+  caption: Select ok
+  notes: Select box stage passes.
+- type: image
+  title: Contact ok
+  image: assets/steps/03-contact.png
+  caption: Contact ok
+  notes: Contact stage passes.
+- type: image
+  title: DRC ok
+  image: assets/steps/04-drc.png
+  caption: DRC ok
+  notes: DRC stage passes.
+- type: image
+  title: Engine golden
+  image: assets/steps/05-golden.png
+  caption: Engine golden
+  notes: 'GOLDEN: magic_engine ok=True.'
+- type: bullets
+  title: Browser lab track
+  bullets:
+  - Open **magic-engine**
+  - Run the stage buttons and Check the goldens
+  notes: Open **magic-engine**. Run the stage buttons and Check the goldens.
+- type: bullets
+  title: Implement track
+  bullets:
+  - From common/, run solvers.py and confirm MAGIC_PARTA_OK
+  notes: From common/, run solvers.py and confirm MAGIC_PARTA_OK.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Mixing KLayout viewer shortcuts with Magic paint commands
+  - Forgetting min_width when reading DRC errors
+  notes: Mixing KLayout viewer shortcuts with Magic paint commands. Forgetting min_width
+    when reading DRC errors.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder, run the Magic map self-test
+  notes: From the common folder, run the Magic map self-test.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_magic/common
+
+    python3 solvers.py'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the check in plain steps
+  notes: Here is the check in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: 'magic_engine ok=True.
+
+    ok if goldens match'
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue the Magic Part A map, then the real CLI track
+  notes: Continue the Magic Part A map, then the real CLI track.

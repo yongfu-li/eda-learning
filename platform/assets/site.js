@@ -161,6 +161,8 @@
     });
     items.push(
       { type: "page", title: "Courses map", subtitle: "Courses", href: "courses/index.html#courses-map", keys: "path ladder map learning courses" },
+      { type: "page", title: "Benchmarks", subtitle: "Benchmarks", href: "benchmarks/index.html", keys: "benchmark partition runtime memory upload" },
+      { type: "page", title: "Partitioning benchmark", subtitle: "Benchmarks", href: "benchmarks/partitioning/index.html", keys: "partition benchmark kl fm spectral upload" },
       { type: "page", title: "HDL Simulator", subtitle: "Simulator", href: "simulator/index.html", keys: "simulator hdl waveform" },
       { type: "page", title: "Tools catalog", subtitle: "Tools", href: "tools/index.html", keys: "tools labs catalog" },
       { type: "page", title: "Community", subtitle: "Feedback", href: "community/index.html", keys: "community feedback stories" },
@@ -358,8 +360,42 @@
     });
   }
 
+  /* ---------- Nav: Benchmarks link on every page ---------- */
+  function wireBenchmarksNav() {
+    const nav = document.querySelector(".site-nav");
+    if (!nav) return;
+    const existing = [...nav.querySelectorAll("a")].find((x) =>
+      /benchmarks(\/index\.html)?\/?$/i.test(x.getAttribute("href") || "") ||
+      (x.getAttribute("href") || "").includes("/benchmarks/")
+    );
+    if (existing) {
+      existing.setAttribute("data-nav", "benchmarks");
+      if (location.pathname.includes("/benchmarks")) {
+        existing.classList.add("is-active");
+        existing.setAttribute("aria-current", "page");
+      }
+      return;
+    }
+    const root = siteRoot();
+    const href = `${root}benchmarks/index.html`;
+    const a = document.createElement("a");
+    a.href = href;
+    a.setAttribute("data-nav", "benchmarks");
+    a.textContent = "Benchmarks";
+    if (location.pathname.includes("/benchmarks")) {
+      a.classList.add("is-active");
+      a.setAttribute("aria-current", "page");
+    }
+    const tools = [...nav.querySelectorAll("a")].find((x) =>
+      /tools\/index\.html|\/tools\/?$/i.test(x.getAttribute("href") || "")
+    );
+    if (tools) nav.insertBefore(a, tools);
+    else nav.appendChild(a);
+  }
+
   /* ---------- Boot ---------- */
   initGa4();
+  wireBenchmarksNav();
   wireMobileNav();
   mountSearch();
   wireFeedbackForms();

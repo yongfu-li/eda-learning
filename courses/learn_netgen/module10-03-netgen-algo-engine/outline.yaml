@@ -1,0 +1,82 @@
+title: Why algorithms
+footer: learn_netgen — 03 netgen algo engine
+slides:
+- type: title
+  title: Why algorithms
+  subtitle: Run Part C engine and bind to Part B goldens
+  notes: Run Part C engine and bind to Part B goldens.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: engine ok; bind matched 2/4 mismatch 0'
+  notes: 'GOLDEN: engine ok; bind matched 2/4 mismatch 0.'
+- type: image
+  title: Hash ok
+  image: assets/steps/01-hash.png
+  caption: Hash ok
+  notes: Hash devices matches golden.
+- type: image
+  title: Match ok
+  image: assets/steps/02-match.png
+  caption: Match ok
+  notes: Match nets matches 4.
+- type: image
+  title: Permute ok
+  image: assets/steps/03-perm.png
+  caption: Permute ok
+  notes: Permute pins passes.
+- type: image
+  title: Bind Part B
+  image: assets/steps/04-bind.png
+  caption: Bind Part B
+  notes: Teaching matched 2/4 ↔ Part B logs.
+- type: image
+  title: Engine
+  image: assets/steps/05-golden.png
+  caption: Engine
+  notes: 'GOLDEN: netgen_algo_engine ok=True.'
+- type: bullets
+  title: Browser lab
+  bullets:
+  - Open **netgen-algo-engine**
+  notes: Open **netgen-algo-engine**.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Run algo_solvers.py and partc_bind.py
+  notes: Run algo_solvers.py and partc_bind.py.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Changing tiny_algo_netgen without updating Part B goldens
+  notes: Changing tiny_algo_netgen without updating Part B goldens.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder, run the Part C self-tests
+  notes: From the common folder, run the Part C self-tests.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_netgen/common
+
+    python3 algo_solvers.py
+
+    python3 partc_bind.py'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the check in plain steps
+  notes: Here is the check in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: 'engine ok; bind matched 2/4 mismatch 0.
+
+    ok if goldens match and bind'
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue Part C, then internals
+  notes: Continue Part C, then internals.

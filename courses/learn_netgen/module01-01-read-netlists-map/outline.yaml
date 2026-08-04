@@ -1,0 +1,82 @@
+title: Why Read
+footer: learn_netgen — 01 read netlists map
+slides:
+- type: title
+  title: Why Read
+  subtitle: Read schematic and layout SPICE-like netlists
+  notes: Read schematic and layout SPICE-like netlists.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: sch/lay devices=2'
+  notes: 'GOLDEN: sch/lay devices=2.'
+- type: image
+  title: Schematic
+  image: assets/steps/01-sch.png
+  caption: Schematic
+  notes: tiny_inv schematic has mn1 (nmos) and mp1 (pmos).
+- type: image
+  title: Layout
+  image: assets/steps/02-lay.png
+  caption: Layout
+  notes: Layout side has X0 (nmos) and X1 (pmos).
+- type: image
+  title: Four ports
+  image: assets/steps/03-ports.png
+  caption: Four ports
+  notes: Ports A, Y, VDD, VSS on both sides.
+- type: image
+  title: read command
+  image: assets/steps/04-read.png
+  caption: read command
+  notes: Netgen read loads SPICE-like netlists.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: sch_devices=2 lay_devices=2.'
+- type: bullets
+  title: Browser lab track
+  bullets:
+  - Open **read-netlists-map**
+  - Run the stage buttons and Check the goldens
+  notes: Open **read-netlists-map**. Run the stage buttons and Check the goldens.
+- type: bullets
+  title: Implement track
+  bullets:
+  - From common/, run solvers.py and confirm NETGEN_PARTA_OK
+  notes: From common/, run solvers.py and confirm NETGEN_PARTA_OK.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Confusing schematic SPICE with layout extract
+  - Forgetting permute on source/drain
+  notes: Confusing schematic SPICE with layout extract. Forgetting permute on source/drain.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder, run the Netgen map self-test
+  notes: From the common folder, run the Netgen map self-test.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_netgen/common
+
+    python3 solvers.py'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the check in plain steps
+  notes: Here is the check in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: 'sch/lay devices=2.
+
+    ok if goldens match'
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue the Netgen Part A map, then the real CLI track
+  notes: Continue the Netgen Part A map, then the real CLI track.

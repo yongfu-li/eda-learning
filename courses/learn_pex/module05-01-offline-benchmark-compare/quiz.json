@@ -1,0 +1,38 @@
+{
+  "module": "module05-01-offline-benchmark-compare",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Focus of Offline compare?",
+      "choices": [
+        "Print pex_compare metrics offline without the browser.",
+        "Place only",
+        "CTS only",
+        "LVS compare"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Course id?",
+      "choices": [
+        "learn_pex",
+        "learn_lvs",
+        "learn_drc",
+        "learn_spice"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "R_total golden?",
+      "choices": [
+        "3.06",
+        "1.376",
+        "0.5",
+        "2.0"
+      ],
+      "answer": 0
+    }
+  ]
+}

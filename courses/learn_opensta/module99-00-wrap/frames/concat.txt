@@ -1,7 +1,7 @@
 file '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module99-00-wrap/frames/slide-1.png'
-duration 6.792
+duration 8.64
 file '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module99-00-wrap/frames/slide-2.png'
-duration 10.512
+duration 8.208
 file '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module99-00-wrap/frames/slide-3.png'
-duration 9.072
+duration 7.128
 file '/mnt/d/proj/designs/eda_learning/courses/learn_opensta/module99-00-wrap/frames/slide-3.png'

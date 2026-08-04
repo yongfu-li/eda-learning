@@ -1,0 +1,80 @@
+title: Why real Netgen
+footer: learn_netgen — 01 real lvs report
+slides:
+- type: title
+  title: Why real Netgen
+  subtitle: LVS report with class count
+  notes: LVS report with class count.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: matched=2/4; mismatch=0; classes=2'
+  notes: 'GOLDEN: matched=2/4; mismatch=0; classes=2.'
+- type: image
+  title: report cmd
+  image: assets/steps/01-report.png
+  caption: report cmd
+  notes: Netgen report summarizes LVS.
+- type: image
+  title: Devices
+  image: assets/steps/02-dev.png
+  caption: Devices
+  notes: MATCHED_DEVICES=2.
+- type: image
+  title: Nets
+  image: assets/steps/03-nets.png
+  caption: Nets
+  notes: MATCHED_NETS=4.
+- type: image
+  title: Classes
+  image: assets/steps/04-class.png
+  caption: Classes
+  notes: CLASSES=2.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: mismatch=0.'
+- type: bullets
+  title: Browser lab
+  bullets:
+  - Open **real-lvs-report**
+  notes: Open **real-lvs-report**.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Run real_solvers.py , REAL_NETGEN_OK
+  notes: Run real_solvers.py — REAL_NETGEN_OK.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Editing goldens without re-running scripts
+  notes: Editing goldens without re-running scripts.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder, run the real Netgen self-test
+  notes: From the common folder, run the real Netgen self-test.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_netgen/common
+
+    python3 real_solvers.py'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the check in plain steps
+  notes: Here is the check in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: 'matched=2/4; mismatch=0; classes=2.
+
+    ok if goldens match'
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue Part B evidence track
+  notes: Continue Part B evidence track.

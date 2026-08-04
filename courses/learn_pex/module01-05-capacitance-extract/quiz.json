@@ -1,0 +1,38 @@
+{
+  "module": "module01-05-capacitance-extract",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "C_total golden?",
+      "choices": [
+        "1.376",
+        "3.06",
+        "0.5",
+        "2.0"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "capacitor count?",
+      "choices": [
+        "3",
+        "4",
+        "2",
+        "1"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "VIA has ground C?",
+      "choices": [
+        "no",
+        "yes",
+        "always",
+        "optional"
+      ],
+      "answer": 0
+    }
+  ]
+}

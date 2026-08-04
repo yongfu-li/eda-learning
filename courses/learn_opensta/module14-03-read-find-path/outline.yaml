@@ -1,0 +1,89 @@
+title: Why read FindPath
+footer: learn_opensta — 03 read find path
+slides:
+- type: title
+  title: Why read FindPath
+  subtitle: Part C algorithms match moves
+  notes: Part C algorithms match moves. Now map those moves onto the real C++ and
+    Tcl report shape.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: tag endpoints'
+  notes: 'GOLDEN: tag endpoints, walk back the worst path, emit pins, format report_checks
+    — slack 8 like Part B.'
+- type: image
+  title: Tag endpoints
+  image: assets/steps/01-tag.png
+  caption: Tag endpoints
+  notes: Search tags which pins are report endpoints.
+- type: image
+  title: Walk back
+  image: assets/steps/02-walk.png
+  caption: Walk back
+  notes: From the worst slack endpoint, walk previous arcs.
+- type: image
+  title: Emit path
+  image: assets/steps/03-emit.png
+  caption: Emit path
+  notes: Emit the ordered pin list for the critical path.
+- type: image
+  title: report_checks
+  image: assets/steps/04-report.png
+  caption: report_checks
+  notes: report_checks formats delay 2 and slack 8 MET.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: tag → walk → emit → report; slack 8 path b→y.'
+- type: bullets
+  title: Browser lab track
+  bullets:
+  - Open **read-find-path**
+  - Step the FindPath pipeline and check
+  notes: Open **read-find-path**. Step the FindPath pipeline and check.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call read_find_path(); assert stage order and Part B slack bind
+  notes: Call read_find_path(); assert stage order and Part B slack bind.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Expecting FindPath to replace Liberty
+  - Ignoring the Part B delay and slack goldens
+  notes: Expecting FindPath to replace Liberty. Ignoring the Part B delay and slack
+    goldens.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder, call read_find_path and print the stages
+  notes: From the common folder, call read_find_path and print the stages.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_opensta/common
+
+    python3 -c "from internals_solvers import read_find_path; print(read_find_path())"'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the FindPath teaching flow in plain steps
+  notes: Here is the FindPath teaching flow in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: 'tag_endpoints
+
+    walk_back from worst slack
+
+    emit_path → [b, n1, n2, y]
+
+    report_checks → delay 2, slack 8 MET'
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - 'Next: contribute a minimal Tcl command of your own'
+  notes: 'Next: contribute a minimal Tcl command of your own.'

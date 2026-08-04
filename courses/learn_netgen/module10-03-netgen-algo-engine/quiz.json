@@ -1,0 +1,38 @@
+{
+  "moduleId": "module10-03-netgen-algo-engine",
+  "items": [
+    {
+      "q": "Engine ok means?",
+      "choices": [
+        "all Part C + bind",
+        "binary only",
+        "DRC",
+        "Place"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Bind compares to?",
+      "choices": [
+        "Part B evidence",
+        "Liberty",
+        "ABC",
+        "Verilator"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Mismatch golden?",
+      "choices": [
+        "0",
+        "2",
+        "4",
+        "1"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

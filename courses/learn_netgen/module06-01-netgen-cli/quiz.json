@@ -1,0 +1,38 @@
+{
+  "moduleId": "module06-01-netgen-cli",
+  "items": [
+    {
+      "q": "Typical Netgen batch invocation?",
+      "choices": [
+        "netgen -batch -noc script.tcl",
+        "sta -exit",
+        "magic -dnull",
+        "yosys -s"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "First recipe command?",
+      "choices": [
+        "read_sch",
+        "gds_write",
+        "drc check",
+        "abc"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Second recipe command?",
+      "choices": [
+        "read_lay",
+        "report_checks",
+        "flatten",
+        "opt"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

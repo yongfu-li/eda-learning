@@ -33,14 +33,36 @@ export function el(tag, attrs = {}, children = []) {
   return node;
 }
 
+const PAPER_FONT =
+  "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
+/** Same order as partition-benchmark-plots. */
+const PAPER_PALETTE = [
+  "#1d4ed8",
+  "#0f6b5c",
+  "#b45309",
+  "#9f1239",
+  "#6d28d9",
+  "#c2410c",
+  "#0369a1",
+  "#a21caf",
+  "#4f46e5",
+  "#ca8a04",
+];
+
 export function drawGraph(canvas, graph, opts = {}) {
+  const paper = !!opts.paper;
+  if (paper) canvas.style.background = "#ffffff";
+
   const { ctx, w, h } = fitHiDpiCanvas(canvas);
   const design = opts.layout || starterLayout();
   const { layout, nodeR, fontPx, edgeW } = fitGraphLayout(design, w, h);
   const assignment = opts.assignment || null;
   const highlightPairs = new Set(opts.highlightPairs || []);
+  const ink = paper ? "#000000" : "#0f172a";
+  const palette = paper ? PAPER_PALETTE : PALETTE;
+
   ctx.clearRect(0, 0, w, h);
-  ctx.fillStyle = "#f7faf9";
+  ctx.fillStyle = paper ? "#ffffff" : "#f7faf9";
   ctx.fillRect(0, 0, w, h);
 
   for (const e of graph.edges) {
@@ -54,13 +76,21 @@ export function drawGraph(canvas, graph, opts = {}) {
     ctx.beginPath();
     ctx.moveTo(a.x, a.y);
     ctx.lineTo(b.x, b.y);
-    ctx.strokeStyle = hot ? "#b45309" : cut ? "#9f1239" : "#94a3b8";
+    ctx.strokeStyle = hot
+      ? "#b45309"
+      : cut
+        ? "#9f1239"
+        : paper
+          ? "#cbd5e1"
+          : "#94a3b8";
     ctx.lineWidth = hot ? edgeW * 1.75 : cut ? edgeW * 1.25 : edgeW;
     ctx.stroke();
     const mx = (a.x + b.x) / 2;
     const my = (a.y + b.y) / 2;
-    ctx.fillStyle = "#334155";
-    ctx.font = `${Math.max(11, fontPx - 1)}px ui-monospace, Menlo, Consolas, monospace`;
+    ctx.fillStyle = paper ? ink : "#334155";
+    ctx.font = paper
+      ? `bold ${Math.max(11, fontPx - 1)}px ${PAPER_FONT}`
+      : `${Math.max(11, fontPx - 1)}px ui-monospace, Menlo, Consolas, monospace`;
     ctx.fillText(String(e.w), mx + 4, my - 4);
   }
 
@@ -72,13 +102,15 @@ export function drawGraph(canvas, graph, opts = {}) {
     const isSel = selected.has(n);
     ctx.beginPath();
     ctx.arc(p.x, p.y, isSel ? nodeR + 2 : nodeR, 0, Math.PI * 2);
-    ctx.fillStyle = clusterColor(cid, PALETTE);
+    ctx.fillStyle = clusterColor(cid, palette);
     ctx.fill();
-    ctx.strokeStyle = isSel ? "#b45309" : "#0f172a";
-    ctx.lineWidth = isSel ? 3 : 1.5;
+    ctx.strokeStyle = isSel ? "#b45309" : ink;
+    ctx.lineWidth = isSel ? 3 : paper ? 1.75 : 1.5;
     ctx.stroke();
     ctx.fillStyle = "#fff";
-    ctx.font = `bold ${fontPx}px system-ui, sans-serif`;
+    ctx.font = paper
+      ? `bold ${fontPx}px ${PAPER_FONT}`
+      : `bold ${fontPx}px system-ui, sans-serif`;
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     ctx.fillText(n, p.x, p.y);

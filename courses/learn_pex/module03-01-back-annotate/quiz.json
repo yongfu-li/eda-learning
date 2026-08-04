@@ -1,0 +1,38 @@
+{
+  "module": "module03-01-back-annotate",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "annotated net?",
+      "choices": [
+        "n1",
+        "in",
+        "out",
+        "gnd"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "annotation count?",
+      "choices": [
+        "1",
+        "4",
+        "3",
+        "0"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "ports on n1?",
+      "choices": [
+        "in,out",
+        "s1,s2",
+        "none",
+        "gnd"
+      ],
+      "answer": 0
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "tool": "Netgen",
+  "version": "1.5",
+  "cell": "tiny_inv",
+  "schematic_file": "netlists/tiny_inv.sch.spice",
+  "layout_file": "netlists/tiny_inv.lay.spice",
+  "recipe_ids": [
+    "read_sch",
+    "read_lay",
+    "device_classes",
+    "compare_nets",
+    "lvs_report",
+    "lvs_done"
+  ],
+  "spice_vocab": {
+    "device_prefixes": ["M", "X"],
+    "port_names": ["A", "Y", "VDD", "VSS"],
+    "pin_names": ["G", "D", "S"]
+  },
+  "stages": {
+    "spice_vocab": {
+      "device_count": 2,
+      "net_count": 4,
+      "classes": ["nmos", "pmos"]
+    },
+    "read_spice": {
+      "sch_devices": 2,
+      "lay_devices": 2,
+      "sch_nets": 4,
+      "lay_nets": 4
+    },
+    "lvs_compare": {
+      "matched_nets": 4,
+      "matched_devices": 2,
+      "mismatch_count": 0
+    },
+    "lvs_report": {
+      "matched_devices": 2,
+      "matched_nets": 4,
+      "mismatch_count": 0,
+      "class_count": 2
+    }
+  },
+  "sch_devices": 2,
+  "lay_devices": 2,
+  "matched_nets": 4,
+  "matched_devices": 2,
+  "mismatch_count": 0,
+  "class_count": 2,
+  "engine_ok": true
+}

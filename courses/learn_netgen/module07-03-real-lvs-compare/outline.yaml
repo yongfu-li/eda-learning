@@ -1,0 +1,80 @@
+title: Why real Netgen
+footer: learn_netgen — 03 real lvs compare
+slides:
+- type: title
+  title: Why real Netgen
+  subtitle: Compare nets and devices between sch and lay
+  notes: Compare nets and devices between sch and lay.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: matched_nets=4; matched_devices=2; mismatch=0'
+  notes: 'GOLDEN: matched_nets=4; matched_devices=2; mismatch=0.'
+- type: image
+  title: compare
+  image: assets/steps/01-cmd.png
+  caption: compare
+  notes: Netgen compare matches nets/devices.
+- type: image
+  title: Four nets
+  image: assets/steps/02-nets.png
+  caption: Four nets
+  notes: Four nets matched.
+- type: image
+  title: Two devices
+  image: assets/steps/03-dev.png
+  caption: Two devices
+  notes: Two devices matched.
+- type: image
+  title: Zero mismatch
+  image: assets/steps/04-mism.png
+  caption: Zero mismatch
+  notes: MISMATCH=0 in log.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: matched_nets=4 matched_devices=2.'
+- type: bullets
+  title: Browser lab
+  bullets:
+  - Open **real-lvs-compare**
+  notes: Open **real-lvs-compare**.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Run real_solvers.py , REAL_NETGEN_OK
+  notes: Run real_solvers.py — REAL_NETGEN_OK.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Editing goldens without re-running scripts
+  notes: Editing goldens without re-running scripts.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder, run the real Netgen self-test
+  notes: From the common folder, run the real Netgen self-test.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_netgen/common
+
+    python3 real_solvers.py'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the check in plain steps
+  notes: Here is the check in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: 'matched_nets=4; matched_devices=2; mismatch=0.
+
+    ok if goldens match'
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue Part B evidence track
+  notes: Continue Part B evidence track.

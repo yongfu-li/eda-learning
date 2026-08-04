@@ -44,6 +44,12 @@ import { SPICE_ALGOS } from "./spice-algos.js";
 import { drawSpice, STARTER as SPICE_STARTER } from "../../assets/spice-core.js";
 import { ERC_ALGOS } from "./erc-algos.js";
 import { drawErc, STARTER as ERC_STARTER } from "../../assets/erc-core.js";
+import { DRC_ALGOS } from "./drc-algos.js";
+import { drawDrc, STARTER as DRC_STARTER } from "../../assets/drc-core.js";
+import { LVS_ALGOS } from "./lvs-algos.js";
+import { drawLvs, STARTER as LVS_STARTER } from "../../assets/lvs-core.js";
+import { PEX_ALGOS } from "./pex-algos.js";
+import { drawPex, STARTER as PEX_STARTER } from "../../assets/pex-core.js";
 import { ANTENNA_ALGOS } from "./antenna-algos.js";
 import { drawAntenna, STARTER as ANTENNA_STARTER } from "../../assets/antenna-core.js";
 import { POWER_ALGOS } from "./power-algos.js";
@@ -56,6 +62,42 @@ import { YOSYS_ALGOS } from "./yosys-algos.js";
 import { drawYosys, STARTER as YOSYS_STARTER } from "../../assets/yosys-core.js";
 import { REAL_YOSYS_ALGOS } from "./real-yosys-algos.js";
 import { drawRealYosys, STAGES as REAL_YOSYS_STAGES } from "../../assets/real-yosys-core.js";
+import { ALGO_YOSYS_ALGOS } from "./algo-yosys-algos.js";
+import { drawAlgoYosys, STARTER as ALGO_YOSYS_STARTER } from "../../assets/algo-yosys-core.js";
+import { YOSYS_INTERNALS_ALGOS } from "./yosys-internals-algos.js";
+import { drawInternals } from "../../assets/yosys-internals-core.js";
+import { OPENSTA_ALGOS } from "./opensta-algos.js";
+import { drawOpensta, STARTER as OPENSTA_STARTER } from "../../assets/opensta-core.js";
+import { REAL_OPENSTA_ALGOS } from "./real-opensta-algos.js";
+import { drawRealOpensta, STAGES as REAL_OPENSTA_STAGES } from "../../assets/real-opensta-core.js";
+import { ALGO_OPENSTA_ALGOS } from "./algo-opensta-algos.js";
+import { drawAlgoOpensta } from "../../assets/algo-opensta-core.js";
+import { OPENSTA_INTERNALS_ALGOS } from "./opensta-internals-algos.js";
+import { drawOpenstaInternals } from "../../assets/opensta-internals-core.js";
+import { MAGIC_ALGOS } from "./magic-algos.js";
+import { drawMagic, STARTER as MAGIC_STARTER } from "../../assets/magic-core.js";
+import { REAL_MAGIC_ALGOS } from "./real-magic-algos.js";
+import { drawRealMagic, STAGES as REAL_MAGIC_STAGES } from "../../assets/real-magic-core.js";
+import { ALGO_MAGIC_ALGOS } from "./algo-magic-algos.js";
+import { drawAlgoMagic } from "../../assets/algo-magic-core.js";
+import { MAGIC_INTERNALS_ALGOS } from "./magic-internals-algos.js";
+import { drawMagicInternals } from "../../assets/magic-internals-core.js";
+import { NETGEN_ALGOS } from "./netgen-algos.js";
+import { drawNetgen, STARTER as NETGEN_STARTER } from "../../assets/netgen-core.js";
+import { REAL_NETGEN_ALGOS } from "./real-netgen-algos.js";
+import { drawRealNetgen, STAGES as REAL_NETGEN_STAGES } from "../../assets/real-netgen-core.js";
+import { ALGO_NETGEN_ALGOS } from "./algo-netgen-algos.js";
+import { drawAlgoNetgen } from "../../assets/algo-netgen-core.js";
+import { NETGEN_INTERNALS_ALGOS } from "./netgen-internals-algos.js";
+import { KLAYOUT_ALGOS } from "./klayout-algos.js";
+import { drawKlayout, STARTER as KLAYOUT_STARTER } from "../../assets/klayout-core.js";
+import { REAL_KLAYOUT_ALGOS } from "./real-klayout-algos.js";
+import { drawRealKlayout, STAGES as REAL_KLAYOUT_STAGES } from "../../assets/real-klayout-core.js";
+import { ALGO_KLAYOUT_ALGOS } from "./algo-klayout-algos.js";
+import { drawAlgoKlayout } from "../../assets/algo-klayout-core.js";
+import { KLAYOUT_INTERNALS_ALGOS } from "./klayout-internals-algos.js";
+import { drawKlayoutInternals } from "../../assets/klayout-internals-core.js";
+import { drawNetgenInternals } from "../../assets/netgen-internals-core.js";
 import { drawEquivalence } from "../../assets/equivalence-core.js";
 import { drawRetiming } from "../../assets/retiming-core.js";
 import { drawSynthesis } from "../../assets/synthesis-core.js";
@@ -1714,12 +1756,33 @@ export const ALGOS = {
   ...MULTI_PATTERN_ALGOS,
   ...SPICE_ALGOS,
   ...ERC_ALGOS,
+  ...DRC_ALGOS,
+  ...LVS_ALGOS,
+  ...PEX_ALGOS,
   ...ANTENNA_ALGOS,
   ...POWER_ALGOS,
   ...DFT_ALGOS,
   ...SIGNOFF_ALGOS,
   ...YOSYS_ALGOS,
   ...REAL_YOSYS_ALGOS,
+  ...ALGO_YOSYS_ALGOS,
+  ...YOSYS_INTERNALS_ALGOS,
+  ...OPENSTA_ALGOS,
+  ...REAL_OPENSTA_ALGOS,
+  ...ALGO_OPENSTA_ALGOS,
+  ...OPENSTA_INTERNALS_ALGOS,
+  ...MAGIC_ALGOS,
+  ...REAL_MAGIC_ALGOS,
+  ...ALGO_MAGIC_ALGOS,
+  ...MAGIC_INTERNALS_ALGOS,
+  ...NETGEN_ALGOS,
+  ...REAL_NETGEN_ALGOS,
+  ...ALGO_NETGEN_ALGOS,
+  ...NETGEN_INTERNALS_ALGOS,
+  ...KLAYOUT_ALGOS,
+  ...REAL_KLAYOUT_ALGOS,
+  ...ALGO_KLAYOUT_ALGOS,
+  ...KLAYOUT_INTERNALS_ALGOS,
 };
 
 function qs() {
@@ -1896,6 +1959,144 @@ function render() {
       showTapeout: s.showTapeout !== false,
       metricText: s.metricText || null,
     });
+  } else if (pack.kind === "algo_yosys") {
+    drawAlgoYosys(canvas, {
+      design: s.design || ALGO_YOSYS_STARTER,
+      highlight: s.highlight || [],
+      selected: s.selected || [],
+      stageLabel: s.stageLabel || null,
+      metricText: s.metricText || null,
+      showMemory: s.showMemory === true,
+      showFsm: s.showFsm === true,
+    });
+  } else if (pack.kind === "yosys_internals") {
+    drawInternals(canvas, {
+      highlight: s.highlight || [],
+      selected: s.selected || [],
+      stageLabel: s.stageLabel || null,
+      metricText: s.metricText || null,
+    });
+  } else if (pack.kind === "opensta") {
+    drawOpensta(canvas, {
+      design: s.design || OPENSTA_STARTER,
+      highlight: s.highlight || [],
+      selected: s.selected || [],
+      stageLabel: s.stageLabel || null,
+      metricText: s.metricText || null,
+    });
+  } else if (pack.kind === "real_opensta") {
+    drawRealOpensta(canvas, {
+      stage: s.stage || REAL_OPENSTA_STAGES.empty,
+      highlight: s.highlight || [],
+      selected: s.selected || [],
+      stageLabel: s.stageLabel || null,
+      metricText: s.metricText || null,
+    });
+  } else if (pack.kind === "algo_opensta") {
+    drawAlgoOpensta(canvas, {
+      highlight: s.highlight || [],
+      selected: s.selected || [],
+      stageLabel: s.stageLabel || null,
+      metricText: s.metricText || null,
+    });
+  } else if (pack.kind === "klayout_internals") {
+    drawKlayoutInternals(canvas, {
+      highlight: s.highlight || [],
+      selected: s.selected || [],
+      stageLabel: s.stageLabel || null,
+      metricText: s.metricText || null,
+    });
+  } else if (pack.kind === "algo_klayout") {
+    drawAlgoKlayout(canvas, {
+      highlight: s.highlight || [],
+      selected: s.selected || [],
+      stageLabel: s.stageLabel || null,
+      metricText: s.metricText || null,
+    });
+  } else if (pack.kind === "real_klayout") {
+    drawRealKlayout(canvas, {
+      stage: s.stage || REAL_KLAYOUT_STAGES.empty,
+      highlight: s.highlight || [],
+      selected: s.selected || [],
+      stageLabel: s.stageLabel || null,
+      metricText: s.metricText || null,
+    });
+  } else if (pack.kind === "klayout") {
+    drawKlayout(canvas, {
+      highlight: s.highlight || [],
+      selected: s.selected || [],
+      markers: s.markers || [],
+      stageLabel: s.stageLabel || null,
+      metricText: s.metricText || null,
+    });
+  } else if (pack.kind === "netgen_internals") {
+    drawNetgenInternals(canvas, {
+      highlight: s.highlight || [],
+      selected: s.selected || [],
+      stageLabel: s.stageLabel || null,
+      metricText: s.metricText || null,
+    });
+  } else if (pack.kind === "algo_netgen") {
+    drawAlgoNetgen(canvas, {
+      highlight: s.highlight || [],
+      selected: s.selected || [],
+      stageLabel: s.stageLabel || null,
+      metricText: s.metricText || null,
+    });
+  } else if (pack.kind === "real_netgen") {
+    drawRealNetgen(canvas, {
+      stage: s.stage || REAL_NETGEN_STAGES.empty,
+      highlight: s.highlight || [],
+      selected: s.selected || [],
+      stageLabel: s.stageLabel || null,
+      metricText: s.metricText || null,
+    });
+  } else if (pack.kind === "netgen") {
+    drawNetgen(canvas, {
+      highlight: s.highlight || [],
+      selected: s.selected || [],
+      stageLabel: s.stageLabel || null,
+      metricText: s.metricText || null,
+    });
+  } else if (pack.kind === "magic_internals") {
+    drawMagicInternals(canvas, {
+      highlight: s.highlight || [],
+      selected: s.selected || [],
+      stageLabel: s.stageLabel || null,
+      metricText: s.metricText || null,
+    });
+  } else if (pack.kind === "algo_magic") {
+    drawAlgoMagic(canvas, {
+      highlight: s.highlight || [],
+      selected: s.selected || [],
+      markers: s.markers || [],
+      stageLabel: s.stageLabel || null,
+      metricText: s.metricText || null,
+    });
+  } else if (pack.kind === "real_magic") {
+    drawRealMagic(canvas, {
+      stage: s.stage || REAL_MAGIC_STAGES.empty,
+      highlight: s.highlight || [],
+      selected: s.selected || [],
+      stageLabel: s.stageLabel || null,
+      metricText: s.metricText || null,
+    });
+  } else if (pack.kind === "magic") {
+    drawMagic(canvas, {
+      cell: s.cell || MAGIC_STARTER,
+      highlight: s.highlight || [],
+      selected: s.selected || null,
+      markers: s.markers || [],
+      stageLabel: s.stageLabel || null,
+      metricText: s.metricText || null,
+    });
+  } else if (pack.kind === "opensta_internals") {
+    drawOpenstaInternals(canvas, {
+      highlight: s.highlight || [],
+      selected: s.selected || [],
+      stageLabel: s.stageLabel || null,
+      metricText: s.metricText || null,
+    });
   } else if (pack.kind === "real_yosys") {
     drawRealYosys(canvas, {
       stage: s.stage || REAL_YOSYS_STAGES.empty,
@@ -1913,6 +2114,31 @@ function render() {
       stageLabel: s.stageLabel || null,
       metricText: s.metricText || null,
       showNand: s.showNand === true,
+    });
+  } else if (pack.kind === "pex") {
+    drawPex(canvas, {
+      highlight: s.highlight || [],
+      selected: s.selected || [],
+      metricText: s.metricText || null,
+      stageLabel: s.stageLabel || s.mode || null,
+    });
+  } else if (pack.kind === "lvs") {
+    drawLvs(canvas, {
+      highlight: s.highlight || [],
+      selected: s.selected || [],
+      metricText: s.metricText || null,
+      stageLabel: s.stageLabel || s.mode || null,
+    });
+  } else if (pack.kind === "drc") {
+    drawDrc(canvas, {
+      design: s.design || DRC_STARTER,
+      mode: s.mode || "layout",
+      highlight: s.highlight || [],
+      selected: s.selected || [],
+      selectedShape: s.selectedShape || null,
+      markers: s.markers || [],
+      metricText: s.metricText || null,
+      stageLabel: s.stageLabel || null,
     });
   } else if (pack.kind === "erc") {
     drawErc(canvas, {

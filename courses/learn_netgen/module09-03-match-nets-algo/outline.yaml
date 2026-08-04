@@ -1,0 +1,82 @@
+title: Why algorithms
+footer: learn_netgen — 03 match nets algo
+slides:
+- type: title
+  title: Why algorithms
+  subtitle: Match net names between schematic and layout
+  notes: Match net names between schematic and layout.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: matched_nets=4'
+  notes: 'GOLDEN: matched_nets=4.'
+- type: image
+  title: Schematic nets
+  image: assets/steps/01-sch.png
+  caption: Schematic nets
+  notes: Four nets from schematic.
+- type: image
+  title: Layout nets
+  image: assets/steps/02-lay.png
+  caption: Layout nets
+  notes: Four nets from layout.
+- type: image
+  title: Intersection
+  image: assets/steps/03-inter.png
+  caption: Intersection
+  notes: All four names match.
+- type: image
+  title: Match algo
+  image: assets/steps/04-algo.png
+  caption: Match algo
+  notes: Set intersection on net names.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: matched_nets=4.'
+- type: bullets
+  title: Browser lab
+  bullets:
+  - Open **match-nets-algo**
+  notes: Open **match-nets-algo**.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Run algo_solvers.py and partc_bind.py
+  notes: Run algo_solvers.py and partc_bind.py.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Changing tiny_algo_netgen without updating Part B goldens
+  notes: Changing tiny_algo_netgen without updating Part B goldens.
+- type: bullets
+  title: Try these
+  bullets:
+  - From the common folder, run the Part C self-tests
+  notes: From the common folder, run the Part C self-tests.
+- type: code
+  title: Try these — try these
+  code: 'cd courses/learn_netgen/common
+
+    python3 algo_solvers.py
+
+    python3 partc_bind.py'
+  notes: ''
+- type: bullets
+  title: Pseudocode
+  bullets:
+  - Here is the check in plain steps
+  notes: Here is the check in plain steps.
+- type: code
+  title: Pseudocode — try these
+  code: 'matched_nets=4.
+
+    ok if goldens match and bind'
+  notes: ''
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Continue Part C, then internals
+  notes: Continue Part C, then internals.

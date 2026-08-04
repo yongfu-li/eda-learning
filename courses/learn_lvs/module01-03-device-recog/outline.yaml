@@ -1,0 +1,58 @@
+title: Device recog
+footer: learn_lvs — 03 device recog
+slides:
+- type: title
+  title: Device recog
+  subtitle: Device recognition maps layout shapes to MOS instances , nmos vs pmos
+  notes: Device recognition maps layout shapes to MOS instances — nmos vs pmos.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: nmos=1 pmos=1 (X0/X1)'
+  notes: 'GOLDEN: nmos=1 pmos=1 (X0/X1).'
+- type: image
+  title: Shapes
+  image: assets/steps/01-shapes.png
+  caption: Shapes
+  notes: 'Nine layout shapes: diff, poly, M1, implants.'
+- type: image
+  title: X0
+  image: assets/steps/02-x0.png
+  caption: X0
+  notes: X0 nmos from ndiff, poly, nplus.
+- type: image
+  title: X1
+  image: assets/steps/03-x1.png
+  caption: X1
+  notes: X1 pmos from pdiff, poly, pplus.
+- type: image
+  title: Types
+  image: assets/steps/04-types.png
+  caption: Types
+  notes: Classify each layout device by type.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: nmos=1, pmos=1.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **device-recog**. Select X0 and X1; confirm nmos/pmos counts.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call recognize_devices(); assert nmos==1 and pmos==1
+  notes: Call recognize_devices(); assert nmos==1 and pmos==1.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Counting shapes instead of devices
+  - Swapping nmos/pmos polarity
+  notes: Counting shapes instead of devices. Swapping nmos/pmos polarity.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: net extraction'
+  notes: 'Next: net extraction.'

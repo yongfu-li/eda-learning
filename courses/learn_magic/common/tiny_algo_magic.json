@@ -1,0 +1,38 @@
+{
+  "note": "Layout teaching IR for Magic Part C (not the Magic binary).",
+  "cell": "tiny_inv",
+  "layers": ["ndiff", "pdiff", "poly", "metal1", "nwell", "pwell"],
+  "rects": [
+    { "id": "nw", "layer": "nwell", "x0": 0, "y0": 10, "x1": 20, "y1": 20 },
+    { "id": "nd", "layer": "ndiff", "x0": 4, "y0": 2, "x1": 12, "y1": 6 },
+    { "id": "pd", "layer": "pdiff", "x0": 4, "y0": 12, "x1": 12, "y1": 16 },
+    { "id": "g", "layer": "poly", "x0": 7, "y0": 1, "x1": 9, "y1": 17 },
+    { "id": "m1y", "layer": "metal1", "x0": 10, "y0": 4, "x1": 18, "y1": 14 },
+    { "id": "thin", "layer": "metal1", "x0": 18, "y0": 4, "x1": 19, "y1": 10 }
+  ],
+  "contacts": [
+    { "id": "ca", "between": ["poly", "metal1"], "x0": 7, "y0": 8, "x1": 9, "y1": 10 }
+  ],
+  "tech": {
+    "min_width": { "metal1": 2, "poly": 2, "ndiff": 3, "pdiff": 3 },
+    "min_space": { "metal1": 2, "poly": 2 }
+  },
+  "gds_map": {
+    "ndiff": 6,
+    "pdiff": 7,
+    "poly": 46,
+    "metal1": 49,
+    "nwell": 42,
+    "contact": 25
+  },
+  "goldens": {
+    "net_count": 4,
+    "metal1_net_shapes": 2,
+    "contact_count": 1,
+    "drc_error_count": 1,
+    "drc_violation_shape": "thin",
+    "gds_layer_count": 6,
+    "extract_nodes": 3,
+    "engine_ok": true
+  }
+}

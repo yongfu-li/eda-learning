@@ -1,0 +1,58 @@
+title: Resistance
+footer: learn_pex — 03 resistance extract
+slides:
+- type: title
+  title: Resistance
+  subtitle: Resistance extract computes R = rho*L/W for metals; VIA uses lump rho
+  notes: Resistance extract computes R = rho*L/W for metals; VIA uses lump rho.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: R_total=3.06; s1=0.5'
+  notes: 'GOLDEN: R_total=3.06; s1=0.5.'
+- type: image
+  title: Formula
+  image: assets/steps/01-formula.png
+  caption: Formula
+  notes: Metal R = rho*L/W; VIA uses lump rho.
+- type: image
+  title: s1
+  image: assets/steps/02-s1.png
+  caption: s1
+  notes: 's1 M1 segment: R=0.5 ohm.'
+- type: image
+  title: s2
+  image: assets/steps/03-s2.png
+  caption: s2
+  notes: 's2 M1 segment: R=0.4 ohm.'
+- type: image
+  title: v1
+  image: assets/steps/04-v1.png
+  caption: v1
+  notes: 'v1 VIA lump: R=2.0 ohm.'
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: R_total=3.06; s1=0.5.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **resistance-extract**. Select s1; confirm R_total=3.06.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call extract_resistance(); assert r_total==3.06 and resistors['s1']==0.5
+  notes: Call extract_resistance(); assert r_total==3.06 and resistors['s1']==0.5.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Using max edge as width
+  - Forgetting VIA lump resistance
+  notes: Using max edge as width. Forgetting VIA lump resistance.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: capacitance extract'
+  notes: 'Next: capacitance extract.'

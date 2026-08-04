@@ -1,0 +1,45 @@
+{
+  "tool": "KLayout",
+  "version": "0.28",
+  "cell": "tiny_rect",
+  "gds_file": "layouts/tiny_rect.gds",
+  "drc_script": "scripts/tiny_rect.drc",
+  "recipe_ids": [
+    "stream_gds",
+    "load_drc",
+    "run_drc",
+    "markers",
+    "drc_done"
+  ],
+  "gds_vocab": {
+    "layer_map": {"poly": 66, "metal1": 68},
+    "shape_count": 2,
+    "dbu": 0.001
+  },
+  "stages": {
+    "gds_vocab": {
+      "layer_count": 2,
+      "shape_count": 2,
+      "dbu": 0.001
+    },
+    "stream_gds": {
+      "stream_ok": true,
+      "shape_count": 2,
+      "cell": "tiny_rect"
+    },
+    "drc_script": {
+      "width_violations": 1,
+      "violation_shape": "m0"
+    },
+    "markers": {
+      "marker_count": 1,
+      "marker_shape": "m0"
+    }
+  },
+  "layer_count": 2,
+  "shape_count": 2,
+  "stream_ok": true,
+  "width_violations": 1,
+  "marker_count": 1,
+  "engine_ok": true
+}

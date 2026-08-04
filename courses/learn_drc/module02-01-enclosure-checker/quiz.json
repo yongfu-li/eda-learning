@@ -1,0 +1,38 @@
+{
+  "module": "module02-01-enclosure-checker",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "enclosure violation count?",
+      "choices": [
+        "1",
+        "0",
+        "2",
+        "3"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Inner shape?",
+      "choices": [
+        "V",
+        "D",
+        "A",
+        "C"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "Golden rule id?",
+      "choices": [
+        "E.VIA_M2",
+        "E.VIA_M1",
+        "S.M1",
+        "W.M1"
+      ],
+      "answer": 0
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "moduleId": "module09-03-drc-region-algo",
+  "items": [
+    {
+      "q": "DRC error count golden?",
+      "choices": [
+        "1",
+        "0",
+        "6",
+        "3"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Violation shape?",
+      "choices": [
+        "thin",
+        "nw",
+        "ca",
+        "nd"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Rule type in lab?",
+      "choices": [
+        "min_width",
+        "max_cap",
+        "timing",
+        "slack"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

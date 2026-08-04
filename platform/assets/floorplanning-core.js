@@ -399,43 +399,81 @@ export function drawFloorplan(canvas, opts = {}) {
   const outline = opts.outline || OUTLINE;
   const pack = opts.pack || {};
   const pins = opts.pins || [];
+  const paper = !!opts.paper;
+  const ink = paper ? "#000000" : "#1a1a1a";
+  const PAPER_FONT =
+    "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
+  const PAPER_PALETTE = [
+    "#1d4ed8",
+    "#0f6b5c",
+    "#b45309",
+    "#7c3aed",
+    "#be123c",
+    "#0e7490",
+  ];
+  if (paper) canvas.style.background = "#ffffff";
+
   const { ctx, w: cw, h: ch } = fitHiDpiCanvas(canvas);
   ctx.clearRect(0, 0, cw, ch);
-  ctx.fillStyle = "#f4f7f6";
+  ctx.fillStyle = paper ? "#ffffff" : "#f4f7f6";
   ctx.fillRect(0, 0, cw, ch);
 
   const pad = 28;
-  const scale = Math.min((cw - pad * 2) / outline.w, (ch - pad * 2) / outline.h);
+  const legendH = paper ? 28 : 0;
+  const scale = Math.min(
+    (cw - pad * 2) / outline.w,
+    (ch - pad * 2 - legendH) / outline.h
+  );
   const ox = pad + ((cw - pad * 2) - outline.w * scale) / 2;
-  const oy = pad + ((ch - pad * 2) - outline.h * scale) / 2;
+  const oy = pad + ((ch - pad * 2 - legendH) - outline.h * scale) / 2;
 
   function sx(x) {
     return ox + x * scale;
   }
   function sy(y) {
-    // canvas y grows down; floorplan y grows up from bottom of outline
     return oy + (outline.h - y) * scale;
   }
 
-  // Outline
-  ctx.strokeStyle = "#1a1a1a";
-  ctx.lineWidth = 2;
+  ctx.strokeStyle = ink;
+  ctx.lineWidth = paper ? 2.25 : 2;
   ctx.strokeRect(sx(0), sy(outline.h), outline.w * scale, outline.h * scale);
-  ctx.fillStyle = "#ffffff";
+  ctx.fillStyle = paper ? "#f8fafc" : "#ffffff";
   ctx.fillRect(sx(0), sy(outline.h), outline.w * scale, outline.h * scale);
+
+  // Light grid
+  if (paper) {
+    ctx.strokeStyle = "#e2e8f0";
+    ctx.lineWidth = 1;
+    for (let x = 1; x < outline.w; x++) {
+      ctx.beginPath();
+      ctx.moveTo(sx(x), sy(0));
+      ctx.lineTo(sx(x), sy(outline.h));
+      ctx.stroke();
+    }
+    for (let y = 1; y < outline.h; y++) {
+      ctx.beginPath();
+      ctx.moveTo(sx(0), sy(y));
+      ctx.lineTo(sx(outline.w), sy(y));
+      ctx.stroke();
+    }
+  }
 
   const ids = Object.keys(pack).sort();
   ids.forEach((id, i) => {
     const r = pack[id];
-    ctx.fillStyle = PALETTE[i % PALETTE.length];
-    ctx.globalAlpha = 0.85;
+    ctx.fillStyle = paper
+      ? PAPER_PALETTE[i % PAPER_PALETTE.length]
+      : PALETTE[i % PALETTE.length];
+    ctx.globalAlpha = paper ? 0.9 : 0.85;
     ctx.fillRect(sx(r.x), sy(r.y + r.h), r.w * scale, r.h * scale);
     ctx.globalAlpha = 1;
-    ctx.strokeStyle = "#111";
-    ctx.lineWidth = 1;
+    ctx.strokeStyle = ink;
+    ctx.lineWidth = paper ? 1.5 : 1;
     ctx.strokeRect(sx(r.x), sy(r.y + r.h), r.w * scale, r.h * scale);
     ctx.fillStyle = "#fff";
-    ctx.font = `bold ${Math.max(11, scale * 0.45)}px system-ui,sans-serif`;
+    ctx.font = paper
+      ? `bold ${Math.max(11, scale * 0.45)}px ${PAPER_FONT}`
+      : `bold ${Math.max(11, scale * 0.45)}px system-ui,sans-serif`;
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     ctx.fillText(id, sx(r.x + r.w / 2), sy(r.y + r.h / 2));
@@ -457,20 +495,53 @@ export function drawFloorplan(canvas, opts = {}) {
       px = sx(p.offset);
       py = sy(outline.h);
     }
-    ctx.fillStyle = "#c0392b";
+    ctx.fillStyle = paper ? "#be123c" : "#c0392b";
     ctx.beginPath();
-    ctx.arc(px, py, 5, 0, Math.PI * 2);
+    ctx.arc(px, py, paper ? 4 : 5, 0, Math.PI * 2);
     ctx.fill();
-    ctx.fillStyle = "#333";
-    ctx.font = "10px system-ui,sans-serif";
+    if (paper) {
+      ctx.strokeStyle = ink;
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    }
+    ctx.fillStyle = paper ? ink : "#333";
+    ctx.font = paper ? `10px ${PAPER_FONT}` : "10px system-ui,sans-serif";
     ctx.textAlign = "left";
     ctx.fillText(p.id, px + 6, py - 6);
   }
 
-  ctx.fillStyle = "#555";
-  ctx.font = "11px system-ui,sans-serif";
-  ctx.textAlign = "left";
-  ctx.fillText(`${outline.w}×${outline.h}`, sx(0), sy(outline.h) - 8);
+  if (paper && opts.metricText) {
+    ctx.fillStyle = ink;
+    ctx.font = `bold 12px ${PAPER_FONT}`;
+    ctx.textAlign = "left";
+    ctx.textBaseline = "alphabetic";
+    ctx.fillText(opts.metricText, pad, pad - 8);
+  } else if (!paper) {
+    ctx.fillStyle = "#555";
+    ctx.font = "11px system-ui,sans-serif";
+    ctx.textAlign = "left";
+    ctx.fillText(`${outline.w}×${outline.h}`, sx(0), sy(outline.h) - 8);
+  }
+
+  if (paper) {
+    const ly = ch - Math.round(legendH / 2) - 2;
+    let lx = pad;
+    ctx.font = `11px ${PAPER_FONT}`;
+    ctx.textAlign = "left";
+    ctx.textBaseline = "middle";
+    ids.forEach((id, i) => {
+      ctx.beginPath();
+      ctx.arc(lx + 5, ly, 4, 0, Math.PI * 2);
+      ctx.fillStyle = PAPER_PALETTE[i % PAPER_PALETTE.length];
+      ctx.fill();
+      ctx.strokeStyle = ink;
+      ctx.lineWidth = 1.25;
+      ctx.stroke();
+      ctx.fillStyle = ink;
+      ctx.fillText(id, lx + 12, ly);
+      lx += 36;
+    });
+  }
 }
 
 export { PALETTE };

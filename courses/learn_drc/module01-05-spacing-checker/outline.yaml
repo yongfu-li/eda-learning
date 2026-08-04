@@ -1,0 +1,58 @@
+title: Spacing
+footer: learn_drc — 05 spacing checker
+slides:
+- type: title
+  title: Spacing
+  subtitle: Spacing rules compare horizontal gaps between overlapping-y shapes
+  notes: Spacing rules compare horizontal gaps between overlapping-y shapes.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: space=1 A–B, rule S.M1'
+  notes: 'GOLDEN: space=1 A–B, rule S.M1.'
+- type: image
+  title: Rule
+  image: assets/steps/01-rule.png
+  caption: Rule
+  notes: S.M1 spacing limit 2 on M1.
+- type: image
+  title: Pairs
+  image: assets/steps/02-pairs.png
+  caption: Pairs
+  notes: Compare M1 pairs with y-projection overlap.
+- type: image
+  title: Gap
+  image: assets/steps/03-gap.png
+  caption: Gap
+  notes: horiz_gap A–B equals 1, below limit 2.
+- type: image
+  title: Hit
+  image: assets/steps/04-hit.png
+  caption: Hit
+  notes: Shapes A and B violate S.M1.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: space=1 A–B, rule S.M1.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **spacing-checker**. Select A and B; run spacing check.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call check_spacing(); assert count==1 and set(shapes)=={'A','B'}
+  notes: Call check_spacing(); assert count==1 and set(shapes)=={'A','B'}.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Measuring vertical gap when shapes are side-by-side
+  - Ignoring y overlap requirement
+  notes: Measuring vertical gap when shapes are side-by-side. Ignoring y overlap requirement.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: enclosure checker'
+  notes: 'Next: enclosure checker.'

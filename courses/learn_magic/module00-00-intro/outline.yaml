@@ -1,0 +1,33 @@
+title: Why Magic
+footer: learn_magic — 00 intro
+slides:
+- type: title
+  title: Why Magic
+  subtitle: OpenLane and OpenROAD lean on Magic for layout, DRC, and GDS
+  notes: 'OpenLane and OpenROAD lean on Magic for layout, DRC, and GDS. This course
+    teaches the tool the same way learn_yosys teaches Yosys: map, then real CLI, then
+    algorithms, then internals.'
+- type: bullets
+  title: Four parts
+  bullets:
+  - Part A is the interactive layout map
+  - Part B drives real Magic with Tcl
+  - Part C binds algorithms to DRC/GDS goldens
+  - Part D orients you to the Tile/Plane C tree
+  notes: Part A is the interactive layout map. Part B drives real Magic with Tcl.
+    Part C binds algorithms to DRC/GDS goldens. Part D orients you to the Tile/Plane
+    C tree.
+- type: bullets
+  title: Prereq
+  bullets:
+  - You should already know layout basics from learn_digital
+  - Here those ideas become Magic commands and reports
+  notes: You should already know layout basics from learn_digital — layers, contacts,
+    DRC width rules. Here those ideas become Magic commands and reports.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - Start with the paint layers lab
+  notes: Start with the paint layers lab, then select box, then the real CLI modules
+    when evidence is ready.

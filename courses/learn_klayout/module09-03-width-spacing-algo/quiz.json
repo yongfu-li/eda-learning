@@ -1,0 +1,38 @@
+{
+  "moduleId": "module09-03-width-spacing-algo",
+  "items": [
+    {
+      "q": "Width violations?",
+      "choices": [
+        "1",
+        "0",
+        "2",
+        "4"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Violating shape?",
+      "choices": [
+        "m0",
+        "p0",
+        "A",
+        "VDD"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Check compares?",
+      "choices": [
+        "width vs min_width",
+        "STA slack",
+        "Verilog ports",
+        "Liberty arcs"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

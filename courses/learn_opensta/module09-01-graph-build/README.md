@@ -1,24 +1,25 @@
 # Module 9-01-graph-build: Graph build algorithm
 
 **Module id:** `module09-01-graph-build`  
-**Kind:** `lab` · Primary lab: `graph-build` · planned
+**Kind:** `lab` · Primary lab: `graph-build` · **ref**
 
-[Course README](../README.md)
+[← Evidence](../module08-03-real-evidence/README.md) · [Course README](../README.md) · [Levelize →](../module09-03-levelize-propagate/README.md)
 
 ## Outcomes
 
-After this module you can work the **Graph build algorithm** OpenSTA topic (scaffold — content ships next).
+After this module you can: **Build the timing graph from pins and delay arcs.**
 
 ## Two tracks (pick one or both)
 
 ### Track A — Implement (hands-on)
 
-1. Open [EXAMPLES.md](EXAMPLES.md).
+1. Open [EXAMPLES.md](EXAMPLES.md); study `common/algo_solvers.py` + `partc_bind.py`.
 2. Complete [CHECKLIST.md](CHECKLIST.md).
+3. Optional: `python3 algo_solvers.py && python3 partc_bind.py`
 
 ### Track B — Browser lab
 
-1. Local: http://127.0.0.1:8080/tools/graph-build/ *(when tool ships)*
+1. Local: http://127.0.0.1:8080/tools/graph-build/
 
 ## Media
 

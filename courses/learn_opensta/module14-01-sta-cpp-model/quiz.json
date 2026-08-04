@@ -1,8 +1,38 @@
 {
   "moduleId": "module14-01-sta-cpp-model",
   "items": [
-    {"id": "q0", "q": "This lab id?", "choices": ["sta-cpp-model", "yosys-cli", "opt-dce", "proc-mux"], "answer": 0},
-    {"id": "q1", "q": "Course?", "choices": ["learn_opensta", "learn_yosys", "learn_magic", "learn_netgen"], "answer": 0},
-    {"id": "q2", "q": "Prereq algorithms course?", "choices": ["learn_sta", "learn_routing", "learn_spice", "learn_erc"], "answer": 0}
+    {
+      "q": "Which layer holds clocks and constraints?",
+      "choices": [
+        "Sdc",
+        "Graph only",
+        "Liberty only",
+        "GDS"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Timing vertices and edges live in?",
+      "choices": [
+        "Graph",
+        "Sdc",
+        "app/",
+        "Quiz only"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Which layer drives arrivals and path reports?",
+      "choices": [
+        "Search",
+        "Network only",
+        "Magic",
+        "Netgen"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
   ]
 }

@@ -1,0 +1,38 @@
+{
+  "module": "module03-03-spef-lite",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "res_count golden?",
+      "choices": [
+        "1",
+        "4",
+        "3",
+        "0"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "cap_count golden?",
+      "choices": [
+        "1",
+        "4",
+        "3",
+        "0"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "format name?",
+      "choices": [
+        "SPEF-lite",
+        "SPICE",
+        "GDS",
+        "LEF"
+      ],
+      "answer": 0
+    }
+  ]
+}

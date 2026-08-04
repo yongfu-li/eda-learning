@@ -1,0 +1,58 @@
+title: Multi-layer
+footer: learn_drc — 01 multi layer deck
+slides:
+- type: title
+  title: Multi-layer
+  subtitle: Real decks span layers , enclosure and boolean tie VIA to M1/M2
+  notes: Real decks span layers — enclosure and boolean tie VIA to M1/M2.
+- type: bullets
+  title: The idea
+  bullets:
+  - 'GOLDEN: 2 enclosure rules; fires E.VIA_M2'
+  notes: 'GOLDEN: 2 enclosure rules; fires E.VIA_M2.'
+- type: image
+  title: Cross
+  image: assets/steps/01-cross.png
+  caption: Cross
+  notes: Deck rules span M1, M2, and VIA.
+- type: image
+  title: Enc rules
+  image: assets/steps/02-enc.png
+  caption: Enc rules
+  notes: 'Two enclosure rules: E.VIA_M1 and E.VIA_M2.'
+- type: image
+  title: Boolean
+  image: assets/steps/03-bool.png
+  caption: Boolean
+  notes: B.VIA_M1_not_M2 boolean rule on VIA.
+- type: image
+  title: Fire
+  image: assets/steps/04-fire.png
+  caption: Fire
+  notes: E.VIA_M2 fires — V not enclosed by M2.
+- type: image
+  title: Golden
+  image: assets/steps/05-golden.png
+  caption: Golden
+  notes: 'GOLDEN: 2 enclosure rules; fires E.VIA_M2.'
+- type: image
+  title: Browser lab track
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: Open **multi-layer-deck**. Run multi-layer view; confirm E.VIA_M2 fires.
+- type: bullets
+  title: Implement track
+  bullets:
+  - Call multi_layer_rules(); assert enclosure_count==2 and fires count==1
+  notes: Call multi_layer_rules(); assert enclosure_count==2 and fires count==1.
+- type: bullets
+  title: Pitfalls
+  bullets:
+  - Counting width rules as cross-layer
+  - Ignoring boolean deck entries
+  notes: Counting width rules as cross-layer. Ignoring boolean deck entries.
+- type: bullets
+  title: Your turn
+  bullets:
+  - 'Next: deck boolean rules'
+  notes: 'Next: deck boolean rules.'

@@ -1,0 +1,38 @@
+{
+  "moduleId": "module03-01-markers-report-map",
+  "items": [
+    {
+      "q": "Marker count golden?",
+      "choices": [
+        "1",
+        "0",
+        "2",
+        "4"
+      ],
+      "answer": 0,
+      "id": "q0"
+    },
+    {
+      "q": "Marker shape?",
+      "choices": [
+        "m0",
+        "p0",
+        "poly",
+        "metal1"
+      ],
+      "answer": 0,
+      "id": "q1"
+    },
+    {
+      "q": "Report summarizes?",
+      "choices": [
+        "DRC violations",
+        "LVS compare",
+        "STA slack",
+        "Place HPWL"
+      ],
+      "answer": 0,
+      "id": "q2"
+    }
+  ]
+}

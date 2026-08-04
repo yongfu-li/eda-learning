@@ -1,0 +1,38 @@
+{
+  "module": "module00-00-intro",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Focus of Welcome?",
+      "choices": [
+        "Explain design rule checks on a tiny layout after pattern-ma",
+        "Place only",
+        "CTS only",
+        "ERC floating"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "question": "Course id?",
+      "choices": [
+        "learn_drc",
+        "learn_pattern_matching",
+        "learn_lvs",
+        "learn_erc"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "question": "violation_count golden?",
+      "choices": [
+        "3",
+        "1",
+        "8",
+        "0"
+      ],
+      "answer": 0
+    }
+  ]
+}

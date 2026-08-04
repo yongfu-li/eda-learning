@@ -1,0 +1,36 @@
+title: Wrap
+footer: learn_drc — 00 wrap
+slides:
+- type: title
+  title: Wrap
+  subtitle: 'You checked tiny_drc: 8 rules; D width; A–B space; V enclosure; boolean
+    hit; engine ok'
+  notes: 'You checked tiny_drc: 8 rules; D width; A–B space; V enclosure; boolean
+    hit; engine ok.'
+- type: bullets
+  title: The idea
+  bullets:
+  - 'Natural next: learn_lvs'
+  notes: 'Natural next: learn_lvs.'
+- type: bullets
+  title: Recap
+  bullets:
+  - Recap deck, width, spacing, enclosure, markers, multi-layer, boolean, engine
+  notes: Recap deck, width, spacing, enclosure, markers, multi-layer, boolean, engine.
+- type: bullets
+  title: Goldens
+  bullets:
+  - 8 rules; D width; A–B space; V enclosure; boolean V; violations=3; engine ok
+  notes: 8 rules; D width; A–B space; V enclosure; boolean V; violations=3; engine
+    ok.
+- type: bullets
+  title: Next
+  bullets:
+  - Complete the quiz for this part
+  - 'Natural next: learn_lvs'
+  notes: 'Natural next: learn_lvs.'
+- type: bullets
+  title: Close
+  bullets:
+  - Mark the wrap done when you can list the three geometry violation kinds
+  notes: Mark the wrap done when you can list the three geometry violation kinds.

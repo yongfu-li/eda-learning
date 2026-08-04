@@ -14,3 +14,10 @@
 | `real-sdc` | `module07-03-real-sdc` | 5 |
 | `real-report-checks` | `module08-01-real-report-checks` | 5 |
 | `opensta-evidence` | `module08-03-real-evidence` | 5 |
+| `graph-build` | `module09-01-graph-build` | 5 |
+| `levelize-propagate` | `module09-03-levelize-propagate` | 5 |
+| `slack-algo` | `module10-01-slack-algo` | 5 |
+| `opensta-algo-engine` | `module10-03-opensta-algo-engine` | 5 |
+| `sta-cpp-model` | `module14-01-sta-cpp-model` | 5 |
+| `read-find-path` | `module14-03-read-find-path` | 5 |
+| `contribute-opensta` | `module15-03-contribute-opensta` | 5 |
