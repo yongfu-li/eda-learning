@@ -115,11 +115,17 @@
 
 Thinner than algorithm courses; **usage + reports as golden** for Track A. Host here only if the main lane stays on this platform.
 
+Tool literacy before the flow orchestrators (same idea as `learn_yosys` after `learn_synthesis`):
+
 | Course id | Role |
 |-----------|------|
-| `learn_yosys` | Synth CLI / reports vs `learn_synthesis` toys |
+| `learn_yosys` | Synth CLI / RTLIL / passes vs `learn_synthesis` |
+| `learn_opensta` | OpenSTA CLI / SDC / reports vs `learn_sta` |
+| `learn_magic` | Magic GDS / DRC / antenna vs layout algorithm courses |
+| `learn_netgen` | Netgen LVS evidence vs `learn_lvs` |
+| `learn_klayout` | KLayout viewer / DRC scripts (alongside Magic) |
 | `learn_openroad` | Place/CTS/route evidence vs PD algorithm courses |
-| `learn_openlane` | RTL→GDS flow literacy |
+| `learn_openlane` | RTL→GDS flow literacy (orchestrates the tools above) |
 | `learn_fpga_cad` | FPGA packing/place/route differences (VPR/nextpnr-shaped) |
 
 ---
@@ -198,6 +204,9 @@ learn_eda
 learn_ir (or learn_eda_ir) ──► learn_geometry ──► learn_techlib
     │                              │
     │                              ├─ learn_pattern_matching ──► learn_drc ──► learn_lvs ──► learn_pex
+    │                              │         │                      │
+    │                              │         └─ learn_multi_patterning
+    │                              │                                └─ learn_rule_dsl (sibling)
     │                              │
     ├──────────────────► learn_spice ◄── (PEX / device models)
     │
